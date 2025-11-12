@@ -1,15 +1,56 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { BarChart2, BedDouble, Coffee } from 'lucide-react';
+import { BarChart2, BedDouble, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+
+const featuredCalculators = [
+  {
+    title: "Intake Calculator",
+    href: "/calculators/intake",
+    description: "Track your daily consumption against safe limits.",
+    icon: Coffee,
+  },
+  {
+    title: "Half-Life Calculator",
+    href: "/calculators/half-life",
+    description: "Visualize how long caffeine stays in your system.",
+    icon: BarChart2,
+  },
+  {
+    title: "Caffeine Sensitivity Test",
+    href: "/calculators/caffeine-sensitivity-test",
+    description: "Discover your genetic caffeine tolerance.",
+    icon: BrainCircuit,
+  },
+  {
+    title: "Sleep Impact Predictor",
+    href: "/calculators/sleep-impact",
+    description: "See how your coffee affects your sleep quality.",
+    icon: BedDouble,
+  },
+  {
+    title: "Overdose Risk Calculator",
+    href: "/calculators/caffeine-overdose-risk",
+    description: "Estimate toxic levels based on your body weight.",
+    icon: Shield,
+  },
+  {
+    title: "Withdrawal Tracker",
+    href: "/calculators/caffeine-withdrawal-tracker",
+    description: "Create a tapering plan to quit caffeine safely.",
+    icon: TrendingDown,
+  },
+];
+
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   return (
-    <div>
-      <section className="relative text-center rounded-lg overflow-hidden mb-12 min-h-[400px] flex flex-col justify-center items-center">
+    <div className="flex flex-col">
+       <section className="relative text-center rounded-lg overflow-hidden min-h-[500px] flex flex-col justify-center items-center text-white">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -21,62 +62,132 @@ export default function Home() {
           />
         )}
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 text-white p-4">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Master Your Caffeine, Master Your Day
+        <div className="relative z-10 p-4 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
+            Take Control of Your Caffeine.
+            <br/>
+            Unlock Your Potential.
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto">
-            Use our science-backed calculators to understand your intake, optimize your energy, and improve your sleep.
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+            Harness the power of caffeine without compromising your sleep or well-being. Our science-backed tools provide personalized insights to help you optimize your energy, focus, and health.
           </p>
+          <Link href="#calculators">
+            <Button size="lg">Explore Our Calculators</Button>
+          </Link>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-8">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Toolkit</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Link href="/calculators/intake">
-            <Card className="h-full hover:border-primary transition-all">
-              <CardHeader>
-                <div className="flex items-center gap-4">
-                  <Coffee className="h-8 w-8 text-primary" />
-                  <CardTitle>Intake Calculator</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">Log your drinks to find out your total daily caffeine consumption and see how it stacks up against recommended limits.</p>
-              </CardContent>
-            </Card>
-          </Link>
-          
-          <Link href="/calculators/half-life">
-             <Card className="h-full hover:border-primary transition-all">
-              <CardHeader>
-                <div className="flex items-center gap-4">
-                  <BarChart2 className="h-8 w-8 text-primary" />
-                  <CardTitle>Half-Life Calculator</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">Visualize how caffeine decays in your system over time to better time your intake for peak performance.</p>
-              </CardContent>
-            </Card>
-          </Link>
+      <section id="calculators" className="py-20 bg-background">
+         <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">A Comprehensive Toolkit for Mindful Caffeine Use</h2>
+              <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+                  From tracking your daily intake to understanding your genetic sensitivity, we have a tool for every question.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredCalculators.map((calc) => (
+                <Link key={calc.title} href={calc.href}>
+                  <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <CardHeader>
+                      <div className="flex items-center gap-4">
+                        <calc.icon className="h-8 w-8 text-primary" />
+                        <CardTitle>{calc.title}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground">{calc.description}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+             <div className="text-center mt-12">
+                <Link href="/about">
+                  <Button variant="outline">See All Calculators</Button>
+                </Link>
+            </div>
+         </div>
+      </section>
 
-           <Link href="/calculators/caffeine-sensitivity-test">
-             <Card className="h-full hover:border-primary transition-all">
-              <CardHeader>
-                <div className="flex items-center gap-4">
-                  <BedDouble className="h-8 w-8 text-primary" />
-                  <CardTitle>Caffeine Sensitivity Test</CardTitle>
+      <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">How It Works: Your Path to Optimized Energy</h2>
+              <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
+                  In three simple steps, you can transform your relationship with caffeine.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-12 text-center relative">
+               <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-12 hidden md:block"></div>
+               <div className="absolute top-1/2 left-0 w-full flex justify-between -translate-y-12 hidden md:block">
+                  <div className="w-1/3"></div>
+                  <div className="w-1/3"></div>
+               </div>
+                <div className="relative">
+                    <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4 border-4 border-background">
+                       <span className="text-2xl font-bold">1</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">Track Your Intake</h3>
+                    <p className="text-muted-foreground">Use our <Link href="/calculators/intake" className="text-primary hover:underline">Intake Calculator</Link> to log your drinks and get a precise measure of your daily consumption.</p>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">Estimate your genetic tolerance to caffeine and how it impacts you.</p>
-              </CardContent>
-            </Card>
-          </Link>
-        </div>
-      </div>
+                 <div className="relative">
+                    <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4 border-4 border-background">
+                       <span className="text-2xl font-bold">2</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">Understand Your Body</h3>
+                    <p className="text-muted-foreground">Discover your unique metabolism with the <Link href="/calculators/caffeine-sensitivity-test" className="text-primary hover:underline">Sensitivity Test</Link> and see how long caffeine affects you.</p>
+                </div>
+                <div className="relative">
+                    <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4 border-4 border-background">
+                       <span className="text-2xl font-bold">3</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">Optimize Your Timing</h3>
+                    <p className="text-muted-foreground">Plan your caffeine use for peak performance and protect your sleep using the <Link href="/calculators/half-life" className="text-primary hover:underline">Half-Life Calculator</Link>.</p>
+                </div>
+            </div>
+          </div>
+      </section>
+
+      <section className="py-20">
+          <div className="container mx-auto px-4">
+               <div className="grid md:grid-cols-2 gap-16 items-center">
+                   <div>
+                       <Image src="https://picsum.photos/seed/why-us/600/500" alt="A scientist looking at data on a screen" width={600} height={500} className="rounded-lg shadow-lg" data-ai-hint="data science"/>
+                   </div>
+                   <div className="space-y-8">
+                        <h2 className="text-3xl md:text-4xl font-bold font-headline">Why Caffeine Compass?</h2>
+                       <div className="flex items-start gap-4">
+                            <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+                                <BookOpen className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold mb-1">Science-Backed & Data-Driven</h3>
+                                <p className="text-muted-foreground">Our tools are built on peer-reviewed research in chronobiology, toxicology, and sleep science to provide you with trustworthy and accurate information.</p>
+                            </div>
+                       </div>
+                       <div className="flex items-start gap-4">
+                            <div className="p-3 bg-accent/10 rounded-full flex-shrink-0">
+                                <HeartPulse className="h-6 w-6 text-accent" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold mb-1">Personalized For You</h3>
+                                <p className="text-muted-foreground">Caffeine isn't one-size-fits-all. We help you understand how your personal metabolism, body weight, and timing influence its effects.</p>
+                            </div>
+                       </div>
+                        <div className="flex items-start gap-4">
+                            <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+                                <Shield className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold mb-1">Empowerment Through Knowledge</h3>
+                                <p className="text-muted-foreground">We believe that by understanding how caffeine works, you can make it a powerful tool for productivity, not a source of anxiety or poor health.</p>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+          </div>
+      </section>
     </div>
   );
 }
