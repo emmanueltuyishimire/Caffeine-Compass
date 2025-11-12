@@ -1,7 +1,17 @@
+
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://caffeine-compass.com';
+
+  const staticPages = [
+    '/about',
+    '/ai-assistant',
+    '/contact',
+    '/privacy-policy',
+    '/terms-and-conditions',
+    '/disclaimer',
+  ];
 
   const calculatorRoutes = [
     '/calculators/intake',
@@ -21,6 +31,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '/articles/caffeine-half-life-sleep',
       '/articles/how-long-before-bed-to-stop-caffeine'
   ];
+
+  const staticUrls = staticPages.map(route => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }));
 
   const calculatorUrls = calculatorRoutes.map(route => ({
     url: `${baseUrl}${route}`,
@@ -44,18 +61,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-     {
-      url: `${baseUrl}/ai-assistant`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
       url: `${baseUrl}/calculators`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
@@ -67,6 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    ...staticUrls,
     ...calculatorUrls,
     ...articleUrls,
   ]
