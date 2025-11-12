@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { AlertCircle, CheckCircle, Clock } from 'lucide-react';
 
-// Assuming an average half-life of 5 hours
 const CAFFEINE_HALF_LIFE_HOURS = 5;
 
 type RiskLevel = 'Low' | 'Medium' | 'High';
@@ -31,16 +30,19 @@ const riskConfig: Record<RiskLevel, { variant: 'success' | 'secondary' | 'destru
   },
 };
 
+const timeToHours = (time: string): number => {
+  const [hours, minutes] = time.split(':').map(Number);
+  if (isNaN(hours) || isNaN(minutes)) {
+    return 0;
+  }
+  return hours + minutes / 60;
+};
+
 export default function SleepImpactPredictor() {
   const [caffeineAmount, setCaffeineAmount] = useState(100);
   const [consumptionTime, setConsumptionTime] = useState('14:00');
   const [bedtime, setBedtime] = useState('22:00');
   const [result, setResult] = useState<{ remaining: number; risk: RiskLevel } | null>(null);
-
-  const timeToHours = (time: string): number => {
-    const [hours, minutes] = time.split(':').map(Number);
-    return hours + minutes / 60;
-  }
 
   const calculateImpact = () => {
     const consumptionH = timeToHours(consumptionTime);
@@ -53,7 +55,7 @@ export default function SleepImpactPredictor() {
     const hoursUntilBedtime = bedtimeH - consumptionH;
 
     if (hoursUntilBedtime < 0) {
-      setResult(null); // Or show an error
+      setResult(null);
       return;
     }
 

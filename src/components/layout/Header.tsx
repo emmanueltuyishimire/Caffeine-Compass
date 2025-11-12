@@ -46,6 +46,11 @@ const calculators: { title: string; href: string; description: string }[] = [
     title: "Drink Comparison Tool",
     href: "/calculators/drink-comparison",
     description: "Compare caffeine in coffee, tea, and energy drinks.",
+  },
+  {
+    title: "Caffeine in Drinks Database",
+    href: "/calculators/drinks-database",
+    description: "Search 1,000+ beverages by caffeine mg.",
   }
 ]
 
