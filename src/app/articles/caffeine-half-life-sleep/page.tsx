@@ -329,7 +329,7 @@ export default function CaffeineHalfLifeSleepArticle() {
             </p>
 
             <Card className="my-4 bg-primary/5 border-primary/20">
-              <CardHeader><CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary"/>Caffeine Smart Tip #2: The Quarter-Life Metric</CardTitle></Header>
+              <CardHeader><CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary"/>Caffeine Smart Tip #2: The Quarter-Life Metric</CardTitle></CardHeader>
               <CardContent>
                 <p>Instead of half-life, think in terms of "quarter-life"—the time it takes to clear 75% of the caffeine (i.e., two half-lives). This is a much safer metric for sleep. For a 5-hour half-life, the quarter-life is 10 hours. Aim to have consumed your last significant caffeine dose one "quarter-life" before bed.</p>
               </CardContent>
@@ -341,7 +341,7 @@ export default function CaffeineHalfLifeSleepArticle() {
             </p>
 
             <Card className="my-4 bg-primary/5 border-primary/20">
-              <CardHeader><CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary"/>Caffeine Smart Tip #3: The "Coffee Nap" for Afternoon Slumps</CardTitle></Header>
+              <CardHeader><CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary"/>Caffeine Smart Tip #3: The "Coffee Nap" for Afternoon Slumps</CardTitle></CardHeader>
               <CardContent>
                 <p>If you need a boost for an afternoon task, try a "coffee nap." Drink a shot of espresso or a small coffee (around 100mg) and immediately take a 20-minute nap. Caffeine takes about 20-30 minutes to kick in. During the nap, your brain clears out some sleep-inducing adenosine. You'll wake up just as the caffeine hits, feeling remarkably refreshed and alert. This is a far better strategy than a late-afternoon drip coffee, as the dose is smaller and timed for a specific purpose.</p>
               </CardContent>
@@ -388,7 +388,7 @@ export default function CaffeineHalfLifeSleepArticle() {
               </CardHeader>
               <CardContent className="space-y-2">
                 <p><strong>Persona:</strong> Chloe, a 20-year-old student, is a self-proclaimed "night owl." She drinks a large cold brew (250mg) at 2 PM to power through afternoon classes and evening study sessions. She goes to bed at 1 AM but always feels groggy and struggles to retain what she studied.</p>
-                <p><strong>The Problem:</strong> Chloe considers herself an "average" metabolizer (5-hour half-life). When she enters her 250mg dose at 2 PM into the <Link href="/calculators/half-life">Half-Life Calculator</Link>, she is shocked. At 1 AM (11 hours later), she still has approximately <strong>55mg</strong> of caffeine in her system. This is more than a can of Coke and is actively suppressing her REM sleep and memory consolidation.</p>
+                <p><strong>The Problem:</strong> Chloe considers herself an "average" metabolizer (5-hour half-life). When she enters her 250mg dose at 2 PM into the <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link>, she is shocked. At 1 AM (11 hours later), she still has approximately <strong>55mg</strong> of caffeine in her system. This is more than a can of Coke and is actively suppressing her REM sleep and memory consolidation.</p>
                 <p><strong>The Solution:</strong> Chloe realizes her "afternoon" coffee is really a "pre-sleep" coffee. She shifts her cold brew to 10 AM. For afternoon energy, she opts for a short walk and a glass of cold water. Her sleep quality improves dramatically within a week, and she finds she can study more effectively in fewer hours because she's actually retaining the information.</p>
               </CardContent>
             </Card>
