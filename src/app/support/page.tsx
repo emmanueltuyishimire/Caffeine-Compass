@@ -13,7 +13,7 @@ const supportPageJsonLd = {
   "@type": "WebPage",
   "name": "Caffeine Assistant Support",
   "description": "Get instant, AI-powered answers to all your questions about caffeine.",
-  "url": "https://caffeine-compass.com/support",
+  "url": "https://caffeine-calculation-site.com/support",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -21,13 +21,13 @@ const supportPageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-compass.com/"
+        "item": "https://caffeine-calculation-site.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Support",
-        "item": "https://caffeine-compass.com/support"
+        "item": "https://caffeine-calculation-site.com/support"
       }
     ]
   }

@@ -15,19 +15,19 @@ const calculatorsPageJsonLd = {
   "@type": "WebPage",
   "name": "Caffeine Calculators",
   "description": "A complete suite of science-backed tools to help you understand and optimize your caffeine consumption for better health, focus, and sleep.",
-  "url": "https://caffeine-compass.com/calculators",
+  "url": "https://caffeine-calculation-site.com/calculators",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Intake Calculator", "url": "https://caffeine-compass.com/calculators/intake" },
-      { "@type": "ListItem", "position": 2, "name": "Half-Life Calculator", "url": "https://caffeine-compass.com/calculators/half-life" },
-      { "@type": "ListItem", "position": 3, "name": "Caffeine Timing Optimizer", "url": "https://caffeine-compass.com/calculators/caffeine-timing-optimizer" },
-      { "@type": "ListItem", "position": 4, "name": "Caffeine Withdrawal Tracker", "url": "https://caffeine-compass.com/calculators/caffeine-withdrawal-tracker" },
-      { "@type": "ListItem", "position": 5, "name": "Caffeine Sensitivity Test", "url": "https://caffeine-compass.com/calculators/caffeine-sensitivity-test" },
-      { "@type": "ListItem", "position": 6, "name": "Drink Comparison Tool", "url": "https://caffeine-compass.com/calculators/drink-comparison" },
-      { "@type": "ListItem", "position": 7, "name": "Caffeine in Drinks Database", "url": "https://caffeine-compass.com/calculators/drinks-database" },
-      { "@type": "ListItem", "position": 8, "name": "Caffeine Overdose Risk Calculator", "url": "https://caffeine-compass.com/calculators/caffeine-overdose-risk" },
-      { "@type": "ListItem", "position": 9, "name": "Pregnancy Safe Limit Calculator", "url": "https://caffeine-compass.com/calculators/pregnancy-safe-limit" }
+      { "@type": "ListItem", "position": 1, "name": "Intake Calculator", "url": "https://caffeine-calculation-site.com/calculators/intake" },
+      { "@type": "ListItem", "position": 2, "name": "Half-Life Calculator", "url": "https://caffeine-calculation-site.com/calculators/half-life" },
+      { "@type": "ListItem", "position": 3, "name": "Caffeine Timing Optimizer", "url": "https://caffeine-calculation-site.com/calculators/caffeine-timing-optimizer" },
+      { "@type": "ListItem", "position": 4, "name": "Caffeine Withdrawal Tracker", "url": "https://caffeine-calculation-site.com/calculators/caffeine-withdrawal-tracker" },
+      { "@type": "ListItem", "position": 5, "name": "Caffeine Sensitivity Test", "url": "https://caffeine-calculation-site.com/calculators/caffeine-sensitivity-test" },
+      { "@type": "ListItem", "position": 6, "name": "Drink Comparison Tool", "url": "https://caffeine-calculation-site.com/calculators/drink-comparison" },
+      { "@type": "ListItem", "position": 7, "name": "Caffeine in Drinks Database", "url": "https://caffeine-calculation-site.com/calculators/drinks-database" },
+      { "@type": "ListItem", "position": 8, "name": "Caffeine Overdose Risk Calculator", "url": "https://caffeine-calculation-site.com/calculators/caffeine-overdose-risk" },
+      { "@type": "ListItem", "position": 9, "name": "Pregnancy Safe Limit Calculator", "url": "https://caffeine-calculation-site.com/calculators/pregnancy-safe-limit" }
     ]
   },
   "breadcrumb": {
@@ -37,13 +37,13 @@ const calculatorsPageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-compass.com/"
+        "item": "https://caffeine-calculation-site.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Calculators",
-        "item": "https://caffeine-compass.com/calculators"
+        "item": "https://caffeine-calculation-site.com/calculators"
       }
     ]
   }
