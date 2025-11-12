@@ -37,7 +37,7 @@ export default function SleepImpactPredictor() {
   const [bedtime, setBedtime] = useState('22:00');
   const [result, setResult] = useState<{ remaining: number; risk: RiskLevel } | null>(null);
 
-  function timeToHours(time: string): number {
+  const timeToHours = (time: string): number => {
     const [hours, minutes] = time.split(':').map(Number);
     return hours + minutes / 60;
   }
