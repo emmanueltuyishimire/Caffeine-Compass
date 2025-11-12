@@ -1,18 +1,18 @@
 import Image from 'next/image';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import IntakeCalculator from '@/components/features/IntakeCalculator';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import HalfLifeEstimator from '@/components/features/HalfLifeEstimator';
 import SleepImpactPredictor from '@/components/features/SleepImpactPredictor';
 import CaffeineAssistant from '@/components/features/CaffeineAssistant';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { BarChart2, BedDouble, Bot, Coffee } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <section className="relative text-center rounded-lg overflow-hidden mb-12 p-8 min-h-[300px] flex flex-col justify-center items-center">
+    <div>
+      <section className="relative text-center rounded-lg overflow-hidden mb-12 min-h-[400px] flex flex-col justify-center items-center">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -23,49 +23,67 @@ export default function Home() {
             priority
           />
         )}
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-white">
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 text-white p-4">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Welcome to Caffeine Compass
+            Master Your Caffeine, Master Your Day
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto">
-            Empowering you to understand, calculate, and optimize your caffeine habits for better focus, health, and sleep.
+            Use our science-backed calculators to understand your intake, optimize your energy, and improve your sleep.
           </p>
         </div>
       </section>
 
-      <Tabs defaultValue="intake" className="w-full">
-        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto md:h-12">
-          <TabsTrigger value="intake" className="py-2.5">
-            <Coffee className="mr-2" />
-            Intake
-          </TabsTrigger>
-          <TabsTrigger value="half-life" className="py-2.5">
-            <BarChart2 className="mr-2" />
-            Half-Life
-          </TabsTrigger>
-          <TabsTrigger value="sleep-impact" className="py-2.5">
-            <BedDouble className="mr-2" />
-            Sleep Impact
-          </TabsTrigger>
-          <TabsTrigger value="assistant" className="py-2.5">
-            <Bot className="mr-2" />
-            AI Assistant
-          </TabsTrigger>
-        </TabsList>
-        <TabsContent value="intake" className="pt-6">
-          <IntakeCalculator />
-        </TabsContent>
-        <TabsContent value="half-life" className="pt-6">
-          <HalfLifeEstimator />
-        </TabsContent>
-        <TabsContent value="sleep-impact" className="pt-6">
-          <SleepImpactPredictor />
-        </TabsContent>
-        <TabsContent value="assistant" className="pt-6">
-          <CaffeineAssistant />
-        </TabsContent>
-      </Tabs>
+      <div className="container mx-auto px-4 py-8">
+        <h2 className="text-3xl font-bold text-center mb-8">Our Toolkit</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Link href="/calculators/intake">
+            <Card className="h-full hover:border-primary transition-all">
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <Coffee className="h-8 w-8 text-primary" />
+                  <CardTitle>Intake Calculator</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Log your drinks to find out your total daily caffeine consumption and see how it stacks up against recommended limits.</p>
+              </CardContent>
+            </Card>
+          </Link>
+          
+          <Link href="/calculators/half-life">
+             <Card className="h-full hover:border-primary transition-all">
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <BarChart2 className="h-8 w-8 text-primary" />
+                  <CardTitle>Half-Life Estimator</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Visualize how caffeine decays in your system over time to better time your intake for peak performance.</p>
+              </CardContent>
+            </Card>
+          </Link>
+
+           <Link href="/calculators/sleep-impact">
+             <Card className="h-full hover:border-primary transition-all">
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <BedDouble className="h-8 w-8 text-primary" />
+                  <CardTitle>Sleep Impact Calculator</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Predict how much caffeine will be in your system at bedtime to protect your sleep quality.</p>
+              </CardContent>
+            </Card>
+          </Link>
+        </div>
+        
+        <div className="mt-20">
+             <CaffeineAssistant />
+        </div>
+      </div>
     </div>
   );
 }
