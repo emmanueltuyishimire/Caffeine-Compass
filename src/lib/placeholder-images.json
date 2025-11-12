@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "A focused person working on a laptop with a cup of coffee.",
-      "imageUrl": "https://images.unsplash.com/photo-1559163499-413811fb2344?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2ZmZWUlMjBsYXB0b3B8ZW58MHx8fHwxNzYyODkyMTI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "coffee laptop"
+      "description": "Coffee beans elegantly arranged on a rustic plate, symbolizing the core of caffeine.",
+      "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzZWVkcyUyMHBsYXRlfGVufDB8fHx8MTc2MjkzMDMwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee seeds"
     },
     {
       "id": "why-us-image",
