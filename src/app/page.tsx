@@ -25,12 +25,6 @@ const featuredCalculators = [
     icon: BrainCircuit,
   },
   {
-    title: "Sleep Impact Predictor",
-    href: "/calculators/sleep-impact",
-    description: "See how your coffee affects your sleep quality.",
-    icon: BedDouble,
-  },
-  {
     title: "Overdose Risk Calculator",
     href: "/calculators/caffeine-overdose-risk",
     description: "Estimate toxic levels based on your body weight.",
@@ -42,11 +36,18 @@ const featuredCalculators = [
     description: "Create a tapering plan to quit caffeine safely.",
     icon: TrendingDown,
   },
+   {
+    title: "Caffeine Timing Optimizer",
+    href: "/calculators/caffeine-timing-optimizer",
+    description: "Find the perfect time to drink coffee for energy.",
+    icon: Clock,
+  },
 ];
 
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
+  const whyUsImage = PlaceHolderImages.find((img) => img.id === 'why-us-image');
 
   return (
     <div className="flex flex-col">
@@ -153,7 +154,9 @@ export default function Home() {
           <div className="container mx-auto px-4">
                <div className="grid md:grid-cols-2 gap-16 items-center">
                    <div>
-                       <Image src="https://picsum.photos/seed/why-us/600/500" alt="A scientist looking at data on a screen" width={600} height={500} className="rounded-lg shadow-lg" data-ai-hint="data science"/>
+                       {whyUsImage && (
+                         <Image src={whyUsImage.imageUrl} alt={whyUsImage.description} width={600} height={500} className="rounded-lg shadow-lg" data-ai-hint={whyUsImage.imageHint}/>
+                       )}
                    </div>
                    <div className="space-y-8">
                         <h2 className="text-3xl md:text-4xl font-bold font-headline">Why Caffeine Compass?</h2>

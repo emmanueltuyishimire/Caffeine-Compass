@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Abstract background with coffee beans and scientific illustrations",
-      "imageUrl": "https://images.unsplash.com/photo-1692296113053-76f240e5ce33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NjI5MDcwMjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "coffee beans"
+      "description": "A dynamic shot of espresso being poured into a cup, with coffee beans scattered around.",
+      "imageUrl": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlc3ByZXNzbyUyMHBvdXJ8ZW58MHx8fHwxNzYzNjI4ODgxfDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "espresso pour"
     },
     {
       "id": "team-member-1",
@@ -17,6 +17,18 @@
       "description": "Portrait of a friendly male developer",
       "imageUrl": "https://images.unsplash.com/photo-1655115006347-01a5a3f8d240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjBtYW58ZW58MHx8fHwxNzYyOTEyNjIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "developer man"
+    },
+    {
+      "id": "about-mission",
+      "description": "A beautifully crafted latte art heart in a coffee cup, sitting on a wooden table.",
+      "imageUrl": "https://images.unsplash.com/photo-1579983329249-577d853b3c3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsYXR0ZSUyMGFydCUyMGhlYXJ0fGVufDB8fHx8MTc2MzYyOTA5NHww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "latte art"
+    },
+    {
+      "id": "why-us-image",
+      "description": "A close-up of a hand holding a clear glass mug of coffee, showing the layers of the drink.",
+      "imageUrl": "https://images.unsplash.com/photo-1556742053-99e0a0a59a58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhZXN0aGV0aWMlMjBjb2ZmZWV8ZW58MHx8fHwxNzYzNjI5MTQwfDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "aesthetic coffee"
     }
   ]
 }

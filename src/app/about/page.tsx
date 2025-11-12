@@ -20,6 +20,8 @@ const team = [
 ];
 
 export default function AboutPage() {
+    const missionImage = PlaceHolderImages.find((img) => img.id === 'about-mission');
+
     return (
         <div className="container mx-auto px-4 py-12">
             <div className="text-center mb-12">
@@ -55,14 +57,16 @@ export default function AboutPage() {
                     </div>
                 </div>
                 <div>
-                     <Image
-                        src="https://picsum.photos/seed/about-mission/600/400"
-                        alt="A focused person working at a sunlit desk with a cup of coffee"
-                        width={600}
-                        height={400}
-                        className="rounded-lg shadow-lg"
-                        data-ai-hint="focused work"
-                    />
+                     {missionImage && (
+                        <Image
+                            src={missionImage.imageUrl}
+                            alt={missionImage.description}
+                            width={600}
+                            height={400}
+                            className="rounded-lg shadow-lg"
+                            data-ai-hint={missionImage.imageHint}
+                        />
+                     )}
                 </div>
             </div>
 
