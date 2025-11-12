@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
@@ -70,7 +71,7 @@ export default function HalfLifeEstimator() {
         </div>
         <div>
           <Label>Caffeine Decay Over 12 Hours</Label>
-          <ChartContainer config={chartConfig} className="h-[250px] w-full mt-2">
+          <ChartContainer config={chartConfig} className="h-[250px] w-full mt-2" aria-label="Caffeine decay chart">
             <ResponsiveContainer width="100%" height="100%">
                <BarChart accessibilityLayer data={chartData} margin={{ top: 20, right: 20, bottom: 20, left: -10 }}>
                 <CartesianGrid vertical={false} />
@@ -93,7 +94,7 @@ export default function HalfLifeEstimator() {
         </div>
       </CardContent>
        <CardFooter className="pt-6">
-         <p className="text-sm text-muted-foreground">
+         <p className="text-sm text-muted-foreground" role="status">
            After 8 hours, you will still have approximately <span className="font-bold text-primary">{caffeineAt8Hours}mg</span> of caffeine in your system.
          </p>
        </CardFooter>

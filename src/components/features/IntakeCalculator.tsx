@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useMemo } from 'react';
@@ -55,7 +56,7 @@ export default function IntakeCalculator() {
             <PopoverTrigger asChild>
               <Button variant="outline" role="combobox" aria-expanded={open} className="w-full sm:w-[300px] justify-between">
                 Search for a drink...
-                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" aria-hidden="true" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-[300px] p-0">
@@ -75,7 +76,7 @@ export default function IntakeCalculator() {
                         className="flex justify-between items-center"
                       >
                         <div className="flex items-center gap-2">
-                          <drink.icon className="h-4 w-4 text-muted-foreground" />
+                          <drink.icon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                           <span>{drink.name}</span>
                         </div>
                         <span className="text-xs text-muted-foreground">{drink.caffeine}mg</span>
@@ -89,13 +90,13 @@ export default function IntakeCalculator() {
            <Button onClick={() => setConsumed([])} variant="secondary">Reset</Button>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4" role="list">
           {consumed.length === 0 ? (
             <p className="text-center text-muted-foreground py-4">Add a drink to get started.</p>
           ) : (
             consumed.map((drink) => (
-              <div key={drink.id} className="flex items-center gap-4 p-2 rounded-md border">
-                <drink.icon className="h-6 w-6 text-primary" />
+              <div key={drink.id} role="listitem" className="flex items-center gap-4 p-2 rounded-md border">
+                <drink.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                 <div className="flex-grow">
                   <p className="font-medium">{drink.name}</p>
                   <p className="text-sm text-muted-foreground">
@@ -109,8 +110,9 @@ export default function IntakeCalculator() {
                     value={drink.quantity}
                     onChange={(e) => updateQuantity(drink.id, parseInt(e.target.value, 10))}
                     className="w-16 h-9 text-center"
+                    aria-label={`Quantity of ${drink.name}`}
                   />
-                  <Button variant="ghost" size="icon" onClick={() => removeDrink(drink.id)}>
+                  <Button variant="ghost" size="icon" onClick={() => removeDrink(drink.id)} aria-label={`Remove ${drink.name}`}>
                     <Trash2 className="h-4 w-4 text-destructive" />
                   </Button>
                 </div>
@@ -120,20 +122,20 @@ export default function IntakeCalculator() {
         </div>
       </CardContent>
       <CardFooter className="flex-col items-start gap-4 pt-6">
-        <div className="w-full">
+        <div className="w-full" role="status" aria-live="polite">
             <div className="flex justify-between items-end mb-1">
                  <h3 className="text-2xl font-bold font-headline text-primary">{totalCaffeine} mg</h3>
                 <span className="text-sm text-muted-foreground">/ {RECOMMENDED_LIMIT} mg limit</span>
             </div>
-          <Progress value={progress} className="w-full" />
-          <div className="flex justify-between text-xs text-muted-foreground mt-1">
+          <Progress value={progress} className="w-full" aria-valuenow={totalCaffeine} aria-valuemin={0} aria-valuemax={RECOMMENDED_LIMIT} />
+          <div className="flex justify-between text-xs text-muted-foreground mt-1" aria-hidden="true">
              <span>0mg</span>
              <span>{RECOMMENDED_LIMIT}mg</span>
           </div>
         </div>
         {totalCaffeine > 0 && (
-          <div className="text-sm text-muted-foreground flex items-center gap-2">
-            {totalCaffeine > RECOMMENDED_LIMIT ? <TrendingUp className="h-4 w-4 text-destructive"/> : <TrendingDown className="h-4 w-4 text-accent"/>}
+          <div className="text-sm text-muted-foreground flex items-center gap-2" role="status">
+            {totalCaffeine > RECOMMENDED_LIMIT ? <TrendingUp className="h-4 w-4 text-destructive" aria-hidden="true"/> : <TrendingDown className="h-4 w-4 text-accent" aria-hidden="true"/>}
             <span>
               {totalCaffeine > RECOMMENDED_LIMIT
                 ? `${totalCaffeine - RECOMMENDED_LIMIT}mg over the recommended daily limit.`

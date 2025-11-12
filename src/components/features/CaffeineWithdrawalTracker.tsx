@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -98,7 +99,7 @@ export default function CaffeineWithdrawalTracker() {
           <div className="space-y-2">
             <Label htmlFor="taper-duration">Tapering Duration (Days)</Label>
              <Select onValueChange={(value) => setDuration(Number(value))} defaultValue={String(duration)}>
-                <SelectTrigger>
+                <SelectTrigger id="taper-duration">
                     <SelectValue placeholder="Select duration" />
                 </SelectTrigger>
                 <SelectContent>
@@ -112,7 +113,7 @@ export default function CaffeineWithdrawalTracker() {
           <div className="space-y-2">
             <Label htmlFor="reduction-frequency">Reduce Every (Days)</Label>
              <Select onValueChange={(value) => setFrequency(Number(value))} defaultValue={String(frequency)}>
-                <SelectTrigger>
+                <SelectTrigger id="reduction-frequency">
                     <SelectValue placeholder="Select frequency" />
                 </SelectTrigger>
                 <SelectContent>
@@ -128,13 +129,14 @@ export default function CaffeineWithdrawalTracker() {
              <Popover>
               <PopoverTrigger asChild>
                 <Button
+                  id="start-date"
                   variant={"outline"}
                   className={cn(
                     "w-full justify-start text-left font-normal",
                     !startDate && "text-muted-foreground"
                   )}
                 >
-                  <CalendarDays className="mr-2 h-4 w-4" />
+                  <CalendarDays className="mr-2 h-4 w-4" aria-hidden="true" />
                   {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}
                 </Button>
               </PopoverTrigger>
@@ -144,13 +146,14 @@ export default function CaffeineWithdrawalTracker() {
                   selected={startDate}
                   onSelect={(date) => setStartDate(date || new Date())}
                   initialFocus
+                  aria-label="Tapering plan start date"
                 />
               </PopoverContent>
             </Popover>
           </div>
         </div>
         <Button onClick={generateSchedule} className="w-full sm:w-auto">
-          <CalendarDays className="mr-2 h-4 w-4" />
+          <CalendarDays className="mr-2 h-4 w-4" aria-hidden="true" />
           Generate Tapering Plan
         </Button>
       </CardContent>
@@ -158,7 +161,7 @@ export default function CaffeineWithdrawalTracker() {
       {schedule.length > 0 && (
         <CardFooter className="flex-col items-start gap-6 pt-6 border-t">
           <h3 className="text-xl font-semibold">Your Personalized Tapering Schedule</h3>
-           <ChartContainer config={chartConfig} className="h-[250px] w-full">
+           <ChartContainer config={chartConfig} className="h-[250px] w-full" aria-label="Caffeine tapering schedule chart">
             <ResponsiveContainer width="100%" height="100%">
                <BarChart accessibilityLayer data={schedule} margin={{ top: 20, right: 20, bottom: 20, left: -10 }}>
                 <CartesianGrid vertical={false} />
@@ -180,6 +183,7 @@ export default function CaffeineWithdrawalTracker() {
           </ChartContainer>
           <div className="w-full border rounded-md">
             <Table>
+                <caption className="sr-only">Daily caffeine tapering schedule</caption>
                 <TableHeader>
                     <TableRow>
                     <TableHead className="w-[100px]">Day</TableHead>

@@ -13,10 +13,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '../ui/label';
 
 const categoryIcons = {
-  Coffee: <Coffee className="h-5 w-5" />,
-  Tea: <Leaf className="h-5 w-5" />,
-  Soda: <CupSoda className="h-5 w-5" />,
-  'Energy Drink': <Zap className="h-5 w-5" />,
+  Coffee: <Coffee className="h-5 w-5" aria-hidden="true" />,
+  Tea: <Leaf className="h-5 w-5" aria-hidden="true" />,
+  Soda: <CupSoda className="h-5 w-5" aria-hidden="true" />,
+  'Energy Drink': <Zap className="h-5 w-5" aria-hidden="true" />,
 };
 
 type SortOption = 'caffeine_desc' | 'caffeine_asc' | 'name_asc' | 'name_desc';
@@ -67,11 +67,11 @@ export default function DrinksDatabase() {
         <div className="space-y-4 mb-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <Label htmlFor='search-drink'>Search</Label>
+                <Label htmlFor='search-drink'>Search for a drink</Label>
                 <Input
                     id='search-drink'
                     placeholder="e.g., 'Starbucks Latte'"
-                    className="flex-grow"
+                    className="flex-grow mt-1"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -79,7 +79,7 @@ export default function DrinksDatabase() {
               <div>
                 <Label htmlFor='sort-by'>Sort by</Label>
                  <Select value={sortOption} onValueChange={(value) => setSortOption(value as SortOption)}>
-                  <SelectTrigger id='sort-by'>
+                  <SelectTrigger id='sort-by' className="mt-1">
                     <SelectValue placeholder="Sort by..." />
                   </SelectTrigger>
                   <SelectContent>
@@ -92,39 +92,41 @@ export default function DrinksDatabase() {
               </div>
           </div>
           <div>
-            <Label>Filter by Category</Label>
+            <Label id="filter-category-label">Filter by Category</Label>
              <ToggleGroup
                 type="single"
                 value={selectedCategory || ''}
                 onValueChange={(value) => setSelectedCategory(value || null)}
-                className="justify-start"
+                className="justify-start mt-1"
+                aria-labelledby="filter-category-label"
             >
                 <ToggleGroupItem value="Coffee" aria-label="Filter by Coffee">
-                <Coffee className="h-4 w-4 mr-2" /> Coffee
+                <Coffee className="h-4 w-4 mr-2" aria-hidden="true" /> Coffee
                 </ToggleGroupItem>
                 <ToggleGroupItem value="Tea" aria-label="Filter by Tea">
-                <Leaf className="h-4 w-4 mr-2" /> Tea
+                <Leaf className="h-4 w-4 mr-2" aria-hidden="true" /> Tea
                 </ToggleGroupItem>
                 <ToggleGroupItem value="Soda" aria-label="Filter by Soda">
-                <CupSoda className="h-4 w-4 mr-2" /> Soda
+                <CupSoda className="h-4 w-4 mr-2" aria-hidden="true" /> Soda
                 </ToggleGroupItem>
                 <ToggleGroupItem value="Energy Drink" aria-label="Filter by Energy Drink">
-                <Zap className="h-4 w-4 mr-2" /> Energy
+                <Zap className="h-4 w-4 mr-2" aria-hidden="true" /> Energy
                 </ToggleGroupItem>
             </ToggleGroup>
           </div>
         </div>
 
         <ScrollArea className="h-[400px] border rounded-md">
-          <div className="p-4 space-y-2">
+          <div className="p-4 space-y-2" role="list">
             {filteredDrinks.length > 0 ? (
               filteredDrinks.map((drink) => (
                 <div
                   key={drink.id}
+                  role="listitem"
                   className="flex items-center justify-between p-3 rounded-lg hover:bg-muted"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="text-muted-foreground">
+                    <div className="text-muted-foreground" aria-hidden="true">
                       {categoryIcons[drink.category as keyof typeof categoryIcons] || <Coffee className="h-5 w-5" />}
                     </div>
                     <div>
@@ -140,7 +142,7 @@ export default function DrinksDatabase() {
                 </div>
               ))
             ) : (
-              <div className="text-center text-muted-foreground py-10">
+              <div className="text-center text-muted-foreground py-10" role="alert">
                 <p>No drinks found.</p>
                 <p className="text-sm">Try broadening your search or changing filters.</p>
               </div>

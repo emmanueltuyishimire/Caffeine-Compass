@@ -76,6 +76,7 @@ export default function DrinkComparison() {
                 variant="outline"
                 role="combobox"
                 aria-expanded={open}
+                aria-label="Select drinks to compare"
                 className="w-full justify-between"
               >
                 <span className="truncate">
@@ -83,7 +84,7 @@ export default function DrinkComparison() {
                     ? selectedDrinks.map((d) => d.name).join(', ')
                     : 'Select drinks to compare...'}
                 </span>
-                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" aria-hidden="true" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-[--radix-popover-trigger-width] p-0">
@@ -97,6 +98,7 @@ export default function DrinkComparison() {
                         key={drink.id}
                         value={drink.name}
                         onSelect={() => handleSelect(drink)}
+                        aria-selected={selectedDrinks.some(d => d.id === drink.id)}
                       >
                         <Check
                           className={cn(
@@ -105,10 +107,11 @@ export default function DrinkComparison() {
                               ? 'opacity-100'
                               : 'opacity-0'
                           )}
+                          aria-hidden="true"
                         />
                         <div className="flex-1 flex justify-between items-center">
                             <div className="flex items-center gap-2">
-                                <drink.icon className="h-4 w-4 text-muted-foreground" />
+                                <drink.icon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                                 <span>{drink.name}</span>
                             </div>
                             <Badge variant="outline">{drink.caffeine}mg</Badge>
@@ -123,12 +126,13 @@ export default function DrinkComparison() {
         </div>
 
         {selectedDrinks.length > 0 ? (
-          <ChartContainer config={chartConfig} className="h-[300px] w-full">
+          <ChartContainer config={chartConfig} className="h-[300px] w-full" aria-label="Caffeine comparison chart">
              <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={chartData}
                 layout="vertical"
                 margin={{ left: 10, right: 30, top: 5, bottom: 5 }}
+                aria-label={`Bar chart comparing caffeine content of ${selectedDrinks.length} drinks`}
               >
                 <CartesianGrid horizontal={false} />
                 <YAxis
@@ -140,7 +144,7 @@ export default function DrinkComparison() {
                   width={150} 
                   interval={0}
                 />
-                <XAxis type="number" dataKey="caffeine" domain={[0, 'dataMax + 20']} />
+                <XAxis type="number" dataKey="caffeine" domain={[0, 'dataMax + 20']} unit="mg" />
                 <ChartTooltip
                   cursor={{ fill: 'hsl(var(--muted))' }}
                   content={<ChartTooltipContent />}
@@ -150,8 +154,8 @@ export default function DrinkComparison() {
             </ResponsiveContainer>
           </ChartContainer>
         ) : (
-          <div className="h-[300px] flex items-center justify-center text-muted-foreground">
-            Please select one or more drinks to see the comparison chart.
+          <div className="h-[300px] flex items-center justify-center text-muted-foreground" role="alert">
+            <p>Please select one or more drinks to see the comparison chart.</p>
           </div>
         )}
       </CardContent>

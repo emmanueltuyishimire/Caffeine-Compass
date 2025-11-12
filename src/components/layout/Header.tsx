@@ -69,37 +69,35 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-3">
-            <Logo className="h-8 w-8 text-primary" />
+          <Link href="/" className="flex items-center gap-3" aria-label="Caffeine Compass Homepage">
+            <Logo className="h-8 w-8 text-primary" aria-hidden="true" />
             <span className="text-xl font-bold font-headline">Caffeine Compass</span>
           </Link>
         </div>
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <NavigationMenu>
-              <NavigationMenuList>
-                 <NavigationMenuItem>
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="/">Home</Link>
-                  </NavigationMenuLink>
-                  </NavigationMenuItem>
-                <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                      <Link href="/calculators">Calculators</Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-                 <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                      <Link href="/about">About</Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                      <Link href="/support">Support</Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-        </nav>
+        <NavigationMenu>
+          <NavigationMenuList>
+             <NavigationMenuItem>
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                <Link href="/">Home</Link>
+              </NavigationMenuLink>
+              </NavigationMenuItem>
+            <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/calculators">Calculators</Link>
+                </NavigationMenuLink>
+            </NavigationMenuItem>
+             <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/about">About</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/support">Support</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
     </header>
   );

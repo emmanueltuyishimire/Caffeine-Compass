@@ -11,6 +11,7 @@ import { Check, Coffee, Zap, Moon } from 'lucide-react';
 
 const questions = [
   {
+    id: 'q1',
     question: 'How do you feel after one standard cup of coffee (or ~100mg of caffeine)?',
     answers: [
       { text: 'Pleasantly alert and focused.', points: 1 },
@@ -19,6 +20,7 @@ const questions = [
     ],
   },
   {
+    id: 'q2',
     question: 'If you have a coffee at 4 PM, how does it affect your sleep?',
     answers: [
       { text: 'I have significant trouble falling or staying asleep.', points: 3 },
@@ -27,6 +29,7 @@ const questions = [
     ],
   },
   {
+    id: 'q3',
     question: 'Have you ever felt heart palpitations, or a "racing heart" from caffeine?',
     answers: [
       { text: 'Yes, often, even from a small amount.', points: 3 },
@@ -35,6 +38,7 @@ const questions = [
     ],
   },
   {
+    id: 'q4',
     question: 'How many cups of coffee can you drink in a day before feeling negative effects?',
     answers: [
       { text: 'One is usually my limit.', points: 3 },
@@ -43,6 +47,7 @@ const questions = [
     ],
   },
   {
+    id: 'q5',
     question: 'If you skip your usual morning caffeine, what happens?',
     answers: [
       { text: 'I get a headache and feel very fatigued.', points: 1 }, // This indicates dependence, but not sensitivity
@@ -116,6 +121,7 @@ export default function CaffeineSensitivityTest() {
   }
 
   const result = getResult();
+  const currentQData = questions[currentQuestion];
 
   return (
     <Card className="max-w-2xl mx-auto overflow-hidden">
@@ -133,8 +139,9 @@ export default function CaffeineSensitivityTest() {
               animate="visible"
               exit="exit"
               className="flex flex-col items-center text-center"
+              role="alert"
             >
-              <result.icon className="h-16 w-16 text-primary mb-4" />
+              <result.icon className="h-16 w-16 text-primary mb-4" aria-hidden="true" />
               <h3 className="text-2xl font-bold mb-2">{result.title}</h3>
               <p className="text-muted-foreground">{result.description}</p>
             </motion.div>
@@ -147,20 +154,23 @@ export default function CaffeineSensitivityTest() {
               exit="exit"
               transition={{ duration: 0.3, ease: 'easeInOut' }}
             >
-              <h3 className="text-lg font-semibold mb-4">{questions[currentQuestion].question}</h3>
-              <RadioGroup onValueChange={(value) => handleAnswer(Number(value))}>
-                <div className="space-y-2">
-                  {questions[currentQuestion].answers.map((answer, index) => (
-                    <Label
-                      key={index}
-                      className="flex items-center space-x-3 p-3 border rounded-md has-[:checked]:bg-accent has-[:checked]:border-accent-foreground/50 transition-colors"
-                    >
-                      <RadioGroupItem value={String(answer.points)} />
-                      <span>{answer.text}</span>
-                    </Label>
-                  ))}
-                </div>
-              </RadioGroup>
+              <fieldset>
+                <legend className="text-lg font-semibold mb-4">{currentQData.question}</legend>
+                <RadioGroup onValueChange={(value) => handleAnswer(Number(value))} aria-label={currentQData.question}>
+                  <div className="space-y-2">
+                    {currentQData.answers.map((answer, index) => (
+                      <Label
+                        key={`${currentQData.id}-a${index}`}
+                        htmlFor={`${currentQData.id}-a${index}`}
+                        className="flex items-center space-x-3 p-3 border rounded-md has-[:checked]:bg-accent has-[:checked]:border-accent-foreground/50 transition-colors"
+                      >
+                        <RadioGroupItem value={String(answer.points)} id={`${currentQData.id}-a${index}`} />
+                        <span>{answer.text}</span>
+                      </Label>
+                    ))}
+                  </div>
+                </RadioGroup>
+              </fieldset>
             </motion.div>
           )}
         </AnimatePresence>
@@ -170,10 +180,17 @@ export default function CaffeineSensitivityTest() {
             <Button onClick={resetTest} className="w-full">Take the Test Again</Button>
         ) : (
             <>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground" aria-live="polite">
                 Question {currentQuestion + 1} of {questions.length}
                 </p>
-                <div className="w-full bg-muted rounded-full h-2.5">
+                <div
+                    className="w-full bg-muted rounded-full h-2.5"
+                    role="progressbar"
+                    aria-valuenow={currentQuestion + 1}
+                    aria-valuemin={1}
+                    aria-valuemax={questions.length}
+                    aria-valuetext={`Question ${currentQuestion + 1} of ${questions.length}`}
+                 >
                     <div
                         className="bg-primary h-2.5 rounded-full transition-all duration-300"
                         style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}

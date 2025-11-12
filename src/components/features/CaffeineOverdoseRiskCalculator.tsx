@@ -68,28 +68,32 @@ export default function CaffeineOverdoseRiskCalculator() {
               value={weight}
               onChange={(e) => setWeight(Math.max(1, parseInt(e.target.value) || 1))}
               className="mt-1"
+              aria-label="Body weight"
             />
           </div>
-          <div className="flex items-center space-x-2 pt-4">
-            <Label htmlFor="unit-switch" className={unit === 'kg' ? 'text-primary' : ''}>kg</Label>
+          <div className="flex items-center space-x-2 pt-4" role="radiogroup" aria-labelledby="unit-label">
+            <span id="unit-label" className="sr-only">Weight unit</span>
+            <Label htmlFor="unit-switch-kg" className={unit === 'kg' ? 'text-primary' : ''}>kg</Label>
             <Switch
               id="unit-switch"
               checked={unit === 'lbs'}
               onCheckedChange={(checked) => setUnit(checked ? 'lbs' : 'kg')}
+              role="switch"
+              aria-checked={unit === 'lbs'}
             />
-            <Label htmlFor="unit-switch" className={unit === 'lbs' ? 'text-primary' : ''}>lbs</Label>
+            <Label htmlFor="unit-switch-lbs" className={unit === 'lbs' ? 'text-primary' : ''}>lbs</Label>
           </div>
         </div>
         
         <div className="space-y-4">
             <h3 className="font-semibold">Estimated Risk Thresholds:</h3>
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-4" role="list">
                 {Object.entries(riskLevels).map(([key, level]) => {
                     const { icon: Icon, title, description, color } = level;
                     const value = calculations[key as keyof typeof calculations];
                     return (
-                        <div key={key} className="flex items-start gap-4 p-4 border rounded-lg bg-card-foreground/5">
-                            <Icon className={`h-8 w-8 mt-1 shrink-0 ${color}`} />
+                        <div key={key} role="listitem" className="flex items-start gap-4 p-4 border rounded-lg bg-card-foreground/5">
+                            <Icon className={`h-8 w-8 mt-1 shrink-0 ${color}`} aria-hidden="true" />
                             <div>
                                 <h4 className={`font-bold ${color}`}>{title}</h4>
                                 <p className="text-2xl font-headline font-bold">{value} mg</p>
@@ -104,7 +108,7 @@ export default function CaffeineOverdoseRiskCalculator() {
       </CardContent>
        <CardFooter className="pt-6 border-t">
          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-             <Shield className="h-4 w-4 text-green-500" />
+             <Shield className="h-4 w-4 text-green-500" aria-hidden="true" />
             <span>For reference, the FDA-recommended safe daily limit for healthy adults is <strong>400 mg</strong>.</span>
          </div>
        </CardFooter>

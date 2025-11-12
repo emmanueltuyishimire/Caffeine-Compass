@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -64,7 +65,7 @@ export default function CaffeineTimingOptimizer() {
       <CardContent className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-                <Label htmlFor="task-time" className='flex items-center gap-2'><Clock/> When does your task start?</Label>
+                <Label htmlFor="task-time" className='flex items-center gap-2'><Clock aria-hidden="true"/> When does your task start?</Label>
                 <Input
                 id="task-time"
                 type="time"
@@ -73,7 +74,7 @@ export default function CaffeineTimingOptimizer() {
                 />
             </div>
             <div className="space-y-2">
-                <Label htmlFor="bedtime" className='flex items-center gap-2'><Bed/> What time do you go to bed?</Label>
+                <Label htmlFor="bedtime" className='flex items-center gap-2'><Bed aria-hidden="true"/> What time do you go to bed?</Label>
                 <Input
                 id="bedtime"
                 type="time"
@@ -96,14 +97,14 @@ export default function CaffeineTimingOptimizer() {
           </Select>
         </div>
         <Button onClick={calculateOptimalTime} className="w-full">
-            <Coffee className="mr-2 h-4 w-4" /> Calculate Optimal Time
+            <Coffee className="mr-2 h-4 w-4" aria-hidden="true" /> Calculate Optimal Time
         </Button>
       </CardContent>
 
       {result && (
         <CardFooter>
-          <Alert>
-            <Lightbulb className="h-4 w-4" />
+          <Alert role="status">
+            <Lightbulb className="h-4 w-4" aria-hidden="true" />
             <AlertTitle>Recommendation</AlertTitle>
             <AlertDescription>{result}</AlertDescription>
           </Alert>
