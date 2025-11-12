@@ -138,7 +138,7 @@ export default function AboutPage() {
                             <div key={member.name} className="flex flex-col items-center text-center p-6 bg-card rounded-lg border">
                                 <Avatar className="w-24 h-24 mb-4 border-2 border-primary">
                                     {memberImage && (
-                                        <AvatarImage src={memberImage.imageUrl} alt={memberImage.description} data-ai-hint={memberImage.imageHint} />
+                                        <AvatarImage src={memberImage.imageUrl} alt={memberImage.description} data-ai-hint={memberImage.imageHint} width={96} height={96} />
                                     )}
                                     <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
                                 </Avatar>

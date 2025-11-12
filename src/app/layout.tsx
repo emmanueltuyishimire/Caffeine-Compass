@@ -37,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.variable} font-body antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} dark`}>
+      <body className={`font-body antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
         <JsonLd data={websiteJsonLd} />
         <Header />
         <main className="flex-grow">{children}</main>
