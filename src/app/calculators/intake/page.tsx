@@ -408,6 +408,60 @@ export default function IntakeCalculatorPage() {
                 It is generally not recommended. Caffeine blocks sleep-inducing chemicals in the brain, which can delay the onset of sleep, reduce deep sleep, and disrupt your natural circadian rhythm. To see how much caffeine from an afternoon drink might still be in your system at bedtime, use our <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link>.
               </AccordionContent>
             </AccordionItem>
+            <AccordionItem value="item-7">
+              <AccordionTrigger>Is there a difference between caffeine from coffee and caffeine from an energy drink?</AccordionTrigger>
+              <AccordionContent>
+                Chemically, the caffeine molecule is identical. However, the source matters. Coffee and tea contain natural compounds like antioxidants that can modulate caffeine's effects. Energy drinks often contain synthetic caffeine along with other stimulants, sugar, and artificial ingredients. While the caffeine itself is the same, the overall health impact of the beverage can be very different.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-8">
+              <AccordionTrigger>Does food affect caffeine absorption?</AccordionTrigger>
+              <AccordionContent>
+                Yes, consuming caffeine with food can slow its absorption into your bloodstream. This can lead to a less intense but more prolonged effect, potentially reducing the chances of jitters. However, it does not reduce the total amount of caffeine your body ultimately absorbs.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-9">
+              <AccordionTrigger>Can I build up a tolerance to caffeine?</AccordionTrigger>
+              <AccordionContent>
+                Absolutely. Regular, daily consumption of caffeine leads to tolerance, where your body becomes less sensitive to its effects. You may find you need more caffeine to achieve the same level of alertness. To reset your sensitivity, you can try a "caffeine taper," which this calculator can help you manage by gradually reducing your daily intake.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-10">
+              <AccordionTrigger>How much caffeine is too much?</AccordionTrigger>
+              <AccordionContent>
+                Exceeding 400 mg per day can lead to negative side effects for many adults. Doses over 1,200 mg can be toxic and may cause seizures. An 'overdose' is rare but possible. Our upcoming Caffeine Overdose Calculator can help you understand the risks associated with very high doses.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-11">
+              <AccordionTrigger>Does decaf coffee have caffeine?</AccordionTrigger>
+              <AccordionContent>
+                Yes, but in very small amounts. A typical cup of decaf coffee contains about 2-7 mg of caffeine, compared to 95 mg in a regular cup. This calculator includes decaf options so you can track even these small amounts accurately.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-12">
+              <AccordionTrigger>Can caffeine cause anxiety?</AccordionTrigger>
+              <AccordionContent>
+                Yes, for some people, especially those who are "slow metabolizers" or have a predisposition to anxiety, caffeine can trigger or worsen feelings of jitteriness, nervousness, and a racing heart. Tracking your intake can help you find a personal threshold where you get the benefits without the anxious side effects.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-13">
+              <AccordionTrigger>What are the symptoms of caffeine withdrawal?</AccordionTrigger>
+              <AccordionContent>
+                The most common symptom is a headache. Other symptoms can include fatigue, irritability, difficulty concentrating, and nausea. Symptoms usually begin 12-24 hours after your last dose. A gradual reduction in intake, which you can plan using this calculator, is the best way to avoid severe withdrawal.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-14">
+              <AccordionTrigger>Does dark roast coffee have more caffeine than light roast?</AccordionTrigger>
+              <AccordionContent>
+                This is a common misconception. Light roast coffee actually has slightly <i>more</i> caffeine than dark roast. The roasting process burns off a small amount of caffeine, so the longer the beans are roasted, the less caffeine they retain by weight.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-15">
+              <AccordionTrigger>How can I use this calculator to improve my sleep?</AccordionTrigger>
+              <AccordionContent>
+                The most effective way is to establish a caffeine "curfew." Use this tool to track your daily habits for a week. Then, use the <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> to see how much caffeine is in your system by bedtime. You can then work backwards, setting a cutoff time (e.g., 2 PM) to ensure your levels are near zero when you go to bed.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </section>
 
