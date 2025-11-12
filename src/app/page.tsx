@@ -1,6 +1,5 @@
-import Image from 'next/image';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { BarChart2, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -73,25 +72,11 @@ const featuredCalculators = [
 
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
-  const whyUsImage = PlaceHolderImages.find((img) => img.id === 'why-us-image');
-
   return (
     <>
       <JsonLd data={homePageJsonLd} />
       <div className="flex flex-col">
-        <section className="relative text-center rounded-lg overflow-hidden min-h-[500px] flex flex-col justify-center items-center text-white">
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              fill
-              className="object-cover"
-              data-ai-hint={heroImage.imageHint}
-              priority
-            />
-          )}
-          <div className="absolute inset-0 bg-black/60" />
+        <section className="relative text-center rounded-lg overflow-hidden min-h-[500px] flex flex-col justify-center items-center text-white bg-primary">
           <div className="relative z-10 p-4 max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
               Take Control of Your Caffeine.
@@ -181,14 +166,9 @@ export default function Home() {
 
         <section className="py-20">
             <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-16 items-center">
-                    <div>
-                        {whyUsImage && (
-                          <Image src={whyUsImage.imageUrl} alt={whyUsImage.description} width={600} height={500} className="rounded-lg shadow-lg" data-ai-hint={whyUsImage.imageHint}/>
-                        )}
-                    </div>
+                <div className="grid md:grid-cols-1 gap-16 items-center">
                     <div className="space-y-8">
-                          <h2 className="text-3xl md:text-4xl font-bold font-headline">Why Caffeine Compass?</h2>
+                          <h2 className="text-3xl md:text-4xl font-bold font-headline text-center">Why Caffeine Compass?</h2>
                         <div className="flex items-start gap-4">
                               <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
                                   <BookOpen className="h-6 w-6 text-primary" aria-label="Science-Backed Icon" />

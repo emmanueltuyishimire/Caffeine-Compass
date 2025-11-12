@@ -1,7 +1,6 @@
-import Image from 'next/image';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Users, Target, HeartPulse } from 'lucide-react';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
@@ -16,13 +15,11 @@ const team = [
         name: 'Dr. Evelyn Reed',
         role: 'Founder & Lead Scientist',
         bio: 'With a Ph.D. in Chronobiology, Dr. Reed has dedicated her career to studying the effects of stimulants on human sleep cycles. She founded Caffeine Compass to translate complex science into a simple, actionable tool for everyone.',
-        image: PlaceHolderImages.find((img) => img.id === 'team-member-1'),
     },
     {
         name: 'Alex Chen',
         role: 'Co-Founder & Lead Developer',
         bio: 'A former coffee-fueled startup developer, Alex experienced firsthand the highs and lows of caffeine dependency. He teamed up with Dr. Reed to build a tool that promotes mindful productivity and well-being.',
-        image: PlaceHolderImages.find((img) => img.id === 'team-member-2'),
     },
 ];
 
@@ -53,8 +50,6 @@ const aboutPageJsonLd = {
 
 
 export default function AboutPage() {
-    const missionImage = PlaceHolderImages.find((img) => img.id === 'about-mission');
-
     return (
         <>
             <JsonLd data={aboutPageJsonLd} />
@@ -66,7 +61,7 @@ export default function AboutPage() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+                <div className="grid md:grid-cols-1 gap-16 items-center mb-20">
                     <div className="space-y-6">
                         <div className="flex items-start gap-4">
                             <div className="p-3 bg-primary/10 rounded-full">
@@ -90,18 +85,6 @@ export default function AboutPage() {
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        {missionImage && (
-                            <Image
-                                src={missionImage.imageUrl}
-                                alt={missionImage.description}
-                                width={600}
-                                height={400}
-                                className="rounded-lg shadow-lg"
-                                data-ai-hint={missionImage.imageHint}
-                            />
-                        )}
                     </div>
                 </div>
 
@@ -133,12 +116,9 @@ export default function AboutPage() {
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {team.map((member) => (
                         <div key={member.name} className="flex flex-col items-center text-center p-6 bg-card rounded-lg border">
-                            {member.image && (
-                                <Avatar className="w-24 h-24 mb-4 border-2 border-primary">
-                                    <AvatarImage src={member.image.imageUrl} alt={`Portrait of ${member.name}`} data-ai-hint={member.image.imageHint} />
-                                    <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                                </Avatar>
-                            )}
+                            <Avatar className="w-24 h-24 mb-4 border-2 border-primary">
+                                <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                            </Avatar>
                             <h3 className="text-xl font-bold">{member.name}</h3>
                             <p className="text-primary font-medium mb-2">{member.role}</p>
                             <p className="text-muted-foreground text-sm">{member.bio}</p>

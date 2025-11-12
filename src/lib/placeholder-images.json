@@ -1,34 +1,3 @@
 {
-  "placeholderImages": [
-    {
-      "id": "hero-background",
-      "description": "A close-up shot of roasted coffee beans.",
-      "imageUrl": "https://images.unsplash.com/photo-1552346986-1a79a9503d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NjM2MjkxOTB8MA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "coffee beans"
-    },
-    {
-      "id": "team-member-1",
-      "description": "Portrait of a confident female scientist",
-      "imageUrl": "https://images.unsplash.com/photo-1618053448701-5220304dc9ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzY2llbnRpc3QlMjB3b21hbnxlbnwwfHx8fDE3NjI5MTI2MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "scientist woman"
-    },
-    {
-      "id": "team-member-2",
-      "description": "Portrait of a friendly male developer",
-      "imageUrl": "https://images.unsplash.com/photo-1655115006347-01a5a3f8d240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjBtYW58ZW58MHx8fHwxNzYyOTEyNjIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "developer man"
-    },
-    {
-      "id": "about-mission",
-      "description": "A beautifully crafted latte art heart in a coffee cup, sitting on a wooden table.",
-      "imageUrl": "https://images.unsplash.com/photo-1579983329249-577d853b3c3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsYXR0ZSUyMGFydCUyMGhlYXJ0fGVufDB8fHx8MTc2MzYyOTA5NHww&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "latte art"
-    },
-    {
-      "id": "why-us-image",
-      "description": "A close-up of a hand holding a clear glass mug of coffee, showing the layers of the drink.",
-      "imageUrl": "https://images.unsplash.com/photo-1556742053-99e0a0a59a58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhZXN0aGV0aWMlMjBjb2ZmZWV8ZW58MHx8fHwxNzYzNjI5MTQwfDA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "aesthetic coffee"
-    }
-  ]
+  "placeholderImages": []
 }
