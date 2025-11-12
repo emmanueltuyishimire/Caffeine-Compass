@@ -1,9 +1,11 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Users, Target, HeartPulse } from 'lucide-react';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
     title: 'About Caffeine Compass — Our Mission and Science-Backed Approach',
@@ -15,11 +17,13 @@ const team = [
         name: 'Dr. Evelyn Reed',
         role: 'Founder & Lead Scientist',
         bio: 'With a Ph.D. in Chronobiology, Dr. Reed has dedicated her career to studying the effects of stimulants on human sleep cycles. She founded Caffeine Compass to translate complex science into a simple, actionable tool for everyone.',
+        imageId: 'team-evelyn'
     },
     {
         name: 'Alex Chen',
         role: 'Co-Founder & Lead Developer',
         bio: 'A former coffee-fueled startup developer, Alex experienced firsthand the highs and lows of caffeine dependency. He teamed up with Dr. Reed to build a tool that promotes mindful productivity and well-being.',
+        imageId: 'team-alex'
     },
 ];
 
@@ -50,6 +54,8 @@ const aboutPageJsonLd = {
 
 
 export default function AboutPage() {
+    const missionImage = PlaceHolderImages.find(p => p.id === 'mission-image');
+
     return (
         <>
             <JsonLd data={aboutPageJsonLd} />
@@ -61,7 +67,19 @@ export default function AboutPage() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-1 gap-16 items-center mb-20">
+                <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+                     {missionImage && (
+                        <div className="relative h-full min-h-[300px]">
+                            <Image
+                                src={missionImage.imageUrl}
+                                alt={missionImage.description}
+                                fill
+                                className="object-cover rounded-lg shadow-lg"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                data-ai-hint={missionImage.imageHint}
+                            />
+                        </div>
+                    )}
                     <div className="space-y-6">
                         <div className="flex items-start gap-4">
                             <div className="p-3 bg-primary/10 rounded-full">
@@ -114,16 +132,22 @@ export default function AboutPage() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    {team.map((member) => (
-                        <div key={member.name} className="flex flex-col items-center text-center p-6 bg-card rounded-lg border">
-                            <Avatar className="w-24 h-24 mb-4 border-2 border-primary">
-                                <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                            </Avatar>
-                            <h3 className="text-xl font-bold">{member.name}</h3>
-                            <p className="text-primary font-medium mb-2">{member.role}</p>
-                            <p className="text-muted-foreground text-sm">{member.bio}</p>
-                        </div>
-                    ))}
+                    {team.map((member) => {
+                        const memberImage = PlaceHolderImages.find(p => p.id === member.imageId);
+                        return (
+                            <div key={member.name} className="flex flex-col items-center text-center p-6 bg-card rounded-lg border">
+                                <Avatar className="w-24 h-24 mb-4 border-2 border-primary">
+                                    {memberImage && (
+                                        <AvatarImage src={memberImage.imageUrl} alt={memberImage.description} data-ai-hint={memberImage.imageHint} />
+                                    )}
+                                    <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                                </Avatar>
+                                <h3 className="text-xl font-bold">{member.name}</h3>
+                                <p className="text-primary font-medium mb-2">{member.role}</p>
+                                <p className="text-muted-foreground text-sm">{member.bio}</p>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </>

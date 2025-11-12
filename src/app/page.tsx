@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
     title: 'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
@@ -72,11 +74,24 @@ const featuredCalculators = [
 
 
 export default function Home() {
+  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
+  const whyUsImage = PlaceHolderImages.find(p => p.id === 'why-us-image');
+
   return (
     <>
       <JsonLd data={homePageJsonLd} />
       <div className="flex flex-col">
         <section className="relative text-center rounded-lg overflow-hidden min-h-[500px] flex flex-col justify-center items-center text-white bg-primary">
+            {heroImage && (
+              <Image
+                src={heroImage.imageUrl}
+                alt={heroImage.description}
+                fill
+                className="object-cover object-center z-0 opacity-20"
+                priority
+                data-ai-hint={heroImage.imageHint}
+              />
+            )}
           <div className="relative z-10 p-4 max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
               Take Control of Your Caffeine.
@@ -165,40 +180,81 @@ export default function Home() {
         </section>
 
         <section className="py-20">
-            <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-1 gap-16 items-center">
-                    <div className="space-y-8">
-                          <h2 className="text-3xl md:text-4xl font-bold font-headline text-center">Why Caffeine Compass?</h2>
-                        <div className="flex items-start gap-4">
-                              <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
-                                  <BookOpen className="h-6 w-6 text-primary" aria-label="Science-Backed Icon" />
-                              </div>
-                              <div>
-                                  <h3 className="text-xl font-bold mb-1">Science-Backed & Data-Driven</h3>
-                                  <p className="text-muted-foreground">Our tools are built on peer-reviewed research in chronobiology, toxicology, and sleep science to provide you with trustworthy and accurate information.</p>
-                              </div>
-                        </div>
-                        <div className="flex items-start gap-4">
-                              <div className="p-3 bg-accent/10 rounded-full flex-shrink-0">
-                                  <HeartPulse className="h-6 w-6 text-accent" aria-label="Personalized Icon" />
-                              </div>
-                              <div>
-                                  <h3 className="text-xl font-bold mb-1">Personalized For You</h3>
-                                  <p className="text-muted-foreground">Caffeine isn't one-size-fits-all. We help you understand how your personal metabolism, body weight, and timing influence its effects.</p>
-                              </div>
-                        </div>
-                          <div className="flex items-start gap-4">
-                              <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
-                                  <Shield className="h-6 w-6 text-primary" aria-label="Empowerment Icon" />
-                              </div>
-                              <div>
-                                  <h3 className="text-xl font-bold mb-1">Empowerment Through Knowledge</h3>
-                                  <p className="text-muted-foreground">We believe that by understanding how caffeine works, you can make it a powerful tool for productivity, not a source of anxiety or poor health.</p>
-                              </div>
-                        </div>
-                    </div>
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div>
+                {whyUsImage && (
+                  <Image
+                    src={whyUsImage.imageUrl}
+                    alt={whyUsImage.description}
+                    width={600}
+                    height={400}
+                    className="rounded-lg shadow-lg"
+                    data-ai-hint={whyUsImage.imageHint}
+                  />
+                )}
+              </div>
+              <div className="space-y-8">
+                <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                  Why Caffeine Compass?
+                </h2>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+                    <BookOpen
+                      className="h-6 w-6 text-primary"
+                      aria-label="Science-Backed Icon"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">
+                      Science-Backed & Data-Driven
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Our tools are built on peer-reviewed research in
+                      chronobiology, toxicology, and sleep science to provide
+                      you with trustworthy and accurate information.
+                    </p>
+                  </div>
                 </div>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-accent/10 rounded-full flex-shrink-0">
+                    <HeartPulse
+                      className="h-6 w-6 text-accent"
+                      aria-label="Personalized Icon"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">
+                      Personalized For You
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Caffeine isn't one-size-fits-all. We help you understand
+                      how your personal metabolism, body weight, and timing
+                      influence its effects.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+                    <Shield
+                      className="h-6 w-6 text-primary"
+                      aria-label="Empowerment Icon"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">
+                      Empowerment Through Knowledge
+                    </h3>
+                    <p className="text-muted-foreground">
+                      We believe that by understanding how caffeine works, you
+                      can make it a powerful tool for productivity, not a source
+                      of anxiety or poor health.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </section>
       </div>
     </>
