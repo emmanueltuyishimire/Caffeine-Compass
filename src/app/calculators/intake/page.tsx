@@ -400,7 +400,7 @@ export default function IntakeCalculatorPage() {
              <AccordionItem value="item-4">
               <AccordionTrigger>Can I get addicted to caffeine?</AccordionTrigger>
               <AccordionContent>
-                Yes, you can develop a physical dependence on caffeine. Over time, your brain adapts to its presence, and you may experience withdrawal symptoms like headaches, fatigue, and irritability if you suddenly stop. Our forthcoming Caffeine Withdrawal Tracker can help you taper off safely.
+                Yes, you can develop a physical dependence on caffeine. Over time, your brain adapts to its presence, and you may experience withdrawal symptoms like headaches, fatigue, and irritability if you suddenly stop. Our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> can help you taper off safely.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5">
@@ -436,7 +436,7 @@ export default function IntakeCalculatorPage() {
             <AccordionItem value="item-10">
               <AccordionTrigger>How much caffeine is too much?</AccordionTrigger>
               <AccordionContent>
-                Exceeding 400 mg per day can lead to negative side effects for many adults. Doses over 1,200 mg can be toxic and may cause seizures. An 'overdose' is rare but possible. Our upcoming Caffeine Overdose Calculator can help you understand the risks associated with very high doses.
+                Exceeding 400 mg per day can lead to negative side effects for many adults. Doses over 1,200 mg can be toxic and may cause seizures. An 'overdose' is rare but possible. Our <Link href="/calculators/caffeine-overdose-risk">Caffeine Overdose Risk Calculator</Link> can help you understand the risks associated with very high doses.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-11">
@@ -449,7 +449,7 @@ export default function IntakeCalculatorPage() {
               <AccordionTrigger>Can caffeine cause anxiety?</AccordionTrigger>
               <AccordionContent>
                 Yes, for some people, especially those who are "slow metabolizers" or have a predisposition to anxiety, caffeine can trigger or worsen feelings of jitteriness, nervousness, and a racing heart. Tracking your intake can help you find a personal threshold where you get the benefits without the anxious side effects.
-              </AecordionContent>
+              </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-13">
               <AccordionTrigger>What are the symptoms of caffeine withdrawal?</AccordionTrigger>

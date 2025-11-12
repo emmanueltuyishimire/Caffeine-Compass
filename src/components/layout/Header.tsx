@@ -46,6 +46,11 @@ const calculators: { title: string; href: string; description: string }[] = [
     title: "Caffeine in Drinks Database",
     href: "/calculators/drinks-database",
     description: "Search 1,000+ beverages by caffeine mg.",
+  },
+  {
+    title: "Caffeine Overdose Risk Calculator",
+    href: "/calculators/caffeine-overdose-risk",
+    description: "Estimate safe and toxic caffeine levels based on body weight.",
   }
 ]
 
