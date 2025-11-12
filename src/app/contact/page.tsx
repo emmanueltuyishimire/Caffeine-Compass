@@ -1,10 +1,6 @@
 
 import { Metadata } from 'next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -24,27 +20,16 @@ export default function ContactPage() {
         </div>
         <Card className="max-w-2xl mx-auto">
             <CardHeader>
-                <CardTitle>Send us a message</CardTitle>
-                <CardDescription>We'll do our best to get back to you as soon as possible.</CardDescription>
+                <CardTitle>Get in Touch</CardTitle>
+                <CardDescription>The best way to reach us is by email.</CardDescription>
             </CardHeader>
             <CardContent>
-                <form className="space-y-6">
-                    <div className="space-y-2">
-                        <Label htmlFor="name">Full Name</Label>
-                        <Input id="name" placeholder="Your Name" required />
-                    </div>
-                    <div className="space-y-2">
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" type="email" placeholder="your.email@example.com" required />
-                    </div>
-                    <div className="space-y-2">
-                        <Label htmlFor="message">Message</Label>
-                        <Textarea id="message" placeholder="Your message..." rows={6} required />
-                    </div>
-                    <Button type="submit" className="w-full">
-                        Send Message
-                    </Button>
-                </form>
+                <p className="text-lg text-center">
+                    For all inquiries, please email us at:
+                    <a href="mailto:emmanueltuyishimire766@gmail.com" className="font-medium text-accent hover:underline block mt-2">
+                        emmanueltuyishimire766@gmail.com
+                    </a>
+                </p>
             </CardContent>
         </Card>
     </div>
