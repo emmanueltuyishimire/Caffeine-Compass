@@ -56,7 +56,7 @@ export default function Home() {
               <CardHeader>
                 <div className="flex items-center gap-4">
                   <BarChart2 className="h-8 w-8 text-primary" />
-                  <CardTitle>Half-Life Estimator</CardTitle>
+                  <CardTitle>Half-Life Calculator</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>

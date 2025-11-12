@@ -1,0 +1,479 @@
+
+import HalfLifeEstimator from '@/components/features/HalfLifeEstimator';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
+import Link from 'next/link';
+import { Metadata } from 'next';
+import { CheckCircle, Lightbulb, User, Briefcase, GraduationCap, Heart, Droplet, BrainCircuit, Moon, ZapOff } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title:
+    'Caffeine Half-Life Calculator — Find Out How Long Caffeine Stays in Your System',
+  description:
+    'Use our free, science-based calculator to estimate caffeine’s half-life in your body. Learn how metabolism, genetics, and timing affect focus and sleep.',
+};
+
+
+export default function HalfLifeCalculatorPage() {
+  return (
+    <div className="container mx-auto px-4 py-12">
+      <header className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
+          Caffeine Half-Life Calculator — How Long Does Caffeine Stay in Your System?
+        </h1>
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          Visualize how caffeine decays in your body over time. Use this tool to optimize your intake for peak performance and protect your sleep quality.
+        </p>
+      </header>
+
+      <HalfLifeEstimator />
+
+      <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
+        <section id="introduction">
+          <h2 className="text-3xl font-bold">
+            The Invisible Clock: Decoding Your Body's Response to Caffeine
+          </h2>
+          <p>
+            You drink a coffee at 3 PM for a much-needed boost, but find yourself staring at the ceiling at 11 PM. Sound familiar? The culprit is often a simple misunderstanding of caffeine's lingering presence in your body. This Caffeine Half-Life Calculator is designed to demystify that process, giving you a clear, visual representation of how long caffeine really sticks around. It answers a crucial question: <b>"How long will that coffee affect me?"</b>
+          </p>
+          <p>
+            Most people underestimate how long caffeine remains active in their bloodstream, leading to restless nights, mid-day crashes, or unexplained anxiety. The concept of "half-life" is the key to understanding this. It’s the time it takes for your body to eliminate half of the caffeine you consumed. While the average half-life is around 5 hours, this can vary dramatically based on your genetics, age, body weight, and even medications you take. This calculator puts that scientific principle into your hands, transforming abstract numbers into a personalized timeline of your body's caffeine clearance.
+          </p>
+          <p>
+            Understanding your personal caffeine decay curve is a superpower. It allows you to strategically time your intake for maximum focus when you need it, and ensure it has faded by the time you want to rest. Whether you're trying to avoid disrupting your sleep, manage your tolerance, or simply gain more control over your energy levels, this tool is your first step. By visualizing the process, you can make smarter decisions that align with your health goals. To get a complete picture, you can also use our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> to track your total dose and the <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> to see exactly how much caffeine will be in your system at bedtime.
+          </p>
+        </section>
+
+        <Separator />
+
+        <section id="how-it-works">
+            <h2 className="text-3xl font-bold">How This Calculator Works: The Science of Caffeine Metabolism</h2>
+            <p>
+                At its core, this calculator uses an established pharmacokinetic model known as first-order elimination kinetics. While that sounds complex, the principle is simple: your body clears a certain <i>percentage</i> of the caffeine in your system per hour, not a fixed amount. This leads to the characteristic "decay curve" where elimination is faster at the beginning and slows down as the concentration drops.
+            </p>
+
+            <h3 className="text-2xl font-semibold">Inputs Explained: The Data Behind the Decay Curve</h3>
+            <p>
+                To generate your personalized chart, the calculator needs a few key pieces of information:
+            </p>
+            <ul>
+                <li><b>Caffeine Consumed (mg):</b> This is the starting point of your calculation. The more caffeine you consume, the longer it will take for your body to clear it. An average 8 oz (240ml) cup of coffee has about 95 mg, but this can vary. For precision, you can find specific amounts using our <Link href="/calculators/drink-database">Drink Database</Link>.</li>
+                <li><b>Metabolism Speed (Half-Life):</b> This is the most crucial variable. It represents the time (in hours) it takes for your body to reduce the caffeine concentration in your blood by 50%. We provide presets for fast, average, and slow metabolizers, which correspond to different half-life durations.</li>
+            </ul>
+             <p>
+                The calculator then applies the half-life decay formula:
+                <br />
+                <b>Remaining Caffeine = Initial Dose * (0.5) ^ (Time / Half-Life)</b>
+                <br />
+                It runs this calculation for each hour to plot the visual bar chart, showing you a clear, hour-by-hour estimate of the caffeine remaining in your system.
+            </p>
+
+            <Card className="my-8">
+                <CardHeader>
+                    <CardTitle className="flex items-center gap-2"><Lightbulb className="text-accent"/>Caffeine Smart Tip</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-lg">
+                        Your perceived "tolerance" to caffeine is often linked to your metabolism speed. If you feel jittery for hours after one coffee, you're likely a slow metabolizer. If you can have an espresso after dinner and sleep soundly, you're probably a fast metabolizer. Use this calculator to test your assumptions.
+                    </p>
+                </CardContent>
+            </Card>
+
+            <h3 className="text-2xl font-semibold">The Scientific Background: Your Liver and the CYP1A2 Enzyme</h3>
+            <p>
+                When you drink a caffeinated beverage, it is absorbed into your bloodstream and makes its way to your liver. The liver is your body’s primary metabolic engine, and it’s where the magic (and science) of caffeine breakdown happens. The star player in this process is an enzyme called <b>Cytochrome P450 1A2</b>, or <b>CYP1A2</b> for short.
+            </p>
+            <p>
+                The CYP1A2 enzyme is responsible for metabolizing about 95% of the caffeine you consume. The efficiency of this enzyme is largely determined by your genetics, specifically your variant of the <i>CYP1A2</i> gene.
+            </p>
+            <ul>
+                <li><b>Fast Metabolizers (AA Genotype):</b> Around 40% of the population carries a version of the <i>CYP1A2</i> gene that produces a highly efficient enzyme. They process caffeine quickly, experiencing a shorter duration of effects. Their typical half-life is closer to <b>3-4 hours</b>.</li>
+                <li><b>Slow Metabolizers (AC or CC Genotype):</b> The other 60% of people have a less efficient version of the enzyme. For them, caffeine lingers much longer, sometimes with a half-life of <b>6-8 hours or more</b>. They are more prone to caffeine-induced anxiety, jitteriness, and sleep disturbances.</li>
+            </ul>
+            <p>
+                But genetics aren't the only factor. Other variables can influence your CYP1A2 enzyme activity and thus your caffeine half-life:
+            </p>
+             <ul>
+                <li><b>Medications:</b> Certain drugs, including some antidepressants and antibiotics, can inhibit the CYP1A2 enzyme, effectively turning a fast metabolizer into a slow one.</li>
+                <li><b>Pregnancy:</b> During the third trimester, hormonal changes can slow caffeine metabolism dramatically, extending the half-life to as long as 15 hours. This is why our <Link href="/calculators/pregnancy-safe-limit">Pregnancy Safe Limit Calculator</Link> is a crucial tool for expectant mothers.</li>
+                <li><b>Liver Health:</b> Since the liver does the heavy lifting, any impairment to liver function can significantly slow down caffeine clearance.</li>
+                <li><b>Smoking:</b> Chemicals in tobacco smoke can induce (speed up) the CYP1A2 enzyme, causing smokers to metabolize caffeine up to 50% faster than non-smokers. This is why smokers often consume more coffee.</li>
+            </ul>
+             <p>
+                This calculator simplifies these complex interactions by allowing you to select a half-life that best represents your personal experience. By observing how you feel and cross-referencing it with the calculator's output, you can gain powerful insights into your own unique physiology.
+            </p>
+        </section>
+
+        <Separator />
+
+        <section id="features">
+            <h2 className="text-3xl font-bold">Key Features of the Tool</h2>
+            <p>
+                This tool is designed to provide clear, actionable insights into your caffeine habits.
+            </p>
+            <Table>
+                <TableHeader>
+                    <TableRow>
+                        <TableHead>Feature</TableHead>
+                        <TableHead>Description</TableHead>
+                        <TableHead>Why It Matters</TableHead>
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
+                    <TableRow>
+                        <TableCell className="font-medium">Visual Decay Chart</TableCell>
+                        <TableCell>A bar chart shows the estimated amount of caffeine remaining in your system hour by hour.</TableCell>
+                        <TableCell>Turns abstract data into an easy-to-understand visual, helping you see the long-lasting impact of caffeine.</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell className="font-medium">Customizable Inputs</TableCell>
+                        <TableCell>Adjust the initial caffeine dose and select your estimated metabolism speed (half-life).</TableCell>
+                        <TableCell>Allows for a personalized estimation that more closely reflects your unique body and habits.</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell className="font-medium">Real-Time Calculation</TableCell>
+                        <TableCell>The chart and summary update instantly as you change the inputs.</TableCell>
+                        <TableCell>Enables you to quickly experiment with different scenarios (e.g., "What if I had a stronger coffee?").</TableCell>
+                    </TableRow>
+                     <TableRow>
+                        <TableCell className="font-medium">8-Hour Impact Summary</TableCell>
+                        <TableCell>A footer provides a quick summary of the caffeine estimated to be in your system after 8 hours.</TableCell>
+                        <TableCell>This is a critical metric for sleep, as 8 hours is the recommended sleep duration for most adults.</TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
+        </section>
+
+        <Separator />
+
+        <section id="instructions">
+            <h2 className="text-3xl font-bold">Step-by-Step Instructions: How to Use the Calculator</h2>
+            <p>Estimating your caffeine curve is straightforward. Follow these steps:</p>
+            <ol className="list-decimal pl-5 space-y-2">
+                <li>
+                    <b>Enter Caffeine Amount:</b> In the "Caffeine Consumed (mg)" field, enter the total milligrams of caffeine you consumed in a single sitting. If you're unsure, a standard 8 oz coffee is about 95 mg.
+                </li>
+                <li>
+                    <b>Select Your Metabolism Speed:</b> Use the dropdown menu to choose a half-life that best reflects your sensitivity. If you're unsure, start with "Average (5-hour half-life)". If you're particularly sensitive, choose "Slow". If caffeine affects you minimally, choose "Fast".
+                </li>
+                <li>
+                    <b>Analyze the Decay Chart:</b> The bar chart will instantly update to show the estimated caffeine (in mg) remaining in your system for the next 12 hours. The x-axis represents hours since consumption, and the y-axis represents the amount of caffeine.
+                </li>
+                <li>
+                    <b>Review the 8-Hour Summary:</b> Look at the text below the chart. It provides a quick calculation of how much caffeine is likely still active after a full workday or 8 hours before bed. This is a key indicator for potential sleep disruption.
+                </li>
+            </ol>
+        </section>
+
+        <Separator />
+
+        <section id="examples">
+            <h2 className="text-3xl font-bold">Worked Examples: See the Calculator in Action</h2>
+            <p>
+                Different people, different results. Here’s how the half-life calculator can provide insights for various lifestyles.
+            </p>
+
+            <Card className="mb-6">
+                <CardHeader>
+                    <CardTitle className="flex items-center gap-3"><GraduationCap /> The Student with an Afternoon Class</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                    <p><b>Scenario:</b> Alex, a college student and a "slow" metabolizer (6-hour half-life), drinks a 200 mg cold brew at 2 PM to stay focused for an evening study session.</p>
+                    <p><b>Calculator Result:</b> The chart shows that at 8 PM (6 hours later), he still has <b>100 mg</b> of caffeine in his system — the equivalent of a whole other cup of coffee. By the time he tries to sleep at midnight (10 hours later), he'll still have roughly <b>63 mg</b> active.</p>
+                    <p><b>Interpretation:</b> The calculator visually demonstrates why his "afternoon" coffee is sabotaging his sleep. He learns that for his slow metabolism, any significant caffeine intake after 12 PM is risky for his sleep schedule.</p>
+                </CardContent>
+            </Card>
+
+            <Card className="mb-6">
+                <CardHeader>
+                    <CardTitle className="flex items-center gap-3"><Briefcase /> The "Fast Metabolizer" Executive</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                    <p><b>Scenario:</b> Sarah is a CEO with a "fast" metabolism (4-hour half-life). She has a double espresso (128 mg) at 4 PM before a late meeting.</p>
+                     <p><b>Calculator Result:</b> The decay curve shows that by 8 PM (4 hours later), her caffeine level is already down to <b>64 mg</b>. By 10 PM, it's only <b>45 mg</b>.</p>
+                    <p><b>Interpretation:</b> For Sarah, a late-afternoon coffee is not a major issue for her sleep. The calculator confirms her personal experience and gives her confidence that her habit isn't negatively impacting her rest, thanks to her efficient metabolism.</p>
+                </CardContent>
+            </Card>
+            
+            <Card className="mb-6">
+                <CardHeader>
+                    <CardTitle className="flex items-center gap-3"><Heart /> The Average Person Trying to Optimize Sleep</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                    <p><b>Scenario:</b> Mark considers himself an "average" metabolizer (5-hour half-life). He wants to know the impact of his 12 PM latte (64 mg).</p>
+                     <p><b>Calculator Result:</b> At his bedtime of 10 PM (10 hours later), the calculator shows he will have approximately <b>16 mg</b> of caffeine left in his system.</p>
+                    <p><b>Interpretation:</b> The tool gives him a concrete number. While 16 mg is a small amount, for someone very sensitive, it could still slightly delay sleep. He might decide to move his last coffee to 11 AM to get that number even closer to zero by bedtime. Our <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> can provide even more detail on this specific scenario.</p>
+                </CardContent>
+            </Card>
+        </section>
+        
+        <Separator />
+
+        <section id="use-cases">
+            <h2 className="text-3xl font-bold">Real-Life Use Cases: Putting Your Half-Life Data to Work</h2>
+            <p>
+                Understanding your caffeine curve is the first step. Here's how to apply that knowledge.
+            </p>
+            <h3 className="text-2xl font-semibold">1. Establishing a Personal Caffeine Curfew</h3>
+            <p>
+                The most powerful use of this calculator is to determine your "caffeine curfew" — the time of day you need to stop all caffeine intake to protect your sleep. A common recommendation is to avoid caffeine for 8-10 hours before bed. Use the calculator to work backward from your bedtime. If you want less than 20 mg of caffeine in your system by 10 PM, what is the latest you can have a 100 mg coffee? The chart gives you a data-driven answer.
+            </p>
+            <h3 className="text-2xl font-semibold">2. Optimizing for Productivity and Focus</h3>
+            <p>
+                Caffeine’s peak effect on alertness typically occurs 30-60 minutes after consumption. The half-life data helps you plan for the <i>duration</i> of that focus. If you have a 3-hour exam, you can time your coffee so that the peak concentration aligns with the start, and you know you'll have a significant amount of caffeine in your system for the entire duration. For longer tasks, you might plan smaller doses spaced out according to your half-life to maintain stable energy without a big crash.
+            </p>
+            <h3 className="text-2xl font-semibold">3. Understanding and Managing "Caffeine Stacking"</h3>
+            <p>
+                "Caffeine stacking" is consuming another caffeinated drink before the previous one has cleared. If you have a coffee at 9 AM (200 mg) and another at 1 PM, you're not starting from zero. With a 5-hour half-life, you'd still have about 120 mg in your system from the first coffee when you drink the second. This calculator helps you understand that cumulative effect, explaining why that second coffee might feel much stronger or lead to jitters.
+            </p>
+        </section>
+
+        <Separator />
+
+        <section id="common-mistakes">
+            <h2 className="text-3xl font-bold">Common Mistakes in Estimating Caffeine Duration & How to Avoid Them</h2>
+            <p>
+                People often misjudge how long caffeine affects them. Here are common errors this calculator helps you avoid.
+            </p>
+            <Table>
+                <TableHeader>
+                    <TableRow>
+                        <TableHead>Mistake</TableHead>
+                        <TableHead>Why It Happens</TableHead>
+                        <TableHead>How to Fix</TableHead>
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
+                    <TableRow>
+                        <TableCell className_medium">Thinking "I feel fine" means the caffeine is gone</TableCell>
+                        <TableCell>The noticeable "buzz" wears off faster than the caffeine is actually cleared. Even low levels can disrupt sleep architecture without you consciously feeling it.</TableCell>
+                        <TableCell>Trust the data. Use the calculator to see the estimated amount remaining, even if you don't feel stimulated. Aim for near-zero levels at bedtime.</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell className_medium">Assuming all coffees have the same effect duration</TableCell>
+                        <TableCell>A 300 mg cold brew will stay in your system much longer than a 64 mg espresso, simply because the starting dose is higher.</TableCell>
+                        <TableCell>Use the <Link href="/calculators/intake">Caffeine Intake Calculator</post> to find the dose of your specific drink, and plug that number into this half-life calculator for an accurate decay curve.</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell className_medium">Not accounting for metabolism speed</TableCell>
+                        <TableCell>Reading a generic article that says "caffeine lasts 5 hours" is a one-size-fits-all approach that ignores individual genetics.</TableCell>
+                        <TableCell>Experiment with the "Fast," "Average," and "Slow" settings in the calculator and see which one best matches your real-world experience of jitters and sleep quality.</TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
+        </section>
+
+        <Separator />
+
+        <section id="expert-insights">
+            <h2 className="text-3xl font-bold">Quick Hacks & Expert Insights for Mastering Caffeine Timing</h2>
+            <Card className="mb-4">
+                <CardHeader>
+                    <CardTitle className="flex items-center gap-2"><BrainCircuit /> Know Your "Quarter-Life"</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>While half-life is the time to 50% reduction, the "quarter-life" (time to 25% remaining) is often more relevant for sleep. If your half-life is 5 hours, your quarter-life is 10 hours. This means a 200 mg coffee at noon will still leave you with 50 mg of caffeine at 10 PM — enough to disrupt deep sleep for many people.</p>
+                </CardContent>
+            </Card>
+            <Card className="mb-4">
+                <CardHeader>
+                    <CardTitle className="flex items-center gap-2"><Moon /> Your Last Coffee Should Be 10 Hours Before Bed</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>For most people, a good rule of thumb is to set your caffeine curfew for 10 hours before your target bedtime. This is based on two average half-lives (5 hours x 2), which is enough time to clear 75% of the caffeine from your system. Use the calculator to confirm this for your specific metabolism.</p>
+                </CardContent>
+            </Card>
+            <Card>
+                <CardHeader>
+                    <CardTitle className="flex items-center gap-2"><ZapOff /> Use Decaf to Your Advantage</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>Craving the taste or ritual of coffee in the afternoon? Switch to decaf. A cup of decaf has only 2-7 mg of caffeine, a negligible amount that won't show up on the decay curve in any meaningful way. It's a great way to satisfy the habit without sacrificing your sleep.</p>
+                </CardContent>
+            </Card>
+        </section>
+
+        <Separator />
+        
+        <section id="deep-dive">
+            <h2 className="text-3xl font-bold">The Deep Dive: Caffeine Pharmacokinetics</h2>
+            <p>
+                Pharmacokinetics is the study of how a substance moves into, through, and out of the body. For caffeine, this journey is a fascinating tale of absorption, distribution, metabolism, and elimination. Understanding this process at a deeper level reveals why timing is everything.
+            </p>
+            <h3 className="text-2xl font-semibold">Absorption and Peak Plasma Concentration</h3>
+            <p>
+                When you drink a coffee, caffeine is rapidly and almost completely absorbed from your gastrointestinal tract. It enters the bloodstream, and you begin to feel its effects within 15 to 30 minutes. The concentration of caffeine in your blood plasma typically reaches its peak between 45 and 90 minutes after ingestion. This peak is the point of maximum alertness — the "kick" you feel. The speed of this absorption can be slowed by the presence of food in your stomach, which is why coffee can feel more intense on an empty stomach.
+            </p>
+            <h3 className="text-2xl font-semibold">Distribution: Reaching the Brain</h3>
+            <p>
+                Caffeine is both water-soluble and fat-soluble, a unique property that allows it to travel throughout your body and easily cross the formidable blood-brain barrier. Once in the brain, it begins its primary work: blocking adenosine receptors. Adenosine is a neurotransmitter that promotes sleepiness; by blocking it, caffeine artificially boosts wakefulness.
+            </p>
+            <h3 className="text-2xl font-semibold">Metabolism: The Liver's Role and Genetic Variation</h3>
+            <p>
+                As we've discussed, the liver is where caffeine is broken down. The CYP1A2 enzyme transforms caffeine into three primary metabolites:
+            </p>
+             <ul>
+                <li><b>Paraxanthine (84%):</b> Increases lipolysis, the breakdown of fats for fuel.</li>
+                <li><b>Theobromine (12%):</b> Dilates blood vessels and has a mild diuretic effect.</li>
+                <li><b>Theophylline (4%):</b> Relaxes smooth muscles in the airways, which is why it's used in some asthma medications.</li>
+            </ul>
+            <p>
+                These metabolites have their own mild effects but are much less potent than caffeine itself. The speed at which your liver performs this conversion is the rate-limiting step in caffeine clearance and is the basis for your personal half-life. Genetic tests can now identify your <i>CYP1A2</i> genotype, but you can get a very good estimate of your status by using this calculator and paying close attention to your body's response. Are you still feeling the effects of a noon coffee at 8 PM? You are almost certainly a slow metabolizer.
+            </p>
+            <h3 className="text-2xl font-semibold">Elimination and the Concept of Clearance Rate</h3>
+            <p>
+                Once metabolized, the byproducts are filtered by the kidneys and excreted in urine. The "half-life" is a convenient proxy for a more technical term: "clearance rate." This rate can be influenced by many factors. For example, the oral contraceptives can slow clearance, extending caffeine's half-life. Conversely, heavy smokers clear caffeine much faster because the hydrocarbons in smoke accelerate the activity of the CYP1A2 enzyme.
+            </p>
+            <p>
+                This calculator uses the half-life model because it provides an intuitive, visual way to understand this complex process of elimination. By seeing the curve, you are seeing a direct representation of your body's metabolic machinery at work, clearing a foreign substance from your system. This empowers you to move beyond simply asking "how much caffeine is in this drink?" to the more important question: "how will my body manage this dose over the next 10 hours?"
+            </p>
+        </section>
+
+        <Separator />
+
+        <section id="faq">
+          <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>What is caffeine half-life?</AccordionTrigger>
+              <AccordionContent>
+                Caffeine half-life is the amount of time it takes for your body to eliminate 50% of the caffeine you've consumed. For example, if you consume 100 mg of caffeine and have a 5-hour half-life, you will have 50 mg remaining in your system after 5 hours. This calculator helps you visualize this decay process.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>How accurate is this calculator?</AccordionTrigger>
+              <AccordionContent>
+                This calculator provides a scientifically-based estimate using a standard pharmacokinetic model. However, it's an educational tool. Your actual caffeine half-life can be influenced by genetics, medications, liver health, and pregnancy. Use the calculator's "Metabolism Speed" setting to align its estimate with your personal experience.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>What's the difference between a fast and slow metabolizer?</AccordionTrigger>
+              <AccordionContent>
+                It comes down to genetics, specifically the <i>CYP1A2</i> gene. Fast metabolizers have a highly efficient enzyme that clears caffeine quickly (e.g., 3-4 hour half-life). Slow metabolizers have a less efficient enzyme, so caffeine lingers much longer (e.g., 6-8+ hour half-life), making them more prone to anxiety and sleep issues. Our upcoming <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> will help you determine your type.
+              </AccordionContent>
+            </AccordionItem>
+             <AccordionItem value="item-4">
+              <AccordionTrigger>How long does it take to feel the effects of caffeine?</AccordionTrigger>
+              <AccordionContent>
+                You'll typically feel the effects of caffeine within 15 to 30 minutes. The peak concentration in your blood, and thus the peak feeling of alertness, usually occurs around 60 to 90 minutes after consumption.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>If I don't feel "caffeinated," is the caffeine gone?</AccordionTrigger>
+              <AccordionContent>
+                Not necessarily. The strong, noticeable "buzz" of caffeine wears off long before it's fully eliminated. Even small, non-perceptible amounts of caffeine can be enough to disrupt the architecture of your sleep, particularly deep sleep. This is why using a tool like our <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> is so important.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-6">
+              <AccordionTrigger>When should I stop drinking caffeine for better sleep?</AccordionTrigger>
+              <AccordionContent>
+                A general rule of thumb is to establish a "caffeine curfew" 8 to 10 hours before your intended bedtime. For a 10 PM bedtime, this means no caffeine after 12 PM or 2 PM. Use this calculator to see how much caffeine is left after 8 hours to understand why this rule is so effective.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-7">
+              <AccordionTrigger>Does food affect caffeine half-life?</AccordionTrigger>
+              <AccordionContent>
+                Food can slow the <i>absorption</i> of caffeine, leading to a less intense but slightly more prolonged peak. However, it does not significantly change the overall half-life or the rate at which your liver metabolizes it.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-8">
+              <AccordionTrigger>Why do I get headaches when I skip my morning coffee?</AccordionTrigger>
+              <AccordionContent>
+                That's a classic symptom of caffeine withdrawal. Your body has adapted to the presence of caffeine, and when it's removed, you can experience headaches, fatigue, and irritability. Our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> is designed to help you taper off your intake gradually to minimize these symptoms.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-9">
+              <AccordionTrigger>Does exercise affect caffeine metabolism?</AccordionTrigger>
+              <AccordionContent>
+                Some research suggests that intense exercise might slightly speed up caffeine metabolism, but the effect is generally not considered significant enough to drastically alter your half-life. The primary factors remain genetics and liver function.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-10">
+              <AccordionTrigger>Is a 6-hour half-life bad?</AccordionTrigger>
+              <AccordionContent>
+                Not at all! It's very common (over half the population are slow metabolizers). It simply means you need to be more strategic with your caffeine timing. A person with a 6-hour half-life may benefit most from limiting caffeine to the early morning to ensure it doesn't interfere with sleep.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-11">
+              <AccordionTrigger>How can I find out the caffeine content of my drink?</AccordionTrigger>
+              <AccordionContent>
+                Our <Link href="/calculators/drink-database">Caffeine in Drinks Database</Link> is a great resource. You can search for thousands of common beverages to find their specific caffeine content in milligrams. This is much more accurate than relying on generic estimates.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-12">
+              <AccordionTrigger>Does my body weight affect caffeine half-life?</AccordionTrigger>
+              <AccordionContent>
+                Body weight can influence the concentration of caffeine in your body, but it doesn't directly change the half-life, which is a rate of elimination controlled by your liver enzymes. A smaller person might feel the effects more strongly from the same dose, but the decay percentage over time remains similar.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-13">
+              <AccordionTrigger>Why do I sometimes feel tired right after a coffee?</AccordionTrigger>
+              <AccordionContent>
+                This can happen for a few reasons. If you're dehydrated, coffee (a mild diuretic) can worsen it. It could also be that the caffeine is causing a brief spike in blood sugar, followed by a crash. Or, if you're very tired, the "sleep pressure" from adenosine buildup can briefly overpower the caffeine's stimulating effect.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-14">
+              <AccordionTrigger>Can I "reset" my caffeine tolerance?</AccordionTrigger>
+              <AccordionContent>
+                Yes. The best way is to gradually reduce your daily intake, a process known as tapering. Our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> can help you track your daily totals as you lower them. A full tolerance reset can take anywhere from one to two weeks of reduced or zero caffeine intake.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-15">
+              <AccordionTrigger>Is caffeine from tea metabolized differently than caffeine from coffee?</AccordionTrigger>
+              <AccordionContent>
+                No, the caffeine molecule is identical and is metabolized by the same enzymes in your liver. However, tea contains other compounds like L-theanine, which can modulate the subjective experience, making it feel smoother and less jittery than the caffeine from coffee.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </section>
+
+        <Separator />
+        
+        <section id="related-tools">
+            <h2 className="text-3xl font-bold">Related Tools & Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <Card>
+                    <CardHeader>
+                        <CardTitle><Link href="/calculators/intake" className="hover:underline">Caffeine Intake Calculator</Link></CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>First, find out how much caffeine you're consuming. Track your daily drinks to get a total dose.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle><Link href="/calculators/sleep-impact" className="hover:underline">Sleep Impact Calculator</Link></CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>Calculate your precise caffeine levels at bedtime to see how a specific drink will affect your sleep.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Drink Comparison Tool</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>Compare the caffeine content of your favorite beverages side-by-side. (Coming soon)</p>
+                    </CardContent>
+                </Card>
+            </div>
+        </section>
+      </div>
+    </div>
+  );
+}
+
