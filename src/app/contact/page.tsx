@@ -15,21 +15,20 @@ export default function ContactPage() {
             <Mail className="h-10 w-10 mx-auto text-primary mb-4" aria-label="Contact Icon" />
             <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Contact Us</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                Have a question, feedback, or a suggestion? We'd love to hear from you.
+                We welcome your questions, feedback, and suggestions. The best way to reach our team is by email.
             </p>
         </div>
         <Card className="max-w-2xl mx-auto">
             <CardHeader>
-                <CardTitle>Get in Touch</CardTitle>
-                <CardDescription>The best way to reach us is by email.</CardDescription>
+                <CardTitle>Email Us</CardTitle>
+                <CardDescription>For all inquiries, please send a message to the address below. We do our best to respond within 48 hours.</CardDescription>
             </CardHeader>
             <CardContent>
-                <p className="text-lg text-center">
-                    For all inquiries, please email us at:
-                    <a href="mailto:emmanueltuyishimire766@gmail.com" className="font-medium text-accent hover:underline block mt-2">
+                <div className="text-lg text-center bg-muted p-4 rounded-md">
+                    <a href="mailto:emmanueltuyishimire766@gmail.com" className="font-medium text-accent hover:underline break-words">
                         emmanueltuyishimire766@gmail.com
                     </a>
-                </p>
+                </div>
             </CardContent>
         </Card>
     </div>
