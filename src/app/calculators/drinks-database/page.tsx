@@ -21,26 +21,26 @@ export const metadata: Metadata = {
 
 const pageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Caffeine in Drinks Database",
-  "description": "Find the caffeine content of over 1,000 beverages using a searchable database.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Search",
-      "text": "Start typing the name of any drink, brand, or category into the search bar."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Filter and Sort",
-      "text": "Optionally, filter by category (e.g., Coffee, Tea) and sort the results by caffeine content or name."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "View Results",
-      "text": "The list will update in real-time, showing each drink's name, category, caffeine content (mg), and serving size (ml)."
+  "@type": "Article",
+  "headline": "Caffeine in Drinks Database — Search 1,000+ Beverages by Caffeine Content",
+  "author": {
+    "@type": "Person",
+    "name": "T. Emmanuel"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Caffeine Calculation Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://caffeine-calculation-site.com/logo.png"
     }
-  ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://caffeine-calculation-site.com/calculators/drinks-database"
+  },
+  "description": "Find the caffeine content of over 1,000 beverages using a searchable database.",
+  "articleBody": "A comprehensive, searchable, and easy-to-use tool that puts the caffeine content of over 1,000 beverages right at your fingertips. By providing specific data for specific products, it empowers you to make truly informed decisions about your caffeine consumption."
 };
 
 export default function DrinksDatabasePage() {

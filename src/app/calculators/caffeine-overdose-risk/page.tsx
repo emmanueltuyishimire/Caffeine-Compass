@@ -31,27 +31,26 @@ export const metadata: Metadata = {
 
 const pageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Caffeine Overdose Risk Calculator",
-  "description": "Estimate the caffeine levels that could pose a risk to your health based on your body weight.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Enter Weight",
-      "text": "In the 'Your Body Weight' field, type in your weight.",
-      "substeps": ["Select your preferred unit, kilograms (kg) or pounds (lbs)."]
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Review Thresholds",
-      "text": "Review the instantly updated risk tiers: 'Noticeable Effects', 'Mild Toxicity', and 'Severe Toxicity'."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Contextualize",
-      "text": "Compare these thresholds to the caffeine content of your beverages to understand your personal risk."
+  "@type": "Article",
+  "headline": "Caffeine Overdose Risk Calculator — Estimate Safe & Toxic Levels",
+  "author": {
+    "@type": "Person",
+    "name": "T. Emmanuel"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Caffeine Calculation Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://caffeine-calculation-site.com/logo.png"
     }
-  ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://caffeine-calculation-site.com/calculators/caffeine-overdose-risk"
+  },
+  "description": "Estimate the caffeine levels that could pose a risk to your health based on your body weight.",
+  "articleBody": "This tool is for educational purposes only. It provides estimates based on established scientific literature and is not a substitute for professional medical advice, diagnosis, or treatment. Individual sensitivity and risk factors for caffeine toxicity can vary greatly due to genetics, pre-existing health conditions (especially cardiac issues), and concurrent use of medications. If you believe you or someone else has consumed a toxic amount of caffeine or is experiencing severe symptoms such as chest pain, seizures, or difficulty breathing, contact emergency medical services immediately."
 };
 
 export default function CaffeineOverdoseRiskPage() {

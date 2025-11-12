@@ -21,26 +21,26 @@ export const metadata: Metadata = {
 
 const pageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Caffeine Drink Comparison Tool",
-  "description": "Visually compare the caffeine content of multiple beverages side-by-side.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Select Drinks",
-      "text": "Use the multi-select dropdown menu to search for and choose the beverages you want to compare."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Analyze Chart",
-      "text": "As you add drinks, a dynamic vertical bar chart is generated. The length of the bar corresponds to the total caffeine in milligrams (mg) for a standard serving size."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "View Details",
-      "text": "Hover over any bar in the chart to see the exact caffeine amount for that specific drink."
+  "@type": "Article",
+  "headline": "Drink Comparison Tool — Compare Caffeine in Coffee, Tea, Soda & Energy Drinks",
+  "author": {
+    "@type": "Person",
+    "name": "T. Emmanuel"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Caffeine Calculation Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://caffeine-calculation-site.com/logo.png"
     }
-  ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://caffeine-calculation-site.com/calculators/drink-comparison"
+  },
+  "description": "Visually compare the caffeine content of multiple beverages side-by-side using an interactive chart.",
+  "articleBody": "This tool places caffeine information side-by-side, allowing you to build your own comparison chart from our extensive database. It transforms abstract numbers into a tangible understanding of what you're consuming, whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity."
 };
 
 export default function DrinkComparisonPage() {

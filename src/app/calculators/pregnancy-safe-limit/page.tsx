@@ -20,31 +20,26 @@ export const metadata: Metadata = {
 
 const pageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Pregnancy Caffeine Safe Limit Calculator",
-  "description": "Track your daily caffeine intake to ensure you're staying within the recommended safe limits for a healthy pregnancy.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Add Drink",
-      "text": "Use the 'Search for a drink' button to find and select a beverage to add to your daily log."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Adjust Quantity",
-      "text": "If you had more than one serving, update the quantity for that drink."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Monitor Total",
-      "text": "The calculator automatically updates your total daily caffeine intake and compares it against the 200mg recommended limit for pregnancy."
-    },
-     {
-      "@type": "HowToStep",
-      "name": "Check Status",
-      "text": "Review the alert box to see if you are within the safe limit or have exceeded it, helping you make informed decisions."
+  "@type": "Article",
+  "headline": "Pregnancy Caffeine Calculator — Track Your Daily Intake Safely",
+  "author": {
+    "@type": "Person",
+    "name": "T. Emmanuel"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Caffeine Calculation Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://caffeine-calculation-site.com/logo.png"
     }
-  ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://caffeine-calculation-site.com/calculators/pregnancy-safe-limit"
+  },
+  "description": "Track your daily caffeine intake to ensure you're staying within the recommended safe limits for a healthy pregnancy.",
+  "articleBody": "Major health bodies recommend limiting caffeine intake to less than 200 milligrams (mg) per day during pregnancy. This calculator provides a clear, visual way to log your drinks and see your total consumption in real-time, helping you manage it wisely for the health of both you and your baby."
 };
 
 export default function PregnancySafeLimitPage() {

@@ -30,31 +30,26 @@ export const metadata: Metadata = {
 
 const pageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Caffeine Withdrawal Tracker & Tapering Calculator",
-  "description": "Create a personalized tapering schedule to gradually reduce your caffeine intake, minimizing withdrawal symptoms.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Enter Intake & Duration",
-      "text": "Input your current daily caffeine intake, the desired duration of your taper, and how often you want to reduce your dose."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Select Start Date",
-      "text": "Choose the date you want to begin your tapering plan."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Generate Plan",
-      "text": "Click 'Generate Tapering Plan' to create your personalized daily schedule."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Follow Schedule",
-      "text": "Follow the daily caffeine targets in the generated chart and table to gradually wean yourself off caffeine with minimal symptoms."
+  "@type": "Article",
+  "headline": "Caffeine Withdrawal Tracker & Tapering Calculator | How to Quit Caffeine",
+  "author": {
+    "@type": "Person",
+    "name": "T. Emmanuel"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Caffeine Calculation Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://caffeine-calculation-site.com/logo.png"
     }
-  ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://caffeine-calculation-site.com/calculators/caffeine-withdrawal-tracker"
+  },
+  "description": "Create a personalized tapering schedule to gradually reduce your caffeine intake, minimizing withdrawal symptoms.",
+  "articleBody": "This tool helps you create a gradual, step-by-step reduction plan that weans your body off caffeine slowly. By reducing your intake in small, manageable increments, you give your brain time to readjust, dramatically reducing the severity of withdrawal symptoms like headaches, fatigue, and irritability."
 };
 
 export default function CaffeineWithdrawalTrackerPage() {

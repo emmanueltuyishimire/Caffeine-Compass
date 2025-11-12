@@ -31,31 +31,26 @@ export const metadata: Metadata = {
 
 const pageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Caffeine Half-Life Calculator",
-  "description": "Visualize how caffeine decays in your body over time to optimize intake and protect sleep quality.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Enter Caffeine Amount",
-      "text": "Input the total milligrams (mg) of caffeine you consumed in a single sitting."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Select Metabolism Speed",
-      "text": "Choose a half-life that best reflects your sensitivity: Fast (4 hours), Average (5 hours), or Slow (6 hours)."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Analyze Decay Chart",
-      "text": "The bar chart will instantly update to show the estimated caffeine (in mg) remaining in your system for the next 12 hours."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Review 8-Hour Impact",
-      "text": "Check the summary below the chart to see how much caffeine will still be active after 8 hours, a key indicator for sleep quality."
+  "@type": "Article",
+  "headline": "Caffeine Half-Life Calculator — Find Out How Long Caffeine Stays in Your System",
+  "author": {
+    "@type": "Person",
+    "name": "T. Emmanuel"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Caffeine Calculation Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://caffeine-calculation-site.com/logo.png"
     }
-  ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://caffeine-calculation-site.com/calculators/half-life"
+  },
+  "description": "Visualize how caffeine decays in your body over time to optimize intake and protect sleep quality.",
+  "articleBody": "This tool gives you a clear, visual representation of how long caffeine really sticks around. It answers a crucial question: 'How long will that coffee affect me?' by using a standard pharmacokinetic model to estimate caffeine clearance."
 };
 
 export default function HalfLifeCalculatorPage() {

@@ -21,27 +21,26 @@ export const metadata: Metadata = {
 
 const pageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Caffeine Sensitivity Test",
-  "description": "Discover your genetic predisposition to caffeine by answering a series of questions about your body's response.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Answer Questions",
-      "text": "Answer a series of five targeted questions about your typical reaction to caffeine.",
-      "substeps": ["How do you feel after one cup?", "How does afternoon coffee affect your sleep?", "Have you ever felt heart palpitations?", "How many cups can you handle?", "What happens when you skip caffeine?"]
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Get Your Result",
-      "text": "Based on your answers, the test will categorize you as a 'Fast', 'Average', or 'Slow' metabolizer."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Optimize Your Intake",
-      "text": "Use the personalized recommendations to adjust your caffeine consumption for better energy and sleep."
+  "@type": "Article",
+  "headline": "Caffeine Sensitivity Test — Discover Your Genetic Caffeine Tolerance",
+  "author": {
+    "@type": "Person",
+    "name": "T. Emmanuel"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Caffeine Calculation Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://caffeine-calculation-site.com/logo.png"
     }
-  ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://caffeine-calculation-site.com/calculators/caffeine-sensitivity-test"
+  },
+  "description": "Discover your genetic predisposition to caffeine by answering a series of questions about your body's response.",
+  "articleBody": "This test helps you understand your caffeine tolerance and tailor your intake for optimal energy and sleep by assessing whether you are a fast, average, or slow metabolizer based on your body's reaction to caffeine."
 };
 
 export default function CaffeineSensitivityTestPage() {

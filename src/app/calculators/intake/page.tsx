@@ -31,31 +31,26 @@ export const metadata: Metadata = {
 
 const pageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Daily Caffeine Intake Calculator",
-  "description": "Log your drinks to measure your total daily caffeine load and compare it to safe limits.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Add Drink",
-      "text": "Use the search bar to find and select a beverage from the database to add it to your daily log."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Adjust Quantity",
-      "text": "Update the quantity for each drink you've consumed."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Review Total",
-      "text": "The calculator automatically sums up the total caffeine in milligrams (mg) and displays it against the 400mg recommended daily limit."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Reset",
-      "text": "Click the 'Reset' button to clear your log and start a new day."
+  "@type": "Article",
+  "headline": "Caffeine Intake Calculator — Accurate Caffeine Tracking Tool",
+  "author": {
+    "@type": "Person",
+    "name": "T. Emmanuel"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Caffeine Calculation Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://caffeine-calculation-site.com/logo.png"
     }
-  ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://caffeine-calculation-site.com/calculators/intake"
+  },
+  "description": "Log your drinks to measure your total daily caffeine load and compare it to safe limits.",
+  "articleBody": "Most people dramatically underestimate their daily caffeine intake. This overconsumption is often the hidden culprit behind anxiety, jitteriness, digestive issues, and, most commonly, poor sleep. This calculator removes the guesswork, giving you a personalized, data-driven look at your habits so you can optimize your intake."
 };
 
 export default function IntakeCalculatorPage() {
