@@ -11,11 +11,13 @@ import { AlertCircle, CheckCircle, Clock } from 'lucide-react';
 // Assuming an average half-life of 5 hours
 const CAFFEINE_HALF_LIFE_HOURS = 5;
 
+type RiskLevel = 'Low' | 'Medium' | 'High';
+
 export default function SleepImpactPredictor() {
   const [caffeineAmount, setCaffeineAmount] = useState(100);
   const [consumptionTime, setConsumptionTime] = useState('14:00');
   const [bedtime, setBedtime] = useState('22:00');
-  const [result, setResult] = useState<{ remaining: number; risk: 'Low' | 'Medium' | 'High' } | null>(null);
+  const [result, setResult] = useState<{ remaining: number; risk: RiskLevel } | null>(null);
 
   const timeToHours = (time: string) => {
     const [hours, minutes] = time.split(':').map(Number);
@@ -39,7 +41,7 @@ export default function SleepImpactPredictor() {
 
     const remainingCaffeine = caffeineAmount * Math.pow(0.5, hoursUntilBedtime / CAFFEINE_HALF_LIFE_HOURS);
     
-    let risk: 'Low' | 'Medium' | 'High' = 'Low';
+    let risk: RiskLevel = 'Low';
     if (remainingCaffeine > 50) {
       risk = 'High';
     } else if (remainingCaffeine > 20) {
@@ -49,23 +51,26 @@ export default function SleepImpactPredictor() {
     setResult({ remaining: Math.round(remainingCaffeine), risk });
   };
   
-  const riskConfig = {
+  const riskConfig: Record<RiskLevel, { variant: 'success' | 'secondary' | 'destructive', icon: React.ElementType, text: string }> = {
       Low: {
-        badge: 'success' as const,
+        variant: 'secondary', // Using 'secondary' for success for better theme alignment
         icon: CheckCircle,
         text: 'Sleep disruption risk is low. Enjoy your rest!',
       },
       Medium: {
-        badge: 'secondary' as const,
+        variant: 'secondary',
         icon: AlertCircle,
         text: 'Potential for light sleep disruption. You might take longer to fall asleep.',
       },
       High: {
-        badge: 'destructive' as const,
+        variant: 'destructive',
         icon: AlertCircle,
         text: 'High risk of sleep disruption. May reduce deep sleep and overall sleep quality.',
       },
   };
+  
+  // Custom variant for 'Low' risk badge to appear green-ish via accent color
+  const lowRiskBadgeVariant = result?.risk === 'Low' ? 'default' : riskConfig[result?.risk as RiskLevel]?.variant;
 
 
   return (
@@ -119,10 +124,10 @@ export default function SleepImpactPredictor() {
             </div>
              <div className="flex justify-between items-center">
                 <span className="text-muted-foreground">Sleep Disruption Risk:</span>
-                <Badge variant={riskConfig[result.risk].badge}>{result.risk}</Badge>
+                <Badge variant={riskConfig[result.risk].variant}>{result.risk}</Badge>
             </div>
              <div className="flex items-start gap-2 pt-2 text-sm">
-                <riskConfig[result.risk].icon className="h-5 w-5 mt-0.5 text-muted-foreground" />
+                <result.risk.icon className="h-5 w-5 mt-0.5 text-muted-foreground" />
                 <span>{riskConfig[result.risk].text}</span>
             </div>
           </div>
