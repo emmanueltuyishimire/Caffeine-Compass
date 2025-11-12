@@ -3,10 +3,50 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BarChart2, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown, Baby, Atom, Leaf, CupSoda, Zap } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
     title: 'Caffeine Calculators — Tools for Energy, Focus, and Health',
     description: 'Explore our complete suite of science-backed caffeine calculators. Track intake, understand your metabolism, optimize timing, and more to take control of your caffeine consumption.',
+};
+
+const calculatorsPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Caffeine Calculators",
+  "description": "A complete suite of science-backed tools to help you understand and optimize your caffeine consumption for better health, focus, and sleep.",
+  "url": "https://caffeine-compass.com/calculators",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Intake Calculator", "url": "https://caffeine-compass.com/calculators/intake" },
+      { "@type": "ListItem", "position": 2, "name": "Half-Life Calculator", "url": "https://caffeine-compass.com/calculators/half-life" },
+      { "@type": "ListItem", "position": 3, "name": "Caffeine Timing Optimizer", "url": "https://caffeine-compass.com/calculators/caffeine-timing-optimizer" },
+      { "@type": "ListItem", "position": 4, "name": "Caffeine Withdrawal Tracker", "url": "https://caffeine-compass.com/calculators/caffeine-withdrawal-tracker" },
+      { "@type": "ListItem", "position": 5, "name": "Caffeine Sensitivity Test", "url": "https://caffeine-compass.com/calculators/caffeine-sensitivity-test" },
+      { "@type": "ListItem", "position": 6, "name": "Drink Comparison Tool", "url": "https://caffeine-compass.com/calculators/drink-comparison" },
+      { "@type": "ListItem", "position": 7, "name": "Caffeine in Drinks Database", "url": "https://caffeine-compass.com/calculators/drinks-database" },
+      { "@type": "ListItem", "position": 8, "name": "Caffeine Overdose Risk Calculator", "url": "https://caffeine-compass.com/calculators/caffeine-overdose-risk" },
+      { "@type": "ListItem", "position": 9, "name": "Pregnancy Safe Limit Calculator", "url": "https://caffeine-compass.com/calculators/pregnancy-safe-limit" }
+    ]
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://caffeine-compass.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators",
+        "item": "https://caffeine-compass.com/calculators"
+      }
+    ]
+  }
 };
 
 
@@ -69,30 +109,33 @@ const calculators = [
 
 export default function CalculatorsPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Our Calculators</h1>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-          A complete suite of science-backed tools to help you understand and optimize your caffeine consumption for better health, focus, and sleep.
-        </p>
+    <>
+      <JsonLd data={calculatorsPageJsonLd} />
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Our Calculators</h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            A complete suite of science-backed tools to help you understand and optimize your caffeine consumption for better health, focus, and sleep.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {calculators.sort((a,b) => a.title.localeCompare(b.title)).map((calc) => (
+            <Link key={calc.title} href={calc.href} className="block">
+              <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <CardHeader>
+                  <div className="flex items-center gap-4">
+                    <calc.icon className="h-8 w-8 text-primary" aria-hidden="true" />
+                    <CardTitle>{calc.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{calc.description}</p>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {calculators.sort((a,b) => a.title.localeCompare(b.title)).map((calc) => (
-          <Link key={calc.title} href={calc.href}>
-            <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-              <CardHeader>
-                <div className="flex items-center gap-4">
-                  <calc.icon className="h-8 w-8 text-primary" />
-                  <CardTitle>{calc.title}</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{calc.description}</p>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }

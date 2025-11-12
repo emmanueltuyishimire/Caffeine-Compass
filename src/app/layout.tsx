@@ -4,11 +4,12 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import JsonLd from '@/components/JsonLd';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'), // Change this to your production URL
+  metadataBase: new URL('https://caffeine-compass.com'),
   title: {
     default: 'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
     template: '%s | Caffeine Compass',
@@ -16,6 +17,19 @@ export const metadata: Metadata = {
   description:
     'Empowering people to understand, calculate, and optimize their caffeine habits for better focus, health, and sleep.',
 };
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Caffeine Compass",
+  "url": "https://caffeine-compass.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://caffeine-compass.com/support?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
 
 export default function RootLayout({
   children,
@@ -25,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} font-body antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
+        <JsonLd data={websiteJsonLd} />
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
