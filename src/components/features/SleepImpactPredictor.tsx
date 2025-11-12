@@ -53,7 +53,7 @@ export default function SleepImpactPredictor() {
   
   const riskConfig: Record<RiskLevel, { variant: 'success' | 'secondary' | 'destructive', icon: React.ElementType, text: string }> = {
       Low: {
-        variant: 'secondary', // Using 'secondary' for success for better theme alignment
+        variant: 'success', 
         icon: CheckCircle,
         text: 'Sleep disruption risk is low. Enjoy your rest!',
       },
@@ -68,10 +68,6 @@ export default function SleepImpactPredictor() {
         text: 'High risk of sleep disruption. May reduce deep sleep and overall sleep quality.',
       },
   };
-  
-  // Custom variant for 'Low' risk badge to appear green-ish via accent color
-  const lowRiskBadgeVariant = result?.risk === 'Low' ? 'default' : riskConfig[result?.risk as RiskLevel]?.variant;
-
 
   return (
     <Card className="max-w-4xl mx-auto">
@@ -109,7 +105,7 @@ export default function SleepImpactPredictor() {
           </div>
         </div>
         <Button onClick={calculateImpact} className="w-full sm:w-auto">
-            <Clock className="mr-2" />
+            <Clock className="mr-2 h-4 w-4" />
             Calculate Sleep Impact
         </Button>
       </CardContent>
@@ -126,8 +122,8 @@ export default function SleepImpactPredictor() {
                 <span className="text-muted-foreground">Sleep Disruption Risk:</span>
                 <Badge variant={riskConfig[result.risk].variant}>{result.risk}</Badge>
             </div>
-             <div className="flex items-start gap-2 pt-2 text-sm">
-                <result.risk.icon className="h-5 w-5 mt-0.5 text-muted-foreground" />
+             <div className="flex items-start gap-2 pt-2 text-sm text-muted-foreground">
+                <riskConfig[result.risk].icon className="h-5 w-5 mt-0.5" />
                 <span>{riskConfig[result.risk].text}</span>
             </div>
           </div>

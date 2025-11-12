@@ -47,11 +47,11 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList>
                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link href="/" className={navigationMenuTriggerStyle()}>
+                    <Link href="/" legacyBehavior passHref>
+                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                         Home
-                      </Link>
-                    </NavigationMenuLink>
+                      </NavigationMenuLink>
+                    </Link>
                   </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Calculators</NavigationMenuTrigger>
@@ -70,18 +70,18 @@ const Header = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link href="/about" className={navigationMenuTriggerStyle()}>
+                    <Link href="/about" legacyBehavior passHref>
+                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                         About
-                      </Link>
-                    </NavigationMenuLink>
+                      </NavigationMenuLink>
+                    </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link href="/support" className={navigationMenuTriggerStyle()}>
+                    <Link href="/support" legacyBehavior passHref>
+                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                         Support
-                      </Link>
-                    </NavigationMenuLink>
+                      </NavigationMenuLink>
+                    </Link>
                   </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
