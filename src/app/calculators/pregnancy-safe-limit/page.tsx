@@ -64,10 +64,10 @@ export default function PregnancySafeLimitPage() {
                   Navigating Caffeine with Confidence During Pregnancy
               </h2>
               <p>
-                  Pregnancy is a time of joy, anticipation, and countless questions—especially when it comes to diet. One of the most common concerns for expectant mothers is caffeine. "Can I still have my morning coffee?" "How much is too much?" The anxiety around these questions is valid. This <b>Pregnancy Caffeine Calculator</b> is designed to replace that uncertainty with clarity and confidence. It’s a simple, science-backed tool to help you track your daily intake and ensure it stays within the safe limits recommended by leading health organizations.
+                  Pregnancy is a time of joy, anticipation, and countless questions—especially when it comes to diet. One of the most common concerns for expectant mothers is caffeine. "Can I still have my morning coffee?" "How much is too much?" The anxiety around these questions is valid. This <strong>Pregnancy Caffeine Calculator</strong> is designed to replace that uncertainty with clarity and confidence. It’s a simple, science-backed tool to help you track your daily intake and ensure it stays within the safe limits recommended by leading health organizations.
               </p>
               <p>
-                  The primary problem this tool solves is the difficulty of tracking caffeine consumption from various sources. Most people are surprised to learn how quickly caffeine can add up from coffee, tea, soda, chocolate, and even some medications. For pregnant women, this tracking is particularly crucial. Major health bodies, including the American College of Obstetricians and Gynecologists (ACOG), recommend limiting caffeine intake to <b>less than 200 milligrams (mg) per day</b> during pregnancy. This is because caffeine can cross the placenta, and a developing baby's metabolism is not yet mature enough to process it effectively.
+                  The primary problem this tool solves is the difficulty of tracking caffeine consumption from various sources. Most people are surprised to learn how quickly caffeine can add up from coffee, tea, soda, chocolate, and even some medications. For pregnant women, this tracking is particularly crucial. Major health bodies, including the American College of Obstetricians and Gynecologists (ACOG), recommend limiting caffeine intake to <strong>less than 200 milligrams (mg) per day</strong> during pregnancy. This is because caffeine can cross the placenta, and a developing baby's metabolism is not yet mature enough to process it effectively.
               </p>
               <p>
                   This calculator provides a clear, visual way to log your drinks and see your total consumption in real-time. It helps you make mindful choices throughout the day, so you can enjoy a comforting cup of tea or a small coffee without the stress of wondering if you've had too much. It’s not about eliminating caffeine entirely, but about managing it wisely for the health of both you and your baby. For a broader view of your habits, you can also use our main <Link href="/calculators/intake">Caffeine Intake Calculator</Link> when not pregnant.
@@ -98,8 +98,8 @@ export default function PregnancySafeLimitPage() {
 
               <h3 className="text-2xl font-semibold">Inputs Explained</h3>
               <ul>
-                  <li><b>Drink Selection:</b> You can choose from a comprehensive database of hundreds of drinks, from a standard coffee to a specific brand of soda. Each item has its caffeine content pre-loaded for accuracy.</li>
-                  <li><b>Quantity:</b> Log the number of each drink you've had. This is key to understanding your cumulative daily total.</li>
+                  <li><strong>Drink Selection:</strong> You can choose from a comprehensive database of hundreds of drinks, from a standard coffee to a specific brand of soda. Each item has its caffeine content pre-loaded for accuracy.</li>
+                  <li><strong>Quantity:</strong> Log the number of each drink you've had. This is key to understanding your cumulative daily total.</li>
               </ul>
               <p>
                   The calculator simply adds up the caffeine from all your logged drinks to provide a total for the day. This number is then displayed and compared against the 200mg limit, so you always know where you stand.
@@ -110,8 +110,8 @@ export default function PregnancySafeLimitPage() {
                   During pregnancy, your body undergoes significant changes, including how it processes caffeine.
               </p>
               <ul>
-                  <li><b>Slower Metabolism:</b> Caffeine metabolism can slow dramatically during pregnancy. In the third trimester, the half-life of caffeine can increase to as long as 15 hours, compared to 3-5 hours for a non-pregnant adult. This means you might feel the effects of a morning coffee well into the evening.</li>
-                  <li><b>Individual Sensitivity:</b> Your pre-pregnancy sensitivity, which you can explore with our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link>, still plays a role. If you were a "slow metabolizer" before pregnancy, you may feel the effects even more profoundly now.</li>
+                  <li><strong>Slower Metabolism:</strong> Caffeine metabolism can slow dramatically during pregnancy. In the third trimester, the half-life of caffeine can increase to as long as 15 hours, compared to 3-5 hours for a non-pregnant adult. This means you might feel the effects of a morning coffee well into the evening.</li>
+                  <li><strong>Individual Sensitivity:</strong> Your pre-pregnancy sensitivity, which you can explore with our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link>, still plays a role. If you were a "slow metabolizer" before pregnancy, you may feel the effects even more profoundly now.</li>
               </ul>
           </section>
 
@@ -121,19 +121,19 @@ export default function PregnancySafeLimitPage() {
               <h2 className="text-3xl font-bold">Step-by-Step Instructions: How to Use the Tracker</h2>
               <ol className="list-decimal pl-5 space-y-2">
                   <li>
-                      <b>Add a Drink:</b> Use the "Search for a drink" button to open the list of beverages.
+                      <strong>Add a Drink:</strong> Use the "Search for a drink" button to open the list of beverages.
                   </li>
                   <li>
-                      <b>Select Your Beverage:</b> Click on the name of the drink you consumed. It will be added to your daily log.
+                      <strong>Select Your Beverage:</strong> Click on the name of the drink you consumed. It will be added to your daily log.
                   </li>
                   <li>
-                      <b>Adjust Quantity:</b> If you had more than one serving, update the number in the input field next to the drink name.
+                      <strong>Adjust Quantity:</strong> If you had more than one serving, update the number in the input field next to the drink name.
                   </li>
                   <li>
-                      <b>Review Your Total:</b> The calculator will automatically update your total daily caffeine intake. The progress bar gives you a quick visual of how close you are to the 200mg limit.
+                      <strong>Review Your Total:</strong> The calculator will automatically update your total daily caffeine intake. The progress bar gives you a quick visual of how close you are to the 200mg limit.
                   </li>
                   <li>
-                      <b>Check Your Status:</b> The alert box at the bottom provides immediate feedback, letting you know if you are within the safe limit or have exceeded it.
+                      <strong>Check Your Status:</strong> The alert box at the bottom provides immediate feedback, letting you know if you are within the safe limit or have exceeded it.
                   </li>
               </ol>
           </section>
@@ -146,7 +146,7 @@ export default function PregnancySafeLimitPage() {
               <AccordionItem value="item-1">
                 <AccordionTrigger>What is the official recommended caffeine limit during pregnancy?</AccordionTrigger>
                 <AccordionContent>
-                  Most major health organizations, including the American College of Obstetricians and Gynecologists (ACOG), recommend that pregnant women limit their caffeine intake to <b>less than 200 milligrams (mg) per day</b>. This calculator is built around that guideline.
+                  Most major health organizations, including the American College of Obstetricians and Gynecologists (ACOG), recommend that pregnant women limit their caffeine intake to <strong>less than 200 milligrams (mg) per day</strong>. This calculator is built around that guideline.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">

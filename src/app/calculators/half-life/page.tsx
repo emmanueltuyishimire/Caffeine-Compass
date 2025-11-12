@@ -75,7 +75,7 @@ export default function HalfLifeCalculatorPage() {
               The Invisible Clock: Decoding Your Body's Response to Caffeine
             </h2>
             <p>
-              You drink a coffee at 3 PM for a much-needed boost, but find yourself staring at the ceiling at 11 PM. Sound familiar? The culprit is often a simple misunderstanding of caffeine's lingering presence in your body. This Caffeine Half-Life Calculator is designed to demystify that process, giving you a clear, visual representation of how long caffeine really sticks around. It answers a crucial question: <b>"How long will that coffee affect me?"</b>
+              You drink a coffee at 3 PM for a much-needed boost, but find yourself staring at the ceiling at 11 PM. Sound familiar? The culprit is often a simple misunderstanding of caffeine's lingering presence in your body. This Caffeine Half-Life Calculator is designed to demystify that process, giving you a clear, visual representation of how long caffeine really sticks around. It answers a crucial question: <strong>"How long will that coffee affect me?"</strong>
             </p>
             <p>
               Most people underestimate how long caffeine remains active in their bloodstream, leading to restless nights, mid-day crashes, or unexplained anxiety. The concept of "half-life" is the key to understanding this. It’s the time it takes for your body to eliminate half of the caffeine you consumed. While the average half-life is around 5 hours, this can vary dramatically based on your genetics, age, body weight, and even medications you take. This calculator puts that scientific principle into your hands, transforming abstract numbers into a personalized timeline of your body's caffeine clearance.
@@ -98,13 +98,13 @@ export default function HalfLifeCalculatorPage() {
                   To generate your personalized chart, the calculator needs a few key pieces of information:
               </p>
               <ul>
-                  <li><b>Caffeine Consumed (mg):</b> This is the starting point of your calculation. The more caffeine you consume, the longer it will take for your body to clear it. An average 8 oz (240ml) cup of coffee has about 95 mg, but this can vary. For precision, you can find specific amounts using our <Link href="/calculators/drink-comparison">Drink Comparison Tool</Link>.</li>
-                  <li><b>Metabolism Speed (Half-Life):</b> This is the most crucial variable. It represents the time (in hours) it takes for your body to reduce the caffeine concentration in your blood by 50%. We provide presets for fast, average, and slow metabolizers, which correspond to different half-life durations.</li>
+                  <li><strong>Caffeine Consumed (mg):</strong> This is the starting point of your calculation. The more caffeine you consume, the longer it will take for your body to clear it. An average 8 oz (240ml) cup of coffee has about 95 mg, but this can vary. For precision, you can find specific amounts using our <Link href="/calculators/drink-comparison">Drink Comparison Tool</Link>.</li>
+                  <li><strong>Metabolism Speed (Half-Life):</strong> This is the most crucial variable. It represents the time (in hours) it takes for your body to reduce the caffeine concentration in your blood by 50%. We provide presets for fast, average, and slow metabolizers, which correspond to different half-life durations.</li>
               </ul>
               <p>
                   The calculator then applies the half-life decay formula:
                   <br />
-                  <b>Remaining Caffeine = Initial Dose * (0.5) ^ (Time / Half-Life)</b>
+                  <strong>Remaining Caffeine = Initial Dose * (0.5) ^ (Time / Half-Life)</strong>
                   <br />
                   It runs this calculation for each hour to plot the visual bar chart, showing you a clear, hour-by-hour estimate of the caffeine remaining in your system.
               </p>
@@ -122,23 +122,23 @@ export default function HalfLifeCalculatorPage() {
 
               <h3 className="text-2xl font-semibold">The Scientific Background: Your Liver and the CYP1A2 Enzyme</h3>
               <p>
-                  When you drink a caffeinated beverage, it is absorbed into your bloodstream and makes its way to your liver. The liver is your body’s primary metabolic engine, and it’s where the magic (and science) of caffeine breakdown happens. The star player in this process is an enzyme called <b>Cytochrome P450 1A2</b>, or <b>CYP1A2</b> for short.
+                  When you drink a caffeinated beverage, it is absorbed into your bloodstream and makes its way to your liver. The liver is your body’s primary metabolic engine, and it’s where the magic (and science) of caffeine breakdown happens. The star player in this process is an enzyme called <strong>Cytochrome P450 1A2</strong>, or <strong>CYP1A2</strong> for short.
               </p>
               <p>
                   The CYP1A2 enzyme is responsible for metabolizing about 95% of the caffeine you consume. The efficiency of this enzyme is largely determined by your genetics, specifically your variant of the <i>CYP1A2</i> gene.
               </p>
               <ul>
-                  <li><b>Fast Metabolizers (AA Genotype):</b> Around 40% of the population carries a version of the <i>CYP1A2</i> gene that produces a highly efficient enzyme. They process caffeine quickly, experiencing a shorter duration of effects. Their typical half-life is closer to <b>3-4 hours</b>.</li>
-                  <li><b>Slow Metabolizers (AC or CC Genotype):</b> The other 60% of people have a less efficient version of the enzyme. For them, caffeine lingers much longer, sometimes with a half-life of <b>6-8 hours or more</b>. They are more prone to caffeine-induced anxiety, jitteriness, and sleep disturbances.</li>
+                  <li><strong>Fast Metabolizers (AA Genotype):</strong> Around 40% of the population carries a version of the <i>CYP1A2</i> gene that produces a highly efficient enzyme. They process caffeine quickly, experiencing a shorter duration of effects. Their typical half-life is closer to <strong>3-4 hours</strong>.</li>
+                  <li><strong>Slow Metabolizers (AC or CC Genotype):</strong> The other 60% of people have a less efficient version of the enzyme. For them, caffeine lingers much longer, sometimes with a half-life of <strong>6-8 hours or more</strong>. They are more prone to caffeine-induced anxiety, jitteriness, and sleep disturbances.</li>
               </ul>
               <p>
                   But genetics aren't the only factor. Other variables can influence your CYP1A2 enzyme activity and thus your caffeine half-life:
               </p>
               <ul>
-                  <li><b>Medications:</b> Certain drugs, including some antidepressants and antibiotics, can inhibit the CYP1A2 enzyme, effectively turning a fast metabolizer into a slow one.</li>
-                  <li><b>Pregnancy:</b> During the third trimester, hormonal changes can slow caffeine metabolism dramatically, extending the half-life to as long as 15 hours.</li>
-                  <li><b>Liver Health:</b> Since the liver does the heavy lifting, any impairment to liver function can significantly slow down caffeine clearance.</li>
-                  <li><b>Smoking:</b> Chemicals in tobacco smoke can induce (speed up) the CYP1A2 enzyme, causing smokers to metabolize caffeine up to 50% faster than non-smokers. This is why smokers often consume more coffee.</li>
+                  <li><strong>Medications:</strong> Certain drugs, including some antidepressants and antibiotics, can inhibit the CYP1A2 enzyme, effectively turning a fast metabolizer into a slow one.</li>
+                  <li><strong>Pregnancy:</strong> During the third trimester, hormonal changes can slow caffeine metabolism dramatically, extending the half-life to as long as 15 hours.</li>
+                  <li><strong>Liver Health:</strong> Since the liver does the heavy lifting, any impairment to liver function can significantly slow down caffeine clearance.</li>
+                  <li><strong>Smoking:</strong> Chemicals in tobacco smoke can induce (speed up) the CYP1A2 enzyme, causing smokers to metabolize caffeine up to 50% faster than non-smokers. This is why smokers often consume more coffee.</li>
               </ul>
               <p>
                   This calculator simplifies these complex interactions by allowing you to select a half-life that best represents your personal experience. By observing how you feel and cross-referencing it with the calculator's output, you can gain powerful insights into your own unique physiology.
@@ -193,16 +193,16 @@ export default function HalfLifeCalculatorPage() {
               <p>Estimating your caffeine curve is straightforward. Follow these steps:</p>
               <ol className="list-decimal pl-5 space-y-2">
                   <li>
-                      <b>Enter Caffeine Amount:</b> In the "Caffeine Consumed (mg)" field, enter the total milligrams of caffeine you consumed in a single sitting. If you're unsure, a standard 8 oz coffee is about 95 mg.
+                      <strong>Enter Caffeine Amount:</strong> In the "Caffeine Consumed (mg)" field, enter the total milligrams of caffeine you consumed in a single sitting. If you're unsure, a standard 8 oz coffee is about 95 mg.
                   </li>
                   <li>
-                      <b>Select Your Metabolism Speed:</b> Use the dropdown menu to choose a half-life that best reflects your sensitivity. If you're unsure, start with "Average (5-hour half-life)". If you're particularly sensitive, choose "Slow". If caffeine affects you minimally, choose "Fast".
+                      <strong>Select Your Metabolism Speed:</strong> Use the dropdown menu to choose a half-life that best reflects your sensitivity. If you're unsure, start with "Average (5-hour half-life)". If you're particularly sensitive, choose "Slow". If caffeine affects you minimally, choose "Fast".
                   </li>
                   <li>
-                      <b>Analyze the Decay Chart:</b> The bar chart will instantly update to show the estimated caffeine (in mg) remaining in your system for the next 12 hours. The x-axis represents hours since consumption, and the y-axis represents the amount of caffeine.
+                      <strong>Analyze the Decay Chart:</strong> The bar chart will instantly update to show the estimated caffeine (in mg) remaining in your system for the next 12 hours. The x-axis represents hours since consumption, and the y-axis represents the amount of caffeine.
                   </li>
                   <li>
-                      <b>Review the 8-Hour Summary:</b> Look at the text below the chart. It provides a quick calculation of how much caffeine is likely still active after a full workday or 8 hours before bed. This is a key indicator for potential sleep disruption.
+                      <strong>Review the 8-Hour Summary:</strong> Look at the text below the chart. It provides a quick calculation of how much caffeine is likely still active after a full workday or 8 hours before bed. This is a key indicator for potential sleep disruption.
                   </li>
               </ol>
           </section>
@@ -220,9 +220,9 @@ export default function HalfLifeCalculatorPage() {
                       <CardTitle className="flex items-center gap-3"><GraduationCap aria-hidden="true"/> The Student with an Afternoon Class</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
-                      <p><b>Scenario:</b> Alex, a college student and a "slow" metabolizer (6-hour half-life), drinks a 200 mg cold brew at 2 PM to stay focused for an evening study session.</p>
-                      <p><b>Calculator Result:</b> The chart shows that at 8 PM (6 hours later), he still has <b>100 mg</b> of caffeine in his system — the equivalent of a whole other cup of coffee. By the time he tries to sleep at midnight (10 hours later), he'll still have roughly <b>63 mg</b> active.</p>
-                      <p><b>Interpretation:</b> The calculator visually demonstrates why his "afternoon" coffee is sabotaging his sleep. He learns that for his slow metabolism, any significant caffeine intake after 12 PM is risky for his sleep schedule.</p>
+                      <p><strong>Scenario:</strong> Alex, a college student and a "slow" metabolizer (6-hour half-life), drinks a 200 mg cold brew at 2 PM to stay focused for an evening study session.</p>
+                      <p><strong>Calculator Result:</strong> The chart shows that at 8 PM (6 hours later), he still has <strong>100 mg</strong> of caffeine in his system — the equivalent of a whole other cup of coffee. By the time he tries to sleep at midnight (10 hours later), he'll still have roughly <strong>63 mg</strong> active.</p>
+                      <p><strong>Interpretation:</strong> The calculator visually demonstrates why his "afternoon" coffee is sabotaging his sleep. He learns that for his slow metabolism, any significant caffeine intake after 12 PM is risky for his sleep schedule.</p>
                   </CardContent>
               </Card>
 
@@ -231,9 +231,9 @@ export default function HalfLifeCalculatorPage() {
                       <CardTitle className="flex items-center gap-3"><Briefcase aria-hidden="true"/> The "Fast Metabolizer" Executive</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
-                      <p><b>Scenario:</b> Sarah is a CEO with a "fast" metabolism (4-hour half-life). She has a double espresso (128 mg) at 4 PM before a late meeting.</p>
-                      <p><b>Calculator Result:</b> The decay curve shows that by 8 PM (4 hours later), her caffeine level is already down to <b>64 mg</b>. By 10 PM, it's only <b>45 mg</b>.</p>
-                      <p><b>Interpretation:</b> For Sarah, a late-afternoon coffee is not a major issue for her sleep. The calculator confirms her personal experience and gives her confidence that her habit isn't negatively impacting her rest, thanks to her efficient metabolism.</p>
+                      <p><strong>Scenario:</strong> Sarah is a CEO with a "fast" metabolism (4-hour half-life). She has a double espresso (128 mg) at 4 PM before a late meeting.</p>
+                      <p><strong>Calculator Result:</strong> The decay curve shows that by 8 PM (4 hours later), her caffeine level is already down to <strong>64 mg</strong>. By 10 PM, it's only <strong>45 mg</strong>.</p>
+                      <p><strong>Interpretation:</strong> For Sarah, a late-afternoon coffee is not a major issue for her sleep. The calculator confirms her personal experience and gives her confidence that her habit isn't negatively impacting her rest, thanks to her efficient metabolism.</p>
                   </CardContent>
               </Card>
               
@@ -242,9 +242,9 @@ export default function HalfLifeCalculatorPage() {
                       <CardTitle className="flex items-center gap-3"><Heart aria-hidden="true"/> The Average Person Trying to Optimize Sleep</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
-                      <p><b>Scenario:</b> Mark considers himself an "average" metabolizer (5-hour half-life). He wants to know the impact of his 12 PM latte (64 mg).</p>
-                      <p><b>Calculator Result:</b> At his bedtime of 10 PM (10 hours later), the calculator shows he will have approximately <b>16 mg</b> of caffeine left in his system.</p>
-                      <p><b>Interpretation:</b> The tool gives him a concrete number. While 16 mg is a small amount, for someone very sensitive, it could still slightly delay sleep. He might decide to move his last coffee to 11 AM to get that number even closer to zero by bedtime.
+                      <p><strong>Scenario:</strong> Mark considers himself an "average" metabolizer (5-hour half-life). He wants to know the impact of his 12 PM latte (64 mg).</p>
+                      <p><strong>Calculator Result:</strong> At his bedtime of 10 PM (10 hours later), the calculator shows he will have approximately <strong>16 mg</strong> of caffeine left in his system.</p>
+                      <p><strong>Interpretation:</strong> The tool gives him a concrete number. While 16 mg is a small amount, for someone very sensitive, it could still slightly delay sleep. He might decide to move his last coffee to 11 AM to get that number even closer to zero by bedtime.
                       </p>
                   </CardContent>
               </Card>
@@ -347,7 +347,7 @@ export default function HalfLifeCalculatorPage() {
               <p>Once in the brain, caffeine performs its signature trick: it impersonates a neurotransmitter called adenosine. Adenosine is your body's natural braking system. Throughout the day, as your neurons fire and use energy, adenosine builds up, binding to specific receptors and signaling to your brain that it’s time to slow down and rest. This buildup creates what scientists call "sleep pressure." The more adenosine you have, the sleepier you feel. Caffeine’s molecular structure is so similar to adenosine that it can fit perfectly into these same receptors, effectively blocking them. With caffeine occupying the receptors, adenosine can't bind, and the "slow down" signal never gets delivered. Instead of becoming drowsy, your brain's activity remains high, leading to the feelings of alertness and focus we associate with caffeine.</p>
               <h3 className="text-2xl font-semibold">Metabolism in the Liver: The CYP1A2 Show</h3>
               <p>The duration of this alert state is determined by how long caffeine circulates in your system. This is where your liver—and specifically, the CYP1A2 enzyme—takes center stage. The liver is the body's primary metabolic factory, responsible for breaking down drugs, toxins, and other compounds. About 95% of all the caffeine you consume is processed by the CYP1A2 enzyme.</p>
-              <p>This is where genetics play a starring role. Your DNA contains the blueprint for your CYP1A2 enzyme, and slight variations in the CYP1A2 gene can make your version of the enzyme either a highly efficient "fast" metabolizer or a more sluggish "slow" metabolizer. Research, such as studies published in the *American Journal of Clinical Nutrition*, has shown that individuals with the "fast" variant (the AA genotype) can clear caffeine from their system in as little as 3-4 hours. In contrast, "slow" metabolizers (those with the AC or CC genotype), who make up more than half the population, can take 6, 8, or even up to 10 hours to clear the same amount. This single genetic difference is the primary reason why one person can have an espresso after dinner and sleep soundly, while another is left jittery and wide awake from a lunchtime latte.</p>
+              <p>This is where genetics play a starring role. Your DNA contains the blueprint for your CYP1A2 enzyme, and slight variations in the CYP1A2 gene can make your version of the enzyme either a highly efficient "fast" metabolizer or a more sluggish "slow" metabolizer. Research, such as studies published in the <strong>American Journal of Clinical Nutrition</strong>, has shown that individuals with the "fast" variant (the AA genotype) can clear caffeine from their system in as little as 3-4 hours. In contrast, "slow" metabolizers (those with the AC or CC genotype), who make up more than half the population, can take 6, 8, or even up to 10 hours to clear the same amount. This single genetic difference is the primary reason why one person can have an espresso after dinner and sleep soundly, while another is left jittery and wide awake from a lunchtime latte.</p>
               <h3 className="text-2xl font-semibold">Excretion: The Final Exit</h3>
               <p>Once the CYP1A2 enzyme has broken down caffeine, it is converted into three primary metabolites: paraxanthine, theobromine, and theophylline. These compounds are then further broken down and eventually filtered out by your kidneys and excreted in urine. It's a highly efficient system, with less than 2% of the original caffeine molecule being excreted unchanged.</p>
               <p>This entire process, from absorption to excretion, is known as pharmacokinetics. The "half-life" we calculate is a simplified but powerful metric that represents the overall speed of this system. By understanding that factors like your genetics, liver health, and even other things you consume (like nicotine or certain medications) can speed up or slow down your CYP1A2 enzyme, you can begin to see why your personal response to caffeine is so unique. This knowledge transforms caffeine from a simple habit into a precision tool. You can time your intake to match your metabolic speed, ensuring you get the focus you want without compromising the rest you need. Understanding these dynamics empowers you to use caffeine as a performance enhancer—not a crutch.</p>

@@ -74,10 +74,10 @@ export default function CaffeineWithdrawalTrackerPage() {
               Breaking Free: How to Quit Caffeine Without the Headaches
             </h2>
             <p>
-              You’ve decided to cut back on caffeine—or quit entirely. It’s a commendable goal for improving sleep, reducing anxiety, and reclaiming your natural energy levels. But there’s a major hurdle: <b>caffeine withdrawal symptoms</b>. The dreaded headache, crushing fatigue, and brain fog can be so intense that they derail even the most motivated individuals, sending them right back to the coffee pot. This is because your body has become physically dependent on caffeine, and it protests when its daily dose is taken away.
+              You’ve decided to cut back on caffeine—or quit entirely. It’s a commendable goal for improving sleep, reducing anxiety, and reclaiming your natural energy levels. But there’s a major hurdle: <strong>caffeine withdrawal symptoms</strong>. The dreaded headache, crushing fatigue, and brain fog can be so intense that they derail even the most motivated individuals, sending them right back to the coffee pot. This is because your body has become physically dependent on caffeine, and it protests when its daily dose is taken away.
             </p>
             <p>
-              The problem this calculator solves is the "cold turkey" approach. Quitting abruptly shocks your system, leading to a miserable week (or more) of withdrawal. But what if there was a smarter, gentler way? This <b>Caffeine Withdrawal Tracker and Tapering Calculator</b> is designed to do just that. It helps you create a gradual, step-by-step reduction plan that weans your body off caffeine slowly. By reducing your intake in small, manageable increments, you give your brain time to readjust, dramatically reducing the severity of withdrawal symptoms.
+              The problem this calculator solves is the "cold turkey" approach. Quitting abruptly shocks your system, leading to a miserable week (or more) of withdrawal. But what if there was a smarter, gentler way? This <strong>Caffeine Withdrawal Tracker and Tapering Calculator</strong> is designed to do just that. It helps you create a gradual, step-by-step reduction plan that weans your body off caffeine slowly. By reducing your intake in small, manageable increments, you give your brain time to readjust, dramatically reducing the severity of withdrawal symptoms.
             </p>
             <p>
               This tool is for anyone who has ever tried to quit caffeine and failed, or for those who are afraid to even start because they can't afford a week of lost productivity and discomfort. It transforms the daunting challenge of quitting into a structured, predictable process. Instead of a battle of willpower against caffeine withdrawal symptoms, it becomes a journey of mindful reduction. By the end of your taper, you'll be free from caffeine dependence with minimal disruption to your daily life. To get started, you'll first need to know your current daily intake, which you can determine using our <Link href="/calculators/intake">Caffeine Intake Calculator</Link>.
@@ -97,9 +97,9 @@ export default function CaffeineWithdrawalTrackerPage() {
                   To generate your tapering schedule, the calculator needs a few details about your current habits and goals:
               </p>
               <ul>
-                  <li><b>Current Daily Intake (mg):</b> This is your starting point. You need an honest, accurate measure of how much caffeine you consume on an average day. If you're not sure, spend a few days tracking your drinks with our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> first.</li>
-                  <li><b>Tapering Duration (Days):</b> This determines the length of your weaning period. A longer duration (e.g., 14-28 days) will be more gradual and result in milder withdrawal symptoms. A shorter duration will be more aggressive.</li>
-                  <li><b>Reduction Frequency:</b> You can choose how often you want to reduce your intake (e.g., every day, every 2 days, etc.). This allows you to customize the plan to your comfort level.</li>
+                  <li><strong>Current Daily Intake (mg):</strong> This is your starting point. You need an honest, accurate measure of how much caffeine you consume on an average day. If you're not sure, spend a few days tracking your drinks with our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> first.</li>
+                  <li><strong>Tapering Duration (Days):</strong> This determines the length of your weaning period. A longer duration (e.g., 14-28 days) will be more gradual and result in milder withdrawal symptoms. A shorter duration will be more aggressive.</li>
+                  <li><strong>Reduction Frequency:</strong> You can choose how often you want to reduce your intake (e.g., every day, every 2 days, etc.). This allows you to customize the plan to your comfort level.</li>
               </ul>
               <p>
                   The calculator then divides your total caffeine reduction by the number of "steps" in your plan to create a daily intake target. For example, if you consume 400 mg and want to taper to zero over 14 days with a reduction every 2 days, it will create 7 steps, reducing your intake by about 57 mg at each step. It provides a clear, day-by-day calendar of exactly how much caffeine you should consume.
@@ -118,19 +118,19 @@ export default function CaffeineWithdrawalTrackerPage() {
 
               <h3 className="text-2xl font-semibold">The Scientific Background: Adenosine Receptor Upregulation</h3>
               <p>
-                  To understand why tapering works, you need to know what happens in your brain on caffeine. Caffeine works by blocking adenosine receptors. Adenosine is the neurotransmitter that makes you feel sleepy. When you're a regular caffeine user, your brain tries to counteract this constant blockade by creating <i>more</i> adenosine receptors. This is a process called <b>upregulation</b>.
+                  To understand why tapering works, you need to know what happens in your brain on caffeine. Caffeine works by blocking adenosine receptors. Adenosine is the neurotransmitter that makes you feel sleepy. When you're a regular caffeine user, your brain tries to counteract this constant blockade by creating <i>more</i> adenosine receptors. This is a process called <strong>upregulation</strong>.
               </p>
               <p>
                   Now you have a brain that is extra-sensitive to adenosine. When you suddenly quit caffeine, the blockade is gone. Adenosine floods these extra receptors, causing a massive "slow-down" signal in your brain. This sudden drop in neural activity is what leads to the classic caffeine withdrawal symptoms:
               </p>
               <ul>
-                  <li><b>Headache:</b> Caffeine constricts blood vessels in the brain. When you quit, these vessels dilate, leading to a throbbing headache.</li>
-                  <li><b>Fatigue:</b> The flood of adenosine on upregulated receptors causes profound sleepiness and lack of energy.</li>
-                  <li><b>Brain Fog:</b> The overall decrease in neurotransmitters like dopamine and acetylcholine, which are boosted by caffeine, leads to difficulty concentrating.</li>
-                  <li><b>Irritability:</b> The changes in brain chemistry can lead to mood swings and a short temper.</li>
+                  <li><strong>Headache:</strong> Caffeine constricts blood vessels in the brain. When you quit, these vessels dilate, leading to a throbbing headache.</li>
+                  <li><strong>Fatigue:</strong> The flood of adenosine on upregulated receptors causes profound sleepiness and lack of energy.</li>
+                  <li><strong>Brain Fog:</strong> The overall decrease in neurotransmitters like dopamine and acetylcholine, which are boosted by caffeine, leads to difficulty concentrating.</li>
+                  <li><strong>Irritability:</strong> The changes in brain chemistry can lead to mood swings and a short temper.</li>
               </ul>
               <p>
-                  <b>Tapering works because it gives your brain time to reverse this process gradually.</b> As you slowly reduce your caffeine intake, your brain begins to downregulate (remove) the extra adenosine receptors it built. By the time you reach zero caffeine, your brain has returned to its normal, non-dependent state. The transition is smooth instead of abrupt, and the withdrawal symptoms are minimized or even avoided entirely.
+                  <strong>Tapering works because it gives your brain time to reverse this process gradually.</strong> As you slowly reduce your caffeine intake, your brain begins to downregulate (remove) the extra adenosine receptors it built. By the time you reach zero caffeine, your brain has returned to its normal, non-dependent state. The transition is smooth instead of abrupt, and the withdrawal symptoms are minimized or even avoided entirely.
               </p>
           </section>
 
@@ -182,19 +182,19 @@ export default function CaffeineWithdrawalTrackerPage() {
               <p>Follow these steps to generate your personalized caffeine withdrawal schedule:</p>
               <ol className="list-decimal pl-5 space-y-2">
                   <li>
-                      <b>Enter Your Current Daily Intake:</b> In the "Current Daily Intake (mg)" field, enter the total milligrams of caffeine you consume on an average day. Be honest! Accuracy here is key. Use our <Link href="/calculators/intake">Intake Calculator</Link> if you need help.
+                      <strong>Enter Your Current Daily Intake:</strong> In the "Current Daily Intake (mg)" field, enter the total milligrams of caffeine you consume on an average day. Be honest! Accuracy here is key. Use our <Link href="/calculators/intake">Intake Calculator</Link> if you need help.
                   </li>
                   <li>
-                      <b>Choose Your Tapering Duration:</b> Select how many days you want the tapering process to last. A 14 or 21-day taper is a great starting point for most people.
+                      <strong>Choose Your Tapering Duration:</strong> Select how many days you want the tapering process to last. A 14 or 21-day taper is a great starting point for most people.
                   </li>
                   <li>
-                      <b>Set Reduction Frequency:</b> Decide how often you want to lower your dose. Reducing every 2-3 days gives your body time to adjust to each new level. Reducing every day is more aggressive.
+                      <strong>Set Reduction Frequency:</strong> Decide how often you want to lower your dose. Reducing every 2-3 days gives your body time to adjust to each new level. Reducing every day is more aggressive.
                   </li>
                   <li>
-                      <b>Generate Your Plan:</b> Click the "Generate Tapering Plan" button.
+                      <strong>Generate Your Plan:</strong> Click the "Generate Tapering Plan" button.
                   </li>
                   <li>
-                      <b>Review and Follow Your Schedule:</b> The calculator will display a calendar with your daily caffeine allowance. Your job is to stay at or below that number each day. Use a combination of smaller drinks or half-caf beverages to hit your daily target.
+                      <strong>Review and Follow Your Schedule:</strong> The calculator will display a calendar with your daily caffeine allowance. Your job is to stay at or below that number each day. Use a combination of smaller drinks or half-caf beverages to hit your daily target.
                   </li>
               </ol>
           </section>
@@ -209,22 +209,22 @@ export default function CaffeineWithdrawalTrackerPage() {
               <h3 className="text-2xl font-semibold">1. The Heavy Coffee Drinker (400+ mg/day)</h3>
               <p>
                   For someone consuming multiple cups of coffee a day, quitting cold turkey is a recipe for a miserable week. A gradual taper is essential.
-                  <b>Strategy:</b> Start with a 21 or 28-day taper, reducing intake every 3 days. The first step might be to replace one large coffee with a smaller one. The next step could be switching one regular coffee to a half-caf. The long duration allows the body to adapt slowly, making the process feel almost effortless.
+                  <strong>Strategy:</strong> Start with a 21 or 28-day taper, reducing intake every 3 days. The first step might be to replace one large coffee with a smaller one. The next step could be switching one regular coffee to a half-caf. The long duration allows the body to adapt slowly, making the process feel almost effortless.
               </p>
               <h3 className="text-2xl font-semibold">2. The "One-a-Day" Habitual User (100-200 mg/day)</h3>
               <p>
                   Even a single daily coffee can lead to dependence. While withdrawal might be less severe, it can still be unpleasant.
-                  <b>Strategy:</b> A 7 or 14-day taper is often sufficient. The plan might suggest reducing your daily cup from 100mg to 75mg for a few days, then 50mg, then 25mg. This can be achieved by brewing a slightly weaker cup, using less espresso, or mixing in more decaf.
+                  <strong>Strategy:</strong> A 7 or 14-day taper is often sufficient. The plan might suggest reducing your daily cup from 100mg to 75mg for a few days, then 50mg, then 25mg. This can be achieved by brewing a slightly weaker cup, using less espresso, or mixing in more decaf.
               </p>
               <h3 className="text-2xl font-semibold">3. The Energy Drink or Soda Consumer</h3>
               <p>
                   For those dependent on the high-caffeine, high-sugar hit from energy drinks or sodas, tapering can also help break the sugar habit.
-                  <b>Strategy:</b> Use a 14-day plan. The first step is often to switch from a high-caffeine version (e.g., Bang, 300 mg) to a more moderate one (e.g., Monster, 160 mg). Then, switch to a smaller can or a diet soda, before finally moving to caffeine-free alternatives like flavored sparkling water.
+                  <strong>Strategy:</strong> Use a 14-day plan. The first step is often to switch from a high-caffeine version (e.g., Bang, 300 mg) to a more moderate one (e.g., Monster, 160 mg). Then, switch to a smaller can or a diet soda, before finally moving to caffeine-free alternatives like flavored sparkling water.
               </p>
               <h3 className="text-2xl font-semibold">4. Preparing for a "Tolerance Break"</h3>
               <p>
                   Some people don't want to quit forever but want to reset their tolerance to make caffeine effective again.
-                  <b>Strategy:</b> Use a quick, 5-7 day taper to wean off caffeine before a 1-2 week break. This prevents withdrawal headaches from ruining your "off" week. When you reintroduce caffeine, it will be much more effective at a lower dose.
+                  <strong>Strategy:</strong> Use a quick, 5-7 day taper to wean off caffeine before a 1-2 week break. This prevents withdrawal headaches from ruining your "off" week. When you reintroduce caffeine, it will be much more effective at a lower dose.
               </p>
           </section>
           

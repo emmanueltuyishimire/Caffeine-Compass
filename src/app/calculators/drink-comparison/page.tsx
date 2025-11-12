@@ -65,10 +65,10 @@ export default function DrinkComparisonPage() {
               Uncovering the Buzz: A Visual Guide to Caffeine in Your Favorite Drinks
             </h2>
             <p>
-              "How much caffeine is in this?" It's a question every coffee lover, tea enthusiast, and energy drink consumer has asked. The answer is often surprising. A grande coffee from Starbucks doesn't have the same kick as a medium from Dunkin'. A can of Red Bull is worlds apart from a can of Bang. This <b>Drink Comparison Tool</b> is designed to eliminate the guesswork, providing a clear, visual, and interactive <b>energy drink caffeine chart</b> and beverage comparison tool.
+              "How much caffeine is in this?" It's a question every coffee lover, tea enthusiast, and energy drink consumer has asked. The answer is often surprising. A grande coffee from Starbucks doesn't have the same kick as a medium from Dunkin'. A can of Red Bull is worlds apart from a can of Bang. This <strong>Drink Comparison Tool</strong> is designed to eliminate the guesswork, providing a clear, visual, and interactive <strong>energy drink caffeine chart</strong> and beverage comparison tool.
             </p>
             <p>
-              The problem this tool solves is the lack of a simple, direct comparison. You can look up individual drink stats, but it’s hard to grasp the scale of difference. Is a cold brew really that much stronger than an espresso? How does <b>caffeine in coffee vs. tea</b> actually stack up? This tool places that information side-by-side, allowing you to build your own comparison chart from our extensive database. It transforms abstract numbers into a tangible understanding of what you're consuming.
+              The problem this tool solves is the lack of a simple, direct comparison. You can look up individual drink stats, but it’s hard to grasp the scale of difference. Is a cold brew really that much stronger than an espresso? How does <strong>caffeine in coffee vs. tea</strong> actually stack up? This tool places that information side-by-side, allowing you to build your own comparison chart from our extensive database. It transforms abstract numbers into a tangible understanding of what you're consuming.
             </p>
             <p>
               Whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity, this comparison tool is your best friend. It’s an essential first step before using our other calculators, like the <Link href="/calculators/intake">Intake Calculator</Link>, as it gives you the foundational knowledge of your drink's potency.
@@ -88,12 +88,12 @@ export default function DrinkComparisonPage() {
                   The process is simple:
               </p>
               <ul>
-                  <li><b>Search and Select:</b> Use the multi-select dropdown to search for and choose the beverages you want to compare. You can add as many as you like.</li>
-                  <li><b>Analyze the Chart:</b> As you add drinks, a dynamic bar chart is generated. Each bar represents a drink, with its height corresponding to the total caffeine in milligrams (mg) for a standard serving size.</li>
-                  <li><b>Hover for Details:</b> Hover over any bar in the chart to see the exact caffeine amount and serving size for that specific drink.</li>
+                  <li><strong>Search and Select:</strong> Use the multi-select dropdown to search for and choose the beverages you want to compare. You can add as many as you like.</li>
+                  <li><strong>Analyze the Chart:</strong> As you add drinks, a dynamic bar chart is generated. Each bar represents a drink, with its height corresponding to the total caffeine in milligrams (mg) for a standard serving size.</li>
+                  <li><strong>Hover for Details:</strong> Hover over any bar in the chart to see the exact caffeine amount and serving size for that specific drink.</li>
               </ul>
               <p>
-                  This interactive approach allows you to create custom comparisons on the fly. You can build an <b>energy drink caffeine chart</b>, compare different types of tea, or see how various coffee brewing methods affect the final caffeine content.
+                  This interactive approach allows you to create custom comparisons on the fly. You can build an <strong>energy drink caffeine chart</strong>, compare different types of tea, or see how various coffee brewing methods affect the final caffeine content.
               </p>
 
           </section>

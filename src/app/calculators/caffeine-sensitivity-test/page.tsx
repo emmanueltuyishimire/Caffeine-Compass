@@ -65,10 +65,10 @@ export default function CaffeineSensitivityTestPage() {
               Unlock Your Genetic Code: Why Caffeine Affects Everyone Differently
             </h2>
             <p>
-              Have you ever wondered why your friend can have an espresso after dinner and sleep like a baby, while your own afternoon latte leaves you wired until midnight? The answer lies in your genes. Specifically, it comes down to how efficiently your body metabolizes caffeine, a trait largely determined by the <b>CYP1A2 gene</b>. This Caffeine Sensitivity Test is designed to give you powerful insights into your unique genetic makeup without needing an expensive DNA test.
+              Have you ever wondered why your friend can have an espresso after dinner and sleep like a baby, while your own afternoon latte leaves you wired until midnight? The answer lies in your genes. Specifically, it comes down to how efficiently your body metabolizes caffeine, a trait largely determined by the <strong>CYP1A2 gene</strong>. This Caffeine Sensitivity Test is designed to give you powerful insights into your unique genetic makeup without needing an expensive DNA test.
             </p>
             <p>
-              Most people navigate their caffeine consumption through trial and error, often enduring jitters, anxiety, or sleepless nights in the process. This tool solves that problem by providing a structured way to assess your body’s response to caffeine. By answering a series of targeted questions, you can identify whether you are a <b>fast metabolizer</b>, a <b>slow metabolizer</b>, or somewhere in between.
+              Most people navigate their caffeine consumption through trial and error, often enduring jitters, anxiety, or sleepless nights in the process. This tool solves that problem by providing a structured way to assess your body’s response to caffeine. By answering a series of targeted questions, you can identify whether you are a <strong>fast metabolizer</strong>, a <strong>slow metabolizer</strong>, or somewhere in between.
             </p>
             <p>
               Understanding your caffeine sensitivity is a game-changer. It empowers you to make informed decisions about how much caffeine to consume and, just as importantly, when to consume it. For a slow metabolizer, a morning coffee might be the limit, while a fast metabolizer has more flexibility. This knowledge allows you to harness the benefits of caffeine—like improved focus and alertness—while minimizing its downsides. It’s the key to optimizing your energy, protecting your sleep, and feeling your best. This test is the perfect starting point before diving into our other tools like the <Link href="/calculators/half-life">Half-Life Calculator</Link>.
@@ -88,9 +88,9 @@ export default function CaffeineSensitivityTestPage() {
                   Each question in the test explores a different facet of your relationship with caffeine. Your answers are assigned a point value, and your total score places you into one of three categories:
               </p>
               <ul>
-                  <li><b>Fast Metabolizer (High Tolerance):</b> You process caffeine quickly. You likely experience a pleasant buzz but few negative side effects, and caffeine's effects wear off relatively fast.</li>
-                  <li><b>Average Metabolizer (Moderate Tolerance):</b> You fall in the middle. You can enjoy caffeine in moderation but need to be mindful of your dosage and timing to avoid sleep disruption.</li>
-                  <li><b>Slow Metabolizer (Low Tolerance/High Sensitivity):</b> Your body clears caffeine very slowly. You are prone to jitters, anxiety, and sleep problems, even from small amounts consumed early in the day.</li>
+                  <li><strong>Fast Metabolizer (High Tolerance):</strong> You process caffeine quickly. You likely experience a pleasant buzz but few negative side effects, and caffeine's effects wear off relatively fast.</li>
+                  <li><strong>Average Metabolizer (Moderate Tolerance):</strong> You fall in the middle. You can enjoy caffeine in moderation but need to be mindful of your dosage and timing to avoid sleep disruption.</li>
+                  <li><strong>Slow Metabolizer (Low Tolerance/High Sensitivity):</strong> Your body clears caffeine very slowly. You are prone to jitters, anxiety, and sleep problems, even from small amounts consumed early in the day.</li>
               </ul>
               <p>
                   This self-assessment is based on common symptoms and timelines associated with different metabolic rates, providing a practical, real-world indication of your genetic predisposition.
@@ -98,14 +98,14 @@ export default function CaffeineSensitivityTestPage() {
 
               <h3 className="text-2xl font-semibold">The Scientific Background: The CYP1A2 "Coffee Gene"</h3>
               <p>
-                  The star of this show is an enzyme produced in your liver called <b>Cytochrome P450 1A2</b>, or <b>CYP1A2</b>. This enzyme is responsible for breaking down about 95% of the caffeine you consume. The instructions for building this enzyme are found in your CYP1A2 gene.
+                  The star of this show is an enzyme produced in your liver called <strong>Cytochrome P450 1A2</strong>, or <strong>CYP1A2</strong>. This enzyme is responsible for breaking down about 95% of the caffeine you consume. The instructions for building this enzyme are found in your CYP1A2 gene.
               </p>
               <p>
                   Slight variations (called polymorphisms) in this gene determine how efficient your CYP1A2 enzyme is.
               </p>
               <ul>
-                  <li>People with the <b>AA variant</b> of the gene are "fast metabolizers." Their liver produces a highly efficient version of the enzyme that breaks down caffeine rapidly. This is about 40% of the population.</li>
-                  <li>People with either the <b>AC or CC variant</b> are "slow metabolizers." Their enzyme is less efficient, causing caffeine to linger in their bloodstream for much longer. This group makes up the remaining 60% of the population.</li>
+                  <li>People with the <strong>AA variant</strong> of the gene are "fast metabolizers." Their liver produces a highly efficient version of the enzyme that breaks down caffeine rapidly. This is about 40% of the population.</li>
+                  <li>People with either the <strong>AC or CC variant</strong> are "slow metabolizers." Their enzyme is less efficient, causing caffeine to linger in their bloodstream for much longer. This group makes up the remaining 60% of the population.</li>
               </ul>
               <p>
                   A slow metabolizer might take twice as long to clear the same amount of caffeine as a fast metabolizer. This means a 100 mg coffee could feel like 200 mg to them, and its effects could last 8-10 hours instead of 4-5. This test helps you determine which group you likely belong to by asking questions whose answers reflect these different clearance rates.
@@ -121,8 +121,8 @@ export default function CaffeineSensitivityTestPage() {
                       <CardTitle>Fast Metabolizer (High Tolerance)</CardTitle>
                   </CardHeader>
                   <CardContent>
-                      <p><b>Profile:</b> You won the genetic lottery for caffeine consumption. Your body processes caffeine efficiently, meaning you get the alertness boost without many of the negative side effects. The effects of a morning coffee likely wear off by early afternoon.</p>
-                      <p><b>Recommendations:</b></p>
+                      <p><strong>Profile:</strong> You won the genetic lottery for caffeine consumption. Your body processes caffeine efficiently, meaning you get the alertness boost without many of the negative side effects. The effects of a morning coffee likely wear off by early afternoon.</p>
+                      <p><strong>Recommendations:</strong></p>
                       <ul>
                           <li>You can likely handle caffeine later in the day than others, but it's still wise to set a curfew. </li>
                           <li>You may be less susceptible to caffeine's cardiovascular risks, but the 400 mg daily limit is still a good guideline to follow.</li>
@@ -135,8 +135,8 @@ export default function CaffeineSensitivityTestPage() {
                       <CardTitle>Average Metabolizer (Moderate Tolerance)</CardTitle>
                   </CardHeader>
                   <CardContent>
-                      <p><b>Profile:</b> You represent the typical response to caffeine. You enjoy the benefits of alertness but need to be mindful of your intake. An afternoon coffee could be a gamble for your sleep.</p>
-                      <p><b>Recommendations:</b></p>
+                      <p><strong>Profile:</strong> You represent the typical response to caffeine. You enjoy the benefits of alertness but need to be mindful of your intake. An afternoon coffee could be a gamble for your sleep.</p>
+                      <p><strong>Recommendations:</strong></p>
                       <ul>
                           <li>A "no caffeine after 2 PM" rule is an excellent starting point for you.</li>
                           <li>Pay close attention to dose. One or two cups in the morning may be your sweet spot.</li>
@@ -149,8 +149,8 @@ export default function CaffeineSensitivityTestPage() {
                       <CardTitle>Slow Metabolizer (High Sensitivity)</CardTitle>
                   </CardHeader>
                   <CardContent>
-                      <p><b>Profile:</b> You are highly sensitive to caffeine. Small amounts can feel potent, and the effects last a very long time. You are more prone to caffeine-induced anxiety, jitters, and significant sleep disruption.</p>
-                      <p><b>Recommendations:</b></p>
+                      <p><strong>Profile:</strong> You are highly sensitive to caffeine. Small amounts can feel potent, and the effects last a very long time. You are more prone to caffeine-induced anxiety, jitters, and significant sleep disruption.</p>
+                      <p><strong>Recommendations:</strong></p>
                       <ul>
                           <li>Consider limiting caffeine to one small serving in the very early morning (e.g., before 10 AM).</li>
                           <li>Be cautious with high-caffeine drinks like cold brew or large energy drinks. They can easily overwhelm your system.</li>
@@ -202,7 +202,7 @@ export default function CaffeineSensitivityTestPage() {
               <AccordionItem value="item-1">
                 <AccordionTrigger>How accurate is this test compared to a DNA test?</AccordionTrigger>
                 <AccordionContent>
-                  While a DNA test provides a definitive genetic result, this symptomatic questionnaire is a highly effective and accessible proxy. It assesses how your body *actually* responds to caffeine in the real world, which is the most practical measure of your sensitivity. For most people, the results of this test will align closely with their genetic makeup.
+                  While a DNA test provides a definitive genetic result, this symptomatic questionnaire is a highly effective and accessible proxy. It assesses how your body <strong>actually</strong> responds to caffeine in the real world, which is the most practical measure of your sensitivity. For most people, the results of this test will align closely with their genetic makeup.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">

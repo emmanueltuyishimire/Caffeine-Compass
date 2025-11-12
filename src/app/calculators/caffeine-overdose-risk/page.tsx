@@ -1,5 +1,4 @@
 
-
 import CaffeineOverdoseRiskCalculator from '@/components/features/CaffeineOverdoseRiskCalculator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -75,10 +74,10 @@ export default function CaffeineOverdoseRiskPage() {
               Understanding Your Limits: The Science Behind Caffeine Safety
             </h2>
             <p>
-              Caffeine is the world's most popular psychoactive substance, a reliable ally for enhancing focus, energy, and performance. We stir it into our morning routines and reach for it during afternoon slumps. But this powerful stimulant has a threshold, and crossing it can lead to consequences ranging from unpleasant jitters to life-threatening medical emergencies. The question "how much is too much?" is not just a matter of avoiding discomfort—it's a critical component of safe consumption. This <b>Caffeine Overdose Risk Calculator</b> is a vital educational tool designed to demystify those limits, translating abstract toxicological data into personalized, weight-based estimates to help you understand what constitutes a potential <b>caffeine overdose</b>.
+              Caffeine is the world's most popular psychoactive substance, a reliable ally for enhancing focus, energy, and performance. We stir it into our morning routines and reach for it during afternoon slumps. But this powerful stimulant has a threshold, and crossing it can lead to consequences ranging from unpleasant jitters to life-threatening medical emergencies. The question "how much is too much?" is not just a matter of avoiding discomfort—it's a critical component of safe consumption. This <strong>Caffeine Overdose Risk Calculator</strong> is a vital educational tool designed to demystify those limits, translating abstract toxicological data into personalized, weight-based estimates to help you understand what constitutes a potential <strong>caffeine overdose</strong>.
             </p>
             <p>
-              The primary problem this calculator solves is the inherent ambiguity around caffeine safety. While health authorities like the FDA suggest a general limit of 400 mg per day for healthy adults, this is a guideline for daily intake, not a measure of acute toxicity. The dose at which caffeine becomes dangerous is highly individual and depends on numerous factors, with <b>body weight</b> being the most significant. A dose that is perfectly safe for a 200-pound individual could pose a serious risk to someone weighing 120 pounds. This ambiguity is amplified by the modern beverage market, where a single energy drink can contain more caffeine than three cups of coffee.
+              The primary problem this calculator solves is the inherent ambiguity around caffeine safety. While health authorities like the FDA suggest a general limit of 400 mg per day for healthy adults, this is a guideline for daily intake, not a measure of acute toxicity. The dose at which caffeine becomes dangerous is highly individual and depends on numerous factors, with <strong>body weight</strong> being the most significant. A dose that is perfectly safe for a 200-pound individual could pose a serious risk to someone weighing 120 pounds. This ambiguity is amplified by the modern beverage market, where a single energy drink can contain more caffeine than three cups of coffee.
             </p>
             <p>
               This calculator provides clarity by showing you the estimated dosage tiers for noticeable side effects, mild toxicity, and severe toxicity, all tailored to your body weight. This is not a diagnostic tool but a harm-reduction and educational resource. By understanding your personal safety margins, you can make more informed decisions about your consumption, particularly when dealing with highly concentrated caffeine products like powders, pills, and potent energy drinks. Knowledge is the foundation of mindful consumption, and this tool is your first step toward using caffeine safely and effectively. Before calculating your risk, it is essential to know your current intake, which you can determine using our <Link href="/calculators/intake">Caffeine Intake Calculator</Link>.
@@ -108,7 +107,7 @@ export default function CaffeineOverdoseRiskPage() {
                   The calculation is straightforward but powerful. It relies on one primary input from you:
               </p>
               <ul>
-                  <li><b>Your Body Weight:</b> This is the single most critical factor in determining your body's capacity to handle a given dose of caffeine. A larger body mass means a greater volume of blood and tissue in which the caffeine can be distributed, resulting in a lower overall concentration and thus a lower risk. The calculator accepts weight in both kilograms (kg) and pounds (lbs) for your convenience.
+                  <li><strong>Your Body Weight:</strong> This is the single most critical factor in determining your body's capacity to handle a given dose of caffeine. A larger body mass means a greater volume of blood and tissue in which the caffeine can be distributed, resulting in a lower overall concentration and thus a lower risk. The calculator accepts weight in both kilograms (kg) and pounds (lbs) for your convenience.
                   </li>
               </ul>
 
@@ -122,10 +121,10 @@ export default function CaffeineOverdoseRiskPage() {
                   This is the dose at which the desirable effects of caffeine can start to be overshadowed by negative ones. For a 150 lb (68 kg) person, this is around 200 mg. At this level, caffeine's blockade of adenosine receptors becomes so pronounced that it can lead to an overstimulation of the central nervous system. This manifests as:
               </p>
               <ul>
-                  <li><b>Jitters and Restlessness:</b> An inability to sit still.</li>
-                  <li><b>Anxiety and Nervousness:</b> A feeling of unease or worry.</li>
-                  <li><b>Increased Heart Rate:</b> Your heart may beat noticeably faster.</li>
-                  <li><b>Gastrointestinal Upset:</b> Caffeine increases stomach acid, which can cause discomfort.</li>
+                  <li><strong>Jitters and Restlessness:</strong> An inability to sit still.</li>
+                  <li><strong>Anxiety and Nervousness:</strong> A feeling of unease or worry.</li>
+                  <li><strong>Increased Heart Rate:</strong> Your heart may beat noticeably faster.</li>
+                  <li><strong>Gastrointestinal Upset:</strong> Caffeine increases stomach acid, which can cause discomfort.</li>
               </ul>
               <p>While not "toxic" in a clinical sense, this level indicates you've exceeded your optimal dose for performance and are entering the zone of diminishing returns.</p>
 
@@ -134,10 +133,10 @@ export default function CaffeineOverdoseRiskPage() {
                   This is a clinical overdose. For a 150 lb (68 kg) person, this corresponds to roughly 1,000 mg of caffeine. At this dose, caffeine's effects move beyond the central nervous system and begin to significantly impact the cardiovascular system. Symptoms include:
               </p>
               <ul>
-                  <li><b>Tachycardia:</b> A rapid heart rate, often over 100 beats per minute at rest.</li>
-                  <li><b>Heart Palpitations:</b> A feeling that your heart is fluttering or skipping beats.</li>
-                  <li><b>Muscle Twitching (Fasciculations):</b> Uncontrollable muscle spasms.</li>
-                  <li><b>Insomnia and Agitation:</b> A severe inability to rest or calm down.</li>
+                  <li><strong>Tachycardia:</strong> A rapid heart rate, often over 100 beats per minute at rest.</li>
+                  <li><strong>Heart Palpitations:</strong> A feeling that your heart is fluttering or skipping beats.</li>
+                  <li><strong>Muscle Twitching (Fasciculations):</strong> Uncontrollable muscle spasms.</li>
+                  <li><strong>Insomnia and Agitation:</strong> A severe inability to rest or calm down.</li>
               </ul>
               <p>This level requires medical observation, as it can escalate, especially in individuals with underlying heart conditions.</p>
 
@@ -146,10 +145,10 @@ export default function CaffeineOverdoseRiskPage() {
                   This represents the median lethal dose, or LD50—the dose at which 50% of a test population would be expected to die. For a 150 lb (68 kg) person, this is an astronomical 10,000 mg. It is extremely difficult to reach this level with standard beverages but is tragically possible with pure caffeine powder. At this dose, the body's systems begin to fail catastrophically:
               </p>
               <ul>
-                  <li><b>Ventricular Fibrillation:</b> A chaotic, ineffective heart rhythm that is the most common cause of death from caffeine overdose.</li>
-                  <li><b>Seizures:</b> The central nervous system becomes so over-excited that it leads to convulsions.</li>
-                  <li><b>Rhabdomyolysis:</b> The breakdown of muscle tissue, which releases proteins into the blood that can cause kidney failure.</li>
-                  <li><b>Severe Vomiting and Metabolic Acidosis:</b> A dangerous shift in the body's pH.</li>
+                  <li><strong>Ventricular Fibrillation:</strong> A chaotic, ineffective heart rhythm that is the most common cause of death from caffeine overdose.</li>
+                  <li><strong>Seizures:</strong> The central nervous system becomes so over-excited that it leads to convulsions.</li>
+                  <li><strong>Rhabdomyolysis:</strong> The breakdown of muscle tissue, which releases proteins into the blood that can cause kidney failure.</li>
+                  <li><strong>Severe Vomiting and Metabolic Acidosis:</strong> A dangerous shift in the body's pH.</li>
               </ul>
               <p>Any dose approaching this level is a dire medical emergency.</p>
 
@@ -169,10 +168,10 @@ export default function CaffeineOverdoseRiskPage() {
                   While body weight is the primary factor in this calculator, your true risk is influenced by other variables:
               </p>
               <ul>
-                  <li><b>Genetics:</b> As our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> explains, your CYP1A2 gene determines if you are a "slow" or "fast" metabolizer. Slow metabolizers will have caffeine in their system for longer, increasing the risk of "stacking" doses.</li>
-                  <li><b>Health Conditions:</b> Individuals with pre-existing heart conditions, high blood pressure, or anxiety disorders are at a much higher risk for adverse events at lower doses.</li>
-                  <li><b>Medications:</b> Certain medications can interfere with caffeine metabolism, effectively turning a fast metabolizer into a slow one and increasing risk.</li>
-                  <li><b>Pregnancy:</b> During pregnancy, caffeine metabolism slows dramatically, increasing susceptibility. Pregnant women should adhere to a much lower limit, typically under 200mg per day. Our <Link href="/calculators/pregnancy-safe-limit">Pregnancy Safe Limit Calculator</Link> is designed for this purpose.</li>
+                  <li><strong>Genetics:</strong> As our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> explains, your CYP1A2 gene determines if you are a "slow" or "fast" metabolizer. Slow metabolizers will have caffeine in their system for longer, increasing the risk of "stacking" doses.</li>
+                  <li><strong>Health Conditions:</strong> Individuals with pre-existing heart conditions, high blood pressure, or anxiety disorders are at a much higher risk for adverse events at lower doses.</li>
+                  <li><strong>Medications:</strong> Certain medications can interfere with caffeine metabolism, effectively turning a fast metabolizer into a slow one and increasing risk.</li>
+                  <li><strong>Pregnancy:</strong> During pregnancy, caffeine metabolism slows dramatically, increasing susceptibility. Pregnant women should adhere to a much lower limit, typically under 200mg per day. Our <Link href="/calculators/pregnancy-safe-limit">Pregnancy Safe Limit Calculator</Link> is designed for this purpose.</li>
               </ul>
           </section>
 
@@ -211,7 +210,7 @@ export default function CaffeineOverdoseRiskPage() {
                       <TableRow>
                           <TableCell className="font-medium">Contextual Safe Limit Reminder</TableCell>
                           <TableCell>Includes a reminder of the FDA's recommended 400 mg daily limit for healthy adults.</TableCell>
-                          <TableCell>Helps users distinguish between the concept of a safe *daily* intake and a toxic *acute* dose.</TableCell>
+                          <TableCell>Helps users distinguish between the concept of a safe <strong>daily</strong> intake and a toxic <strong>acute</strong> dose.</TableCell>
                       </TableRow>
                   </TableBody>
               </Table>
@@ -224,13 +223,13 @@ export default function CaffeineOverdoseRiskPage() {
               <p>Using the calculator is simple and takes just a few seconds. Follow these steps:</p>
               <ol className="list-decimal pl-5 space-y-2">
                   <li>
-                      <b>Enter Your Body Weight:</b> In the "Your Body Weight" field, type in your weight.
+                      <strong>Enter Your Body Weight:</strong> In the "Your Body Weight" field, type in your weight.
                   </li>
                   <li>
-                      <b>Select Your Preferred Unit:</b> Use the switch to select whether you entered your weight in kilograms (kg) or pounds (lbs). The calculator will automatically handle the conversion.
+                      <strong>Select Your Preferred Unit:</strong> Use the switch to select whether you entered your weight in kilograms (kg) or pounds (lbs). The calculator will automatically handle the conversion.
                   </li>
                   <li>
-                      <b>Review Your Estimated Thresholds:</b> The calculator will instantly update to show you the three risk tiers:
+                      <strong>Review Your Estimated Thresholds:</strong> The calculator will instantly update to show you the three risk tiers:
                       <ul className='list-disc pl-5 mt-2'>
                           <li>The "Noticeable Effects" value.</li>
                           <li>The "Mild Toxicity" value.</li>
@@ -238,7 +237,7 @@ export default function CaffeineOverdoseRiskPage() {
                       </ul>
                   </li>
                   <li>
-                      <b>Contextualize the Numbers:</b> Compare these thresholds to the caffeine content of your beverages. You can find precise amounts in our <Link href="/calculators/drinks-database">Caffeine in Drinks Database</Link>. This will help you understand, for example, how many energy drinks it would take to reach a level of mild toxicity for someone of your weight.
+                      <strong>Contextualize the Numbers:</strong> Compare these thresholds to the caffeine content of your beverages. You can find precise amounts in our <Link href="/calculators/drinks-database">Caffeine in Drinks Database</Link>. This will help you understand, for example, how many energy drinks it would take to reach a level of mild toxicity for someone of your weight.
                   </li>
               </ol>
           </section>
@@ -255,9 +254,9 @@ export default function CaffeineOverdoseRiskPage() {
                       <CardTitle className="flex items-center gap-3"><BrainCircuit aria-hidden="true"/> The Student and Energy Drinks</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
-                      <p><b>Scenario:</b> A 19-year-old student, weighing 130 lbs (59 kg), is pulling an all-nighter for exams. He drinks two high-potency energy drinks, each containing 300 mg of caffeine, over the course of three hours.</p>
-                      <p><b>Calculator Result:</b> His total intake is 600 mg. The calculator shows his "Noticeable Effects" threshold is ~177 mg and his "Mild Toxicity" threshold is ~885 mg. </p>
-                      <p><b>Interpretation:</b> He is far past the point of diminishing returns and well on his way toward the mild toxicity zone. He is likely experiencing significant jitters, anxiety, and a racing heart, making effective studying difficult. The calculator illustrates that while not in the lethal range, his consumption is already at a level that is medically inadvisable and counterproductive.</p>
+                      <p><strong>Scenario:</strong> A 19-year-old student, weighing 130 lbs (59 kg), is pulling an all-nighter for exams. He drinks two high-potency energy drinks, each containing 300 mg of caffeine, over the course of three hours.</p>
+                      <p><strong>Calculator Result:</strong> His total intake is 600 mg. The calculator shows his "Noticeable Effects" threshold is ~177 mg and his "Mild Toxicity" threshold is ~885 mg. </p>
+                      <p><strong>Interpretation:</strong> He is far past the point of diminishing returns and well on his way toward the mild toxicity zone. He is likely experiencing significant jitters, anxiety, and a racing heart, making effective studying difficult. The calculator illustrates that while not in the lethal range, his consumption is already at a level that is medically inadvisable and counterproductive.</p>
                   </CardContent>
               </Card>
 
@@ -266,9 +265,9 @@ export default function CaffeineOverdoseRiskPage() {
                       <CardTitle className="flex items-center gap-3"><Activity aria-hidden="true"/> The Gym-Goer and Pre-Workout Powder</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
-                      <p><b>Scenario:</b> A 35-year-old man, weighing 210 lbs (95 kg), is new to pre-workout supplements. He "dry scoops" two servings of a concentrated pre-workout powder, not realizing each scoop contains 250 mg of caffeine. His total intake is 500 mg on an empty stomach.</p>
-                      <p><b>Calculator Result:</b> For his weight, the calculator estimates a "Noticeable Effects" threshold of ~285 mg and "Mild Toxicity" at ~1425 mg.</p>
-                      <p><b>Interpretation:</b> His 500 mg dose is nearly double the amount needed to cause significant side effects. The rapid absorption from the powder form likely leads to intense heart palpitations and anxiety. The calculator helps him understand that his dose, while not life-threatening for his body weight, was excessive and dangerous. It encourages him to read labels and respect serving sizes, especially for concentrated products.</p>
+                      <p><strong>Scenario:</strong> A 35-year-old man, weighing 210 lbs (95 kg), is new to pre-workout supplements. He "dry scoops" two servings of a concentrated pre-workout powder, not realizing each scoop contains 250 mg of caffeine. His total intake is 500 mg on an empty stomach.</p>
+                      <p><strong>Calculator Result:</strong> For his weight, the calculator estimates a "Noticeable Effects" threshold of ~285 mg and "Mild Toxicity" at ~1425 mg.</p>
+                      <p><strong>Interpretation:</strong> His 500 mg dose is nearly double the amount needed to cause significant side effects. The rapid absorption from the powder form likely leads to intense heart palpitations and anxiety. The calculator helps him understand that his dose, while not life-threatening for his body weight, was excessive and dangerous. It encourages him to read labels and respect serving sizes, especially for concentrated products.</p>
                   </CardContent>
               </Card>
           </section>
@@ -325,13 +324,13 @@ export default function CaffeineOverdoseRiskPage() {
               <AccordionItem value="item-1">
                 <AccordionTrigger>Is it possible to overdose on caffeine from standard coffee or tea?</AccordionTrigger>
                 <AccordionContent>
-                  While theoretically possible, it is practically very difficult and extremely rare. A lethal dose for an average adult would require drinking 75-100 cups of coffee in rapid succession, a feat the body would likely reject through vomiting long before a fatal dose is absorbed. The real and significant danger comes from highly concentrated sources like <b>caffeine powders, pills, and multiple high-potency energy drinks</b> consumed in a short period.
+                  While theoretically possible, it is practically very difficult and extremely rare. A lethal dose for an average adult would require drinking 75-100 cups of coffee in rapid succession, a feat the body would likely reject through vomiting long before a fatal dose is absorbed. The real and significant danger comes from highly concentrated sources like <strong>caffeine powders, pills, and multiple high-potency energy drinks</strong> consumed in a short period.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
                 <AccordionTrigger>What is the difference between the "safe daily limit" and a "toxic dose"?</AccordionTrigger>
                 <AccordionContent>
-                  The FDA's recommended <b>400 mg daily limit</b> is a guideline for regular, daily consumption that is not generally associated with negative effects in healthy adults. A "toxic dose," as estimated by this calculator, refers to a large amount of caffeine consumed in a single instance or over a very short period that can cause acute medical symptoms. You can stay under the 400 mg daily limit but still experience mild toxicity if you consume it all at once. Use our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> to track your daily consumption.
+                  The FDA's recommended <strong>400 mg daily limit</strong> is a guideline for regular, daily consumption that is not generally associated with negative effects in healthy adults. A "toxic dose," as estimated by this calculator, refers to a large amount of caffeine consumed in a single instance or over a very short period that can cause acute medical symptoms. You can stay under the 400 mg daily limit but still experience mild toxicity if you consume it all at once. Use our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> to track your daily consumption.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
@@ -343,7 +342,7 @@ export default function CaffeineOverdoseRiskPage() {
               <AccordionItem value="item-4">
                 <AccordionTrigger>Does my personal tolerance affect my overdose risk?</AccordionTrigger>
                 <AccordionContent>
-                  Your regular habits can affect how you *feel* at lower doses (your subjective tolerance to the "buzz"), but they do not significantly change the dose at which caffeine becomes clinically toxic. The physiological limits of your cardiovascular and central nervous systems are not substantially altered by regular coffee drinking. Do not assume your high tolerance for feeling stimulated equates to a high tolerance for overdose. Your underlying metabolic speed, which you can estimate with our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link>, is a more important factor.
+                  Your regular habits can affect how you <strong>feel</strong> at lower doses (your subjective tolerance to the "buzz"), but they do not significantly change the dose at which caffeine becomes clinically toxic. The physiological limits of your cardiovascular and central nervous systems are not substantially altered by regular coffee drinking. Do not assume your high tolerance for feeling stimulated equates to a high tolerance for overdose. Your underlying metabolic speed, which you can estimate with our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link>, is a more important factor.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
