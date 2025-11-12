@@ -104,7 +104,7 @@ export default function Home() {
               ))}
             </div>
              <div className="text-center mt-12">
-                <Link href="/about">
+                <Link href="/calculators">
                   <Button variant="outline">See All Calculators</Button>
                 </Link>
             </div>
