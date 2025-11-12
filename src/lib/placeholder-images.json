@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A dynamic shot of espresso being poured into a cup, with coffee beans scattered around.",
-      "imageUrl": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlc3ByZXNzbyUyMHBvdXJ8ZW58MHx8fHwxNzYzNjI4ODgxfDA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "espresso pour"
+      "description": "A close-up shot of roasted coffee beans.",
+      "imageUrl": "https://images.unsplash.com/photo-1552346986-1a79a9503d52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NjM2MjkxOTB8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "coffee beans"
     },
     {
       "id": "team-member-1",
