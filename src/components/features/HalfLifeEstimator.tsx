@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/componen
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { BarChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 
 const chartConfig = {
@@ -86,21 +86,7 @@ export default function HalfLifeEstimator() {
                     cursor={false}
                     content={<ChartTooltipContent indicator="dot" />}
                   />
-                <Line
-                  dataKey="caffeine"
-                  type="monotone"
-                  stroke="var(--color-caffeine)"
-                  strokeWidth={2}
-                  dot={{
-                    fill: "var(--color-caffeine)",
-                  }}
-                  activeDot={{
-                    r: 6,
-                  }}
-                />
-                 <BarChart>
-                    <Bar dataKey="caffeine" fill="var(--color-caffeine)" radius={4} />
-                 </BarChart>
+                 <Bar dataKey="caffeine" fill="var(--color-caffeine)" radius={4} />
               </BarChart>
             </ResponsiveContainer>
           </ChartContainer>
