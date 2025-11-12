@@ -31,6 +31,11 @@ const calculators: { title: string; href: string; description: string }[] = [
     href: "/calculators/sleep-impact",
     description: "Predict caffeine's effect on your sleep.",
   },
+  {
+    title: "Caffeine Withdrawal Tracker",
+    href: "/calculators/caffeine-withdrawal-tracker",
+    description: "Helps users taper down safely.",
+  }
 ]
 
 const Header = () => {
@@ -47,11 +52,9 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList>
                  <NavigationMenuItem>
-                    <Link href="/" passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        Home
-                      </NavigationMenuLink>
-                    </Link>
+                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                    <Link href="/">Home</Link>
+                  </NavigationMenuLink>
                   </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Calculators</NavigationMenuTrigger>
@@ -70,18 +73,14 @@ const Header = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                  <NavigationMenuItem>
-                    <Link href="/about" passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        About
-                      </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                      <Link href="/about">About</Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="/support" passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        Support
-                      </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                      <Link href="/support">Support</Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
