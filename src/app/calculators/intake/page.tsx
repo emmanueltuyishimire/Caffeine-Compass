@@ -231,7 +231,7 @@ export default function IntakeCalculatorPage() {
                         <li>Green Tea (x1)</li>
                     </ul>
                     <p><b>Result:</b> Her daily total is about <b>92 mg</b> (64 mg + 28 mg). The progress bar on the calculator would show her she is well under both the standard 400 mg limit and her personal 200 mg limit.</p>
-                    <p><b>Interpretation:</b> For Sarah, the calculator provides peace of mind. It allows her to enjoy her daily ritual without the stress of accidentally consuming too much caffeine, ensuring she’s following her doctor’s advice for a healthy pregnancy.</p>
+                    <p><b>Interpretation:</b> For Sarah, the calculator provides peace of mind. It allows her to enjoy her daily ritual without the stress of accidentally consuming too much caffeine, ensuring she’s following her doctor’s advice for a healthy pregnancy. For detailed tracking during pregnancy, she could use our dedicated <Link href="/calculators/pregnancy-safe-limit">Pregnancy Safe Limit Calculator</Link>.</p>
                 </CardContent>
             </Card>
         </section>

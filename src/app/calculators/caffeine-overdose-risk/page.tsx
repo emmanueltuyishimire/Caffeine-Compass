@@ -1,4 +1,5 @@
 
+
 import CaffeineOverdoseRiskCalculator from '@/components/features/CaffeineOverdoseRiskCalculator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -145,6 +146,7 @@ export default function CaffeineOverdoseRiskPage() {
                 <li><b>Genetics:</b> As our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> explains, your CYP1A2 gene determines if you are a "slow" or "fast" metabolizer. Slow metabolizers will have caffeine in their system for longer, increasing the risk of "stacking" doses.</li>
                 <li><b>Health Conditions:</b> Individuals with pre-existing heart conditions, high blood pressure, or anxiety disorders are at a much higher risk for adverse events at lower doses.</li>
                 <li><b>Medications:</b> Certain medications can interfere with caffeine metabolism, effectively turning a fast metabolizer into a slow one and increasing risk.</li>
+                <li><b>Pregnancy:</b> During pregnancy, caffeine metabolism slows dramatically, increasing susceptibility. Pregnant women should adhere to a much lower limit, typically under 200mg per day. Our <Link href="/calculators/pregnancy-safe-limit">Pregnancy Safe Limit Calculator</Link> is designed for this purpose.</li>
             </ul>
         </section>
 

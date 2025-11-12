@@ -51,6 +51,11 @@ const calculators: { title: string; href: string; description: string }[] = [
     title: "Caffeine Overdose Risk Calculator",
     href: "/calculators/caffeine-overdose-risk",
     description: "Estimate safe and toxic caffeine levels based on body weight.",
+  },
+  {
+    title: "Pregnancy Safe Limit Calculator",
+    href: "/calculators/pregnancy-safe-limit",
+    description: "Track intake against the 200mg limit for pregnancy.",
   }
 ]
 
