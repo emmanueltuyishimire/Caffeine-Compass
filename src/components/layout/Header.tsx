@@ -35,6 +35,11 @@ const calculators: { title: string; href: string; description: string }[] = [
     title: "Caffeine Withdrawal Tracker",
     href: "/calculators/caffeine-withdrawal-tracker",
     description: "Helps users taper down safely.",
+  },
+  {
+    title: "Caffeine Sensitivity Test",
+    href: "/calculators/caffeine-sensitivity-test",
+    description: "Estimate your genetic tolerance to caffeine.",
   }
 ]
 

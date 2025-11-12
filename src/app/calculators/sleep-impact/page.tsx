@@ -516,10 +516,10 @@ export default function SleepImpactCalculatorPage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle>Caffeine Sensitivity Test</CardTitle>
+                        <CardTitle><Link href="/calculators/caffeine-sensitivity-test" className="hover:underline">Caffeine Sensitivity Test</Link></CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>Discover if you are a "fast" or "slow" metabolizer of caffeine. (Coming soon)</p>
+                        <p>Discover if you are a "fast" or "slow" metabolizer of caffeine.</p>
                     </CardContent>
                 </Card>
             </div>

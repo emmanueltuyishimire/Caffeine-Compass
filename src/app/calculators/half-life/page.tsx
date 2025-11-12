@@ -399,7 +399,7 @@ export default function HalfLifeCalculatorPage() {
             <AccordionItem value="item-3">
               <AccordionTrigger>What's the difference between a fast and slow metabolizer?</AccordionTrigger>
               <AccordionContent>
-                It comes down to genetics, specifically the <i>CYP1A2</i> gene. Fast metabolizers have a highly efficient enzyme that clears caffeine quickly (e.g., 3-4 hour half-life). Slow metabolizers have a less efficient enzyme, so caffeine lingers much longer (e.g., 6-8+ hour half-life), making them more prone to anxiety and sleep issues. Our upcoming <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> will help you determine your type.
+                It comes down to genetics, specifically the <i>CYP1A2</i> gene. Fast metabolizers have a highly efficient enzyme that clears caffeine quickly (e.g., 3-4 hour half-life). Slow metabolizers have a less efficient enzyme, so caffeine lingers much longer (e.g., 6-8+ hour half-life), making them more prone to anxiety and sleep issues. Our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> will help you determine your type.
               </AccordionContent>
             </AccordionItem>
              <AccordionItem value="item-4">
