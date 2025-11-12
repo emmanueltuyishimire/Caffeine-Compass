@@ -13,22 +13,22 @@ const CAFFEINE_HALF_LIFE_HOURS = 5;
 
 type RiskLevel = 'Low' | 'Medium' | 'High';
 
-const riskConfig: Record<RiskLevel, { variant: 'success' | 'secondary' | 'destructive', icon: React.ElementType, text: string }> = {
-    Low: {
-      variant: 'success', 
-      icon: CheckCircle,
-      text: 'Sleep disruption risk is low. Enjoy your rest!',
-    },
-    Medium: {
-      variant: 'secondary',
-      icon: AlertCircle,
-      text: 'Potential for light sleep disruption. You might take longer to fall asleep.',
-    },
-    High: {
-      variant: 'destructive',
-      icon: AlertCircle,
-      text: 'High risk of sleep disruption. May reduce deep sleep and overall sleep quality.',
-    },
+const riskConfig: Record<RiskLevel, { variant: 'success' | 'secondary' | 'destructive'; icon: React.ElementType; text: string }> = {
+  Low: {
+    variant: 'success',
+    icon: CheckCircle,
+    text: 'Sleep disruption risk is low. Enjoy your rest!',
+  },
+  Medium: {
+    variant: 'secondary',
+    icon: AlertCircle,
+    text: 'Potential for light sleep disruption. You might take longer to fall asleep.',
+  },
+  High: {
+    variant: 'destructive',
+    icon: AlertCircle,
+    text: 'High risk of sleep disruption. May reduce deep sleep and overall sleep quality.',
+  },
 };
 
 export default function SleepImpactPredictor() {
@@ -37,10 +37,10 @@ export default function SleepImpactPredictor() {
   const [bedtime, setBedtime] = useState('22:00');
   const [result, setResult] = useState<{ remaining: number; risk: RiskLevel } | null>(null);
 
-  const timeToHours = (time: string): number => {
+  function timeToHours(time: string): number {
     const [hours, minutes] = time.split(':').map(Number);
     return hours + minutes / 60;
-  };
+  }
 
   const calculateImpact = () => {
     const consumptionH = timeToHours(consumptionTime);
@@ -53,22 +53,22 @@ export default function SleepImpactPredictor() {
     const hoursUntilBedtime = bedtimeH - consumptionH;
 
     if (hoursUntilBedtime < 0) {
-        setResult(null); // Or show an error
-        return;
+      setResult(null); // Or show an error
+      return;
     }
 
     const remainingCaffeine = caffeineAmount * Math.pow(0.5, hoursUntilBedtime / CAFFEINE_HALF_LIFE_HOURS);
-    
+
     let risk: RiskLevel = 'Low';
     if (remainingCaffeine > 50) {
       risk = 'High';
     } else if (remainingCaffeine > 20) {
       risk = 'Medium';
     }
-    
+
     setResult({ remaining: Math.round(remainingCaffeine), risk });
   };
-  
+
   return (
     <Card className="max-w-4xl mx-auto">
       <CardHeader>
@@ -105,8 +105,8 @@ export default function SleepImpactPredictor() {
           </div>
         </div>
         <Button onClick={calculateImpact} className="w-full sm:w-auto">
-            <Clock className="mr-2 h-4 w-4" />
-            Calculate Sleep Impact
+          <Clock className="mr-2 h-4 w-4" />
+          Calculate Sleep Impact
         </Button>
       </CardContent>
 
@@ -114,17 +114,17 @@ export default function SleepImpactPredictor() {
         <CardFooter className="flex-col items-start gap-4 pt-6 border-t">
           <h3 className="font-semibold">Results:</h3>
           <div className="w-full p-4 bg-muted/50 rounded-lg space-y-3">
-             <div className="flex justify-between items-center">
-                <span className="text-muted-foreground">Caffeine at bedtime:</span>
-                <span className="font-bold text-2xl text-primary">{result.remaining} mg</span>
+            <div className="flex justify-between items-center">
+              <span className="text-muted-foreground">Caffeine at bedtime:</span>
+              <span className="font-bold text-2xl text-primary">{result.remaining} mg</span>
             </div>
-             <div className="flex justify-between items-center">
-                <span className="text-muted-foreground">Sleep Disruption Risk:</span>
-                <Badge variant={riskConfig[result.risk].variant}>{result.risk}</Badge>
+            <div className="flex justify-between items-center">
+              <span className="text-muted-foreground">Sleep Disruption Risk:</span>
+              <Badge variant={riskConfig[result.risk].variant}>{result.risk}</Badge>
             </div>
-             <div className="flex items-start gap-2 pt-2 text-sm text-muted-foreground">
-                <riskConfig[result.risk].icon className="h-5 w-5 mt-0.5" />
-                <span>{riskConfig[result.risk].text}</span>
+            <div className="flex items-start gap-2 pt-2 text-sm text-muted-foreground">
+              <riskConfig[result.risk].icon className="h-5 w-5 mt-0.5" />
+              <span>{riskConfig[result.risk].text}</span>
             </div>
           </div>
           <p className="text-xs text-muted-foreground">
