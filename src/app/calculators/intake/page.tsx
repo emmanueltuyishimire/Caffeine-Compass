@@ -47,7 +47,7 @@ export default function IntakeCalculatorPage() {
             Why Tracking Your Caffeine Is a Game-Changer
           </h2>
           <p>
-            For millions, caffeine is the invisible engine of modern life. It kickstarts our mornings, powers through afternoon slumps, and fuels late-night study sessions. But how much is too much? And more importantly, how much are you *really* consuming? This Caffeine Intake Calculator is designed to answer that question with scientific precision. It’s more than just a counter; it’s a powerful tool to help you master your energy, sharpen your focus, and protect your sleep.
+            For millions, caffeine is the invisible engine of modern life. It kickstarts our mornings, powers through afternoon slumps, and fuels late-night study sessions. But how much is too much? And more importantly, how much are you <i>really</i> consuming? This Caffeine Intake Calculator is designed to answer that question with scientific precision. It’s more than just a counter; it’s a powerful tool to help you master your energy, sharpen your focus, and protect your sleep.
           </p>
           <p>
             Most people dramatically underestimate their daily caffeine intake. A morning coffee, a lunchtime soda, an afternoon tea, and a piece of dark chocolate can easily push you over the recommended daily limit of 400 mg without you even realizing it. This overconsumption is often the hidden culprit behind anxiety, jitteriness, digestive issues, and, most commonly, poor sleep. The problem is that caffeine’s effects are subtle but cumulative. While one cup might feel fine, the third or fourth can have consequences that linger long after you’ve finished the drink.
@@ -278,7 +278,7 @@ export default function IntakeCalculatorPage() {
                     <TableRow>
                         <TableCell className="font-medium">Forgetting Non-Coffee Sources</TableCell>
                         <TableCell>People often don't think of tea, soda, chocolate, or even some medications (like Excedrin) as significant caffeine sources.</TableCell>
-                        <TableCell>Make it a habit to log *everything* you consume that might contain caffeine. Our calculator includes many of these less obvious sources.</TableCell>
+                        <TableCell>Make it a habit to log <i>everything</i> you consume that might contain caffeine. Our calculator includes many of these less obvious sources.</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell className="font-medium">Underestimating Serving Sizes</TableCell>
