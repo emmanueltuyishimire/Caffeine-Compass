@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Disclaimer',
-    description: 'Disclaimer for the Caffeine Compass website.',
+    description: 'Important disclaimer for the Caffeine Compass website and its tools.',
 };
 
 export default function DisclaimerPage() {
