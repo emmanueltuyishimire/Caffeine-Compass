@@ -23,13 +23,25 @@ import {
 import { Calendar } from "@/components/ui/calendar"
 import { cn } from '@/lib/utils';
 import { addDays, format } from 'date-fns';
-
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from '@/components/ui/chart';
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 
 interface TaperStep {
   day: number;
   date: string;
   caffeine: number;
 }
+
+const chartConfig = {
+  caffeine: {
+    label: 'Caffeine (mg)',
+    color: 'hsl(var(--primary))',
+  },
+};
 
 export default function CaffeineWithdrawalTracker() {
   const [intake, setIntake] = useState(300);
@@ -44,22 +56,18 @@ export default function CaffeineWithdrawalTracker() {
     const reductionAmount = intake / (reductionSteps + 1);
 
     let currentCaffeine = intake;
-    let stepCounter = 0;
 
     for (let i = 1; i <= duration; i++) {
-       if ((i - 1) % frequency === 0 && currentCaffeine > 0) {
-           if(i > 1) { // don't reduce on day 1
-             currentCaffeine -= reductionAmount;
-           }
-        }
+       if ((i - 1) % frequency === 0 && i > 1) {
+           currentCaffeine -= reductionAmount;
+       }
       newSchedule.push({
         day: i,
-        date: format(addDays(startDate, i - 1), 'MMM d, yyyy'),
+        date: format(addDays(startDate, i - 1), 'MMM d'),
         caffeine: Math.max(0, Math.round(currentCaffeine)),
       });
     }
 
-    // Ensure the last day is zero
     if(newSchedule.length > 0) {
         newSchedule[newSchedule.length - 1].caffeine = 0;
     }
@@ -148,8 +156,28 @@ export default function CaffeineWithdrawalTracker() {
       </CardContent>
 
       {schedule.length > 0 && (
-        <CardFooter className="flex-col items-start gap-4 pt-6 border-t">
+        <CardFooter className="flex-col items-start gap-6 pt-6 border-t">
           <h3 className="text-xl font-semibold">Your Personalized Tapering Schedule</h3>
+           <ChartContainer config={chartConfig} className="h-[250px] w-full">
+            <ResponsiveContainer width="100%" height="100%">
+               <BarChart accessibilityLayer data={schedule} margin={{ top: 20, right: 20, bottom: 20, left: -10 }}>
+                <CartesianGrid vertical={false} />
+                <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={8} />
+                <YAxis
+                    domain={[0, 'dataMax + 20']}
+                    tickLine={false}
+                    axisLine={false}
+                    tickMargin={8}
+                    label={{ value: 'Caffeine (mg)', angle: -90, position: 'insideLeft', offset: 10, style: { textAnchor: 'middle' } }}
+                 />
+                 <ChartTooltip
+                    cursor={false}
+                    content={<ChartTooltipContent indicator="dot" />}
+                  />
+                 <Bar dataKey="caffeine" fill="var(--color-caffeine)" radius={4} />
+              </BarChart>
+            </ResponsiveContainer>
+          </ChartContainer>
           <div className="w-full border rounded-md">
             <Table>
                 <TableHeader>
@@ -163,7 +191,7 @@ export default function CaffeineWithdrawalTracker() {
                     {schedule.map((step) => (
                     <TableRow key={step.day}>
                         <TableCell className="font-medium">{step.day}</TableCell>
-                        <TableCell>{step.date}</TableCell>
+                        <TableCell>{format(addDays(startDate, step.day - 1), 'MMM d, yyyy')}</TableCell>
                         <TableCell className="text-right font-bold text-primary">{step.caffeine} mg</TableCell>
                     </TableRow>
                     ))}
