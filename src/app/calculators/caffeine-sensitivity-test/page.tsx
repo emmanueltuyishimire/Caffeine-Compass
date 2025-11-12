@@ -45,7 +45,7 @@ export default function CaffeineSensitivityTestPage() {
             Most people navigate their caffeine consumption through trial and error, often enduring jitters, anxiety, or sleepless nights in the process. This tool solves that problem by providing a structured way to assess your body’s response to caffeine. By answering a series of targeted questions, you can identify whether you are a <b>fast metabolizer</b>, a <b>slow metabolizer</b>, or somewhere in between.
           </p>
           <p>
-            Understanding your caffeine sensitivity is a game-changer. It empowers you to make informed decisions about how much caffeine to consume and, just as importantly, when to consume it. For a slow metabolizer, a morning coffee might be the limit, while a fast metabolizer has more flexibility. This knowledge allows you to harness the benefits of caffeine—like improved focus and alertness—while minimizing its downsides. It’s the key to optimizing your energy, protecting your sleep, and feeling your best. This test is the perfect starting point before diving into our other tools like the <Link href="/calculators/half-life">Half-Life Calculator</Link> or the <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link>.
+            Understanding your caffeine sensitivity is a game-changer. It empowers you to make informed decisions about how much caffeine to consume and, just as importantly, when to consume it. For a slow metabolizer, a morning coffee might be the limit, while a fast metabolizer has more flexibility. This knowledge allows you to harness the benefits of caffeine—like improved focus and alertness—while minimizing its downsides. It’s the key to optimizing your energy, protecting your sleep, and feeling your best. This test is the perfect starting point before diving into our other tools like the <Link href="/calculators/half-life">Half-Life Calculator</Link>.
           </p>
         </section>
 
@@ -98,7 +98,7 @@ export default function CaffeineSensitivityTestPage() {
                     <p><b>Profile:</b> You won the genetic lottery for caffeine consumption. Your body processes caffeine efficiently, meaning you get the alertness boost without many of the negative side effects. The effects of a morning coffee likely wear off by early afternoon.</p>
                     <p><b>Recommendations:</b></p>
                     <ul>
-                        <li>You can likely handle caffeine later in the day than others, but it's still wise to set a curfew. Use the <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> to find your personal cutoff.</li>
+                        <li>You can likely handle caffeine later in the day than others, but it's still wise to set a curfew. </li>
                         <li>You may be less susceptible to caffeine's cardiovascular risks, but the 400 mg daily limit is still a good guideline to follow.</li>
                         <li>Be aware that you might not feel the "buzz" as strongly, which can lead to overconsumption. Track your total intake with our <Link href="/calculators/intake">Intake Calculator</Link>.</li>
                     </ul>
@@ -228,18 +228,18 @@ export default function CaffeineSensitivityTestPage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle><Link href="/calculators/sleep-impact" className="hover:underline">Sleep Impact Calculator</Link></CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p>Discover your personal "caffeine curfew." Find out the latest you can drink coffee without it affecting your sleep quality.</p>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
                         <CardTitle><Link href="/calculators/intake" className="hover:underline">Intake Calculator</Link></CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Track your total daily intake to make sure you're staying within the recommended limits for your sensitivity level.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle><Link href="/calculators/drink-comparison" className="hover:underline">Drink Comparison</Link></CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>Compare the caffeine content of your favorite beverages side-by-side.</p>
                     </CardContent>
                 </Card>
             </div>

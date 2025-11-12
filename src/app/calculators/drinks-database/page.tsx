@@ -45,7 +45,7 @@ export default function DrinksDatabasePage() {
             The problem this database solves is ambiguity. Caffeine content varies wildly not just between categories like coffee and tea, but between brands, sizes, and preparation methods. A generic "cup of coffee" can contain anywhere from 80 mg to over 300 mg of caffeine. This tool eliminates that guesswork. By providing specific data for specific products (from a Dunkin' Iced Coffee to a can of Bang), it empowers you to make truly informed decisions about your caffeine consumption.
           </p>
           <p>
-            Accurate knowledge of your intake is the foundation of caffeine management. Whether you're tracking your daily total with our <Link href="/calculators/intake">Intake Calculator</Link> or trying to protect your sleep with the <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link>, it all starts with knowing the potency of what you're drinking. This database is your definitive resource for that crucial first step.
+            Accurate knowledge of your intake is the foundation of caffeine management. Whether you're tracking your daily total with our <Link href="/calculators/intake">Intake Calculator</Link> or trying to protect your sleep, it all starts with knowing the potency of what you're drinking. This database is your definitive resource for that crucial first step.
           </p>
         </section>
 
@@ -117,7 +117,7 @@ export default function DrinksDatabasePage() {
              <AccordionItem value="item-4">
               <AccordionTrigger>What's the strongest drink in the database?</AccordionTrigger>
               <AccordionContent>
-                 Some of the strongest drinks are high-potency energy drinks and certain brands of cold brew concentrate. Drinks with 300 mg or more of caffeine in a single serving are considered very high and approach the FDA's recommended daily limit of 400 mg.
+                 Some of the strongest drinks are high-potency energy drinks and certain brands of cold brew concentrate. Drinks with 300 mg or more of a single serving are considered very high and approach the FDA's recommended daily limit of 400 mg.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -138,18 +138,18 @@ export default function DrinksDatabasePage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle><Link href="/calculators/sleep-impact" className="hover:underline">Sleep Impact Calculator</Link></CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p>Discovered your afternoon energy drink has 300 mg of caffeine? See how much will be left in your system at bedtime.</p>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
                         <CardTitle><Link href="/calculators/half-life" className="hover:underline">Half-Life Calculator</Link></CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Visualize how quickly (or slowly) your body will process the caffeine from the drink you just looked up.</p>
+                    </CardContent>
+                </Card>
+                 <Card>
+                    <CardHeader>
+                        <CardTitle><Link href="/calculators/drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>Compare your drink with others to understand its relative strength.</p>
                     </CardContent>
                 </Card>
             </div>

@@ -55,7 +55,7 @@ export default function HalfLifeCalculatorPage() {
             Most people underestimate how long caffeine remains active in their bloodstream, leading to restless nights, mid-day crashes, or unexplained anxiety. The concept of "half-life" is the key to understanding this. It’s the time it takes for your body to eliminate half of the caffeine you consumed. While the average half-life is around 5 hours, this can vary dramatically based on your genetics, age, body weight, and even medications you take. This calculator puts that scientific principle into your hands, transforming abstract numbers into a personalized timeline of your body's caffeine clearance.
           </p>
           <p>
-            Understanding your personal caffeine decay curve is a superpower. It allows you to strategically time your intake for maximum focus when you need it, and ensure it has faded by the time you want to rest. Whether you're trying to avoid disrupting your sleep, manage your tolerance, or simply gain more control over your energy levels, this tool is your first step. By visualizing the process, you can make smarter decisions that align with your health goals. To get a complete picture, you can also use our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> to track your total dose and the <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> to see exactly how much caffeine will be in your system at bedtime.
+            Understanding your personal caffeine decay curve is a superpower. It allows you to strategically time your intake for maximum focus when you need it, and ensure it has faded by the time you want to rest. Whether you're trying to avoid disrupting your sleep, manage your tolerance, or simply gain more control over your energy levels, this tool is your first step. By visualizing the process, you can make smarter decisions that align with your health goals. To get a complete picture, you can also use our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> to track your total dose.
           </p>
         </section>
 
@@ -217,7 +217,8 @@ export default function HalfLifeCalculatorPage() {
                 <CardContent className="space-y-2">
                     <p><b>Scenario:</b> Mark considers himself an "average" metabolizer (5-hour half-life). He wants to know the impact of his 12 PM latte (64 mg).</p>
                      <p><b>Calculator Result:</b> At his bedtime of 10 PM (10 hours later), the calculator shows he will have approximately <b>16 mg</b> of caffeine left in his system.</p>
-                    <p><b>Interpretation:</b> The tool gives him a concrete number. While 16 mg is a small amount, for someone very sensitive, it could still slightly delay sleep. He might decide to move his last coffee to 11 AM to get that number even closer to zero by bedtime. Our <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> can provide even more detail on this specific scenario.</p>
+                    <p><b>Interpretation:</b> The tool gives him a concrete number. While 16 mg is a small amount, for someone very sensitive, it could still slightly delay sleep. He might decide to move his last coffee to 11 AM to get that number even closer to zero by bedtime.
+                    </p>
                 </CardContent>
             </Card>
         </section>
@@ -376,7 +377,7 @@ export default function HalfLifeCalculatorPage() {
             <AccordionItem value="item-5">
               <AccordionTrigger>If I don't feel "caffeinated," is the caffeine gone?</AccordionTrigger>
               <AccordionContent>
-                Not necessarily. The strong, noticeable "buzz" of caffeine wears off long before it's fully eliminated. Even small, non-perceptible amounts of caffeine can be enough to disrupt the architecture of your sleep, particularly deep sleep. This is why using a tool like our <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> is so important.
+                Not necessarily. The strong, noticeable "buzz" of caffeine wears off long before it's fully eliminated. Even small, non-perceptible amounts of caffeine can be enough to disrupt the architecture of your sleep, particularly deep sleep.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-6">
@@ -457,18 +458,18 @@ export default function HalfLifeCalculatorPage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle><Link href="/calculators/sleep-impact" className="hover:underline">Sleep Impact Calculator</Link></CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p>Calculate your precise caffeine levels at bedtime to see how a specific drink will affect your sleep.</p>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
                         <CardTitle><Link href="/calculators/drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Compare the caffeine content of your favorite beverages side-by-side.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle><Link href="/calculators/caffeine-sensitivity-test" className="hover:underline">Caffeine Sensitivity Test</Link></CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>Discover if you are a "fast" or "slow" metabolizer of caffeine to better understand your half-life.</p>
                     </CardContent>
                 </Card>
             </div>

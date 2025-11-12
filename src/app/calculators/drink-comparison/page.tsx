@@ -45,7 +45,7 @@ export default function DrinkComparisonPage() {
             The problem this tool solves is the lack of a simple, direct comparison. You can look up individual drink stats, but it’s hard to grasp the scale of difference. Is a cold brew really that much stronger than an espresso? How does <b>caffeine in coffee vs. tea</b> actually stack up? This tool places that information side-by-side, allowing you to build your own comparison chart from our extensive database. It transforms abstract numbers into a tangible understanding of what you're consuming.
           </p>
           <p>
-            Whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity, this comparison tool is your best friend. It’s an essential first step before using our other calculators, like the <Link href="/calculators/intake">Intake Calculator</Link> or the <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link>, as it gives you the foundational knowledge of your drink's potency.
+            Whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity, this comparison tool is your best friend. It’s an essential first step before using our other calculators, like the <Link href="/calculators/intake">Intake Calculator</Link>, as it gives you the foundational knowledge of your drink's potency.
           </p>
         </section>
 
@@ -153,18 +153,18 @@ export default function DrinkComparisonPage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle><Link href="/calculators/sleep-impact" className="hover:underline">Sleep Impact Calculator</Link></CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p>Found out your afternoon energy drink has 300 mg of caffeine? See how much of that will still be in your system at bedtime.</p>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
                         <CardTitle><Link href="/calculators/half-life" className="hover:underline">Half-Life Calculator</Link></CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Visualize how quickly (or slowly) your body will process the caffeine from the drinks you've compared.</p>
+                    </CardContent>
+                </Card>
+                 <Card>
+                    <CardHeader>
+                        <CardTitle><Link href="/calculators/caffeine-sensitivity-test" className="hover:underline">Caffeine Sensitivity Test</Link></CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>Discover if you're a fast or slow metabolizer to understand how these drinks affect you personally.</p>
                     </CardContent>
                 </Card>
             </div>

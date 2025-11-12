@@ -28,11 +28,6 @@ const calculators: { title: string; href: string; description: string }[] = [
     description: "See how long caffeine stays in your system.",
   },
   {
-    title: "Sleep Impact Calculator",
-    href: "/calculators/sleep-impact",
-    description: "Predict caffeine's effect on your sleep.",
-  },
-  {
     title: "Caffeine Withdrawal Tracker",
     href: "/calculators/caffeine-withdrawal-tracker",
     description: "Helps users taper down safely.",

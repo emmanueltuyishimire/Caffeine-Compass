@@ -92,7 +92,7 @@ export default function CaffeineWithdrawalTrackerPage() {
 
             <h3 className="text-2xl font-semibold">The Scientific Background: Adenosine Receptor Upregulation</h3>
             <p>
-                To understand why tapering works, you need to know what happens in your brain on caffeine. As we explain on our <Link href="/calculators/sleep-impact">Sleep Impact</Link> page, caffeine works by blocking adenosine receptors. Adenosine is the neurotransmitter that makes you feel sleepy. When you're a regular caffeine user, your brain tries to counteract this constant blockade by creating <i>more</i> adenosine receptors. This is a process called <b>upregulation</b>.
+                To understand why tapering works, you need to know what happens in your brain on caffeine. Caffeine works by blocking adenosine receptors. Adenosine is the neurotransmitter that makes you feel sleepy. When you're a regular caffeine user, your brain tries to counteract this constant blockade by creating <i>more</i> adenosine receptors. This is a process called <b>upregulation</b>.
             </p>
             <p>
                 Now you have a brain that is extra-sensitive to adenosine. When you suddenly quit caffeine, the blockade is gone. Adenosine floods these extra receptors, causing a massive "slow-down" signal in your brain. This sudden drop in neural activity is what leads to the classic caffeine withdrawal symptoms:
@@ -304,10 +304,10 @@ export default function CaffeineWithdrawalTrackerPage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle><Link href="/calculators/sleep-impact" className="hover:underline">Sleep Impact Calculator</Link></CardTitle>
+                        <CardTitle><Link href="/calculators/caffeine-sensitivity-test" className="hover:underline">Caffeine Sensitivity Test</Link></CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>Understand how even small amounts of caffeine can affect your sleep, a key motivator for quitting.</p>
+                        <p>Understand how your personal tolerance might affect your withdrawal symptoms.</p>
                     </CardContent>
                 </Card>
                 <Card>

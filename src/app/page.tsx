@@ -62,16 +62,16 @@ export default function Home() {
             </Card>
           </Link>
 
-           <Link href="/calculators/sleep-impact">
+           <Link href="/calculators/caffeine-sensitivity-test">
              <Card className="h-full hover:border-primary transition-all">
               <CardHeader>
                 <div className="flex items-center gap-4">
                   <BedDouble className="h-8 w-8 text-primary" />
-                  <CardTitle>Sleep Impact Calculator</CardTitle>
+                  <CardTitle>Caffeine Sensitivity Test</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Predict how much caffeine will be in your system at bedtime to protect your sleep quality.</p>
+                <p className="text-muted-foreground">Estimate your genetic tolerance to caffeine and how it impacts you.</p>
               </CardContent>
             </Card>
           </Link>

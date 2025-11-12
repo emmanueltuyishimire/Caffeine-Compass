@@ -54,7 +54,7 @@ export default function IntakeCalculatorPage() {
             Most people dramatically underestimate their daily caffeine intake. A morning coffee, a lunchtime soda, an afternoon tea, and a piece of dark chocolate can easily push you over the recommended daily limit of 400 mg without you even realizing it. This overconsumption is often the hidden culprit behind anxiety, jitteriness, digestive issues, and, most commonly, poor sleep. The problem is that caffeine’s effects are subtle but cumulative. While one cup might feel fine, the third or fourth can have consequences that linger long after you’ve finished the drink.
           </p>
           <p>
-            The truth is, caffeine affects everyone differently. Your body weight, genetics, age, and even the time of day you consume it can alter its impact. That’s why a one-size-fits-all approach to caffeine management simply doesn’t work. Most people underestimate how long caffeine lingers in their bloodstream—leading to restless nights or mid-day crashes. This calculator removes the guesswork, giving you a personalized, data-driven look at your habits. By understanding your intake, you can begin to optimize it for your specific goals, whether that’s boosting productivity, enhancing athletic performance, or simply getting a better night’s sleep. If you're curious about how long that afternoon coffee will stick around, explore our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> or the <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> to see how timing affects your rest.
+            The truth is, caffeine affects everyone differently. Your body weight, genetics, age, and even the time of day you consume it can alter its impact. That’s why a one-size-fits-all approach to caffeine management simply doesn’t work. Most people underestimate how long caffeine lingers in their bloodstream—leading to restless nights or mid-day crashes. This calculator removes the guesswork, giving you a personalized, data-driven look at your habits. By understanding your intake, you can begin to optimize it for your specific goals, whether that’s boosting productivity, enhancing athletic performance, or simply getting a better night’s sleep. If you're curious about how long that afternoon coffee will stick around, explore our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> to see how timing affects your rest.
           </p>
         </section>
 
@@ -244,7 +244,7 @@ export default function IntakeCalculatorPage() {
             </p>
             <h3 className="text-2xl font-semibold">1. Improving Your Sleep Hygiene</h3>
             <p>
-                This is perhaps the most critical use case. Poor sleep is a modern epidemic, and late-day caffeine is a primary contributor. By tracking your intake, you can identify your personal caffeine "curfew." For most people, this is 6-8 hours before bed. Use this calculator in conjunction with our <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> to determine exactly how much caffeine will be left in your system by bedtime. Seeing the number in black and white (e.g., "75 mg still active at 10 PM") is a powerful motivator to skip that afternoon coffee.
+                This is perhaps the most critical use case. Poor sleep is a modern epidemic, and late-day caffeine is a primary contributor. By tracking your intake, you can identify your personal caffeine "curfew." For most people, this is 6-8 hours before bed. Seeing the number in black and white (e.g., "75 mg still active at 10 PM") is a powerful motivator to skip that afternoon coffee.
             </p>
             <h3 className="text-2xl font-semibold">2. Managing and Reducing Tolerance</h3>
             <p>
@@ -412,7 +412,7 @@ export default function IntakeCalculatorPage() {
             <AccordionItem value="item-6">
               <AccordionTrigger>Is it okay to drink coffee right before sleep?</AccordionTrigger>
               <AccordionContent>
-                It is generally not recommended. Caffeine blocks sleep-inducing chemicals in the brain, which can delay the onset of sleep, reduce deep sleep, and disrupt your natural circadian rhythm. To see how much caffeine from an afternoon drink might still be in your system at bedtime, use our <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link>.
+                It is generally not recommended. Caffeine blocks sleep-inducing chemicals in the brain, which can delay the onset of sleep, reduce deep sleep, and disrupt your natural circadian rhythm. To see how much caffeine from an afternoon drink might still be in your system at bedtime, you should use a sleep impact calculator.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-7">
@@ -449,7 +449,7 @@ export default function IntakeCalculatorPage() {
               <AccordionTrigger>Can caffeine cause anxiety?</AccordionTrigger>
               <AccordionContent>
                 Yes, for some people, especially those who are "slow metabolizers" or have a predisposition to anxiety, caffeine can trigger or worsen feelings of jitteriness, nervousness, and a racing heart. Tracking your intake can help you find a personal threshold where you get the benefits without the anxious side effects.
-              </AccordionContent>
+              </AecordionContent>
             </AccordionItem>
             <AccordionItem value="item-13">
               <AccordionTrigger>What are the symptoms of caffeine withdrawal?</AccordionTrigger>
@@ -466,7 +466,7 @@ export default function IntakeCalculatorPage() {
             <AccordionItem value="item-15">
               <AccordionTrigger>How can I use this calculator to improve my sleep?</AccordionTrigger>
               <AccordionContent>
-                The most effective way is to establish a caffeine "curfew." Use this tool to track your daily habits for a week. Then, use the <Link href="/calculators/sleep-impact">Sleep Impact Calculator</Link> to see how much caffeine is in your system by bedtime. You can then work backwards, setting a cutoff time (e.g., 2 PM) to ensure your levels are near zero when you go to bed.
+                The most effective way is to establish a caffeine "curfew." Use this tool to track your daily habits for a week. Then, see how much caffeine is in your system by bedtime. You can then work backwards, setting a cutoff time (e.g., 2 PM) to ensure your levels are near zero when you go to bed.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -487,18 +487,18 @@ export default function IntakeCalculatorPage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle><Link href="/calculators/sleep-impact" className="hover:underline">Sleep Impact Calculator</Link></CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p>Calculate your caffeine levels at bedtime to protect your sleep quality and optimize your rest.</p>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
                          <CardTitle><Link href="/calculators/drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Compare the caffeine content of your favorite beverages side-by-side.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle><Link href="/calculators/caffeine-withdrawal-tracker" className="hover:underline">Caffeine Withdrawal Tracker</Link></CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>Create a plan to gradually reduce your caffeine intake to minimize withdrawal symptoms.</p>
                     </CardContent>
                 </Card>
             </div>
