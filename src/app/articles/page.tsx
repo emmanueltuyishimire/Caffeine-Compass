@@ -23,6 +23,12 @@ const articles = [
     description: "Understand how long caffeine affects you to reclaim your sleep.",
     icon: BookText,
   },
+  {
+    title: "How Long Before Bed to Stop Caffeine",
+    href: "/articles/how-long-before-bed-to-stop-caffeine",
+    description: "A science-backed guide to finding your personal caffeine curfew.",
+    icon: BookText,
+  },
 ];
 
 const articlesPageJsonLd = {
