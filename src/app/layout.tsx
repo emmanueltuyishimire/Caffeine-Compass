@@ -8,7 +8,11 @@ import Footer from '@/components/layout/Footer';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'Caffeine Compass',
+  metadataBase: new URL('http://localhost:3000'), // Change this to your production URL
+  title: {
+    default: 'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
+    template: '%s | Caffeine Compass',
+  },
   description:
     'Empowering people to understand, calculate, and optimize their caffeine habits for better focus, health, and sleep.',
 };
