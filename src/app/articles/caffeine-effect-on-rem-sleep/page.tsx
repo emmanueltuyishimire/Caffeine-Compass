@@ -208,7 +208,7 @@ export default function CaffeineRemSleepArticle() {
               Why should you care about REM sleep? This is the stage where your brain gets truly creative. It’s where you dream vividly, where emotional experiences from the day are processed, and where complex memories and skills are consolidated. It’s your mind’s nightly "software update." The problem is, caffeine is a potent REM suppressant. The lingering stimulant in your system can prevent your brain from entering this crucial stage, shorten its duration, and ultimately rob you of its restorative benefits. This leads to a common, frustrating paradox: you may sleep for a full eight hours, but you wake up feeling mentally foggy, emotionally frayed, and creatively drained. You’ve logged the hours, but your brain missed its most important work shift.
             </p>
             <p>
-              This article is for anyone who has ever felt "tired but wired," wondered why their memory feels less sharp despite getting enough "sleep," or struggled to solve a problem that a good night's rest was supposed to fix. We will explore the deep, neurochemical relationship between your daily caffeine habit and your nightly REM cycles. You will learn not just *what* caffeine does, but *how* it does it, and what you can do to fight back. By understanding the timing and dosage of your intake, you can transform caffeine from a sleep saboteur into a sustainable tool for peak performance. The journey begins with knowing your numbers. How much caffeine are you really consuming, and how long does it stick around? Our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> and <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> are your first steps toward reclaiming your night.
+              This article is for anyone who has ever felt "tired but wired," wondered why their memory feels less sharp despite getting enough "sleep," or struggled to solve a problem that a good night's rest was supposed to fix. We will explore the deep, neurochemical relationship between your daily caffeine habit and your nightly REM cycles. You will learn not just &lt;em&gt;what&lt;/em&gt; caffeine does, but &lt;em&gt;how&lt;/em&gt; it does it, and what you can do to fight back. By understanding the timing and dosage of your intake, you can transform caffeine from a sleep saboteur into a sustainable tool for peak performance. The journey begins with knowing your numbers. How much caffeine are you really consuming, and how long does it stick around? Our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> and <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> are your first steps toward reclaiming your night.
             </p>
           </section>
 
@@ -256,7 +256,7 @@ export default function CaffeineRemSleepArticle() {
               </li>
             </ol>
             <p>
-              By preventing the natural buildup of sleep pressure and keeping your nervous system in a more stimulated state, caffeine makes it metabolically difficult for your brain to downshift into the unique state required for REM. You might get some sleep, but your brain is prevented from completing its full, architecturally sound cycle. This is why you can feel "off" the next day—you didn't just lose sleep, you lost a specific, critical *kind* of sleep.
+              By preventing the natural buildup of sleep pressure and keeping your nervous system in a more stimulated state, caffeine makes it metabolically difficult for your brain to downshift into the unique state required for REM. You might get some sleep, but your brain is prevented from completing its full, architecturally sound cycle. This is why you can feel "off" the next day—you didn't just lose sleep, you lost a specific, critical &lt;em&gt;kind&lt;/em&gt; of sleep.
             </p>
           </section>
 
@@ -360,7 +360,7 @@ export default function CaffeineRemSleepArticle() {
               </li>
               <li>
                 <strong>Step 3: Set Your Curfew and Test Your Hypothesis</strong>
-                <p>Based on your analysis, set a new, earlier caffeine curfew. If your 3 PM coffee left 40mg in your system at bedtime, try moving your last coffee to 1 PM for a week. Continue to track your intake, but adhere to your new rule. At the end of the week, ask yourself: Do I feel more refreshed in the morning? Is my mood more stable? Do I remember my dreams more vividly? Use these subjective feelings as data. This iterative process of tracking, analyzing, and adjusting is the key to finding the optimal caffeine strategy for *your* unique biology.</p>
+                <p>Based on your analysis, set a new, earlier caffeine curfew. If your 3 PM coffee left 40mg in your system at bedtime, try moving your last coffee to 1 PM for a week. Continue to track your intake, but adhere to your new rule. At the end of the week, ask yourself: Do I feel more refreshed in the morning? Is my mood more stable? Do I remember my dreams more vividly? Use these subjective feelings as data. This iterative process of tracking, analyzing, and adjusting is the key to finding the optimal caffeine strategy for &lt;em&gt;your&lt;/em&gt; unique biology.</p>
               </li>
             </ol>
           </section>
@@ -428,7 +428,7 @@ export default function CaffeineRemSleepArticle() {
                     <TableRow>
                         <TableCell className="font-medium">Forgetting Hidden Caffeine Sources</TableCell>
                         <TableCell>Thinking only coffee matters, while ignoring caffeine in soda, tea, energy drinks, chocolate, and some medications.</TableCell>
-                        <TableCell>Use the <Link href="/calculators/intake">Intake Calculator</Link> to log *everything*. Check labels and our <Link href="/calculators/drinks-database">Drinks Database</Link>.</TableCell>
+                        <TableCell>Use the <Link href="/calculators/intake">Intake Calculator</Link> to log <strong>everything</strong>. Check labels and our <Link href="/calculators/drinks-database">Drinks Database</Link>.</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell className="font-medium">Focusing on Sleep Quantity, Not Quality</TableCell>
@@ -476,13 +476,13 @@ export default function CaffeineRemSleepArticle() {
               <AccordionItem value="faq-5">
                 <AccordionTrigger>What is the latest I can drink coffee without it affecting my REM sleep?</AccordionTrigger>
                 <AccordionContent>
-                  A good rule of thumb is to establish a 'caffeine curfew' 8-12 hours before your intended bedtime. For most people with an average metabolism, this means no caffeine after 12 PM to 2 PM. To get a personalized estimate, use our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> and select your sensitivity level.
+                  A good rule of thumb is to establish a 'caffeine curfew' 8-12 hours before your intended bedtime. For most people with an average metabolism, this means no caffeine after 12 PM to 2 PM. To get a personalized estimate, use our Caffeine Half-Life Calculator and select your sensitivity level.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-6">
                 <AccordionTrigger>Does my personal sensitivity to caffeine matter for its effect on REM sleep?</AccordionTrigger>
                 <AccordionContent>
-                  Yes, immensely. 'Slow metabolizers' (determined by genetics) clear caffeine from their system much more slowly. For them, a morning coffee can still have enough active compounds to suppress REM sleep at night. 'Fast metabolizers' have more flexibility. Our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> can help you estimate your type.
+                  Yes, immensely. 'Slow metabolizers' (determined by genetics) clear caffeine from their system much more slowly. For them, a morning coffee can still have enough active compounds to suppress REM sleep at night. 'Fast metabolizers' have more flexibility. Our Caffeine Sensitivity Test can help you estimate your type.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-7">
@@ -530,7 +530,7 @@ export default function CaffeineRemSleepArticle() {
               <AccordionItem value="faq-14">
                 <AccordionTrigger>How much caffeine is too much for healthy REM sleep?</AccordionTrigger>
                 <AccordionContent>
-                  There's no single answer, but studies show that doses as low as 100-200 mg, especially when consumed in the afternoon or evening, can suppress REM sleep. The key is to keep caffeine levels in your system as low as possible at bedtime. Our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> can help you estimate this.
+                  There's no single answer, but studies show that doses as low as 100-200 mg, especially when consumed in the afternoon or evening, can suppress REM sleep. The key is to keep caffeine levels in your system as low as possible at bedtime. Our Caffeine Half-Life Calculator can help you estimate this.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-15">
