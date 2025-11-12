@@ -15,11 +15,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/calculators/pregnancy-safe-limit'
   ];
 
+  const articleRoutes = [
+      '/articles/caffeine-effect-on-rem-sleep'
+  ];
+
   const calculatorUrls = calculatorRoutes.map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
+  }));
+
+  const articleUrls = articleRoutes.map(route => ({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
   }));
   
   return [
@@ -48,5 +59,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...calculatorUrls,
+    ...articleUrls,
   ]
 }
