@@ -7,8 +7,10 @@ import { Input } from '@/components/ui/input';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { drinks } from '@/lib/drinks';
 import type { Drink } from '@/lib/types';
-import { Coffee, Leaf, CupSoda, Zap } from 'lucide-react';
+import { Coffee, Leaf, CupSoda, Zap, SortAsc, SortDesc } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Label } from '../ui/label';
 
 const categoryIcons = {
   Coffee: <Coffee className="h-5 w-5" />,
@@ -17,20 +19,41 @@ const categoryIcons = {
   'Energy Drink': <Zap className="h-5 w-5" />,
 };
 
+type SortOption = 'caffeine_desc' | 'caffeine_asc' | 'name_asc' | 'name_desc';
+
 export default function DrinksDatabase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [sortOption, setSortOption] = useState<SortOption>('caffeine_desc');
+
 
   const filteredDrinks = useMemo(() => {
-    return drinks
+    let filtered = drinks
       .filter((drink) =>
         drink.name.toLowerCase().includes(searchTerm.toLowerCase())
       )
       .filter((drink) =>
         selectedCategory ? drink.category === selectedCategory : true
-      )
-      .sort((a, b) => b.caffeine - a.caffeine);
-  }, [searchTerm, selectedCategory]);
+      );
+
+    switch (sortOption) {
+      case 'caffeine_asc':
+        filtered.sort((a, b) => a.caffeine - b.caffeine);
+        break;
+      case 'name_asc':
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case 'name_desc':
+        filtered.sort((a, b) => b.name.localeCompare(a.name));
+        break;
+      case 'caffeine_desc':
+      default:
+        filtered.sort((a, b) => b.caffeine - a.caffeine);
+        break;
+    }
+
+    return filtered;
+  }, [searchTerm, selectedCategory, sortOption]);
 
   return (
     <Card className="max-w-4xl mx-auto">
@@ -41,31 +64,55 @@ export default function DrinksDatabase() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-col md:flex-row gap-4 mb-6">
-          <Input
-            placeholder="Search for a drink (e.g., 'Starbucks Latte')"
-            className="flex-grow"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <ToggleGroup
-            type="single"
-            value={selectedCategory || ''}
-            onValueChange={(value) => setSelectedCategory(value || null)}
-          >
-            <ToggleGroupItem value="Coffee" aria-label="Filter by Coffee">
-              <Coffee className="h-4 w-4" />
-            </ToggleGroupItem>
-            <ToggleGroupItem value="Tea" aria-label="Filter by Tea">
-              <Leaf className="h-4 w-4" />
-            </ToggleGroupItem>
-            <ToggleGroupItem value="Soda" aria-label="Filter by Soda">
-              <CupSoda className="h-4 w-4" />
-            </ToggleGroupItem>
-            <ToggleGroupItem value="Energy Drink" aria-label="Filter by Energy Drink">
-              <Zap className="h-4 w-4" />
-            </ToggleGroupItem>
-          </ToggleGroup>
+        <div className="space-y-4 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <Label htmlFor='search-drink'>Search</Label>
+                <Input
+                    id='search-drink'
+                    placeholder="e.g., 'Starbucks Latte'"
+                    className="flex-grow"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </div>
+              <div>
+                <Label htmlFor='sort-by'>Sort by</Label>
+                 <Select value={sortOption} onValueChange={(value) => setSortOption(value as SortOption)}>
+                  <SelectTrigger id='sort-by'>
+                    <SelectValue placeholder="Sort by..." />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="caffeine_desc">Caffeine: High to Low</SelectItem>
+                    <SelectItem value="caffeine_asc">Caffeine: Low to High</SelectItem>
+                    <SelectItem value="name_asc">Name: A-Z</SelectItem>
+                    <SelectItem value="name_desc">Name: Z-A</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+          </div>
+          <div>
+            <Label>Filter by Category</Label>
+             <ToggleGroup
+                type="single"
+                value={selectedCategory || ''}
+                onValueChange={(value) => setSelectedCategory(value || null)}
+                className="justify-start"
+            >
+                <ToggleGroupItem value="Coffee" aria-label="Filter by Coffee">
+                <Coffee className="h-4 w-4 mr-2" /> Coffee
+                </ToggleGroupItem>
+                <ToggleGroupItem value="Tea" aria-label="Filter by Tea">
+                <Leaf className="h-4 w-4 mr-2" /> Tea
+                </ToggleGroupItem>
+                <ToggleGroupItem value="Soda" aria-label="Filter by Soda">
+                <CupSoda className="h-4 w-4 mr-2" /> Soda
+                </ToggleGroupItem>
+                <ToggleGroupItem value="Energy Drink" aria-label="Filter by Energy Drink">
+                <Zap className="h-4 w-4 mr-2" /> Energy
+                </ToggleGroupItem>
+            </ToggleGroup>
+          </div>
         </div>
 
         <ScrollArea className="h-[400px] border rounded-md">
@@ -95,7 +142,7 @@ export default function DrinksDatabase() {
             ) : (
               <div className="text-center text-muted-foreground py-10">
                 <p>No drinks found.</p>
-                <p className="text-sm">Try broadening your search.</p>
+                <p className="text-sm">Try broadening your search or changing filters.</p>
               </div>
             )}
           </div>
@@ -104,4 +151,3 @@ export default function DrinksDatabase() {
     </Card>
   );
 }
-
