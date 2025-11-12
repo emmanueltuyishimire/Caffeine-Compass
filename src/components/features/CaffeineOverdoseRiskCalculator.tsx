@@ -43,6 +43,9 @@ export default function CaffeineOverdoseRiskCalculator() {
   }, [weight, unit]);
 
   const calculations = useMemo(() => {
+    if (isNaN(weightInKg) || weightInKg <= 0) {
+      return { noticeable: 0, mild: 0, severe: 0 };
+    }
     return {
       noticeable: Math.round(weightInKg * riskLevels.noticeable.mgPerKg),
       mild: Math.round(weightInKg * riskLevels.mild.mgPerKg),

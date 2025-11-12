@@ -97,7 +97,7 @@ export default function DrinksDatabase() {
                 type="single"
                 value={selectedCategory || ''}
                 onValueChange={(value) => setSelectedCategory(value || null)}
-                className="justify-start mt-1"
+                className="justify-start mt-1 flex-wrap"
                 aria-labelledby="filter-category-label"
             >
                 <ToggleGroupItem value="Coffee" aria-label="Filter by Coffee">
