@@ -9,10 +9,10 @@ import JsonLd from '@/components/JsonLd';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://caffeine-calculation-site.com'),
+  metadataBase: new URL('https://caffeine-compass.com'),
   title: {
-    default: 'Caffeine Calculation Site — Optimize Your Caffeine for Better Energy & Sleep',
-    template: '%s | Caffeine Calculation Site',
+    default: 'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
+    template: '%s | Caffeine Compass',
   },
   description:
     'Empowering people to understand, calculate, and optimize their caffeine habits for better focus, health, and sleep.',
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Caffeine Calculation Site",
-  "url": "https://caffeine-calculation-site.com/",
+  "name": "Caffeine Compass",
+  "url": "https://caffeine-compass.com/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://caffeine-calculation-site.com/support?q={search_term_string}",
+    "target": "https://caffeine-compass.com/support?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 };

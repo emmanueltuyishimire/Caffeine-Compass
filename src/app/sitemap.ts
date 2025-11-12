@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://caffeine-calculation-site.com';
+  const baseUrl = 'https://caffeine-compass.com';
 
   const calculatorRoutes = [
     '/calculators/intake',
@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
      {
-      url: `${baseUrl}/support`,
+      url: `${baseUrl}/ai-assistant`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,

@@ -9,16 +9,16 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-    title: 'Caffeine Calculation Site — Optimize Your Caffeine for Better Energy & Sleep',
+    title: 'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
     description: 'Harness the power of caffeine with our suite of science-backed calculators. Track your intake, understand your metabolism, and optimize your timing for peak performance and better health.',
 };
 
 const homePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Caffeine Calculation Site Homepage",
+  "name": "Caffeine Compass Homepage",
   "description": "Harness the power of caffeine with our suite of science-backed calculators. Track your intake, understand your metabolism, and optimize your timing for peak performance and better health.",
-  "url": "https://caffeine-calculation-site.com/",
+  "url": "https://caffeine-compass.com/",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -26,7 +26,7 @@ const homePageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-calculation-site.com/"
+        "item": "https://caffeine-compass.com/"
       }
     ]
   }
@@ -101,7 +101,7 @@ export default function Home() {
             <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
               Harness the power of caffeine without compromising your sleep or well-being. Our science-backed tools provide personalized insights to help you optimize your energy, focus, and health.
             </p>
-            <Link href="#calculators">
+            <Link href="/calculators">
               <Button size="lg">Explore Our Calculators</Button>
             </Link>
           </div>
@@ -196,7 +196,7 @@ export default function Home() {
               </div>
               <div className="space-y-8">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                  Why Caffeine Calculation Site?
+                  Why Caffeine Compass?
                 </h2>
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
