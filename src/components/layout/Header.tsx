@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -40,6 +41,11 @@ const calculators: { title: string; href: string; description: string }[] = [
     title: "Caffeine Sensitivity Test",
     href: "/calculators/caffeine-sensitivity-test",
     description: "Estimate your genetic tolerance to caffeine.",
+  },
+  {
+    title: "Drink Comparison Tool",
+    href: "/calculators/drink-comparison",
+    description: "Compare caffeine in coffee, tea, and energy drinks.",
   }
 ]
 

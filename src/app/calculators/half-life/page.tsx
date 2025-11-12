@@ -1,4 +1,5 @@
 
+
 import HalfLifeEstimator from '@/components/features/HalfLifeEstimator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -71,7 +72,7 @@ export default function HalfLifeCalculatorPage() {
                 To generate your personalized chart, the calculator needs a few key pieces of information:
             </p>
             <ul>
-                <li><b>Caffeine Consumed (mg):</b> This is the starting point of your calculation. The more caffeine you consume, the longer it will take for your body to clear it. An average 8 oz (240ml) cup of coffee has about 95 mg, but this can vary. For precision, you can find specific amounts using our <Link href="/calculators/drink-database">Drink Database</Link>.</li>
+                <li><b>Caffeine Consumed (mg):</b> This is the starting point of your calculation. The more caffeine you consume, the longer it will take for your body to clear it. An average 8 oz (240ml) cup of coffee has about 95 mg, but this can vary. For precision, you can find specific amounts using our <Link href="/calculators/drink-comparison">Drink Comparison Tool</Link>.</li>
                 <li><b>Metabolism Speed (Half-Life):</b> This is the most crucial variable. It represents the time (in hours) it takes for your body to reduce the caffeine concentration in your blood by 50%. We provide presets for fast, average, and slow metabolizers, which correspond to different half-life durations.</li>
             </ul>
              <p>
@@ -109,7 +110,7 @@ export default function HalfLifeCalculatorPage() {
             </p>
              <ul>
                 <li><b>Medications:</b> Certain drugs, including some antidepressants and antibiotics, can inhibit the CYP1A2 enzyme, effectively turning a fast metabolizer into a slow one.</li>
-                <li><b>Pregnancy:</b> During the third trimester, hormonal changes can slow caffeine metabolism dramatically, extending the half-life to as long as 15 hours. This is why our <Link href="/calculators/pregnancy-safe-limit">Pregnancy Safe Limit Calculator</Link> is a crucial tool for expectant mothers.</li>
+                <li><b>Pregnancy:</b> During the third trimester, hormonal changes can slow caffeine metabolism dramatically, extending the half-life to as long as 15 hours.</li>
                 <li><b>Liver Health:</b> Since the liver does the heavy lifting, any impairment to liver function can significantly slow down caffeine clearance.</li>
                 <li><b>Smoking:</b> Chemicals in tobacco smoke can induce (speed up) the CYP1A2 enzyme, causing smokers to metabolize caffeine up to 50% faster than non-smokers. This is why smokers often consume more coffee.</li>
             </ul>
@@ -309,42 +310,6 @@ export default function HalfLifeCalculatorPage() {
 
         <Separator />
         
-        <section id="deep-dive">
-            <h2 className="text-3xl font-bold">The Deep Dive: Caffeine Pharmacokinetics</h2>
-            <p>
-                Pharmacokinetics is the study of how a substance moves into, through, and out of the body. For caffeine, this journey is a fascinating tale of absorption, distribution, metabolism, and elimination. Understanding this process at a deeper level reveals why timing is everything.
-            </p>
-            <h3 className="text-2xl font-semibold">Absorption and Peak Plasma Concentration</h3>
-            <p>
-                When you drink a coffee, caffeine is rapidly and almost completely absorbed from your gastrointestinal tract. It enters the bloodstream, and you begin to feel its effects within 15 to 30 minutes. The concentration of caffeine in your blood plasma typically reaches its peak between 45 and 90 minutes after ingestion. This peak is the point of maximum alertness — the "kick" you feel. The speed of this absorption can be slowed by the presence of food in your stomach, which is why coffee can feel more intense on an empty stomach.
-            </p>
-            <h3 className="text-2xl font-semibold">Distribution: Reaching the Brain</h3>
-            <p>
-                Caffeine is both water-soluble and fat-soluble, a unique property that allows it to travel throughout your body and easily cross the formidable blood-brain barrier. Once in the brain, it begins its primary work: blocking adenosine receptors. Adenosine is a neurotransmitter that promotes sleepiness; by blocking it, caffeine artificially boosts wakefulness.
-            </p>
-            <h3 className="text-2xl font-semibold">Metabolism: The Liver's Role and Genetic Variation</h3>
-            <p>
-                As we've discussed, the liver is where caffeine is broken down. The CYP1A2 enzyme transforms caffeine into three primary metabolites:
-            </p>
-             <ul>
-                <li><b>Paraxanthine (84%):</b> Increases lipolysis, the breakdown of fats for fuel.</li>
-                <li><b>Theobromine (12%):</b> Dilates blood vessels and has a mild diuretic effect.</li>
-                <li><b>Theophylline (4%):</b> Relaxes smooth muscles in the airways, which is why it's used in some asthma medications.</li>
-            </ul>
-            <p>
-                These metabolites have their own mild effects but are much less potent than caffeine itself. The speed at which your liver performs this conversion is the rate-limiting step in caffeine clearance and is the basis for your personal half-life. Genetic tests can now identify your <i>CYP1A2</i> genotype, but you can get a very good estimate of your status by using this calculator and paying close attention to your body's response. Are you still feeling the effects of a noon coffee at 8 PM? You are almost certainly a slow metabolizer.
-            </p>
-            <h3 className="text-2xl font-semibold">Elimination and the Concept of Clearance Rate</h3>
-            <p>
-                Once metabolized, the byproducts are filtered by the kidneys and excreted in urine. The "half-life" is a convenient proxy for a more technical term: "clearance rate." This rate can be influenced by many factors. For example, the oral contraceptives can slow clearance, extending caffeine's half-life. Conversely, heavy smokers clear caffeine much faster because the hydrocarbons in smoke accelerate the activity of the CYP1A2 enzyme.
-            </p>
-            <p>
-                This calculator uses the half-life model because it provides an intuitive, visual way to understand this complex process of elimination. By seeing the curve, you are seeing a direct representation of your body's metabolic machinery at work, clearing a foreign substance from your system. This empowers you to move beyond simply asking "how much caffeine is in this drink?" to the more important question: "how will my body manage this dose over the next 10 hours?"
-            </p>
-        </section>
-
-        <Separator />
-        
         <section id="terminologies">
             <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
             <ul className="space-y-4">
@@ -447,7 +412,7 @@ export default function HalfLifeCalculatorPage() {
             <AccordionItem value="item-11">
               <AccordionTrigger>How can I find out the caffeine content of my drink?</AccordionTrigger>
               <AccordionContent>
-                Our <Link href="/calculators/drink-database">Caffeine in Drinks Database</Link> is a great resource. You can search for thousands of common beverages to find their specific caffeine content in milligrams. This is much more accurate than relying on generic estimates.
+                Our <Link href="/calculators/drink-comparison">Drink Comparison Tool</Link> is a great resource. You can search for thousands of common beverages to find their specific caffeine content in milligrams. This is much more accurate than relying on generic estimates.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-12">
@@ -500,10 +465,10 @@ export default function HalfLifeCalculatorPage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle>Drink Comparison Tool</CardTitle>
+                        <CardTitle><Link href="/calculators/drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>Compare the caffeine content of your favorite beverages side-by-side. (Coming soon)</p>
+                        <p>Compare the caffeine content of your favorite beverages side-by-side.</p>
                     </CardContent>
                 </Card>
             </div>

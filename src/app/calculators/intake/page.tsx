@@ -1,3 +1,4 @@
+
 import IntakeCalculator from '@/components/features/IntakeCalculator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -339,36 +340,6 @@ export default function IntakeCalculatorPage() {
 
         <Separator />
         
-        <section id="deep-dive">
-            <h2 className="text-3xl font-bold">The Deep Dive: Caffeine and Your Physiology</h2>
-            <p>
-                To truly master your caffeine intake, it helps to understand what’s happening inside your body on a molecular level. Caffeine is a powerful psychoactive substance, and its effects are a direct result of its interaction with your brain chemistry.
-            </p>
-            <h3 className="text-2xl font-semibold">The Adenosine Blockade: Caffeine’s Primary Mechanism</h3>
-            <p>
-                Throughout the day, as your brain works, it produces a byproduct called <b>adenosine</b>. This molecule binds to specific adenosine receptors in your brain, which in turn slows down neural activity and makes you feel tired. This is a natural process called "sleep pressure"—the longer you’re awake, the more adenosine builds up, and the sleepier you get.
-            </p>
-            <p>
-                Caffeine’s chemical structure is remarkably similar to adenosine. So similar, in fact, that it can fit perfectly into the adenosine receptors. When you drink a coffee, caffeine molecules enter your bloodstream, cross the blood-brain barrier, and dock in these receptors, effectively blocking adenosine from binding. With the "sleepy" molecule blocked, your brain’s natural stimulants, like dopamine and norepinephrine, can flow more freely. This leads to increased alertness, improved mood, and enhanced cognitive function. However, the adenosine doesn’t disappear. It continues to build up in the background. When the caffeine finally wears off, the accumulated adenosine floods the receptors, leading to the infamous "caffeine crash."
-            </p>
-            <h3 className="text-2xl font-semibold">The Role of Cortisol and Dopamine</h3>
-            <p>
-                Caffeine also stimulates the adrenal glands to produce more cortisol and adrenaline, the body's "fight or flight" hormones. This is why you feel a jolt of energy and heightened focus shortly after consumption. In the short term, this is great for performance. However, chronic overconsumption can lead to dysregulated cortisol patterns, contributing to feelings of stress and burnout.
-            </p>
-            <p>
-                Simultaneously, by blocking adenosine, caffeine allows for an increase in dopamine activity. Dopamine is a neurotransmitter associated with pleasure, motivation, and reward. This is part of what makes caffeine feel so good and why it can become habit-forming. The brain begins to associate caffeine with a state of heightened reward and motivation, reinforcing the desire to consume it again.
-            </p>
-            <h3 className="text-2xl font-semibold">Natural vs. Synthetic Caffeine: Is There a Difference?</h3>
-            <p>
-                Chemically, natural caffeine (from coffee beans or tea leaves) and synthetic caffeine (produced in a lab and added to energy drinks and sodas) are identical. Your body cannot tell the difference between them. However, the <i>source</i> of the caffeine matters. Natural sources like coffee and tea contain other compounds—such as antioxidants and polyphenols—that can modulate caffeine’s effects and offer other health benefits. For example, the L-theanine in tea works synergistically with caffeine to promote a smoother, less jittery focus. Synthetic caffeine in sodas and energy drinks is often paired with large amounts of sugar or artificial sweeteners, which can have their own negative health consequences.
-            </p>
-            <p>
-                Understanding these dynamics empowers you to use caffeine as a performance enhancer—not a crutch. By tracking your intake, you can provide your body with the optimal dose at the optimal time, reaping all the benefits of alertness and focus while minimizing the downsides of anxiety, tolerance, and sleep disruption.
-            </p>
-        </section>
-
-        <Separator />
-
         <section id="terminologies">
             <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
             <ul className="space-y-4">
@@ -435,7 +406,7 @@ export default function IntakeCalculatorPage() {
             <AccordionItem value="item-5">
               <AccordionTrigger>How can I tell how much caffeine is in my drink?</AccordionTrigger>
               <AccordionContent>
-                It can be tricky, as amounts vary widely. Our calculator's database provides verified averages for many common beverages. For a quick comparison of different drinks, check out our Drink Comparison Tool. If a product has a label, it will often list the caffeine content in milligrams (mg).
+                It can be tricky, as amounts vary widely. Our calculator's database provides verified averages for many common beverages. For a quick comparison of different drinks, check out our <Link href="/calculators/drink-comparison">Drink Comparison Tool</Link>. If a product has a label, it will often list the caffeine content in milligrams (mg).
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-6">
@@ -524,10 +495,10 @@ export default function IntakeCalculatorPage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle>Drink Comparison Tool</CardTitle>
+                         <CardTitle><Link href="/calculators/drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>Compare the caffeine content of your favorite beverages side-by-side. (Coming soon)</p>
+                        <p>Compare the caffeine content of your favorite beverages side-by-side.</p>
                     </CardContent>
                 </Card>
             </div>

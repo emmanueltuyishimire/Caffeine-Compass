@@ -1,4 +1,5 @@
 
+
 import SleepImpactPredictor from '@/components/features/SleepImpactPredictor';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -71,7 +72,7 @@ export default function SleepImpactCalculatorPage() {
                 To predict your sleep impact, the calculator needs three simple but critical pieces of information:
             </p>
             <ul>
-                <li><b>Caffeine Consumed (mg):</b> The initial dose. The more caffeine you consume, the more will be left at bedtime. Our <Link href="/calculators/drink-database">Caffeine in Drinks Database</Link> can help you find the exact amount in your favorite beverage.</li>
+                <li><b>Caffeine Consumed (mg):</b> The initial dose. The more caffeine you consume, the more will be left at bedtime. Our <Link href="/calculators/drink-comparison">Drink Comparison Tool</Link> can help you find the exact amount in your favorite beverage.</li>
                 <li><b>Time of Consumption:</b> This is the starting line for the countdown. Even a 30-minute difference in intake time can significantly change the amount of caffeine in your system by the end of the day.</li>
                 <li><b>Target Bedtime:</b> This is the finish line. The calculator measures the time elapsed between consumption and your intended bedtime to determine the decay period.</li>
             </ul>
@@ -167,7 +168,7 @@ export default function SleepImpactCalculatorPage() {
             <p>Find out your sleep impact score in just a few clicks. Follow these simple steps:</p>
             <ol className="list-decimal pl-5 space-y-2">
                 <li>
-                    <b>Enter Caffeine Amount:</b> In the "Caffeine Consumed (mg)" field, input the total milligrams of caffeine for the drink in question. A standard coffee is ~95 mg, and a strong energy drink can be 300 mg. Use our <Link href="/calculators/drink-database">database</Link> if unsure.
+                    <b>Enter Caffeine Amount:</b> In the "Caffeine Consumed (mg)" field, input the total milligrams of caffeine for the drink in question. A standard coffee is ~95 mg, and a strong energy drink can be 300 mg. Use our <Link href="/calculators/drink-comparison">comparison tool</Link> if unsure.
                 </li>
                 <li>
                     <b>Set Consumption Time:</b> In the "Time of Consumption" field, enter the time you drank your caffeinated beverage using a 24-hour format (e.g., 15:00 for 3 PM).
@@ -323,44 +324,6 @@ export default function SleepImpactCalculatorPage() {
 
         <Separator />
         
-        <section id="deep-dive">
-            <h2 className="text-3xl font-bold">The Deep Dive: Caffeine's War on Your Sleep Architecture</h2>
-            <p>
-                To truly appreciate the importance of caffeine timing, we need to look beyond simply falling asleep. The real damage from late-day caffeine occurs to your <b>sleep architecture</b> — the cyclical pattern of different sleep stages you progress through during the night. A healthy night’s sleep is not a monolithic state of unconsciousness; it’s a carefully choreographed ballet of light sleep, deep sleep, and REM sleep.
-            </p>
-            <h3 className="text-2xl font-semibold">The Stages of Sleep</h3>
-            <p>
-                A typical sleep cycle lasts about 90 minutes and is repeated several times a night.
-            </p>
-             <ul>
-                <li><b>Light Sleep (Stages 1 & 2):</b> This is the gateway to sleep, where your body and brain begin to slow down. You spend about 50% of your night here.</li>
-                <li><b>Deep Sleep (Stage 3, Slow-Wave Sleep):</b> This is the most physically restorative stage. Your body repairs tissues, your immune system strengthens, and growth hormone is released. You spend about 20-25% of your night in deep sleep, mostly in the first half.</li>
-                <li><b>REM (Rapid Eye Movement) Sleep:</b> This is the stage associated with dreaming, memory consolidation, and emotional processing. Your brain is highly active. You also spend about 20-25% of your night here, mostly in the second half.</li>
-            </ul>
-            <h3 className="text-2xl font-semibold">How Caffeine Wrecks the Architecture</h3>
-            <p>
-                Caffeine, by blocking adenosine, wages a multi-front war on this delicate architecture.
-            </p>
-             <p>
-                <b>1. It Devastates Deep Sleep:</b> Numerous studies have shown that caffeine, even when consumed 6 hours before bedtime, can significantly reduce the amount of deep sleep you get. One influential study found that 400 mg of caffeine taken 6 hours before bed reduced total sleep time by an hour and had a major impact on sleep quality. Because most of your deep sleep occurs in the first third of the night, any caffeine still in your system during this period is particularly damaging. You might sleep for 8 hours, but you wake up feeling physically unrested because your body didn't get the repair time it needed.
-            </p>
-             <p>
-                <b>2. It Delays Your Body Clock (Circadian Rhythm):</b> Caffeine can also delay the nightly release of melatonin, the primary hormone that regulates your sleep-wake cycle. Research has shown that a dose of caffeine equivalent to a double espresso taken 3 hours before bed can shift your circadian clock by about 40 minutes. This makes it harder to fall asleep at your normal time and, consequently, harder to wake up in the morning. It's like giving yourself a small dose of jet lag every single day.
-            </p>
-            <p>
-                <b>3. It Increases "Sleep Fragmentation":</b> Even if you don't fully wake up, caffeine can cause more "micro-arousals" throughout the night. This fragments your sleep, preventing you from seamlessly transitioning between sleep cycles. The result is a choppy, non-consolidated night of sleep that leaves you feeling groggy and fatigued, even if you were in bed for a full 8 hours.
-            </p>
-            <h3 className="text-2xl font-semibold">The Unseen Cost</h3>
-            <p>
-                The insidious nature of caffeine's impact is that you might not connect your grogginess to your afternoon coffee. You might blame stress, age, or just "a bad night's sleep." You don't consciously feel the reduction in deep sleep; you only feel the consequences the next day: fatigue, poor focus, and a craving for more caffeine to overcome the deficit. This creates a dependency cycle where the "solution" (more caffeine) is actually perpetuating the problem.
-            </p>
-            <p>
-                This is why understanding your bedtime caffeine level is so crucial. It’s not just about whether you can fall asleep; it’s about the quality and structure of the sleep you get. Using this calculator to ensure your caffeine level is minimal by bedtime is one of ahe most effective steps you can take to protect your nightly brain and body restoration process. It's about trading a fleeting afternoon buzz for the profound, long-lasting benefits of a truly restorative night's sleep.
-            </p>
-        </section>
-
-        <Separator />
-        
         <section id="terminologies">
             <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
             <ul className="space-y-4">
@@ -433,7 +396,7 @@ export default function SleepImpactCalculatorPage() {
             <AccordionItem value="item-6">
               <AccordionTrigger>Can I use this for energy drinks or tea?</AccordionTrigger>
               <AccordionContent>
-                Absolutely. The calculator works for any caffeinated beverage. You just need to know the caffeine content in milligrams. Our <Link href="/calculators/drink-database">Caffeine in Drinks Database</Link> can help you find the caffeine amount for thousands of different drinks.
+                Absolutely. The calculator works for any caffeinated beverage. You just need to know the caffeine content in milligrams. Our <Link href="/calculators/drink-comparison">Drink Comparison Tool</Link> can help you find the caffeine amount for thousands of different drinks.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-7">
