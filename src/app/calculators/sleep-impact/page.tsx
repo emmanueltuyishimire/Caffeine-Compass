@@ -355,8 +355,44 @@ export default function SleepImpactCalculatorPage() {
                 The insidious nature of caffeine's impact is that you might not connect your grogginess to your afternoon coffee. You might blame stress, age, or just "a bad night's sleep." You don't consciously feel the reduction in deep sleep; you only feel the consequences the next day: fatigue, poor focus, and a craving for more caffeine to overcome the deficit. This creates a dependency cycle where the "solution" (more caffeine) is actually perpetuating the problem.
             </p>
             <p>
-                This is why understanding your bedtime caffeine level is so crucial. It’s not just about whether you can fall asleep; it’s about the quality and structure of the sleep you get. Using this calculator to ensure your caffeine level is minimal by bedtime is one of the most effective steps you can take to protect your nightly brain and body restoration process. It's about trading a fleeting afternoon buzz for the profound, long-lasting benefits of a truly restorative night's sleep.
+                This is why understanding your bedtime caffeine level is so crucial. It’s not just about whether you can fall asleep; it’s about the quality and structure of the sleep you get. Using this calculator to ensure your caffeine level is minimal by bedtime is one of ahe most effective steps you can take to protect your nightly brain and body restoration process. It's about trading a fleeting afternoon buzz for the profound, long-lasting benefits of a truly restorative night's sleep.
             </p>
+        </section>
+
+        <Separator />
+        
+        <section id="terminologies">
+            <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
+            <ul className="space-y-4">
+                <li>
+                    <h3 className="text-xl font-semibold">Sleep Latency</h3>
+                    <p>Also known as sleep onset latency (SOL), this is the amount of time it takes to fall asleep after the lights have been turned off. Caffeine can significantly increase sleep latency.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Sleep Architecture</h3>
+                    <p>The structural organization of sleep, characterized by the cyclical pattern of different sleep stages (e.g., Light, Deep, REM). Caffeine disrupts this architecture, particularly by reducing deep sleep.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Deep Sleep (Slow-Wave Sleep)</h3>
+                    <p>The most restorative stage of sleep, crucial for physical recovery, immune function, and memory consolidation. Caffeine is a potent suppressor of deep sleep.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">REM Sleep</h3>
+                    <p>The stage of sleep associated with vivid dreaming, emotional regulation, and memory processing. Caffeine can also reduce the amount of REM sleep.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Adenosine & Sleep Pressure</h3>
+                    <p>Adenosine is a neurotransmitter that builds up during wakefulness, creating "sleep pressure" that makes you feel tired. Caffeine works by blocking adenosine receptors, artificially reducing this pressure.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Circadian Rhythm</h3>
+                    <p>The body's internal 24-hour clock that regulates the sleep-wake cycle and other physiological processes. Caffeine consumed in the afternoon or evening can delay this rhythm, making it harder to fall asleep.</p>
+                </li>
+                 <li>
+                    <h3 className="text-xl font-semibold">Caffeine Curfew</h3>
+                    <p>A personal cutoff time for caffeine consumption to prevent it from interfering with sleep. A common recommendation is 8-10 hours before bedtime.</p>
+                </li>
+            </ul>
         </section>
 
         <Separator />

@@ -13,13 +13,31 @@ const CAFFEINE_HALF_LIFE_HOURS = 5;
 
 type RiskLevel = 'Low' | 'Medium' | 'High';
 
+const riskConfig: Record<RiskLevel, { variant: 'success' | 'secondary' | 'destructive', icon: React.ElementType, text: string }> = {
+    Low: {
+      variant: 'success', 
+      icon: CheckCircle,
+      text: 'Sleep disruption risk is low. Enjoy your rest!',
+    },
+    Medium: {
+      variant: 'secondary',
+      icon: AlertCircle,
+      text: 'Potential for light sleep disruption. You might take longer to fall asleep.',
+    },
+    High: {
+      variant: 'destructive',
+      icon: AlertCircle,
+      text: 'High risk of sleep disruption. May reduce deep sleep and overall sleep quality.',
+    },
+};
+
 export default function SleepImpactPredictor() {
   const [caffeineAmount, setCaffeineAmount] = useState(100);
   const [consumptionTime, setConsumptionTime] = useState('14:00');
   const [bedtime, setBedtime] = useState('22:00');
   const [result, setResult] = useState<{ remaining: number; risk: RiskLevel } | null>(null);
 
-  const timeToHours = (time: string) => {
+  const timeToHours = (time: string): number => {
     const [hours, minutes] = time.split(':').map(Number);
     return hours + minutes / 60;
   };
@@ -51,24 +69,6 @@ export default function SleepImpactPredictor() {
     setResult({ remaining: Math.round(remainingCaffeine), risk });
   };
   
-  const riskConfig: Record<RiskLevel, { variant: 'success' | 'secondary' | 'destructive', icon: React.ElementType, text: string }> = {
-      Low: {
-        variant: 'success', 
-        icon: CheckCircle,
-        text: 'Sleep disruption risk is low. Enjoy your rest!',
-      },
-      Medium: {
-        variant: 'secondary',
-        icon: AlertCircle,
-        text: 'Potential for light sleep disruption. You might take longer to fall asleep.',
-      },
-      High: {
-        variant: 'destructive',
-        icon: AlertCircle,
-        text: 'High risk of sleep disruption. May reduce deep sleep and overall sleep quality.',
-      },
-  };
-
   return (
     <Card className="max-w-4xl mx-auto">
       <CardHeader>

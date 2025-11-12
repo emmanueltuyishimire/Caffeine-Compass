@@ -369,6 +369,42 @@ export default function IntakeCalculatorPage() {
 
         <Separator />
 
+        <section id="terminologies">
+            <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
+            <ul className="space-y-4">
+                <li>
+                    <h3 className="text-xl font-semibold">Caffeine</h3>
+                    <p>A natural central nervous system stimulant of the methylxanthine class. It is the world's most widely consumed psychoactive drug. Unlike many other psychoactive substances, it is legal and unregulated in nearly all parts of the world.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Milligram (mg)</h3>
+                    <p>A unit of mass in the metric system equal to one thousandth of a gram. It is the standard unit for measuring caffeine content.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Recommended Daily Limit</h3>
+                    <p>The maximum amount of caffeine considered safe for most healthy adults. The FDA and other health organizations cite 400 mg per day as an amount not generally associated with dangerous, negative effects.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Caffeine Tolerance</h3>
+                    <p>A process in which the body becomes less responsive to the effects of caffeine with repeated use. This often leads to consuming increasing amounts of caffeine to achieve the same stimulating effect.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Adenosine</h3>
+                    <p>A neurotransmitter that promotes sleep and suppresses arousal. Caffeine works primarily by blocking adenosine receptors in the brain, which prevents the onset of drowsiness.</p>
+                </li>
+                 <li>
+                    <h3 className="text-xl font-semibold">CYP1A2 Enzyme</h3>
+                    <p>The primary enzyme in the liver responsible for metabolizing approximately 95% of caffeine in the body. The genetic variation in the CYP1A2 gene determines whether a person is a "fast" or "slow" metabolizer of caffeine.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Half-Life</h3>
+                    <p>The time it takes for the concentration of a substance (in this case, caffeine) in the body to be reduced by half. The average half-life of caffeine in healthy adults is about 3-5 hours.</p>
+                </li>
+            </ul>
+        </section>
+        
+        <Separator />
+
         <section id="faq">
           <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="w-full">

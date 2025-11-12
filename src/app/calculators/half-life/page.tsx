@@ -344,6 +344,42 @@ export default function HalfLifeCalculatorPage() {
         </section>
 
         <Separator />
+        
+        <section id="terminologies">
+            <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
+            <ul className="space-y-4">
+                <li>
+                    <h3 className="text-xl font-semibold">Half-Life</h3>
+                    <p>The time it takes for the concentration of a substance in the body to be reduced by half. For caffeine, this averages 3-5 hours but can vary significantly based on genetics and other factors.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Quarter-Life</h3>
+                    <p>The time it takes for the concentration of a substance to be reduced to 25% of its initial amount. This is equivalent to two half-lives and is often a more practical metric for sleep planning (e.g., 8-10 hours for caffeine).</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Pharmacokinetics</h3>
+                    <p>The branch of pharmacology concerned with the movement of drugs within the body. It describes the absorption, distribution, metabolism, and excretion (ADME) of a substance like caffeine.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Metabolism</h3>
+                    <p>The chemical processes that occur within a living organism in order to maintain life. In the context of caffeine, it refers to the breakdown of the caffeine molecule by enzymes in the liver.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">CYP1A2 Enzyme</h3>
+                    <p>The primary enzyme in the liver responsible for metabolizing approximately 95% of caffeine. Genetic variations in the gene for this enzyme are the main reason people are "fast" or "slow" metabolizers.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">Metabolites</h3>
+                    <p>The intermediate or end products of metabolism. Caffeine is broken down into three main metabolites: paraxanthine, theobromine, and theophylline, each with its own mild effects.</p>
+                </li>
+                <li>
+                    <h3 className="text-xl font-semibold">First-Order Elimination</h3>
+                    <p>A principle of pharmacokinetics stating that a constant <i>fraction</i> of a drug is eliminated per unit of time. This is why caffeine follows an exponential decay curve, not a linear one.</p>
+                </li>
+            </ul>
+        </section>
+
+        <Separator />
 
         <section id="faq">
           <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
