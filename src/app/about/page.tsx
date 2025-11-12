@@ -16,13 +16,13 @@ const team = [
     {
         name: 'Dr. Evelyn Reed',
         role: 'Founder & Lead Scientist',
-        bio: 'With a Ph.D. in Chronobiology, Dr. Reed has dedicated her career to studying the effects of stimulants on human sleep cycles. She founded Caffeine Compass to translate complex science into a simple, actionable tool for everyone.',
+        bio: 'With a Ph.D. in Chronobiology, Dr. Reed is a leading expert on how stimulants affect human sleep cycles. She founded Caffeine Compass to translate complex science into a simple, actionable tool that empowers everyone to master their biology, not be a victim of it.',
         imageId: 'team-evelyn'
     },
     {
         name: 'Alex Chen',
         role: 'Co-Founder & Lead Developer',
-        bio: 'A former coffee-fueled startup developer, Alex experienced firsthand the highs and lows of caffeine dependency. He teamed up with Dr. Reed to build a tool that promotes mindful productivity and well-being.',
+        bio: 'As a developer who survived on caffeine-fueled all-nighters, Alex experienced firsthand the burnout that comes from a mismanaged energy cycle. He partnered with Dr. Reed to build the tool he wishes he had, one that fosters sustainable productivity and genuine well-being.',
         imageId: 'team-alex'
     },
 ];
@@ -61,9 +61,9 @@ export default function AboutPage() {
             <JsonLd data={aboutPageJsonLd} />
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Navigating Your Day with Precision</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Master Your Energy. Don't Let It Master You.</h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Caffeine Compass was born from a simple idea: what if we could master our caffeine intake instead of letting it master us?
+                        Caffeine is the world's favorite drug, but most of us use it blindly. Caffeine Compass was born from a powerful idea: what if we could use science to harness its benefits without the costs?
                     </p>
                 </div>
 
@@ -86,9 +86,9 @@ export default function AboutPage() {
                                 <Target className="h-6 w-6 text-primary" aria-label="Our Mission Icon" />
                             </div>
                             <div>
-                                <h2 className="text-2xl font-bold font-headline mb-2">Our Mission</h2>
+                                <h2 className="text-2xl font-bold font-headline mb-2">Our Mission: Precision Wellness</h2>
                                 <p className="text-muted-foreground">
-                                    To empower people to understand, calculate, and optimize their caffeine habits for better focus, health, and sleep. We believe that with the right knowledge, caffeine can be a powerful tool for productivity, not a source of anxiety or poor rest.
+                                    Our mission is to empower you with the scientific tools to master your caffeine intake. We believe that with precise, personalized data, you can transform caffeine from a source of anxiety and poor sleep into a powerful ally for focus, productivity, and health.
                                 </p>
                             </div>
                         </div>
@@ -97,9 +97,9 @@ export default function AboutPage() {
                                 <HeartPulse className="h-6 w-6 text-accent" aria-label="Our Philosophy Icon" />
                             </div>
                             <div>
-                                <h2 className="text-2xl font-bold font-headline mb-2">Our Philosophy</h2>
+                                <h2 className="text-2xl font-bold font-headline mb-2">Our Philosophy: Mindful Consumption</h2>
                                 <p className="text-muted-foreground">
-                                    We advocate for mindful consumption. Caffeine isn't inherently good or bad—it's about timing, dosage, and personal metabolism. Our tools are designed to provide personalized insights, helping you make informed decisions that align with your body and your goals.
+                                   We reject the one-size-fits-all approach. Caffeine isn't simply "good" or "bad"—its effect is determined by your unique biology, the dose, and the timing. Our philosophy is built on providing personalized insights, helping you make conscious, informed decisions that align with your body and your goals.
                                 </p>
                             </div>
                         </div>
@@ -108,20 +108,20 @@ export default function AboutPage() {
 
                 <Card className="mb-20">
                     <CardHeader>
-                        <CardTitle className="text-center text-3xl font-bold font-headline">Features at a Glance</CardTitle>
+                        <CardTitle className="text-center text-3xl font-bold font-headline">A Toolkit for Peak Performance</CardTitle>
                     </CardHeader>
                     <CardContent className="grid md:grid-cols-3 gap-8 text-center">
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Intake Calculator</h3>
-                            <p className="text-muted-foreground">Log your drinks and instantly see your total caffeine consumption against recommended daily limits.</p>
+                            <h3 className="text-xl font-semibold mb-2">Track with Precision</h3>
+                            <p className="text-muted-foreground">Log your drinks and instantly see your total caffeine load against science-backed daily limits.</p>
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Half-Life Estimator</h3>
-                            <p className="text-muted-foreground">Visualize how caffeine decays in your system over time based on your metabolism.</p>
+                            <h3 className="text-xl font-semibold mb-2">Understand Your Biology</h3>
+                            <p className="text-muted-foreground">Visualize caffeine's half-life in your system and discover your unique metabolic sensitivity.</p>
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Sleep Impact Predictor</h3>
-                            <p className="text-muted-foreground">Calculate how much caffeine will be left in your system by bedtime to protect your sleep quality.</p>
+                            <h3 className="text-xl font-semibold mb-2">Optimize for Your Day</h3>
+                            <p className="text-muted-foreground">Pinpoint the perfect time to consume caffeine for maximum focus while safeguarding your sleep.</p>
                         </div>
                     </CardContent>
                 </Card>
@@ -129,6 +129,9 @@ export default function AboutPage() {
                 <div className="text-center mb-12">
                     <Users className="h-10 w-10 mx-auto text-primary mb-4" aria-label="Team Icon" />
                     <h2 className="text-3xl font-bold font-headline">Meet the Minds Behind the Compass</h2>
+                     <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
+                        Caffeine Compass was built by a team obsessed with the intersection of science and daily life.
+                    </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -152,4 +155,5 @@ export default function AboutPage() {
             </div>
         </>
     );
-}
+    
+    
