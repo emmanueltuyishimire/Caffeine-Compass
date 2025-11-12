@@ -1,10 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import HalfLifeEstimator from '@/components/features/HalfLifeEstimator';
-import SleepImpactPredictor from '@/components/features/SleepImpactPredictor';
-import CaffeineAssistant from '@/components/features/CaffeineAssistant';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { BarChart2, BedDouble, Bot, Coffee } from 'lucide-react';
+import { BarChart2, BedDouble, Coffee } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -78,10 +75,6 @@ export default function Home() {
               </CardContent>
             </Card>
           </Link>
-        </div>
-        
-        <div className="mt-20">
-             <CaffeineAssistant />
         </div>
       </div>
     </div>
