@@ -1,7 +1,14 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart2, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown, Pregnant, Atom, Leaf, CupSoda, Zap } from 'lucide-react';
+import { BarChart2, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown, Baby, Atom, Leaf, CupSoda, Zap } from 'lucide-react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Caffeine Calculators — Tools for Energy, Focus, and Health',
+    description: 'Explore our complete suite of science-backed caffeine calculators. Track intake, understand your metabolism, optimize timing, and more to take control of your caffeine consumption.',
+};
+
 
 const calculators = [
   {
@@ -56,7 +63,7 @@ const calculators = [
     title: "Pregnancy Safe Limit Calculator",
     href: "/calculators/pregnancy-safe-limit",
     description: "Track intake against the 200mg limit for pregnancy.",
-    icon: Pregnant,
+    icon: Baby,
   }
 ];
 
