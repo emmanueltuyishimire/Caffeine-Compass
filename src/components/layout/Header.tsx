@@ -28,6 +28,11 @@ const calculators: { title: string; href: string; description: string }[] = [
     description: "See how long caffeine stays in your system.",
   },
   {
+    title: "Caffeine Timing Optimizer",
+    href: "/calculators/caffeine-timing-optimizer",
+    description: "Suggests best caffeine timing for work or study.",
+  },
+  {
     title: "Caffeine Withdrawal Tracker",
     href: "/calculators/caffeine-withdrawal-tracker",
     description: "Helps users taper down safely.",
@@ -81,7 +86,7 @@ const Header = () => {
                   <NavigationMenuTrigger>Calculators</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                      {calculators.map((component) => (
+                      {calculators.sort((a, b) => a.title.localeCompare(b.title)).map((component) => (
                         <ListItem
                           key={component.title}
                           title={component.title}
