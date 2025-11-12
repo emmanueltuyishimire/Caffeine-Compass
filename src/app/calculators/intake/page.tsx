@@ -1,4 +1,5 @@
 
+
 import IntakeCalculator from '@/components/features/IntakeCalculator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -391,7 +392,7 @@ export default function IntakeCalculatorPage() {
             <AccordionItem value="item-6">
               <AccordionTrigger>Is it okay to drink coffee right before sleep?</AccordionTrigger>
               <AccordionContent>
-                It is generally not recommended. Caffeine blocks sleep-inducing chemicals in the brain, which can delay the onset of sleep, reduce deep sleep, and disrupt your natural circadian rhythm. To see how much caffeine from an afternoon drink might still be in your system at bedtime, you should use a tool to model its decay, like our <Link href="/calculators/half-life">Half-Life Calculator</Link>.
+                It is generally not recommended. Caffeine blocks sleep-inducing chemicals in the brain, which can delay the onset of sleep, reduce deep sleep, and disrupt your natural circadian rhythm. To see how much caffeine from an afternoon drink might still be in your system at bedtime, you should use a tool to model its decay, like our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link>.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-7">
@@ -486,3 +487,5 @@ export default function IntakeCalculatorPage() {
     </div>
   );
 }
+
+    
