@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/table';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { CheckCircle, Lightbulb, User, Briefcase, GraduationCap, Heart, Droplet, BrainCircuit, Moon, ZapOff } from 'lucide-react';
+import { BrainCircuit, Briefcase, CheckCircle, GraduationCap, Heart, Lightbulb, Moon, ZapOff } from 'lucide-react';
 
 export const metadata: Metadata = {
   title:
@@ -259,17 +259,17 @@ export default function HalfLifeCalculatorPage() {
                 </TableHeader>
                 <TableBody>
                     <TableRow>
-                        <TableCell className_medium">Thinking "I feel fine" means the caffeine is gone</TableCell>
+                        <TableCell className="font-medium">Thinking "I feel fine" means the caffeine is gone</TableCell>
                         <TableCell>The noticeable "buzz" wears off faster than the caffeine is actually cleared. Even low levels can disrupt sleep architecture without you consciously feeling it.</TableCell>
                         <TableCell>Trust the data. Use the calculator to see the estimated amount remaining, even if you don't feel stimulated. Aim for near-zero levels at bedtime.</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell className_medium">Assuming all coffees have the same effect duration</TableCell>
+                        <TableCell className="font-medium">Assuming all coffees have the same effect duration</TableCell>
                         <TableCell>A 300 mg cold brew will stay in your system much longer than a 64 mg espresso, simply because the starting dose is higher.</TableCell>
-                        <TableCell>Use the <Link href="/calculators/intake">Caffeine Intake Calculator</post> to find the dose of your specific drink, and plug that number into this half-life calculator for an accurate decay curve.</TableCell>
+                        <TableCell>Use the <Link href="/calculators/intake">Caffeine Intake Calculator</Link> to find the dose of your specific drink, and plug that number into this half-life calculator for an accurate decay curve.</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell className_medium">Not accounting for metabolism speed</TableCell>
+                        <TableCell className="font-medium">Not accounting for metabolism speed</TableCell>
                         <TableCell>Reading a generic article that says "caffeine lasts 5 hours" is a one-size-fits-all approach that ignores individual genetics.</TableCell>
                         <TableCell>Experiment with the "Fast," "Average," and "Slow" settings in the calculator and see which one best matches your real-world experience of jitters and sleep quality.</TableCell>
                     </TableRow>
@@ -476,4 +476,3 @@ export default function HalfLifeCalculatorPage() {
     </div>
   );
 }
-
