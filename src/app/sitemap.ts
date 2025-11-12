@@ -16,7 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const articleRoutes = [
-      '/articles/caffeine-effect-on-rem-sleep'
+      '/articles/caffeine-effect-on-rem-sleep',
+      '/articles/caffeine-half-life-sleep'
   ];
 
   const calculatorUrls = calculatorRoutes.map(route => ({
@@ -68,3 +69,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...articleUrls,
   ]
 }
+
+    

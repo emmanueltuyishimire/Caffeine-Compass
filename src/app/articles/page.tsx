@@ -17,6 +17,12 @@ const articles = [
     description: "A deep dive into how caffeine impacts your dreams and brain health.",
     icon: BookText,
   },
+  {
+    title: "Caffeine Half-Life & Sleep",
+    href: "/articles/caffeine-half-life-sleep",
+    description: "Understand how long caffeine affects you to reclaim your sleep.",
+    icon: BookText,
+  },
 ];
 
 const articlesPageJsonLd = {
@@ -86,3 +92,5 @@ export default function ArticlesPage() {
     </>
   );
 }
+
+    
