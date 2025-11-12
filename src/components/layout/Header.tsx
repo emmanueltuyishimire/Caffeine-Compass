@@ -32,6 +32,11 @@ const Header = () => {
                   <Link href="/calculators">Calculators</Link>
                 </NavigationMenuLink>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/articles">Articles</Link>
+                </NavigationMenuLink>
+            </NavigationMenuItem>
              <NavigationMenuItem>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                   <Link href="/about">About</Link>
