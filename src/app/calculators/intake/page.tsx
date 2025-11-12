@@ -70,9 +70,9 @@ export default function IntakeCalculatorPage() {
                 To give you an accurate picture of your caffeine load, the calculator relies on a few key inputs:
             </p>
             <ul>
-                <li><strong>Drink Type &amp; Serving Size:</strong> The foundation of the calculation. We’ve pre-loaded our database with hundreds of common drinks—from a standard brewed coffee to a can of energy drink—each with a verified caffeine content and standard serving size (e.g., 240ml for a cup of coffee). When you select a drink, you’re selecting a specific caffeine amount.</li>
-                <li><strong>Quantity:</strong> This is where the cumulative effect comes into play. The calculator multiplies the caffeine content of a single serving by the number of servings you’ve had. This simple step is crucial, as it’s where most people’s estimates fall short.</li>
-                <li><strong>Custom Input:</strong> Not all drinks are in our database. The "Custom" input allows you to add any beverage by manually entering its caffeine content in milligrams. This is perfect for specialty coffees, pre-workout supplements, or other caffeinated products with clear labeling.</li>
+                <li><b>Drink Type & Serving Size:</b> The foundation of the calculation. We’ve pre-loaded our database with hundreds of common drinks—from a standard brewed coffee to a can of energy drink—each with a verified caffeine content and standard serving size (e.g., 240ml for a cup of coffee). When you select a drink, you’re selecting a specific caffeine amount.</li>
+                <li><b>Quantity:</b> This is where the cumulative effect comes into play. The calculator multiplies the caffeine content of a single serving by the number of servings you’ve had. This simple step is crucial, as it’s where most people’s estimates fall short.</li>
+                <li><b>Custom Input:</b> Not all drinks are in our database. The "Custom" input allows you to add any beverage by manually entering its caffeine content in milligrams. This is perfect for specialty coffees, pre-workout supplements, or other caffeinated products with clear labeling.</li>
             </ul>
 
             <Card className="my-8">
@@ -88,20 +88,20 @@ export default function IntakeCalculatorPage() {
 
             <h3 className="text-2xl font-semibold">The Scientific Background: How Your Body Handles Caffeine</h3>
             <p>
-                When you consume caffeine, it’s quickly absorbed from your gut into your bloodstream. From there, it travels to your liver, where it’s metabolized (broken down) by a specific enzyme called <strong>CYP1A2</strong>. This enzyme is the main character in the story of your caffeine tolerance.
+                When you consume caffeine, it’s quickly absorbed from your gut into your bloodstream. From there, it travels to your liver, where it’s metabolized (broken down) by a specific enzyme called <b>CYP1A2</b>. This enzyme is the main character in the story of your caffeine tolerance.
             </p>
             <p>
                 The efficiency of your CYP1A2 enzyme is largely determined by your genetics. This is why you might have a friend who can drink an espresso after dinner and sleep soundly, while you’re left staring at the ceiling after a 4 PM latte.
             </p>
             <ul>
-                <li><strong>Fast Metabolizers:</strong> Possess a version of the CYP1A2 gene that produces a highly efficient enzyme. They clear caffeine from their system quickly and are less likely to experience negative side effects like anxiety or sleep disruption.</li>
-                <li><strong>Slow Metabolizers:</strong> Have a less efficient version of the enzyme. Caffeine lingers in their bloodstream for much longer, making them more susceptible to its stimulating effects. For them, even a morning coffee can potentially interfere with their sleep that night.</li>
+                <li><b>Fast Metabolizers:</b> Possess a version of the CYP1A2 gene that produces a highly efficient enzyme. They clear caffeine from their system quickly and are less likely to experience negative side effects like anxiety or sleep disruption.</li>
+                <li><b>Slow Metabolizers:</b> Have a less efficient version of the enzyme. Caffeine lingers in their bloodstream for much longer, making them more susceptible to its stimulating effects. For them, even a morning coffee can potentially interfere with their sleep that night.</li>
             </ul>
             <p>
-                This calculator, while not a genetic test, helps you quantify the *dose* of caffeine your body has to deal with. By knowing your total intake, you can make smarter decisions based on how you personally feel, effectively tailoring your consumption to your unique metabolism.
+                This calculator, while not a genetic test, helps you quantify the <i>dose</i> of caffeine your body has to deal with. By knowing your total intake, you can make smarter decisions based on how you personally feel, effectively tailoring your consumption to your unique metabolism.
             </p>
             <p>
-                This concept of caffeine clearance is often described using the term "half-life." A caffeine half-life is the time it takes for the amount of caffeine in your body to be reduced by half. For the average, healthy adult, the half-life of caffeine is about <strong>3 to 5 hours</strong>. This means if you drink a coffee with 200 mg of caffeine at 9 AM, you’ll still have 100 mg in your system around 12 PM to 2 PM. By evening, a significant amount could still be active. Our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> provides a visual representation of this decay process.
+                This concept of caffeine clearance is often described using the term "half-life." A caffeine half-life is the time it takes for the amount of caffeine in your body to be reduced by half. For the average, healthy adult, the half-life of caffeine is about <b>3 to 5 hours</b>. This means if you drink a coffee with 200 mg of caffeine at 9 AM, you’ll still have 100 mg in your system around 12 PM to 2 PM. By evening, a significant amount could still be active. Our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> provides a visual representation of this decay process.
             </p>
         </section>
 
@@ -157,22 +157,22 @@ export default function IntakeCalculatorPage() {
             <p>Getting a clear picture of your caffeine intake is easy. Follow these simple steps:</p>
             <ol className="list-decimal pl-5 space-y-2">
                 <li>
-                    <strong>Select Your Drink:</strong> Use the search bar to find your beverage. Click on the drink name from the dropdown list to add it to your log. The list includes coffees, teas, sodas, and energy drinks.
+                    <b>Select Your Drink:</b> Use the search bar to find your beverage. Click on the drink name from the dropdown list to add it to your log. The list includes coffees, teas, sodas, and energy drinks.
                 </li>
                 <li>
-                    <strong>Adjust the Quantity:</strong> Once a drink is added, it defaults to a quantity of one. If you had more than one, use the number input field to adjust the quantity accordingly. The total caffeine will update automatically.
+                    <b>Adjust the Quantity:</b> Once a drink is added, it defaults to a quantity of one. If you had more than one, use the number input field to adjust the quantity accordingly. The total caffeine will update automatically.
                 </li>
                 <li>
-                    <strong>Add More Drinks:</strong> Continue adding every caffeinated beverage you consume throughout the day to build a complete log. Don’t forget less obvious sources like diet sodas or green tea.
+                    <b>Add More Drinks:</b> Continue adding every caffeinated beverage you consume throughout the day to build a complete log. Don’t forget less obvious sources like diet sodas or green tea.
                 </li>
                 <li>
-                    <strong>Review Your Total:</strong> The "Daily Caffeine Intake" card prominently displays your total consumed milligrams of caffeine.
+                    <b>Review Your Total:</b> The "Daily Caffeine Intake" card prominently displays your total consumed milligrams of caffeine.
                 </li>
                 <li>
-                    <strong>Check Against the Limit:</strong> The progress bar gives you a quick visual reference of how your intake compares to the 400 mg daily recommended limit for healthy adults. The text below the bar will tell you exactly how much you are over or under the limit.
+                    <b>Check Against the Limit:</b> The progress bar gives you a quick visual reference of how your intake compares to the 400 mg daily recommended limit for healthy adults. The text below the bar will tell you exactly how much you are over or under the limit.
                 </li>
                 <li>
-                    <strong>Reset for a New Day:</strong> Click the "Reset" button to clear your log and start fresh the next day.
+                    <b>Reset for a New Day:</b> Click the "Reset" button to clear your log and start fresh the next day.
                 </li>
             </ol>
         </section>
@@ -190,14 +190,14 @@ export default function IntakeCalculatorPage() {
                     <CardTitle className="flex items-center gap-3"><GraduationCap /> The Student: Fueling a Late-Night Study Session</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                    <p><strong>Scenario:</strong> Maria, a college student, has a big exam tomorrow. To stay awake and study, she drinks a large brewed coffee (16 oz, ~190 mg) at 3 PM and then an energy drink (~160 mg) at 8 PM.</p>
-                    <p><strong>Calculator Input:</strong></p>
+                    <p><b>Scenario:</b> Maria, a college student, has a big exam tomorrow. To stay awake and study, she drinks a large brewed coffee (16 oz, ~190 mg) at 3 PM and then an energy drink (~160 mg) at 8 PM.</p>
+                    <p><b>Calculator Input:</b></p>
                     <ul className="list-disc pl-5">
                         <li>Brewed Coffee (x2 standard 8oz servings)</li>
                         <li>Energy Drink (x2 standard servings)</li>
                     </ul>
-                    <p><strong>Result:</strong> Maria’s total intake is around <strong>350 mg</strong>. While this is within the 400 mg daily limit, the timing is problematic. With a large dose of caffeine consumed at 8 PM, she will likely have over 80 mg still in her system when she tries to go to sleep at midnight, severely disrupting her sleep quality and memory consolidation for the exam.</p>
-                    <p><strong>Interpretation:</strong> The calculator would show Maria that while her total dose isn't excessive, her timing is setting her up for a poor night's sleep. A better strategy would have been to consume her caffeine earlier in the day.</p>
+                    <p><b>Result:</b> Maria’s total intake is around <b>350 mg</b>. While this is within the 400 mg daily limit, the timing is problematic. With a large dose of caffeine consumed at 8 PM, she will likely have over 80 mg still in her system when she tries to go to sleep at midnight, severely disrupting her sleep quality and memory consolidation for the exam.</p>
+                    <p><b>Interpretation:</b> The calculator would show Maria that while her total dose isn't excessive, her timing is setting her up for a poor night's sleep. A better strategy would have been to consume her caffeine earlier in the day.</p>
                 </CardContent>
             </Card>
 
@@ -206,14 +206,14 @@ export default function IntakeCalculatorPage() {
                     <CardTitle className="flex items-center gap-3"><Briefcase /> The Office Worker: The Cumulative Effect of "Just One More Cup"</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                    <p><strong>Scenario:</strong> David, an office worker, starts his day with an espresso at 8 AM. He has another at 11 AM to power through meetings, a diet cola with lunch at 1 PM, and a final espresso at 3 PM to beat the afternoon slump.</p>
-                     <p><strong>Calculator Input:</strong></p>
+                    <p><b>Scenario:</b> David, an office worker, starts his day with an espresso at 8 AM. He has another at 11 AM to power through meetings, a diet cola with lunch at 1 PM, and a final espresso at 3 PM to beat the afternoon slump.</p>
+                     <p><b>Calculator Input:</b></p>
                     <ul className="list-disc pl-5">
                         <li>Espresso (x3)</li>
                         <li>Cola (x1)</li>
                     </ul>
-                    <p><strong>Result:</strong> David’s intake totals approximately <strong>226 mg</strong> (64 mg x 3 + 34 mg). He thinks he’s only having "a few small coffees," but the calculator reveals a moderate daily load. If he were a slow metabolizer, this amount could be enough to cause subtle anxiety or make it harder to unwind in the evening.</p>
-                    <p><strong>Interpretation:</strong> The tool helps David see that his "small" drinks add up. He might decide to switch his 3 PM espresso to a decaf or a caffeine-free herbal tea to reduce his total load and improve his evening relaxation.</p>
+                    <p><b>Result:</b> David’s intake totals approximately <b>226 mg</b> (64 mg x 3 + 34 mg). He thinks he’s only having "a few small coffees," but the calculator reveals a moderate daily load. If he were a slow metabolizer, this amount could be enough to cause subtle anxiety or make it harder to unwind in the evening.</p>
+                    <p><b>Interpretation:</b> The tool helps David see that his "small" drinks add up. He might decide to switch his 3 PM espresso to a decaf or a caffeine-free herbal tea to reduce his total load and improve his evening relaxation.</p>
                 </CardContent>
             </Card>
             
@@ -222,14 +222,14 @@ export default function IntakeCalculatorPage() {
                     <CardTitle className="flex items-center gap-3"><Heart /> The Health-Conscious Individual: Staying Within Safe Limits</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                    <p><strong>Scenario:</strong> Sarah is pregnant and her doctor advised her to limit her caffeine intake to under 200 mg per day. She enjoys a morning latte and sometimes a green tea in the afternoon.</p>
-                     <p><strong>Calculator Input:</strong></p>
+                    <p><b>Scenario:</b> Sarah is pregnant and her doctor advised her to limit her caffeine intake to under 200 mg per day. She enjoys a morning latte and sometimes a green tea in the afternoon.</p>
+                     <p><b>Calculator Input:</b></p>
                     <ul className="list-disc pl-5">
                         <li>Latte (x1)</li>
                         <li>Green Tea (x1)</li>
                     </ul>
-                    <p><strong>Result:</strong> Her daily total is about <strong>92 mg</strong> (64 mg + 28 mg). The progress bar on the calculator would show her she is well under both the standard 400 mg limit and her personal 200 mg limit.</p>
-                    <p><strong>Interpretation:</strong> For Sarah, the calculator provides peace of mind. It allows her to enjoy her daily ritual without the stress of accidentally consuming too much caffeine, ensuring she’s following her doctor’s advice for a healthy pregnancy.</p>
+                    <p><b>Result:</b> Her daily total is about <b>92 mg</b> (64 mg + 28 mg). The progress bar on the calculator would show her she is well under both the standard 400 mg limit and her personal 200 mg limit.</p>
+                    <p><b>Interpretation:</b> For Sarah, the calculator provides peace of mind. It allows her to enjoy her daily ritual without the stress of accidentally consuming too much caffeine, ensuring she’s following her doctor’s advice for a healthy pregnancy.</p>
                 </CardContent>
             </Card>
         </section>
@@ -346,7 +346,7 @@ export default function IntakeCalculatorPage() {
             </p>
             <h3 className="text-2xl font-semibold">The Adenosine Blockade: Caffeine’s Primary Mechanism</h3>
             <p>
-                Throughout the day, as your brain works, it produces a byproduct called <strong>adenosine</strong>. This molecule binds to specific adenosine receptors in your brain, which in turn slows down neural activity and makes you feel tired. This is a natural process called "sleep pressure"—the longer you’re awake, the more adenosine builds up, and the sleepier you get.
+                Throughout the day, as your brain works, it produces a byproduct called <b>adenosine</b>. This molecule binds to specific adenosine receptors in your brain, which in turn slows down neural activity and makes you feel tired. This is a natural process called "sleep pressure"—the longer you’re awake, the more adenosine builds up, and the sleepier you get.
             </p>
             <p>
                 Caffeine’s chemical structure is remarkably similar to adenosine. So similar, in fact, that it can fit perfectly into the adenosine receptors. When you drink a coffee, caffeine molecules enter your bloodstream, cross the blood-brain barrier, and dock in these receptors, effectively blocking adenosine from binding. With the "sleepy" molecule blocked, your brain’s natural stimulants, like dopamine and norepinephrine, can flow more freely. This leads to increased alertness, improved mood, and enhanced cognitive function. However, the adenosine doesn’t disappear. It continues to build up in the background. When the caffeine finally wears off, the accumulated adenosine floods the receptors, leading to the infamous "caffeine crash."
@@ -360,7 +360,7 @@ export default function IntakeCalculatorPage() {
             </p>
             <h3 className="text-2xl font-semibold">Natural vs. Synthetic Caffeine: Is There a Difference?</h3>
             <p>
-                Chemically, natural caffeine (from coffee beans or tea leaves) and synthetic caffeine (produced in a lab and added to energy drinks and sodas) are identical. Your body cannot tell the difference between them. However, the *source* of the caffeine matters. Natural sources like coffee and tea contain other compounds—such as antioxidants and polyphenols—that can modulate caffeine’s effects and offer other health benefits. For example, the L-theanine in tea works synergistically with caffeine to promote a smoother, less jittery focus. Synthetic caffeine in sodas and energy drinks is often paired with large amounts of sugar or artificial sweeteners, which can have their own negative health consequences.
+                Chemically, natural caffeine (from coffee beans or tea leaves) and synthetic caffeine (produced in a lab and added to energy drinks and sodas) are identical. Your body cannot tell the difference between them. However, the <i>source</i> of the caffeine matters. Natural sources like coffee and tea contain other compounds—such as antioxidants and polyphenols—that can modulate caffeine’s effects and offer other health benefits. For example, the L-theanine in tea works synergistically with caffeine to promote a smoother, less jittery focus. Synthetic caffeine in sodas and energy drinks is often paired with large amounts of sugar or artificial sweeteners, which can have their own negative health consequences.
             </p>
             <p>
                 Understanding these dynamics empowers you to use caffeine as a performance enhancer—not a crutch. By tracking your intake, you can provide your body with the optimal dose at the optimal time, reaping all the benefits of alertness and focus while minimizing the downsides of anxiety, tolerance, and sleep disruption.
