@@ -12,7 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/calculators/drink-comparison',
     '/calculators/drinks-database',
     '/calculators/caffeine-overdose-risk',
-    '/calculators/pregnancy-safe-limit'
+    '/calculators/pregnancy-safe-limit',
+    '/calculators/caffeine-sleep-calculator'
   ];
 
   const articleRoutes = [
@@ -70,5 +71,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...articleUrls,
   ]
 }
-
     

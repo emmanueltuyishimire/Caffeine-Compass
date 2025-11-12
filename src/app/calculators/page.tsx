@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart2, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown, Baby, Atom, Leaf, CupSoda, Zap } from 'lucide-react';
+import { BarChart2, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown, Baby, Atom, Leaf, CupSoda, Zap, Moon } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
@@ -27,7 +27,8 @@ const calculatorsPageJsonLd = {
       { "@type": "ListItem", "position": 6, "name": "Drink Comparison Tool", "url": "https://caffeine-calculation-site.com/calculators/drink-comparison" },
       { "@type": "ListItem", "position": 7, "name": "Caffeine in Drinks Database", "url": "https://caffeine-calculation-site.com/calculators/drinks-database" },
       { "@type": "ListItem", "position": 8, "name": "Caffeine Overdose Risk Calculator", "url": "https://caffeine-calculation-site.com/calculators/caffeine-overdose-risk" },
-      { "@type": "ListItem", "position": 9, "name": "Pregnancy Safe Limit Calculator", "url": "https://caffeine-calculation-site.com/calculators/pregnancy-safe-limit" }
+      { "@type": "ListItem", "position": 9, "name": "Pregnancy Safe Limit Calculator", "url": "https://caffeine-calculation-site.com/calculators/pregnancy-safe-limit" },
+      { "@type": "ListItem", "position": 10, "name": "Caffeine Sleep Calculator", "url": "https://caffeine-calculation-site.com/calculators/caffeine-sleep-calculator" }
     ]
   },
   "breadcrumb": {
@@ -104,6 +105,12 @@ const calculators = [
     href: "/calculators/pregnancy-safe-limit",
     description: "Track intake against the 200mg limit for pregnancy.",
     icon: Baby,
+  },
+  {
+    title: "Caffeine Sleep Calculator",
+    href: "/calculators/caffeine-sleep-calculator",
+    description: "See how much caffeine will be in your system at bedtime.",
+    icon: Moon,
   }
 ];
 
