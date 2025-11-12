@@ -159,21 +159,21 @@ export default function Home() {
                         <span className="text-2xl font-bold">1</span>
                       </div>
                       <h3 className="text-xl font-bold mb-2">Track Your Intake</h3>
-                      <p className="text-muted-foreground">Use our <Link href="/calculators/intake" className="text-primary hover:underline">Intake Calculator</Link> to log your drinks and get a precise measure of your daily consumption.</p>
+                      <p className="text-muted-foreground">Use our <Link href="/calculators/intake" className="text-accent hover:underline">Intake Calculator</Link> to log your drinks and get a precise measure of your daily consumption.</p>
                   </div>
                   <div className="relative">
                       <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4 border-4 border-background">
                         <span className="text-2xl font-bold">2</span>
                       </div>
                       <h3 className="text-xl font-bold mb-2">Understand Your Body</h3>
-                      <p className="text-muted-foreground">Discover your unique metabolism with the <Link href="/calculators/caffeine-sensitivity-test" className="text-primary hover:underline">Sensitivity Test</Link> and see how long caffeine affects you.</p>
+                      <p className="text-muted-foreground">Discover your unique metabolism with the <Link href="/calculators/caffeine-sensitivity-test" className="text-accent hover:underline">Sensitivity Test</Link> and see how long caffeine affects you.</p>
                   </div>
                   <div className="relative">
                       <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4 border-4 border-background">
                         <span className="text-2xl font-bold">3</span>
                       </div>
                       <h3 className="text-xl font-bold mb-2">Optimize Your Timing</h3>
-                      <p className="text-muted-foreground">Plan your caffeine use for peak performance and protect your sleep using the <Link href="/calculators/half-life" className="text-primary hover:underline">Half-Life Calculator</Link>.</p>
+                      <p className="text-muted-foreground">Plan your caffeine use for peak performance and protect your sleep using the <Link href="/calculators/half-life" className="text-accent hover:underline">Half-Life Calculator</Link>.</p>
                   </div>
               </div>
             </div>
