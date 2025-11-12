@@ -294,84 +294,63 @@ export default function IntakeCalculatorPage() {
                     <TableRow>
                         <TableCell className="font-medium">Assuming All Coffee Is Equal</TableCell>
                         <TableCell>A light roast has more caffeine than a dark roast. A cold brew can have double the caffeine of a regular brewed coffee.</TableCell>
-                        <TableCell>When in doubt, use a conservative (higher) estimate or look up the specific caffeine content for your favorite coffee shop or brand.</TableCell>
+                        <TableCell>When in doubt, use our <Link href="/calculators/drink-comparison">Drink Comparison Tool</Link> to check the specific caffeine content for your favorite coffee shop or brand.</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>
         </section>
 
         <Separator />
-
+        
         <section id="expert-insights">
-            <h2 className="text-3xl font-bold">Quick Hacks & Expert Insights for Smart Caffeine Use</h2>
-            <Card className="mb-4">
-                <CardHeader>
-                    <CardTitle className="flex items-center gap-2"><Droplet /> Hydrate Alongside Caffeine</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p>Caffeine is a mild diuretic, which means it can cause you to lose fluid. To counteract this and reduce feelings of jitteriness, drink a glass of water for every caffeinated beverage you consume. Staying hydrated also supports stable energy levels.</p>
-                </CardContent>
-            </Card>
-            <Card className="mb-4">
-                <CardHeader>
-                    <CardTitle>Delay Your First Coffee</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p>Your body naturally produces a high level of cortisol (a wakefulness hormone) in the first 60-90 minutes after you wake up. Drinking coffee during this peak can blunt its effects and increase your tolerance. Try waiting 90 minutes after waking before your first cup. You’ll get a much more significant energy boost.</p>
-                </CardContent>
-            </Card>
-            <Card className="mb-4">
-                <CardHeader>
-                    <CardTitle>Master the "Coffee Nap"</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p>It sounds counterintuitive, but it’s scientifically validated. Drink a cup of coffee and immediately take a 20-minute nap. The caffeine takes about 20-30 minutes to kick in. During your nap, your brain clears out adenosine (the molecule that makes you feel sleepy). You’ll wake up just as the caffeine hits, feeling refreshed and doubly alert.</p>
-                </CardContent>
-            </Card>
-            <Card>
-                <CardHeader>
-                    <CardTitle>Pair Caffeine with L-Theanine</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p>L-Theanine is an amino acid found in green tea that promotes relaxation without drowsiness. When combined with caffeine, it can smooth out the "jitters" and enhance focus, creating a state of calm alertness. This is why many people report a more pleasant buzz from green tea compared to coffee.</p>
-                </CardContent>
-            </Card>
+          <h2 className="text-3xl font-bold">Quick Hacks & Expert Insights for Smart Caffeine Use</h2>
+          <Card className="mb-4">
+              <CardHeader>
+                  <CardTitle className="flex items-center gap-2"><Droplet /> Hydrate Alongside Caffeine</CardTitle>
+              </CardHeader>
+              <CardContent>
+                  <p>Caffeine is a mild diuretic, which means it can cause you to lose fluid. To counteract this and reduce feelings of jitteriness, drink a glass of water for every caffeinated beverage you consume. Staying hydrated also supports stable energy levels.</p>
+              </CardContent>
+          </Card>
+          <Card className="mb-4">
+              <CardHeader>
+                  <CardTitle>Delay Your First Coffee</CardTitle>
+              </CardHeader>
+              <CardContent>
+                  <p>Your body naturally produces a high level of cortisol (a wakefulness hormone) in the first 60-90 minutes after you wake up. Drinking coffee during this peak can blunt its effects and increase your tolerance. Try waiting 90 minutes after waking before your first cup. You’ll get a much more significant energy boost.</p>
+              </CardContent>
+          </Card>
+          <Card className="mb-4">
+              <CardHeader>
+                  <CardTitle>Master the "Coffee Nap"</CardTitle>
+              </CardHeader>
+              <CardContent>
+                  <p>It sounds counterintuitive, but it’s scientifically validated. Drink a cup of coffee and immediately take a 20-minute nap. The caffeine takes about 20-30 minutes to kick in. During your nap, your brain clears out adenosine (the molecule that makes you feel sleepy). You’ll wake up just as the caffeine hits, feeling refreshed and doubly alert.</p>
+              </CardContent>
+          </Card>
+          <Card>
+              <CardHeader>
+                  <CardTitle>Pair Caffeine with L-Theanine</CardTitle>
+              </CardHeader>
+              <CardContent>
+                  <p>L-Theanine is an amino acid found in green tea that promotes relaxation without drowsiness. When combined with caffeine, it can smooth out the "jitters" and enhance focus, creating a state of calm alertness. This is why many people report a more pleasant buzz from green tea compared to coffee.</p>
+              </CardContent>
+          </Card>
         </section>
 
         <Separator />
-        
-        <section id="terminologies">
-            <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
-            <ul className="space-y-4">
-                <li>
-                    <h3 className="text-xl font-semibold">Caffeine</h3>
-                    <p>A natural central nervous system stimulant of the methylxanthine class. It is the world's most widely consumed psychoactive drug. Unlike many other psychoactive substances, it is legal and unregulated in nearly all parts of the world.</p>
-                </li>
-                <li>
-                    <h3 className="text-xl font-semibold">Milligram (mg)</h3>
-                    <p>A unit of mass in the metric system equal to one thousandth of a gram. It is the standard unit for measuring caffeine content.</p>
-                </li>
-                <li>
-                    <h3 className="text-xl font-semibold">Recommended Daily Limit</h3>
-                    <p>The maximum amount of caffeine considered safe for most healthy adults. The FDA and other health organizations cite 400 mg per day as an amount not generally associated with dangerous, negative effects.</p>
-                </li>
-                <li>
-                    <h3 className="text-xl font-semibold">Caffeine Tolerance</h3>
-                    <p>A process in which the body becomes less responsive to the effects of caffeine with repeated use. This often leads to consuming increasing amounts of caffeine to achieve the same stimulating effect.</p>
-                </li>
-                <li>
-                    <h3 className="text-xl font-semibold">Adenosine</h3>
-                    <p>A neurotransmitter that promotes sleep and suppresses arousal. Caffeine works primarily by blocking adenosine receptors in the brain, which prevents the onset of drowsiness.</p>
-                </li>
-                 <li>
-                    <h3 className="text-xl font-semibold">CYP1A2 Enzyme</h3>
-                    <p>The primary enzyme in the liver responsible for metabolizing approximately 95% of caffeine in the body. The genetic variation in the CYP1A2 gene determines whether a person is a "fast" or "slow" metabolizer of caffeine.</p>
-                </li>
-                <li>
-                    <h3 className="text-xl font-semibold">Half-Life</h3>
-                    <p>The time it takes for the concentration of a substance (in this case, caffeine) in the body to be reduced by half. The average half-life of caffeine in healthy adults is about 3-5 hours.</p>
-                </li>
-            </ul>
+
+        <section id="deep-dive">
+            <h2 className="text-3xl font-bold">Deep Dive: The Physiology of Caffeine</h2>
+            <p>To truly master your caffeine intake, it helps to understand what's happening inside your body and brain. Caffeine is more than just a morning ritual; it's a psychoactive substance that directly interacts with your central nervous system. Its primary mechanism of action is elegant yet powerful: it mimics a naturally occurring molecule in your brain called adenosine.</p>
+            <h3 className="text-2xl font-semibold">Caffeine vs. Adenosine: The Battle for Your Brain's Receptors</h3>
+            <p>Throughout the day, as your brain works, it produces adenosine as a byproduct. Adenosine binds to specific receptors in your brain, and this binding process signals that it's time to slow down, reducing neural activity and making you feel drowsy. This is what's known as "sleep pressure"—the longer you're awake, the more adenosine builds up, and the sleepier you feel.</p>
+            <p>Caffeine's molecular structure is remarkably similar to adenosine. It's so similar, in fact, that it can fit perfectly into the same adenosine receptors. When you drink a coffee, caffeine molecules enter your bloodstream, cross the blood-brain barrier, and start occupying these receptors. However, unlike adenosine, caffeine doesn't activate them. It's like putting the wrong key in a lock; it fits, but it doesn't turn. By blocking these receptors, caffeine prevents adenosine from doing its job. The result? Your brain doesn't get the "time to slow down" signal. Instead, brain activity speeds up. This blockage also allows other natural stimulants produced by your brain, like dopamine and glutamate, to have a more pronounced effect, leading to the increased alertness, focus, and improved mood associated with caffeine.</p>
+            <h3 className="text-2xl font-semibold">Metabolism Speed: Are You a Tortoise or a Hare?</h3>
+            <p>The duration of these effects depends entirely on how quickly your body can get rid of the caffeine. This job falls almost entirely to your liver, which uses an enzyme called Cytochrome P450 1A2 (CYP1A2) to break down about 95% of the caffeine you consume. The gene that codes for this enzyme, the CYP1A2 gene, comes in different variations. Studies have shown that these genetic differences are the primary reason for the wide variation in caffeine sensitivity among individuals. "Fast metabolizers" have a gene variant that produces a highly efficient version of the enzyme, allowing them to clear caffeine from their system in just a few hours. For them, a 3-hour half-life is common. "Slow metabolizers," who make up over half the population, have a less efficient enzyme. Caffeine can linger in their system for 6, 8, or even 10 hours, making them much more susceptible to sleep disruption and side effects like anxiety. This is why our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> can provide valuable insights into your personal response.</p>
+            <h3 className="text-2xl font-semibold">Caffeine's Impact on Hormones: Cortisol and Adrenaline</h3>
+            <p>Caffeine also influences your endocrine system, particularly your stress hormones. It stimulates the adrenal glands to produce more cortisol and adrenaline (epinephrine). In the short term, this contributes to the feeling of alertness and energy—it's your body's "fight or flight" response in a cup. However, chronic overconsumption of caffeine can lead to dysregulated cortisol levels. This can interfere with your natural circadian rhythm, which dictates that cortisol should be highest in the morning and lowest at night. If your cortisol is artificially spiked in the evening from a late coffee, it can directly interfere with the production of melatonin, the hormone that initiates sleep.</p>
+            <p>Understanding these intricate dynamics—from receptor blockade in the brain to enzymatic activity in the liver and hormonal responses—empowers you to move beyond simply consuming caffeine and start strategically using it. You can time your intake to align with your body's natural rhythms, dose it according to your genetic predisposition, and ultimately use it as a powerful tool for enhancing performance, not as a crutch to compensate for poor sleep. That is the ultimate goal of mindful caffeine consumption.</p>
         </section>
         
         <Separator />
@@ -394,7 +373,7 @@ export default function IntakeCalculatorPage() {
             <AccordionItem value="item-3">
               <AccordionTrigger>Does caffeine affect everyone the same way?</AccordionTrigger>
               <AccordionContent>
-                No. Genetics play a huge role, particularly the CYP1A2 gene, which controls the primary enzyme that metabolizes caffeine. "Fast metabolizers" clear caffeine quickly, while "slow metabolizers" are more sensitive to its effects and for longer. Body weight, age, and liver health also influence your response.
+                No. Genetics play a huge role, particularly the CYP1A2 gene, which controls the primary enzyme that metabolizes caffeine. "Fast metabolizers" clear caffeine quickly, while "slow metabolizers" are more sensitive to its effects and for longer. Body weight, age, and liver health also influence your response. You can estimate your profile with our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link>.
               </AccordionContent>
             </AccordionItem>
              <AccordionItem value="item-4">
@@ -412,7 +391,7 @@ export default function IntakeCalculatorPage() {
             <AccordionItem value="item-6">
               <AccordionTrigger>Is it okay to drink coffee right before sleep?</AccordionTrigger>
               <AccordionContent>
-                It is generally not recommended. Caffeine blocks sleep-inducing chemicals in the brain, which can delay the onset of sleep, reduce deep sleep, and disrupt your natural circadian rhythm. To see how much caffeine from an afternoon drink might still be in your system at bedtime, you should use a sleep impact calculator.
+                It is generally not recommended. Caffeine blocks sleep-inducing chemicals in the brain, which can delay the onset of sleep, reduce deep sleep, and disrupt your natural circadian rhythm. To see how much caffeine from an afternoon drink might still be in your system at bedtime, you should use a tool to model its decay, like our <Link href="/calculators/half-life">Half-Life Calculator</Link>.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-7">
@@ -430,7 +409,7 @@ export default function IntakeCalculatorPage() {
             <AccordionItem value="item-9">
               <AccordionTrigger>Can I build up a tolerance to caffeine?</AccordionTrigger>
               <AccordionContent>
-                Absolutely. Regular, daily consumption of caffeine leads to tolerance, where your body becomes less sensitive to its effects. You may find you need more caffeine to achieve the same level of alertness. To reset your sensitivity, you can try a "caffeine taper," which this calculator can help you manage by gradually reducing your daily intake.
+                Absolutely. Regular, daily consumption of caffeine leads to tolerance, where your body becomes less sensitive to its effects. You may find you need more caffeine to achieve the same level of alertness. To reset your sensitivity, you can try a "caffeine taper," which you can plan with our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link>.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-10">
@@ -454,7 +433,7 @@ export default function IntakeCalculatorPage() {
             <AccordionItem value="item-13">
               <AccordionTrigger>What are the symptoms of caffeine withdrawal?</AccordionTrigger>
               <AccordionContent>
-                The most common symptom is a headache. Other symptoms can include fatigue, irritability, difficulty concentrating, and nausea. Symptoms usually begin 12-24 hours after your last dose. A gradual reduction in intake, which you can plan using this calculator, is the best way to avoid severe withdrawal.
+                The most common symptom is a headache. Other symptoms can include fatigue, irritability, difficulty concentrating, and nausea. Symptoms usually begin 12-24 hours after your last dose. A gradual reduction in intake, which you can plan using our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link>, is the best way to avoid severe withdrawal.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-14">
@@ -466,7 +445,7 @@ export default function IntakeCalculatorPage() {
             <AccordionItem value="item-15">
               <AccordionTrigger>How can I use this calculator to improve my sleep?</AccordionTrigger>
               <AccordionContent>
-                The most effective way is to establish a caffeine "curfew." Use this tool to track your daily habits for a week. Then, see how much caffeine is in your system by bedtime. You can then work backwards, setting a cutoff time (e.g., 2 PM) to ensure your levels are near zero when you go to bed.
+                The most effective way is to establish a caffeine "curfew." Use this tool to track your daily habits for a week. Then, use the <Link href="/calculators/half-life">Half-Life Calculator</Link> to see how much caffeine is in your system by bedtime. You can then work backwards, setting a cutoff time (e.g., 2 PM) to ensure your levels are near zero when you go to bed.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
