@@ -19,9 +19,8 @@ const chartConfig = {
 export default function HalfLifeEstimator() {
   const [caffeineAmount, setCaffeineAmount] = useState(100);
   const [halfLife, setHalfLife] = useState(5);
-  const [chartData, setChartData] = useState<any[]>([]);
-
-  useEffect(() => {
+  
+  const chartData = useMemo(() => {
     const data = [];
     for (let hour = 0; hour <= 12; hour++) {
       const remainingCaffeine = caffeineAmount * Math.pow(0.5, hour / halfLife);
@@ -30,7 +29,7 @@ export default function HalfLifeEstimator() {
         caffeine: Math.round(remainingCaffeine),
       });
     }
-    setChartData(data);
+    return data;
   }, [caffeineAmount, halfLife]);
 
   const caffeineAt8Hours = useMemo(() => {

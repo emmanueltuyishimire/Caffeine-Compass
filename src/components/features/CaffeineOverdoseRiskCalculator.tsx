@@ -80,6 +80,7 @@ export default function CaffeineOverdoseRiskCalculator() {
               onCheckedChange={(checked) => setUnit(checked ? 'lbs' : 'kg')}
               role="switch"
               aria-checked={unit === 'lbs'}
+              aria-labelledby='unit-label'
             />
             <Label htmlFor="unit-switch-lbs" className={unit === 'lbs' ? 'text-primary' : ''}>lbs</Label>
           </div>

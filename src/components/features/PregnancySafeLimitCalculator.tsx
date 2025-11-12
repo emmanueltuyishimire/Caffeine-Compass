@@ -24,30 +24,38 @@ export default function PregnancySafeLimitCalculator() {
     return consumed.reduce((total, drink) => total + drink.caffeine * drink.quantity, 0);
   }, [consumed]);
 
-  const progress = (totalCaffeine / RECOMMENDED_PREGNANCY_LIMIT) * 100;
+  const progress = useMemo(() => {
+    return (totalCaffeine / RECOMMENDED_PREGNANCY_LIMIT) * 100;
+  }, [totalCaffeine]);
 
   const addDrink = (drinkId: string) => {
-    const existing = consumed.find((d) => d.id === drinkId);
-    if (existing) {
-      updateQuantity(drinkId, existing.quantity + 1);
-    } else {
-      const drinkToAdd = drinks.find((d) => d.id === drinkId);
-      if (drinkToAdd) {
-        setConsumed([...consumed, { ...drinkToAdd, quantity: 1 }]);
+    setConsumed((currentConsumed) => {
+      const existing = currentConsumed.find((d) => d.id === drinkId);
+      if (existing) {
+        return currentConsumed.map((d) =>
+          d.id === drinkId ? { ...d, quantity: d.quantity + 1 } : d
+        );
+      } else {
+        const drinkToAdd = drinks.find((d) => d.id === drinkId);
+        return drinkToAdd ? [...currentConsumed, { ...drinkToAdd, quantity: 1 }] : currentConsumed;
       }
-    }
+    });
   };
 
   const removeDrink = (drinkId: string) => {
-    setConsumed(consumed.filter((d) => d.id !== drinkId));
+    setConsumed((currentConsumed) => currentConsumed.filter((d) => d.id !== drinkId));
   };
 
   const updateQuantity = (drinkId: string, quantity: number) => {
     const newQuantity = Math.max(1, quantity);
-    setConsumed(consumed.map((d) => (d.id === drinkId ? { ...d, quantity: newQuantity } : d)));
+    setConsumed((currentConsumed) =>
+      currentConsumed.map((d) =>
+        d.id === drinkId ? { ...d, quantity: newQuantity } : d
+      )
+    );
   };
 
-  const StatusAlert = () => {
+  const StatusAlert = useMemo(() => {
     if (totalCaffeine === 0) {
       return (
          <Alert>
@@ -79,7 +87,7 @@ export default function PregnancySafeLimitCalculator() {
             </AlertDescription>
         </Alert>
      )
-  }
+  }, [totalCaffeine]);
 
   return (
     <Card className="max-w-4xl mx-auto border-primary/20">
@@ -170,7 +178,7 @@ export default function PregnancySafeLimitCalculator() {
           </div>
         </div>
         <div className="w-full" role="alert">
-            <StatusAlert />
+            {StatusAlert}
         </div>
       </CardFooter>
     </Card>

@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Progress } from '@/components/ui/progress';
 import { drinks } from '@/lib/drinks';
 import type { ConsumedDrink } from '@/lib/types';
-import { ChevronsUpDown, Plus, Trash2, TrendingUp, TrendingDown } from 'lucide-react';
+import { ChevronsUpDown, Trash2, TrendingUp, TrendingDown } from 'lucide-react';
 
 const RECOMMENDED_LIMIT = 400; // mg
 
@@ -25,24 +25,30 @@ export default function IntakeCalculator() {
   const progress = (totalCaffeine / RECOMMENDED_LIMIT) * 100;
 
   const addDrink = (drinkId: string) => {
-    const existing = consumed.find((d) => d.id === drinkId);
-    if (existing) {
-      updateQuantity(drinkId, existing.quantity + 1);
-    } else {
-      const drinkToAdd = drinks.find((d) => d.id === drinkId);
-      if (drinkToAdd) {
-        setConsumed([...consumed, { ...drinkToAdd, quantity: 1 }]);
+    setConsumed((currentConsumed) => {
+      const existing = currentConsumed.find((d) => d.id === drinkId);
+      if (existing) {
+        return currentConsumed.map((d) =>
+          d.id === drinkId ? { ...d, quantity: d.quantity + 1 } : d
+        );
+      } else {
+        const drinkToAdd = drinks.find((d) => d.id === drinkId);
+        return drinkToAdd ? [...currentConsumed, { ...drinkToAdd, quantity: 1 }] : currentConsumed;
       }
-    }
+    });
   };
 
   const removeDrink = (drinkId: string) => {
-    setConsumed(consumed.filter((d) => d.id !== drinkId));
+    setConsumed((currentConsumed) => currentConsumed.filter((d) => d.id !== drinkId));
   };
 
   const updateQuantity = (drinkId: string, quantity: number) => {
     const newQuantity = Math.max(1, quantity);
-    setConsumed(consumed.map((d) => (d.id === drinkId ? { ...d, quantity: newQuantity } : d)));
+    setConsumed((currentConsumed) =>
+      currentConsumed.map((d) =>
+        d.id === drinkId ? { ...d, quantity: newQuantity } : d
+      )
+    );
   };
 
   return (

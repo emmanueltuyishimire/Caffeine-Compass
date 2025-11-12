@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   ChartContainer,
@@ -43,13 +43,15 @@ export default function DrinkComparison() {
   });
   const [open, setOpen] = useState(false);
 
-  const chartData = selectedDrinks
-    .map((drink) => ({
-      name: drink.name,
-      caffeine: drink.caffeine,
-      fill: 'var(--color-caffeine)',
-    }))
-    .sort((a, b) => b.caffeine - a.caffeine);
+  const chartData = useMemo(() => {
+    return selectedDrinks
+      .map((drink) => ({
+        name: drink.name,
+        caffeine: drink.caffeine,
+        fill: 'var(--color-caffeine)',
+      }))
+      .sort((a, b) => b.caffeine - a.caffeine);
+  }, [selectedDrinks]);
 
   const handleSelect = (drink: Drink) => {
     setSelectedDrinks((currentSelected) =>
