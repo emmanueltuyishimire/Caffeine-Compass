@@ -4,8 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Mail, MessageCircle, Lightbulb, Handshake, AlertCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Contact Us — Caffeine Compass',
-    description: 'Get in touch with the Caffeine Compass team. We welcome your feedback, suggestions, partnership inquiries, and questions.',
+    title: 'Contact Us — Caffeine Calculation Site',
+    description: 'Get in touch with the Caffeine Calculation Site team. We welcome your feedback, suggestions, partnership inquiries, and questions.',
 };
 
 const contactReasons = [

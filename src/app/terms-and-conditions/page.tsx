@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Terms and Conditions',
-    description: 'Read the terms and conditions for using the Caffeine Compass website.',
+    description: 'Read the terms and conditions for using the Caffeine Calculation Site website.',
 };
 
 export default function TermsAndConditionsPage() {
@@ -15,15 +15,15 @@ export default function TermsAndConditionsPage() {
         <p><em>Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</em></p>
 
         <p>
-          Welcome to Caffeine Compass ("we," "us," or "our"). These Terms and Conditions ("Terms") govern your use of our website, located at caffeine-compass.com (the "Site"), and the tools, content, and services offered thereon.
+          Welcome to Caffeine Calculation Site ("we," "us," or "our"). These Terms and Conditions ("Terms") govern your use of our website, located at caffeine-calculation-site.com (the "Site"), and the tools, content, and services offered thereon.
         </p>
         <p>
-          By accessing or using our Site, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to all of the terms and conditions stated on this page, do not continue to use Caffeine Compass.
+          By accessing or using our Site, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to all of the terms and conditions stated on this page, do not continue to use Caffeine Calculation Site.
         </p>
 
         <h2>1. Nature of Our Service</h2>
         <p>
-          Caffeine Compass provides informational content, educational articles, and software tools (the "Calculators") designed to help you understand and estimate your caffeine consumption and its potential effects. All content and tools are for general educational purposes only.
+          Caffeine Calculation Site provides informational content, educational articles, and software tools (the "Calculators") designed to help you understand and estimate your caffeine consumption and its potential effects. All content and tools are for general educational purposes only.
         </p>
         
         <h2>2. Medical Disclaimer</h2>
@@ -39,7 +39,7 @@ export default function TermsAndConditionsPage() {
 
         <h2>3. Intellectual Property Rights</h2>
         <p>
-          Unless otherwise stated, Caffeine Compass and/or its licensors own the intellectual property rights for all material on the Site. This includes, but is not limited to, the text, graphics, website design, calculators, and logos. All intellectual property rights are reserved. You are granted a limited license only for the purposes of viewing and using the material and tools contained on this Site for your personal, non-commercial use.
+          Unless otherwise stated, Caffeine Calculation Site and/or its licensors own the intellectual property rights for all material on the Site. This includes, but is not limited to, the text, graphics, website design, calculators, and logos. All intellectual property rights are reserved. You are granted a limited license only for the purposes of viewing and using the material and tools contained on this Site for your personal, non-commercial use.
         </p>
 
         <h2>4. Restrictions</h2>
@@ -55,17 +55,17 @@ export default function TermsAndConditionsPage() {
 
         <h2>5. No Warranties</h2>
         <p>
-          This Site is provided "as is," with all faults. Caffeine Compass expresses no representations or warranties, of any kind, related to this Site or the materials and tools contained on this Site. The calculators provide estimates based on public data and scientific models, but individual results will vary. We do not warrant the accuracy, completeness, or usefulness of this information.
+          This Site is provided "as is," with all faults. Caffeine Calculation Site expresses no representations or warranties, of any kind, related to this Site or the materials and tools contained on this Site. The calculators provide estimates based on public data and scientific models, but individual results will vary. We do not warrant the accuracy, completeness, or usefulness of this information.
         </p>
 
         <h2>6. Limitation of Liability</h2>
         <p>
-          In no event shall Caffeine Compass, nor any of its officers, directors, or employees, be held liable for anything arising out of or in any way connected with your use of this Site, whether such liability is under contract, tort, or otherwise. Caffeine Compass, including its officers, directors, and employees, shall not be held liable for any indirect, consequential, or special liability arising out of or in any way related to your use of this Site.
+          In no event shall Caffeine Calculation Site, nor any of its officers, directors, or employees, be held liable for anything arising out of or in any way connected with your use of this Site, whether such liability is under contract, tort, or otherwise. Caffeine Calculation Site, including its officers, directors, and employees, shall not be held liable for any indirect, consequential, or special liability arising out of or in any way related to your use of this Site.
         </p>
 
         <h2>7. Indemnification</h2>
         <p>
-          You hereby indemnify to the fullest extent Caffeine Compass from and against any and/or all liabilities, costs, demands, causes of action, damages, and expenses arising in any way related to your breach of any of the provisions of these Terms.
+          You hereby indemnify to the fullest extent Caffeine Calculation Site from and against any and/or all liabilities, costs, demands, causes of action, damages, and expenses arising in any way related to your breach of any of the provisions of these Terms.
         </p>
 
         <h2>8. Severability</h2>
@@ -75,7 +75,7 @@ export default function TermsAndConditionsPage() {
 
         <h2>9. Variation of Terms</h2>
         <p>
-          Caffeine Compass is permitted to revise these Terms at any time as it sees fit, and by using this Site you are expected to review these Terms on a regular basis.
+          Caffeine Calculation Site is permitted to revise these Terms at any time as it sees fit, and by using this Site you are expected to review these Terms on a regular basis.
         </p>
 
         <h2>10. Governing Law & Jurisdiction</h2>

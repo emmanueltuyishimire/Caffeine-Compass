@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Disclaimer',
-    description: 'Important disclaimer for the Caffeine Compass website and its tools.',
+    description: 'Important disclaimer for the Caffeine Calculation Site website and its tools.',
 };
 
 export default function DisclaimerPage() {
@@ -15,7 +15,7 @@ export default function DisclaimerPage() {
         <p><em>Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</em></p>
 
         <p>
-            The information and tools provided by Caffeine Compass ("we," "us," or "our") on this website are for general informational and educational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
+            The information and tools provided by Caffeine Calculation Site ("we," "us," or "our") on this website are for general informational and educational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
         </p>
 
         <h2>Medical Disclaimer</h2>

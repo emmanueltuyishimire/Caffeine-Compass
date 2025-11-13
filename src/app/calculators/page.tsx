@@ -15,7 +15,7 @@ const calculatorsPageJsonLd = {
   "@type": "WebPage",
   "name": "Caffeine Calculators",
   "description": "A complete suite of science-backed tools to help you understand and optimize your caffeine consumption for better health, focus, and sleep.",
-  "url": "https://caffeine-compass.com/calculators",
+  "url": "https://caffeine-calculation-site.com/calculators",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -23,13 +23,13 @@ const calculatorsPageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-compass.com/"
+        "item": "https://caffeine-calculation-site.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Calculators",
-        "item": "https://caffeine-compass.com/calculators"
+        "item": "https://caffeine-calculation-site.com/calculators"
       }
     ]
   }

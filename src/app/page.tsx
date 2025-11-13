@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BarChart2, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown, Baby, Moon, Zap } from 'lucide-react';
 import Link from 'next/link';
@@ -8,16 +9,16 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-    title: 'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
+    title: 'Caffeine Calculation Site — Optimize Your Caffeine for Better Energy & Sleep',
     description: 'Harness the power of caffeine with our suite of science-backed calculators. Track your intake, understand your metabolism, and optimize your timing for peak performance and better health.',
 };
 
 const homePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Caffeine Compass Homepage",
+  "name": "Caffeine Calculation Site Homepage",
   "description": "Harness the power of caffeine with our suite of science-backed calculators. Track your intake, understand your metabolism, and optimize your timing for peak performance and better health.",
-  "url": "https://caffeine-compass.com/",
+  "url": "https://caffeine-calculation-site.com/",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -25,7 +26,7 @@ const homePageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-compass.com/"
+        "item": "https://caffeine-calculation-site.com/"
       }
     ]
   }
@@ -197,7 +198,7 @@ export default function Home() {
               </div>
               <div className="space-y-8">
                 <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold font-headline">
-                  Why Caffeine Compass?
+                  Why Caffeine Calculation Site?
                 </h2>
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">

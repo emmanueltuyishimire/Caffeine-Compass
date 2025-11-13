@@ -1,8 +1,9 @@
+
 import dynamic from 'next/dynamic';
 import { Bot, HelpCircle, Lightbulb, Zap } from 'lucide-react';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 
 const CaffeineAssistant = dynamic(() => import('@/components/features/CaffeineAssistant'), {
@@ -40,7 +41,7 @@ const supportPageJsonLd = {
   "@type": "WebPage",
   "name": "Caffeine Assistant Support",
   "description": "Get instant, AI-powered answers to all your questions about caffeine.",
-  "url": "https://caffeine-compass.com/ai-assistant",
+  "url": "https://caffeine-calculation-site.com/ai-assistant",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -48,13 +49,13 @@ const supportPageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-compass.com/"
+        "item": "https://caffeine-calculation-site.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "AI Assistant",
-        "item": "https://caffeine-compass.com/ai-assistant"
+        "item": "https://caffeine-calculation-site.com/ai-assistant"
       }
     ]
   },

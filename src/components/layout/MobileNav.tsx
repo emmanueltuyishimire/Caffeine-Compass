@@ -36,10 +36,10 @@ export function MobileNav() {
           href="/"
           className="flex items-center gap-2 mb-8"
           onClick={() => setOpen(false)}
-          aria-label="Caffeine Compass Homepage"
+          aria-label="Caffeine Calculation Site Homepage"
         >
-          <Image src="/logo.png" alt="Caffeine Compass Logo" width={32} height={32} />
-          <span className="text-xl font-bold font-headline">Caffeine Compass</span>
+          <Image src="/logo.png" alt="Caffeine Calculation Site Logo" width={32} height={32} />
+          <span className="text-xl font-bold font-headline">Caffeine Calculation Site</span>
         </Link>
         <div className="flex flex-col gap-4">
           {navLinks.map((link) => (

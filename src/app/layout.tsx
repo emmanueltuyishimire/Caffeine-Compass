@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -10,10 +11,10 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://caffeine-compass.com'),
+  metadataBase: new URL('https://caffeine-calculation-site.com'),
   title: {
-    default: 'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
-    template: '%s — Caffeine Compass',
+    default: 'Caffeine Calculation Site — Optimize Your Caffeine for Better Energy & Sleep',
+    template: '%s — Caffeine Calculation Site',
   },
   description:
     'Empowering people to understand, calculate, and optimize their caffeine habits for better focus, health, and sleep.',
@@ -26,19 +27,19 @@ export const metadata: Metadata = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Caffeine Compass",
-  "url": "https://caffeine-compass.com/",
+  "name": "Caffeine Calculation Site",
+  "url": "https://caffeine-calculation-site.com/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://caffeine-compass.com/ai-assistant?q={search_term_string}",
+    "target": "https://caffeine-calculation-site.com/ai-assistant?q={search_term_string}",
     "query-input": "required name=search_term_string"
   },
    "publisher": {
     "@type": "Organization",
-    "name": "Caffeine Compass",
+    "name": "Caffeine Calculation Site",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeine-compass.com/logo.png"
+      "url": "https://caffeine-calculation-site.com/logo.png"
     }
   }
 };
