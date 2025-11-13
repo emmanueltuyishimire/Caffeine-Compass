@@ -40,30 +40,30 @@ export default function SidebarNav() {
             <SidebarMenu>
                 {mainNav.map((link) => (
                     <SidebarMenuItem key={link.href}>
-                        <Link href={link.href} passHref legacyBehavior>
-                            <SidebarMenuButton as="a" isActive={pathname === link.href} icon={<link.icon />} tooltip={link.label}>
+                        <SidebarMenuButton asChild isActive={pathname === link.href} icon={<link.icon />} tooltip={link.label}>
+                            <Link href={link.href}>
                                 {link.label}
-                            </SidebarMenuButton>
-                        </Link>
+                            </Link>
+                        </SidebarMenuButton>
                     </SidebarMenuItem>
                 ))}
                 <SidebarMenuItem>
                     <SidebarSeparator />
                 </SidebarMenuItem>
                  <SidebarMenuItem>
-                    <Link href="/calculators" passHref legacyBehavior>
-                        <SidebarMenuButton as="a" isActive={pathname === '/calculators'} icon={<Calculator />} tooltip="All Calculators">
+                    <SidebarMenuButton asChild isActive={pathname === '/calculators'} icon={<Calculator />} tooltip="All Calculators">
+                        <Link href="/calculators">
                            All Calculators
-                        </SidebarMenuButton>
-                    </Link>
+                        </Link>
+                    </SidebarMenuButton>
                 </SidebarMenuItem>
                 {calculatorNav.map((item) => (
                     <SidebarMenuItem key={item.href}>
-                        <Link href={item.href} passHref legacyBehavior>
-                            <SidebarMenuButton as="a" isActive={pathname === item.href} icon={<item.icon />} tooltip={item.title}>
+                        <SidebarMenuButton asChild isActive={pathname === item.href} icon={<item.icon />} tooltip={item.title}>
+                             <Link href={item.href}>
                                 {item.title}
-                            </SidebarMenuButton>
-                        </Link>
+                            </Link>
+                        </SidebarMenuButton>
                     </SidebarMenuItem>
                 ))}
             </SidebarMenu>

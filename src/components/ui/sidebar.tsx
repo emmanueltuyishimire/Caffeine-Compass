@@ -553,8 +553,16 @@ const SidebarMenuButton = React.forwardRef<
     },
     ref
   ) => {
-    const Comp = asChild ? Slot : as || "button"
+    const Comp = asChild ? Slot : "button"
     const { isMobile, state } = useSidebar()
+
+    const buttonContent = (
+        <>
+            {icon}
+            <span className="flex-grow text-left">{children}</span>
+            {rightIcon}
+        </>
+    );
 
     const button = (
       <Comp
@@ -565,11 +573,24 @@ const SidebarMenuButton = React.forwardRef<
         className={cn('min-h-11 min-w-11', sidebarMenuButtonVariants({ variant, size }), className)}
         {...props}
       >
-        {icon}
-        <span className="flex-grow text-left">{children}</span>
-        {rightIcon}
+        {buttonContent}
       </Comp>
     );
+
+    if (asChild) {
+        return (
+             <Slot
+                ref={ref}
+                data-sidebar="menu-button"
+                data-size={size}
+                data-active={isActive}
+                className={cn(sidebarMenuButtonVariants({ variant, size }), className)}
+                {...props}
+            >
+                {buttonContent}
+            </Slot>
+        )
+    }
 
     if (!tooltip) {
       return button
@@ -610,7 +631,7 @@ const SidebarMenuAction = React.forwardRef<
       ref={ref}
       data-sidebar="menu-action"
       className={cn(
-        "absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground outline-none ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 peer-hover/menu-button:text-sidebar-accent-foreground [&>svg]:size-4 [&>svg]:shrink-0",
+        "absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground outline-none ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
         // Increases the hit area of the button on mobile.
         "after:absolute after:-inset-2 after:md:hidden",
         "peer-data-[size=sm]/menu-button:top-1",
