@@ -28,7 +28,7 @@ export default function SidebarNav() {
             <SidebarMenu>
                 {mainNav.map((link) => (
                     <SidebarMenuItem key={link.href}>
-                       <SidebarMenuButton asChild isActive={pathname === link.href} tooltip={link.label}>
+                        <SidebarMenuButton asChild isActive={pathname === link.href} tooltip={link.label}>
                             <Link href={link.href}>
                                 <link.icon />
                                 <span className="flex-grow text-left">{link.label}</span>

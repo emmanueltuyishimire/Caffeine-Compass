@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     'caffeine sensitivity',
   ],
   icons: {
-    icon: '/logo.png',
+    icon: '/favicon.ico',
+    apple: '/logo.png',
   },
-  manifest: '/manifest.json',
 };
 
 const websiteJsonLd = {
