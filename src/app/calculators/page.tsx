@@ -15,7 +15,7 @@ const pageJsonLd = {
   "@type": "WebPage",
   "name": "Caffeine Calculators",
   "description": "A complete suite of science-backed tools to help you understand and optimize your caffeine consumption for better health, focus, and sleep.",
-  "url": "https://calculation.site/calculators",
+  "url": "https://caffeinecompass.com/calculators",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -23,13 +23,13 @@ const pageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://calculation.site/"
+        "item": "https://caffeinecompass.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Calculators",
-        "item": "https://calculation.site/calculators"
+        "item": "https://caffeinecompass.com/calculators"
       }
     ]
   }
@@ -69,6 +69,12 @@ const calculatorSections = [
             description: "Suggests best caffeine timing for work or study.",
             icon: Clock,
         },
+         {
+            title: "Caffeine Sleep Calculator",
+            href: "/calculators/caffeine-sleep-calculator",
+            description: "Find out how much caffeine is left at bedtime.",
+            icon: Moon,
+        },
     ]
   },
   {
@@ -98,7 +104,7 @@ const calculatorSections = [
     category: "Knowledge & Tools",
     calculators: [
         {
-            title: "Caffeine Drinks Database",
+            title: "Caffeine in Drinks Database",
             href: "/calculators/caffeine-drinks-database",
             description: "Search 1,000+ beverages by caffeine mg.",
             icon: BookOpen,

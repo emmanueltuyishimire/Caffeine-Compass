@@ -38,21 +38,21 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://calculation.site/logo.png"
+      "url": "https://caffeinecompass.com/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://calculation.site/articles/caffeine-effect-on-rem-sleep"
+    "@id": "https://caffeinecompass.com/articles/caffeine-effect-on-rem-sleep"
   },
   "description": "An in-depth guide on how caffeine consumption affects REM sleep, impacting memory consolidation, emotional regulation, and overall brain health. Learn how to optimize your caffeine intake to protect your sleep quality.",
   "articleBody": "This article explores the complex relationship between caffeine and REM (Rapid Eye Movement) sleep. We delve into the science of sleep cycles, caffeine metabolism, and how the world's most popular stimulant can suppress this critical phase of sleep. The content covers the neurochemical mechanisms, common user pain points like waking up groggy, practical strategies to protect REM sleep, and real-world examples. It also provides guidance on using tools like the Caffeine Half-Life Calculator to make informed decisions about your caffeine consumption for better cognitive performance and emotional well-being.",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculation.site/" },
-      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://calculation.site/articles" },
-      { "@type": "ListItem", "position": 3, "name": "Caffeine's Effect on REM Sleep", "item": "https://calculation.site/articles/caffeine-effect-on-rem-sleep" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caffeinecompass.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://caffeinecompass.com/articles" },
+      { "@type": "ListItem", "position": 3, "name": "Caffeine's Effect on REM Sleep", "item": "https://caffeinecompass.com/articles/caffeine-effect-on-rem-sleep" }
     ]
   },
   "faqPage": {

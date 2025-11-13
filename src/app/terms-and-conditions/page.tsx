@@ -16,7 +16,7 @@ export default function TermsAndConditionsPage() {
         <p><em>Last Updated: <ClientDate /></em></p>
 
         <p>
-          Welcome to Caffeine Compass ("we," "us," or "our"). These Terms and Conditions ("Terms") govern your use of our website, located at caffeine-calculation-site.com (the "Site"), and the tools, content, and services offered thereon.
+          Welcome to Caffeine Compass ("we," "us," or "our"). These Terms and Conditions ("Terms") govern your use of our website, located at caffeinecompass.com (the "Site"), and the tools, content, and services offered thereon.
         </p>
         <p>
           By accessing or using our Site, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to all of the terms and conditions stated on this page, do not continue to use Caffeine Compass.

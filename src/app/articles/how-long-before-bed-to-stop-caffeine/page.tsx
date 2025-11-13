@@ -38,21 +38,21 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeine-calculation-site.com/logo.png"
+      "url": "https://caffeinecompass.com/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://caffeine-calculation-site.com/articles/how-long-before-bed-to-stop-caffeine"
+    "@id": "https://caffeinecompass.com/articles/how-long-before-bed-to-stop-caffeine"
   },
   "description": "An in-depth guide answering the critical question of when to have your last caffeinated drink to ensure deep, restorative sleep. The article covers caffeine half-life, sleep architecture, and provides a step-by-step method for determining your personal 'caffeine curfew'.",
   "articleBody": "This article explains the science behind why drinking caffeine too close to bedtime disrupts sleep. It covers caffeine's half-life, its effect on adenosine receptors and sleep stages like deep sleep and REM, and the factors that influence individual sensitivity. Readers will learn practical strategies and use the site's calculators to find their ideal time to stop caffeine for optimal health and energy.",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caffeine-calculation-site.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://caffeine-calculation-site.com/articles" },
-      { "@type": "ListItem", "position": 3, "name": "How Long Before Bed to Stop Caffeine", "item": "https://caffeine-calculation-site.com/articles/how-long-before-bed-to-stop-caffeine" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caffeinecompass.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://caffeinecompass.com/articles" },
+      { "@type": "ListItem", "position": 3, "name": "How Long Before Bed to Stop Caffeine", "item": "https://caffeinecompass.com/articles/how-long-before-bed-to-stop-caffeine" }
     ]
   },
   "faqPage": {
@@ -208,7 +208,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
               The primary problem driving people to search for this answer is the profound disconnect between how they <em>feel</em> and what is happening biochemically. You might not feel "buzzed" or jittery in the evening, leading you to believe the caffeine is gone. But this is a dangerous misconception. Caffeine is a long-lasting drug. Even after the initial alertness fades, a significant amount remains in your system, waging a silent war on your sleep architecture. It actively suppresses the deep, restorative stages of sleep (like slow-wave and REM sleep) that are essential for physical repair, memory consolidation, and emotional regulation. This is why you can sleep for a full eight hours yet wake up feeling groggy, unrefreshed, and reaching for another coffee to shake off the fatigue—perpetuating a vicious cycle.
             </p>
             <p>
-              This article will provide a definitive, science-backed answer to that critical question. We will move beyond generic advice and delve into the science of caffeine metabolism, sleep cycles, and individual sensitivity. You will learn not just the "what" (the recommended cutoff time) but the "why" behind it. Most importantly, you will learn how to determine your <em>personal</em> caffeine curfew. By using our site's tools, such as the <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link>, you can transform this knowledge into a personalized strategy. Understanding and respecting your caffeine cutoff time is the most powerful, no-cost bio-hack available for radically improving your sleep, energy, and overall well-being.
+              This article will provide a definitive, science-backed answer to that critical question. We will move beyond generic advice and delve into the science of caffeine metabolism, sleep cycles, and individual sensitivity. You will learn not just the "what" (the recommended cutoff time) but the "why" behind it. Most importantly, you will learn how to determine your <em>personal</em> caffeine curfew. By using our site's tools, such as the <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link>, you can transform this knowledge into a personalized strategy. Understanding and respecting your caffeine cutoff time is the most powerful, no-cost bio-hack available for radically improving your sleep, energy, and overall well-being.
             </p>
           </section>
 
@@ -285,7 +285,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
               <strong>The Pain Point:</strong> You feel fine all day, but in the evenings you find yourself feeling inexplicably anxious, irritable, or emotionally reactive. Small problems feel like big crises, and you have a hard time relaxing and unwinding.
             </p>
             <p>
-              <strong>The Caffeine Connection:</strong> REM sleep is your brain's overnight emotional processing center. It helps you file away the emotional charge from the day's events. When caffeine suppresses REM sleep, you wake up with the previous day's emotional baggage still fully loaded. Furthermore, the stimulating effects of caffeine can become more pronounced in the evening as your body's natural energy wanes, manifesting as anxiety rather than clean focus. The very tool you use to manage a stressful day could be preventing your brain from recovering from it at night. Knowing your total daily dose with our <Link href="/calculators/intake">Intake Calculator</Link> can be an eye-opening first step.
+              <strong>The Caffeine Connection:</strong> REM sleep is your brain's overnight emotional processing center. It helps you file away the emotional charge from the day's events. When caffeine suppresses REM sleep, you wake up with the previous day's emotional baggage still fully loaded. Furthermore, the stimulating effects of caffeine can become more pronounced in the evening as your body's natural energy wanes, manifesting as anxiety rather than clean focus. The very tool you use to manage a stressful day could be preventing your brain from recovering from it at night. Knowing your total daily dose with our <Link href="/calculators/caffeine-intake">Intake Calculator</Link> can be an eye-opening first step.
             </p>
           </section>
 
@@ -327,13 +327,13 @@ export default function HowLongBeforeBedToStopCaffeine() {
 
             <h3 className="text-2xl font-semibold">3. Know Your Dose and Beware of Hidden Caffeine</h3>
             <p>
-              Your curfew applies to <em>all</em> forms of caffeine. Be mindful of less obvious sources in the afternoon and evening. That can of soda (30-50mg), square of dark chocolate (10-30mg), or cup of black tea (47mg) counts. Use our <Link href="/calculators/drinks-database">Drinks Database</Link> to check the caffeine content of your favorite items.
+              Your curfew applies to <em>all</em> forms of caffeine. Be mindful of less obvious sources in the afternoon and evening. That can of soda (30-50mg), square of dark chocolate (10-30mg), or cup of black tea (47mg) counts. Use our <Link href="/calculators/caffeine-drinks-database">Drinks Database</Link> to check the caffeine content of your favorite items.
             </p>
             
             <Card className="my-4 bg-primary/5 border-primary/20">
               <CardHeader><CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary"/>Caffeine Smart Tip #3: The Rule of "Quarter-Life"</CardTitle></CardHeader>
               <CardContent>
-                <p>For sleep, the caffeine "quarter-life" (the time to clear 75% of the dose) is often more important than the half-life. This is simply two half-lives. For an average person, that's 10 hours. Think of your caffeine curfew as one "quarter-life" before bed. You can visualize this perfectly with our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link>.</p>
+                <p>For sleep, the caffeine "quarter-life" (the time to clear 75% of the dose) is often more important than the half-life. This is simply two half-lives. For an average person, that's 10 hours. Think of your caffeine curfew as one "quarter-life" before bed. You can visualize this perfectly with our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link>.</p>
               </CardContent>
             </Card>
           </section>
@@ -351,7 +351,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
               </li>
               <li>
                 <strong>Step 2: Model Your Last Coffee with the Half-Life Calculator (3 Minutes)</strong>
-                <p>Think about your last caffeinated drink yesterday. Let's say it was a 150mg coffee at 3 PM. Go to the <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link>. Enter "150" as the dose. Select the Metabolism Speed that matches your result from Step 1. The chart will show you exactly how much caffeine was likely still in your system at your bedtime. Was it 40mg? 60mg? This is the tangible data showing what's disrupting your sleep.</p>
+                <p>Think about your last caffeinated drink yesterday. Let's say it was a 150mg coffee at 3 PM. Go to the <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link>. Enter "150" as the dose. Select the Metabolism Speed that matches your result from Step 1. The chart will show you exactly how much caffeine was likely still in your system at your bedtime. Was it 40mg? 60mg? This is the tangible data showing what's disrupting your sleep.</p>
               </li>
               <li>
                 <strong>Step 3: Work Backward and Set Your Curfew (1 Week Test)</strong>
@@ -383,7 +383,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
               </CardHeader>
               <CardContent className="space-y-2">
                 <p><strong>Persona:</strong> Sarah, a 42-year-old manager, is a self-diagnosed "slow metabolizer." She has just one cup of coffee (100mg) at 10 AM, but still feels restless in the evenings. Her bedtime is 10 PM.</p>
-                <p><strong>The Problem:</strong> Sarah uses the <Link href="/calculators/half-life">Half-Life Calculator</Link> and sets it to a "Slow" 8-hour half-life. She's shocked to see her 10 AM coffee still leaves <strong>29mg</strong> of caffeine in her system 12 hours later at her 10 PM bedtime. For her sensitive system, this is enough to cause issues.</p>
+                <p><strong>The Problem:</strong> Sarah uses the <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link> and sets it to a "Slow" 8-hour half-life. She's shocked to see her 10 AM coffee still leaves <strong>29mg</strong> of caffeine in her system 12 hours later at her 10 PM bedtime. For her sensitive system, this is enough to cause issues.</p>
                 <p><strong>The Curfew Solution:</strong> Sarah moves her one coffee back to 8 AM. Now, at 10 PM (14 hours later), the remaining caffeine is a negligible ~15mg. She finds her evening restlessness disappears, confirming that her early curfew is essential for her biology.</p>
               </CardContent>
             </Card>
@@ -417,12 +417,12 @@ export default function HowLongBeforeBedToStopCaffeine() {
                     <TableRow>
                         <TableCell className="font-medium">The "It's Not Coffee" Fallacy</TableCell>
                         <TableCell>Ignoring the caffeine in afternoon tea, soda, or dark chocolate. These "small" doses add up and are consumed close to bedtime.</TableCell>
-                        <TableCell>Your curfew applies to ALL caffeine. Use the <Link href="/calculators/intake">Intake Calculator</Link> to be aware of every source.</TableCell>
+                        <TableCell>Your curfew applies to ALL caffeine. Use the <Link href="/calculators/caffeine-intake">Intake Calculator</Link> to be aware of every source.</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell className="font-medium">Trusting How You "Feel"</TableCell>
                         <TableCell>Assuming that because you don't feel jittery or "buzzed," the caffeine is gone from your system.</TableCell>
-                        <TableCell>Rely on the math, not the feeling. Use the <Link href="/calculators/half-life">Half-Life Calculator</Link> to see the actual amount of caffeine still active in your body.</TableCell>
+                        <TableCell>Rely on the math, not the feeling. Use the <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link> to see the actual amount of caffeine still active in your body.</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell className="font-medium">Following a Friend's Advice</TableCell>
@@ -464,7 +464,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
                <AccordionItem value="faq-4">
                 <AccordionTrigger>What if I am a 'fast metabolizer'?</AccordionTrigger>
                 <AccordionContent>
-                  Fast metabolizers have more flexibility. An <strong>8-hour</strong> curfew might be sufficient for you. However, it's still wise to avoid large doses in the late afternoon, as high amounts can still impact sleep quality. You can model this using our <Link href="/calculators/half-life">Half-Life Calculator</Link>.
+                  Fast metabolizers have more flexibility. An <strong>8-hour</strong> curfew might be sufficient for you. However, it's still wise to avoid large doses in the late afternoon, as high amounts can still impact sleep quality. You can model this using our <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link>.
                 </AccordionContent>
               </AccordionItem>
                <AccordionItem value="faq-5">
@@ -482,7 +482,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
                <AccordionItem value="faq-7">
                 <AccordionTrigger>What about hidden caffeine in the evening?</AccordionTrigger>
                 <AccordionContent>
-                  You must be vigilant about hidden caffeine. Sources like dark chocolate, some sodas, pre-workout supplements, and even some pain relievers (like Excedrin) can contain enough caffeine to disrupt sleep. Use our <Link href="/calculators/intake">Intake Calculator</Link> to track everything.
+                  You must be vigilant about hidden caffeine. Sources like dark chocolate, some sodas, pre-workout supplements, and even some pain relievers (like Excedrin) can contain enough caffeine to disrupt sleep. Use our <Link href="/calculators/caffeine-intake">Intake Calculator</Link> to track everything.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-8">
@@ -513,7 +513,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/half-life" className="hover:underline">Caffeine Half-Life Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-half-life" className="hover:underline">Caffeine Half-Life Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>The essential tool. Visualize how caffeine decays in your body to find your perfect cutoff time.</p>
@@ -542,5 +542,3 @@ export default function HowLongBeforeBedToStopCaffeine() {
     </>
   );
 }
-
-    

@@ -22,7 +22,7 @@ import {
 } from '@/components/ui/table';
 
 export const metadata: Metadata = {
-  title: 'Caffeine Intake Calculator — Accurate Caffeine Tracking Tool (Free & Science-Based)',
+  title: 'Caffeine Intake Calculator — Accurate Caffeine Tracking Tool',
   description: 'Use this free calculator to measure your caffeine intake and compare it to safe limits. Our science-backed tool helps you manage energy, sleep, and health.',
 };
 
@@ -39,12 +39,12 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://calculation.site/logo.png"
+      "url": "https://caffeinecompass.com/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://calculation.site/calculators/caffeine-intake"
+    "@id": "https://caffeinecompass.com/calculators/caffeine-intake"
   },
   "description": "Log your drinks to measure your total daily caffeine load and compare it to safe limits.",
   "articleBody": "Most people dramatically underestimate their daily caffeine intake. This overconsumption is often the hidden culprit behind anxiety, jitteriness, digestive issues, and, most commonly, poor sleep. This calculator removes the guesswork, giving you a personalized, data-driven look at your habits so you can optimize your intake for better health, focus, and sleep.",
@@ -588,5 +588,3 @@ export default function IntakeCalculatorPage() {
     </>
   );
 }
-
-    
