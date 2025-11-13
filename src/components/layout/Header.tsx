@@ -11,6 +11,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { ThemeToggle } from '../theme-toggle';
+import { MobileNav } from './MobileNav';
 
 const Header = () => {
   return (
@@ -23,7 +24,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex items-center gap-2">
-            <NavigationMenu>
+            <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
                 <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
@@ -56,6 +57,7 @@ const Header = () => {
             </NavigationMenuList>
             </NavigationMenu>
             <ThemeToggle />
+            <MobileNav />
         </div>
       </div>
     </header>

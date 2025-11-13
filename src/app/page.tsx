@@ -89,6 +89,7 @@ export default function Home() {
                   fill
                   className="object-cover object-center z-0"
                   priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
             )}
           <div className="relative z-10 p-4 max-w-4xl mx-auto bg-black/50 rounded-xl">
@@ -116,7 +117,7 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {featuredCalculators.map((calc) => (
-                  <Link key={calc.title} href={calc.href} className="block">
+                  <Link key={calc.title} href={calc.href} className="block" aria-label={`Go to ${calc.title}`}>
                     <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
                       <CardHeader>
                         <div className="flex items-center gap-4">
@@ -190,6 +191,7 @@ export default function Home() {
                     height={400}
                     className="rounded-lg shadow-lg"
                     data-ai-hint={whyUsImage.imageHint}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 )}
               </div>
