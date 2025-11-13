@@ -1,13 +1,13 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { CalendarDays } from 'lucide-react';
+import { CalendarDays, ChevronsUpDown, PlusCircle, Trash2 } from 'lucide-react';
 import {
   Table,
   TableBody,
@@ -30,6 +30,9 @@ import {
   ChartTooltipContent,
 } from '@/components/ui/chart';
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+import { drinks } from '@/lib/drinks';
+import type { ConsumedDrink } from '@/lib/types';
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
 
 interface TaperStep {
   day: number;
@@ -45,13 +48,50 @@ const chartConfig = {
 };
 
 export default function CaffeineWithdrawalTracker() {
-  const [intake, setIntake] = useState(300);
+  const [consumed, setConsumed] = useState<ConsumedDrink[]>([]);
+  const [open, setOpen] = useState(false);
   const [duration, setDuration] = useState(14);
   const [frequency, setFrequency] = useState(2);
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [schedule, setSchedule] = useState<TaperStep[]>([]);
   
+  const intake = useMemo(() => {
+    return consumed.reduce((total, drink) => total + drink.caffeine * drink.quantity, 0);
+  }, [consumed]);
+
+  const addDrink = (drinkId: string) => {
+    setConsumed((currentConsumed) => {
+      const existing = currentConsumed.find((d) => d.id === drinkId);
+      if (existing) {
+        return currentConsumed.map((d) =>
+          d.id === drinkId ? { ...d, quantity: d.quantity + 1 } : d
+        );
+      } else {
+        const drinkToAdd = drinks.find((d) => d.id === drinkId);
+        return drinkToAdd ? [...currentConsumed, { ...drinkToAdd, quantity: 1 }] : currentConsumed;
+      }
+    });
+  };
+
+  const removeDrink = (drinkId: string) => {
+    setConsumed((currentConsumed) => currentConsumed.filter((d) => d.id !== drinkId));
+  };
+
+  const updateQuantity = (drinkId: string, quantity: number) => {
+    const newQuantity = Math.max(1, quantity);
+    setConsumed((currentConsumed) =>
+      currentConsumed.map((d) =>
+        d.id === drinkId ? { ...d, quantity: newQuantity } : d
+      )
+    );
+  };
+
+
   const generateSchedule = () => {
+    if (intake <= 0) {
+      setSchedule([]);
+      return;
+    }
     const newSchedule: TaperStep[] = [];
     const reductionSteps = Math.floor(duration / frequency);
     const reductionAmount = intake / (reductionSteps + 1);
@@ -85,17 +125,80 @@ export default function CaffeineWithdrawalTracker() {
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
-          <div className="space-y-2">
-            <Label htmlFor="current-intake">Current Daily Intake (mg)</Label>
-            <Input
-              id="current-intake"
-              type="number"
-              value={intake}
-              onChange={(e) => setIntake(parseInt(e.target.value) || 0)}
-              placeholder="e.g., 300"
-            />
-          </div>
+        <div>
+            <Label>What's your current daily intake?</Label>
+            <p className="text-sm text-muted-foreground mb-2">Add the drinks you consume on a typical day to calculate your starting intake.</p>
+            <div className="space-y-2 p-4 border rounded-md">
+                {consumed.length > 0 && (
+                    <div className="space-y-2 mb-4">
+                        {consumed.map((drink, index) => (
+                        <div key={drink.id} role="listitem" className="flex items-center gap-2 text-sm">
+                            <drink.icon className="h-5 w-5 text-muted-foreground" aria-hidden="true" />
+                            <div className="flex-grow">
+                            <p className="font-medium">{drink.name}</p>
+                            </div>
+                            <div className="flex items-center gap-2">
+                            <Label htmlFor={`quantity-${index}`} className="sr-only">Quantity of {drink.name}</Label>
+                            <Input
+                                id={`quantity-${index}`}
+                                type="number"
+                                min="1"
+                                value={drink.quantity}
+                                onChange={(e) => updateQuantity(drink.id, parseInt(e.target.value, 10))}
+                                className="w-14 h-8 text-center"
+                                aria-label={`Quantity of ${drink.name}`}
+                            />
+                            <Button variant="ghost" size="icon" onClick={() => removeDrink(drink.id)} aria-label={`Remove ${drink.name}`}>
+                                <Trash2 className="h-4 w-4 text-destructive" />
+                            </Button>
+                            </div>
+                        </div>
+                        ))}
+                    </div>
+                )}
+                <Popover open={open} onOpenChange={setOpen}>
+                <PopoverTrigger asChild>
+                    <Button id="drink-search" variant="outline" role="combobox" aria-expanded={open} className="w-full sm:w-[300px] justify-between">
+                        Add a drink...
+                        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" aria-hidden="true" />
+                    </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[300px] p-0">
+                    <Command>
+                    <CommandInput placeholder="Search drink..." />
+                    <CommandList>
+                        <CommandEmpty>No drink found.</CommandEmpty>
+                        <CommandGroup>
+                        {drinks.map((drink) => (
+                            <CommandItem
+                            key={drink.id}
+                            value={drink.name}
+                            onSelect={() => {
+                                addDrink(drink.id);
+                                setOpen(false);
+                            }}
+                            className="flex justify-between items-center"
+                            >
+                            <div className="flex items-center gap-2">
+                                <drink.icon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+                                <span>{drink.name}</span>
+                            </div>
+                            <span className="text-xs text-muted-foreground">{drink.caffeine}mg</span>
+                            </CommandItem>
+                        ))}
+                        </CommandGroup>
+                    </CommandList>
+                    </Command>
+                </PopoverContent>
+                </Popover>
+                 <div className="mt-4 p-4 border-t">
+                    <p className="text-sm font-medium text-muted-foreground">Total Daily Intake:</p>
+                    <p className="text-2xl font-bold text-primary">{intake} mg</p>
+                </div>
+            </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
           <div className="space-y-2">
             <Label htmlFor="taper-duration">Tapering Duration (Days)</Label>
              <Select onValueChange={(value) => setDuration(Number(value))} defaultValue={String(duration)}>
@@ -153,7 +256,7 @@ export default function CaffeineWithdrawalTracker() {
             </Popover>
           </div>
         </div>
-        <Button onClick={generateSchedule} className="w-full sm:w-auto">
+        <Button onClick={generateSchedule} className="w-full sm:w-auto" disabled={intake <= 0}>
           <CalendarDays className="mr-2 h-4 w-4" aria-hidden="true" />
           Generate Tapering Plan
         </Button>

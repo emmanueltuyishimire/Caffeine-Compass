@@ -1,11 +1,10 @@
 
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 
@@ -22,6 +21,12 @@ export default function HalfLifeEstimator() {
   
   const chartData = useMemo(() => {
     const data = [];
+    if (caffeineAmount <= 0 || halfLife <= 0) {
+      for (let hour = 0; hour <= 12; hour++) {
+        data.push({ hour: `${hour}h`, caffeine: 0 });
+      }
+      return data;
+    }
     for (let hour = 0; hour <= 12; hour++) {
       const remainingCaffeine = caffeineAmount * Math.pow(0.5, hour / halfLife);
       data.push({
@@ -33,6 +38,7 @@ export default function HalfLifeEstimator() {
   }, [caffeineAmount, halfLife]);
 
   const caffeineAt8Hours = useMemo(() => {
+    if (caffeineAmount <= 0 || halfLife <= 0) return 0;
     return Math.round(caffeineAmount * Math.pow(0.5, 8 / halfLife));
   }, [caffeineAmount, halfLife]);
 
@@ -55,17 +61,15 @@ export default function HalfLifeEstimator() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="metabolism">Metabolism Speed</Label>
-            <Select onValueChange={(value) => setHalfLife(Number(value))} defaultValue={String(halfLife)}>
-              <SelectTrigger id="metabolism" aria-label="Select metabolism speed">
-                <SelectValue placeholder="Select your metabolism speed" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="4">Fast (4-hour half-life)</SelectItem>
-                <SelectItem value="5">Average (5-hour half-life)</SelectItem>
-                <SelectItem value="6">Slow (6-hour half-life)</SelectItem>
-              </SelectContent>
-            </Select>
+            <Label htmlFor="half-life">Caffeine Half-Life (hours)</Label>
+            <Input
+              id="half-life"
+              type="number"
+              step="0.5"
+              value={halfLife}
+              onChange={(e) => setHalfLife(Math.max(0.5, parseFloat(e.target.value) || 0.5))}
+              placeholder="e.g., 5"
+            />
           </div>
         </div>
         <div>

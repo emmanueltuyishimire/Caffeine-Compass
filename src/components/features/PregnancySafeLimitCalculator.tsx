@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Progress } from '@/components/ui/progress';
 import { drinks } from '@/lib/drinks';
 import type { ConsumedDrink } from '@/lib/types';
-import { ChevronsUpDown, Trash2, HeartPulse, ShieldAlert, ShieldCheck } from 'lucide-react';
+import { ChevronsUpDown, Trash2, HeartPulse, ShieldAlert, ShieldCheck, PlusCircle } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { cn } from '@/lib/utils';
 import { Label } from '../ui/label';
@@ -20,6 +20,8 @@ const RECOMMENDED_PREGNANCY_LIMIT = 200; // mg, as per ACOG guidelines
 export default function PregnancySafeLimitCalculator() {
   const [consumed, setConsumed] = useState<ConsumedDrink[]>([]);
   const [open, setOpen] = useState(false);
+  const [customName, setCustomName] = useState('');
+  const [customCaffeine, setCustomCaffeine] = useState('');
 
   const totalCaffeine = useMemo(() => {
     return consumed.reduce((total, drink) => total + drink.caffeine * drink.quantity, 0);
@@ -41,6 +43,24 @@ export default function PregnancySafeLimitCalculator() {
         return drinkToAdd ? [...currentConsumed, { ...drinkToAdd, quantity: 1 }] : currentConsumed;
       }
     });
+  };
+
+  const addCustomDrink = () => {
+    const caffeine = parseInt(customCaffeine, 10);
+    if (customName && !isNaN(caffeine) && caffeine > 0) {
+        const customDrink: ConsumedDrink = {
+            id: `custom-${Date.now()}`,
+            name: customName,
+            category: 'Other',
+            caffeine: caffeine,
+            size: 0,
+            icon: PlusCircle,
+            quantity: 1,
+        };
+        setConsumed(current => [...current, customDrink]);
+        setCustomName('');
+        setCustomCaffeine('');
+    }
   };
 
   const removeDrink = (drinkId: string) => {
@@ -137,10 +157,21 @@ export default function PregnancySafeLimitCalculator() {
           </div>
            <Button onClick={() => setConsumed([])} variant="secondary">Reset Day</Button>
         </div>
+        
+        <div className="p-4 border rounded-lg bg-muted/50 space-y-4">
+            <h3 className="text-sm font-medium text-muted-foreground">Add Custom Item</h3>
+            <div className="flex flex-col sm:flex-row gap-2">
+                <Input placeholder="Item Name (e.g., Chocolate Bar)" value={customName} onChange={e => setCustomName(e.target.value)} />
+                <Input type="number" placeholder="Caffeine (mg)" value={customCaffeine} onChange={e => setCustomCaffeine(e.target.value)} className="w-full sm:w-32"/>
+                <Button onClick={addCustomDrink} disabled={!customName || !customCaffeine}>
+                    <PlusCircle className="mr-2 h-4 w-4"/> Add
+                </Button>
+            </div>
+        </div>
 
         <div className="space-y-4" role="list">
           {consumed.length === 0 ? (
-            <p className="text-center text-muted-foreground py-4">Log your drinks to track your daily intake.</p>
+            <p className="text-center text-muted-foreground py-4">Log your drinks and other caffeinated items to track your daily intake.</p>
           ) : (
             consumed.map((drink, index) => (
               <div key={drink.id} role="listitem" className="flex items-center gap-4 p-2 rounded-md border">
@@ -148,7 +179,7 @@ export default function PregnancySafeLimitCalculator() {
                 <div className="flex-grow">
                   <p className="font-medium">{drink.name}</p>
                   <p className="text-sm text-muted-foreground">
-                    {drink.caffeine}mg per {drink.size}ml
+                    {drink.caffeine}mg {drink.size > 0 ? `per serving` : ''}
                   </p>
                 </div>
                 <div className="flex items-center gap-2">

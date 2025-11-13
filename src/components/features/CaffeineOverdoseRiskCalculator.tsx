@@ -6,11 +6,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
-import { AlertTriangle, Shield, HeartPulse, Skull } from 'lucide-react';
+import { AlertTriangle, Shield, HeartPulse, Skull, ChevronsUpDown } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { Button } from '@/components/ui/button';
 
 const LBS_TO_KG = 0.453592;
 
-const riskLevels = {
+const defaultRiskLevels = {
   noticeable: {
     mgPerKg: 3,
     title: 'Noticeable Effects',
@@ -37,6 +39,12 @@ const riskLevels = {
 export default function CaffeineOverdoseRiskCalculator() {
   const [weight, setWeight] = useState(70);
   const [unit, setUnit] = useState<'kg' | 'lbs'>('kg');
+  const [customLevels, setCustomLevels] = useState({
+      noticeable: defaultRiskLevels.noticeable.mgPerKg,
+      mild: defaultRiskLevels.mild.mgPerKg,
+      severe: defaultRiskLevels.severe.mgPerKg,
+  });
+  const [isOpen, setIsOpen] = useState(false);
 
   const weightInKg = useMemo(() => {
     return unit === 'lbs' ? weight * LBS_TO_KG : weight;
@@ -47,11 +55,15 @@ export default function CaffeineOverdoseRiskCalculator() {
       return { noticeable: 0, mild: 0, severe: 0 };
     }
     return {
-      noticeable: Math.round(weightInKg * riskLevels.noticeable.mgPerKg),
-      mild: Math.round(weightInKg * riskLevels.mild.mgPerKg),
-      severe: Math.round(weightInKg * riskLevels.severe.mgPerKg),
+      noticeable: Math.round(weightInKg * customLevels.noticeable),
+      mild: Math.round(weightInKg * customLevels.mild),
+      severe: Math.round(weightInKg * customLevels.severe),
     };
-  }, [weightInKg]);
+  }, [weightInKg, customLevels]);
+
+  const handleLevelChange = (level: 'noticeable' | 'mild' | 'severe', value: string) => {
+    setCustomLevels(prev => ({...prev, [level]: Number(value)}));
+  };
 
   return (
     <Card className="max-w-2xl mx-auto">
@@ -92,9 +104,10 @@ export default function CaffeineOverdoseRiskCalculator() {
         <div className="space-y-4">
             <h3 className="font-semibold">Estimated Risk Thresholds:</h3>
             <div className="grid grid-cols-1 gap-4" role="list">
-                {Object.entries(riskLevels).map(([key, level]) => {
+                {Object.entries(defaultRiskLevels).map(([key, level]) => {
                     const { icon: Icon, title, description, color } = level;
-                    const value = calculations[key as keyof typeof calculations];
+                    const typedKey = key as keyof typeof calculations;
+                    const value = calculations[typedKey];
                     return (
                         <div key={key} role="listitem" className="flex items-start gap-4 p-4 border rounded-lg bg-card-foreground/5">
                             <Icon className={`h-8 w-8 mt-1 shrink-0 ${color}`} aria-hidden="true" />
@@ -108,6 +121,31 @@ export default function CaffeineOverdoseRiskCalculator() {
                 })}
             </div>
         </div>
+        
+        <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+            <CollapsibleTrigger asChild>
+                <Button variant="ghost" className="w-full flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                    <ChevronsUpDown className="h-4 w-4" />
+                    {isOpen ? 'Hide' : 'Show'} Advanced Settings
+                </Button>
+            </CollapsibleTrigger>
+            <CollapsibleContent className="space-y-4 pt-4">
+                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <Label htmlFor="noticeable-mg" className="text-xs">Noticeable Effects (mg/kg)</Label>
+                        <Input id="noticeable-mg" type="number" value={customLevels.noticeable} onChange={e => handleLevelChange('noticeable', e.target.value)} />
+                    </div>
+                     <div>
+                        <Label htmlFor="mild-mg" className="text-xs">Mild Toxicity (mg/kg)</Label>
+                        <Input id="mild-mg" type="number" value={customLevels.mild} onChange={e => handleLevelChange('mild', e.target.value)} />
+                    </div>
+                     <div>
+                        <Label htmlFor="severe-mg" className="text-xs">Severe Toxicity (mg/kg)</Label>
+                        <Input id="severe-mg" type="number" value={customLevels.severe} onChange={e => handleLevelChange('severe', e.target.value)} />
+                    </div>
+                 </div>
+            </CollapsibleContent>
+        </Collapsible>
 
       </CardContent>
        <CardFooter className="pt-6 border-t">
