@@ -22,7 +22,7 @@ import {
 } from '@/components/ui/table';
 
 export const metadata: Metadata = {
-  title: 'Caffeine Intake Calculator — Accurate Caffeine Tracking Tool (Free & Science-Based)',
+  title: 'Caffeine Intake Calculator — Accurate Caffeine Tracking Tool',
   description: 'Use this free calculator to measure your caffeine intake and compare it to safe limits. Our science-backed tool helps you manage energy, sleep, and health.',
 };
 
@@ -588,5 +588,3 @@ export default function IntakeCalculatorPage() {
     </>
   );
 }
-
-    

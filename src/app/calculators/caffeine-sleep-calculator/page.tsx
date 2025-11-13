@@ -42,21 +42,21 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeinecompass.com/logo.png"
+      "url": "https://calculation.site/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://caffeinecompass.com/calculators/caffeine-sleep-calculator"
+    "@id": "https://calculation.site/calculators/caffeine-sleep-calculator"
   },
   "description": "Calculate how much residual caffeine will be in your system at bedtime to protect and improve your sleep quality.",
   "articleBody": "This calculator helps you determine the amount of caffeine left in your body at bedtime based on the dose and timing of your last caffeinated drink and your personal metabolism speed. It visualizes the caffeine decay curve, empowering you to make smarter choices about your caffeine consumption to ensure it does not interfere with deep, restorative sleep.",
     "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caffeinecompass.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://caffeinecompass.com/calculators" },
-      { "@type": "ListItem", "position": 3, "name": "Caffeine Sleep Calculator", "item": "https://caffeinecompass.com/calculators/caffeine-sleep-calculator" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculation.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://calculation.site/calculators" },
+      { "@type": "ListItem", "position": 3, "name": "Caffeine Sleep Calculator", "item": "https://calculation.site/calculators/caffeine-sleep-calculator" }
     ]
   },
   "howTo": {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://caffeinecompass.com/sitemap.xml
+Sitemap: https://calculation.site/sitemap.xml

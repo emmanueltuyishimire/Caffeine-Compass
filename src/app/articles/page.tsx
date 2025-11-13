@@ -51,14 +51,14 @@ const articlesPageJsonLd = {
   "@type": "WebPage",
   "name": "Learn About Caffeine",
   "description": "Explore in-depth articles, guides, and tools to understand caffeine.",
-  "url": "https://caffeinecompass.com/articles",
+  "url": "https://calculation.site/articles",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [...articleLinks, ...toolLinks].map((item, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "name": item.title,
-      "url": `https://caffeinecompass.com${item.href}`
+      "url": `https://calculation.site${item.href}`
     }))
   },
   "breadcrumb": {
@@ -68,13 +68,13 @@ const articlesPageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeinecompass.com/"
+        "item": "https://calculation.site/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Learn",
-        "item": "https://caffeinecompass.com/articles"
+        "item": "https://calculation.site/articles"
       }
     ]
   }

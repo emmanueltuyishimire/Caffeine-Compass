@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://caffeinecompass.com';
+  const baseUrl = 'https://calculation.site';
 
   const staticPages = [
     '/about',
