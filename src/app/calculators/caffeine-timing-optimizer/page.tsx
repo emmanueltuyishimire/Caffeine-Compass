@@ -1,7 +1,13 @@
 
-import CaffeineTimingOptimizer from '@/components/features/CaffeineTimingOptimizer';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
+import dynamic from 'next/dynamic';
+
+const CaffeineTimingOptimizer = dynamic(() => import('@/components/features/CaffeineTimingOptimizer'), {
+  ssr: false,
+  loading: () => <div className="max-w-2xl mx-auto h-96 bg-muted rounded-lg animate-pulse" />,
+});
+
 
 export const metadata: Metadata = {
   title: 'Caffeine Timing Optimizer — When to Drink Coffee for Energy & Focus',
@@ -42,7 +48,7 @@ export default function CaffeineTimingOptimizerPage() {
     <>
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Caffeine Timing Optimizer
           </h1>
@@ -54,8 +60,8 @@ export default function CaffeineTimingOptimizerPage() {
         <CaffeineTimingOptimizer />
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-            <section>
-                <h2 className="text-3xl font-bold">The Science of Perfect Timing</h2>
+            <section aria-labelledby="science-heading">
+                <h2 id="science-heading" className="text-3xl font-bold">The Science of Perfect Timing</h2>
                 <p>
                     Caffeine is a powerful tool for enhancing cognitive performance, but its effectiveness is all about timing. Consuming it too early can lead to a crash before your most important tasks, while consuming it too late can sabotage your sleep. This calculator helps you answer the crucial question: <strong>"When should I drink coffee for energy?"</strong> by using established scientific principles of caffeine metabolism.
                 </p>

@@ -1,5 +1,4 @@
 
-import CaffeineWithdrawalTracker from '@/components/features/CaffeineWithdrawalTracker';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -20,6 +19,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Lightbulb, TrendingDown, Target, ShieldCheck, CalendarDays, Coffee, Activity } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
+import dynamic from 'next/dynamic';
+
+const CaffeineWithdrawalTracker = dynamic(() => import('@/components/features/CaffeineWithdrawalTracker'), {
+  ssr: false,
+  loading: () => <div className="max-w-4xl mx-auto h-[600px] bg-muted rounded-lg animate-pulse" />,
+});
+
 
 export const metadata: Metadata = {
   title:
@@ -57,7 +63,7 @@ export default function CaffeineWithdrawalTrackerPage() {
     <>
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Caffeine Withdrawal Tracker & Tapering Calculator
           </h1>
@@ -69,8 +75,8 @@ export default function CaffeineWithdrawalTrackerPage() {
         <CaffeineWithdrawalTracker />
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-          <section id="introduction">
-            <h2 className="text-3xl font-bold">
+          <section id="introduction" aria-labelledby="introduction-heading">
+            <h2 id="introduction-heading" className="text-3xl font-bold">
               Breaking Free: How to Quit Caffeine Without the Headaches
             </h2>
             <p>
@@ -86,8 +92,8 @@ export default function CaffeineWithdrawalTrackerPage() {
 
           <Separator />
 
-          <section id="how-it-works">
-              <h2 className="text-3xl font-bold">How This Calculator Works: The Science of Tapering</h2>
+          <section id="how-it-works" aria-labelledby="how-it-works-heading">
+              <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Calculator Works: The Science of Tapering</h2>
               <p>
                   This tool is built on a simple yet effective principle: gradual reduction. Instead of a sudden drop to zero, tapering involves systematically decreasing your caffeine intake over a set period. This allows your brain to adapt to lower levels of caffeine without triggering a severe withdrawal response.
               </p>
@@ -136,8 +142,8 @@ export default function CaffeineWithdrawalTrackerPage() {
 
           <Separator />
 
-          <section id="features">
-              <h2 className="text-3xl font-bold">Key Features of the Tool</h2>
+          <section id="features" aria-labelledby="features-heading">
+              <h2 id="features-heading" className="text-3xl font-bold">Key Features of the Tool</h2>
               <p>
                   This tracker is designed to make your tapering journey as simple and effective as possible.
               </p>
@@ -177,8 +183,8 @@ export default function CaffeineWithdrawalTrackerPage() {
 
           <Separator />
 
-          <section id="instructions">
-              <h2 className="text-3xl font-bold">Step-by-Step Instructions: How to Create Your Tapering Plan</h2>
+          <section id="instructions" aria-labelledby="instructions-heading">
+              <h2 id="instructions-heading" className="text-3xl font-bold">Step-by-Step Instructions: How to Create Your Tapering Plan</h2>
               <p>Follow these steps to generate your personalized caffeine withdrawal schedule:</p>
               <ol className="list-decimal pl-5 space-y-2">
                   <li>
@@ -201,8 +207,8 @@ export default function CaffeineWithdrawalTrackerPage() {
           
           <Separator />
 
-          <section id="use-cases">
-              <h2 className="text-3xl font-bold">Real-Life Use Cases: Tapering Strategies for Success</h2>
+          <section id="use-cases" aria-labelledby="use-cases-heading">
+              <h2 id="use-cases-heading" className="text-3xl font-bold">Real-Life Use Cases: Tapering Strategies for Success</h2>
               <p>
                   This tool is versatile. Here’s how different people can use it to quit caffeine successfully.
               </p>
@@ -230,8 +236,8 @@ export default function CaffeineWithdrawalTrackerPage() {
           
           <Separator />
           
-          <section id="terminologies">
-              <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
+          <section id="terminologies" aria-labelledby="terminologies-heading">
+              <h2 id="terminologies-heading" className="text-3xl font-bold">Key Terminologies & Concepts</h2>
               <ul className="space-y-4">
                   <li>
                       <h3 className="text-xl font-semibold">Caffeine Withdrawal</h3>
@@ -262,8 +268,8 @@ export default function CaffeineWithdrawalTrackerPage() {
 
           <Separator />
 
-          <section id="faq">
-            <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>What are the most common caffeine withdrawal symptoms?</AccordionTrigger>
@@ -318,8 +324,8 @@ export default function CaffeineWithdrawalTrackerPage() {
 
           <Separator />
           
-          <section id="related-tools">
-              <h2 className="text-3xl font-bold">Related Tools & Resources</h2>
+          <section id="related-tools" aria-labelledby="related-tools-heading">
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>

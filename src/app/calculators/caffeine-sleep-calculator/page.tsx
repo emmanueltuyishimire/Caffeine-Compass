@@ -1,5 +1,4 @@
 
-import HalfLifeEstimator from '@/components/features/HalfLifeEstimator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -20,6 +19,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Moon, Clock, BrainCircuit, Lightbulb, User, Briefcase, GraduationCap, Heart, CheckCircle, ZapOff, Droplet } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
+import dynamic from 'next/dynamic';
+
+const HalfLifeEstimator = dynamic(() => import('@/components/features/HalfLifeEstimator'), {
+  ssr: false,
+  loading: () => <div className="max-w-4xl mx-auto h-[480px] bg-muted rounded-lg animate-pulse" />,
+});
+
 
 export const metadata: Metadata = {
   title:
@@ -130,7 +136,7 @@ export default function CaffeineSleepCalculatorPage() {
     <>
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Caffeine Sleep Calculator — How Much Caffeine Is Left at Bedtime?
           </h1>
@@ -142,8 +148,8 @@ export default function CaffeineSleepCalculatorPage() {
         <HalfLifeEstimator />
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-            <section id="introduction">
-                <h2 className="text-3xl font-bold">The Invisible Thief: Unmasking the Lingering Caffeine That Steals Your Sleep</h2>
+            <section id="introduction" aria-labelledby="introduction-heading">
+                <h2 id="introduction-heading" className="text-3xl font-bold">The Invisible Thief: Unmasking the Lingering Caffeine That Steals Your Sleep</h2>
                 <p>
                     It's a frustratingly common modern ailment: you go to bed feeling physically exhausted, you follow all the conventional sleep hygiene advice, yet you toss and turn for hours. Or perhaps you fall asleep quickly but wake up feeling groggy, unrested, and as though you haven't truly slept at all. Before you blame stress or a busy mind, consider a more likely culprit: the invisible ghost of a coffee you drank hours earlier. This <strong>Caffeine Sleep Calculator</strong> is a powerful diagnostic tool designed to unmask this silent thief. It provides a clear, data-driven answer to the single most important question for your sleep quality: "How much caffeine is still active in my body at bedtime?"
                 </p>
@@ -157,8 +163,8 @@ export default function CaffeineSleepCalculatorPage() {
 
           <Separator />
           
-            <section id="how-it-works">
-                <h2 className="text-3xl font-bold">How This Calculator Works: The Science of Your Caffeine Decay Curve</h2>
+            <section id="how-it-works" aria-labelledby="how-it-works-heading">
+                <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Calculator Works: The Science of Your Caffeine Decay Curve</h2>
                 <p>
                     This calculator is a specialized application of our core <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link>, framed to answer one crucial question for your well-being: "How much caffeine will be in my system when I try to sleep?" It uses a standard pharmacokinetic model to visualize how the caffeine you consume is cleared from your body over time. The result is a personalized "decay curve" that shows you the amount of active caffeine remaining hour by hour.
                 </p>
@@ -194,8 +200,8 @@ export default function CaffeineSleepCalculatorPage() {
           
           <Separator />
 
-          <section id="features">
-              <h2 className="text-3xl font-bold">Key Features of This Sleep Tool</h2>
+          <section id="features" aria-labelledby="features-heading">
+              <h2 id="features-heading" className="text-3xl font-bold">Key Features of This Sleep Tool</h2>
               <Table>
                   <caption className='sr-only'>Features of the Caffeine Sleep Calculator</caption>
                   <TableHeader>
@@ -232,8 +238,8 @@ export default function CaffeineSleepCalculatorPage() {
 
           <Separator />
           
-            <section id="how-to-use">
-              <h2 className="text-3xl font-bold">Step-by-Step Instructions: How to Calculate Your Bedtime Caffeine Level</h2>
+            <section id="how-to-use" aria-labelledby="how-to-use-heading">
+              <h2 id="how-to-use-heading" className="text-3xl font-bold">Step-by-Step Instructions: How to Calculate Your Bedtime Caffeine Level</h2>
               <p>Using this calculator to find out how much caffeine will be interfering with your sleep is a simple, four-step process:</p>
               <ol className="list-decimal pl-5 space-y-4">
                 <li>
@@ -257,8 +263,8 @@ export default function CaffeineSleepCalculatorPage() {
 
           <Separator />
 
-           <section id="examples">
-              <h2 className="text-3xl font-bold">Worked Examples: Real-World Scenarios</h2>
+           <section id="examples" aria-labelledby="examples-heading">
+              <h2 id="examples-heading" className="text-3xl font-bold">Worked Examples: Real-World Scenarios</h2>
               <p>Let's see how the calculator can provide powerful insights for different individuals.</p>
               
               <Card className="mb-6">
@@ -296,8 +302,8 @@ export default function CaffeineSleepCalculatorPage() {
 
           <Separator/>
           
-            <section id="use-cases">
-              <h2 className="text-3xl font-bold">Real-Life Use Cases: Applying Your Sleep-Caffeine Score</h2>
+            <section id="use-cases" aria-labelledby="use-cases-heading">
+              <h2 id="use-cases-heading" className="text-3xl font-bold">Real-Life Use Cases: Applying Your Sleep-Caffeine Score</h2>
               <h3 className="text-2xl font-semibold">1. Establishing Your Personal Caffeine Curfew</h3>
               <p>The most powerful application of this tool is to set a data-driven "caffeine curfew." Instead of a generic "no coffee after 2 PM" rule, you can find your precise cutoff. Work backward from your bedtime. If you want less than 20mg of caffeine in your system by 10 PM, when is the absolute latest you can drink a 150mg cold brew? Use the calculator to find that tipping point. This transforms your approach from guessing to strategic planning.</p>
               
@@ -309,8 +315,8 @@ export default function CaffeineSleepCalculatorPage() {
           </section>
 
           <Separator/>
-          <section id="common-mistakes">
-            <h2 className="text-3xl font-bold">Common Mistakes That Sabotage Sleep</h2>
+          <section id="common-mistakes" aria-labelledby="common-mistakes-heading">
+            <h2 id="common-mistakes-heading" className="text-3xl font-bold">Common Mistakes That Sabotage Sleep</h2>
             <Table>
                 <caption className="sr-only">Common mistakes related to caffeine timing and sleep</caption>
                 <TableHeader>
@@ -341,8 +347,8 @@ export default function CaffeineSleepCalculatorPage() {
           </section>
 
           <Separator/>
-          <section id="quick-hacks">
-            <h2 className="text-3xl font-bold">Quick Hacks & Expert Insights for Better Sleep</h2>
+          <section id="quick-hacks" aria-labelledby="quick-hacks-heading">
+            <h2 id="quick-hacks-heading" className="text-3xl font-bold">Quick Hacks & Expert Insights for Better Sleep</h2>
             <Card className="mb-4">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-2"><CheckCircle aria-hidden="true"/> The 10-Hour Rule is Your Best Friend</CardTitle>
@@ -371,8 +377,8 @@ export default function CaffeineSleepCalculatorPage() {
 
           <Separator/>
 
-            <section id="deep-dive">
-                <h2 className="text-3xl font-bold">Deep Dive: The Neurochemical War for Your Sleep</h2>
+            <section id="deep-dive" aria-labelledby="deep-dive-heading">
+                <h2 id="deep-dive-heading" className="text-3xl font-bold">Deep Dive: The Neurochemical War for Your Sleep</h2>
                 <p>
                     To truly appreciate why timing is everything, we must descend into the intricate molecular battlefield of your brain. Sleep is not a passive state of rest; it's an active, highly regulated process governed by a delicate neurochemical balance. The protagonist in this story is a molecule called <strong>adenosine</strong>. From the moment you wake up, your brain's neurons are firing, consuming energy. Adenosine is a natural byproduct of this energy consumption. It steadily accumulates throughout the day, acting like a chemical hourglass.
                 </p>
@@ -397,8 +403,8 @@ export default function CaffeineSleepCalculatorPage() {
           
           <Separator />
 
-          <section id="faq">
-            <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="faq-1">
                 <AccordionTrigger>Why does caffeine disrupt sleep even if I fall asleep easily?</AccordionTrigger>
@@ -435,8 +441,8 @@ export default function CaffeineSleepCalculatorPage() {
 
           <Separator />
 
-          <section id="related-tools">
-              <h2 className="text-3xl font-bold">Related Tools & Resources</h2>
+          <section id="related-tools" aria-labelledby="related-tools-heading">
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>

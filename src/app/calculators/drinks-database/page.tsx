@@ -1,5 +1,4 @@
 
-import DrinksDatabase from '@/components/features/DrinksDatabase';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -11,6 +10,13 @@ import {
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
+import dynamic from 'next/dynamic';
+
+const DrinksDatabase = dynamic(() => import('@/components/features/DrinksDatabase'), {
+  ssr: false,
+  loading: () => <div className="max-w-4xl mx-auto h-[600px] bg-muted rounded-lg animate-pulse" />,
+});
+
 
 export const metadata: Metadata = {
   title:
@@ -48,7 +54,7 @@ export default function DrinksDatabasePage() {
     <>
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Caffeine in Drinks Database
           </h1>
@@ -60,8 +66,8 @@ export default function DrinksDatabasePage() {
         <DrinksDatabase />
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-          <section id="introduction">
-            <h2 className="text-3xl font-bold">
+          <section id="introduction" aria-labelledby="introduction-heading">
+            <h2 id="introduction-heading" className="text-3xl font-bold">
               Know Your Buzz: The Ultimate Guide to Caffeine Content
             </h2>
             <p>
@@ -77,8 +83,8 @@ export default function DrinksDatabasePage() {
 
           <Separator />
 
-          <section id="how-it-works">
-              <h2 className="text-3xl font-bold">How This Database Works: Simple Search, Powerful Data</h2>
+          <section id="how-it-works" aria-labelledby="how-it-works-heading">
+              <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Database Works: Simple Search, Powerful Data</h2>
               <p>
                   Our database is a curated collection of caffeine information from official brand websites, nutritional data providers, and independent lab tests. We've organized it into a simple, searchable interface.
               </p>
@@ -99,8 +105,8 @@ export default function DrinksDatabasePage() {
 
           <Separator />
           
-          <section id="terminologies">
-              <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
+          <section id="terminologies" aria-labelledby="terminologies-heading">
+              <h2 id="terminologies-heading" className="text-3xl font-bold">Key Terminologies & Concepts</h2>
               <ul className="space-y-4">
                   <li>
                       <h3 className="text-xl font-semibold">Milligram (mg)</h3>
@@ -119,8 +125,8 @@ export default function DrinksDatabasePage() {
 
           <Separator />
 
-          <section id="faq">
-            <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Where does this caffeine data come from?</AccordionTrigger>
@@ -151,8 +157,8 @@ export default function DrinksDatabasePage() {
 
           <Separator />
           
-          <section id="related-tools">
-              <h2 className="text-3xl font-bold">Next Steps: Put Your Knowledge to Use</h2>
+          <section id="related-tools" aria-labelledby="related-tools-heading">
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Next Steps: Put Your Knowledge to Use</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>

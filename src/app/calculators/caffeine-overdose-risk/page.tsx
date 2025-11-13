@@ -1,5 +1,4 @@
 
-import CaffeineOverdoseRiskCalculator from '@/components/features/CaffeineOverdoseRiskCalculator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -20,6 +19,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { AlertTriangle, ShieldCheck, HeartPulse, BrainCircuit, Activity, BookOpen, ChevronsRight, Info } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
+import dynamic from 'next/dynamic';
+
+const CaffeineOverdoseRiskCalculator = dynamic(() => import('@/components/features/CaffeineOverdoseRiskCalculator'), {
+  ssr: false,
+  loading: () => <div className="max-w-2xl mx-auto h-96 bg-muted rounded-lg animate-pulse" />,
+});
+
 
 export const metadata: Metadata = {
   title:
@@ -57,7 +63,7 @@ export default function CaffeineOverdoseRiskPage() {
     <>
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Caffeine Overdose Risk Calculator
           </h1>
@@ -69,8 +75,8 @@ export default function CaffeineOverdoseRiskPage() {
         <CaffeineOverdoseRiskCalculator />
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-          <section id="introduction">
-            <h2 className="text-3xl font-bold">
+          <section id="introduction" aria-labelledby="introduction-heading">
+            <h2 id="introduction-heading" className="text-3xl font-bold">
               Understanding Your Limits: The Science Behind Caffeine Safety
             </h2>
             <p>
@@ -82,7 +88,7 @@ export default function CaffeineOverdoseRiskPage() {
             <p>
               This calculator provides clarity by showing you the estimated dosage tiers for noticeable side effects, mild toxicity, and severe toxicity, all tailored to your body weight. This is not a diagnostic tool but a harm-reduction and educational resource. By understanding your personal safety margins, you can make more informed decisions about your consumption, particularly when dealing with highly concentrated caffeine products like powders, pills, and potent energy drinks. Knowledge is the foundation of mindful consumption, and this tool is your first step toward using caffeine safely and effectively. Before calculating your risk, it is essential to know your current intake, which you can determine using our <Link href="/calculators/intake">Caffeine Intake Calculator</Link>.
             </p>
-            <Card className="bg-destructive/10 border-destructive mt-8">
+            <Card className="bg-destructive/10 border-destructive mt-8" role="alert">
                   <CardHeader>
                       <CardTitle className="flex items-center gap-2 text-destructive"><AlertTriangle aria-hidden="true"/>Important Medical Disclaimer</CardTitle>
                   </CardHeader>
@@ -96,8 +102,8 @@ export default function CaffeineOverdoseRiskPage() {
 
           <Separator />
 
-          <section id="how-it-works">
-              <h2 className="text-3xl font-bold">How This Calculator Works: The Dose Makes the Poison</h2>
+          <section id="how-it-works" aria-labelledby="how-it-works-heading">
+              <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Calculator Works: The Dose Makes the Poison</h2>
               <p>
                   The principle behind this calculator is a cornerstone of toxicology: "the dose makes the poison." Any substance, even water, can be toxic in a large enough quantity. This tool quantifies that principle for caffeine by using established toxicological data measured in milligrams of caffeine per kilogram of body weight (mg/kg). It calculates the total amount of caffeine (in mg) that corresponds to different risk levels for your specific weight, providing a personalized safety scale.
               </p>
@@ -177,8 +183,8 @@ export default function CaffeineOverdoseRiskPage() {
 
           <Separator />
           
-          <section id="features">
-              <h2 className="text-3xl font-bold">Key Features of This Safety Tool</h2>
+          <section id="features" aria-labelledby="features-heading">
+              <h2 id="features-heading" className="text-3xl font-bold">Key Features of This Safety Tool</h2>
               <p>
                   This calculator is designed to provide clear, immediate, and personalized safety information.
               </p>
@@ -218,8 +224,8 @@ export default function CaffeineOverdoseRiskPage() {
 
           <Separator />
 
-          <section id="instructions">
-              <h2 className="text-3xl font-bold">Step-by-Step Instructions: How to Assess Your Risk</h2>
+          <section id="instructions" aria-labelledby="instructions-heading">
+              <h2 id="instructions-heading" className="text-3xl font-bold">Step-by-Step Instructions: How to Assess Your Risk</h2>
               <p>Using the calculator is simple and takes just a few seconds. Follow these steps:</p>
               <ol className="list-decimal pl-5 space-y-2">
                   <li>
@@ -244,8 +250,8 @@ export default function CaffeineOverdoseRiskPage() {
 
           <Separator />
 
-          <section id="examples">
-              <h2 className="text-3xl font-bold">Worked Examples: Understanding Risk in Real-World Scenarios</h2>
+          <section id="examples" aria-labelledby="examples-heading">
+              <h2 id="examples-heading" className="text-3xl font-bold">Worked Examples: Understanding Risk in Real-World Scenarios</h2>
               <p>
                   Let's see how the calculator provides crucial safety context for different individuals.
               </p>
@@ -274,8 +280,8 @@ export default function CaffeineOverdoseRiskPage() {
 
           <Separator />
           
-          <section id="terminologies">
-              <h2 className="text-3xl font-bold">Key Terminologies & Concepts in Caffeine Safety</h2>
+          <section id="terminologies" aria-labelledby="terminologies-heading">
+              <h2 id="terminologies-heading" className="text-3xl font-bold">Key Terminologies & Concepts in Caffeine Safety</h2>
               <ul className="space-y-4">
                   <li>
                       <h3 className="text-xl font-semibold">Toxicity</h3>
@@ -302,8 +308,8 @@ export default function CaffeineOverdoseRiskPage() {
 
           <Separator />
 
-          <section id="deep-dive">
-              <h2 className="text-3xl font-bold">Deep Dive: The Physiology of a Caffeine Overdose</h2>
+          <section id="deep-dive" aria-labelledby="deep-dive-heading">
+              <h2 id="deep-dive-heading" className="text-3xl font-bold">Deep Dive: The Physiology of a Caffeine Overdose</h2>
               <p>To fully appreciate the risks, it's crucial to understand what happens inside your body during a caffeine overdose. At normal doses, caffeine's primary action is to block adenosine receptors in the brain, which promotes wakefulness. It’s an elegant and generally benign mechanism. However, as the dose escalates to toxic levels, caffeine ceases to be a simple stimulant and begins to act as a systemic poison, disrupting critical cellular processes throughout the body.</p>
               <h3 className="text-2xl font-semibold">The Shift from Adenosine Blocker to Cellular Disruptor</h3>
               <p>At very high concentrations (like those seen in the "Mild Toxicity" tier), caffeine begins to inhibit an enzyme called phosphodiesterase (PDE). By inhibiting PDE, caffeine causes a buildup of a molecule called cyclic AMP (cAMP). This is significant because cAMP is a key "second messenger" that amplifies the effects of hormones like adrenaline. The result is a massive, system-wide surge in sympathetic nervous system activity—the "fight or flight" response on overdrive. This is no longer just a feeling of alertness; it's a physiological state of emergency.</p>
@@ -318,8 +324,8 @@ export default function CaffeineOverdoseRiskPage() {
 
           <Separator />
 
-          <section id="faq">
-            <h2 className="text-3xl font-bold">Frequently Asked Questions About Caffeine Overdose</h2>
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions About Caffeine Overdose</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Is it possible to overdose on caffeine from standard coffee or tea?</AccordionTrigger>
@@ -368,8 +374,8 @@ export default function CaffeineOverdoseRiskPage() {
 
           <Separator />
           
-          <section id="related-tools">
-              <h2 className="text-3xl font-bold">Related Tools & Resources for Safe Caffeine Use</h2>
+          <section id="related-tools" aria-labelledby="related-tools-heading">
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources for Safe Caffeine Use</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>

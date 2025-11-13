@@ -1,6 +1,4 @@
 
-
-import HalfLifeEstimator from '@/components/features/HalfLifeEstimator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -21,6 +19,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { BrainCircuit, Briefcase, CheckCircle, GraduationCap, Heart, Lightbulb, Moon, ZapOff } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
+import dynamic from 'next/dynamic';
+
+const HalfLifeEstimator = dynamic(() => import('@/components/features/HalfLifeEstimator'), {
+  ssr: false,
+  loading: () => <div className="max-w-4xl mx-auto h-[480px] bg-muted rounded-lg animate-pulse" />,
+});
+
 
 export const metadata: Metadata = {
   title:
@@ -58,7 +63,7 @@ export default function HalfLifeCalculatorPage() {
     <>
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Caffeine Half-Life Calculator — How Long Does Caffeine Stay in Your System?
           </h1>
@@ -70,8 +75,8 @@ export default function HalfLifeCalculatorPage() {
         <HalfLifeEstimator />
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-          <section id="introduction">
-            <h2 className="text-3xl font-bold">
+          <section id="introduction" aria-labelledby="introduction-heading">
+            <h2 id="introduction-heading" className="text-3xl font-bold">
               The Invisible Clock: Decoding Your Body's Response to Caffeine
             </h2>
             <p>
@@ -87,8 +92,8 @@ export default function HalfLifeCalculatorPage() {
 
           <Separator />
 
-          <section id="how-it-works">
-              <h2 className="text-3xl font-bold">How This Calculator Works: The Science of Caffeine Metabolism</h2>
+          <section id="how-it-works" aria-labelledby="how-it-works-heading">
+              <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Calculator Works: The Science of Caffeine Metabolism</h2>
               <p>
                   At its core, this calculator uses an established pharmacokinetic model known as first-order elimination kinetics. While that sounds complex, the principle is simple: your body clears a certain <i>percentage</i> of the caffeine in your system per hour, not a fixed amount. This leads to the characteristic "decay curve" where elimination is faster at the beginning and slows down as the concentration drops.
               </p>
@@ -147,8 +152,8 @@ export default function HalfLifeCalculatorPage() {
 
           <Separator />
 
-          <section id="features">
-              <h2 className="text-3xl font-bold">Key Features of the Tool</h2>
+          <section id="features" aria-labelledby="features-heading">
+              <h2 id="features-heading" className="text-3xl font-bold">Key Features of the Tool</h2>
               <p>
                   This tool is designed to provide clear, actionable insights into your caffeine habits.
               </p>
@@ -188,8 +193,8 @@ export default function HalfLifeCalculatorPage() {
 
           <Separator />
 
-          <section id="instructions">
-              <h2 className="text-3xl font-bold">Step-by-Step Instructions: How to Use the Calculator</h2>
+          <section id="instructions" aria-labelledby="instructions-heading">
+              <h2 id="instructions-heading" className="text-3xl font-bold">Step-by-Step Instructions: How to Use the Calculator</h2>
               <p>Estimating your caffeine curve is straightforward. Follow these steps:</p>
               <ol className="list-decimal pl-5 space-y-2">
                   <li>
@@ -209,8 +214,8 @@ export default function HalfLifeCalculatorPage() {
 
           <Separator />
 
-          <section id="examples">
-              <h2 className="text-3xl font-bold">Worked Examples: See the Calculator in Action</h2>
+          <section id="examples" aria-labelledby="examples-heading">
+              <h2 id="examples-heading" className="text-3xl font-bold">Worked Examples: See the Calculator in Action</h2>
               <p>
                   Different people, different results. Here’s how the half-life calculator can provide insights for various lifestyles.
               </p>
@@ -252,8 +257,8 @@ export default function HalfLifeCalculatorPage() {
           
           <Separator />
 
-          <section id="use-cases">
-              <h2 className="text-3xl font-bold">Real-Life Use Cases: Putting Your Half-Life Data to Work</h2>
+          <section id="use-cases" aria-labelledby="use-cases-heading">
+              <h2 id="use-cases-heading" className="text-3xl font-bold">Real-Life Use Cases: Putting Your Half-Life Data to Work</h2>
               <p>
                   Understanding your caffeine curve is the first step. Here's how to apply that knowledge.
               </p>
@@ -273,8 +278,8 @@ export default function HalfLifeCalculatorPage() {
 
           <Separator />
 
-          <section id="common-mistakes">
-              <h2 className="text-3xl font-bold">Common Mistakes in Estimating Caffeine Duration & How to Avoid Them</h2>
+          <section id="common-mistakes" aria-labelledby="common-mistakes-heading">
+              <h2 id="common-mistakes-heading" className="text-3xl font-bold">Common Mistakes in Estimating Caffeine Duration & How to Avoid Them</h2>
               <p>
                   People often misjudge how long caffeine affects them. Here are common errors this calculator helps you avoid.
               </p>
@@ -309,8 +314,8 @@ export default function HalfLifeCalculatorPage() {
 
           <Separator />
 
-          <section id="expert-insights">
-              <h2 className="text-3xl font-bold">Quick Hacks & Expert Insights for Mastering Caffeine Timing</h2>
+          <section id="expert-insights" aria-labelledby="expert-insights-heading">
+              <h2 id="expert-insights-heading" className="text-3xl font-bold">Quick Hacks & Expert Insights for Mastering Caffeine Timing</h2>
               <Card className="mb-4">
                   <CardHeader>
                       <CardTitle className="flex items-center gap-2"><BrainCircuit aria-hidden="true"/> Know Your "Quarter-Life"</CardTitle>
@@ -339,8 +344,8 @@ export default function HalfLifeCalculatorPage() {
           
           <Separator />
           
-          <section id="deep-dive">
-              <h2 className="text-3xl font-bold">Deep Dive: The Physiology of Caffeine Metabolism</h2>
+          <section id="deep-dive" aria-labelledby="deep-dive-heading">
+              <h2 id="deep-dive-heading" className="text-3xl font-bold">Deep Dive: The Physiology of Caffeine Metabolism</h2>
               <p>To truly master your caffeine use, it’s essential to understand the journey it takes through your body. Caffeine is a powerful psychoactive compound, and its effects—from heightened alertness to potential anxiety—are a direct result of its interaction with your unique biochemistry. The concept of "half-life" is just one part of a much larger and more fascinating story that unfolds within your cells.</p>
               <h3 className="text-2xl font-semibold">Absorption and Distribution: The Rush Begins</h3>
               <p>When you take a sip of coffee or an energy drink, the caffeine doesn’t linger in your stomach for long. It is rapidly and almost completely absorbed into your bloodstream, primarily through the small intestine. Within just a few minutes, caffeine molecules are circulating throughout your body, and they are both water-soluble and fat-soluble. This dual solubility allows them to cross nearly every biological barrier, including the highly selective blood-brain barrier. This is why you feel the mental effects of caffeine so quickly—it has direct access to your central nervous system.</p>
@@ -355,8 +360,8 @@ export default function HalfLifeCalculatorPage() {
 
           <Separator />
           
-          <section id="terminologies">
-              <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
+          <section id="terminologies" aria-labelledby="terminologies-heading">
+              <h2 id="terminologies-heading" className="text-3xl font-bold">Key Terminologies & Concepts</h2>
               <ul className="space-y-4">
                   <li>
                       <h3 className="text-xl font-semibold">Half-Life</h3>
@@ -391,8 +396,8 @@ export default function HalfLifeCalculatorPage() {
 
           <Separator />
 
-          <section id="faq">
-            <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>What is caffeine half-life?</AccordionTrigger>
@@ -489,8 +494,8 @@ export default function HalfLifeCalculatorPage() {
 
           <Separator />
           
-          <section id="related-tools">
-              <h2 className="text-3xl font-bold">Related Tools & Resources</h2>
+          <section id="related-tools" aria-labelledby="related-tools-heading">
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>
@@ -523,5 +528,3 @@ export default function HalfLifeCalculatorPage() {
     </>
   );
 }
-
-    

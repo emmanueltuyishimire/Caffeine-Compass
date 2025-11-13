@@ -1,5 +1,4 @@
 
-import PregnancySafeLimitCalculator from '@/components/features/PregnancySafeLimitCalculator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -12,6 +11,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { AlertTriangle, HeartPulse, Baby } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
+import dynamic from 'next/dynamic';
+
+const PregnancySafeLimitCalculator = dynamic(() => import('@/components/features/PregnancySafeLimitCalculator'), {
+  ssr: false,
+  loading: () => <div className="max-w-4xl mx-auto h-[600px] bg-muted rounded-lg animate-pulse" />,
+});
+
 
 export const metadata: Metadata = {
   title: 'Pregnancy Caffeine Calculator — Track Your Daily Intake Safely',
@@ -47,7 +53,7 @@ export default function PregnancySafeLimitPage() {
     <>
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Pregnancy Caffeine Calculator
           </h1>
@@ -59,8 +65,8 @@ export default function PregnancySafeLimitPage() {
         <PregnancySafeLimitCalculator />
         
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-          <section id="introduction">
-              <h2 className="text-3xl font-bold">
+          <section id="introduction" aria-labelledby="introduction-heading">
+              <h2 id="introduction-heading" className="text-3xl font-bold">
                   Navigating Caffeine with Confidence During Pregnancy
               </h2>
               <p>
@@ -76,8 +82,8 @@ export default function PregnancySafeLimitPage() {
 
           <Separator />
 
-          <section id="how-it-works">
-              <h2 className="text-3xl font-bold">How This Calculator Works: The Science of Safety</h2>
+          <section id="how-it-works" aria-labelledby="how-it-works-heading">
+              <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Calculator Works: The Science of Safety</h2>
               <p>
                   This tool is built on the clear guideline of a 200mg daily limit. Its purpose is to provide a simple, accurate summation of your caffeine intake from various beverages, giving you a running total and a visual progress bar against this crucial threshold.
               </p>
@@ -117,8 +123,8 @@ export default function PregnancySafeLimitPage() {
 
           <Separator />
           
-          <section id="instructions">
-              <h2 className="text-3xl font-bold">Step-by-Step Instructions: How to Use the Tracker</h2>
+          <section id="instructions" aria-labelledby="instructions-heading">
+              <h2 id="instructions-heading" className="text-3xl font-bold">Step-by-Step Instructions: How to Use the Tracker</h2>
               <ol className="list-decimal pl-5 space-y-2">
                   <li>
                       <strong>Add a Drink:</strong> Use the "Search for a drink" button to open the list of beverages.
@@ -140,8 +146,8 @@ export default function PregnancySafeLimitPage() {
 
           <Separator />
 
-          <section id="faq">
-            <h2 className="text-3xl font-bold">Frequently Asked Questions About Caffeine and Pregnancy</h2>
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions About Caffeine and Pregnancy</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>What is the official recommended caffeine limit during pregnancy?</AccordionTrigger>
@@ -184,8 +190,8 @@ export default function PregnancySafeLimitPage() {
 
           <Separator />
           
-          <section id="related-tools">
-              <h2 className="text-3xl font-bold">Related Tools & Resources</h2>
+          <section id="related-tools" aria-labelledby="related-tools-heading">
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>

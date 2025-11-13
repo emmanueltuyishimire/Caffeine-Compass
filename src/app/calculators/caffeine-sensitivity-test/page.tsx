@@ -1,5 +1,4 @@
 
-import CaffeineSensitivityTest from '@/components/features/CaffeineSensitivityTest';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -11,6 +10,13 @@ import {
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
+import dynamic from 'next/dynamic';
+
+const CaffeineSensitivityTest = dynamic(() => import('@/components/features/CaffeineSensitivityTest'), {
+  ssr: false,
+  loading: () => <div className="max-w-2xl mx-auto h-[480px] bg-muted rounded-lg animate-pulse" />,
+});
+
 
 export const metadata: Metadata = {
   title:
@@ -48,7 +54,7 @@ export default function CaffeineSensitivityTestPage() {
     <>
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Caffeine Sensitivity Test: Are You a Fast or Slow Metabolizer?
           </h1>
@@ -60,8 +66,8 @@ export default function CaffeineSensitivityTestPage() {
         <CaffeineSensitivityTest />
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-          <section id="introduction">
-            <h2 className="text-3xl font-bold">
+          <section id="introduction" aria-labelledby="introduction-heading">
+            <h2 id="introduction-heading" className="text-3xl font-bold">
               Unlock Your Genetic Code: Why Caffeine Affects Everyone Differently
             </h2>
             <p>
@@ -77,8 +83,8 @@ export default function CaffeineSensitivityTestPage() {
 
           <Separator />
 
-          <section id="how-it-works">
-              <h2 className="text-3xl font-bold">How This Test Works: The Science of Self-Assessment</h2>
+          <section id="how-it-works" aria-labelledby="how-it-works-heading">
+              <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Test Works: The Science of Self-Assessment</h2>
               <p>
                   While a genetic test provides a definitive answer, a carefully designed questionnaire can offer a highly accurate estimate of your caffeine metabolism speed. This test works by correlating your subjective experiences with known physiological markers of caffeine sensitivity.
               </p>
@@ -114,8 +120,8 @@ export default function CaffeineSensitivityTestPage() {
 
           <Separator />
 
-          <section id="interpreting-results">
-              <h2 className="text-3xl font-bold">Interpreting Your Results: What Your Sensitivity Level Means</h2>
+          <section id="interpreting-results" aria-labelledby="interpreting-results-heading">
+              <h2 id="interpreting-results-heading" className="text-3xl font-bold">Interpreting Your Results: What Your Sensitivity Level Means</h2>
               <Card className="mb-6">
                   <CardHeader>
                       <CardTitle>Fast Metabolizer (High Tolerance)</CardTitle>
@@ -164,8 +170,8 @@ export default function CaffeineSensitivityTestPage() {
 
           <Separator />
 
-          <section id="terminologies">
-              <h2 className="text-3xl font-bold">Key Terminologies & Concepts</h2>
+          <section id="terminologies" aria-labelledby="terminologies-heading">
+              <h2 id="terminologies-heading" className="text-3xl font-bold">Key Terminologies & Concepts</h2>
               <ul className="space-y-4">
                   <li>
                       <h3 className="text-xl font-semibold">Caffeine Sensitivity</h3>
@@ -196,8 +202,8 @@ export default function CaffeineSensitivityTestPage() {
 
           <Separator />
 
-          <section id="faq">
-            <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>How accurate is this test compared to a DNA test?</AccordionTrigger>
@@ -240,8 +246,8 @@ export default function CaffeineSensitivityTestPage() {
 
           <Separator />
           
-          <section id="related-tools">
-              <h2 className="text-3xl font-bold">Next Steps: Use Your Results</h2>
+          <section id="related-tools" aria-labelledby="related-tools-heading">
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Next Steps: Use Your Results</h2>
               <p>Now that you have an estimate of your sensitivity, use our other tools to put that knowledge into action.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
