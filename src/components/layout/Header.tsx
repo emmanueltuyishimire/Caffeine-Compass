@@ -15,7 +15,7 @@ const Header = () => {
       role="banner"
     >
       <div className="container flex h-14 items-center">
-        <div className="mr-4 hidden md:flex">
+        <div className="mr-4 flex">
           <Link
             href="/"
             className="flex items-center gap-2"
