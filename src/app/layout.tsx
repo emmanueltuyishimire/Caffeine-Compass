@@ -7,6 +7,9 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
 import { Providers } from './providers';
+import { Sidebar, SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
+import SidebarNav from '@/components/layout/SidebarNav';
+
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -47,14 +50,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} font-body antialiased min-h-screen flex flex-col`}>
-          <JsonLd data={websiteJsonLd} />
-          <Header />
-            <main className="flex-grow">
-              <Providers>{children}</Providers>
-            </main>
-          <Footer />
-          <Toaster />
+      <body className={`${inter.className} font-body antialiased`}>
+        <Providers>
+          <SidebarProvider>
+              <Sidebar>
+                <SidebarNav />
+              </Sidebar>
+              <SidebarInset>
+                <JsonLd data={websiteJsonLd} />
+                <Header />
+                  <main className="flex-grow">
+                    {children}
+                  </main>
+                <Footer />
+                <Toaster />
+              </SidebarInset>
+          </SidebarProvider>
+        </Providers>
       </body>
     </html>
   );
