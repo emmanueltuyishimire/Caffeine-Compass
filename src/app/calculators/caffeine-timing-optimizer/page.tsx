@@ -156,7 +156,7 @@ export default function CaffeineTimingOptimizerPage() {
             Caffeine Timing Optimizer
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Find the scientifically-backed optimal time to consume caffeine to boost your productivity and focus for any task.
+            Find the scientifically-backed optimal time to consume caffeine to boost your productivity and focus for any task, without sacrificing sleep.
           </p>
         </header>
         
@@ -221,7 +221,44 @@ export default function CaffeineTimingOptimizerPage() {
                     </CardContent>
                 </Card>
             </section>
+             <Separator/>
 
+            <section id="key-features" aria-labelledby="key-features-heading">
+                <h2 id="key-features-heading" className="text-3xl font-bold">Key Features of This Tool</h2>
+                <Table>
+                    <caption className='sr-only'>Features of the Caffeine Timing Optimizer</caption>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead>Feature</TableHead>
+                            <TableHead>Description</TableHead>
+                            <TableHead>Why It Matters</TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell className="font-medium">Peak Effect Calculation</TableCell>
+                            <TableCell>Calculates the ideal consumption time to align caffeine's peak effect (45-60 mins post-ingestion) with your task.</TableCell>
+                            <TableCell>Ensures you get the maximum cognitive boost exactly when you need it, not too early or too late.</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Personalized Sleep Cutoff</TableCell>
+                            <TableCell>Determines a "caffeine curfew" based on your bedtime and selected metabolism speed (sensitivity).</TableCell>
+                            <TableCell>Acts as a crucial safety net, preventing you from making a choice that will sabotage your sleep quality.</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Conflict Warning System</TableCell>
+                            <TableCell>Issues an explicit warning if the optimal timing for your task falls after your sleep-safe cutoff time.</TableCell>
+                            <TableCell>Provides clear, actionable advice when productivity and sleep are in conflict, helping you make a conscious trade-off.</TableCell>
+                        </TableRow>
+                         <TableRow>
+                            <TableCell className="font-medium">Metabolism-Adjusted Timing</TableCell>
+                            <TableCell>The sleep cutoff time is adjusted for Fast, Average, or Slow metabolizers.</TableCell>
+                            <TableCell>Personalizes the recommendation based on your likely genetic makeup, making it far more accurate than generic advice.</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+            </section>
+            
             <Separator />
             
             <section id="how-to-use" aria-labelledby="how-to-use-heading">
@@ -270,11 +307,181 @@ export default function CaffeineTimingOptimizerPage() {
                       </CardContent>
                   </Card>
             </section>
+            
+            <Separator />
+            
+             <section id="use-cases" aria-labelledby="use-cases-heading">
+                <h2 id="use-cases-heading" className="text-3xl font-bold">Real-Life Use Cases: Beyond the 9-to-5</h2>
+                <h3 className="text-2xl font-semibold">1. For Creative Work vs. Analytical Work</h3>
+                <p>Use the optimizer differently for different kinds of tasks. For intense analytical work or a big exam, timing caffeine to peak right at the start is ideal. For creative work like brainstorming or writing, you might prefer to consume your caffeine and start working immediately, letting the effects build as you get into a flow state. The calculator gives you the data to make that choice consciously.</p>
+
+                <h3 className="text-2xl font-semibold">2. For Combating Jet Lag</h3>
+                <p>When traveling across time zones, caffeine is a powerful tool to anchor your body to a new schedule. Use the optimizer to time a morning coffee in your new time zone. Set your "task time" to be about 60-90 minutes after you want to wake up. This can help suppress sleepiness and promote alertness, accelerating your adjustment.</p>
+
+                <h3 className="text-2xl font-semibold">3. For Night Shift Workers</h3>
+                <p>This tool is essential for night shift workers who have a reversed sleep schedule. A nurse starting a shift at 7 PM and sleeping at 9 AM can use the calculator to find the best time to consume caffeine to stay alert mid-shift without it interfering with their morning sleep. For example, to be alert at 2 AM, the calculator might suggest a 1:15 AM coffee, which is well before their sleep window.</p>
+
+                <h3 className="text-2xl font-semibold">4. For Social Events</h3>
+                <p>Have an evening social event you need to be sharp for? Enter the event's start time and your bedtime. The calculator will tell you if a pre-event coffee is a good idea. If it's too late, you'll know to opt for a smaller dose or a decaf, preventing a night of "tired but wired" tossing and turning.</p>
+            </section>
+            
+            <Separator />
+            
+             <section id="common-mistakes" aria-labelledby="common-mistakes-heading">
+                <h2 id="common-mistakes-heading" className="text-3xl font-bold">Common Timing Mistakes and How to Fix Them</h2>
+                <Table>
+                    <caption className='sr-only'>Common mistakes in caffeine timing</caption>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead>The Mistake</TableHead>
+                            <TableHead>Why It Happens</TableHead>
+                            <TableHead>How to Fix It</TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell className="font-medium">The "Right Before" Coffee</TableCell>
+                            <TableCell>Drinking coffee immediately before a task, assuming the effects are instant.</TableCell>
+                            <TableCell>Use the optimizer. Plan ahead and consume your caffeine 45-60 minutes before your task begins to align with its peak effect.</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">The "Just One More" Late Coffee</TableCell>
+                            <TableCell>Ignoring the long half-life of caffeine to push through the last hour of work.</TableCell>
+                            <TableCell>Heed the calculator's sleep cutoff warning. The small gain in productivity is not worth the large cost to your sleep quality.</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">The Morning Adrenaline Mask</TableCell>
+                            <TableCell>Drinking coffee immediately upon waking, when cortisol levels are already high.</TableCell>
+                            <TableCell>Try waiting 90 minutes after waking for your first coffee. You'll get a more potent effect and may reduce your overall daily need.</TableCell>
+                        </TableRow>
+                         <TableRow>
+                            <TableCell className="font-medium">Ignoring Your Genetics</TableCell>
+                            <TableCell>A "slow metabolizer" following the habits of a "fast metabolizer" friend.</TableCell>
+                            <TableCell>Take the <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> and use the result to get personalized, realistic timing advice from the optimizer.</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+            </section>
+            
+            <Separator />
+            
+            <section id="quick-hacks" aria-labelledby="quick-hacks-heading">
+                <h2 id="quick-hacks-heading" className="text-3xl font-bold">Quick Hacks & Expert Insights</h2>
+                 <Card className="mb-4">
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2"><CheckCircle aria-hidden="true"/> The 90-Minute Rule</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>For your first coffee of the day, consider waiting 90 minutes after you wake up. Your body's natural cortisol levels are highest then. Waiting allows the caffeine to work when your cortisol starts to dip, giving you a much more effective boost.</p>
+                    </CardContent>
+                </Card>
+                 <Card className="mb-4">
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2"><Coffee aria-hidden="true"/> The "Coffee Nap"</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>For a powerful afternoon reset, drink a small coffee or an espresso and immediately take a 20-minute nap. The caffeine will kick in just as you wake up, providing a dual benefit of cleared adenosine and stimulated alertness. Use the optimizer to ensure this nap doesn't happen too late!</p>
+                    </CardContent>
+                </Card>
+                 <Card>
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2"><BrainCircuit aria-hidden="true"/> L-Theanine for Smooth Focus</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>If caffeine makes you jittery, consider pairing it with L-theanine, an amino acid found in tea. It promotes calm focus and can smooth out caffeine's rough edges. Green tea is a natural source, or you can find it as a supplement.</p>
+                    </CardContent>
+                </Card>
+            </section>
+            
+            <Separator />
+            
+            <section id="deep-dive" aria-labelledby="deep-dive-heading">
+                <h2 id="deep-dive-heading" className="text-3xl font-bold">Deep Dive: The Neurochemistry of Peak Performance</h2>
+                <p>
+                    Using caffeine strategically is about manipulating your brain's natural rhythms. To master this, it helps to understand the two key neurochemical players: adenosine and dopamine, and how caffeine interacts with them in a time-dependent manner.
+                </p>
+                <h3 className="text-2xl font-semibold">Adenosine: The Sleep Pressure Signal</h3>
+                <p>
+                    As explained on our other pages, adenosine is the primary molecule that signals fatigue to your brain. It builds up during your waking hours, creating "sleep pressure." Caffeine's main job is to block adenosine receptors, tricking your brain into feeling alert. However, the timing of this blockade is crucial.
+                </p>
+                <p>
+                    When you wake up, your adenosine levels are at their lowest. This is why drinking caffeine immediately upon waking can be less effective; there's not much sleep pressure to block yet. By waiting 60-90 minutes, you allow some natural sleep pressure to build, making caffeine's blocking action more noticeable and impactful. You're effectively saving your "secret weapon" for when it's most needed.
+                </p>
+                <h3 className="text-2xl font-semibold">Dopamine and Peak Motivation</h3>
+                <p>
+                    Caffeine does more than just block adenosine; it also indirectly boosts the effectiveness of dopamine, a key neurotransmitter involved in motivation, reward, and focus. By blocking adenosine (which has an inhibitory effect on dopamine), caffeine allows dopamine to work more freely. This contributes to the feeling of enhanced motivation and concentration you get from coffee.
+                </p>
+                <p>
+                    This effect also has a time course. Aligning caffeine's peak plasma concentration with the start of a challenging task means you are hitting that task with your brain's motivation and reward system primed for action. This is the neurochemical basis for "getting in the zone." This calculator is designed to help you surf that wave of peak dopamine activity right when you need it most.
+                </p>
+                <h3 className="text-2xl font-semibold">The Cortisol Connection</h3>
+                <p>
+                    Cortisol, often called the "stress hormone," is also a key part of your natural wakefulness cycle. Your body releases a major pulse of cortisol in the first hour of waking (the Cortisol Awakening Response). This is a natural "get up and go" signal. Drinking caffeine during this peak can interfere with this natural process and lead to building a higher tolerance over time, as your body starts to rely on the external stimulant instead of its own mechanism. By waiting until after this peak has passed (around 90 minutes), you are introducing caffeine at a time when your natural alertness is beginning to wane, making its effects more synergistic and powerful.
+                </p>
+                <p>
+                    Understanding these intersecting timelines—adenosine buildup, dopamine release, and cortisol cycles—is the key to advanced caffeine timing. This optimizer automates that complex calculation, turning a deep scientific understanding into a simple, actionable recommendation. It empowers you to use caffeine not as a brute-force solution to fatigue, but as a nuanced, precision tool for cognitive enhancement.
+                </p>
+            </section>
+            
+            <Separator />
+            
+             <section id="faq" aria-labelledby="faq-heading">
+                <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="faq-1">
+                    <AccordionTrigger>What is the best time to drink coffee for productivity?</AccordionTrigger>
+                    <AccordionContent>
+                      The best time to drink coffee is approximately 45 minutes before you need to be at your most focused. This calculator helps you pinpoint that exact time based on your schedule. It also considers your bedtime to ensure your productivity boost doesn't turn into a sleepless night.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="faq-2">
+                    <AccordionTrigger>How long does it take for caffeine to kick in?</AccordionTrigger>
+                    <AccordionContent>
+                      Caffeine is rapidly absorbed, with its concentration in your bloodstream reaching a peak around 45 to 60 minutes after consumption. This calculator uses a 45-minute window to align this peak with the start of your important task.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="faq-3">
+                    <AccordionTrigger>Why does the calculator ask for my bedtime?</AccordionTrigger>
+                    <AccordionContent>
+                      Your bedtime is crucial for calculating your 'caffeine curfew.' The tool works to prevent recommendations that would cause caffeine to be active in your system when you're trying to sleep, which would harm your sleep quality. You can learn more about this with our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link>.
+                    </AccordionContent>
+                  </AccordionItem>
+                   <AccordionItem value="faq-4">
+                    <AccordionTrigger>Does my caffeine sensitivity affect the timing?</AccordionTrigger>
+                    <AccordionContent>
+                      Yes, significantly. Your sensitivity, which is a proxy for your metabolism speed, determines how late you can safely consume caffeine. Slow metabolizers need a much earlier cutoff time than fast metabolizers. If you're unsure of your type, take our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link>.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="faq-5">
+                    <AccordionTrigger>What should I do if the calculator says the optimal time is too late?</AccordionTrigger>
+                    <AccordionContent>
+                      If the tool warns you that the ideal timing conflicts with your sleep, it's a sign that a full-strength caffeinated drink is a risky choice. Consider having a smaller dose (like a green tea), a half-caff coffee, or using non-caffeinated strategies like a short walk or bright light to boost alertness.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="faq-6">
+                    <AccordionTrigger>Can I use this for pre-workout timing?</AccordionTrigger>
+                    <AccordionContent>
+                      Absolutely. Enter your workout start time as the 'task time' to find the perfect moment to take your pre-workout supplement for maximum effect during your training session.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="faq-7">
+                    <AccordionTrigger>Should I drink coffee immediately upon waking?</AccordionTrigger>
+                    <AccordionContent>
+                      Many experts suggest waiting 60-90 minutes after waking. Your body's natural cortisol levels are highest in the morning, providing a natural wakefulness boost. Waiting allows you to use caffeine when your cortisol starts to dip, making it more effective.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="faq-8">
+                    <AccordionTrigger>How is the 'sleep cutoff' time calculated?</AccordionTrigger>
+                    <AccordionContent>
+                      The sleep cutoff is based on your selected metabolism speed, which corresponds to an estimated caffeine half-life. It's set to be 10-12 hours before your bedtime (or two half-lives), which is the time needed to clear about 75% of the caffeine from your system. Visualize this with our <Link href="/calculators/caffeine-sleep-calculator">Caffeine Sleep Calculator</Link>.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+             </section>
+
           </div>
         </div>
       </div>
     </>
   );
 }
-
-    
