@@ -3,47 +3,62 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import { BookText } from 'lucide-react';
+import { BookText, Database, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Caffeine Articles — Science-Backed Guides for Health & Performance',
-    description: 'Explore in-depth articles on caffeine, from its effects on sleep and metabolism to strategies for optimizing your intake for health, focus, and productivity.',
+    title: 'Learn About Caffeine — Articles, Guides & Tools',
+    description: 'Explore in-depth articles, guides, and tools to understand caffeine. From its effects on sleep to the caffeine content of your favorite drinks, master your consumption.',
 };
 
-const articles = [
+const articleLinks = [
+  {
+    title: "How Long Before Bed to Stop Caffeine",
+    href: "/articles/how-long-before-bed-to-stop-caffeine",
+    description: "Find your personal caffeine curfew for better sleep.",
+    icon: BookText,
+  },
   {
     title: "Caffeine's Effect on REM Sleep",
     href: "/articles/caffeine-effect-on-rem-sleep",
-    description: "A deep dive into how caffeine impacts your dreams and brain health.",
+    description: "Learn how caffeine impacts your dreams and brain health.",
     icon: BookText,
   },
   {
     title: "Caffeine Half-Life & Sleep",
     href: "/articles/caffeine-half-life-sleep",
-    description: "Understand how long caffeine affects you to reclaim your sleep.",
+    description: "Understand the science of how long caffeine affects you.",
     icon: BookText,
   },
-  {
-    title: "How Long Before Bed to Stop Caffeine",
-    href: "/articles/how-long-before-bed-to-stop-caffeine",
-    description: "A science-backed guide to finding your personal caffeine curfew.",
-    icon: BookText,
-  },
+];
+
+const toolLinks = [
+    {
+        title: "Caffeine in Drinks Database",
+        href: "/calculators/drinks-database",
+        description: "Search our extensive database of over 1,000 beverages to find their exact caffeine content.",
+        icon: Database,
+    },
+    {
+        title: "Drink Comparison Tool",
+        href: "/calculators/drink-comparison",
+        description: "Visually compare the caffeine in coffee, tea, energy drinks, and more, side-by-side.",
+        icon: Zap,
+    },
 ];
 
 const articlesPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Caffeine Articles",
-  "description": "Explore in-depth articles on caffeine, from its effects on sleep and metabolism to strategies for optimizing your intake for health, focus, and productivity.",
-  "url": "https://caffeine-calculation-site.com/articles",
+  "name": "Learn About Caffeine",
+  "description": "Explore in-depth articles, guides, and tools to understand caffeine.",
+  "url": "https://caffeine-compass.com/articles",
   "mainEntity": {
     "@type": "ItemList",
-    "itemListElement": articles.map((article, index) => ({
+    "itemListElement": [...articleLinks, ...toolLinks].map((item, index) => ({
       "@type": "ListItem",
       "position": index + 1,
-      "name": article.title,
-      "url": `https://caffeine-calculation-site.com${article.href}`
+      "name": item.title,
+      "url": `https://caffeine-compass.com${item.href}`
     }))
   },
   "breadcrumb": {
@@ -53,13 +68,13 @@ const articlesPageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-calculation-site.com/"
+        "item": "https://caffeine-compass.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Articles",
-        "item": "https://caffeine-calculation-site.com/articles"
+        "name": "Learn",
+        "item": "https://caffeine-compass.com/articles"
       }
     ]
   }
@@ -72,31 +87,54 @@ export default function ArticlesPage() {
       <JsonLd data={articlesPageJsonLd} />
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Caffeine Articles</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Learn & Explore</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            In-depth, science-backed guides to help you understand and master your relationship with caffeine.
+            In-depth guides and tools to help you understand and master your relationship with caffeine.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {articles.map((article) => (
-            <Link key={article.title} href={article.href} className="block">
-              <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                    <article.icon className="h-8 w-8 text-primary" aria-hidden="true" />
-                    <CardTitle>{article.title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{article.description}</p>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
+
+         <div className="mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">Knowledge Tools</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                {toolLinks.map((tool) => (
+                    <Link key={tool.title} href={tool.href} className="block">
+                        <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                            <CardHeader>
+                                <div className="flex items-center gap-4">
+                                    <tool.icon className="h-8 w-8 text-primary" aria-hidden="true" />
+                                    <CardTitle>{tool.title}</CardTitle>
+                                </div>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-muted-foreground">{tool.description}</p>
+                            </CardContent>
+                        </Card>
+                    </Link>
+                ))}
+            </div>
+        </div>
+        
+        <div>
+            <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                {articleLinks.map((article) => (
+                    <Link key={article.title} href={article.href} className="block">
+                    <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                        <CardHeader>
+                        <div className="flex items-center gap-4">
+                            <article.icon className="h-8 w-8 text-primary" aria-hidden="true" />
+                            <CardTitle>{article.title}</CardTitle>
+                        </div>
+                        </CardHeader>
+                        <CardContent>
+                        <p className="text-muted-foreground">{article.description}</p>
+                        </CardContent>
+                    </Card>
+                    </Link>
+                ))}
+            </div>
         </div>
       </div>
     </>
   );
 }
-
-    
