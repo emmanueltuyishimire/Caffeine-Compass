@@ -88,17 +88,17 @@ export default function Home() {
                   alt={heroImage.description}
                   data-ai-hint={heroImage.imageHint}
                   fill
-                  className="object-cover object-center z-0 opacity-20"
+                  className="object-cover object-center z-0"
                   priority
                 />
             )}
-          <div className="relative z-10 p-4 max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-outline">
+          <div className="relative z-10 p-4 max-w-4xl mx-auto bg-black/50 rounded-xl">
+            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
               Take Control of Your Caffeine.
               <br/>
               Unlock Your Potential.
             </h1>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-outline">
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
               Harness the power of caffeine without compromising your sleep or well-being. Our science-backed tools provide personalized insights to help you optimize your energy, focus, and health.
             </p>
             <Link href="/calculators">
