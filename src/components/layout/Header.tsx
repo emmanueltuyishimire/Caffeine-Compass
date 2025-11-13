@@ -40,7 +40,7 @@ const Header = () => {
             <NavigationMenuItem>
               <Link href="/articles" legacyBehavior passHref>
                 <NavigationMenuLink asChild>
-                  <a className={navigationMenuTriggerStyle()}>Learn</a>
+                   <a className={navigationMenuTriggerStyle()}>Learn</a>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
