@@ -116,11 +116,6 @@ const Header = () => {
                   <Link href="/about">About</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/ai-assistant">AI Assistant</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>

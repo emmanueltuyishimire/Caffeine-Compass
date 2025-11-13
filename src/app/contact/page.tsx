@@ -1,7 +1,7 @@
 
 import { Metadata } from 'next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, MessageCircle, Lightbulb, Partnership, AlertCircle } from 'lucide-react';
+import { Mail, MessageCircle, Lightbulb, Handshake, AlertCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Contact Us — Caffeine Compass',
@@ -20,7 +20,7 @@ const contactReasons = [
         text: 'Is there a topic related to caffeine, sleep, or performance you want us to write about? Let us know.'
     },
     {
-        icon: Partnership,
+        icon: Handshake,
         title: 'Partnerships & Collaborations',
         text: 'Interested in working with us? We are open to collaborations that align with our mission.'
     },
