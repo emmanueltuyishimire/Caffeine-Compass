@@ -9,11 +9,22 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' });
 export const metadata: Metadata = {
   metadataBase: new URL('https://caffeine-calculation-site.com'),
   title: {
-    default: 'Caffeine Calculation Site — Optimize Your Caffeine for Better Energy & Sleep',
-    template: '%s — Caffeine Calculation Site',
+    default:
+      'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
+    template: '%s — Caffeine Compass',
   },
   description:
-    'Empowering people to understand, calculate, and optimize their caffeine habits for better focus, health, and sleep.',
+    'Empowering people to understand, calculate, and optimize their caffeine habits for better focus, health, and sleep. Use our science-backed calculators and tools.',
+  keywords: [
+    'caffeine calculator',
+    'caffeine intake',
+    'caffeine half-life',
+    'caffeine and sleep',
+    'how much caffeine',
+    'coffee caffeine',
+    'energy drinks',
+    'caffeine sensitivity',
+  ],
   icons: {
     icon: '/logo.png',
   },
@@ -21,18 +32,18 @@ export const metadata: Metadata = {
 };
 
 const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Caffeine Calculation Site",
-  "url": "https://caffeine-calculation-site.com/",
-   "publisher": {
-    "@type": "Organization",
-    "name": "Caffeine Calculation Site",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://caffeine-calculation-site.com/logo.png"
-    }
-  }
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Caffeine Compass',
+  url: 'https://caffeine-calculation-site.com/',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Caffeine Compass',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://caffeine-calculation-site.com/logo.png',
+    },
+  },
 };
 
 export default function RootLayout({
