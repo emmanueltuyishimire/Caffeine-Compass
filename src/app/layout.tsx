@@ -2,10 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import JsonLd from '@/components/JsonLd';
-import AppLayout from '@/components/layout/AppLayout';
-import { ThemeProvider } from '@/components/theme-provider';
-import { SidebarProvider } from '@/components/ui/sidebar';
-import { Toaster } from '@/components/ui/toaster';
+import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -47,17 +44,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} font-body antialiased`}>
         <JsonLd data={websiteJsonLd} />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <SidebarProvider>
-            <AppLayout>{children}</AppLayout>
-            <Toaster />
-          </SidebarProvider>
-        </ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
