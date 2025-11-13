@@ -73,9 +73,9 @@ const Header = () => {
             <NavigationMenu className="hidden md:flex">
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <Link href="/" passHref>
-                          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                            <a>Home</a>
+                        <Link href="/" legacyBehavior passHref>
+                          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            Home
                           </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
@@ -130,9 +130,9 @@ const Header = () => {
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                      <NavigationMenuItem>
-                        <Link href="/about" passHref>
-                          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                            <a>About</a>
+                        <Link href="/about" legacyBehavior passHref>
+                          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            About
                           </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
