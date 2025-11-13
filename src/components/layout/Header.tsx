@@ -25,36 +25,36 @@ const Header = () => {
         </div>
         <div className="flex items-center gap-2">
             <NavigationMenu className="hidden md:flex">
-            <NavigationMenuList>
-                <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Home
-                    </NavigationMenuLink>
-                </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                <Link href="/calculators" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Calculators
-                    </NavigationMenuLink>
-                </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                <Link href="/articles" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Learn
-                    </NavigationMenuLink>
-                </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                <Link href="/ai-assistant" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    AI Assistant
-                    </NavigationMenuLink>
-                </Link>
-                </NavigationMenuItem>
-            </NavigationMenuList>
+                <NavigationMenuList>
+                    <NavigationMenuItem>
+                        <Link href="/" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            Home
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <Link href="/calculators" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            Calculators
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <Link href="/articles" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            Learn
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <Link href="/ai-assistant" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            AI Assistant
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                </NavigationMenuList>
             </NavigationMenu>
             <ThemeToggle />
             <MobileNav />
