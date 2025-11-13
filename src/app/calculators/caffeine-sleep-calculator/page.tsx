@@ -19,12 +19,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Moon, Clock, BrainCircuit, Lightbulb, User, Briefcase, GraduationCap, Heart, CheckCircle, ZapOff, Droplet } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
-import dynamic from 'next/dynamic';
-
-const HalfLifeEstimator = dynamic(() => import('@/components/features/HalfLifeEstimator'), {
-  ssr: false,
-  loading: () => <div className="max-w-4xl mx-auto h-[480px] bg-muted rounded-lg animate-pulse" />,
-});
+import HalfLifeEstimatorLoader from '@/components/features/loaders/HalfLifeEstimatorLoader';
 
 
 export const metadata: Metadata = {
@@ -44,7 +39,7 @@ const pageJsonLd = {
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Caffeine Calculation Site",
+    "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
       "url": "https://caffeine-calculation-site.com/logo.png"
@@ -145,7 +140,7 @@ export default function CaffeineSleepCalculatorPage() {
           </p>
         </header>
 
-        <HalfLifeEstimator />
+        <HalfLifeEstimatorLoader />
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
             <section id="introduction" aria-labelledby="introduction-heading">
@@ -475,3 +470,5 @@ export default function CaffeineSleepCalculatorPage() {
     </>
   );
 }
+
+    
