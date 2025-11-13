@@ -2,7 +2,6 @@ import { cn } from '@/lib/utils';
 import type { SVGProps } from 'react';
 
 // This file can be used for custom SVG icons.
-// For now, the Logo has been replaced with an Image component in the Header.
 // You can add other custom SVG components here as needed.
 export const Logo = (props: SVGProps<SVGSVGElement>) => (
   <svg

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  manifest: '/manifest.json',
 };
 
 const websiteJsonLd = {
@@ -28,8 +29,16 @@ const websiteJsonLd = {
   "url": "https://caffeine-compass.com/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://caffeine-compass.com/support?q={search_term_string}",
+    "target": "https://caffeine-compass.com/ai-assistant?q={search_term_string}",
     "query-input": "required name=search_term_string"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Caffeine Compass",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://caffeine-compass.com/logo.png"
+    }
   }
 };
 

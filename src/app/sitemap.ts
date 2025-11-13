@@ -1,4 +1,3 @@
-
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -36,28 +35,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: 0.5,
+    priority: 0.7,
   }));
 
   const calculatorUrls = calculatorRoutes.map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
   }));
 
   const articleUrls = articleRoutes.map(route => ({
       url: `${baseUrl}${route}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: 0.9,
+      priority: 0.8,
   }));
   
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: 'daily',
       priority: 1,
     },
     {
@@ -70,11 +69,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/articles`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.8,
     },
     ...staticUrls,
     ...calculatorUrls,
     ...articleUrls,
   ]
 }
-    

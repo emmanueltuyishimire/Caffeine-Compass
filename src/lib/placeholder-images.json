@@ -2,32 +2,32 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "Coffee beans elegantly arranged on a rustic plate, symbolizing the core of caffeine.",
-      "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzZWVkcyUyMHBsYXRlfGVufDB8fHx8MTc2MjkzMDMwMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "coffee seeds"
+      "description": "Dark, moody shot of a barista pouring milk into a latte, with coffee beans scattered around.",
+      "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzZWVkcyUyMHBsYXRlfGVufDB8fHx8MTc2MjkzMDMwMXww&ixlib=rb-4.1.0&q=80&w=1920",
+      "imageHint": "coffee latte"
     },
     {
       "id": "why-us-image",
-      "description": "A close-up of a coffee cup next to a scientific diagram.",
-      "imageUrl": "https://images.unsplash.com/photo-1582832505469-69b19eec522e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzY2llbmNlJTIwY29mZmVlfGVufDB8fHx8MTc2MjkyMDk1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A close-up of a coffee cup next to a scientific diagram illustrating chemical bonds, symbolizing the science-backed approach of the website.",
+      "imageUrl": "https://images.unsplash.com/photo-1582832505469-69b19eec522e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzY2llbmNlJTIwY29mZmVlfGVufDB8fHx8MTc2MjkyMDk1OXww&ixlib=rb-4.1.0&q=80&w=600",
       "imageHint": "science coffee"
     },
     {
       "id": "mission-image",
-      "description": "A compass on a map, symbolizing guidance.",
-      "imageUrl": "https://images.unsplash.com/photo-1669139986747-c515b251366f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21wYXNzJTIwZ3VpZGFuY2V8ZW58MHx8fHwxNzYyOTIwOTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "An antique compass lying on a vintage map, representing guidance and the mission to navigate caffeine consumption.",
+      "imageUrl": "https://images.unsplash.com/photo-1669139986747-c515b251366f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21wYXNzJTIwZ3VpZGFuY2V8ZW58MHx8fHwxNzYyOTIwOTYwfDA&ixlib=rb-4.1.0&q=80&w=500",
       "imageHint": "compass guidance"
     },
     {
       "id": "team-evelyn",
-      "description": "A professional headshot of Dr. Evelyn Reed.",
-      "imageUrl": "https://images.unsplash.com/photo-1759342376042-6fa5f80d49b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzY2llbnRpc3QlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjI4ODAwNzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A professional portrait of a mature female scientist with glasses, looking thoughtfully at the camera in a laboratory setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1759342376042-6fa5f80d49b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzY2llbnRpc3QlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjI4ODAwNzV8MA&ixlib=rb-4.1.0&q=80&w=100",
       "imageHint": "scientist portrait"
     },
     {
       "id": "team-alex",
-      "description": "A professional headshot of Alex Chen.",
-      "imageUrl": "https://images.unsplash.com/photo-1689218742383-c4e7b8494e75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjI4NDIxMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A professional headshot of a young male software developer with a friendly smile, in a modern office environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1689218742383-c4e7b8494e75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjI4NDIxMjV8MA&ixlib=rb-4.1.0&q=80&w=100",
       "imageHint": "developer portrait"
     }
   ]
