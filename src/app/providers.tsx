@@ -1,9 +1,10 @@
+
 'use client';
 
 import { ThemeProvider } from '@/components/theme-provider';
 import { SidebarProvider } from '@/components/ui/sidebar';
-import AppLayout from '@/components/layout/AppLayout';
 import { Toaster } from '@/components/ui/toaster';
+import AppLayout from '@/components/layout/AppLayout';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
