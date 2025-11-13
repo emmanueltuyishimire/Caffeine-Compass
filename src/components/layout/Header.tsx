@@ -27,28 +27,28 @@ const Header = () => {
             <NavigationMenu className="hidden md:flex">
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <Link href="/" legacyBehavior passHref>
+                        <Link href="/" passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             Home
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/calculators" legacyBehavior passHref>
+                        <Link href="/calculators" passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             Calculators
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/articles" legacyBehavior passHref>
+                        <Link href="/articles" passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             Learn
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/ai-assistant" legacyBehavior passHref>
+                        <Link href="/ai-assistant" passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             AI Assistant
                             </NavigationMenuLink>
