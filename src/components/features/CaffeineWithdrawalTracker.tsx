@@ -50,6 +50,8 @@ const chartConfig = {
 export default function CaffeineWithdrawalTracker() {
   const [consumed, setConsumed] = useState<ConsumedDrink[]>([]);
   const [open, setOpen] = useState(false);
+  const [customName, setCustomName] = useState('');
+  const [customCaffeine, setCustomCaffeine] = useState('');
   const [duration, setDuration] = useState(14);
   const [frequency, setFrequency] = useState(2);
   const [startDate, setStartDate] = useState<Date>(new Date());
@@ -71,6 +73,24 @@ export default function CaffeineWithdrawalTracker() {
         return drinkToAdd ? [...currentConsumed, { ...drinkToAdd, quantity: 1 }] : currentConsumed;
       }
     });
+  };
+  
+  const addCustomDrink = () => {
+    const caffeine = parseInt(customCaffeine, 10);
+    if (customName && !isNaN(caffeine) && caffeine > 0) {
+        const customDrink: ConsumedDrink = {
+            id: `custom-${Date.now()}`,
+            name: customName,
+            category: 'Other',
+            caffeine: caffeine,
+            size: 0,
+            icon: PlusCircle,
+            quantity: 1,
+        };
+        setConsumed(current => [...current, customDrink]);
+        setCustomName('');
+        setCustomCaffeine('');
+    }
   };
 
   const removeDrink = (drinkId: string) => {
@@ -191,6 +211,20 @@ export default function CaffeineWithdrawalTracker() {
                     </Command>
                 </PopoverContent>
                 </Popover>
+
+                <div className="p-2 border rounded-md bg-muted/50 space-y-2 mt-4">
+                    <h4 className="text-xs font-medium text-muted-foreground" id="custom-drink-heading">Add Custom Drink</h4>
+                    <div className="flex flex-col sm:flex-row gap-2" aria-labelledby="custom-drink-heading">
+                        <Label htmlFor="custom-drink-name" className="sr-only">Custom drink name</Label>
+                        <Input id="custom-drink-name" placeholder="Drink Name" value={customName} onChange={e => setCustomName(e.target.value)} className="h-9"/>
+                        <Label htmlFor="custom-caffeine-amount" className="sr-only">Custom caffeine amount in mg</Label>
+                        <Input id="custom-caffeine-amount" type="number" placeholder="Caffeine (mg)" value={customCaffeine} onChange={e => setCustomCaffeine(e.target.value)} className="w-full sm:w-28 h-9"/>
+                        <Button onClick={addCustomDrink} disabled={!customName || !customCaffeine} size="sm">
+                            <PlusCircle className="mr-2 h-4 w-4"/> Add
+                        </Button>
+                    </div>
+                </div>
+
                  <div className="mt-4 p-4 border-t" role="status" aria-live="polite">
                     <p className="text-sm font-medium text-muted-foreground">Total Daily Intake:</p>
                     <p className="text-2xl font-bold text-primary">{intake} mg</p>
