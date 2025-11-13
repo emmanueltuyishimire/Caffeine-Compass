@@ -29,11 +29,6 @@ const websiteJsonLd = {
   "@type": "WebSite",
   "name": "Caffeine Calculation Site",
   "url": "https://caffeine-calculation-site.com/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://caffeine-calculation-site.com/ai-assistant?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
    "publisher": {
     "@type": "Organization",
     "name": "Caffeine Calculation Site",
