@@ -99,7 +99,7 @@ export default function Home() {
               <br/>
               Unlock Your Potential.
             </h1>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-outline">
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-black">
               Harness the power of caffeine without compromising your sleep or well-being. Our science-backed tools provide personalized insights to help you optimize your energy, focus, and health.
             </p>
             <Link href="/calculators">
