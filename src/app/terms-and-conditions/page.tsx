@@ -1,5 +1,6 @@
 
 import { Metadata } from 'next';
+import ClientDate from '@/components/ui/client-date';
 
 export const metadata: Metadata = {
     title: 'Terms and Conditions',
@@ -12,7 +13,7 @@ export default function TermsAndConditionsPage() {
       <div className="prose prose-lg dark:prose-invert max-w-none mx-auto">
         <h1 className="text-4xl font-bold font-headline mb-8">Terms and Conditions</h1>
         
-        <p><em>Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</em></p>
+        <p><em>Last Updated: <ClientDate /></em></p>
 
         <p>
           Welcome to Caffeine Calculation Site ("we," "us," or "our"). These Terms and Conditions ("Terms") govern your use of our website, located at caffeine-calculation-site.com (the "Site"), and the tools, content, and services offered thereon.

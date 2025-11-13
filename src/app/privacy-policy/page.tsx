@@ -1,5 +1,6 @@
 
 import { Metadata } from 'next';
+import ClientDate from '@/components/ui/client-date';
 
 export const metadata: Metadata = {
     title: 'Privacy Policy',
@@ -12,7 +13,7 @@ export default function PrivacyPolicyPage() {
       <div className="prose prose-lg dark:prose-invert max-w-none mx-auto">
         <h1 className="text-4xl font-bold font-headline mb-8">Privacy Policy</h1>
         
-        <p><em>Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</em></p>
+        <p><em>Last Updated: <ClientDate /></em></p>
 
         <p>
           Welcome to Caffeine Calculation Site ("we," "us," or "our"). We are committed to protecting your privacy and handling your data in an open and transparent manner. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website.
@@ -46,7 +47,7 @@ export default function PrivacyPolicyPage() {
 
         <h2>3. Disclosure of Your Information</h2>
         <p>
-          We are committed to maintaining your trust. We do not sell, rent, trade, or otherwise transfer your Personally Identifiable Information to outside parties. We may share aggregated, anonymous Usage Data with analytics partners to help us understand site traffic and usage patterns.
+          We are committed to maintaining your trust. We do not sell, rent, trade, or otherwise transfer your Personally Identifiable Information to outside parties. We may share aggregated, anonymous UsageData with analytics partners to help us understand site traffic and usage patterns.
         </p>
 
         <h2>4. Cookies and Web Beacons</h2>
