@@ -99,7 +99,7 @@ export default function CaffeineWithdrawalTracker() {
           <div className="space-y-2">
             <Label htmlFor="taper-duration">Tapering Duration (Days)</Label>
              <Select onValueChange={(value) => setDuration(Number(value))} defaultValue={String(duration)}>
-                <SelectTrigger id="taper-duration">
+                <SelectTrigger id="taper-duration" aria-label="Select tapering duration">
                     <SelectValue placeholder="Select duration" />
                 </SelectTrigger>
                 <SelectContent>
@@ -113,7 +113,7 @@ export default function CaffeineWithdrawalTracker() {
           <div className="space-y-2">
             <Label htmlFor="reduction-frequency">Reduce Every (Days)</Label>
              <Select onValueChange={(value) => setFrequency(Number(value))} defaultValue={String(frequency)}>
-                <SelectTrigger id="reduction-frequency">
+                <SelectTrigger id="reduction-frequency" aria-label="Select reduction frequency">
                     <SelectValue placeholder="Select frequency" />
                 </SelectTrigger>
                 <SelectContent>
@@ -135,6 +135,7 @@ export default function CaffeineWithdrawalTracker() {
                     "w-full justify-start text-left font-normal",
                     !startDate && "text-muted-foreground"
                   )}
+                  aria-label="Select start date for tapering plan"
                 >
                   <CalendarDays className="mr-2 h-4 w-4" aria-hidden="true" />
                   {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}

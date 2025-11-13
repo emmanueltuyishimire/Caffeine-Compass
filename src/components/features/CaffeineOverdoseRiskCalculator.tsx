@@ -76,16 +76,16 @@ export default function CaffeineOverdoseRiskCalculator() {
           </div>
           <div className="flex items-center space-x-2 pt-4" role="radiogroup" aria-labelledby="unit-label">
             <span id="unit-label" className="sr-only">Weight unit</span>
-            <Label htmlFor="unit-switch-kg" className={unit === 'kg' ? 'text-primary' : ''}>kg</Label>
+            <Label htmlFor="unit-switch" className={unit === 'kg' ? 'text-primary' : ''}>kg</Label>
             <Switch
               id="unit-switch"
               checked={unit === 'lbs'}
               onCheckedChange={(checked) => setUnit(checked ? 'lbs' : 'kg')}
               role="switch"
               aria-checked={unit === 'lbs'}
-              aria-labelledby='unit-label'
+              aria-label="Switch between kilograms and pounds"
             />
-            <Label htmlFor="unit-switch-lbs" className={unit === 'lbs' ? 'text-primary' : ''}>lbs</Label>
+            <Label htmlFor="unit-switch" className={unit === 'lbs' ? 'text-primary' : ''}>lbs</Label>
           </div>
         </div>
         

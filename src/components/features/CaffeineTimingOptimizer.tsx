@@ -86,7 +86,7 @@ export default function CaffeineTimingOptimizer() {
         <div className="space-y-2">
           <Label htmlFor="metabolism">What is your caffeine sensitivity?</Label>
           <Select onValueChange={setMetabolism} defaultValue={metabolism}>
-            <SelectTrigger id="metabolism">
+            <SelectTrigger id="metabolism" aria-label="Select caffeine sensitivity">
               <SelectValue placeholder="Select your metabolism speed" />
             </SelectTrigger>
             <SelectContent>

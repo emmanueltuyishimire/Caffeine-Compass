@@ -11,6 +11,7 @@ import { Progress } from '@/components/ui/progress';
 import { drinks } from '@/lib/drinks';
 import type { ConsumedDrink } from '@/lib/types';
 import { ChevronsUpDown, Trash2, TrendingUp, TrendingDown } from 'lucide-react';
+import { Label } from '../ui/label';
 
 const RECOMMENDED_LIMIT = 400; // mg
 
@@ -58,41 +59,44 @@ export default function IntakeCalculator() {
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="flex flex-col sm:flex-row gap-2">
-          <Popover open={open} onOpenChange={setOpen}>
-            <PopoverTrigger asChild>
-              <Button variant="outline" role="combobox" aria-expanded={open} className="w-full sm:w-[300px] justify-between">
-                Search for a drink...
-                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" aria-hidden="true" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-[300px] p-0">
-              <Command>
-                <CommandInput placeholder="Search drink..." />
-                <CommandList>
-                  <CommandEmpty>No drink found.</CommandEmpty>
-                  <CommandGroup>
-                    {drinks.map((drink) => (
-                      <CommandItem
-                        key={drink.id}
-                        value={drink.name}
-                        onSelect={() => {
-                          addDrink(drink.id);
-                          setOpen(false);
-                        }}
-                        className="flex justify-between items-center"
-                      >
-                        <div className="flex items-center gap-2">
-                          <drink.icon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
-                          <span>{drink.name}</span>
-                        </div>
-                        <span className="text-xs text-muted-foreground">{drink.caffeine}mg</span>
-                      </CommandItem>
-                    ))}
-                  </CommandGroup>
-                </CommandList>
-              </Command>
-            </PopoverContent>
-          </Popover>
+          <div>
+            <Label htmlFor="drink-search" className="sr-only">Search for a drink</Label>
+            <Popover open={open} onOpenChange={setOpen}>
+              <PopoverTrigger asChild>
+                <Button id="drink-search" variant="outline" role="combobox" aria-expanded={open} className="w-full sm:w-[300px] justify-between">
+                  Search for a drink...
+                  <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" aria-hidden="true" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-[300px] p-0">
+                <Command>
+                  <CommandInput placeholder="Search drink..." />
+                  <CommandList>
+                    <CommandEmpty>No drink found.</CommandEmpty>
+                    <CommandGroup>
+                      {drinks.map((drink) => (
+                        <CommandItem
+                          key={drink.id}
+                          value={drink.name}
+                          onSelect={() => {
+                            addDrink(drink.id);
+                            setOpen(false);
+                          }}
+                          className="flex justify-between items-center"
+                        >
+                          <div className="flex items-center gap-2">
+                            <drink.icon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+                            <span>{drink.name}</span>
+                          </div>
+                          <span className="text-xs text-muted-foreground">{drink.caffeine}mg</span>
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </CommandList>
+                </Command>
+              </PopoverContent>
+            </Popover>
+          </div>
            <Button onClick={() => setConsumed([])} variant="secondary">Reset</Button>
         </div>
 
@@ -100,7 +104,7 @@ export default function IntakeCalculator() {
           {consumed.length === 0 ? (
             <p className="text-center text-muted-foreground py-4">Add a drink to get started.</p>
           ) : (
-            consumed.map((drink) => (
+            consumed.map((drink, index) => (
               <div key={drink.id} role="listitem" className="flex items-center gap-4 p-2 rounded-md border">
                 <drink.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                 <div className="flex-grow">
@@ -110,7 +114,9 @@ export default function IntakeCalculator() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
+                   <Label htmlFor={`quantity-${index}`} className="sr-only">Quantity of {drink.name}</Label>
                    <Input
+                    id={`quantity-${index}`}
                     type="number"
                     min="1"
                     value={drink.quantity}

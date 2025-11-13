@@ -57,7 +57,7 @@ export default function HalfLifeEstimator() {
           <div className="space-y-2">
             <Label htmlFor="metabolism">Metabolism Speed</Label>
             <Select onValueChange={(value) => setHalfLife(Number(value))} defaultValue={String(halfLife)}>
-              <SelectTrigger id="metabolism">
+              <SelectTrigger id="metabolism" aria-label="Select metabolism speed">
                 <SelectValue placeholder="Select your metabolism speed" />
               </SelectTrigger>
               <SelectContent>
