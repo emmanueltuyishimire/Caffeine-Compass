@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "../ui/sidebar";
 import { BookText, Calculator, Home } from "lucide-react";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const mainNav = [
     { href: '/', label: 'Home', icon: Home },
@@ -28,12 +29,17 @@ export default function SidebarNav() {
             <SidebarMenu>
                 {mainNav.map((link) => (
                     <SidebarMenuItem key={link.href}>
-                        <SidebarMenuButton asChild isActive={pathname === link.href} tooltip={link.label}>
-                            <Link href={link.href}>
-                                <link.icon />
-                                <span className="flex-grow text-left">{link.label}</span>
-                            </Link>
-                        </SidebarMenuButton>
+                         <Link href={link.href} passHref>
+                            <SidebarMenuButton
+                                tag="a"
+                                href={link.href}
+                                isActive={pathname === link.href}
+                                icon={<link.icon />}
+                                tooltip={link.label}
+                             >
+                                {link.label}
+                            </SidebarMenuButton>
+                        </Link>
                     </SidebarMenuItem>
                 ))}
             </SidebarMenu>

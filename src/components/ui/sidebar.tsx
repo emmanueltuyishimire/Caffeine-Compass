@@ -527,9 +527,9 @@ const sidebarMenuButtonVariants = cva(
 )
 
 const SidebarMenuButton = React.forwardRef<
-  HTMLButtonElement,
-  React.ComponentProps<"button"> & {
-    asChild?: boolean,
+  HTMLAnchorElement,
+  React.ComponentProps<"a"> & {
+    tag?: "a" | "span"
     isActive?: boolean
     icon?: React.ReactNode
     rightIcon?: React.ReactNode
@@ -538,7 +538,7 @@ const SidebarMenuButton = React.forwardRef<
 >(
   (
     {
-      asChild = false,
+      tag: Tag = "span",
       isActive = false,
       variant = "default",
       size = "default",
@@ -551,12 +551,11 @@ const SidebarMenuButton = React.forwardRef<
     },
     ref
   ) => {
-    const Comp = asChild ? Slot : "button";
     const { isMobile, state } = useSidebar()
     
     const button = (
-      <Comp
-        ref={ref}
+      <Tag
+        ref={ref as any}
         data-sidebar="menu-button"
         data-size={size}
         data-active={isActive}
@@ -564,9 +563,9 @@ const SidebarMenuButton = React.forwardRef<
         {...props}
       >
         {icon}
-        {children}
+        <span className="flex-grow text-left">{children}</span>
         {rightIcon}
-      </Comp>
+      </Tag>
     );
 
     if (!tooltip) {
