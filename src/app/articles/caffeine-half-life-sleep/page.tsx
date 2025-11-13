@@ -38,21 +38,21 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeine-calculation-site.com/logo.png"
+      "url": "https://caffeine-compass.com/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://caffeine-calculation-site.com/articles/caffeine-half-life-sleep"
+    "@id": "https://caffeine-compass.com/articles/caffeine-half-life-sleep"
   },
   "description": "An in-depth guide explaining caffeine half-life, the science of caffeine metabolism, and its profound impact on sleep quality. Learn how to use this knowledge to optimize your caffeine intake, avoid sleep disruption, and improve overall health and performance.",
   "articleBody": "This article explores the critical concept of caffeine half-life and its relationship with sleep. It explains how caffeine is metabolized, why its effects linger long after the initial 'buzz' is gone, and how factors like genetics, medication, and lifestyle can alter your personal caffeine half-life. The content provides actionable strategies, worked examples, and guidance on using tools like the Caffeine Half-Life Calculator to determine your personal 'caffeine curfew,' ensuring you can harness caffeine's benefits without sacrificing restorative sleep.",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caffeine-calculation-site.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://caffeine-calculation-site.com/articles" },
-      { "@type": "ListItem", "position": 3, "name": "Caffeine Half-Life & Sleep", "item": "https://caffeine-calculation-site.com/articles/caffeine-half-life-sleep" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caffeine-compass.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://caffeine-compass.com/articles" },
+      { "@type": "ListItem", "position": 3, "name": "Caffeine Half-Life & Sleep", "item": "https://caffeine-compass.com/articles/caffeine-half-life-sleep" }
     ]
   },
   "faqPage": {
@@ -208,7 +208,7 @@ export default function CaffeineHalfLifeSleepArticle() {
               The primary problem that drives millions to search for terms like "caffeine and sleep" or "how long does caffeine last" is the disconnect between how they <em>feel</em> and what is happening biochemically. The noticeable "buzz" from caffeine wears off relatively quickly, but the substance itself remains active in your bloodstream for many hours, silently disrupting the delicate architecture of your sleep. It's a potent saboteur of deep sleep and REM sleep, the stages critical for physical repair, memory consolidation, and emotional regulation. This leads to a frustrating paradox where you might sleep for a full eight hours but fail to get the restorative benefits, leaving you tired and reaching for more caffeine the next morning, perpetuating a difficult cycle.
             </p>
             <p>
-              This article will demystify the science of caffeine half-life. We will explore not just what it is, but <em>why</em> it varies so dramatically from person to person. You will learn how your genetics, lifestyle, and even other medications can turn you into a "fast" or "slow" metabolizer of caffeine. Most importantly, you will gain actionable strategies to use this knowledge to your advantage. By understanding your personal caffeine decay curve, you can strategically time your intake for maximum focus when you need it and ensure it has faded by the time you want to rest. The journey to better sleep and optimized energy starts with understanding this invisible clock. Our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> is the perfect tool to begin this journey, allowing you to visualize just how long that cup of coffee sticks around.
+              This article will demystify the science of caffeine half-life. We will explore not just what it is, but <em>why</em> it varies so dramatically from person to person. You will learn how your genetics, lifestyle, and even other medications can turn you into a "fast" or "slow" metabolizer of caffeine. Most importantly, you will gain actionable strategies to use this knowledge to your advantage. By understanding your personal caffeine decay curve, you can strategically time your intake for maximum focus when you need it and ensure it has faded by the time you want to rest. The journey to better sleep and optimized energy starts with understanding this invisible clock. Our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> is the perfect tool to begin this journey, allowing you to visualize just how long that cup of coffee sticks around.
             </p>
           </section>
 
@@ -263,7 +263,7 @@ export default function CaffeineHalfLifeSleepArticle() {
                 <li><strong>Liver Health:</strong> Since the liver is doing all the work, any form of liver disease or impairment will significantly prolong caffeine's half-life.</li>
             </ol>
             <p>
-              Understanding these factors is crucial. Your personal half-life is not a static number but a dynamic variable. By recognizing how your body and lifestyle interact with caffeine, you can begin to use a tool like the <Link href="/calculators/half-life">Half-Life Calculator</Link> not just as a generic estimator, but as a personalized guide to help you make smarter decisions for your sleep and overall health.
+              Understanding these factors is crucial. Your personal half-life is not a static number but a dynamic variable. By recognizing how your body and lifestyle interact with caffeine, you can begin to use a tool like the <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link> not just as a generic estimator, but as a personalized guide to help you make smarter decisions for your sleep and overall health.
             </p>
           </section>
 
@@ -287,7 +287,7 @@ export default function CaffeineHalfLifeSleepArticle() {
               <strong>The Pain Point:</strong> Your body feels physically exhausted, but your mind is racing. You lie in bed, desperate for sleep, but your brain won't shut off. You might experience a racing heart or a feeling of underlying anxiety.
             </p>
             <p>
-              <strong>The Half-Life Connection:</strong> This occurs when the sleep pressure from adenosine buildup is very high (your body is tired), but there is still a significant amount of caffeine blocking the receptors (your brain is wired). The lingering caffeine from an afternoon dose keeps your central nervous system in a state of stimulation, preventing the natural transition into sleep. You are experiencing a neurochemical tug-of-war. Using the <Link href="/calculators/half-life">Half-Life Calculator</Link> can provide a shocking revelation, showing that you might still have the equivalent of half a cup of coffee in your system at bedtime.
+              <strong>The Half-Life Connection:</strong> This occurs when the sleep pressure from adenosine buildup is very high (your body is tired), but there is still a significant amount of caffeine blocking the receptors (your brain is wired). The lingering caffeine from an afternoon dose keeps your central nervous system in a state of stimulation, preventing the natural transition into sleep. You are experiencing a neurochemical tug-of-war. Using the <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link> can provide a shocking revelation, showing that you might still have the equivalent of half a cup of coffee in your system at bedtime.
             </p>
             
             <h3 className="text-2xl font-semibold">3. Increased Anxiety and Jitters in the Evening</h3>
@@ -295,7 +295,7 @@ export default function CaffeineHalfLifeSleepArticle() {
               <strong>The Pain Point:</strong> You feel perfectly fine during the day, but in the evening, you notice a subtle but persistent feeling of anxiety, restlessness, or physical jitters. You might attribute it to work stress, but it could be your caffeine habit.
             </p>
             <p>
-              <strong>The Half-Life Connection:</strong> This is especially common in "slow metabolizers." A coffee consumed at lunch can reach its peak disruptive potential in the evening. As your natural energy levels wane and cortisol drops, the stimulating effects of the still-present caffeine become more pronounced and less buffered. What felt like clean focus at 2 PM can manifest as raw, unfocused nervous energy at 8 PM. By not accounting for caffeine's long half-life, you are essentially exposing your evening brain to a stimulant it is no longer prepared to handle, leading to discomfort and anxiety instead of relaxation. Tracking your intake with our <Link href="/calculators/intake">Intake Calculator</Link> can reveal just how much you're asking your body to process.
+              <strong>The Half-Life Connection:</strong> This is especially common in "slow metabolizers." A coffee consumed at lunch can reach its peak disruptive potential in the evening. As your natural energy levels wane and cortisol drops, the stimulating effects of the still-present caffeine become more pronounced and less buffered. What felt like clean focus at 2 PM can manifest as raw, unfocused nervous energy at 8 PM. By not accounting for caffeine's long half-life, you are essentially exposing your evening brain to a stimulant it is no longer prepared to handle, leading to discomfort and anxiety instead of relaxation. Tracking your intake with our <Link href="/calculators/caffeine-intake">Intake Calculator</Link> can reveal just how much you're asking your body to process.
             </p>
           </section>
 
@@ -325,7 +325,7 @@ export default function CaffeineHalfLifeSleepArticle() {
 
             <h3 className="text-2xl font-semibold">2. Know Your Dose—and Front-Load It</h3>
             <p>
-              The initial dose matters immensely. A large 200mg coffee at 9 AM is far less damaging to sleep than a "small" 100mg coffee at 4 PM. This is because even with a long half-life, the larger morning dose has more time to clear. Use our <Link href="/calculators/drinks-database">Drinks Database</Link> to know the exact dosage of your favorite beverages. Aim to consume the majority of your daily caffeine before noon.
+              The initial dose matters immensely. A large 200mg coffee at 9 AM is far less damaging to sleep than a "small" 100mg coffee at 4 PM. This is because even with a long half-life, the larger morning dose has more time to clear. Use our <Link href="/calculators/caffeine-drinks-database">Drinks Database</Link> to know the exact dosage of your favorite beverages. Aim to consume the majority of your daily caffeine before noon.
             </p>
 
             <Card className="my-4 bg-primary/5 border-primary/20">
@@ -363,11 +363,11 @@ export default function CaffeineHalfLifeSleepArticle() {
             <ol className="list-decimal pl-5 space-y-4">
               <li>
                 <strong>Step 1: Determine Your Dose and Timing (2-3 Days)</strong>
-                <p>For the next two or three days, be a meticulous observer of your own habits. Use our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> to log every single caffeinated item you consume—from your morning coffee to a post-dinner soda. For each entry, note the time of consumption. The goal is to get an honest baseline. What's your average daily total, and what time is your <em>last</em> dose of the day?</p>
+                <p>For the next two or three days, be a meticulous observer of your own habits. Use our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> to log every single caffeinated item you consume—from your morning coffee to a post-dinner soda. For each entry, note the time of consumption. The goal is to get an honest baseline. What's your average daily total, and what time is your <em>last</em> dose of the day?</p>
               </li>
               <li>
                 <strong>Step 2: Visualize Your Sleep Impact (5 Minutes)</strong>
-                <p>Take your latest and largest afternoon or evening dose from your log. For example, let's say you had a 150mg coffee at 3 PM. Now, go to the <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link>. Enter "150" as the dose. Next, select your estimated metabolism speed from the <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> (if unsure, start with "Average"). The calculator will generate a decay chart. Now, look at the value for your bedtime. If you go to bed at 11 PM (8 hours after your 3 PM coffee), how much caffeine is still active in your system? Is it 30mg? 50mg? This number is the concrete evidence of what's interfering with your sleep.</p>
+                <p>Take your latest and largest afternoon or evening dose from your log. For example, let's say you had a 150mg coffee at 3 PM. Now, go to the <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link>. Enter "150" as the dose. Next, select your estimated metabolism speed from the <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> (if unsure, start with "Average"). The calculator will generate a decay chart. Now, look at the value for your bedtime. If you go to bed at 11 PM (8 hours after your 3 PM coffee), how much caffeine is still active in your system? Is it 30mg? 50mg? This number is the concrete evidence of what's interfering with your sleep.</p>
               </li>
               <li>
                 <strong>Step 3: Set and Test Your New Caffeine Curfew</strong>
@@ -388,7 +388,7 @@ export default function CaffeineHalfLifeSleepArticle() {
               </CardHeader>
               <CardContent className="space-y-2">
                 <p><strong>Persona:</strong> Chloe, a 20-year-old student, is a self-proclaimed "night owl." She drinks a large cold brew (250mg) at 2 PM to power through afternoon classes and evening study sessions. She goes to bed at 1 AM but always feels groggy and struggles to retain what she studied.</p>
-                <p><strong>The Problem:</strong> Chloe considers herself an "average" metabolizer (5-hour half-life). When she enters her 250mg dose at 2 PM into the <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link>, she is shocked. At 1 AM (11 hours later), she still has approximately <strong>55mg</strong> of caffeine in her system. This is more than a can of Coke and is actively suppressing her REM sleep and memory consolidation.</p>
+                <p><strong>The Problem:</strong> Chloe considers herself an "average" metabolizer (5-hour half-life). When she enters her 250mg dose at 2 PM into the <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link>, she is shocked. At 1 AM (11 hours later), she still has approximately <strong>55mg</strong> of caffeine in her system. This is more than a can of Coke and is actively suppressing her REM sleep and memory consolidation.</p>
                 <p><strong>The Solution:</strong> Chloe realizes her "afternoon" coffee is really a "pre-sleep" coffee. She shifts her cold brew to 10 AM. For afternoon energy, she opts for a short walk and a glass of cold water. Her sleep quality improves dramatically within a week, and she finds she can study more effectively in fewer hours because she's actually retaining the information.</p>
               </CardContent>
             </Card>
@@ -433,7 +433,7 @@ export default function CaffeineHalfLifeSleepArticle() {
                     <TableRow>
                         <TableCell className="font-medium">Thinking the "Buzz" Is the Only Effect</TableCell>
                         <TableCell>The noticeable psychoactive effects (the "buzz") wear off much faster than the caffeine is actually cleared. People assume if they don't feel it, it's gone.</TableCell>
-                        <TableCell>Trust the data, not just the feeling. Use the <Link href="/calculators/half-life">Half-Life Calculator</Link> to see the estimated amount remaining, as even low levels disrupt sleep architecture.</TableCell>
+                        <TableCell>Trust the data, not just the feeling. Use the <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link> to see the estimated amount remaining, as even low levels disrupt sleep architecture.</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell className="font-medium">Applying a Friend's Rule to Your Body</TableCell>
@@ -448,7 +448,7 @@ export default function CaffeineHalfLifeSleepArticle() {
                     <TableRow>
                         <TableCell className="font-medium">Ignoring "Hidden" Afternoon Caffeine</TableCell>
                         <TableCell>Forgetting that soda, iced tea, dark chocolate, or even some pain relievers contain caffeine. A 4 PM can of Diet Coke (46mg) can be enough to disrupt sleep for a slow metabolizer.</TableCell>
-                        <TableCell>Log everything you consume after your curfew time in the <Link href="/calculators/intake">Intake Calculator</Link> to be sure. Be vigilant about all sources, not just coffee.</TableCell>
+                        <TableCell>Log everything you consume after your curfew time in the <Link href="/calculators/caffeine-intake">Intake Calculator</Link> to be sure. Be vigilant about all sources, not just coffee.</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>
@@ -480,7 +480,7 @@ export default function CaffeineHalfLifeSleepArticle() {
               <AccordionItem value="faq-4">
                 <AccordionTrigger>How can I estimate my personal caffeine half-life?</AccordionTrigger>
                 <AccordionContent>
-                  You can get a good estimate by observing your body's response. If an afternoon coffee makes you jittery or keeps you up at night, you're likely a 'slow metabolizer' with a longer half-life (6-8 hours). If it has little effect on your sleep, you're likely a 'fast metabolizer' (3-4 hours). Our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> lets you model these different scenarios.
+                  You can get a good estimate by observing your body's response. If an afternoon coffee makes you jittery or keeps you up at night, you're likely a 'slow metabolizer' with a longer half-life (6-8 hours). If it has little effect on your sleep, you're likely a 'fast metabolizer' (3-4 hours). Our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> lets you model these different scenarios.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-5">
@@ -559,7 +559,7 @@ export default function CaffeineHalfLifeSleepArticle() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/half-life" className="hover:underline">Caffeine Half-Life Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-half-life" className="hover:underline">Caffeine Half-Life Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>The primary tool for this topic. Visualize how long caffeine stays in your system to determine your personal sleep-safe cutoff time.</p>
@@ -567,7 +567,7 @@ export default function CaffeineHalfLifeSleepArticle() {
                   </Card>
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/intake" className="hover:underline">Daily Intake Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Daily Intake Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>You can't manage what you don't measure. Get an accurate reading of your total dose before calculating its half-life.</p>
@@ -588,5 +588,3 @@ export default function CaffeineHalfLifeSleepArticle() {
     </>
   );
 }
-
-    

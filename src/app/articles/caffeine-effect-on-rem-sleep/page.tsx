@@ -208,7 +208,7 @@ export default function CaffeineRemSleepArticle() {
               Why should you care about REM sleep? This is the stage where your brain gets truly creative. It’s where you dream vividly, where emotional experiences from the day are processed, and where complex memories and skills are consolidated. It’s your mind’s nightly "software update." The problem is, caffeine is a potent REM suppressant. The lingering stimulant in your system can prevent your brain from entering this crucial stage, shorten its duration, and ultimately rob you of its restorative benefits. This leads to a common, frustrating paradox: you may sleep for a full eight hours, but you wake up feeling mentally foggy, emotionally frayed, and creatively drained. You’ve logged the hours, but your brain missed its most important work shift.
             </p>
             <p>
-              This article is for anyone who has ever felt "tired but wired," wondered why their memory feels less sharp despite getting enough "sleep," or struggled to solve a problem that a good night's rest was supposed to fix. We will explore the deep, neurochemical relationship between your daily caffeine habit and your nightly REM cycles. You will learn not just &lt;em&gt;what&lt;/em&gt; caffeine does, but &lt;em&gt;how&lt;/em&gt; it does it, and what you can do to fight back. By understanding the timing and dosage of your intake, you can transform caffeine from a sleep saboteur into a sustainable tool for peak performance. The journey begins with knowing your numbers. How much caffeine are you really consuming, and how long does it stick around? Our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> and <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link> are your first steps toward reclaiming your night.
+              This article is for anyone who has ever felt "tired but wired," wondered why their memory feels less sharp despite getting enough "sleep," or struggled to solve a problem that a good night's rest was supposed to fix. We will explore the deep, neurochemical relationship between your daily caffeine habit and your nightly REM cycles. You will learn not just &lt;em&gt;what&lt;/em&gt; caffeine does, but &lt;em&gt;how&lt;/em&gt; it does it, and what you can do to fight back. By understanding the timing and dosage of your intake, you can transform caffeine from a sleep saboteur into a sustainable tool for peak performance. The journey begins with knowing your numbers. How much caffeine are you really consuming, and how long does it stick around? Our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> and <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> are your first steps toward reclaiming your night.
             </p>
           </section>
 
@@ -288,7 +288,7 @@ export default function CaffeineRemSleepArticle() {
               <strong>The Pain Point:</strong> You find yourself more irritable, quick to anger, or struggling with feelings of anxiety and emotional overwhelm. Minor stressors feel like major crises, and your ability to regulate your mood is compromised.
             </p>
             <p>
-              <strong>The Connection to REM:</strong> One of the most fascinating functions of REM sleep is emotional regulation. It acts as a form of overnight therapy. During REM, your brain re-processes emotionally charged memories but in a neurochemical environment with suppressed stress hormones (like norepinephrine). This allows you to "divorce" the emotion from the memory, helping you to move past difficult experiences. When you're REM-deprived, these emotional memories remain raw and potent. You wake up with your emotional baggage from the previous day still fully packed. This can lead to a state of heightened emotional reactivity and is a key reason why chronic poor sleep is so strongly linked to anxiety and mood disorders. Your daily caffeine is not just making you jittery in the moment; it's preventing your brain from healing itself emotionally at night. Before you reach for another cup to soothe your stress, consider whether it's the source of it. Tracking your consumption with our <Link href="/calculators/intake">Intake Calculator</Link> can reveal just how much of this stimulant you're asking your nervous system to handle.
+              <strong>The Connection to REM:</strong> One of the most fascinating functions of REM sleep is emotional regulation. It acts as a form of overnight therapy. During REM, your brain re-processes emotionally charged memories but in a neurochemical environment with suppressed stress hormones (like norepinephrine). This allows you to "divorce" the emotion from the memory, helping you to move past difficult experiences. When you're REM-deprived, these emotional memories remain raw and potent. You wake up with your emotional baggage from the previous day still fully packed. This can lead to a state of heightened emotional reactivity and is a key reason why chronic poor sleep is so strongly linked to anxiety and mood disorders. Your daily caffeine is not just making you jittery in the moment; it's preventing your brain from healing itself emotionally at night. Before you reach for another cup to soothe your stress, consider whether it's the source of it. Tracking your consumption with our <Link href="/calculators/caffeine-intake">Intake Calculator</Link> can reveal just how much of this stimulant you're asking your nervous system to handle.
             </p>
           </section>
 
@@ -314,7 +314,7 @@ export default function CaffeineRemSleepArticle() {
 
             <h3 className="text-2xl font-semibold">2. Know Your Dose and Time It Strategically</h3>
             <p>
-              Not all caffeine is created equal. A 300mg cold brew at 11 AM will have a much more significant impact than a 60mg espresso. Use our <Link href="/calculators/intake">Intake Calculator</Link> to become aware of the exact dosage in your favorite drinks. Consider front-loading your caffeine consumption in the early part of the day. A larger dose before 10 AM is far less likely to disrupt REM sleep than a smaller dose at 3 PM.
+              Not all caffeine is created equal. A 300mg cold brew at 11 AM will have a much more significant impact than a 60mg espresso. Use our <Link href="/calculators/caffeine-intake">Intake Calculator</Link> to become aware of the exact dosage in your favorite drinks. Consider front-loading your caffeine consumption in the early part of the day. A larger dose before 10 AM is far less likely to disrupt REM sleep than a smaller dose at 3 PM.
             </p>
 
             <Card className="my-4 bg-primary/5 border-primary/20">
@@ -352,11 +352,11 @@ export default function CaffeineRemSleepArticle() {
             <ol className="list-decimal pl-5 space-y-4">
               <li>
                 <strong>Step 1: Establish Your Baseline (2-3 Days)</strong>
-                <p>For the next two to three days, change nothing about your routine. Your only job is to become a scientist observing your own habits. Use our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> to meticulously log every single caffeinated item you consume, from your morning coffee to that post-dinner piece of chocolate. Note the time of consumption for each. Be honest and precise. At the end of this period, you will have a clear, numerical picture of your average daily intake and timing.</p>
+                <p>For the next two to three days, change nothing about your routine. Your only job is to become a scientist observing your own habits. Use our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> to meticulously log every single caffeinated item you consume, from your morning coffee to that post-dinner piece of chocolate. Note the time of consumption for each. Be honest and precise. At the end of this period, you will have a clear, numerical picture of your average daily intake and timing.</p>
               </li>
               <li>
                 <strong>Step 2: Analyze Your Sleep Impact (5 Minutes)</strong>
-                <p>Take your latest and largest afternoon dose from your log. For example, let's say you had a 150mg coffee at 3 PM. Now, go to the <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link>. Enter "150" as the dose and select your estimated metabolism speed (if unsure, start with "Average"). The calculator will generate a decay chart. Look at the value for 8, 9, and 10 hours post-consumption. If you go to bed at 11 PM (8 hours after your 3 PM coffee), you'll see how much caffeine is still active in your system. Is it 30mg? 50mg? This is the amount that is actively working against your REM sleep.</p>
+                <p>Take your latest and largest afternoon dose from your log. For example, let's say you had a 150mg coffee at 3 PM. Now, go to the <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link>. Enter "150" as the dose and select your estimated metabolism speed (if unsure, start with "Average"). The calculator will generate a decay chart. Look at the value for 8, 9, and 10 hours post-consumption. If you go to bed at 11 PM (8 hours after your 3 PM coffee), you'll see how much caffeine is still active in your system. Is it 30mg? 50mg? This is the amount that is actively working against your REM sleep.</p>
               </li>
               <li>
                 <strong>Step 3: Set Your Curfew and Test Your Hypothesis</strong>
@@ -378,7 +378,7 @@ export default function CaffeineRemSleepArticle() {
               <CardContent className="space-y-2">
                 <p><strong>Persona:</strong> Chloe, a 20-year-old student, studies late into the night. Her routine includes a large cold brew (250mg) around 2 PM and an energy drink (160mg) around 7 PM. She sleeps from 1 AM to 9 AM but always feels groggy and struggles to retain what she studied.</p>
                 <p><strong>The Problem:</strong> Her total intake is 410mg, which is already high. Critically, the 160mg dose at 7 PM means that when she goes to bed at 1 AM (6 hours later), she likely has around 80mg of caffeine in her system (assuming an average 6-hour half-life for a young person). This is the equivalent of drinking a full Red Bull right before bed, which devastates her REM sleep and memory consolidation.</p>
-                <p><strong>The Solution:</strong> Chloe uses the <Link href="/calculators/intake">Intake Calculator</Link> to see her staggering total. She then uses the <Link href="/calculators/half-life">Half-Life Calculator</Link> to visualize the impact of her 7 PM energy drink. She decides to shift her entire caffeine schedule earlier. She has her cold brew at 10 AM and replaces the 7 PM energy drink with a caffeine-free herbal tea. Her sleep quality improves dramatically, and she finds she can study more effectively in fewer hours because she's actually retaining the information.</p>
+                <p><strong>The Solution:</strong> Chloe uses the <Link href="/calculators/caffeine-intake">Intake Calculator</Link> to see her staggering total. She then uses the <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link> to visualize the impact of her 7 PM energy drink. She decides to shift her entire caffeine schedule earlier. She has her cold brew at 10 AM and replaces the 7 PM energy drink with a caffeine-free herbal tea. Her sleep quality improves dramatically, and she finds she can study more effectively in fewer hours because she's actually retaining the information.</p>
               </CardContent>
             </Card>
 
@@ -423,12 +423,12 @@ export default function CaffeineRemSleepArticle() {
                     <TableRow>
                         <TableCell className="font-medium">The "It's Just One" Afternoon Coffee</TableCell>
                         <TableCell>Underestimating the long half-life of caffeine. A single 3 PM coffee can still be potent at 11 PM.</TableCell>
-                        <TableCell>Use the <Link href="/calculators/half-life">Half-Life Calculator</Link> to visualize the decay curve. Set a strict caffeine curfew 10-12 hours before bed.</TableCell>
+                        <TableCell>Use the <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link> to visualize the decay curve. Set a strict caffeine curfew 10-12 hours before bed.</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell className="font-medium">Forgetting Hidden Caffeine Sources</TableCell>
                         <TableCell>Thinking only coffee matters, while ignoring caffeine in soda, tea, energy drinks, chocolate, and some medications.</TableCell>
-                        <TableCell>Use the <Link href="/calculators/intake">Intake Calculator</Link> to log <strong>everything</strong>. Check labels and our <Link href="/calculators/drinks-database">Drinks Database</Link>.</TableCell>
+                        <TableCell>Use the <Link href="/calculators/caffeine-intake">Intake Calculator</Link> to log <strong>everything</strong>. Check labels and our <Link href="/calculators/caffeine-drinks-database">Drinks Database</Link>.</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell className="font-medium">Focusing on Sleep Quantity, Not Quality</TableCell>
@@ -506,7 +506,7 @@ export default function CaffeineRemSleepArticle() {
               <AccordionItem value="faq-10">
                 <AccordionTrigger>Does the source of caffeine (coffee vs. tea vs. energy drink) change its effect on REM sleep?</AccordionTrigger>
                 <AccordionContent>
-                  The caffeine molecule itself is the same regardless of the source. However, the dose and other compounds in the drink can alter the experience. For instance, tea contains L-theanine, which can have calming effects that may slightly counteract the jitters, but the caffeine will still impact sleep if consumed too late. The key is the total dose and timing, which you can track with our <Link href="/calculators/intake">Intake Calculator</Link>.
+                  The caffeine molecule itself is the same regardless of the source. However, the dose and other compounds in the drink can alter the experience. For instance, tea contains L-theanine, which can have calming effects that may slightly counteract the jitters, but the caffeine will still impact sleep if consumed too late. The key is the total dose and timing, which you can track with our <Link href="/calculators/caffeine-intake">Intake Calculator</Link>.
                 </AccordionContent>
               </AccordionItem>
                <AccordionItem value="faq-11">
@@ -549,7 +549,7 @@ export default function CaffeineRemSleepArticle() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/half-life" className="hover:underline">Caffeine Half-Life Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-half-life" className="hover:underline">Caffeine Half-Life Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>The most important tool for this topic. Visualize how long caffeine stays in your system to determine your personal sleep-safe cutoff time.</p>
@@ -557,7 +557,7 @@ export default function CaffeineRemSleepArticle() {
                   </Card>
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/intake" className="hover:underline">Daily Intake Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Daily Intake Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>You can't manage what you don't measure. Track your total daily caffeine load to understand the full picture of your consumption.</p>

@@ -39,14 +39,14 @@ const homePageJsonLd = {
 
 const featuredCalculators = [
   {
-    title: "Intake Calculator",
-    href: "/calculators/intake",
+    title: "Caffeine Intake Calculator",
+    href: "/calculators/caffeine-intake",
     description: "Track your daily consumption against safe limits.",
     icon: Coffee,
   },
   {
-    title: "Half-Life Calculator",
-    href: "/calculators/half-life",
+    title: "Caffeine Half-Life Calculator",
+    href: "/calculators/caffeine-half-life",
     description: "Visualize how long caffeine stays in your system.",
     icon: BarChart2,
   },
@@ -57,13 +57,13 @@ const featuredCalculators = [
     icon: BrainCircuit,
   },
   {
-    title: "Overdose Risk Calculator",
+    title: "Caffeine Overdose Risk Calculator",
     href: "/calculators/caffeine-overdose-risk",
     description: "Estimate toxic levels based on your body weight.",
     icon: Shield,
   },
   {
-    title: "Withdrawal Tracker",
+    title: "Caffeine Withdrawal Tracker",
     href: "/calculators/caffeine-withdrawal-tracker",
     description: "Create a tapering plan to quit caffeine safely.",
     icon: TrendingDown,
@@ -159,7 +159,7 @@ export default function Home() {
                         <span className="text-2xl font-bold" aria-hidden="true">1</span>
                       </div>
                       <h3 className="text-xl font-bold mb-2">Track Your Intake</h3>
-                      <p className="text-muted-foreground">Use our <Link href="/calculators/intake" className="text-accent hover:underline">Intake Calculator</Link> to log your drinks and get a precise measure of your daily consumption.</p>
+                      <p className="text-muted-foreground">Use our <Link href="/calculators/caffeine-intake" className="text-accent hover:underline">Intake Calculator</Link> to log your drinks and get a precise measure of your daily consumption.</p>
                   </div>
                   <div className="relative">
                       <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
@@ -173,7 +173,7 @@ export default function Home() {
                         <span className="text-2xl font-bold" aria-hidden="true">3</span>
                       </div>
                       <h3 className="text-xl font-bold mb-2">Optimize Your Timing</h3>
-                      <p className="text-muted-foreground">Plan your caffeine use for peak performance and protect your sleep using the <Link href="/calculators/half-life" className="text-accent hover:underline">Half-Life Calculator</Link>.</p>
+                      <p className="text-muted-foreground">Plan your caffeine use for peak performance and protect your sleep using the <Link href="/calculators/caffeine-half-life" className="text-accent hover:underline">Half-Life Calculator</Link>.</p>
                   </div>
               </div>
             </div>

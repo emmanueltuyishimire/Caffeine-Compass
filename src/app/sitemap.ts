@@ -13,15 +13,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const calculatorRoutes = [
-    '/calculators/intake',
-    '/calculators/half-life',
+    '/calculators/caffeine-intake',
+    '/calculators/caffeine-half-life',
     '/calculators/caffeine-timing-optimizer',
     '/calculators/caffeine-withdrawal-tracker',
     '/calculators/caffeine-sensitivity-test',
-    '/calculators/drink-comparison',
-    '/calculators/drinks-database',
+    '/calculators/caffeine-drink-comparison',
+    '/calculators/caffeine-drinks-database',
     '/calculators/caffeine-overdose-risk',
-    '/calculators/pregnancy-safe-limit',
+    '/calculators/pregnancy-caffeine-safe-limit',
   ];
 
   const articleRoutes = [

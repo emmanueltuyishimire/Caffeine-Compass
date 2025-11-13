@@ -67,7 +67,7 @@ export default function CaffeineOverdoseRiskPage() {
               The primary problem this calculator solves is the inherent ambiguity around caffeine safety. While health authorities like the FDA suggest a general limit of 400 mg per day for healthy adults, this is a guideline for daily intake, not a measure of acute toxicity. The dose at which caffeine becomes dangerous is highly individual and depends on numerous factors, with <strong>body weight</strong> being the most significant. A dose that is perfectly safe for a 200-pound individual could pose a serious risk to someone weighing 120 pounds. This ambiguity is amplified by the modern beverage market, where a single energy drink can contain more caffeine than three cups of coffee.
             </p>
             <p>
-              This calculator provides clarity by showing you the estimated dosage tiers for noticeable side effects, mild toxicity, and severe toxicity, all tailored to your body weight. This is not a diagnostic tool but a harm-reduction and educational resource. By understanding your personal safety margins, you can make more informed decisions about your consumption, particularly when dealing with highly concentrated caffeine products like powders, pills, and potent energy drinks. Knowledge is the foundation of mindful consumption, and this tool is your first step toward using caffeine safely and effectively. Before calculating your risk, it is essential to know your current intake, which you can determine using our <Link href="/calculators/intake">Caffeine Intake Calculator</Link>.
+              This calculator provides clarity by showing you the estimated dosage tiers for noticeable side effects, mild toxicity, and severe toxicity, all tailored to your body weight. This is not a diagnostic tool but a harm-reduction and educational resource. By understanding your personal safety margins, you can make more informed decisions about your consumption, particularly when dealing with highly concentrated caffeine products like powders, pills, and potent energy drinks. Knowledge is the foundation of mindful consumption, and this tool is your first step toward using caffeine safely and effectively. Before calculating your risk, it is essential to know your current intake, which you can determine using our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>.
             </p>
             <Card className="bg-destructive/10 border-destructive mt-8" role="alert">
                   <CardHeader>
@@ -139,7 +139,7 @@ export default function CaffeineOverdoseRiskPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/intake" className="hover:underline">Intake Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Intake Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>Track your daily consumption to ensure you stay below the 400 mg recommended limit and understand your intake in the context of the risk levels estimated here.</p>
@@ -155,7 +155,7 @@ export default function CaffeineOverdoseRiskPage() {
                   </Card>
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>Be aware of high-caffeine drinks. Use this tool to see which products on the market carry the highest amounts and pose the greatest risk.</p>

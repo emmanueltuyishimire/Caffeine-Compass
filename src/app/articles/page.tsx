@@ -34,13 +34,13 @@ const articleLinks = [
 const toolLinks = [
     {
         title: "Caffeine in Drinks Database",
-        href: "/calculators/drinks-database",
+        href: "/calculators/caffeine-drinks-database",
         description: "Search our extensive database of over 1,000 beverages to find their exact caffeine content.",
         icon: Database,
     },
     {
-        title: "Drink Comparison Tool",
-        href: "/calculators/drink-comparison",
+        title: "Caffeine Drink Comparison Tool",
+        href: "/calculators/caffeine-drink-comparison",
         description: "Visually compare the caffeine in coffee, tea, energy drinks, and more, side-by-side.",
         icon: Zap,
     },
@@ -51,14 +51,14 @@ const articlesPageJsonLd = {
   "@type": "WebPage",
   "name": "Learn About Caffeine",
   "description": "Explore in-depth articles, guides, and tools to understand caffeine.",
-  "url": "https://caffeine-calculation-site.com/articles",
+  "url": "https://calculation.site/articles",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [...articleLinks, ...toolLinks].map((item, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "name": item.title,
-      "url": `https://caffeine-calculation-site.com${item.href}`
+      "url": `https://calculation.site${item.href}`
     }))
   },
   "breadcrumb": {
@@ -68,13 +68,13 @@ const articlesPageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-calculation-site.com/"
+        "item": "https://calculation.site/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Learn",
-        "item": "https://caffeine-calculation-site.com/articles"
+        "item": "https://calculation.site/articles"
       }
     ]
   }

@@ -67,7 +67,7 @@ export default function CaffeineWithdrawalTrackerPage() {
               The problem this calculator solves is the "cold turkey" approach. Quitting abruptly shocks your system, leading to a miserable week (or more) of withdrawal. But what if there was a smarter, gentler way? This <strong>Caffeine Withdrawal Tracker and Tapering Calculator</strong> is designed to do just that. It helps you create a gradual, step-by-step reduction plan that weans your body off caffeine slowly. By reducing your intake in small, manageable increments, you give your brain time to readjust, dramatically reducing the severity of withdrawal symptoms.
             </p>
             <p>
-              This tool is for anyone who has ever tried to quit caffeine and failed, or for those who are afraid to even start because they can't afford a week of lost productivity and discomfort. It transforms the daunting challenge of quitting into a structured, predictable process. Instead of a battle of willpower against caffeine withdrawal symptoms, it becomes a journey of mindful reduction. By the end of your taper, you'll be free from caffeine dependence with minimal disruption to your daily life. To get started, you'll first need to know your current daily intake, which you can determine using our <Link href="/calculators/intake">Caffeine Intake Calculator</Link>.
+              This tool is for anyone who has ever tried to quit caffeine and failed, or for those who are afraid to even start because they can't afford a week of lost productivity and discomfort. It transforms the daunting challenge of quitting into a structured, predictable process. Instead of a battle of willpower against caffeine withdrawal symptoms, it becomes a journey of mindful reduction. By the end of your taper, you'll be free from caffeine dependence with minimal disruption to your daily life. To get started, you'll first need to know your current daily intake, which you can determine using our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>.
             </p>
           </section>
 
@@ -115,7 +115,7 @@ export default function CaffeineWithdrawalTrackerPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/intake" className="hover:underline">Caffeine Intake Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Caffeine Intake Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>First, find out your current daily intake. This is the starting point for your tapering plan.</p>
@@ -131,7 +131,7 @@ export default function CaffeineWithdrawalTrackerPage() {
                   </Card>
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/half-life" className="hover:underline">Caffeine Half-Life Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-half-life" className="hover:underline">Caffeine Half-Life Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>Visualize how long caffeine stays in your system to better understand the withdrawal process.</p>

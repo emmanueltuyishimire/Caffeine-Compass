@@ -64,7 +64,7 @@ export default function CaffeineSensitivityTestPage() {
               Most people navigate their caffeine consumption through trial and error, often enduring jitters, anxiety, or sleepless nights in the process. This tool solves that problem by providing a structured way to assess your body’s response to caffeine. By answering a series of targeted questions, you can identify whether you are a <strong>fast metabolizer</strong>, a <strong>slow metabolizer</strong>, or somewhere in between.
             </p>
             <p>
-              Understanding your caffeine sensitivity is a game-changer. It empowers you to make informed decisions about how much caffeine to consume and, just as importantly, when to consume it. For a slow metabolizer, a morning coffee might be the limit, while a fast metabolizer has more flexibility. This knowledge allows you to harness the benefits of caffeine—like improved focus and alertness—while minimizing its downsides. It’s the key to optimizing your energy, protecting your sleep, and feeling your best. This test is the perfect starting point before diving into our other tools like the <Link href="/calculators/half-life">Half-Life Calculator</Link>.
+              Understanding your caffeine sensitivity is a game-changer. It empowers you to make informed decisions about how much caffeine to consume and, just as importantly, when to consume it. For a slow metabolizer, a morning coffee might be the limit, while a fast metabolizer has more flexibility. This knowledge allows you to harness the benefits of caffeine—like improved focus and alertness—while minimizing its downsides. It’s the key to optimizing your energy, protecting your sleep, and feeling your best. This test is the perfect starting point before diving into our other tools like the <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link>.
             </p>
           </section>
 
@@ -98,13 +98,13 @@ export default function CaffeineSensitivityTestPage() {
               <h2 id="related-tools-heading" className="text-3xl font-bold">Next Steps: Use Your Results</h2>
               <p>Now that you have an estimate of your sensitivity, use our other tools to put that knowledge into action.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      <Link href="/calculators/half-life" className="block group">
+                      <Link href="/calculators/caffeine-half-life" className="block group">
                           <p>If you're a slow metabolizer, select the "Slow" setting to see how long caffeine really stays in your system. The results may surprise you.</p>
                       </Link>
-                      <Link href="/calculators/intake" className="block group">
+                      <Link href="/calculators/caffeine-intake" className="block group">
                           <p>Track your total daily intake to make sure you're staying within the recommended limits for your sensitivity level.</p>
                       </Link>
-                      <Link href="/calculators/drink-comparison" className="block group">
+                      <Link href="/calculators/caffeine-drink-comparison" className="block group">
                           <p>Compare the caffeine content of your favorite beverages side-by-side.</p>
                       </Link>
               </div>

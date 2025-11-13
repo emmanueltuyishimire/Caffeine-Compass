@@ -13,15 +13,15 @@ const mainNav = [
 ];
 
 const calculatorNav = [
-    { title: "Intake", href: "/calculators/intake", icon: Coffee },
-    { title: "Half-Life", href: "/calculators/half-life", icon: BarChart2 },
-    { title: "Sensitivity Test", href: "/calculators/caffeine-sensitivity-test", icon: BrainCircuit },
-    { title: "Timing Optimizer", href: "/calculators/caffeine-timing-optimizer", icon: Clock },
-    { title: "Withdrawal Tracker", href: "/calculators/caffeine-withdrawal-tracker", icon: TrendingDown },
-    { title: "Overdose Risk", href: "/calculators/caffeine-overdose-risk", icon: Shield },
-    { title: "Pregnancy Safe Limit", href: "/calculators/pregnancy-safe-limit", icon: Baby },
-    { title: "Drinks Database", href: "/calculators/drinks-database", icon: BookOpen },
-    { title: "Drink Comparison", href: "/calculators/drink-comparison", icon: Zap },
+    { title: "Caffeine Intake", href: "/calculators/caffeine-intake", icon: Coffee },
+    { title: "Caffeine Half-Life", href: "/calculators/caffeine-half-life", icon: BarChart2 },
+    { title: "Caffeine Sensitivity Test", href: "/calculators/caffeine-sensitivity-test", icon: BrainCircuit },
+    { title: "Caffeine Timing Optimizer", href: "/calculators/caffeine-timing-optimizer", icon: Clock },
+    { title: "Caffeine Withdrawal Tracker", href: "/calculators/caffeine-withdrawal-tracker", icon: TrendingDown },
+    { title: "Caffeine Overdose Risk", href: "/calculators/caffeine-overdose-risk", icon: Shield },
+    { title: "Pregnancy Caffeine Limit", href: "/calculators/pregnancy-caffeine-safe-limit", icon: Baby },
+    { title: "Caffeine Drinks Database", href: "/calculators/caffeine-drinks-database", icon: BookOpen },
+    { title: "Caffeine Drink Comparison", href: "/calculators/caffeine-drink-comparison", icon: Zap },
 ];
 
 export default function SidebarNav() {

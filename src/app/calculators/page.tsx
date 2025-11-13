@@ -41,8 +41,8 @@ const calculatorSections = [
     category: "Intake & Safety",
     calculators: [
         {
-            title: "Intake Calculator",
-            href: "/calculators/intake",
+            title: "Caffeine Intake Calculator",
+            href: "/calculators/caffeine-intake",
             description: "Calculate your total daily caffeine intake.",
             icon: Coffee,
         },
@@ -58,8 +58,8 @@ const calculatorSections = [
     category: "Energy & Sleep",
     calculators: [
         {
-            title: "Half-Life Calculator",
-            href: "/calculators/half-life",
+            title: "Caffeine Half-Life Calculator",
+            href: "/calculators/caffeine-half-life",
             description: "See how long caffeine stays in your system and when it will be gone.",
             icon: BarChart2,
         },
@@ -87,8 +87,8 @@ const calculatorSections = [
             icon: TrendingDown,
         },
         {
-            title: "Pregnancy Safe Limit Calculator",
-            href: "/calculators/pregnancy-safe-limit",
+            title: "Pregnancy Caffeine Safe Limit Calculator",
+            href: "/calculators/pregnancy-caffeine-safe-limit",
             description: "Track intake against the 200mg limit for pregnancy.",
             icon: Baby,
         },
@@ -98,14 +98,14 @@ const calculatorSections = [
     category: "Knowledge & Tools",
     calculators: [
         {
-            title: "Caffeine in Drinks Database",
-            href: "/calculators/drinks-database",
+            title: "Caffeine Drinks Database",
+            href: "/calculators/caffeine-drinks-database",
             description: "Search 1,000+ beverages by caffeine mg.",
             icon: BookOpen,
         },
         {
-            title: "Drink Comparison Tool",
-            href: "/calculators/drink-comparison",
+            title: "Caffeine Drink Comparison Tool",
+            href: "/calculators/caffeine-drink-comparison",
             description: "Compare caffeine in coffee, tea, and energy drinks.",
             icon: Zap,
         },
