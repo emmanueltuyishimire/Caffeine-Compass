@@ -22,7 +22,7 @@ const homePageJsonLd = {
   "@type": "WebPage",
   "name": "Caffeine Compass Homepage",
   "description": "Harness the power of caffeine with our suite of science-backed calculators. Track your intake, understand your metabolism, and optimize your timing for peak performance and better health.",
-  "url": "https://calculation.site/",
+  "url": "https://caffeine-compass.com/",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -30,7 +30,7 @@ const homePageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://calculation.site/"
+        "item": "https://caffeine-compass.com/"
       }
     ]
   }
@@ -93,6 +93,7 @@ export default function Home() {
                   fill
                   className="object-cover object-center z-0"
                   priority
+                  quality={100}
                   sizes="100vw"
                 />
             )}
@@ -251,6 +252,7 @@ export default function Home() {
                     height={400}
                     className="rounded-lg shadow-lg"
                     data-ai-hint={whyUsImage.imageHint}
+                    quality={100}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 )}

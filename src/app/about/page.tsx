@@ -32,7 +32,7 @@ const aboutPageJsonLd = {
   "@type": "WebPage",
   "name": "About Caffeine Compass",
   "description": "Learn about the mission behind Caffeine Compass and the team dedicated to helping you optimize your caffeine intake for better health, focus, and sleep.",
-  "url": "https://caffeine-calculation-site.com/about",
+  "url": "https://caffeine-compass.com/about",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -40,13 +40,13 @@ const aboutPageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-calculation-site.com/"
+        "item": "https://caffeine-compass.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About",
-        "item": "https://caffeine-calculation-site.com/about"
+        "item": "https://caffeine-compass.com/about"
       }
     ]
   }
@@ -77,6 +77,7 @@ export default function AboutPage() {
                                 className="object-cover rounded-lg shadow-lg"
                                 sizes="(max-width: 768px) 100vw, 50vw"
                                 data-ai-hint={missionImage.imageHint}
+                                quality={100}
                             />
                         </div>
                     )}
