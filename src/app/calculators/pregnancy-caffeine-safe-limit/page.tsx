@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { AlertTriangle, Coffee, ShieldCheck, TrendingDown } from 'lucide-react';
+import { AlertTriangle, ShieldCheck, Coffee, TrendingDown } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
 import PregnancySafeLimitCalculatorLoader from '@/components/features/loaders/PregnancySafeLimitCalculatorLoader';
 import {
