@@ -40,25 +40,27 @@ export default function SidebarNav() {
             <SidebarMenu>
                 {mainNav.map((link) => (
                     <SidebarMenuItem key={link.href}>
-                        <Link href={link.href}>
-                            <SidebarMenuButton isActive={pathname === link.href} icon={<link.icon />} tooltip={link.label}>
+                        <Link href={link.href} passHref legacyBehavior>
+                            <SidebarMenuButton as="a" isActive={pathname === link.href} icon={<link.icon />} tooltip={link.label}>
                                 {link.label}
                             </SidebarMenuButton>
                         </Link>
                     </SidebarMenuItem>
                 ))}
-                <SidebarSeparator />
+                <SidebarMenuItem>
+                    <SidebarSeparator />
+                </SidebarMenuItem>
                  <SidebarMenuItem>
-                    <Link href="/calculators">
-                        <SidebarMenuButton isActive={pathname === '/calculators'} icon={<Calculator />} tooltip="All Calculators">
-                            Calculators
+                    <Link href="/calculators" passHref legacyBehavior>
+                        <SidebarMenuButton as="a" isActive={pathname === '/calculators'} icon={<Calculator />} tooltip="All Calculators">
+                           Calculators
                         </SidebarMenuButton>
                     </Link>
                 </SidebarMenuItem>
                 {calculatorNav.map((item) => (
                     <SidebarMenuItem key={item.href}>
-                         <Link href={item.href}>
-                            <SidebarMenuButton isActive={pathname === item.href} icon={<item.icon />} tooltip={item.title}>
+                         <Link href={item.href} passHref legacyBehavior>
+                            <SidebarMenuButton as="a" isActive={pathname === item.href} icon={<item.icon />} tooltip={item.title}>
                                 {item.title}
                             </SidebarMenuButton>
                         </Link>
