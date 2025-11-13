@@ -117,9 +117,9 @@ export default function CaffeineWithdrawalTracker() {
   };
 
   return (
-    <Card className="max-w-4xl mx-auto">
+    <Card className="max-w-4xl mx-auto" aria-labelledby="withdrawal-tracker-title">
       <CardHeader>
-        <CardTitle>Caffeine Tapering Plan Generator</CardTitle>
+        <CardTitle id="withdrawal-tracker-title">Caffeine Tapering Plan Generator</CardTitle>
         <CardDescription>
             Create a personalized schedule to gradually reduce your caffeine intake and minimize withdrawal symptoms.
         </CardDescription>
@@ -127,8 +127,8 @@ export default function CaffeineWithdrawalTracker() {
       <CardContent className="space-y-6">
         <div>
             <Label>What's your current daily intake?</Label>
-            <p className="text-sm text-muted-foreground mb-2">Add the drinks you consume on a typical day to calculate your starting intake.</p>
-            <div className="space-y-2 p-4 border rounded-md">
+            <p className="text-sm text-muted-foreground mb-2" id="intake-description">Add the drinks you consume on a typical day to calculate your starting intake.</p>
+            <div className="space-y-2 p-4 border rounded-md" aria-describedby="intake-description">
                 {consumed.length > 0 && (
                     <div className="space-y-2 mb-4">
                         {consumed.map((drink, index) => (
@@ -191,7 +191,7 @@ export default function CaffeineWithdrawalTracker() {
                     </Command>
                 </PopoverContent>
                 </Popover>
-                 <div className="mt-4 p-4 border-t">
+                 <div className="mt-4 p-4 border-t" role="status" aria-live="polite">
                     <p className="text-sm font-medium text-muted-foreground">Total Daily Intake:</p>
                     <p className="text-2xl font-bold text-primary">{intake} mg</p>
                 </div>
@@ -263,8 +263,8 @@ export default function CaffeineWithdrawalTracker() {
       </CardContent>
 
       {schedule.length > 0 && (
-        <CardFooter className="flex-col items-start gap-6 pt-6 border-t">
-          <h3 className="text-xl font-semibold">Your Personalized Tapering Schedule</h3>
+        <CardFooter className="flex-col items-start gap-6 pt-6 border-t" role="region" aria-labelledby="tapering-schedule-title">
+          <h3 id="tapering-schedule-title" className="text-xl font-semibold">Your Personalized Tapering Schedule</h3>
            <ChartContainer config={chartConfig} className="h-[250px] w-full" aria-label="Caffeine tapering schedule chart">
             <ResponsiveContainer width="100%" height="100%">
                <BarChart accessibilityLayer data={schedule} margin={{ top: 20, right: 20, bottom: 20, left: -10 }}>
@@ -306,7 +306,7 @@ export default function CaffeineWithdrawalTracker() {
                 </TableBody>
             </Table>
           </div>
-           <p className="text-xs text-muted-foreground pt-2">
+           <p className="text-xs text-muted-foreground pt-2" id="tapering-advice">
             Try to stay at or below the maximum caffeine amount each day. You can achieve these numbers by reducing serving sizes, switching to lower-caffeine drinks (like green tea), or mixing regular coffee with decaf.
           </p>
         </CardFooter>

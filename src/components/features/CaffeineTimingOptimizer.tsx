@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Lightbulb, Coffee, Clock, Bed } from 'lucide-react';
-import { add, format, sub } from 'date-fns';
+import { format, sub } from 'date-fns';
 
 const PEAK_EFFECT_TIME = 45; // minutes until peak effect
 const HALF_LIFE_MAP = {
@@ -55,9 +55,9 @@ export default function CaffeineTimingOptimizer() {
 
 
   return (
-    <Card className="max-w-2xl mx-auto">
+    <Card className="max-w-2xl mx-auto" aria-labelledby="timing-optimizer-title">
       <CardHeader>
-        <CardTitle>Caffeine Timing Optimizer</CardTitle>
+        <CardTitle id="timing-optimizer-title">Caffeine Timing Optimizer</CardTitle>
         <CardDescription>
           Find the perfect time to drink caffeine for maximum productivity.
         </CardDescription>
@@ -103,7 +103,7 @@ export default function CaffeineTimingOptimizer() {
 
       {result && (
         <CardFooter>
-          <Alert role="status">
+          <Alert role="status" aria-live="polite">
             <Lightbulb className="h-4 w-4" aria-hidden="true" />
             <AlertTitle>Recommendation</AlertTitle>
             <AlertDescription>{result}</AlertDescription>

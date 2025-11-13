@@ -44,9 +44,9 @@ export default function HalfLifeEstimator() {
 
 
   return (
-    <Card className="max-w-4xl mx-auto">
+    <Card className="max-w-4xl mx-auto" aria-labelledby="half-life-title">
       <CardHeader>
-        <CardTitle>Caffeine Half-Life Estimator</CardTitle>
+        <CardTitle id="half-life-title">Caffeine Half-Life Estimator</CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -75,8 +75,8 @@ export default function HalfLifeEstimator() {
           </div>
         </div>
         <div>
-          <Label>Caffeine Decay Over 12 Hours</Label>
-          <ChartContainer config={chartConfig} className="h-[250px] w-full mt-2" aria-label="Caffeine decay chart">
+          <Label id="decay-chart-label">Caffeine Decay Over 12 Hours</Label>
+          <ChartContainer config={chartConfig} className="h-[250px] w-full mt-2" aria-labelledby="decay-chart-label">
             <ResponsiveContainer width="100%" height="100%">
                <BarChart accessibilityLayer data={chartData} margin={{ top: 20, right: 20, bottom: 20, left: -10 }}>
                 <CartesianGrid vertical={false} />

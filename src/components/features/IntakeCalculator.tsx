@@ -73,9 +73,9 @@ export default function IntakeCalculator() {
   };
 
   return (
-    <Card className="max-w-4xl mx-auto">
+    <Card className="max-w-4xl mx-auto" aria-labelledby="intake-calculator-title">
       <CardHeader>
-        <CardTitle>Daily Caffeine Intake</CardTitle>
+        <CardTitle id="intake-calculator-title">Daily Caffeine Intake</CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="flex flex-col sm:flex-row gap-2">
@@ -121,10 +121,12 @@ export default function IntakeCalculator() {
         </div>
 
         <div className="p-4 border rounded-lg bg-muted/50 space-y-4">
-            <h3 className="text-sm font-medium text-muted-foreground">Add Custom Drink</h3>
-            <div className="flex flex-col sm:flex-row gap-2">
-                <Input placeholder="Drink Name (e.g., My Pre-workout)" value={customName} onChange={e => setCustomName(e.target.value)} />
-                <Input type="number" placeholder="Caffeine (mg)" value={customCaffeine} onChange={e => setCustomCaffeine(e.target.value)} className="w-full sm:w-32"/>
+            <h3 className="text-sm font-medium text-muted-foreground" id="custom-drink-heading">Add Custom Drink</h3>
+            <div className="flex flex-col sm:flex-row gap-2" aria-labelledby="custom-drink-heading">
+                <Label htmlFor="custom-drink-name" className="sr-only">Custom drink name</Label>
+                <Input id="custom-drink-name" placeholder="Drink Name (e.g., My Pre-workout)" value={customName} onChange={e => setCustomName(e.target.value)} />
+                <Label htmlFor="custom-caffeine-amount" className="sr-only">Custom caffeine amount in mg</Label>
+                <Input id="custom-caffeine-amount" type="number" placeholder="Caffeine (mg)" value={customCaffeine} onChange={e => setCustomCaffeine(e.target.value)} className="w-full sm:w-32"/>
                 <Button onClick={addCustomDrink} disabled={!customName || !customCaffeine}>
                     <PlusCircle className="mr-2 h-4 w-4"/> Add
                 </Button>
@@ -141,7 +143,7 @@ export default function IntakeCalculator() {
                 <div className="flex-grow">
                   <p className="font-medium">{drink.name}</p>
                   <p className="text-sm text-muted-foreground">
-                    {drink.caffeine}mg {drink.size > 0 ? `per ${drink.size}ml` : ''}
+                    {drink.caffeine}mg {drink.size > 0 ? `per serving` : ''}
                   </p>
                 </div>
                 <div className="flex items-center gap-2">

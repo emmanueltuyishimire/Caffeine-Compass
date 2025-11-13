@@ -111,9 +111,9 @@ export default function PregnancySafeLimitCalculator() {
   }, [totalCaffeine]);
 
   return (
-    <Card className="max-w-4xl mx-auto border-primary/20">
+    <Card className="max-w-4xl mx-auto border-primary/20" aria-labelledby="pregnancy-calculator-title">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2"><HeartPulse aria-hidden="true"/> Pregnancy Caffeine Tracker</CardTitle>
+        <CardTitle id="pregnancy-calculator-title" className="flex items-center gap-2"><HeartPulse aria-hidden="true"/> Pregnancy Caffeine Tracker</CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="flex flex-col sm:flex-row gap-2">
@@ -159,10 +159,12 @@ export default function PregnancySafeLimitCalculator() {
         </div>
         
         <div className="p-4 border rounded-lg bg-muted/50 space-y-4">
-            <h3 className="text-sm font-medium text-muted-foreground">Add Custom Item</h3>
-            <div className="flex flex-col sm:flex-row gap-2">
-                <Input placeholder="Item Name (e.g., Chocolate Bar)" value={customName} onChange={e => setCustomName(e.target.value)} />
-                <Input type="number" placeholder="Caffeine (mg)" value={customCaffeine} onChange={e => setCustomCaffeine(e.target.value)} className="w-full sm:w-32"/>
+            <h3 className="text-sm font-medium text-muted-foreground" id="custom-item-heading">Add Custom Item</h3>
+            <div className="flex flex-col sm:flex-row gap-2" aria-labelledby="custom-item-heading">
+                <Label htmlFor="custom-item-name" className="sr-only">Custom item name</Label>
+                <Input id="custom-item-name" placeholder="Item Name (e.g., Chocolate Bar)" value={customName} onChange={e => setCustomName(e.target.value)} />
+                <Label htmlFor="custom-caffeine-amount" className="sr-only">Custom caffeine amount</Label>
+                <Input id="custom-caffeine-amount" type="number" placeholder="Caffeine (mg)" value={customCaffeine} onChange={e => setCustomCaffeine(e.target.value)} className="w-full sm:w-32"/>
                 <Button onClick={addCustomDrink} disabled={!customName || !customCaffeine}>
                     <PlusCircle className="mr-2 h-4 w-4"/> Add
                 </Button>

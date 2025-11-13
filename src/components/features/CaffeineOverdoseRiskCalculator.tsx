@@ -66,9 +66,9 @@ export default function CaffeineOverdoseRiskCalculator() {
   };
 
   return (
-    <Card className="max-w-2xl mx-auto">
+    <Card className="max-w-2xl mx-auto" aria-labelledby="overdose-risk-title">
       <CardHeader>
-        <CardTitle>Overdose Risk Estimator</CardTitle>
+        <CardTitle id="overdose-risk-title">Overdose Risk Estimator</CardTitle>
         <CardDescription>
           Enter your body weight to estimate caffeine levels associated with different levels of risk.
         </CardDescription>
@@ -111,7 +111,7 @@ export default function CaffeineOverdoseRiskCalculator() {
                     return (
                         <div key={key} role="listitem" className="flex items-start gap-4 p-4 border rounded-lg bg-card-foreground/5">
                             <Icon className={`h-8 w-8 mt-1 shrink-0 ${color}`} aria-hidden="true" />
-                            <div>
+                            <div role="status" aria-live="polite">
                                 <h4 className={`font-bold ${color}`}>{title}</h4>
                                 <p className="text-2xl font-headline font-bold">{value} mg</p>
                                 <p className="text-sm text-muted-foreground">{description}</p>
@@ -124,7 +124,7 @@ export default function CaffeineOverdoseRiskCalculator() {
         
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
             <CollapsibleTrigger asChild>
-                <Button variant="ghost" className="w-full flex items-center justify-center gap-2 text-sm text-muted-foreground" aria-controls="advanced-settings-content">
+                <Button variant="ghost" className="w-full flex items-center justify-center gap-2 text-sm text-muted-foreground" aria-controls="advanced-settings-content" aria-expanded={isOpen}>
                     <ChevronsUpDown className="h-4 w-4" />
                     {isOpen ? 'Hide' : 'Show'} Advanced Settings
                 </Button>
