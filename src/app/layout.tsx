@@ -54,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} font-body antialiased`}>
+      <body className={`${inter.className} font-body antialiased`} suppressHydrationWarning>
         <JsonLd data={websiteJsonLd} />
         <Providers>{children}</Providers>
       </body>
