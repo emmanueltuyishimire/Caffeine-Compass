@@ -6,7 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
-import ClientThemeProvider from '@/components/client-theme-provider';
+import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -50,9 +50,9 @@ export default function RootLayout({
       <body className={`${inter.className} font-body antialiased min-h-screen flex flex-col`}>
           <JsonLd data={websiteJsonLd} />
           <Header />
-          <ClientThemeProvider>
-            <main className="flex-grow">{children}</main>
-          </ClientThemeProvider>
+            <main className="flex-grow">
+              <Providers>{children}</Providers>
+            </main>
           <Footer />
           <Toaster />
       </body>
