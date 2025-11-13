@@ -25,22 +25,22 @@ const Header = () => {
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink asChild>
-                   <a className={navigationMenuTriggerStyle()}>Home</a>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Home
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/calculators" legacyBehavior passHref>
-                <NavigationMenuLink asChild>
-                   <a className={navigationMenuTriggerStyle()}>Calculators</a>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Calculators
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/articles" legacyBehavior passHref>
-                <NavigationMenuLink asChild>
-                   <a className={navigationMenuTriggerStyle()}>Learn</a>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Learn
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
