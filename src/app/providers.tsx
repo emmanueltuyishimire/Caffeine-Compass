@@ -1,7 +1,8 @@
 
 'use client';
 
-import { ThemeProvider, useTheme } from 'next-themes';
+import { SidebarProvider } from '@/components/ui/sidebar';
+import { ThemeProvider } from 'next-themes';
 import { ReactNode } from 'react';
 
 export function Providers({ children }: { children: ReactNode }) {
@@ -12,7 +13,7 @@ export function Providers({ children }: { children: ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
+      <SidebarProvider>{children}</SidebarProvider>
     </ThemeProvider>
   );
 }

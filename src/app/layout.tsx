@@ -2,13 +2,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Toaster } from '@/components/ui/toaster';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import JsonLd from '@/components/JsonLd';
 import { Providers } from './providers';
-import { Sidebar, SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
-import SidebarNav from '@/components/layout/SidebarNav';
+import AppLayout from '@/components/layout/AppLayout';
 
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
@@ -27,22 +22,6 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 };
 
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Caffeine Calculation Site",
-  "url": "https://caffeine-calculation-site.com/",
-   "publisher": {
-    "@type": "Organization",
-    "name": "Caffeine Calculation Site",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://caffeine-calculation-site.com/logo.png"
-    }
-  }
-};
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -52,20 +31,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} font-body antialiased`}>
         <Providers>
-          <SidebarProvider>
-            <Sidebar>
-              <SidebarNav />
-            </Sidebar>
-            <SidebarInset>
-              <JsonLd data={websiteJsonLd} />
-              <Header />
-                <main className="flex-grow">
-                  {children}
-                </main>
-              <Footer />
-              <Toaster />
-            </SidebarInset>
-          </SidebarProvider>
+          <AppLayout>{children}</AppLayout>
         </Providers>
       </body>
     </html>
