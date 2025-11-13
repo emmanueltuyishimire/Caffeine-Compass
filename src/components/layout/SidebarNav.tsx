@@ -28,10 +28,10 @@ export default function SidebarNav() {
             <SidebarMenu>
                 {mainNav.map((link) => (
                     <SidebarMenuItem key={link.href}>
-                       <SidebarMenuButton asChild>
-                            <Link href={link.href} className={pathname === link.href ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" : ""}>
+                       <SidebarMenuButton asChild isActive={pathname === link.href} tooltip={link.label}>
+                            <Link href={link.href}>
                                 <link.icon />
-                                <span>{link.label}</span>
+                                <span className="flex-grow text-left">{link.label}</span>
                             </Link>
                         </SidebarMenuButton>
                     </SidebarMenuItem>

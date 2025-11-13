@@ -532,8 +532,6 @@ const SidebarMenuButton = React.forwardRef<
     asChild?: boolean,
     isActive?: boolean
     tooltip?: string | React.ComponentProps<typeof TooltipContent>
-    icon?: React.ReactNode,
-    rightIcon?: React.ReactNode,
   } & VariantProps<typeof sidebarMenuButtonVariants>
 >(
   (
@@ -545,22 +543,12 @@ const SidebarMenuButton = React.forwardRef<
       tooltip,
       className,
       children,
-      icon,
-      rightIcon,
       ...props
     },
     ref
   ) => {
     const Comp = asChild ? Slot : "button"
     const { isMobile, state } = useSidebar()
-
-    const buttonContent = (
-        <span className="flex w-full items-center gap-2 overflow-hidden">
-            {icon}
-            <span className="flex-grow text-left">{children}</span>
-            {rightIcon}
-        </span>
-    );
 
     const button = (
       <Comp
@@ -574,21 +562,6 @@ const SidebarMenuButton = React.forwardRef<
         {children}
       </Comp>
     );
-
-    if (asChild) {
-        return (
-             <Slot
-                ref={ref}
-                data-sidebar="menu-button"
-                data-size={size}
-                data-active={isActive}
-                className={cn(sidebarMenuButtonVariants({ variant, size }), className)}
-                {...props}
-            >
-                {buttonContent}
-            </Slot>
-        )
-    }
 
     if (!tooltip) {
       return button
@@ -784,5 +757,3 @@ export {
   SidebarTrigger,
   useSidebar,
 }
-
-    
