@@ -7,13 +7,13 @@ import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
 import { ThemeProvider } from '@/components/theme-provider';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://caffeine-compass.com'),
   title: {
     default: 'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
-    template: '%s | Caffeine Compass',
+    template: '%s — Caffeine Compass',
   },
   description:
     'Empowering people to understand, calculate, and optimize their caffeine habits for better focus, health, and sleep.',
@@ -50,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable}`} suppressHydrationWarning>
-      <body className={`font-body antialiased min-h-screen flex flex-col`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} font-body antialiased min-h-screen flex flex-col`}>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"

@@ -1,8 +1,34 @@
-import CaffeineAssistant from '@/components/features/CaffeineAssistant';
+import dynamic from 'next/dynamic';
 import { Bot, HelpCircle, Lightbulb, Zap } from 'lucide-react';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Skeleton } from '@/components/ui/skeleton';
+
+const CaffeineAssistant = dynamic(() => import('@/components/features/CaffeineAssistant'), {
+  ssr: false,
+  loading: () => (
+     <Card className="max-w-4xl mx-auto h-[600px] flex flex-col">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Bot />
+          Personalized Caffeine Assistant
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="flex-grow flex items-center justify-center">
+        <div className="w-full max-w-md space-y-4">
+          <Skeleton className="h-10 w-full" />
+          <Skeleton className="h-10 w-full" />
+          <Skeleton className="h-10 w-full" />
+        </div>
+      </CardContent>
+       <CardFooter className="pt-4 border-t">
+        <Skeleton className="h-10 w-full" />
+      </CardFooter>
+    </Card>
+  )
+});
+
 
 export const metadata: Metadata = {
     title: 'Caffeine Assistant — AI-Powered Support for Your Caffeine Questions',
@@ -72,15 +98,15 @@ export default function AiAssistantPage() {
         <CaffeineAssistant />
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-            <section id="how-it-works">
-                <h2 className="text-3xl font-bold">Your Personal Caffeine Expert</h2>
+            <section id="how-it-works" role="article" aria-labelledby="how-it-works-heading">
+                <h2 id="how-it-works-heading" className="text-3xl font-bold">Your Personal Caffeine Expert</h2>
                 <p>
                     Navigating the world of caffeine can be complex. From understanding the content of your favorite drinks to optimizing timing for peak performance, there's a lot to consider. Our AI-powered Caffeine Assistant is here to simplify that process. Built on a foundation of our comprehensive beverage database and the latest scientific research, it provides instant, personalized answers to your most pressing questions.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 my-8">
                     <Card>
                         <CardHeader>
-                            <CardTitle className="flex items-center gap-2"><HelpCircle className="text-primary"/>Ask Anything</CardTitle>
+                            <CardTitle className="flex items-center gap-2"><HelpCircle className="text-primary" aria-hidden="true"/>Ask Anything</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <p className="text-sm">From broad questions ("How does caffeine affect sleep?") to specific queries ("Is cold brew stronger than espresso?"), our assistant is ready to provide clear, concise answers.</p>
@@ -88,7 +114,7 @@ export default function AiAssistantPage() {
                     </Card>
                     <Card>
                         <CardHeader>
-                            <CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary"/>Get Instant Insights</CardTitle>
+                            <CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary" aria-hidden="true"/>Get Instant Insights</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <p className="text-sm">No more searching through articles. Get immediate, actionable advice tailored to you. The assistant can access all the knowledge from our site's calculators and articles.</p>
@@ -96,7 +122,7 @@ export default function AiAssistantPage() {
                     </Card>
                     <Card>
                         <CardHeader>
-                            <CardTitle className="flex items-center gap-2"><Zap className="text-primary"/>Optimize Your Habits</CardTitle>
+                            <CardTitle className="flex items-center gap-2"><Zap className="text-primary" aria-hidden="true"/>Optimize Your Habits</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <p className="text-sm">Use the assistant to fine-tune your caffeine consumption for better energy, focus, and sleep. Ask for personalized recommendations and strategies.</p>

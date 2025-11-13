@@ -1,6 +1,5 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart2, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown } from 'lucide-react';
+import { BarChart2, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown, Baby, Moon, Zap } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
@@ -107,10 +106,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="calculators" className="py-20 bg-background">
+        <section id="calculators" className="py-20 bg-background" role="region" aria-labelledby="calculators-heading">
           <div className="container mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline">A Comprehensive Toolkit for Mindful Caffeine Use</h2>
+                <h2 id="calculators-heading" className="text-3xl md:text-4xl font-bold font-headline">A Comprehensive Toolkit for Mindful Caffeine Use</h2>
                 <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
                     From tracking your daily intake to understanding your genetic sensitivity, we have a tool for every question.
                 </p>
@@ -140,10 +139,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 bg-muted/30">
+        <section className="py-20 bg-muted/30" role="region" aria-labelledby="how-it-works-heading">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline">How It Works: Your Path to Optimized Energy</h2>
+                <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold font-headline">How It Works: Your Path to Optimized Energy</h2>
                 <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
                     In three simple steps, you can transform your relationship with caffeine.
                 </p>
@@ -179,7 +178,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="py-20">
+        <section className="py-20" role="region" aria-labelledby="why-us-heading">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
@@ -195,7 +194,7 @@ export default function Home() {
                 )}
               </div>
               <div className="space-y-8">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold font-headline">
                   Why Caffeine Compass?
                 </h2>
                 <div className="flex items-start gap-4">
