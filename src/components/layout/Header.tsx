@@ -13,7 +13,6 @@ import {
 import { ThemeToggle } from '../theme-toggle';
 import { MobileNav } from './MobileNav';
 import { usePathname } from 'next/navigation';
-import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -38,10 +37,11 @@ const Header = () => {
                 <NavigationMenuItem key={link.href}>
                   <Link href={link.href} passHref>
                     <NavigationMenuLink 
+                      asChild
                       className={navigationMenuTriggerStyle()}
                       active={pathname === link.href}
                     >
-                      {link.label}
+                      <a>{link.label}</a>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
