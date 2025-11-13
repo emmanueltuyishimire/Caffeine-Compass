@@ -74,7 +74,6 @@ const featuredCalculators = [
 
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
   const whyUsImage = PlaceHolderImages.find(p => p.id === 'why-us-image');
 
   return (
@@ -82,23 +81,20 @@ export default function Home() {
       <JsonLd data={homePageJsonLd} />
       <div className="flex flex-col">
         <section className="relative text-center rounded-lg overflow-hidden min-h-[500px] flex flex-col justify-center items-center text-white bg-primary">
-            {heroImage && (
-              <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
+            <Image
+                src="/caffeine-calculation-site-background.webp"
+                alt="Dark, moody shot of a barista pouring milk into a latte, with coffee beans scattered around."
                 fill
                 className="object-cover object-center z-0 opacity-20"
                 priority
-                data-ai-hint={heroImage.imageHint}
               />
-            )}
           <div className="relative z-10 p-4 max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-outline">
               Take Control of Your Caffeine.
               <br/>
               Unlock Your Potential.
             </h1>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-outline">
               Harness the power of caffeine without compromising your sleep or well-being. Our science-backed tools provide personalized insights to help you optimize your energy, focus, and health.
             </p>
             <Link href="/calculators">
