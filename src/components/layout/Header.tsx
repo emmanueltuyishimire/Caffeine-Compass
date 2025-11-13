@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Logo } from '@/components/icons';
+import Image from 'next/image';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/navigation-menu"
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { BarChart2, BookOpen, Coffee, HeartPulse, Moon, TestTube2, Zap } from 'lucide-react';
 
 const calculatorLinks: { title: string; href: string; description: string }[] = [
   {
@@ -62,8 +61,8 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-3" aria-label="Caffeine Compass Homepage">
-            <Logo className="h-8 w-8 text-primary" aria-hidden="true" />
+          <Link href="/" className="flex items-center gap-2" aria-label="Caffeine Compass Homepage">
+            <Image src="/logo.png" alt="Caffeine Compass Logo" width={32} height={32} />
             <span className="text-xl font-bold font-headline">Caffeine Compass</span>
           </Link>
         </div>

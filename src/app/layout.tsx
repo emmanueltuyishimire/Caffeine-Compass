@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   },
   description:
     'Empowering people to understand, calculate, and optimize their caffeine habits for better focus, health, and sleep.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 const websiteJsonLd = {
