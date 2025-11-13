@@ -102,8 +102,8 @@ export default function CaffeineOverdoseRiskCalculator() {
         </div>
         
         <div className="space-y-4">
-            <h3 className="font-semibold">Estimated Risk Thresholds:</h3>
-            <div className="grid grid-cols-1 gap-4" role="list">
+            <h3 className="font-semibold" id="risk-thresholds-heading">Estimated Risk Thresholds:</h3>
+            <div className="grid grid-cols-1 gap-4" role="list" aria-labelledby="risk-thresholds-heading">
                 {Object.entries(defaultRiskLevels).map(([key, level]) => {
                     const { icon: Icon, title, description, color } = level;
                     const typedKey = key as keyof typeof calculations;
@@ -124,12 +124,12 @@ export default function CaffeineOverdoseRiskCalculator() {
         
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
             <CollapsibleTrigger asChild>
-                <Button variant="ghost" className="w-full flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <Button variant="ghost" className="w-full flex items-center justify-center gap-2 text-sm text-muted-foreground" aria-controls="advanced-settings-content">
                     <ChevronsUpDown className="h-4 w-4" />
                     {isOpen ? 'Hide' : 'Show'} Advanced Settings
                 </Button>
             </CollapsibleTrigger>
-            <CollapsibleContent className="space-y-4 pt-4">
+            <CollapsibleContent id="advanced-settings-content" className="space-y-4 pt-4">
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                         <Label htmlFor="noticeable-mg" className="text-xs">Noticeable Effects (mg/kg)</Label>
@@ -149,7 +149,7 @@ export default function CaffeineOverdoseRiskCalculator() {
 
       </CardContent>
        <CardFooter className="pt-6 border-t">
-         <div className="flex items-center gap-2 text-sm text-muted-foreground">
+         <div role="status" className="flex items-center gap-2 text-sm text-muted-foreground">
              <Shield className="h-4 w-4 text-green-500" aria-hidden="true" />
             <span>For reference, the FDA-recommended safe daily limit for healthy adults is <strong>400 mg</strong>.</span>
          </div>

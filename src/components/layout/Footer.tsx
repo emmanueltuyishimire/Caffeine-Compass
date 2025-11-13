@@ -11,7 +11,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t bg-background">
+    <footer className="border-t bg-background" role="contentinfo">
       <div className="container py-8">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
           <p className="text-sm text-muted-foreground">

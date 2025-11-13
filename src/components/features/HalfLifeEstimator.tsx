@@ -58,6 +58,7 @@ export default function HalfLifeEstimator() {
               value={caffeineAmount}
               onChange={(e) => setCaffeineAmount(Math.max(0, parseInt(e.target.value) || 0))}
               placeholder="e.g., 100"
+              aria-label="Caffeine amount in milligrams"
             />
           </div>
           <div className="space-y-2">
@@ -69,6 +70,7 @@ export default function HalfLifeEstimator() {
               value={halfLife}
               onChange={(e) => setHalfLife(Math.max(0.5, parseFloat(e.target.value) || 0.5))}
               placeholder="e.g., 5"
+              aria-label="Caffeine half-life in hours"
             />
           </div>
         </div>
@@ -97,7 +99,7 @@ export default function HalfLifeEstimator() {
         </div>
       </CardContent>
        <CardFooter className="pt-6">
-         <p className="text-sm text-muted-foreground" role="status">
+         <p className="text-sm text-muted-foreground" role="status" aria-live="polite">
            After 8 hours, you will still have approximately <span className="font-bold text-primary">{caffeineAt8Hours}mg</span> of caffeine in your system.
          </p>
        </CardFooter>
