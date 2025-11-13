@@ -75,19 +75,23 @@ const featuredCalculators = [
 
 export default function Home() {
   const whyUsImage = PlaceHolderImages.find(p => p.id === 'why-us-image');
+  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
 
   return (
     <>
       <JsonLd data={homePageJsonLd} />
       <div className="flex flex-col">
         <section className="relative text-center rounded-lg overflow-hidden min-h-[500px] flex flex-col justify-center items-center text-white bg-primary">
-            <Image
-                src="/caffeine-calculation-site-background.webp"
-                alt="Dark, moody shot of a barista pouring milk into a latte, with coffee beans scattered around."
-                fill
-                className="object-cover object-center z-0 opacity-20"
-                priority
-              />
+            {heroImage && (
+              <Image
+                  src={heroImage.imageUrl}
+                  alt={heroImage.description}
+                  data-ai-hint={heroImage.imageHint}
+                  fill
+                  className="object-cover object-center z-0 opacity-20"
+                  priority
+                />
+            )}
           <div className="relative z-10 p-4 max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-outline">
               Take Control of Your Caffeine.
