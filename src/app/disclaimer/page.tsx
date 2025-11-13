@@ -4,19 +4,19 @@ import ClientDate from '@/components/ui/client-date';
 
 export const metadata: Metadata = {
     title: 'Disclaimer',
-    description: 'Important disclaimer for the Caffeine Calculation Site website and its tools.',
+    description: 'Important disclaimer for the Caffeine Compass website and its tools.',
 };
 
 export default function DisclaimerPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 md:py-20">
       <div className="prose prose-lg dark:prose-invert max-w-none mx-auto">
         <h1 className="text-4xl font-bold font-headline mb-8">Disclaimer</h1>
         
         <p><em>Last Updated: <ClientDate /></em></p>
 
         <p>
-            The information and tools provided by Caffeine Calculation Site ("we," "us," or "our") on this website are for general informational and educational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
+            The information and tools provided by Caffeine Compass ("we," "us," or "our") on this website are for general informational and educational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
         </p>
 
         <h2>Medical Disclaimer</h2>

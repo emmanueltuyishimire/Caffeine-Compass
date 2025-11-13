@@ -8,15 +8,15 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-    title: 'About Caffeine Calculation Site — Our Mission and Science-Backed Approach',
-    description: 'Learn about the mission behind Caffeine Calculation Site and the team dedicated to helping you optimize your caffeine intake for better health, focus, and sleep.',
+    title: 'About Caffeine Compass — Our Mission and Science-Backed Approach',
+    description: 'Learn about the mission behind Caffeine Compass and the team dedicated to helping you optimize your caffeine intake for better health, focus, and sleep.',
 };
 
 const team = [
     {
         name: 'Dr. Evelyn Reed',
         role: 'Founder & Lead Scientist',
-        bio: 'With a Ph.D. in Chronobiology, Dr. Reed is a leading expert on how stimulants affect human sleep cycles. She founded Caffeine Calculation Site to translate complex science into a simple, actionable tool that empowers everyone to master their biology, not be a victim of it.',
+        bio: 'With a Ph.D. in Chronobiology, Dr. Reed is a leading expert on how stimulants affect human sleep cycles. She founded Caffeine Compass to translate complex science into a simple, actionable tool that empowers everyone to master their biology, not be a victim of it.',
         imageId: 'team-evelyn'
     },
     {
@@ -30,8 +30,8 @@ const team = [
 const aboutPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "About Caffeine Calculation Site",
-  "description": "Learn about the mission behind Caffeine Calculation Site and the team dedicated to helping you optimize your caffeine intake for better health, focus, and sleep.",
+  "name": "About Caffeine Compass",
+  "description": "Learn about the mission behind Caffeine Compass and the team dedicated to helping you optimize your caffeine intake for better health, focus, and sleep.",
   "url": "https://caffeine-calculation-site.com/about",
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -59,15 +59,15 @@ export default function AboutPage() {
     return (
         <>
             <JsonLd data={aboutPageJsonLd} />
-            <div className="container mx-auto px-4 py-12">
+            <div className="container mx-auto px-4 py-12 md:py-20">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Master Your Energy. Don't Let It Master You.</h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Caffeine is the world's favorite drug, but most of us use it blindly. Caffeine Calculation Site was born from a powerful idea: what if we could use science to harness its benefits without the costs?
+                        Caffeine is the world's favorite drug, but most of us use it blindly. Caffeine Compass was born from a powerful idea: what if we could use science to harness its benefits without the costs?
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+                <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center mb-20">
                      {missionImage && (
                         <div className="relative h-full min-h-[300px]">
                             <Image
@@ -128,9 +128,9 @@ export default function AboutPage() {
 
                 <div className="text-center mb-12">
                     <Users className="h-10 w-10 mx-auto text-primary mb-4" aria-label="Team Icon" />
-                    <h2 className="text-3xl font-bold font-headline">Meet the Minds Behind the Site</h2>
+                    <h2 className="text-3xl font-bold font-headline">Meet the Minds Behind the Compass</h2>
                      <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
-                        Caffeine Calculation Site was built by a team obsessed with the intersection of science and daily life.
+                        Caffeine Compass was built by a team obsessed with the intersection of science and daily life.
                     </p>
                 </div>
 

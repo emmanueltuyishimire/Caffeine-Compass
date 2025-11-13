@@ -13,14 +13,14 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Caffeine Calculation Site — Optimize Your Caffeine for Better Energy & Sleep',
+    title: 'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
     description: 'Harness the power of caffeine with our suite of science-backed calculators. Track your intake, understand your metabolism, and optimize your timing for peak performance and better health.',
 };
 
 const homePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Caffeine Calculation Site Homepage",
+  "name": "Caffeine Compass Homepage",
   "description": "Harness the power of caffeine with our suite of science-backed calculators. Track your intake, understand your metabolism, and optimize your timing for peak performance and better health.",
   "url": "https://caffeine-calculation-site.com/",
   "breadcrumb": {
@@ -121,8 +121,8 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {featuredCalculators.map((calc) => (
-                  <Link key={calc.title} href={calc.href} className="block" aria-label={`Go to ${calc.title}`}>
-                    <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                  <Link key={calc.title} href={calc.href} className="block group" aria-label={`Go to ${calc.title}`}>
+                    <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
                       <CardHeader>
                         <div className="flex items-center gap-4">
                           <calc.icon className="h-8 w-8 text-primary" aria-hidden="true"/>
@@ -183,7 +183,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
               <div className="order-last md:order-first">
                 <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold font-headline mb-8">
-                  Why Caffeine Calculation Site?
+                  Why Caffeine Compass?
                 </h2>
                 <div className="space-y-8">
                     <div className="flex items-start gap-4">

@@ -35,7 +35,7 @@ const pageJsonLd = {
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Caffeine Calculation Site",
+    "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
       "url": "https://caffeine-calculation-site.com/logo.png"
@@ -53,7 +53,7 @@ export default function DrinkComparisonPage() {
   return (
     <>
       <JsonLd data={pageJsonLd} />
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 md:py-20">
         <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Drink Comparison Tool: Caffeine in Coffee vs. Tea vs. Energy Drinks
@@ -158,7 +158,7 @@ export default function DrinkComparisonPage() {
               <AccordionItem value="item-4">
                 <AccordionTrigger>Why does caffeine content vary so much between coffee shops?</AccordionTrigger>
                 <AccordionContent>
-                  Caffeine content is affected by the type of coffee bean (Robusta has more caffeine than Arabica), the roast level (lighter roasts have slightly more caffeine), the brewing method, and the serving size. This is why we include branded options like Starbucks and Dunkin' in our database.
+                  Caffeine content is affected by the type of coffee bean (Robusta has more caffeine than Arabica), the roast level (lighter roasts have slightly more caffeine by weight), the brewing method, and the serving size. This is why we include branded options like Starbucks and Dunkin' in our database.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">

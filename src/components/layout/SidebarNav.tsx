@@ -31,8 +31,8 @@ export default function SidebarNav() {
     return (
         <>
         <SidebarHeader>
-             <Link href="/" className="flex items-center gap-2" aria-label="Caffeine Calculation Site Homepage">
-                <Image src="/logo.png" alt="Caffeine Calculation Site Logo" width={32} height={32} />
+             <Link href="/" className="flex items-center gap-2" aria-label="Caffeine Compass Homepage">
+                <Image src="/logo.png" alt="Caffeine Compass Logo" width={32} height={32} />
                 <span className="inline-block text-xl font-bold font-headline">Caffeine Compass</span>
             </Link>
         </SidebarHeader>
@@ -41,7 +41,7 @@ export default function SidebarNav() {
                 {mainNav.map((link) => (
                     <SidebarMenuItem key={link.href}>
                         <Link href={link.href}>
-                            <SidebarMenuButton isActive={pathname === link.href} icon={<link.icon />}>
+                            <SidebarMenuButton isActive={pathname === link.href} icon={<link.icon />} tooltip={link.label}>
                                 {link.label}
                             </SidebarMenuButton>
                         </Link>
@@ -50,7 +50,7 @@ export default function SidebarNav() {
                 <SidebarSeparator />
                  <SidebarMenuItem>
                     <Link href="/calculators">
-                        <SidebarMenuButton isActive={pathname === '/calculators'} icon={<Calculator />}>
+                        <SidebarMenuButton isActive={pathname === '/calculators'} icon={<Calculator />} tooltip="All Calculators">
                             Calculators
                         </SidebarMenuButton>
                     </Link>
@@ -58,7 +58,7 @@ export default function SidebarNav() {
                 {calculatorNav.map((item) => (
                     <SidebarMenuItem key={item.href}>
                          <Link href={item.href}>
-                            <SidebarMenuButton isActive={pathname === item.href} icon={<item.icon />}>
+                            <SidebarMenuButton isActive={pathname === item.href} icon={<item.icon />} tooltip={item.title}>
                                 {item.title}
                             </SidebarMenuButton>
                         </Link>

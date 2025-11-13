@@ -35,7 +35,7 @@ const pageJsonLd = {
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Caffeine Calculation Site",
+    "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
       "url": "https://caffeine-calculation-site.com/logo.png"
@@ -187,8 +187,8 @@ export default function CaffeineHalfLifeSleepArticle() {
   return (
     <>
       <JsonLd data={pageJsonLd} />
-      <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+      <div className="container mx-auto px-4 py-12 md:py-20">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Caffeine Half-Life & Sleep — A Deep Dive Into How Long Caffeine Affects You
           </h1>
@@ -199,8 +199,8 @@ export default function CaffeineHalfLifeSleepArticle() {
         
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-12">
           
-          <section id="introduction">
-            <h2 className="text-3xl font-bold">The Invisible Clock: Decoding Your Body's Lingering Response to Caffeine</h2>
+          <section id="introduction" aria-labelledby="introduction-heading">
+            <h2 id="introduction-heading" className="text-3xl font-bold">The Invisible Clock: Decoding Your Body's Lingering Response to Caffeine</h2>
             <p>
               You drink a coffee at 3 PM for a much-needed boost, feeling sharp and productive for the rest of the workday. You don't feel "caffeinated" by the time you go to bed, yet you find yourself tossing and turning, or waking up feeling groggy and unrefreshed. Sound familiar? The culprit is often a simple but profound misunderstanding of caffeine's lingering presence in your body. The key to solving this mystery lies in a single, powerful concept: <strong>caffeine half-life</strong>. This measurement is the invisible clock that dictates how long caffeine truly affects you, and it is the single most important factor in the relationship between your daily coffee and your nightly <strong>sleep</strong> quality.
             </p>
@@ -214,8 +214,8 @@ export default function CaffeineHalfLifeSleepArticle() {
 
           <Separator />
 
-          <section id="science">
-            <h2 className="text-3xl font-bold">The Science Behind the Scenes: Caffeine Metabolism and Half-Life Explained</h2>
+          <section id="science" aria-labelledby="science-heading">
+            <h2 id="science-heading" className="text-3xl font-bold">The Science Behind the Scenes: Caffeine Metabolism and Half-Life Explained</h2>
             <p>
               To truly grasp why an afternoon latte can impact your sleep at midnight, we need to look beyond the coffee cup and into the intricate world of human biochemistry. The concept of "half-life" isn't just a convenient term; it's a precise measure from the field of pharmacokinetics, the study of how drugs move through the body. It's the key to understanding the duration of caffeine's effects, long after the initial feeling of alertness has subsided.
             </p>
@@ -269,8 +269,8 @@ export default function CaffeineHalfLifeSleepArticle() {
 
           <Separator />
 
-          <section id="pain-points">
-            <h2 className="text-3xl font-bold">The Hidden Costs: Common Problems Caused by Misunderstanding Caffeine Half-Life</h2>
+          <section id="pain-points" aria-labelledby="pain-points-heading">
+            <h2 id="pain-points-heading" className="text-3xl font-bold">The Hidden Costs: Common Problems Caused by Misunderstanding Caffeine Half-Life</h2>
             <p>
               The disconnect between the perceived effects of caffeine and its actual biological duration leads to a host of common, frustrating problems that people experience every day. These pain points are what drive users to search for answers about their coffee habits and sleep quality. Recognizing them is the first step toward a solution.
             </p>
@@ -301,8 +301,8 @@ export default function CaffeineHalfLifeSleepArticle() {
 
           <Separator />
           
-          <section id="tips">
-            <h2 className="text-3xl font-bold">Practical Tips & Hacks for Mastering Your Caffeine Half-Life</h2>
+          <section id="tips" aria-labelledby="tips-heading">
+            <h2 id="tips-heading" className="text-3xl font-bold">Practical Tips & Hacks for Mastering Your Caffeine Half-Life</h2>
             <p>
               Understanding caffeine half-life is the first step; applying that knowledge is where the real transformation happens. Here are practical, science-backed strategies to help you work <em>with</em> your metabolism, not against it, to optimize your energy and protect your sleep.
             </p>
@@ -356,8 +356,8 @@ export default function CaffeineHalfLifeSleepArticle() {
 
           <Separator />
           
-          <section id="application">
-            <h2 className="text-3xl font-bold">Your 3-Step Action Plan to Master Caffeine Timing and Reclaim Your Sleep</h2>
+          <section id="application" aria-labelledby="application-heading">
+            <h2 id="application-heading" className="text-3xl font-bold">Your 3-Step Action Plan to Master Caffeine Timing and Reclaim Your Sleep</h2>
             <p>Knowledge is only powerful when applied. Here is a simple, step-by-step process to audit your caffeine habits and make data-driven changes to improve your sleep and energy based on the principle of half-life.</p>
             
             <ol className="list-decimal pl-5 space-y-4">
@@ -378,8 +378,8 @@ export default function CaffeineHalfLifeSleepArticle() {
 
           <Separator />
 
-          <section id="examples">
-            <h2 className="text-3xl font-bold">Worked Examples: Real-World Scenarios of Half-Life in Action</h2>
+          <section id="examples" aria-labelledby="examples-heading">
+            <h2 id="examples-heading" className="text-3xl font-bold">Worked Examples: Real-World Scenarios of Half-Life in Action</h2>
             <p>Let's see how different individuals can apply the concept of caffeine half-life to solve their sleep and energy problems.</p>
             
             <Card className="mb-6">
@@ -418,8 +418,8 @@ export default function CaffeineHalfLifeSleepArticle() {
 
           <Separator />
 
-          <section id="mistakes">
-            <h2 className="text-3xl font-bold">Common Mistakes Regarding Caffeine Half-Life & Sleep</h2>
+          <section id="mistakes" aria-labelledby="mistakes-heading">
+            <h2 id="mistakes-heading" className="text-3xl font-bold">Common Mistakes Regarding Caffeine Half-Life & Sleep</h2>
             <Table>
                 <caption className="sr-only">Common mistakes related to caffeine half-life and sleep</caption>
                 <TableHeader>
@@ -456,8 +456,8 @@ export default function CaffeineHalfLifeSleepArticle() {
 
           <Separator />
           
-          <section id="faq">
-            <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="faq-1">
                 <AccordionTrigger>What is caffeine half-life?</AccordionTrigger>
@@ -540,7 +540,7 @@ export default function CaffeineHalfLifeSleepArticle() {
               <AccordionItem value="faq-14">
                 <AccordionTrigger>How much caffeine is left in my system at bedtime if I have a coffee at noon?</AccordionTrigger>
                 <AccordionContent>
-                  This depends on the dose and your metabolism. For an average person with a 5-hour half-life who drinks a 100mg coffee at noon, there would be about 25mg left at 10 PM. You can get a precise, visual answer for your specific situation using our <Link href="/calculators/half-life">Caffeine Half-Life Calculator</Link>.
+                  This depends on the dose and your metabolism. For an average person with a 5-hour half-life who drinks a 100mg coffee at noon, there would be about 25mg left at 10 PM. You can get a precise, visual answer for your specific situation using our Caffeine Half-Life Calculator.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-15">
@@ -554,8 +554,8 @@ export default function CaffeineHalfLifeSleepArticle() {
 
           <Separator />
 
-          <section id="related-tools">
-              <h2 className="text-3xl font-bold">Related Tools & Resources</h2>
+          <section id="related-tools" aria-labelledby="related-tools-heading">
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>

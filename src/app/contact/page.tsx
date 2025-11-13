@@ -4,8 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Mail, MessageCircle, Lightbulb, Handshake, AlertCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Contact Us — Caffeine Calculation Site',
-    description: 'Get in touch with the Caffeine Calculation Site team. We welcome your feedback, suggestions, partnership inquiries, and questions.',
+    title: 'Contact Us — Caffeine Compass',
+    description: 'Get in touch with the Caffeine Compass team. We welcome your feedback, suggestions, partnership inquiries, and questions.',
 };
 
 const contactReasons = [
@@ -33,7 +33,7 @@ const contactReasons = [
 
 export default function ContactPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="text-center mb-12">
             <Mail className="h-10 w-10 mx-auto text-primary mb-4" aria-label="Contact Icon" />
             <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Contact Us</h1>

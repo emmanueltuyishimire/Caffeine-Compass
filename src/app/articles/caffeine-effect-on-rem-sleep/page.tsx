@@ -35,7 +35,7 @@ const pageJsonLd = {
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Caffeine Calculation Site",
+    "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
       "url": "https://caffeine-calculation-site.com/logo.png"
@@ -187,8 +187,8 @@ export default function CaffeineRemSleepArticle() {
   return (
     <>
       <JsonLd data={pageJsonLd} />
-      <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+      <div className="container mx-auto px-4 py-12 md:py-20">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Caffeine's Effect on REM Sleep — A Deep Dive Into How It Impacts Your Dreams and Brain Health
           </h1>
@@ -199,8 +199,8 @@ export default function CaffeineRemSleepArticle() {
         
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-12">
           
-          <section id="introduction">
-            <h2 className="text-3xl font-bold">The Silent Saboteur of Your Sleep</h2>
+          <section id="introduction" aria-labelledby="introduction-heading">
+            <h2 id="introduction-heading" className="text-3xl font-bold">The Silent Saboteur of Your Sleep</h2>
             <p>
               We’ve all been there. It’s 10 PM, your mind is racing, and sleep feels like a distant shore. You mentally retrace your steps: "Was it that 4 PM latte? It was just a small one." For millions, caffeine is the indispensable fuel for a demanding life, a reliable tool for sharpening focus and pushing through fatigue. Yet, we often ignore its hidden cost, a debt that is paid during the dark, quiet hours of the night. This cost isn’t just about how long it takes you to fall asleep; it’s about the very quality and structure of the sleep you eventually get. Specifically, caffeine wages a quiet war on one of your brain's most vital states: Rapid Eye Movement (REM) sleep.
             </p>
@@ -214,8 +214,8 @@ export default function CaffeineRemSleepArticle() {
 
           <Separator />
 
-          <section id="science">
-            <h2 className="text-3xl font-bold">The Science Behind the Scenes: Caffeine and Your Sleep Architecture</h2>
+          <section id="science" aria-labelledby="science-heading">
+            <h2 id="science-heading" className="text-3xl font-bold">The Science Behind the Scenes: Caffeine and Your Sleep Architecture</h2>
             <p>
               To understand how caffeine disrupts REM sleep, we first need to appreciate the intricate and elegant structure of a healthy night's sleep. Sleep isn’t a monolithic state of unconsciousness; it’s a dynamic, multi-stage journey that your brain cycles through several times each night. This journey, known as "sleep architecture," consists of two main types of sleep: Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM).
             </p>
@@ -262,8 +262,8 @@ export default function CaffeineRemSleepArticle() {
 
           <Separator />
 
-          <section id="pain-points">
-            <h2 className="text-3xl font-bold">The Hidden Costs of REM Suppression: Why You Feel "Off"</h2>
+          <section id="pain-points" aria-labelledby="pain-points-heading">
+            <h2 id="pain-points-heading" className="text-3xl font-bold">The Hidden Costs of REM Suppression: Why You Feel "Off"</h2>
             <p>
               The impact of caffeine on REM sleep isn't just an abstract scientific concept; it manifests as real-world problems that drive millions to search for answers online. You might not be typing "caffeine REM suppression" into Google, but you are likely searching for solutions to the symptoms it causes. Recognizing these pain points is the first step to connecting the dots back to your caffeine habits.
             </p>
@@ -294,8 +294,8 @@ export default function CaffeineRemSleepArticle() {
 
           <Separator />
           
-          <section id="tips">
-            <h2 className="text-3xl font-bold">Protecting Your REM: Practical Tips & Hacks for Smarter Caffeinating</h2>
+          <section id="tips" aria-labelledby="tips-heading">
+            <h2 id="tips-heading" className="text-3xl font-bold">Protecting Your REM: Practical Tips & Hacks for Smarter Caffeinating</h2>
             <p>
               Understanding the problem is half the battle. The other half is implementing practical, sustainable strategies to mitigate caffeine's impact on your REM sleep. The goal isn't necessarily to eliminate caffeine, but to use it intelligently.
             </p>
@@ -345,8 +345,8 @@ export default function CaffeineRemSleepArticle() {
 
           <Separator />
           
-          <section id="application">
-            <h2 className="text-3xl font-bold">Your 3-Step Action Plan to Reclaim Your REM Sleep</h2>
+          <section id="application" aria-labelledby="application-heading">
+            <h2 id="application-heading" className="text-3xl font-bold">Your 3-Step Action Plan to Reclaim Your REM Sleep</h2>
             <p>Knowledge is only powerful when applied. Here is a simple, step-by-step process to audit your caffeine habits and make data-driven changes to improve your REM sleep.</p>
             
             <ol className="list-decimal pl-5 space-y-4">
@@ -367,8 +367,8 @@ export default function CaffeineRemSleepArticle() {
 
           <Separator />
 
-          <section id="examples">
-            <h2 className="text-3xl font-bold">Worked Examples: Real-World Scenarios</h2>
+          <section id="examples" aria-labelledby="examples-heading">
+            <h2 id="examples-heading" className="text-3xl font-bold">Worked Examples: Real-World Scenarios</h2>
             <p>Let's see how different individuals can apply these principles to solve their sleep problems.</p>
             
             <Card className="mb-6">
@@ -408,8 +408,8 @@ export default function CaffeineRemSleepArticle() {
 
           <Separator />
 
-          <section id="mistakes">
-            <h2 className="text-3xl font-bold">Common Mistakes That Wreck Your REM Sleep</h2>
+          <section id="mistakes" aria-labelledby="mistakes-heading">
+            <h2 id="mistakes-heading" className="text-3xl font-bold">Common Mistakes That Wreck Your REM Sleep</h2>
             <Table>
                 <caption className="sr-only">Common mistakes related to caffeine and REM sleep</caption>
                 <TableHeader>
@@ -446,8 +446,8 @@ export default function CaffeineRemSleepArticle() {
 
           <Separator />
           
-          <section id="faq">
-            <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="faq-1">
                 <AccordionTrigger>What exactly is REM sleep?</AccordionTrigger>
@@ -544,8 +544,8 @@ export default function CaffeineRemSleepArticle() {
 
           <Separator />
 
-          <section id="related-tools">
-              <h2 className="text-3xl font-bold">Related Tools & Resources</h2>
+          <section id="related-tools" aria-labelledby="related-tools-heading">
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>

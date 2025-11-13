@@ -85,7 +85,7 @@ export default function ArticlesPage() {
   return (
     <>
       <JsonLd data={articlesPageJsonLd} />
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Learn & Explore</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -97,8 +97,8 @@ export default function ArticlesPage() {
             <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">Knowledge Tools</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 {toolLinks.map((tool) => (
-                    <Link key={tool.title} href={tool.href} className="block">
-                        <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <Link key={tool.title} href={tool.href} className="block group">
+                        <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
                             <CardHeader>
                                 <div className="flex items-center gap-4">
                                     <tool.icon className="h-8 w-8 text-primary" aria-hidden="true" />
@@ -116,10 +116,10 @@ export default function ArticlesPage() {
         
         <div>
             <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {articleLinks.map((article) => (
-                    <Link key={article.title} href={article.href} className="block">
-                    <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <Link key={article.title} href={article.href} className="block group">
+                    <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
                         <CardHeader>
                         <div className="flex items-center gap-4">
                             <article.icon className="h-8 w-8 text-primary" aria-hidden="true" />

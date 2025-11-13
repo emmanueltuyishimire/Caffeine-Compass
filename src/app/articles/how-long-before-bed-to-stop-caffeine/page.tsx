@@ -35,7 +35,7 @@ const pageJsonLd = {
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Caffeine Calculation Site",
+    "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
       "url": "https://caffeine-calculation-site.com/logo.png"
@@ -187,8 +187,8 @@ export default function HowLongBeforeBedToStopCaffeine() {
   return (
     <>
       <JsonLd data={pageJsonLd} />
-      <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
+      <div className="container mx-auto px-4 py-12 md:py-20">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             How Long Before Bed to Stop Caffeine — A Science-Backed Guide to Protecting Your Sleep
           </h1>
@@ -199,8 +199,8 @@ export default function HowLongBeforeBedToStopCaffeine() {
         
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-12">
           
-          <section id="introduction">
-            <h2 className="text-3xl font-bold">The Most Important Question You’re Not Asking About Your Coffee</h2>
+          <section id="introduction" aria-labelledby="introduction-heading">
+            <h2 id="introduction-heading" className="text-3xl font-bold">The Most Important Question You’re Not Asking About Your Coffee</h2>
             <p>
               It’s a question that echoes in the minds of millions, often around 11 PM when sleep feels like a distant shore: "Why am I still awake?" You might blame stress, a busy mind, or the blue light from your phone. But the real culprit is often the ghost of a decision made eight hours earlier—that 3 PM coffee you thought was harmless. The single most impactful question for anyone looking to improve their sleep quality isn't about expensive mattresses or fancy blackout curtains; it’s simply: <strong>how long before bed should I stop caffeine?</strong> Answering this question correctly is the key to unlocking the restorative power of sleep.
             </p>
@@ -214,8 +214,8 @@ export default function HowLongBeforeBedToStopCaffeine() {
 
           <Separator />
 
-          <section id="science">
-            <h2 className="text-3xl font-bold">The Science of the Caffeine Curfew: Your Brain on a Timer</h2>
+          <section id="science" aria-labelledby="science-heading">
+            <h2 id="science-heading" className="text-3xl font-bold">The Science of the Caffeine Curfew: Your Brain on a Timer</h2>
             <p>
               To understand why an afternoon coffee can disrupt your sleep at midnight, we need to explore the elegant but fragile neurochemical dance that governs your sleep-wake cycle. Your brain doesn't just "turn off" at night; it transitions through a series of complex stages, each with a vital purpose. Caffeine acts as a powerful disruptor to this natural rhythm, and its long-lasting effects are the reason a "caffeine curfew" is so critical.
             </p>
@@ -259,8 +259,8 @@ export default function HowLongBeforeBedToStopCaffeine() {
 
           <Separator />
 
-          <section id="pain-points">
-            <h2 className="text-3xl font-bold">The Hidden Toll: Are You Paying the Price for Late Caffeine?</h2>
+          <section id="pain-points" aria-labelledby="pain-points-heading">
+            <h2 id="pain-points-heading" className="text-3xl font-bold">The Hidden Toll: Are You Paying the Price for Late Caffeine?</h2>
             <p>
               The consequences of ignoring your caffeine curfew are often subtle but profound. They manifest as common complaints that many people attribute to stress, aging, or a busy lifestyle, without ever suspecting their afternoon coffee habit is the root cause. Do any of these sound familiar?
             </p>
@@ -291,8 +291,8 @@ export default function HowLongBeforeBedToStopCaffeine() {
 
           <Separator />
           
-          <section id="tips">
-            <h2 className="text-3xl font-bold">Your Caffeine Curfew Toolkit: Practical Tips for Protecting Your Sleep</h2>
+          <section id="tips" aria-labelledby="tips-heading">
+            <h2 id="tips-heading" className="text-3xl font-bold">Your Caffeine Curfew Toolkit: Practical Tips for Protecting Your Sleep</h2>
             <p>
               The goal is to use caffeine as a tool, not be a victim of it. Here are practical, science-backed strategies for timing your caffeine intake to maximize its benefits and minimize its sleep-disrupting costs.
             </p>
@@ -340,8 +340,8 @@ export default function HowLongBeforeBedToStopCaffeine() {
 
           <Separator />
           
-          <section id="application">
-            <h2 className="text-3xl font-bold">Your 3-Step Action Plan to Finding Your Perfect Caffeine Curfew</h2>
+          <section id="application" aria-labelledby="application-heading">
+            <h2 id="application-heading" className="text-3xl font-bold">Your 3-Step Action Plan to Finding Your Perfect Caffeine Curfew</h2>
             <p>Let's turn theory into practice. Follow this simple, data-driven process to discover the ideal time for <em>your</em> body to stop caffeine.</p>
             
             <ol className="list-decimal pl-5 space-y-4">
@@ -362,8 +362,8 @@ export default function HowLongBeforeBedToStopCaffeine() {
 
           <Separator />
 
-          <section id="examples">
-            <h2 className="text-3xl font-bold">Worked Examples: Real-World Curfew Scenarios</h2>
+          <section id="examples" aria-labelledby="examples-heading">
+            <h2 id="examples-heading" className="text-3xl font-bold">Worked Examples: Real-World Curfew Scenarios</h2>
             <p>Let's see how different people can apply these principles to solve their sleep problems.</p>
             
             <Card className="mb-6">
@@ -402,8 +402,8 @@ export default function HowLongBeforeBedToStopCaffeine() {
 
           <Separator />
 
-          <section id="mistakes">
-            <h2 className="text-3xl font-bold">Common Mistakes That Ruin Your Sleep</h2>
+          <section id="mistakes" aria-labelledby="mistakes-heading">
+            <h2 id="mistakes-heading" className="text-3xl font-bold">Common Mistakes That Ruin Your Sleep</h2>
             <Table>
                 <caption className="sr-only">Common mistakes related to caffeine timing and sleep</caption>
                 <TableHeader>
@@ -440,8 +440,8 @@ export default function HowLongBeforeBedToStopCaffeine() {
           
           <Separator />
           
-          <section id="faq">
-            <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="faq-1">
                 <AccordionTrigger>How long before bed should I stop caffeine?</AccordionTrigger>
@@ -508,8 +508,8 @@ export default function HowLongBeforeBedToStopCaffeine() {
 
           <Separator />
 
-          <section id="related-tools">
-              <h2 className="text-3xl font-bold">Related Tools & Resources</h2>
+          <section id="related-tools" aria-labelledby="related-tools-heading">
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>

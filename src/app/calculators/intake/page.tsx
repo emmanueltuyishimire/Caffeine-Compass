@@ -44,7 +44,7 @@ const pageJsonLd = {
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Caffeine Calculation Site",
+    "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
       "url": "https://caffeine-calculation-site.com/logo.png"
@@ -62,7 +62,7 @@ export default function IntakeCalculatorPage() {
   return (
     <>
       <JsonLd data={pageJsonLd} />
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 md:py-20">
         <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             Caffeine Intake Calculator — Track Your Daily Consumption

@@ -4,19 +4,19 @@ import ClientDate from '@/components/ui/client-date';
 
 export const metadata: Metadata = {
     title: 'Privacy Policy',
-    description: 'Read the privacy policy for Caffeine Calculation Site to understand how we handle your data.',
+    description: 'Read the privacy policy for Caffeine Compass to understand how we handle your data.',
 };
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 md:py-20">
       <div className="prose prose-lg dark:prose-invert max-w-none mx-auto">
         <h1 className="text-4xl font-bold font-headline mb-8">Privacy Policy</h1>
         
         <p><em>Last Updated: <ClientDate /></em></p>
 
         <p>
-          Welcome to Caffeine Calculation Site ("we," "us," or "our"). We are committed to protecting your privacy and handling your data in an open and transparent manner. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website.
+          Welcome to Caffeine Compass ("we," "us," or "our"). We are committed to protecting your privacy and handling your data in an open and transparent manner. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website.
         </p>
 
         <h2>1. Information We Collect</h2>
