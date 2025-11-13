@@ -16,7 +16,7 @@ import { ThemeToggle } from '../theme-toggle';
 import { MobileNav } from './MobileNav';
 import ListItem from './ListItem';
 import { cn } from '@/lib/utils';
-import { BookText, Calculator, Bot } from 'lucide-react';
+import { BookText, Calculator } from 'lucide-react';
 
 const calculatorComponents: { title: string; href: string; description: string }[] = [
   {
@@ -133,13 +133,6 @@ const Header = () => {
                         <Link href="/about" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             About
-                            </NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <Link href="/ai-assistant" legacyBehavior passHref>
-                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-accent/20 hover:bg-accent/30")}>
-                               <Bot className="h-4 w-4 mr-2" /> AI Assistant
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>

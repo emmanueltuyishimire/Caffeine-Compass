@@ -13,7 +13,6 @@ const navLinks = [
   { href: '/calculators', label: 'Calculators' },
   { href: '/articles', label: 'Learn' },
   { href: '/about', label: 'About' },
-  { href: '/ai-assistant', label: 'AI Assistant' },
 ];
 
 export function MobileNav() {
