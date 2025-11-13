@@ -3,26 +3,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarSeparator } from "../ui/sidebar";
-import { Coffee, BookText, Calculator, Home, BookOpen, BarChart2, BrainCircuit, Shield, TrendingDown, Clock, Baby, Moon, Zap } from "lucide-react";
+import { SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "../ui/sidebar";
+import { BookText, Calculator, Home } from "lucide-react";
 import Image from "next/image";
 
 const mainNav = [
     { href: '/', label: 'Home', icon: Home },
+    { href: '/calculators', label: 'Calculators', icon: Calculator },
     { href: '/articles', label: 'Articles', icon: BookText },
-];
-
-const calculatorNav = [
-    { title: "Intake Calculator", href: "/calculators/caffeine-intake", icon: Coffee },
-    { title: "Half-Life Calculator", href: "/calculators/caffeine-half-life", icon: BarChart2 },
-    { title: "Sleep Calculator", href: "/calculators/caffeine-sleep-calculator", icon: Moon },
-    { title: "Sensitivity Test", href: "/calculators/caffeine-sensitivity-test", icon: BrainCircuit },
-    { title: "Timing Optimizer", href: "/calculators/caffeine-timing-optimizer", icon: Clock },
-    { title: "Withdrawal Tracker", href: "/calculators/caffeine-withdrawal-tracker", icon: TrendingDown },
-    { title: "Overdose Risk", href: "/calculators/caffeine-overdose-risk", icon: Shield },
-    { title: "Pregnancy Safe Limit", href: "/calculators/pregnancy-caffeine-safe-limit", icon: Baby },
-    { title: "Drinks Database", href: "/calculators/caffeine-drinks-database", icon: BookOpen },
-    { title: "Drink Comparison", href: "/calculators/caffeine-drink-comparison", icon: Zap },
 ];
 
 export default function SidebarNav() {
@@ -40,28 +28,10 @@ export default function SidebarNav() {
             <SidebarMenu>
                 {mainNav.map((link) => (
                     <SidebarMenuItem key={link.href}>
-                        <SidebarMenuButton asChild isActive={pathname === link.href} icon={<link.icon />} tooltip={link.label}>
-                            <Link href={link.href}>
-                                {link.label}
-                            </Link>
-                        </SidebarMenuButton>
-                    </SidebarMenuItem>
-                ))}
-                <SidebarMenuItem>
-                    <SidebarSeparator />
-                </SidebarMenuItem>
-                 <SidebarMenuItem>
-                    <SidebarMenuButton asChild isActive={pathname === '/calculators'} icon={<Calculator />} tooltip="All Calculators">
-                        <Link href="/calculators">
-                           All Calculators
-                        </Link>
-                    </SidebarMenuButton>
-                </SidebarMenuItem>
-                {calculatorNav.map((item) => (
-                    <SidebarMenuItem key={item.href}>
-                        <SidebarMenuButton asChild isActive={pathname === item.href} icon={<item.icon />} tooltip={item.title}>
-                             <Link href={item.href}>
-                                {item.title}
+                       <SidebarMenuButton asChild>
+                            <Link href={link.href} className={pathname === link.href ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" : ""}>
+                                <link.icon />
+                                <span>{link.label}</span>
                             </Link>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
