@@ -54,11 +54,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} font-body antialiased min-h-screen flex flex-col`}>
         <ClientThemeProvider>
-            <JsonLd data={websiteJsonLd} />
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-            <Toaster />
+          <JsonLd data={websiteJsonLd} />
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <Toaster />
         </ClientThemeProvider>
       </body>
     </html>
