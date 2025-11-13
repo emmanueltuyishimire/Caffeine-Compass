@@ -1,12 +1,17 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart2, Coffee, HeartPulse, BrainCircuit, Shield, BookOpen, Clock, TrendingDown, Baby, Moon, Zap } from 'lucide-react';
+import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2 } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import AppLayout from '@/components/layout/AppLayout';
+import {
+    BookOpen,
+    HeartPulse,
+} from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Caffeine Calculation Site — Optimize Your Caffeine for Better Energy & Sleep',
@@ -78,10 +83,9 @@ export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
 
   return (
-    <>
-      <JsonLd data={homePageJsonLd} />
+    <AppLayout>
       <div className="flex flex-col">
-        <section className="relative text-center rounded-lg overflow-hidden min-h-[500px] flex flex-col justify-center items-center text-white bg-primary"  aria-labelledby="hero-heading">
+        <section className="relative text-center rounded-lg overflow-hidden min-h-[50vh] md:min-h-[500px] flex flex-col justify-center items-center text-white bg-primary"  aria-labelledby="hero-heading">
             {heroImage && (
               <Image
                   src={heroImage.imageUrl}
@@ -90,7 +94,7 @@ export default function Home() {
                   fill
                   className="object-cover object-center z-0"
                   priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="100vw"
                 />
             )}
           <div className="relative z-10 p-4 max-w-4xl mx-auto rounded-xl">
@@ -108,7 +112,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="calculators" className="py-20 bg-background" role="region" aria-labelledby="calculators-heading">
+        <section id="calculators" className="py-12 md:py-20 bg-background" role="region" aria-labelledby="calculators-heading">
           <div className="container mx-auto px-4">
               <div className="text-center mb-12">
                 <h2 id="calculators-heading" className="text-3xl md:text-4xl font-bold font-headline">A Comprehensive Toolkit for Mindful Caffeine Use</h2>
@@ -141,7 +145,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 bg-muted/30" role="region" aria-labelledby="how-it-works-heading">
+        <section className="py-12 md:py-20 bg-muted/30" role="region" aria-labelledby="how-it-works-heading">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold font-headline">How It Works: Your Path to Optimized Energy</h2>
@@ -149,28 +153,23 @@ export default function Home() {
                     In three simple steps, you can transform your relationship with caffeine.
                 </p>
               </div>
-              <div className="grid md:grid-cols-3 gap-12 text-center relative">
-                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-12 hidden md:block" aria-hidden="true"></div>
-                <div className="absolute top-1/2 left-0 w-full flex justify-between -translate-y-12 hidden md:block" aria-hidden="true">
-                    <div className="w-1/3"></div>
-                    <div className="w-1/3"></div>
-                </div>
+              <div className="grid md:grid-cols-3 gap-12 text-center">
                   <div className="relative">
-                      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4 border-4 border-background">
+                      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
                         <span className="text-2xl font-bold" aria-hidden="true">1</span>
                       </div>
                       <h3 className="text-xl font-bold mb-2">Track Your Intake</h3>
                       <p className="text-muted-foreground">Use our <Link href="/calculators/intake" className="text-accent hover:underline">Intake Calculator</Link> to log your drinks and get a precise measure of your daily consumption.</p>
                   </div>
                   <div className="relative">
-                      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4 border-4 border-background">
+                      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
                         <span className="text-2xl font-bold" aria-hidden="true">2</span>
                       </div>
                       <h3 className="text-xl font-bold mb-2">Understand Your Body</h3>
                       <p className="text-muted-foreground">Discover your unique metabolism with the <Link href="/calculators/caffeine-sensitivity-test" className="text-accent hover:underline">Sensitivity Test</Link> and see how long caffeine affects you.</p>
                   </div>
                   <div className="relative">
-                      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4 border-4 border-background">
+                      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
                         <span className="text-2xl font-bold" aria-hidden="true">3</span>
                       </div>
                       <h3 className="text-xl font-bold mb-2">Optimize Your Timing</h3>
@@ -180,10 +179,71 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="py-20" role="region" aria-labelledby="why-us-heading">
+        <section className="py-12 md:py-20" role="region" aria-labelledby="why-us-heading">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div>
+            <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+              <div className="order-last md:order-first">
+                <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold font-headline mb-8">
+                  Why Caffeine Calculation Site?
+                </h2>
+                <div className="space-y-8">
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+                        <BookOpen
+                          className="h-6 w-6 text-primary"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-1">
+                          Science-Backed & Data-Driven
+                        </h3>
+                        <p className="text-muted-foreground">
+                          Our tools are built on peer-reviewed research in
+                          chronobiology, toxicology, and sleep science to provide
+                          you with trustworthy and accurate information.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 bg-accent/10 rounded-full flex-shrink-0">
+                        <HeartPulse
+                          className="h-6 w-6 text-accent"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-1">
+                          Personalized For You
+                        </h3>
+                        <p className="text-muted-foreground">
+                          Caffeine isn't one-size-fits-all. We help you understand
+                          how your personal metabolism, body weight, and timing
+                          influence its effects.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+                        <Shield
+                          className="h-6 w-6 text-primary"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-1">
+                          Empowerment Through Knowledge
+                        </h3>
+                        <p className="text-muted-foreground">
+                          We believe that by understanding how caffeine works, you
+                          can make it a powerful tool for productivity, not a source
+                          of anxiety or poor health.
+                        </p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div className='order-first md:order-last'>
                 {whyUsImage && (
                   <Image
                     src={whyUsImage.imageUrl}
@@ -196,69 +256,10 @@ export default function Home() {
                   />
                 )}
               </div>
-              <div className="space-y-8">
-                <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold font-headline">
-                  Why Caffeine Calculation Site?
-                </h2>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
-                    <BookOpen
-                      className="h-6 w-6 text-primary"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">
-                      Science-Backed & Data-Driven
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Our tools are built on peer-reviewed research in
-                      chronobiology, toxicology, and sleep science to provide
-                      you with trustworthy and accurate information.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent/10 rounded-full flex-shrink-0">
-                    <HeartPulse
-                      className="h-6 w-6 text-accent"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">
-                      Personalized For You
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Caffeine isn't one-size-fits-all. We help you understand
-                      how your personal metabolism, body weight, and timing
-                      influence its effects.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
-                    <Shield
-                      className="h-6 w-6 text-primary"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">
-                      Empowerment Through Knowledge
-                    </h3>
-                    <p className="text-muted-foreground">
-                      We believe that by understanding how caffeine works, you
-                      can make it a powerful tool for productivity, not a source
-                      of anxiety or poor health.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
       </div>
-    </>
+    </AppLayout>
   );
 }
