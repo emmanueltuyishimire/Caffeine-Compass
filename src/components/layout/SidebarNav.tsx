@@ -3,11 +3,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem, SidebarSeparator } from "../ui/sidebar";
-import { Coffee, BookText, Calculator, ChevronDown, Home, BookOpen, BarChart2, BrainCircuit, Shield, TrendingDown, Clock, Baby, Zap, Moon } from "lucide-react";
+import { SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarSeparator } from "../ui/sidebar";
+import { Coffee, BookText, Calculator, Home, BookOpen, BarChart2, BrainCircuit, Shield, TrendingDown, Clock, Baby, Zap, Moon } from "lucide-react";
 import Image from "next/image";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../ui/collapsible";
-import { cn } from "@/lib/utils";
 
 const mainNav = [
     { href: '/', label: 'Home', icon: Home },
@@ -49,26 +47,23 @@ export default function SidebarNav() {
                         </Link>
                     </SidebarMenuItem>
                 ))}
-                 <Collapsible>
-                    <SidebarMenuItem>
-                        <CollapsibleTrigger asChild>
-                            <SidebarMenuButton icon={<Calculator />} rightIcon={<ChevronDown/>} className="w-full">
-                                Calculators
+                <SidebarSeparator />
+                 <SidebarMenuItem>
+                    <Link href="/calculators">
+                        <SidebarMenuButton isActive={pathname === '/calculators'} icon={<Calculator />}>
+                            Calculators
+                        </SidebarMenuButton>
+                    </Link>
+                </SidebarMenuItem>
+                {calculatorNav.map((item) => (
+                    <SidebarMenuItem key={item.href}>
+                         <Link href={item.href}>
+                            <SidebarMenuButton isActive={pathname === item.href} icon={<item.icon />}>
+                                {item.title}
                             </SidebarMenuButton>
-                        </CollapsibleTrigger>
+                        </Link>
                     </SidebarMenuItem>
-                    <CollapsibleContent>
-                        <SidebarMenuSub>
-                            {calculatorNav.map((item) => (
-                                <SidebarMenuSubItem key={item.href}>
-                                    <Link href={item.href} legacyBehavior passHref>
-                                        <SidebarMenuSubButton isActive={pathname === item.href}>{item.title}</SidebarMenuSubButton>
-                                    </Link>
-                                </SidebarMenuSubItem>
-                            ))}
-                        </SidebarMenuSub>
-                    </CollapsibleContent>
-                </Collapsible>
+                ))}
             </SidebarMenu>
         </SidebarContent>
         </>
