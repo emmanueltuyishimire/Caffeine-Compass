@@ -1,21 +1,9 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import dynamic from 'next/dynamic';
-
-const DrinkComparison = dynamic(() => import('@/components/features/DrinkComparison'), {
-  ssr: false,
-  loading: () => <div className="max-w-4xl mx-auto h-[480px] bg-muted rounded-lg animate-pulse" />,
-});
+import DrinkComparisonLoader from '@/components/features/loaders/DrinkComparisonLoader';
 
 
 export const metadata: Metadata = {
@@ -63,7 +51,7 @@ export default function DrinkComparisonPage() {
           </p>
         </header>
 
-        <DrinkComparison />
+        <DrinkComparisonLoader />
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
           <section id="introduction" aria-labelledby="introduction-heading">
@@ -82,123 +70,19 @@ export default function DrinkComparisonPage() {
           </section>
 
           <Separator />
-
-          <section id="how-it-works" aria-labelledby="how-it-works-heading">
-              <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Tool Works: Interactive Visualization</h2>
-              <p>
-                  This tool leverages a comprehensive database of beverages, from generic brewed coffee to specific branded energy drinks. It allows you to select multiple drinks and instantly plots them on a bar chart, giving you an immediate visual sense of their relative caffeine content.
-              </p>
-
-              <h3 className="text-2xl font-semibold">Using the Comparison Tool</h3>
-              <p>
-                  The process is simple:
-              </p>
-              <ul>
-                  <li><strong>Search and Select:</strong> Use the multi-select dropdown to search for and choose the beverages you want to compare. You can add as many as you like.</li>
-                  <li><strong>Analyze the Chart:</strong> As you add drinks, a dynamic bar chart is generated. Each bar represents a drink, with its height corresponding to the total caffeine in milligrams (mg) for a standard serving size.</li>
-                  <li><strong>Hover for Details:</strong> Hover over any bar in the chart to see the exact caffeine amount and serving size for that specific drink.</li>
-              </ul>
-              <p>
-                  This interactive approach allows you to create custom comparisons on the fly. You can build an <strong>energy drink caffeine chart</strong>, compare different types of tea, or see how various coffee brewing methods affect the final caffeine content.
-              </p>
-
-          </section>
-
-          <Separator />
-          
-          <section id="terminologies" aria-labelledby="terminologies-heading">
-              <h2 id="terminologies-heading" className="text-3xl font-bold">Key Terminologies & Concepts</h2>
-              <ul className="space-y-4">
-                  <li>
-                      <h3 className="text-xl font-semibold">Milligram (mg)</h3>
-                      <p>The standard unit of measurement for caffeine. This tool displays all caffeine amounts in mg for easy comparison.</p>
-                  </li>
-                  <li>
-                      <h3 className="text-xl font-semibold">Serving Size (ml)</h3>
-                      <p>The standard volume for a given drink, measured in milliliters. It's important to note that caffeine content is tied to serving size; a larger drink will have more caffeine, even if the concentration is the same.</p>
-                  </li>
-                  <li>
-                      <h3 className="text-xl font-semibold">Caffeine Concentration</h3>
-                      <p>The amount of caffeine per unit of volume (e.g., mg per 100ml). Some drinks, like espresso, have high concentration but are served in small volumes, while others, like cold brew, have high concentration and are served in large volumes.</p>
-                  </li>
-                  <li>
-                      <h3 className="text-xl font-semibold">Brewed Coffee</h3>
-                      <p>Coffee made by pouring hot water over ground coffee beans. This is the most common type of coffee and serves as a good baseline for comparison.</p>
-                  </li>
-                  <li>
-                      <h3 className="text-xl font-semibold">Energy Drink</h3>
-                      <p>A type of beverage containing stimulant compounds, usually caffeine, which is marketed as providing mental and physical stimulation. The caffeine content can vary dramatically between brands.</p>
-                  </li>
-              </ul>
-          </section>
-
-          <Separator />
-
-          <section id="faq" aria-labelledby="faq-heading">
-            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Which has more caffeine, coffee or tea?</AccordionTrigger>
-                <AccordionContent>
-                  On a per-serving basis, coffee almost always has more caffeine. A standard 240ml (8 oz) cup of brewed coffee contains about 95 mg of caffeine, while the same amount of black tea has about 47 mg. Use the tool to compare them side-by-side!
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>What is the strongest energy drink?</AccordionTrigger>
-                <AccordionContent>
-                  Energy drinks with 300 mg of caffeine per can are among the strongest widely available. Brands like Bang, Reign, and certain VPX products fall into this category. Be aware that this is very close to the 400 mg recommended daily limit in a single serving.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>Does espresso have more caffeine than coffee?</AccordionTrigger>
-                <AccordionContent>
-                  This is a common point of confusion. Espresso has more caffeine per ounce (higher concentration), but it's served in a much smaller volume (a 1 oz shot has ~64 mg). A standard 8 oz cup of brewed coffee has ~95 mg. So, a cup of coffee has more total caffeine than a single shot of espresso.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-4">
-                <AccordionTrigger>Why does caffeine content vary so much between coffee shops?</AccordionTrigger>
-                <AccordionContent>
-                  Caffeine content is affected by the type of coffee bean (Robusta has more caffeine than Arabica), the roast level (lighter roasts have slightly more caffeine by weight), the brewing method, and the serving size. This is why we include branded options like Starbucks and Dunkin' in our database.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-5">
-                <AccordionTrigger>Is the caffeine in energy drinks different from coffee?</AccordionTrigger>
-                <AccordionContent>
-                  No, the caffeine molecule is chemically identical whether it's naturally occurring in a coffee bean or synthetically produced for an energy drink. Your body metabolizes it in the same way. However, the other ingredients in the drinks (like sugar, taurine, etc.) can affect your overall experience.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </section>
-
-          <Separator />
           
           <section id="related-tools" aria-labelledby="related-tools-heading">
               <h2 id="related-tools-heading" className="text-3xl font-bold">Next Steps: Put Your Knowledge to Use</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <Card>
-                      <CardHeader>
-                          <CardTitle><Link href="/calculators/intake" className="hover:underline">Intake Calculator</Link></CardTitle>
-                      </CardHeader>
-                      <CardContent>
+                      <Link href="/calculators/intake" className="block group">
                           <p>Now that you know the potency of your favorite drink, use the Intake Calculator to track your total daily consumption.</p>
-                      </CardContent>
-                  </Card>
-                  <Card>
-                      <CardHeader>
-                          <CardTitle><Link href="/calculators/half-life" className="hover:underline">Half-Life Calculator</Link></CardTitle>
-                      </CardHeader>
-                      <CardContent>
+                      </Link>
+                      <Link href="/calculators/half-life" className="block group">
                           <p>Visualize how quickly (or slowly) your body will process the caffeine from the drinks you've compared.</p>
-                      </CardContent>
-                  </Card>
-                  <Card>
-                      <CardHeader>
-                          <CardTitle><Link href="/calculators/caffeine-sensitivity-test" className="hover:underline">Caffeine Sensitivity Test</Link></CardTitle>
-                      </CardHeader>
-                      <CardContent>
+                      </Link>
+                      <Link href="/calculators/caffeine-sensitivity-test" className="block group">
                           <p>Discover if you're a fast or slow metabolizer to understand how these drinks affect you personally.</p>
-                      </CardContent>
-                  </Card>
+                      </Link>
               </div>
           </section>
         </div>

@@ -1,13 +1,7 @@
 
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import dynamic from 'next/dynamic';
-
-const CaffeineTimingOptimizer = dynamic(() => import('@/components/features/CaffeineTimingOptimizer'), {
-  ssr: false,
-  loading: () => <div className="max-w-2xl mx-auto h-96 bg-muted rounded-lg animate-pulse" />,
-});
-
+import CaffeineTimingOptimizer from '@/components/features/CaffeineTimingOptimizer';
 
 export const metadata: Metadata = {
   title: 'Caffeine Timing Optimizer — When to Drink Coffee for Energy & Focus',

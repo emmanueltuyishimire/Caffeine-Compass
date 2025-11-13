@@ -1,21 +1,10 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import dynamic from 'next/dynamic';
-
-const DrinksDatabase = dynamic(() => import('@/components/features/DrinksDatabase'), {
-  ssr: false,
-  loading: () => <div className="max-w-4xl mx-auto h-[600px] bg-muted rounded-lg animate-pulse" />,
-});
+import DrinksDatabase from '@/components/features/DrinksDatabase';
 
 
 export const metadata: Metadata = {
@@ -79,80 +68,6 @@ export default function DrinksDatabasePage() {
             <p>
               Accurate knowledge of your intake is the foundation of caffeine management. Whether you're tracking your daily total with our <Link href="/calculators/intake">Intake Calculator</Link> or trying to protect your sleep, it all starts with knowing the potency of what you're drinking. This database is your definitive resource for that crucial first step.
             </p>
-          </section>
-
-          <Separator />
-
-          <section id="how-it-works" aria-labelledby="how-it-works-heading">
-              <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Database Works: Simple Search, Powerful Data</h2>
-              <p>
-                  Our database is a curated collection of caffeine information from official brand websites, nutritional data providers, and independent lab tests. We've organized it into a simple, searchable interface.
-              </p>
-
-              <h3 className="text-2xl font-semibold">Using the Database</h3>
-              <p>
-                  The process couldn't be easier:
-              </p>
-              <ul>
-                  <li><b>Search:</b> Start typing the name of any drink, brand, or category into the search bar. The list will filter in real-time. For example, typing "Starbucks cold brew" will instantly show you the results.</li>
-                  <li><b>Filter:</b> You can use the category buttons (Coffee, Tea, Soda, Energy Drinks) to narrow down your search and explore different types of beverages.</li>
-                  <li><b>View Results:</b> The list displays each drink's name, category, caffeine content (in mg), and standard serving size (in ml), giving you all the key information at a glance.</li>
-              </ul>
-              <p>
-                  This tool is designed for speed and accuracy, so you can look up a drink while you're standing in line at the coffee shop and make a smarter choice on the spot.
-              </p>
-          </section>
-
-          <Separator />
-          
-          <section id="terminologies" aria-labelledby="terminologies-heading">
-              <h2 id="terminologies-heading" className="text-3xl font-bold">Key Terminologies & Concepts</h2>
-              <ul className="space-y-4">
-                  <li>
-                      <h3 className="text-xl font-semibold">Milligram (mg)</h3>
-                      <p>The standard unit of measurement for caffeine. This database displays all caffeine amounts in mg for easy comparison and tracking.</p>
-                  </li>
-                  <li>
-                      <h3 className="text-xl font-semibold">Serving Size (ml)</h3>
-                      <p>The standard volume for a given drink, measured in milliliters. It's crucial to consider serving size, as a larger drink will have more total caffeine even if the concentration is lower than a smaller drink.</p>
-                  </li>
-                  <li>
-                      <h3 className="text-xl font-semibold">Caffeine Concentration</h3>
-                      <p>The amount of caffeine per unit of volume (e.g., mg per 100ml). Some drinks, like espresso, have a high concentration but are served in small volumes, while others, like cold brew, have both high concentration and large serving sizes.</p>
-                  </li>
-              </ul>
-          </section>
-
-          <Separator />
-
-          <section id="faq" aria-labelledby="faq-heading">
-            <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Where does this caffeine data come from?</AccordionTrigger>
-                <AccordionContent>
-                  Our data is compiled from multiple sources, including the official websites of beverage brands, USDA nutritional databases, and publicly available lab test results. We strive to provide the most accurate and up-to-date information possible.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>Why is there such a big range of caffeine in coffee?</AccordionTrigger>
-                <AccordionContent>
-                  The caffeine in coffee is affected by many factors: the type of bean (Robusta has more caffeine than Arabica), the roast level (lighter roasts have slightly more caffeine by weight), the brewing method (drip, pour-over, cold brew), and the serving size. That's why searching for a specific branded coffee is always more accurate.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>How much caffeine is in decaf coffee?</AccordionTrigger>
-                <AccordionContent>
-                  Decaffeinated coffee is not caffeine-free. The decaffeination process removes about 97% of the caffeine. A standard cup of decaf coffee typically contains 2-7 mg of caffeine.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-4">
-                <AccordionTrigger>What's the strongest drink in the database?</AccordionTrigger>
-                <AccordionContent>
-                  Some of the strongest drinks are high-potency energy drinks and certain brands of cold brew concentrate. Drinks with 300 mg or more of a single serving are considered very high and approach the FDA's recommended daily limit of 400 mg.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
           </section>
 
           <Separator />
