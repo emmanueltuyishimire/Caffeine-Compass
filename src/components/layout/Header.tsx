@@ -29,7 +29,7 @@ const Header = () => {
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2" aria-label="Caffeine Calculation Site Homepage">
             <Image src="/logo.png" alt="Caffeine Calculation Site Logo" width={32} height={32} />
-            <span className="hidden sm:inline-block text-xl font-bold font-headline">Caffeine Calculation Site</span>
+            <span className="hidden sm:inline-block text-xl font-bold font-headline">Caffeine Compass</span>
           </Link>
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
