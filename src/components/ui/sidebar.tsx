@@ -530,7 +530,6 @@ const SidebarMenuButton = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<"button"> & {
     asChild?: boolean,
-    as?: React.ElementType,
     isActive?: boolean
     tooltip?: string | React.ComponentProps<typeof TooltipContent>
     icon?: React.ReactNode,
@@ -539,7 +538,6 @@ const SidebarMenuButton = React.forwardRef<
 >(
   (
     {
-      as,
       asChild = false,
       isActive = false,
       variant = "default",
@@ -557,11 +555,11 @@ const SidebarMenuButton = React.forwardRef<
     const { isMobile, state } = useSidebar()
 
     const buttonContent = (
-        <>
+        <span className="flex w-full items-center gap-2 overflow-hidden">
             {icon}
             <span className="flex-grow text-left">{children}</span>
             {rightIcon}
-        </>
+        </span>
     );
 
     const button = (
@@ -573,7 +571,7 @@ const SidebarMenuButton = React.forwardRef<
         className={cn('min-h-11 min-w-11', sidebarMenuButtonVariants({ variant, size }), className)}
         {...props}
       >
-        {buttonContent}
+        {children}
       </Comp>
     );
 
@@ -786,3 +784,5 @@ export {
   SidebarTrigger,
   useSidebar,
 }
+
+    
