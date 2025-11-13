@@ -6,7 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/JsonLd';
-import { ThemeProvider } from '@/components/theme-provider';
+import ClientThemeProvider from '@/components/client-theme-provider';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     'Empowering people to understand, calculate, and optimize their caffeine habits for better focus, health, and sleep.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo.png',
   },
   manifest: '/manifest.json',
 };
@@ -53,18 +53,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} font-body antialiased min-h-screen flex flex-col`}>
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-        >
+        <ClientThemeProvider>
             <JsonLd data={websiteJsonLd} />
             <Header />
             <main className="flex-grow">{children}</main>
             <Footer />
             <Toaster />
-        </ThemeProvider>
+        </ClientThemeProvider>
       </body>
     </html>
   );

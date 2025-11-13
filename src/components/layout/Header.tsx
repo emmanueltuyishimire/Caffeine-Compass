@@ -73,9 +73,11 @@ const Header = () => {
             <NavigationMenu className="hidden md:flex">
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                            <Link href="/">Home</Link>
-                        </NavigationMenuLink>
+                        <Link href="/" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            Home
+                            </NavigationMenuLink>
+                        </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuTrigger>
@@ -128,16 +130,18 @@ const Header = () => {
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                      <NavigationMenuItem>
-                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                            <Link href="/about">About</Link>
-                        </NavigationMenuLink>
+                        <Link href="/about" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            About
+                            </NavigationMenuLink>
+                        </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                         <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-accent/20 hover:bg-accent/30")}>
-                            <Link href="/ai-assistant">
+                        <Link href="/ai-assistant" legacyBehavior passHref>
+                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-accent/20 hover:bg-accent/30")}>
                                <Bot className="h-4 w-4 mr-2" /> AI Assistant
-                            </Link>
-                        </NavigationMenuLink>
+                            </NavigationMenuLink>
+                        </Link>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
