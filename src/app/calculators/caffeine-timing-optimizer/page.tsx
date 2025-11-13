@@ -1,7 +1,11 @@
 
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import CaffeineTimingOptimizer from '@/components/features/CaffeineTimingOptimizer';
+import CaffeineTimingOptimizerLoader from '@/components/features/loaders/CaffeineTimingOptimizerLoader';
+import { Separator } from '@/components/ui/separator';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { AlertTriangle, Clock, Moon } from 'lucide-react';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Caffeine Timing Optimizer — When to Drink Coffee for Energy & Focus',
@@ -50,19 +54,50 @@ export default function CaffeineTimingOptimizerPage() {
             Find the scientifically-backed optimal time to consume caffeine to boost your productivity and focus for any task.
           </p>
         </header>
-
-        <CaffeineTimingOptimizer />
-
-        <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-            <section aria-labelledby="science-heading">
-                <h2 id="science-heading" className="text-3xl font-bold">The Science of Perfect Timing</h2>
-                <p>
-                    Caffeine is a powerful tool for enhancing cognitive performance, but its effectiveness is all about timing. Consuming it too early can lead to a crash before your most important tasks, while consuming it too late can sabotage your sleep. This calculator helps you answer the crucial question: <strong>"When should I drink coffee for energy?"</strong> by using established scientific principles of caffeine metabolism.
-                </p>
-                <p>
-                    The peak effect of caffeine typically occurs about 30 to 60 minutes after consumption. Our calculator works backward from your planned productivity window, suggesting a consumption time that ensures caffeine concentration in your bloodstream is highest when you need to be at your sharpest. This strategic approach helps you harness caffeine's benefits for focus and alertness precisely when it matters most.
-                </p>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="lg:col-span-2">
+            <div className="sticky top-20">
+              <CaffeineTimingOptimizerLoader />
+            </div>
+          </div>
+           <div className="lg:col-span-1 prose prose-lg dark:prose-invert max-w-none space-y-12">
+            <section id="how-it-works" aria-labelledby="how-it-works-heading">
+                <h2 id="how-it-works-heading" className="text-3xl font-bold">How It Works</h2>
+                <p>This calculator helps you pinpoint the perfect time to drink caffeine by working backward from your most important tasks while respecting your sleep schedule.</p>
+                <ol>
+                    <li><strong>Enter Task Time:</strong> Input the time your crucial focus period begins (e.g., a big meeting, study session).</li>
+                    <li><strong>Enter Bedtime:</strong> Provide your usual bedtime so the calculator can protect your sleep.</li>
+                    <li><strong>Select Sensitivity:</strong> Choose your caffeine sensitivity (or use our <Link href="/calculators/caffeine-sensitivity-test">Sensitivity Test</Link> to find out). This determines your "sleep cutoff" time—the point after which caffeine is likely to disrupt sleep.</li>
+                    <li><strong>Get Your Optimal Time:</strong> The tool calculates the ideal consumption time, which is <strong>45 minutes before your task starts</strong>, ensuring caffeine levels are at their peak when you need them most.</li>
+                    <li><strong>Review Sleep Warning:</strong> If the optimal time falls after your sleep cutoff, the calculator will warn you, suggesting a smaller dose or a caffeine-free alternative to avoid compromising your rest.</li>
+                </ol>
             </section>
+            
+            <Separator />
+
+            <section id="expert-insights" aria-labelledby="expert-insights-heading">
+                <h2 id="expert-insights-heading" className="text-3xl font-bold">Expert Insights</h2>
+                <div className="space-y-4">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2"><Clock aria-hidden="true"/> The 45-Minute Rule</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p>Caffeine is fully absorbed into the bloodstream within about 45 minutes. By timing your intake 45 minutes before a task, you align peak caffeine concentration with your period of peak demand.</p>
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2"><Moon aria-hidden="true"/> Sleep is Non-Negotiable</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p>Productivity gained from late-night caffeine is often lost to poor sleep. If a task requires late-night focus, consider a smaller dose (e.g., green tea) or non-caffeinated strategies like bright light and short breaks.</p>
+                        </CardContent>
+                    </Card>
+                </div>
+            </section>
+          </div>
         </div>
       </div>
     </>

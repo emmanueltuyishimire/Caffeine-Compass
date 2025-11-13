@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
-import PregnancySafeLimitCalculator from '@/components/features/PregnancySafeLimitCalculator';
+import PregnancySafeLimitCalculatorLoader from '@/components/features/loaders/PregnancySafeLimitCalculatorLoader';
 
 
 export const metadata: Metadata = {
@@ -51,55 +51,49 @@ export default function PregnancySafeLimitPage() {
           </p>
         </header>
 
-        <PregnancySafeLimitCalculator />
-        
-        <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-          <section id="introduction" aria-labelledby="introduction-heading">
-              <h2 id="introduction-heading" className="text-3xl font-bold">
-                  Navigating Caffeine with Confidence During Pregnancy
-              </h2>
-              <p>
-                  Pregnancy is a time of joy, anticipation, and countless questions—especially when it comes to diet. One of the most common concerns for expectant mothers is caffeine. "Can I still have my morning coffee?" "How much is too much?" The anxiety around these questions is valid. This <strong>Pregnancy Caffeine Calculator</strong> is designed to replace that uncertainty with clarity and confidence. It’s a simple, science-backed tool to help you track your daily intake and ensure it stays within the safe limits recommended by leading health organizations.
-              </p>
-              <p>
-                  The primary problem this tool solves is the difficulty of tracking caffeine consumption from various sources. Most people are surprised to learn how quickly caffeine can add up from coffee, tea, soda, chocolate, and even some medications. For pregnant women, this tracking is particularly crucial. Major health bodies, including the American College of Obstetricians and Gynecologists (ACOG), recommend limiting caffeine intake to <strong>less than 200 milligrams (mg) per day</strong> during pregnancy. This is because caffeine can cross the placenta, and a developing baby's metabolism is not yet mature enough to process it effectively.
-              </p>
-              <p>
-                  This calculator provides a clear, visual way to log your drinks and see your total consumption in real-time. It helps you make mindful choices throughout the day, so you can enjoy a comforting cup of tea or a small coffee without the stress of wondering if you've had too much. It’s not about eliminating caffeine entirely, but about managing it wisely for the health of both you and your baby. For a broader view of your habits, you can also use our main <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> when not pregnant.
-              </p>
-          </section>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-2">
+                <div className="sticky top-20">
+                    <PregnancySafeLimitCalculatorLoader />
+                </div>
+            </div>
 
-          <Separator />
-          
-          <section id="related-tools" aria-labelledby="related-tools-heading">
-              <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <Card>
-                      <CardHeader>
-                          <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Daily Intake Calculator</Link></CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                          <p>Our main calculator for tracking caffeine against the standard 400mg limit for non-pregnant adults.</p>
-                      </CardContent>
-                  </Card>
-                  <Card>
-                      <CardHeader>
-                          <CardTitle><Link href="/calculators/caffeine-drinks-database" className="hover:underline">Caffeine in Drinks Database</Link></CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                          <p>Search our extensive database to find the caffeine content of your favorite beverages.</p>
-                      </CardContent>
-                  </Card>
-                  <Card>
-                      <CardHeader>
-                          <CardTitle><Link href="/calculators/caffeine-withdrawal-tracker" className="hover:underline">Withdrawal Tracker</Link></CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                          <p>If you're looking to reduce your intake, this tool helps you create a tapering plan to minimize headaches.</p>
-                      </CardContent>
-                  </Card>
-              </div>
-          </section>
+            <div className="lg:col-span-1 prose prose-lg dark:prose-invert max-w-none space-y-12">
+                 <section id="how-it-works" aria-labelledby="how-it-works-heading">
+                    <h2 id="how-it-works-heading" className="text-3xl font-bold">How It Works</h2>
+                    <p>This tool helps you monitor your daily caffeine intake against the 200mg recommended limit for pregnancy.</p>
+                    <ol>
+                        <li><strong>Log Your Drinks:</strong> Use the search bar to find and add any caffeinated items you consume, including coffee, tea, soda, or chocolate.</li>
+                        <li><strong>Add Custom Items:</strong> If an item isn't in our database, you can add it manually with its name and caffeine content.</li>
+                        <li><strong>Adjust Quantity:</strong> Specify the number of servings for each item.</li>
+                        <li><strong>Monitor the Limit:</strong> The calculator sums your total intake and displays it on a progress bar. The bar and status message will clearly indicate if you are within or over the 200mg daily guideline recommended by ACOG and other health organizations.</li>
+                    </ol>
+                </section>
+
+                <Separator />
+                
+                <section id="introduction" aria-labelledby="introduction-heading">
+                    <h2 id="introduction-heading" className="text-3xl font-bold">
+                        Navigating Caffeine with Confidence
+                    </h2>
+                    <p>
+                        For pregnant women, tracking caffeine is crucial. Major health bodies recommend limiting intake to <strong>less than 200 milligrams (mg) per day</strong>. This is because caffeine crosses the placenta, and a developing baby cannot process it effectively.
+                    </p>
+                    <p>
+                        This calculator provides a clear, visual way to log your drinks and see your total consumption in real-time. It helps you make mindful choices so you can enjoy a comforting cup of tea or a small coffee without stress.
+                    </p>
+                </section>
+
+                <Separator />
+                
+                <section id="related-tools" aria-labelledby="related-tools-heading">
+                    <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools</h2>
+                    <div className="space-y-4">
+                        <p><Link href="/calculators/caffeine-drinks-database">Caffeine in Drinks Database</Link> - Search our extensive database to find the caffeine content of your favorite beverages.</p>
+                        <p><Link href="/calculators/caffeine-withdrawal-tracker">Withdrawal Tracker</Link> - If you're looking to reduce your intake, this tool helps you create a tapering plan.</p>
+                    </div>
+                </section>
+            </div>
         </div>
       </div>
     </>

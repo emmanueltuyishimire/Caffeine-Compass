@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
 import DrinkComparisonLoader from '@/components/features/loaders/DrinkComparisonLoader';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 
 export const metadata: Metadata = {
@@ -51,40 +52,57 @@ export default function DrinkComparisonPage() {
           </p>
         </header>
 
-        <DrinkComparisonLoader />
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="lg:col-span-2">
+             <div className="sticky top-20">
+                <DrinkComparisonLoader />
+             </div>
+          </div>
 
-        <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-          <section id="introduction" aria-labelledby="introduction-heading">
-            <h2 id="introduction-heading" className="text-3xl font-bold">
-              Uncovering the Buzz: A Visual Guide to Caffeine in Your Favorite Drinks
-            </h2>
-            <p>
-              "How much caffeine is in this?" It's a question every coffee lover, tea enthusiast, and energy drink consumer has asked. The answer is often surprising. A grande coffee from Starbucks doesn't have the same kick as a medium from Dunkin'. A can of Red Bull is worlds apart from a can of Bang. This <strong>Caffeine Drink Comparison Tool</strong> is designed to eliminate the guesswork, providing a clear, visual, and interactive <strong>energy drink caffeine chart</strong> and beverage comparison tool.
-            </p>
-            <p>
-              The problem this tool solves is the lack of a simple, direct comparison. You can look up individual drink stats, but it’s hard to grasp the scale of difference. Is a cold brew really that much stronger than an espresso? How does <strong>caffeine in coffee vs. tea</strong> actually stack up? This tool places that information side-by-side, allowing you to build your own comparison chart from our extensive database. It transforms abstract numbers into a tangible understanding of what you're consuming.
-            </p>
-            <p>
-              Whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity, this comparison tool is your best friend. It’s an essential first step before using our other calculators, like the <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>, as it gives you the foundational knowledge of your drink's potency.
-            </p>
-          </section>
+          <div className="lg:col-span-1 prose prose-lg dark:prose-invert max-w-none space-y-12">
+             <section id="how-it-works" aria-labelledby="how-it-works-heading">
+              <h2 id="how-it-works-heading" className="text-3xl font-bold">How It Works</h2>
+              <p>
+                This tool provides a simple, visual way to understand the relative caffeine strength of different drinks.
+              </p>
+              <ol>
+                <li><strong>Select Drinks:</strong> Use the dropdown menu to search for and select the beverages you want to compare. You can add as many as you like from our database of over 1,000 drinks.</li>
+                <li><strong>Visualize Data:</strong> The tool instantly generates a horizontal bar chart, automatically sorting the drinks from most to least caffeinated. This allows you to see at a glance which drinks are most potent.</li>
+                <li><strong>Interpret the Results:</strong> The length of each bar corresponds to the milligrams (mg) of caffeine in a standard serving size. This direct comparison can help you make more informed choices, whether you're looking for a bigger boost or trying to cut back.</li>
+              </ol>
+            </section>
+            
+            <Separator />
+            
+            <section id="introduction" aria-labelledby="introduction-heading">
+                <h2 id="introduction-heading" className="text-3xl font-bold">
+                Uncovering the Buzz
+                </h2>
+                <p>
+                The problem this tool solves is the lack of a simple, direct comparison. You can look up individual drink stats, but it’s hard to grasp the scale of difference. Is a cold brew really that much stronger than an espresso? How does <strong>caffeine in coffee vs. tea</strong> actually stack up? This tool places that information side-by-side, allowing you to build your own comparison chart.
+                </p>
+                <p>
+                Whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity, this comparison tool is your best friend.
+                </p>
+            </section>
 
-          <Separator />
-          
-          <section id="related-tools" aria-labelledby="related-tools-heading">
-              <h2 id="related-tools-heading" className="text-3xl font-bold">Next Steps: Put Your Knowledge to Use</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      <Link href="/calculators/caffeine-intake" className="block group">
-                          <p>Now that you know the potency of your favorite drink, use the Intake Calculator to track your total daily consumption.</p>
-                      </Link>
-                      <Link href="/calculators/caffeine-half-life" className="block group">
-                          <p>Visualize how quickly (or slowly) your body will process the caffeine from the drinks you've compared.</p>
-                      </Link>
-                      <Link href="/calculators/caffeine-sensitivity-test" className="block group">
-                          <p>Discover if you're a fast or slow metabolizer to understand how these drinks affect you personally.</p>
-                      </Link>
-              </div>
-          </section>
+            <Separator />
+            
+            <section id="related-tools" aria-labelledby="related-tools-heading">
+                <h2 id="related-tools-heading" className="text-3xl font-bold">Next Steps</h2>
+                <div className="space-y-4">
+                        <Link href="/calculators/caffeine-intake" className="block group">
+                            <p>Now that you know the potency of your favorite drink, use the <strong>Intake Calculator</strong> to track your total daily consumption.</p>
+                        </Link>
+                        <Link href="/calculators/caffeine-half-life" className="block group">
+                            <p>Visualize how quickly (or slowly) your body will process the caffeine from the drinks you've compared with the <strong>Half-Life Calculator</strong>.</p>
+                        </Link>
+                        <Link href="/calculators/caffeine-sensitivity-test" className="block group">
+                            <p>Discover if you're a fast or slow metabolizer to understand how these drinks affect you personally with the <strong>Sensitivity Test</strong>.</p>
+                        </Link>
+                </div>
+            </section>
+          </div>
         </div>
       </div>
     </>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { BrainCircuit, Moon, ZapOff } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
-import HalfLifeEstimator from '@/components/features/HalfLifeEstimator';
+import HalfLifeEstimatorLoader from '@/components/features/loaders/HalfLifeEstimatorLoader';
 
 
 export const metadata: Metadata = {
@@ -46,92 +46,74 @@ export default function HalfLifeCalculatorPage() {
       <div className="container mx-auto px-4 py-12">
         <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Caffeine Half-Life Calculator — How Long Does Caffeine Stay in Your System?
+            Caffeine Half-Life Calculator
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Visualize how caffeine decays in your body over time. Use this tool to optimize your intake for peak performance and protect your sleep quality.
+            Visualize how caffeine decays in your body. Use this tool to optimize your intake for peak performance and protect your sleep quality.
           </p>
         </header>
 
-        <HalfLifeEstimator />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-2">
+                <div className="sticky top-20">
+                    <HalfLifeEstimatorLoader />
+                </div>
+            </div>
+            <div className="lg:col-span-1 prose prose-lg dark:prose-invert max-w-none space-y-12">
+                <section id="how-it-works" aria-labelledby="how-it-works-heading">
+                    <h2 id="how-it-works-heading" className="text-3xl font-bold">How It Works</h2>
+                    <p>This calculator models how caffeine is eliminated from your body over a 12-hour period. It's based on the pharmacological concept of "half-life."</p>
+                    <ol>
+                        <li><strong>Enter Dose:</strong> Input the amount of caffeine you consumed in milligrams (mg). If you don't know the exact amount, find it in our <Link href="/calculators/caffeine-drinks-database">Drinks Database</Link>.</li>
+                        <li><strong>Enter Half-Life:</strong> Input your estimated caffeine half-life in hours. The average for a healthy adult is 5 hours. If you're sensitive to caffeine, you might be a "slow metabolizer" (e.g., 6-8 hours). If you have high tolerance, you could be a "fast metabolizer" (e.g., 3-4 hours). Our <Link href="/calculators/caffeine-sensitivity-test">Sensitivity Test</Link> can help you estimate this.</li>
+                        <li><strong>Analyze the Chart:</strong> The calculator generates a bar chart showing the estimated amount of caffeine remaining in your system for each hour after consumption. This visual decay curve helps you understand the long-lasting impact of caffeine.</li>
+                        <li><strong>Check Your Bedtime:</strong> Use the chart to see how much caffeine will still be active when you go to sleep. For best results, this number should be as low as possible (ideally under 20-30mg).</li>
+                    </ol>
+                </section>
 
-        <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
-          <section id="introduction" aria-labelledby="introduction-heading">
-            <h2 id="introduction-heading" className="text-3xl font-bold">
-              The Invisible Clock: Decoding Your Body's Response to Caffeine
-            </h2>
-            <p>
-              You drink a coffee at 3 PM for a much-needed boost, but find yourself staring at the ceiling at 11 PM. Sound familiar? The culprit is often a simple misunderstanding of caffeine's lingering presence in your body. This Caffeine Half-Life Calculator is designed to demystify that process, giving you a clear, visual representation of how long caffeine really sticks around. It answers a crucial question: <strong>"How long will that coffee affect me?"</strong>
-            </p>
-            <p>
-              Most people underestimate how long caffeine remains active in their bloodstream, leading to restless nights, mid-day crashes, or unexplained anxiety. The concept of "half-life" is the key to understanding this. It’s the time it takes for your body to eliminate half of the caffeine you consumed. While the average half-life is around 5 hours, this can vary dramatically based on your genetics, age, body weight, and even medications you take. This calculator puts that scientific principle into your hands, transforming abstract numbers into a personalized timeline of your body's caffeine clearance.
-            </p>
-            <p>
-              Understanding your personal caffeine decay curve is a superpower. It allows you to strategically time your intake for maximum focus when you need it, and ensure it has faded by the time you want to rest. Whether you're trying to avoid disrupting your sleep, manage your tolerance, or simply gain more control over your energy levels, this tool is your first step. By visualizing the process, you can make smarter decisions that align with your health goals. To get a complete picture, you can also use our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> to track your total dose.
-            </p>
-          </section>
+                <Separator />
 
-          <Separator />
-          
-          <section id="expert-insights" aria-labelledby="expert-insights-heading">
-              <h2 id="expert-insights-heading" className="text-3xl font-bold">Quick Hacks & Expert Insights for Mastering Caffeine Timing</h2>
-              <Card className="mb-4">
-                  <CardHeader>
-                      <CardTitle className="flex items-center gap-2"><BrainCircuit aria-hidden="true"/> Know Your "Quarter-Life"</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                      <p>While half-life is the time to 50% reduction, the "quarter-life" (time to 25% remaining) is often more relevant for sleep. If your half-life is 5 hours, your quarter-life is 10 hours. This means a 200 mg coffee at noon will still leave you with 50 mg of caffeine at 10 PM — enough to disrupt deep sleep for many people.</p>
-                  </CardContent>
-              </Card>
-              <Card className="mb-4">
-                  <CardHeader>
-                      <CardTitle className="flex items-center gap-2"><Moon aria-hidden="true"/> Your Last Coffee Should Be 10 Hours Before Bed</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                      <p>For most people, a good rule of thumb is to set your caffeine curfew for 10 hours before your target bedtime. This is based on two average half-lives (5 hours x 2), which is enough time to clear 75% of the caffeine from your system. Use the calculator to confirm this for your specific metabolism.</p>
-                  </CardContent>
-              </Card>
-              <Card>
-                  <CardHeader>
-                      <CardTitle className="flex items-center gap-2"><ZapOff aria-hidden="true"/> Use Decaf to Your Advantage</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                      <p>Craving the taste or ritual of coffee in the afternoon? Switch to decaf. A cup of decaf has only 2-7 mg of caffeine, a negligible amount that won't show up on the decay curve in any meaningful way. It's a great way to satisfy the habit without sacrificing your sleep.</p>
-                  </CardContent>
-              </Card>
-          </section>
-          
-          <Separator />
-          
-          <section id="related-tools" aria-labelledby="related-tools-heading">
-              <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <Card>
-                      <CardHeader>
-                          <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Caffeine Intake Calculator</Link></CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                          <p>First, find out how much caffeine you're consuming. Track your daily drinks to get a total dose.</p>
-                      </CardContent>
-                  </Card>
-                  <Card>
-                      <CardHeader>
-                          <CardTitle><Link href="/calculators/caffeine-drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                          <p>Compare the caffeine content of your favorite beverages side-by-side.</p>
-                      </CardContent>
-                  </Card>
-                  <Card>
-                      <CardHeader>
-                          <CardTitle><Link href="/calculators/caffeine-sensitivity-test" className="hover:underline">Caffeine Sensitivity Test</Link></CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                          <p>Discover if you are a "fast" or "slow" metabolizer of caffeine to better understand your half-life.</p>
-                      </CardContent>
-                  </Card>
-              </div>
-          </section>
+                <section id="expert-insights" aria-labelledby="expert-insights-heading">
+                    <h2 id="expert-insights-heading" className="text-3xl font-bold">Quick Hacks & Expert Insights</h2>
+                    <div className="space-y-4">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center gap-2"><BrainCircuit aria-hidden="true"/> Know Your "Quarter-Life"</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p>For sleep, the "quarter-life" (time to 25% remaining) is often more relevant. For a 5-hour half-life, that's 10 hours. A 200 mg coffee at noon will leave 50 mg at 10 PM—enough to disrupt deep sleep.</p>
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center gap-2"><Moon aria-hidden="true"/> 10-Hour Rule</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p>For most people, a good rule of thumb is to set your caffeine curfew for 10 hours before your target bedtime. This allows your body to clear 75% of the caffeine.</p>
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center gap-2"><ZapOff aria-hidden="true"/> Use Decaf to Your Advantage</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p>Craving the ritual of an afternoon coffee? Switch to decaf. It has a negligible amount of caffeine and won't sabotage your sleep.</p>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </section>
+                
+                <Separator />
+                
+                <section id="related-tools" aria-labelledby="related-tools-heading">
+                    <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools</h2>
+                    <div className="space-y-4">
+                         <p><Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> - First, find out how much caffeine you're consuming.</p>
+                         <p><Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> - Discover if you are a "fast" or "slow" metabolizer.</p>
+                         <p><Link href="/calculators/caffeine-drink-comparison">Drink Comparison Tool</Link> - Compare the caffeine content of your favorite beverages.</p>
+                    </div>
+                </section>
+            </div>
         </div>
       </div>
     </>
