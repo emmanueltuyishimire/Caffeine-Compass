@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -110,11 +111,6 @@ const Header = () => {
                     </ul>
                 </NavigationMenuContent>
             </NavigationMenuItem>
-             <NavigationMenuItem>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/about">About</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
