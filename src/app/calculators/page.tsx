@@ -15,7 +15,7 @@ const calculatorsPageJsonLd = {
   "@type": "WebPage",
   "name": "Caffeine Calculators",
   "description": "A complete suite of science-backed tools to help you understand and optimize your caffeine consumption for better health, focus, and sleep.",
-  "url": "https://caffeine-calculation-site.com/calculators",
+  "url": "https://caffeine-compass.com/calculators",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -23,13 +23,13 @@ const calculatorsPageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-calculation-site.com/"
+        "item": "https://caffeine-compass.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Calculators",
-        "item": "https://caffeine-calculation-site.com/calculators"
+        "item": "https://caffeine-compass.com/calculators"
       }
     ]
   }
@@ -58,22 +58,16 @@ const calculatorSections = [
     category: "Energy & Sleep",
     calculators: [
         {
-            title: "Caffeine Sleep Calculator",
-            href: "/calculators/caffeine-sleep-calculator",
-            description: "See how much caffeine will be in your system at bedtime.",
-            icon: Moon,
+            title: "Half-Life Calculator",
+            href: "/calculators/half-life",
+            description: "See how long caffeine stays in your system and when it will be gone.",
+            icon: BarChart2,
         },
         {
             title: "Caffeine Timing Optimizer",
             href: "/calculators/caffeine-timing-optimizer",
             description: "Suggests best caffeine timing for work or study.",
             icon: Clock,
-        },
-        {
-            title: "Half-Life Calculator",
-            href: "/calculators/half-life",
-            description: "See how long caffeine stays in your system.",
-            icon: BarChart2,
         },
     ]
   },
@@ -123,7 +117,7 @@ export default function CalculatorsPage() {
   return (
     <>
       <JsonLd data={calculatorsPageJsonLd} />
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Our Calculators</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -136,7 +130,7 @@ export default function CalculatorsPage() {
                 <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">{section.category}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {section.calculators.map((calc) => (
-                        <Link key={calc.title} href={calc.href} className="block">
+                        <Link key={calc.title} href={calc.href} className="block group">
                         <Card className="h-full hover:border-primary hover:bg-card/95 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
                             <CardHeader>
                             <div className="flex items-center gap-4">

@@ -14,7 +14,6 @@ const mainNav = [
 
 const calculatorNav = [
     { title: "Intake", href: "/calculators/intake", icon: Coffee },
-    { title: "Sleep Impact", href: "/calculators/caffeine-sleep-calculator", icon: Moon },
     { title: "Half-Life", href: "/calculators/half-life", icon: BarChart2 },
     { title: "Sensitivity Test", href: "/calculators/caffeine-sensitivity-test", icon: BrainCircuit },
     { title: "Timing Optimizer", href: "/calculators/caffeine-timing-optimizer", icon: Clock },

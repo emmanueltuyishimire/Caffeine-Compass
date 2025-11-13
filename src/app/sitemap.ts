@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://caffeine-calculation-site.com';
+  const baseUrl = 'https://caffeine-compass.com';
 
   const staticPages = [
     '/about',
@@ -22,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/calculators/drinks-database',
     '/calculators/caffeine-overdose-risk',
     '/calculators/pregnancy-safe-limit',
-    '/calculators/caffeine-sleep-calculator'
   ];
 
   const articleRoutes = [
