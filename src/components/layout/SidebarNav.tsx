@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarSeparator } from "../ui/sidebar";
-import { Coffee, BookText, Calculator, Home, BookOpen, BarChart2, BrainCircuit, Shield, TrendingDown, Clock, Baby, Zap, Moon } from "lucide-react";
+import { Coffee, BookText, Calculator, Home, BookOpen, BarChart2, BrainCircuit, Shield, TrendingDown, Clock, Baby, Moon, Zap } from "lucide-react";
 import Image from "next/image";
 
 const mainNav = [
@@ -53,13 +53,13 @@ export default function SidebarNav() {
                  <SidebarMenuItem>
                     <Link href="/calculators" passHref legacyBehavior>
                         <SidebarMenuButton as="a" isActive={pathname === '/calculators'} icon={<Calculator />} tooltip="All Calculators">
-                           Calculators
+                           All Calculators
                         </SidebarMenuButton>
                     </Link>
                 </SidebarMenuItem>
                 {calculatorNav.map((item) => (
                     <SidebarMenuItem key={item.href}>
-                         <Link href={item.href} passHref legacyBehavior>
+                        <Link href={item.href} passHref legacyBehavior>
                             <SidebarMenuButton as="a" isActive={pathname === item.href} icon={<item.icon />} tooltip={item.title}>
                                 {item.title}
                             </SidebarMenuButton>
