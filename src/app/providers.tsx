@@ -1,9 +1,7 @@
+"use client";
 
-'use client';
-
-import { ThemeProvider } from 'next-themes';
-import { ReactNode } from 'react';
-import { SidebarProvider } from '@/components/ui/sidebar';
+import { ThemeProvider } from "next-themes";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -13,9 +11,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      <SidebarProvider>
-        {children}
-      </SidebarProvider>
+      <SidebarProvider>{children}</SidebarProvider>
     </ThemeProvider>
   );
 }

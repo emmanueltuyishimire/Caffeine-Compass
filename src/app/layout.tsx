@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import JsonLd from '@/components/JsonLd';
 import AppLayout from '@/components/layout/AppLayout';
+import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -44,7 +45,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} font-body antialiased`}>
         <JsonLd data={websiteJsonLd} />
-        <AppLayout>{children}</AppLayout>
+        <Providers>
+            <AppLayout>{children}</AppLayout>
+        </Providers>
       </body>
     </html>
   );
