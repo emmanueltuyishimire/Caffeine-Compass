@@ -8,15 +8,15 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/calculators', label: 'Calculators' },
-  { href: '/articles', label: 'Learn' },
-  { href: '/about', label: 'About' },
+const navLinks: { href: string; label: string }[] = [
 ];
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+
+  if (navLinks.length === 0) {
+    return null;
+  }
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
