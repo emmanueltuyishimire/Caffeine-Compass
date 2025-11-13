@@ -12,6 +12,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/calculators', label: 'Calculators' },
   { href: '/articles', label: 'Learn' },
+  { href: '/about', label: 'About' },
   { href: '/ai-assistant', label: 'AI Assistant' },
 ];
 
