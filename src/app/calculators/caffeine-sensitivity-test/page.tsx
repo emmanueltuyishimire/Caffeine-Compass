@@ -38,12 +38,12 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeine-compass.com/logo.png"
+      "url": "https://calculation.site/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://caffeine-compass.com/calculators/caffeine-sensitivity-test"
+    "@id": "https://calculation.site/calculators/caffeine-sensitivity-test"
   },
   "description": "Discover your genetic predisposition to caffeine by answering a series of questions about your body's response.",
   "articleBody": "This test helps you understand your caffeine tolerance and tailor your intake for optimal energy and sleep by assessing whether you are a fast, average, or slow metabolizer based on your body's reaction to caffeine."

@@ -8,7 +8,7 @@ import { Providers } from '@/app/providers';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://caffeine-calculation-site.com'),
+  metadataBase: new URL('https://calculation.site'),
   title: {
     default:
       'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
@@ -36,13 +36,13 @@ const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Caffeine Compass',
-  url: 'https://caffeine-calculation-site.com/',
+  url: 'https://calculation.site/',
   publisher: {
     '@type': 'Organization',
     name: 'Caffeine Compass',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://caffeine-calculation-site.com/logo.png',
+      url: 'https://calculation.site/logo.png',
     },
   },
 };

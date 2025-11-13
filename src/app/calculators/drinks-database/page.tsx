@@ -38,12 +38,12 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeine-calculation-site.com/logo.png"
+      "url": "https://calculation.site/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://caffeine-calculation-site.com/calculators/drinks-database"
+    "@id": "https://calculation.site/calculators/drinks-database"
   },
   "description": "Find the caffeine content of over 1,000 beverages using a searchable database.",
   "articleBody": "A comprehensive, searchable, and easy-to-use tool that puts the caffeine content of over 1,000 beverages right at your fingertips. By providing specific data for specific products, it empowers you to make truly informed decisions about your caffeine consumption."
@@ -165,7 +165,7 @@ export default function DrinksDatabasePage() {
                           <CardTitle><Link href="/calculators/intake" className="hover:underline">Intake Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
-                          <p>Found your drink? Now add it to our Intake Calculator to track your total daily consumption against safe limits.</p>
+                          <p>Found your drink? Now add it to our Intake Calculator to track your total daily consumption.</p>
                       </CardContent>
                   </Card>
                   <Card>

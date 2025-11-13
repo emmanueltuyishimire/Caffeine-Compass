@@ -37,12 +37,12 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeine-calculation-site.com/logo.png"
+      "url": "https://calculation.site/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://caffeine-calculation-site.com/calculators/pregnancy-safe-limit"
+    "@id": "https://calculation.site/calculators/pregnancy-safe-limit"
   },
   "description": "Track your daily caffeine intake to ensure you're staying within the recommended safe limits for a healthy pregnancy.",
   "articleBody": "Major health bodies recommend limiting caffeine intake to less than 200 milligrams (mg) per day during pregnancy. This calculator provides a clear, visual way to log your drinks and see your total consumption in real-time, helping you manage it wisely for the health of both you and your baby."

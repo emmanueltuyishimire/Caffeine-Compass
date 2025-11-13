@@ -47,12 +47,12 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeine-compass.com/logo.png"
+      "url": "https://calculation.site/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://caffeine-compass.com/calculators/caffeine-overdose-risk"
+    "@id": "https://calculation.site/calculators/caffeine-overdose-risk"
   },
   "description": "Estimate the caffeine levels that could pose a risk to your health based on your body weight.",
   "articleBody": "This tool is for educational purposes only. It provides estimates based on established scientific literature and is not a substitute for professional medical advice, diagnosis, or treatment. Individual sensitivity and risk factors for caffeine toxicity can vary greatly due to genetics, pre-existing health conditions (especially cardiac issues), and concurrent use of medications. If you believe you or someone else has consumed a toxic amount of caffeine or is experiencing severe symptoms such as chest pain, seizures, or difficulty breathing, contact emergency medical services immediately."

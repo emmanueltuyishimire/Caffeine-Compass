@@ -38,12 +38,12 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeine-calculation-site.com/logo.png"
+      "url": "https://calculation.site/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://caffeine-calculation-site.com/calculators/drink-comparison"
+    "@id": "https://calculation.site/calculators/drink-comparison"
   },
   "description": "Visually compare the caffeine content of multiple beverages side-by-side using an interactive chart.",
   "articleBody": "This tool places caffeine information side-by-side, allowing you to build your own comparison chart from our extensive database. It transforms abstract numbers into a tangible understanding of what you're consuming, whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity."

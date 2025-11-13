@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     description: 'Explore our complete suite of science-backed caffeine calculators. Track intake, understand your metabolism, optimize timing, and more to take control of your caffeine consumption.',
 };
 
-const calculatorsPageJsonLd = {
+const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Caffeine Calculators",
   "description": "A complete suite of science-backed tools to help you understand and optimize your caffeine consumption for better health, focus, and sleep.",
-  "url": "https://caffeine-compass.com/calculators",
+  "url": "https://calculation.site/calculators",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -23,13 +23,13 @@ const calculatorsPageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-compass.com/"
+        "item": "https://calculation.site/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Calculators",
-        "item": "https://caffeine-compass.com/calculators"
+        "item": "https://calculation.site/calculators"
       }
     ]
   }
@@ -116,7 +116,7 @@ const calculatorSections = [
 export default function CalculatorsPage() {
   return (
     <>
-      <JsonLd data={calculatorsPageJsonLd} />
+      <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Our Calculators</h1>

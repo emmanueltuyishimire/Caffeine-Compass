@@ -22,7 +22,7 @@ const homePageJsonLd = {
   "@type": "WebPage",
   "name": "Caffeine Compass Homepage",
   "description": "Harness the power of caffeine with our suite of science-backed calculators. Track your intake, understand your metabolism, and optimize your timing for peak performance and better health.",
-  "url": "https://caffeine-calculation-site.com/",
+  "url": "https://calculation.site/",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -30,7 +30,7 @@ const homePageJsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://caffeine-calculation-site.com/"
+        "item": "https://calculation.site/"
       }
     ]
   }
