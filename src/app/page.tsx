@@ -7,7 +7,6 @@ import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import AppLayout from '@/components/layout/AppLayout';
 import {
     BookOpen,
     HeartPulse,
@@ -83,8 +82,8 @@ export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
 
   return (
-    <AppLayout>
       <div className="flex flex-col">
+        <JsonLd data={homePageJsonLd} />
         <section className="relative text-center rounded-lg overflow-hidden min-h-[50vh] md:min-h-[500px] flex flex-col justify-center items-center text-white bg-primary"  aria-labelledby="hero-heading">
             {heroImage && (
               <Image
@@ -260,6 +259,5 @@ export default function Home() {
           </div>
         </section>
       </div>
-    </AppLayout>
   );
 }
