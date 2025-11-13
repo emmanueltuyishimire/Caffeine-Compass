@@ -4,13 +4,13 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import { Sidebar, SidebarInset, SidebarTrigger } from '../ui/sidebar';
+import { Sidebar, SidebarInset, SidebarProvider } from '../ui/sidebar';
 import SidebarNav from './SidebarNav';
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
-      <Sidebar>
+    <SidebarProvider defaultOpen={false}>
+      <Sidebar collapsible="icon">
         <SidebarNav />
       </Sidebar>
       <SidebarInset>
@@ -18,7 +18,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
         <main className="flex-grow">{children}</main>
         <Footer />
       </SidebarInset>
-    </>
+    </SidebarProvider>
   );
 };
 
