@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -6,7 +5,6 @@ import Header from './Header';
 import Footer from './Footer';
 import { Sidebar, SidebarInset } from '../ui/sidebar';
 import SidebarNav from './SidebarNav';
-import { Toaster } from '../ui/toaster';
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -21,7 +19,6 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
         </SidebarInset>
       </div>
       <Footer />
-      <Toaster />
     </div>
   );
 };
