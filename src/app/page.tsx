@@ -92,13 +92,13 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
             )}
-          <div className="relative z-10 p-4 max-w-4xl mx-auto bg-black/50 rounded-xl">
-            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
+          <div className="relative z-10 p-4 max-w-4xl mx-auto rounded-xl">
+            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-outline">
               Take Control of Your Caffeine.
               <br/>
               Unlock Your Potential.
             </h1>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-outline">
               Harness the power of caffeine without compromising your sleep or well-being. Our science-backed tools provide personalized insights to help you optimize your energy, focus, and health.
             </p>
             <Link href="/calculators">
