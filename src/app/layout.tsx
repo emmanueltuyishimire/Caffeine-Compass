@@ -53,18 +53,18 @@ export default function RootLayout({
       <body className={`${inter.className} font-body antialiased`}>
         <Providers>
           <SidebarProvider>
-              <Sidebar>
-                <SidebarNav />
-              </Sidebar>
-              <SidebarInset>
-                <JsonLd data={websiteJsonLd} />
-                <Header />
-                  <main className="flex-grow">
-                    {children}
-                  </main>
-                <Footer />
-                <Toaster />
-              </SidebarInset>
+            <Sidebar>
+              <SidebarNav />
+            </Sidebar>
+            <SidebarInset>
+              <JsonLd data={websiteJsonLd} />
+              <Header />
+                <main className="flex-grow">
+                  {children}
+                </main>
+              <Footer />
+              <Toaster />
+            </SidebarInset>
           </SidebarProvider>
         </Providers>
       </body>

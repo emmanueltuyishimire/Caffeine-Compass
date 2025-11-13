@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem, SidebarSeparator } from "../ui/sidebar";
-import { Coffee, BookText, Calculator, ChevronDown, Home, BookOpen, BarChart2, BrainCircuit, Shield, TrendingDown, Clock } from "lucide-react";
+import { Coffee, BookText, Calculator, ChevronDown, Home, BookOpen, BarChart2, BrainCircuit, Shield, TrendingDown, Clock, Baby, Zap, Moon } from "lucide-react";
 import Image from "next/image";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../ui/collapsible";
 import { cn } from "@/lib/utils";
@@ -15,13 +15,16 @@ const mainNav = [
 ];
 
 const calculatorNav = [
-    { title: "Intake Calculator", href: "/calculators/intake", description: "Calculate your total daily caffeine intake.", icon: Coffee },
-    { title: "Sleep Calculator", href: "/calculators/caffeine-sleep-calculator", description: "See how much caffeine will be in your system at bedtime.", icon: BarChart2 },
-    { title: "Sensitivity Test", href: "/calculators/caffeine-sensitivity-test", description: "Estimate your genetic tolerance to caffeine.", icon: BrainCircuit },
-    { title: "Overdose Risk Calculator", href: "/calculators/caffeine-overdose-risk", description: "Estimate safe and toxic caffeine levels based on body weight.", icon: Shield },
-    { title: "Withdrawal Tracker", href: "/calculators/caffeine-withdrawal-tracker", description: "Helps users taper down safely.", icon: TrendingDown },
-    { title: "Timing Optimizer", href: "/calculators/caffeine-timing-optimizer", description: "Suggests best caffeine timing for work or study.", icon: Clock },
-    { title: "Drinks Database", href: "/calculators/drinks-database", description: "Search 1,000+ beverages by caffeine mg.", icon: BookOpen },
+    { title: "Intake", href: "/calculators/intake", icon: Coffee },
+    { title: "Sleep Impact", href: "/calculators/caffeine-sleep-calculator", icon: Moon },
+    { title: "Half-Life", href: "/calculators/half-life", icon: BarChart2 },
+    { title: "Sensitivity Test", href: "/calculators/caffeine-sensitivity-test", icon: BrainCircuit },
+    { title: "Timing Optimizer", href: "/calculators/caffeine-timing-optimizer", icon: Clock },
+    { title: "Withdrawal Tracker", href: "/calculators/caffeine-withdrawal-tracker", icon: TrendingDown },
+    { title: "Overdose Risk", href: "/calculators/caffeine-overdose-risk", icon: Shield },
+    { title: "Pregnancy Safe Limit", href: "/calculators/pregnancy-safe-limit", icon: Baby },
+    { title: "Drinks Database", href: "/calculators/drinks-database", icon: BookOpen },
+    { title: "Drink Comparison", href: "/calculators/drink-comparison", icon: Zap },
 ];
 
 export default function SidebarNav() {
@@ -58,7 +61,7 @@ export default function SidebarNav() {
                         <SidebarMenuSub>
                             {calculatorNav.map((item) => (
                                 <SidebarMenuSubItem key={item.href}>
-                                    <Link href={item.href} className="w-full">
+                                    <Link href={item.href} legacyBehavior passHref>
                                         <SidebarMenuSubButton isActive={pathname === item.href}>{item.title}</SidebarMenuSubButton>
                                     </Link>
                                 </SidebarMenuSubItem>
