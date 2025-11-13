@@ -1,45 +1,38 @@
-
 'use client';
 
-import JsonLd from '@/components/JsonLd';
-import { Sidebar, SidebarInset } from '@/components/ui/sidebar';
-import { Toaster } from '@/components/ui/toaster';
-import Footer from './Footer';
+import React from 'react';
 import Header from './Header';
+import Footer from './Footer';
+import { Sidebar, SidebarInset, SidebarProvider } from '../ui/sidebar';
 import SidebarNav from './SidebarNav';
+import { Toaster } from '../ui/toaster';
+import { ThemeProvider } from 'next-themes';
 
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Caffeine Calculation Site",
-  "url": "https://caffeine-calculation-site.com/",
-   "publisher": {
-    "@type": "Organization",
-    "name": "Caffeine Calculation Site",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://caffeine-calculation-site.com/logo.png"
-    }
-  }
-};
-
-export default function AppLayout({ children }: { children: React.ReactNode }) {
-    return (
-        <div className="min-h-screen">
+const AppLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <SidebarProvider>
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <div className="flex-1 flex">
             <Sidebar>
-                <SidebarNav />
+              <SidebarNav />
             </Sidebar>
             <SidebarInset>
-                <JsonLd data={websiteJsonLd} />
-                <div className='flex flex-col min-h-screen'>
-                <Header />
-                <main className="flex-grow">
-                    {children}
-                </main>
-                <Footer />
-                </div>
-                <Toaster />
+              <main className="flex-grow">{children}</main>
             </SidebarInset>
+          </div>
+          <Footer />
+          <Toaster />
         </div>
-    )
-}
+      </SidebarProvider>
+    </ThemeProvider>
+  );
+};
+
+export default AppLayout;
