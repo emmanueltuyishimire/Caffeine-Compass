@@ -47,11 +47,13 @@ export default function SidebarNav() {
                     </SidebarMenuItem>
                 ))}
                  <Collapsible>
-                    <CollapsibleTrigger asChild>
-                         <SidebarMenuButton icon={<Calculator />} rightIcon={<ChevronDown/>} className="w-full">
-                            Calculators
-                        </SidebarMenuButton>
-                    </CollapsibleTrigger>
+                    <SidebarMenuItem>
+                        <CollapsibleTrigger asChild>
+                            <SidebarMenuButton icon={<Calculator />} rightIcon={<ChevronDown/>} className="w-full">
+                                Calculators
+                            </SidebarMenuButton>
+                        </CollapsibleTrigger>
+                    </SidebarMenuItem>
                     <CollapsibleContent>
                         <SidebarMenuSub>
                             {calculatorNav.map((item) => (
