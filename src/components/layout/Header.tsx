@@ -73,7 +73,7 @@ const Header = () => {
             <NavigationMenu className="hidden md:flex">
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <Link href="/" passHref>
+                        <Link href="/" legacyBehavior passHref>
                           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             Home
                           </NavigationMenuLink>
@@ -130,7 +130,7 @@ const Header = () => {
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                      <NavigationMenuItem>
-                        <Link href="/about" passHref>
+                        <Link href="/about" legacyBehavior passHref>
                           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             About
                           </NavigationMenuLink>
