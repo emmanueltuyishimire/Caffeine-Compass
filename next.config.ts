@@ -30,11 +30,11 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/blog',
-        destination: 'https://caffeine-compass-blog.netlify.app',
+        destination: 'https://caffeine-compass-blog.netlify.app/business',
       },
       {
         source: '/blog/:path*',
-        destination: 'https://caffeine-compass-blog.netlify.app/:path*',
+        destination: 'https://caffeine-compass-blog.netlify.app/business/:path*',
       },
       {
         source: '/business',
