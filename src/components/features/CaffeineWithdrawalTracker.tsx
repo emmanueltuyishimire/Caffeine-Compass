@@ -150,7 +150,7 @@ export default function CaffeineWithdrawalTracker() {
             <p className="text-sm text-muted-foreground mb-2" id="intake-description">Add the drinks you consume on a typical day to calculate your starting intake.</p>
             <div className="space-y-2 p-4 border rounded-md" aria-describedby="intake-description">
                 {consumed.length > 0 && (
-                    <div className="space-y-2 mb-4">
+                    <div className="space-y-2 mb-4" role="list">
                         {consumed.map((drink, index) => (
                         <div key={drink.id} role="listitem" className="flex items-center gap-2 text-sm">
                             <drink.icon className="h-5 w-5 text-muted-foreground" aria-hidden="true" />

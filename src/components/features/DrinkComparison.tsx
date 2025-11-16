@@ -213,12 +213,12 @@ export default function DrinkComparison() {
 
         <Collapsible open={isCustomFormOpen} onOpenChange={setIsCustomFormOpen} className="mb-6">
             <CollapsibleTrigger asChild>
-                <Button variant="ghost" className="w-full text-sm text-muted-foreground">
+                <Button variant="ghost" className="w-full text-sm text-muted-foreground" aria-controls="custom-drink-form" aria-expanded={isCustomFormOpen}>
                     <ChevronsUpDown className="h-4 w-4 mr-2"/>
                     {isCustomFormOpen ? 'Close' : 'Add a custom drink to compare'}
                 </Button>
             </CollapsibleTrigger>
-            <CollapsibleContent className="mt-2 p-4 border rounded-md bg-muted/50">
+            <CollapsibleContent id="custom-drink-form" className="mt-2 p-4 border rounded-md bg-muted/50">
                 <div className="space-y-4">
                      <h3 className="font-semibold">Add Custom Drink</h3>
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

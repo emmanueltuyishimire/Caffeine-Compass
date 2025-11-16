@@ -195,12 +195,12 @@ export default function DrinksDatabase() {
 
         <Collapsible open={isCustomFormOpen} onOpenChange={setIsCustomFormOpen} className="mb-4">
             <CollapsibleTrigger asChild>
-                <Button variant="outline" className="w-full">
+                <Button variant="outline" className="w-full" aria-controls="custom-drink-form" aria-expanded={isCustomFormOpen}>
                     <ChevronsUpDown className="h-4 w-4 mr-2"/>
                     {isCustomFormOpen ? 'Close' : 'Add Custom Drink'}
                 </Button>
             </CollapsibleTrigger>
-            <CollapsibleContent className="mt-4 p-4 border rounded-md">
+            <CollapsibleContent id="custom-drink-form" className="mt-4 p-4 border rounded-md">
                 <div className="space-y-4">
                      <h3 className="font-semibold">Add a New Drink</h3>
                      <p className="text-sm text-muted-foreground">Your custom drinks will be saved in your browser for future use.</p>

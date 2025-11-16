@@ -75,7 +75,7 @@ export default function HalfLifeEstimator() {
           </div>
         </div>
         <div>
-          <Label id="decay-chart-label">Caffeine Decay Over 12 Hours</Label>
+          <Label id="decay-chart-label" className="sr-only">Caffeine Decay Over 12 Hours Chart</Label>
           <ChartContainer config={chartConfig} className="h-[250px] w-full mt-2" aria-labelledby="decay-chart-label">
             <ResponsiveContainer width="100%" height="100%">
                <BarChart accessibilityLayer data={chartData} margin={{ top: 20, right: 20, bottom: 20, left: -10 }}>
