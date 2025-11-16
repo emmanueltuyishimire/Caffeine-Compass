@@ -38,21 +38,21 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeinecompass.com/logo.png"
+      "url": "https://calculation.site/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://caffeinecompass.com/articles/how-long-before-bed-to-stop-caffeine"
+    "@id": "https://calculation.site/articles/how-long-before-bed-to-stop-caffeine"
   },
   "description": "An in-depth guide answering the critical question of when to have your last caffeinated drink to ensure deep, restorative sleep. The article covers caffeine half-life, sleep architecture, and provides a step-by-step method for determining your personal 'caffeine curfew'.",
   "articleBody": "This article explains the science behind why drinking caffeine too close to bedtime disrupts sleep. It covers caffeine's half-life, its effect on adenosine receptors and sleep stages like deep sleep and REM, and the factors that influence individual sensitivity. Readers will learn practical strategies and use the site's calculators to find their ideal time to stop caffeine for optimal health and energy.",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caffeinecompass.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://caffeinecompass.com/articles" },
-      { "@type": "ListItem", "position": 3, "name": "How Long Before Bed to Stop Caffeine", "item": "https://caffeinecompass.com/articles/how-long-before-bed-to-stop-caffeine" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculation.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://calculation.site/articles" },
+      { "@type": "ListItem", "position": 3, "name": "How Long Before Bed to Stop Caffeine", "item": "https://calculation.site/articles/how-long-before-bed-to-stop-caffeine" }
     ]
   },
   "faqPage": {

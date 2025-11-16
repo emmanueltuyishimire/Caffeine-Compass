@@ -38,21 +38,21 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://caffeinecompass.com/logo.png"
+      "url": "https://calculation.site/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://caffeinecompass.com/articles/caffeine-half-life-sleep"
+    "@id": "https://calculation.site/articles/caffeine-half-life-sleep"
   },
   "description": "An in-depth guide explaining caffeine half-life, the science of caffeine metabolism, and its profound impact on sleep quality. Learn how to use this knowledge to optimize your caffeine intake, avoid sleep disruption, and improve overall health and performance.",
   "articleBody": "This article explores the critical concept of caffeine half-life and its relationship with sleep. It explains how caffeine is metabolized, why its effects linger long after the initial 'buzz' is gone, and how factors like genetics, medication, and lifestyle can alter your personal caffeine half-life. The content provides actionable strategies, worked examples, and guidance on using tools like the Caffeine Half-Life Calculator to determine your personal 'caffeine curfew,' ensuring you can harness caffeine's benefits without sacrificing restorative sleep.",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caffeinecompass.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://caffeinecompass.com/articles" },
-      { "@type": "ListItem", "position": 3, "name": "Caffeine Half-Life & Sleep", "item": "https://caffeinecompass.com/articles/caffeine-half-life-sleep" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculation.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://calculation.site/articles" },
+      { "@type": "ListItem", "position": 3, "name": "Caffeine Half-Life & Sleep", "item": "https://calculation.site/articles/caffeine-half-life-sleep" }
     ]
   },
   "faqPage": {

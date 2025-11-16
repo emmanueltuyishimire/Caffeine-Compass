@@ -378,7 +378,7 @@ export default function CaffeineTimingOptimizerPage() {
                         <CardTitle className="flex items-center gap-2"><Coffee aria-hidden="true"/> The "Coffee Nap"</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>For a powerful afternoon reset, drink a small coffee or an espresso and immediately take a 20-minute nap. The caffeine will kick in just as you wake up, providing a dual benefit of cleared adenosine and stimulated alertness. Use the optimizer to ensure this nap doesn't happen too late!</p>
+                        <p>For a powerful afternoon reset, drink a small coffee or an espresso (around 100mg of caffeine) and immediately take a 20-minute nap. The caffeine will kick in just as you wake up, providing a dual benefit of cleared adenosine and stimulated alertness. Use the optimizer to ensure this nap doesn't happen too late!</p>
                     </CardContent>
                 </Card>
                  <Card>

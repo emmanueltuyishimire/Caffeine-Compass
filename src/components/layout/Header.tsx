@@ -2,11 +2,11 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { ThemeToggle } from '../theme-toggle';
 import { Button } from '../ui/button';
 import { Menu } from 'lucide-react';
 import { useSidebar } from '@/hooks/use-sidebar';
+import { Compass } from 'lucide-react';
 
 const Header = () => {
     const { setIsOpen } = useSidebar();
@@ -24,12 +24,7 @@ const Header = () => {
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
            <Link href="/" className="md:hidden flex items-center gap-2" aria-label="Caffeine Compass Homepage">
-                <Image
-                    src="/logo.png"
-                    alt="Caffeine Compass Logo"
-                    width={28}
-                    height={28}
-                />
+                <Compass className="h-7 w-7" />
             </Link>
           <ThemeToggle />
         </div>
