@@ -7,7 +7,7 @@ import { mainNav } from '@/lib/nav-links';
 import { cn } from '@/lib/utils';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useSidebar } from '@/hooks/use-sidebar';
-import { Compass } from 'lucide-react';
+import Image from 'next/image';
 
 export default function SidebarNav() {
   const pathname = usePathname();
@@ -17,7 +17,7 @@ export default function SidebarNav() {
     <nav className="flex flex-col h-full">
       <div className="flex items-center justify-center h-16 border-b">
          <Link href="/" className="flex items-center gap-2 text-foreground">
-            <Compass className="h-7 w-7" />
+            <Image src="/logo.png" alt="Caffeine Compass Logo" width={28} height={28} />
              {isOpen && <span className="text-lg font-bold">Caffeine Compass</span>}
         </Link>
       </div>

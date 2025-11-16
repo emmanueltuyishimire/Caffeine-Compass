@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     'energy drinks',
     'caffeine sensitivity',
   ],
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 const websiteJsonLd = {
