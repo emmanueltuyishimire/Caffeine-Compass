@@ -14,15 +14,15 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Caffeine Compass — Calculators, Coffee Business Resources, and Blog',
-    description: 'Your central hub for caffeine calculators, coffee shop business management, product reviews, and in-depth articles. Solve problems and find answers for your personal and professional coffee needs.',
+    title: 'Caffeine Compass | Caffeine Calculators & Coffee Business Hub',
+    description: 'The ultimate resource for caffeine calculators, coffee business management, and science-backed articles. Optimize your intake, improve your sleep, and grow your business.',
 };
 
 const homePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Caffeine Compass Homepage",
-  "description": "Your central hub for caffeine calculators, coffee shop business management, product reviews, and in-depth articles.",
+  "description": "The ultimate resource for caffeine calculators, coffee business management, and science-backed articles.",
   "url": "https://calculation.site/",
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -98,16 +98,21 @@ export default function Home() {
                   sizes="100vw"
                 />
             )}
-          <div className="relative z-10 p-4 max-w-4xl mx-auto rounded-xl">
-            <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-outline">
-              Your Hub for Coffee Knowledge & Business.
+          <div className="relative z-10 p-4 max-w-4xl mx-auto rounded-xl bg-black/30 backdrop-blur-sm">
+            <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
+              Master Your Caffeine. Grow Your Business.
             </h1>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-black">
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
               Explore powerful calculators, in-depth product reviews, and essential resources for managing your coffee shop business—all in one place.
             </p>
-            <Link href="/calculators">
-              <Button size="lg">Explore Our Tools</Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/calculators">
+                <Button size="lg" aria-label="Explore our suite of caffeine calculators">Explore Our Tools</Button>
+              </Link>
+               <Link href="https://business.calculation.site" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="secondary" aria-label="Visit CoffeeBizz for business resources">Visit CoffeeBizz</Button>
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -116,7 +121,7 @@ export default function Home() {
               <div className="text-center mb-12">
                 <h2 id="calculators-heading" className="text-3xl md:text-4xl font-bold font-headline">A Comprehensive Toolkit for Every Need</h2>
                 <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-                    From personal health management to professional tools, we have a calculator for every question.
+                    From personal health management to professional tools, we have a calculator for every question about caffeine's impact on your life and work.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -144,46 +149,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-12 md:py-20 bg-muted/30" role="region" aria-labelledby="how-it-works-heading">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold font-headline">Your Path to Answers</h2>
-                <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
-                    Whatever your goal, our platform provides the resources to help you achieve it.
-                </p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-12 text-center">
-                  <div className="relative">
-                      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
-                        <BookOpen className="h-8 w-8" aria-hidden="true" />
-                      </div>
-                      <h3 className="text-xl font-bold mb-2">Explore Our Blog</h3>
-                      <p className="text-muted-foreground">Dive into expert product reviews, in-depth articles, and practical guides on our <Link href="https://blog.calculation.site" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-accent/80">Blog</Link> to stay informed.</p>
-                  </div>
-                  <div className="relative">
-                      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
-                        <Briefcase className="h-8 w-8" aria-hidden="true" />
-                      </div>
-                      <h3 className="text-xl font-bold mb-2">Grow Your Business</h3>
-                      <p className="text-muted-foreground">Access resources for coffee shop management, worker scheduling, and industry trends on <Link href="https://business.calculation.site" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-accent/80">CoffeeBizz</Link>.</p>
-                  </div>
-                  <div className="relative">
-                      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
-                        <Coffee className="h-8 w-8" aria-hidden="true" />
-                      </div>
-                      <h3 className="text-xl font-bold mb-2">Optimize Your Intake</h3>
-                      <p className="text-muted-foreground">Use our suite of <Link href="/calculators" className="text-accent underline hover:text-accent/80">Calculators</Link> to manage your personal caffeine consumption for better health and focus.</p>
-                  </div>
-              </div>
-            </div>
-        </section>
-
-        <section id="platforms" className="py-12 md:py-20 bg-background" role="region" aria-labelledby="platforms-heading">
+        <section id="platforms" className="py-12 md:py-20 bg-muted/30" role="region" aria-labelledby="platforms-heading">
             <div className="container mx-auto px-4">
                  <div className="text-center mb-12">
-                    <h2 id="platforms-heading" className="text-3xl md:text-4xl font-bold font-headline">Explore Our Platforms</h2>
+                    <h2 id="platforms-heading" className="text-3xl md:text-4xl font-bold font-headline">Explore Our Content Platforms</h2>
                     <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-                        Dive deeper into the world of caffeine with our specialized content hubs.
+                        Dive deeper into the world of caffeine with our specialized content hubs for enthusiasts and entrepreneurs.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -223,12 +194,12 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="py-12 md:py-20" role="region" aria-labelledby="why-us-heading">
+        <section id="why-choose-us" className="py-12 md:py-20" role="region" aria-labelledby="why-us-heading">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
               <div className="order-last md:order-first">
                 <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold font-headline mb-8">
-                  Why Choose Us?
+                  Why Choose Caffeine Compass?
                 </h2>
                 <div className="space-y-8">
                     <div className="flex items-start gap-4">
