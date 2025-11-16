@@ -10,6 +10,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
     BookOpen,
     HeartPulse,
+    Briefcase,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -176,6 +177,51 @@ export default function Home() {
                       <p className="text-muted-foreground">Plan your caffeine use for peak performance and protect your sleep using the <Link href="/calculators/caffeine-half-life" className="text-accent underline hover:text-accent/80">Half-Life Calculator</Link>.</p>
                   </div>
               </div>
+            </div>
+        </section>
+
+        <section id="platforms" className="py-12 md:py-20 bg-background" role="region" aria-labelledby="platforms-heading">
+            <div className="container mx-auto px-4">
+                 <div className="text-center mb-12">
+                    <h2 id="platforms-heading" className="text-3xl md:text-4xl font-bold font-headline">Explore Our Platforms</h2>
+                    <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+                        Dive deeper into the world of caffeine with our specialized content hubs.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <Card className="flex flex-col">
+                        <CardHeader>
+                            <div className="flex items-center gap-4">
+                                <BookOpen className="h-8 w-8 text-primary" />
+                                <CardTitle>Our Blog</CardTitle>
+                            </div>
+                        </CardHeader>
+                        <CardContent className="flex-grow">
+                             <p className="text-muted-foreground">Explore in-depth articles, scientific explainers, and practical guides on everything from caffeine's effect on REM sleep to the history of coffee.</p>
+                        </CardContent>
+                        <div className="p-6 pt-0">
+                            <Link href="/blog">
+                                <Button className="w-full">Visit the Blog</Button>
+                            </Link>
+                        </div>
+                    </Card>
+                    <Card className="flex flex-col">
+                        <CardHeader>
+                            <div className="flex items-center gap-4">
+                                <Briefcase className="h-8 w-8 text-accent" />
+                                <CardTitle>CoffeeBizz</CardTitle>
+                            </div>
+                        </CardHeader>
+                        <CardContent className="flex-grow">
+                            <p className="text-muted-foreground">Your resource for the business of coffee. Discover insights into running a coffee shop, industry trends, and the economics of the world's favorite beverage.</p>
+                        </CardContent>
+                        <div className="p-6 pt-0">
+                             <Link href="/business">
+                                <Button className="w-full" variant="secondary">Explore CoffeeBizz</Button>
+                            </Link>
+                        </div>
+                    </Card>
+                </div>
             </div>
         </section>
 
