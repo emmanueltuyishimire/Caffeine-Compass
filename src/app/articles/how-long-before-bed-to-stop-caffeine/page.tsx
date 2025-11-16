@@ -36,10 +36,6 @@ const pageJsonLd = {
   "publisher": {
     "@type": "Organization",
     "name": "Caffeine Compass",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://calculation.site/logo.png"
-    }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -285,7 +281,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
               <strong>The Pain Point:</strong> You feel fine all day, but in the evenings you find yourself feeling inexplicably anxious, irritable, or emotionally reactive. Small problems feel like big crises, and you have a hard time relaxing and unwinding.
             </p>
             <p>
-              <strong>The Caffeine Connection:</strong> REM sleep is your brain's overnight emotional processing center. It helps you file away the emotional charge from the day's events. When caffeine suppresses REM sleep, you wake up with the previous day's emotional baggage still fully loaded. Furthermore, the stimulating effects of caffeine can become more pronounced in the evening as your body's natural energy wanes, manifesting as anxiety rather than clean focus. The very tool you use to manage a stressful day could be preventing your brain from recovering from it at night. Knowing your total daily dose with our <Link href="/calculators/caffeine-intake">Intake Calculator</Link> can be an eye-opening first step.
+              <strong>The Caffeine Connection:</strong> REM sleep is your brain's overnight emotional processing center. It helps you file away the emotional charge from the day's events. When caffeine suppresses REM sleep, you wake up with the previous day's emotional baggage still fully loaded. Furthermore, the stimulating effects of caffeine can become more pronounced in the evening as your body's natural energy wanes, manifesting as anxiety rather than clean focus. The very tool you use to manage a stressful day could be preventing your brain from recovering from it at night. Knowing your total daily dose with our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> can be an eye-opening first step.
             </p>
           </section>
 
@@ -464,7 +460,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
                <AccordionItem value="faq-4">
                 <AccordionTrigger>What if I am a 'fast metabolizer'?</AccordionTrigger>
                 <AccordionContent>
-                  Fast metabolizers have more flexibility. An <strong>8-hour</strong> curfew might be sufficient for you. However, it's still wise to avoid large doses in the late afternoon, as high amounts can still impact sleep quality. You can model this using our <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link>.
+                  Fast metabolizers have more flexibility. An <strong>8-hour</strong> curfew might be sufficient for you. However, it's still wise to avoid large doses in the late afternoon, as high amounts can still impact sleep quality. You can model this using our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link>.
                 </AccordionContent>
               </AccordionItem>
                <AccordionItem value="faq-5">

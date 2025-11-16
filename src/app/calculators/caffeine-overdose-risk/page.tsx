@@ -40,10 +40,6 @@ const pageJsonLd = {
   "publisher": {
     "@type": "Organization",
     "name": "Caffeine Compass",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://calculation.site/logo.png"
-    }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
