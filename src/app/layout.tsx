@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import JsonLd from '@/components/JsonLd';
 import { Providers } from '@/app/providers';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
 
@@ -39,6 +40,8 @@ const websiteJsonLd = {
   },
 };
 
+const GA_MEASUREMENT_ID = 'G-XFXW29LKY3';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -49,6 +52,18 @@ export default function RootLayout({
       <body className={`${inter.variable} font-body antialiased`} suppressHydrationWarning>
         <JsonLd data={websiteJsonLd} />
         <Providers>{children}</Providers>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
