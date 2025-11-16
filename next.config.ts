@@ -29,8 +29,16 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
+        source: '/blog',
+        destination: 'https://caffeine-compass-blog.netlify.app',
+      },
+      {
         source: '/blog/:path*',
         destination: 'https://caffeine-compass-blog.netlify.app/:path*',
+      },
+      {
+        source: '/business',
+        destination: 'https://caffeine-compass-coffeebizz.netlify.app',
       },
       {
         source: '/business/:path*',
