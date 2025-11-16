@@ -408,7 +408,7 @@ export default function CaffeineOverdoseRiskPage() {
                     <div className="space-y-4">
                         <Card>
                           <CardHeader>
-                            <CardTitle><Link href="/calculators/caffeine-intake">Intake Calculator</Link></CardTitle>
+                            <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Intake Calculator</Link></CardTitle>
                           </CardHeader>
                           <CardContent>
                             <p>First, track your total daily consumption to see if you are approaching any risk thresholds.</p>
@@ -416,7 +416,7 @@ export default function CaffeineOverdoseRiskPage() {
                         </Card>
                          <Card>
                           <CardHeader>
-                            <CardTitle><Link href="/calculators/caffeine-drink-comparison">Drink Comparison Tool</Link></CardTitle>
+                            <CardTitle><Link href="/calculators/caffeine-drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
                           </CardHeader>
                           <CardContent>
                             <p>Visually compare high-caffeine energy drinks and coffees to be aware of their potency and risks.</p>
@@ -424,7 +424,7 @@ export default function CaffeineOverdoseRiskPage() {
                         </Card>
                         <Card>
                           <CardHeader>
-                            <CardTitle><Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link></CardTitle>
+                            <CardTitle><Link href="/calculators/caffeine-sensitivity-test" className="hover:underline">Caffeine Sensitivity Test</Link></CardTitle>
                           </CardHeader>
                           <CardContent>
                             <p>Understand your genetic predisposition. Slow metabolizers may reach toxic levels with lower total intake over a day.</p>

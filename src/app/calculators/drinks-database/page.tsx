@@ -62,7 +62,7 @@ export default function DrinksDatabasePage() {
               The problem this database solves is ambiguity. Caffeine content varies wildly not just between categories like coffee and tea, but between brands, sizes, and preparation methods. A generic "cup of coffee" can contain anywhere from 80 mg to over 300 mg of caffeine. This tool eliminates that guesswork. By providing specific data for specific products (from a Dunkin' Iced Coffee to a can of Bang), it empowers you to make truly informed decisions about your caffeine consumption.
             </p>
             <p>
-              Accurate knowledge of your intake is the foundation of caffeine management. Whether you're tracking your daily total with our <Link href="/calculators/intake">Intake Calculator</Link> or trying to protect your sleep, it all starts with knowing the potency of what you're drinking. This database is your definitive resource for that crucial first step.
+              Accurate knowledge of your intake is the foundation of caffeine management. Whether you're tracking your daily total with our <Link href="/calculators/caffeine-intake">Intake Calculator</Link> or trying to protect your sleep, it all starts with knowing the potency of what you're drinking. This database is your definitive resource for that crucial first step.
             </p>
           </section>
 
@@ -73,7 +73,7 @@ export default function DrinksDatabasePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/intake" className="hover:underline">Intake Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Intake Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>Found your drink? Now add it to our Intake Calculator to track your total daily consumption.</p>
@@ -81,7 +81,7 @@ export default function DrinksDatabasePage() {
                   </Card>
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/half-life" className="hover:underline">Half-Life Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-half-life" className="hover:underline">Half-Life Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>Visualize how quickly (or slowly) your body will process the caffeine from the drink you just looked up.</p>
@@ -89,7 +89,7 @@ export default function DrinksDatabasePage() {
                   </Card>
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>Compare your drink with others to understand its relative strength.</p>

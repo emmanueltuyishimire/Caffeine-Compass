@@ -39,12 +39,12 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://calculation.site/logo.png"
+      "url": "https://calculation.site/placeholder.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://calculation.site/calculators/caffeine-intake"
+    "@id": "https://calculation.site/calculators/intake"
   },
   "description": "Log your drinks to measure your total daily caffeine load and compare it to safe limits.",
   "articleBody": "Most people dramatically underestimate their daily caffeine intake. This overconsumption is often the hidden culprit behind anxiety, jitteriness, digestive issues, and, most commonly, poor sleep. This calculator removes the guesswork, giving you a personalized, data-driven look at your habits so you can optimize your intake for better health, focus, and sleep.",

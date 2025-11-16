@@ -61,7 +61,7 @@ export default function DrinkComparisonPage() {
               The problem this tool solves is the lack of a simple, direct comparison. You can look up individual drink stats, but it’s hard to grasp the scale of difference. Is a cold brew really that much stronger than an espresso? How does <strong>caffeine in coffee vs. tea</strong> actually stack up? This tool places that information side-by-side, allowing you to build your own comparison chart from our extensive database. It transforms abstract numbers into a tangible understanding of what you're consuming.
             </p>
             <p>
-              Whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity, this comparison tool is your best friend. It’s an essential first step before using our other calculators, like the <Link href="/calculators/intake">Intake Calculator</Link>, as it gives you the foundational knowledge of your drink's potency.
+              Whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity, this comparison tool is your best friend. It’s an essential first step before using our other calculators, like the <Link href="/calculators/caffeine-intake">Intake Calculator</Link>, as it gives you the foundational knowledge of your drink's potency.
             </p>
           </section>
 
@@ -70,10 +70,10 @@ export default function DrinkComparisonPage() {
           <section id="related-tools" aria-labelledby="related-tools-heading">
               <h2 id="related-tools-heading" className="text-3xl font-bold">Next Steps: Put Your Knowledge to Use</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      <Link href="/calculators/intake" className="block group">
+                      <Link href="/calculators/caffeine-intake" className="block group">
                           <p>Now that you know the potency of your favorite drink, use the Intake Calculator to track your total daily consumption.</p>
                       </Link>
-                      <Link href="/calculators/half-life" className="block group">
+                      <Link href="/calculators/caffeine-half-life" className="block group">
                           <p>Visualize how quickly (or slowly) your body will process the caffeine from the drinks you've compared.</p>
                       </Link>
                       <Link href="/calculators/caffeine-sensitivity-test" className="block group">

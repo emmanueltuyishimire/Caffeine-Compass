@@ -26,10 +26,6 @@ const pageJsonLd = {
   "publisher": {
     "@type": "Organization",
     "name": "Caffeine Compass",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://calculation.site/logo.png"
-    }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -67,7 +63,7 @@ export default function HalfLifeCalculatorPage() {
               Most people underestimate how long caffeine remains active in their bloodstream, leading to restless nights, mid-day crashes, or unexplained anxiety. The concept of "half-life" is the key to understanding this. It’s the time it takes for your body to eliminate half of the caffeine you consumed. While the average half-life is around 5 hours, this can vary dramatically based on your genetics, age, body weight, and even medications you take. This calculator puts that scientific principle into your hands, transforming abstract numbers into a personalized timeline of your body's caffeine clearance.
             </p>
             <p>
-              Understanding your personal caffeine decay curve is a superpower. It allows you to strategically time your intake for maximum focus when you need it, and ensure it has faded by the time you want to rest. Whether you're trying to avoid disrupting your sleep, manage your tolerance, or simply gain more control over your energy levels, this tool is your first step. By visualizing the process, you can make smarter decisions that align with your health goals. To get a complete picture, you can also use our <Link href="/calculators/intake">Caffeine Intake Calculator</Link> to track your total dose.
+              Understanding your personal caffeine decay curve is a superpower. It allows you to strategically time your intake for maximum focus when you need it, and ensure it has faded by the time you want to rest. Whether you're trying to avoid disrupting your sleep, manage your tolerance, or simply gain more control over your energy levels, this tool is your first step. By visualizing the process, you can make smarter decisions that align with your health goals. To get a complete picture, you can also use our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> to track your total dose.
             </p>
           </section>
 
@@ -108,7 +104,7 @@ export default function HalfLifeCalculatorPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/intake" className="hover:underline">Caffeine Intake Calculator</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Caffeine Intake Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>First, find out how much caffeine you're consuming. Track your daily drinks to get a total dose.</p>
@@ -116,7 +112,7 @@ export default function HalfLifeCalculatorPage() {
                   </Card>
                   <Card>
                       <CardHeader>
-                          <CardTitle><Link href="/calculators/drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
+                          <CardTitle><Link href="/calculators/caffeine-drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
                           <p>Compare the caffeine content of your favorite beverages side-by-side.</p>

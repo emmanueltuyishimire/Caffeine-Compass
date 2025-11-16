@@ -5,7 +5,7 @@ import './globals.css';
 import JsonLd from '@/components/JsonLd';
 import { Providers } from '@/app/providers';
 
-const inter = Inter({ subsets: ['latin'], display: 'swap' });
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://calculation.site'),
@@ -26,9 +26,6 @@ export const metadata: Metadata = {
     'energy drinks',
     'caffeine sensitivity',
   ],
-  icons: {
-    icon: '/favicon.ico',
-  },
 };
 
 const websiteJsonLd = {
@@ -49,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} font-body antialiased`} suppressHydrationWarning>
+      <body className={`${inter.variable} font-body antialiased`} suppressHydrationWarning>
         <JsonLd data={websiteJsonLd} />
         <Providers>{children}</Providers>
       </body>
