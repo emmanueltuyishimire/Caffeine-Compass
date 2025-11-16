@@ -3,15 +3,12 @@
 
 import Link from 'next/link';
 import { ThemeToggle } from '../theme-toggle';
-import { Button } from '../ui/button';
-import { Menu } from 'lucide-react';
-import { useSidebar } from '@/hooks/use-sidebar';
 import { mainNav } from '@/lib/nav-links';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const Header = () => {
-    const { setIsOpen } = useSidebar();
     const pathname = usePathname();
   return (
     <header
@@ -19,13 +16,11 @@ const Header = () => {
       role="banner"
     >
       <div className="container flex h-14 items-center">
-         <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(true)}>
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open Sidebar</span>
-            </Button>
-        </div>
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+         <Link href="/" className="mr-6 flex items-center space-x-2">
+            <Image src="/logo.png" alt="Caffeine Compass Logo" width={28} height={28} />
+            <span className="font-bold">Caffeine Compass</span>
+        </Link>
+        <nav className="flex items-center space-x-6 text-sm font-medium">
             {mainNav.map((link) => (
                 <Link
                     key={link.href}
