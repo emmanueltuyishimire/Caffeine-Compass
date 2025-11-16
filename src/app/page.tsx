@@ -14,15 +14,15 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
-    description: 'Harness the power of caffeine with our suite of science-backed calculators. Track your intake, understand your metabolism, and optimize your timing for peak performance and better health.',
+    title: 'Caffeine Compass — Calculators, Coffee Business Resources, and Blog',
+    description: 'Your central hub for caffeine calculators, coffee shop business management, product reviews, and in-depth articles. Solve problems and find answers for your personal and professional coffee needs.',
 };
 
 const homePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Caffeine Compass Homepage",
-  "description": "Harness the power of caffeine with our suite of science-backed calculators. Track your intake, understand your metabolism, and optimize your timing for peak performance and better health.",
+  "description": "Your central hub for caffeine calculators, coffee shop business management, product reviews, and in-depth articles.",
   "url": "https://calculation.site/",
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -40,15 +40,15 @@ const homePageJsonLd = {
 
 const featuredCalculators = [
   {
-    title: "Caffeine Intake Calculator",
+    title: "Daily Intake Calculator",
     href: "/calculators/caffeine-intake",
-    description: "Track your daily consumption against safe limits.",
+    description: "Track your personal consumption against safe limits.",
     icon: Coffee,
   },
   {
-    title: "Caffeine Half-Life Calculator",
+    title: "Half-Life Calculator",
     href: "/calculators/caffeine-half-life",
-    description: "Visualize how long caffeine stays in your system.",
+    description: "Visualize how long caffeine affects your system.",
     icon: BarChart2,
   },
   {
@@ -58,19 +58,19 @@ const featuredCalculators = [
     icon: BrainCircuit,
   },
   {
-    title: "Caffeine Overdose Risk Calculator",
+    title: "Overdose Risk Calculator",
     href: "/calculators/caffeine-overdose-risk",
     description: "Estimate toxic levels based on your body weight.",
     icon: Shield,
   },
   {
-    title: "Caffeine Withdrawal Tracker",
+    title: "Withdrawal Management",
     href: "/calculators/caffeine-withdrawal-tracker",
     description: "Create a tapering plan to quit caffeine safely.",
     icon: TrendingDown,
   },
    {
-    title: "Caffeine Timing Optimizer",
+    title: "Peak Timing Optimizer",
     href: "/calculators/caffeine-timing-optimizer",
     description: "Find the perfect time to drink coffee for energy.",
     icon: Clock,
@@ -100,15 +100,13 @@ export default function Home() {
             )}
           <div className="relative z-10 p-4 max-w-4xl mx-auto rounded-xl">
             <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-outline">
-              Take Control of Your Caffeine.
-              <br/>
-              Unlock Your Potential.
+              Your Hub for Coffee Knowledge & Business.
             </h1>
             <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-black">
-              Harness the power of caffeine without compromising your sleep or well-being. Our science-backed tools provide personalized insights to help you optimize your energy, focus, and health.
+              Explore powerful calculators, in-depth product reviews, and essential resources for managing your coffee shop business—all in one place.
             </p>
             <Link href="/calculators">
-              <Button size="lg">Explore Our Calculators</Button>
+              <Button size="lg">Explore Our Tools</Button>
             </Link>
           </div>
         </section>
@@ -116,9 +114,9 @@ export default function Home() {
         <section id="calculators" className="py-12 md:py-20 bg-background" role="region" aria-labelledby="calculators-heading">
           <div className="container mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 id="calculators-heading" className="text-3xl md:text-4xl font-bold font-headline">A Comprehensive Toolkit for Mindful Caffeine Use</h2>
+                <h2 id="calculators-heading" className="text-3xl md:text-4xl font-bold font-headline">A Comprehensive Toolkit for Every Need</h2>
                 <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-                    From tracking your daily intake to understanding your genetic sensitivity, we have a tool for every question.
+                    From personal health management to professional tools, we have a calculator for every question.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -149,32 +147,32 @@ export default function Home() {
         <section className="py-12 md:py-20 bg-muted/30" role="region" aria-labelledby="how-it-works-heading">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold font-headline">How It Works: Your Path to Optimized Energy</h2>
+                <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold font-headline">Your Path to Answers</h2>
                 <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
-                    In three simple steps, you can transform your relationship with caffeine.
+                    Whatever your goal, our platform provides the resources to help you achieve it.
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-12 text-center">
                   <div className="relative">
                       <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
-                        <span className="text-2xl font-bold" aria-hidden="true">1</span>
+                        <BookOpen className="h-8 w-8" aria-hidden="true" />
                       </div>
-                      <h3 className="text-xl font-bold mb-2">Track Your Intake</h3>
-                      <p className="text-muted-foreground">Use our <Link href="/calculators/caffeine-intake" className="text-accent underline hover:text-accent/80">Intake Calculator</Link> to log your drinks and get a precise measure of your daily consumption.</p>
+                      <h3 className="text-xl font-bold mb-2">Explore Our Blog</h3>
+                      <p className="text-muted-foreground">Dive into expert product reviews, in-depth articles, and practical guides on our <Link href="/blog" className="text-accent underline hover:text-accent/80">Blog</Link> to stay informed.</p>
                   </div>
                   <div className="relative">
                       <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
-                        <span className="text-2xl font-bold" aria-hidden="true">2</span>
+                        <Briefcase className="h-8 w-8" aria-hidden="true" />
                       </div>
-                      <h3 className="text-xl font-bold mb-2">Understand Your Body</h3>
-                      <p className="text-muted-foreground">Discover your unique metabolism with the <Link href="/calculators/caffeine-sensitivity-test" className="text-accent underline hover:text-accent/80">Sensitivity Test</Link> and see how long caffeine affects you.</p>
+                      <h3 className="text-xl font-bold mb-2">Grow Your Business</h3>
+                      <p className="text-muted-foreground">Access resources for coffee shop management, worker scheduling, and industry trends on <Link href="/business" className="text-accent underline hover:text-accent/80">CoffeeBizz</Link>.</p>
                   </div>
                   <div className="relative">
                       <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
-                        <span className="text-2xl font-bold" aria-hidden="true">3</span>
+                        <Coffee className="h-8 w-8" aria-hidden="true" />
                       </div>
-                      <h3 className="text-xl font-bold mb-2">Optimize Your Timing</h3>
-                      <p className="text-muted-foreground">Plan your caffeine use for peak performance and protect your sleep using the <Link href="/calculators/caffeine-half-life" className="text-accent underline hover:text-accent/80">Half-Life Calculator</Link>.</p>
+                      <h3 className="text-xl font-bold mb-2">Optimize Your Intake</h3>
+                      <p className="text-muted-foreground">Use our suite of <Link href="/calculators" className="text-accent underline hover:text-accent/80">Calculators</Link> to manage your personal caffeine consumption for better health and focus.</p>
                   </div>
               </div>
             </div>
@@ -230,7 +228,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
               <div className="order-last md:order-first">
                 <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold font-headline mb-8">
-                  Why Caffeine Compass?
+                  Why Choose Us?
                 </h2>
                 <div className="space-y-8">
                     <div className="flex items-start gap-4">
@@ -242,12 +240,10 @@ export default function Home() {
                       </div>
                       <div>
                         <h3 className="text-xl font-bold mb-1">
-                          Science-Backed & Data-Driven
+                          Comprehensive & Data-Driven
                         </h3>
                         <p className="text-muted-foreground">
-                          Our tools are built on peer-reviewed research in
-                          chronobiology, toxicology, and sleep science to provide
-                          you with trustworthy and accurate information.
+                          Our tools and content are built on reliable data and scientific research to provide you with trustworthy information for personal and professional use.
                         </p>
                       </div>
                     </div>
@@ -260,12 +256,10 @@ export default function Home() {
                       </div>
                       <div>
                         <h3 className="text-xl font-bold mb-1">
-                          Personalized For You
+                          For Enthusiasts & Professionals
                         </h3>
                         <p className="text-muted-foreground">
-                          Caffeine isn't one-size-fits-all. We help you understand
-                          how your personal metabolism, body weight, and timing
-                          influence its effects.
+                          Whether you're managing your personal health, writing an article, or running a business, our platform provides tools and resources for every need.
                         </p>
                       </div>
                     </div>
@@ -281,9 +275,7 @@ export default function Home() {
                           Empowerment Through Knowledge
                         </h3>
                         <p className="text-muted-foreground">
-                          We believe that by understanding how caffeine works, you
-                          can make it a powerful tool for productivity, not a source
-                          of anxiety or poor health.
+                          We believe that by understanding how caffeine and the coffee industry work, you can make smarter decisions for your health, your content, and your business.
                         </p>
                       </div>
                     </div>
