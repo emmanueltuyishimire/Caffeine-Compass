@@ -1,5 +1,5 @@
 
-import { Home, Compass, BookOpen } from 'lucide-react';
+import { Home, Compass, BookOpen, Briefcase } from 'lucide-react';
 
 export const mainNav = [
   {
@@ -16,5 +16,15 @@ export const mainNav = [
     href: '/articles',
     label: 'Articles',
     icon: BookOpen
+  },
+  {
+    href: '/blog',
+    label: 'Blog',
+    icon: BookOpen,
+  },
+  {
+    href: '/business',
+    label: 'CoffeeBizz',
+    icon: Briefcase,
   },
 ];
