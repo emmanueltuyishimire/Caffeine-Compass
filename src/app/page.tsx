@@ -158,14 +158,14 @@ export default function Home() {
                         <BookOpen className="h-8 w-8" aria-hidden="true" />
                       </div>
                       <h3 className="text-xl font-bold mb-2">Explore Our Blog</h3>
-                      <p className="text-muted-foreground">Dive into expert product reviews, in-depth articles, and practical guides on our <Link href="/blog" className="text-accent underline hover:text-accent/80">Blog</Link> to stay informed.</p>
+                      <p className="text-muted-foreground">Dive into expert product reviews, in-depth articles, and practical guides on our <Link href="https://blog.calculation.site" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-accent/80">Blog</Link> to stay informed.</p>
                   </div>
                   <div className="relative">
                       <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
                         <Briefcase className="h-8 w-8" aria-hidden="true" />
                       </div>
                       <h3 className="text-xl font-bold mb-2">Grow Your Business</h3>
-                      <p className="text-muted-foreground">Access resources for coffee shop management, worker scheduling, and industry trends on <Link href="/business" className="text-accent underline hover:text-accent/80">CoffeeBizz</Link>.</p>
+                      <p className="text-muted-foreground">Access resources for coffee shop management, worker scheduling, and industry trends on <Link href="https://business.calculation.site" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-accent/80">CoffeeBizz</Link>.</p>
                   </div>
                   <div className="relative">
                       <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mx-auto mb-4">
@@ -198,7 +198,7 @@ export default function Home() {
                              <p className="text-muted-foreground">Explore in-depth articles, scientific explainers, and practical guides on everything from caffeine's effect on REM sleep to the history of coffee.</p>
                         </CardContent>
                         <div className="p-6 pt-0">
-                            <Link href="/blog">
+                            <Link href="https://blog.calculation.site" target="_blank" rel="noopener noreferrer">
                                 <Button className="w-full">Visit the Blog</Button>
                             </Link>
                         </div>
@@ -214,7 +214,7 @@ export default function Home() {
                             <p className="text-muted-foreground">Your resource for the business of coffee. Discover insights into running a coffee shop, industry trends, and the economics of the world's favorite beverage.</p>
                         </CardContent>
                         <div className="p-6 pt-0">
-                             <Link href="/business">
+                             <Link href="https://business.calculation.site" target="_blank" rel="noopener noreferrer">
                                 <Button className="w-full" variant="secondary">Explore CoffeeBizz</Button>
                             </Link>
                         </div>

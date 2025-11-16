@@ -18,12 +18,12 @@ export const mainNav = [
     icon: BookOpen
   },
   {
-    href: '/blog',
+    href: 'https://blog.calculation.site',
     label: 'Blog',
     icon: BookOpen,
   },
   {
-    href: '/business',
+    href: 'https://business.calculation.site',
     label: 'CoffeeBizz',
     icon: Briefcase,
   },
