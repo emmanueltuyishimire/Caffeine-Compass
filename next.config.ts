@@ -30,19 +30,19 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/blog',
-        destination: 'https://blog.calculation.site',
+        destination: 'https://caffeine-compass-blog.netlify.app',
       },
       {
         source: '/blog/:path*',
-        destination: 'https://blog.calculation.site/:path*',
+        destination: 'https://caffeine-compass-blog.netlify.app/:path*',
       },
       {
         source: '/business',
-        destination: 'https://business.calculation.site',
+        destination: 'https://caffeine-compass-coffeebizz.netlify.app',
       },
       {
         source: '/business/:path*',
-        destination: 'https://business.calculation.site/:path*',
+        destination: 'https://caffeine-compass-coffeebizz.netlify.app/:path*',
       },
     ];
   },

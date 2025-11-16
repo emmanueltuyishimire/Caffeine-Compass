@@ -38,11 +38,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/business',
-        destination: 'https://business.calculation.site',
+        destination: 'https://caffeine-compass-coffeebizz.netlify.app/blog',
       },
       {
         source: '/business/:path*',
-        destination: 'https://business.calculation.site/:path*',
+        destination: 'https://caffeine-compass-coffeebizz.netlify.app/blog/:path*',
       },
     ];
   },
