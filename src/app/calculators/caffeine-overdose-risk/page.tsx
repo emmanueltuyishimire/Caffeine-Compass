@@ -166,14 +166,12 @@ export default function CaffeineOverdoseRiskPage() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
-                 <div className="sticky top-20">
-                    <CaffeineOverdoseRiskCalculatorLoader />
-                </div>
+        <div>
+            <div className="mb-12">
+                <CaffeineOverdoseRiskCalculatorLoader />
             </div>
 
-            <div className="lg:col-span-1 prose prose-lg dark:prose-invert max-w-none space-y-12">
+            <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-12">
                 <section id="disclaimer" aria-labelledby="disclaimer-heading">
                     <Card className="bg-destructive/10 border-destructive mt-8" role="alert">
                         <CardHeader>

@@ -179,13 +179,11 @@ export default function DrinksDatabasePage() {
           </p>
         </header>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
-             <div className="sticky top-20">
+        <div>
+            <div className="mb-12">
                 <DrinksDatabase />
             </div>
-          </div>
-          <div className="lg:col-span-1 prose prose-lg dark:prose-invert max-w-none space-y-12">
+            <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-12">
             <section id="introduction" aria-labelledby="introduction-heading">
                 <h2 id="introduction-heading" className="text-3xl font-bold">Know Your Buzz: The Definitive Guide to Caffeine Content</h2>
                 <p>
@@ -263,7 +261,7 @@ export default function DrinksDatabasePage() {
                         </TableRow>
                          <TableRow>
                             <TableCell className="font-medium">Clear Data Display</TableCell>
-                            <TableCell>Each entry clearly shows drink name, serving size (ml), and caffeine (mg).</TableCell>
+                            <TableCell>Each entry clearly shows drink name, serving size (ml), and total caffeine (mg).</TableCell>
                             <TableCell>Removes ambiguity, giving you all the necessary data points to make an informed decision or log your intake.</TableCell>
                         </TableRow>
                     </TableBody>

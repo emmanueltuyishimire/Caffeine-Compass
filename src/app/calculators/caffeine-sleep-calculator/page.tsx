@@ -140,13 +140,11 @@ export default function CaffeineSleepCalculatorPage() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
-                <div className="sticky top-20">
-                    <HalfLifeEstimatorLoader />
-                </div>
+        <div>
+            <div className="mb-12">
+                <HalfLifeEstimatorLoader />
             </div>
-            <div className="lg:col-span-1 prose prose-lg dark:prose-invert max-w-none space-y-12">
+            <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-12">
                 <section id="introduction" aria-labelledby="introduction-heading">
                     <h2 id="introduction-heading" className="text-3xl font-bold">The Invisible Thief: Unmasking the Lingering Caffeine That Steals Your Sleep</h2>
                     <p>
