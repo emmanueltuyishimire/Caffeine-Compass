@@ -26,6 +26,26 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/blog',
+        destination: 'https://blog.calculation.site',
+      },
+      {
+        source: '/blog/:path*',
+        destination: 'https://blog.calculation.site/:path*',
+      },
+      {
+        source: '/business',
+        destination: 'https://business.calculation.site',
+      },
+      {
+        source: '/business/:path*',
+        destination: 'https://business.calculation.site/:path*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

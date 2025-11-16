@@ -26,6 +26,18 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/blog/:path*',
+        destination: 'https://blog.calculation.site/:path*',
+      },
+      {
+        source: '/business/:path*',
+        destination: 'https://business.calculation.site/:path*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
