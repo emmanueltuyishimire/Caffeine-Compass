@@ -30,6 +30,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '/articles/how-long-before-bed-to-stop-caffeine'
   ];
 
+  // Placeholder for proxied blog routes
+  const blogRoutes: string[] = [
+    // e.g., '/blog/my-first-post', '/blog/another-post'
+  ];
+
+  // Placeholder for proxied business routes
+  const businessRoutes: string[] = [
+    // e.g., '/business/our-services', '/business/contact-us'
+  ];
+
   const staticUrls = staticPages.map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -49,6 +59,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+  }));
+
+  const blogUrls = blogRoutes.map(route => ({
+      url: `${baseUrl}${route}`, // The route already includes /blog
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+  }));
+
+  const businessUrls = businessRoutes.map(route => ({
+      url: `${baseUrl}${route}`, // The route already includes /business
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
   }));
   
   return [
@@ -73,5 +97,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticUrls,
     ...calculatorUrls,
     ...articleUrls,
+    ...blogUrls,
+    ...businessUrls,
   ]
 }
