@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '/articles/how-to-quit-caffeine',
       '/articles/caffeine-makes-you-tired',
       '/articles/caffeine-doesnt-affect-you',
+      '/articles/does-sprite-have-caffeine',
   ];
 
   // Placeholder for proxied blog routes
@@ -104,3 +105,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...businessUrls,
   ]
 }
+
+    
