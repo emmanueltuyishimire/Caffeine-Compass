@@ -10,19 +10,18 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
     BookOpen,
     HeartPulse,
-    Briefcase,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Caffeine Compass | Caffeine Calculators & Coffee Business Hub',
-    description: 'The ultimate resource for caffeine calculators, coffee business management, and science-backed articles. Optimize your intake, improve your sleep, and grow your business.',
+    title: 'Caffeine Compass | Caffeine Calculators, Data & Science',
+    description: 'The ultimate resource for caffeine calculators, data tools, and science-backed articles. Optimize your intake, improve your sleep, and master your energy.',
 };
 
 const homePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Caffeine Compass Homepage",
-  "description": "The ultimate resource for caffeine calculators, coffee business management, and science-backed articles.",
+  "description": "The ultimate resource for caffeine calculators, data tools, and science-backed articles.",
   "url": "https://calculation.site/",
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -100,17 +99,14 @@ export default function Home() {
             )}
           <div className="relative z-10 p-4 max-w-4xl mx-auto rounded-xl bg-black/30 backdrop-blur-sm">
             <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
-              Master Your Caffeine. Grow Your Business.
+              Understand Your Buzz. Master Your Energy.
             </h1>
             <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
-              Explore powerful calculators, in-depth product reviews, and essential resources for managing your coffee shop business—all in one place.
+              The ultimate resource for caffeine calculators, data tools, and science-backed articles. Take control of your caffeine consumption for better focus, sleep, and health.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Link href="/calculators">
-                <Button size="lg" aria-label="Explore our suite of caffeine calculators">Explore Our Tools</Button>
-              </Link>
-               <Link href="https://business.calculation.site" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="secondary" aria-label="Visit CoffeeBizz for business resources">Visit CoffeeBizz</Button>
+                <Button size="lg" aria-label="Explore our suite of caffeine calculators">Explore Our Calculators</Button>
               </Link>
             </div>
           </div>
@@ -119,9 +115,9 @@ export default function Home() {
         <section id="calculators" className="py-12 md:py-20 bg-background" role="region" aria-labelledby="calculators-heading">
           <div className="container mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 id="calculators-heading" className="text-3xl md:text-4xl font-bold font-headline">A Comprehensive Toolkit for Every Need</h2>
+                <h2 id="calculators-heading" className="text-3xl md:text-4xl font-bold font-headline">A Toolkit for Mindful Caffeination</h2>
                 <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-                    From personal health management to professional tools, we have a calculator for every question about caffeine's impact on your life and work.
+                    From tracking your daily intake to understanding your genetic tolerance, our calculators provide the data you need to make smarter choices.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -149,57 +145,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="platforms" className="py-12 md:py-20 bg-muted/30" role="region" aria-labelledby="platforms-heading">
-            <div className="container mx-auto px-4">
-                 <div className="text-center mb-12">
-                    <h2 id="platforms-heading" className="text-3xl md:text-4xl font-bold font-headline">Explore Our Content Platforms</h2>
-                    <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-                        Dive deeper into the world of caffeine with our specialized content hubs for enthusiasts and entrepreneurs.
-                    </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <Card className="flex flex-col">
-                        <CardHeader>
-                            <div className="flex items-center gap-4">
-                                <BookOpen className="h-8 w-8 text-primary" />
-                                <CardTitle>Our Blog</CardTitle>
-                            </div>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                             <p className="text-muted-foreground">Explore in-depth articles, scientific explainers, and practical guides on everything from caffeine's effect on REM sleep to the history of coffee.</p>
-                        </CardContent>
-                        <div className="p-6 pt-0">
-                            <Link href="https://blog.calculation.site" target="_blank" rel="noopener noreferrer">
-                                <Button className="w-full">Visit the Blog</Button>
-                            </Link>
-                        </div>
-                    </Card>
-                    <Card className="flex flex-col">
-                        <CardHeader>
-                            <div className="flex items-center gap-4">
-                                <Briefcase className="h-8 w-8 text-accent" />
-                                <CardTitle>CoffeeBizz</CardTitle>
-                            </div>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                            <p className="text-muted-foreground">Your resource for the business of coffee. Discover insights into running a coffee shop, industry trends, and the economics of the world's favorite beverage.</p>
-                        </CardContent>
-                        <div className="p-6 pt-0">
-                             <Link href="https://business.calculation.site" target="_blank" rel="noopener noreferrer">
-                                <Button className="w-full" variant="secondary">Explore CoffeeBizz</Button>
-                            </Link>
-                        </div>
-                    </Card>
-                </div>
-            </div>
-        </section>
-
-        <section id="why-choose-us" className="py-12 md:py-20" role="region" aria-labelledby="why-us-heading">
+        <section id="why-choose-us" className="py-12 md:py-20 bg-muted/30" role="region" aria-labelledby="why-us-heading">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
               <div className="order-last md:order-first">
                 <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold font-headline mb-8">
-                  Why Choose Caffeine Compass?
+                  Why Trust Caffeine Compass?
                 </h2>
                 <div className="space-y-8">
                     <div className="flex items-start gap-4">
@@ -211,10 +162,10 @@ export default function Home() {
                       </div>
                       <div>
                         <h3 className="text-xl font-bold mb-1">
-                          Comprehensive & Data-Driven
+                          Science-Backed & Data-Driven
                         </h3>
                         <p className="text-muted-foreground">
-                          Our tools and content are built on reliable data and scientific research to provide you with trustworthy information for personal and professional use.
+                          Our tools and articles are built on a foundation of scientific research and verifiable data to provide you with trustworthy information for your health.
                         </p>
                       </div>
                     </div>
@@ -227,10 +178,10 @@ export default function Home() {
                       </div>
                       <div>
                         <h3 className="text-xl font-bold mb-1">
-                          For Enthusiasts & Professionals
+                          Focused on Personal Wellness
                         </h3>
                         <p className="text-muted-foreground">
-                          Whether you're managing your personal health, writing an article, or running a business, our platform provides tools and resources for every need.
+                          We believe that understanding your personal reaction to caffeine is key. Our calculators are designed to help you discover what works for your unique body.
                         </p>
                       </div>
                     </div>
@@ -246,7 +197,7 @@ export default function Home() {
                           Empowerment Through Knowledge
                         </h3>
                         <p className="text-muted-foreground">
-                          We believe that by understanding how caffeine and the coffee industry work, you can make smarter decisions for your health, your content, and your business.
+                          We give you the data to move beyond guessing. Understand how caffeine works, and you can make smarter decisions for your focus, sleep, and overall well-being.
                         </p>
                       </div>
                     </div>

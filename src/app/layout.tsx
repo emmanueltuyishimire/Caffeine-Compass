@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://calculation.site'),
   title: {
     default:
-      'Caffeine Compass — Optimize Your Caffeine for Better Energy & Sleep',
+      'Caffeine Compass — Caffeine Calculators, Data & Science',
     template: '%s — Caffeine Compass',
   },
   description:
