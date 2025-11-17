@@ -18,7 +18,7 @@ import {
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import { Coffee, BrainCircuit, Droplet, TrendingUp, Lightbulb, CheckCircle, ShieldCheck, Heart, User, Clock, Moon, Leaf } from 'lucide-react';
+import { Coffee, BrainCircuit, Droplet, TrendingUp, Lightbulb, CheckCircle, ShieldCheck, Heart, User, Clock, Moon, Leaf, Briefcase, GraduationCap } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'How Much Caffeine in a Shot of Espresso? — A Complete Guide',
@@ -133,6 +133,7 @@ const pageJsonLd = {
           "@type": "Answer",
           "text": "The best way is to know how many shots are in your drink and use the average of ~63mg per shot. Our Caffeine in Drinks Database contains specific data for major chains like Starbucks and Dunkin', which is based on their standard recipes."
         }
+
       }
     ]
   }
@@ -244,7 +245,7 @@ export default function HowMuchCaffeineInEspressoArticle() {
                   <CardContent>
                     <p>So, does espresso have more caffeine than drip coffee? The answer is both yes and no, and it comes down to <strong>concentration vs. total dose</strong>.</p>
                     <p><strong>Per ounce, espresso is the clear winner.</strong> A 1oz shot has ~63mg of caffeine, while 1oz of drip coffee has only about 12mg. Espresso is far more concentrated.</p>
-                    <p><strong>However, a typical serving of drip coffee contains more total caffeine.</strong> Nobody drinks just one ounce of drip coffee. A standard 8oz cup has ~95mg of caffeine, and a large 16oz mug can have ~190mg. Your double-shot latte (~126mg) has more caffeine than an 8oz coffee but less than a 16oz one. It's all about the total volume consumed. Use our <Link href="/calculators/caffeine-drink-comparison">Drink Comparison Tool</Link> to see this visualized.</p>
+                    <p>However, a typical serving of drip coffee contains more total caffeine. Nobody drinks just one ounce of drip coffee. A standard 8oz cup has ~95mg of caffeine, and a large 16oz mug can have ~190mg. Your double-shot latte (~126mg) has more caffeine than an 8oz coffee but less than a 16oz one. It's all about the total volume consumed. Use our <Link href="/calculators/caffeine-drink-comparison">Drink Comparison Tool</Link> to see this visualized.</p>
                   </CardContent>
                 </Card>
 
@@ -261,7 +262,7 @@ export default function HowMuchCaffeineInEspressoArticle() {
                 <p>Let's see how these numbers play out in the daily lives of different espresso drinkers.</p>
                 
                 <Card className="mb-6">
-                    <CardHeader><CardTitle>The Morning Latte Drinker</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-3"><Briefcase aria-hidden="true"/> The Morning Latte Drinker</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> A 30-year-old professional, Sarah, orders a medium (12oz) latte from her local cafe on her way to work.</p>
                         <p><strong>Caffeine Content:</strong> The shop uses a standard double shot. 2 x 63mg = <strong>~126 mg</strong>.</p>
@@ -270,7 +271,7 @@ export default function HowMuchCaffeineInEspressoArticle() {
                 </Card>
 
                  <Card className="mb-6">
-                    <CardHeader><CardTitle>The European Tourist</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-3"><User aria-hidden="true"/> The European Tourist</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> Marco, visiting from Italy, orders "un caffè" (an espresso) after his lunch. He receives a single shot in a small ceramic cup.</p>
                         <p><strong>Caffeine Content:</strong> The cafe uses a traditional Italian blend with Robusta beans. The caffeine content is likely slightly higher than average, perhaps <strong>~70 mg</strong>.</p>
@@ -279,7 +280,7 @@ export default function HowMuchCaffeineInEspressoArticle() {
                 </Card>
 
                 <Card>
-                    <CardHeader><CardTitle>The Student with an Iced Americano</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-3"><GraduationCap aria-hidden="true"/> The Student with an Iced Americano</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> Emily, a 22-year-old student, orders a large (20oz) iced Americano to fuel a long study session. The barista tells her it contains four shots of espresso.</p>
                         <p><strong>Caffeine Content:</strong> 4 x 63mg = <strong>~252 mg</strong>.</p>
@@ -305,7 +306,7 @@ export default function HowMuchCaffeineInEspressoArticle() {
                 <p>An after-dinner espresso is a classic cultural ritual, but it can be a disaster for sleep. However, if you are a <Link href="/calculators/caffeine-sensitivity-test">fast metabolizer</Link> and it's still several hours before your bedtime, a single shot (~63mg) is a much lower risk than a full cup of coffee (~95mg+). Knowing the specific dose helps you make a more informed risk-benefit calculation for your sleep.</p>
             </section>
             
-            <Separator/>
+            <Separator />
 
             <section id="common-mistakes" aria-labelledby="common-mistakes-heading">
                 <h2 id="common-mistakes-heading" className="text-3xl font-bold">Common Mistakes and Misconceptions</h2>
