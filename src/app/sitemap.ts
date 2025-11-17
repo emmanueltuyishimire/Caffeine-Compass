@@ -42,6 +42,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '/articles/how-much-caffeine-in-monster',
   ];
 
+  const dataRoutes = [
+      '/data/sugar-in-drinks',
+  ];
+
   const staticUrls = staticPages.map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -61,6 +65,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+  }));
+
+  const dataUrls = dataRoutes.map(route => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
   }));
   
   return [
@@ -85,5 +96,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticUrls,
     ...calculatorUrls,
     ...articleUrls,
+    ...dataUrls,
   ]
 }

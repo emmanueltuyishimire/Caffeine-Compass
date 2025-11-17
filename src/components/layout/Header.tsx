@@ -7,6 +7,16 @@ import { mainNav } from '@/lib/nav-links';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuLink,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+import ListItem from './ListItem';
 
 const Header = () => {
     const pathname = usePathname();
@@ -20,21 +30,41 @@ const Header = () => {
             <Image src="/logo.png" alt="Caffeine Compass Logo" width={28} height={28} />
             <span className="font-bold">Caffeine Compass</span>
         </Link>
-        <nav className="flex items-center space-x-6 text-sm font-medium">
-            {mainNav.map((link) => (
-                <Link
-                    key={link.href}
-                    href={link.href}
-                    target={link.href.startsWith('http') ? '_blank' : '_self'}
-                    className={cn(
-                        'transition-colors hover:text-primary',
-                        pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
+        <NavigationMenu>
+            <NavigationMenuList>
+                {mainNav.map((item) => (
+                    <NavigationMenuItem key={item.label}>
+                    {item.links ? (
+                        <>
+                            <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                    {item.links.map((link) => (
+                                        <ListItem
+                                            key={link.label}
+                                            title={link.label}
+                                            href={link.href}
+                                        >
+                                            {link.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </>
+                    ) : (
+                        <Link href={item.href!} legacyBehavior passHref>
+                            <NavigationMenuLink className={cn(
+                                navigationMenuTriggerStyle(),
+                                pathname === item.href ? 'bg-accent/50 text-foreground' : 'text-muted-foreground'
+                            )}>
+                                {item.label}
+                            </NavigationMenuLink>
+                        </Link>
                     )}
-                >
-                    {link.label}
-                </Link>
-            ))}
-        </nav>
+                    </NavigationMenuItem>
+                ))}
+            </NavigationMenuList>
+        </NavigationMenu>
         <div className="flex flex-1 items-center justify-end space-x-2">
           <ThemeToggle />
         </div>
