@@ -26,7 +26,7 @@ const Header = () => {
       role="banner"
     >
       <div className="container flex h-14 items-center">
-         <Link href="/" className="mr-6 flex items-center space-x-2">
+         <Link href="/" className="mr-6 flex items-center space-x-2" aria-label="Caffeine Compass Homepage">
             <Image src="/logo.png" alt="Caffeine Compass Logo" width={28} height={28} />
             <span className="font-bold">Caffeine Compass</span>
         </Link>
@@ -52,14 +52,14 @@ const Header = () => {
                             </NavigationMenuContent>
                         </>
                     ) : (
-                        <NavigationMenuLink asChild>
-                            <Link href={item.href!} className={cn(
+                        <Link href={item.href!} legacyBehavior passHref>
+                            <NavigationMenuLink className={cn(
                                 navigationMenuTriggerStyle(),
                                 pathname === item.href ? 'bg-accent/50 text-foreground' : 'text-muted-foreground'
                             )}>
                                 {item.label}
-                            </Link>
-                        </NavigationMenuLink>
+                            </NavigationMenuLink>
+                        </Link>
                     )}
                     </NavigationMenuItem>
                 ))}

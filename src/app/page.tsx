@@ -13,16 +13,24 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Caffeine Compass | Your Ultimate Guide to Caffeine',
+    title: 'Caffeine Compass — Caffeine Calculators, Articles & Science',
     description: 'The ultimate resource for caffeine calculators, data tools, and science-backed articles. Optimize your intake, improve your sleep, and master your energy.',
 };
 
 const homePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Caffeine Compass Homepage",
-  "description": "The ultimate resource for caffeine calculators, data tools, and science-backed articles.",
+  "name": "Caffeine Compass — Your Ultimate Guide to Caffeine",
+  "description": "The ultimate resource for caffeine calculators, data tools, and science-backed articles to optimize your intake, improve sleep, and master your energy.",
   "url": "https://calculation.site/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Caffeine Compass",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://calculation.site/logo.png"
+    }
+  },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [

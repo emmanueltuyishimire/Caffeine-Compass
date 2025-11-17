@@ -2,31 +2,31 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "Close-up of a person holding a warm cup of coffee, with a blurred, serene background, evoking a sense of calm and focus.",
+      "description": "Close-up of a person holding a warm cup of coffee, with a blurred, serene background, a single drop creating a ripple in the coffee, symbolizing focus and effect.",
       "imageUrl": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2ZmZWUlMjBmb2N1c3xlbnwwfHx8fDE3NjMyODU2ODd8MA&ixlib=rb-4.1.0&q=80&w=1920",
       "imageHint": "coffee focus"
     },
     {
       "id": "why-us-image",
-      "description": "A close-up of a coffee cup next to a scientific diagram illustrating chemical bonds, symbolizing the science-backed approach of the website.",
+      "description": "A clean, modern flat lay of a coffee cup, a notebook, and a pair of glasses on a minimalist desk, representing a scientific and organized approach to understanding caffeine.",
       "imageUrl": "https://images.unsplash.com/photo-1582832505469-69b19eec522e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzY2llbmNlJTIwY29mZmVlfGVufDB8fHx8MTc2MjkyMDk1OXww&ixlib=rb-4.1.0&q=80&w=600",
       "imageHint": "science coffee"
     },
     {
       "id": "mission-image",
-      "description": "An antique compass lying on a vintage map, representing guidance and the mission to navigate caffeine consumption.",
+      "description": "An antique compass resting on a vintage map, representing guidance, precision, and the mission to navigate the complexities of caffeine consumption.",
       "imageUrl": "https://images.unsplash.com/photo-1501003878151-d3cb86543948?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21wYXNzJTIwbWFwfGVufDB8fHx8MTc2MzEzMzgwMnww&ixlib=rb-4.1.0&q=80&w=500",
       "imageHint": "compass map"
     },
     {
       "id": "team-evelyn",
-      "description": "A professional portrait of a mature female scientist with glasses, looking thoughtfully at the camera in a laboratory setting.",
+      "description": "Professional headshot of a thoughtful, mature female scientist with glasses, looking directly at the camera with a soft smile in a well-lit laboratory setting.",
       "imageUrl": "https://images.unsplash.com/photo-1579159334584-3c6a5818382e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmZW1hbGUlMjBzY2llbnRpc3QlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjMxMzM4MDJ8MA&ixlib=rb-4.1.0&q=80&w=100",
       "imageHint": "scientist portrait"
     },
     {
       "id": "team-alex",
-      "description": "A professional headshot of a young male software developer with a friendly smile, in a modern office environment.",
+      "description": "A professional and friendly headshot of a young male software developer with glasses, smiling in a modern, bright office environment.",
       "imageUrl": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwZGV2ZWxvcGVyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzMTMzODAyfDA&ixlib=rb-4.1.0&q=80&w=100",
       "imageHint": "developer portrait"
     }
