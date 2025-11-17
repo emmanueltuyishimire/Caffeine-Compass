@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import { BookText, Database, Zap, TrendingDown, CupSoda } from 'lucide-react';
+import { BookText, Database, Zap, TrendingDown, CupSoda, Leaf } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Learn About Caffeine — Articles, Guides & Tools',
@@ -14,7 +14,7 @@ const articleLinks = [
   {
     title: "What to Do When Caffeine Doesn’t Affect You",
     href: "/articles/caffeine-doesnt-affect-you",
-    description: "A science-backed guide to understanding caffeine tolerance.",
+    description: "A science-backed guide to understanding and overcoming caffeine tolerance.",
     icon: BookText,
   },
   {
@@ -28,6 +28,12 @@ const articleLinks = [
     href: "/articles/does-sprite-have-caffeine",
     description: "A clear answer and comparison to other popular sodas.",
     icon: CupSoda,
+  },
+   {
+    title: "Does Matcha Have Caffeine?",
+    href: "/articles/does-matcha-have-caffeine",
+    description: "A guide to its caffeine content and unique effects vs. coffee.",
+    icon: Leaf,
   },
   {
     title: "How Long Before Bed to Stop Caffeine",
@@ -162,5 +168,3 @@ export default function ArticlesPage() {
     </>
   );
 }
-
-    
