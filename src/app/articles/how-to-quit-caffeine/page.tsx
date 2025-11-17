@@ -235,15 +235,13 @@ export default function HowToQuitCaffeineArticle() {
               </li>
                <li>
                 <strong>Step 4: Execute with Smart Swaps</strong>
-                <p>This is where the magic happens. To meet your daily targets, you'll need to make smart substitutions. Don't just drink "less coffee." Be specific.
-                    <ul>
-                        <li>Replace a high-caffeine coffee with a lower-caffeine one. (Use our <Link href="/calculators/caffeine-drinks-database">Drinks Database</Link> to check values).</li>
-                        <li>Brew a "half-caff" by mixing regular and decaf grounds.</li>
-                        <li>Swap one of your coffees for a black or green tea.</li>
-                        <li>Reduce your serving size from a grande to a tall.</li>
-                    </ul>
-                    These small, calculated changes make it easy to hit your daily targets without feeling deprived.
-                </p>
+                <p>This is where the magic happens. To meet your daily targets, you'll need to make smart substitutions. Don't just drink "less coffee." Be specific.</p>
+                <ul>
+                    <li>Replace a high-caffeine coffee with a lower-caffeine one. (Use our <Link href="/calculators/caffeine-drinks-database">Drinks Database</Link> to check values).</li>
+                    <li>Brew a "half-caff" by mixing regular and decaf grounds.</li>
+                    <li>Swap one of your coffees for a black or green tea.</li>
+                    <li>Reduce your serving size from a grande to a tall.</li>
+                </ul>
               </li>
             </ol>
           </section>
