@@ -4,7 +4,7 @@ import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import DrinksDatabase from '@/components/features/DrinksDatabase';
+import DrinksDatabaseLoader from '@/components/features/loaders/DrinksDatabaseLoader';
 import {
   Accordion,
   AccordionContent,
@@ -158,6 +158,29 @@ const pageJsonLd = {
         }
       }
     ]
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://calculation.site/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators",
+        "item": "https://calculation.site/calculators"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Caffeine in Drinks Database",
+        "item": "https://calculation.site/calculators/caffeine-drinks-database"
+      }
+    ]
   }
 };
 
@@ -167,7 +190,7 @@ export default function DrinksDatabasePage() {
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12 md:py-20">
         <header className="text-center mb-12" role="banner">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4" id="page-title">
             Caffeine in Drinks Database
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -177,7 +200,7 @@ export default function DrinksDatabasePage() {
         
         <div>
             <div className="mb-12">
-                <DrinksDatabase />
+                <DrinksDatabaseLoader />
             </div>
             <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-12">
             <section id="introduction" aria-labelledby="introduction-heading">
@@ -217,7 +240,7 @@ export default function DrinksDatabasePage() {
                 </ul>
                 <Card className="my-8 bg-primary/5 border-primary/20">
                     <CardHeader>
-                        <CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary" />Data You Can Trust</CardTitle>
+                        <CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary" aria-hidden="true" />Data You Can Trust</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Our database is meticulously compiled from a variety of reliable sources, including direct information from beverage manufacturers, published nutritional data, and independent third-party lab analyses. While brands may occasionally reformulate their products, our database provides one of the most accurate and comprehensive snapshots available.</p>
@@ -381,7 +404,7 @@ export default function DrinksDatabasePage() {
                 <h2 id="expert-insights-heading" className="text-3xl font-bold">Quick Hacks & Expert Insights</h2>
                 <Card className="mb-4">
                     <CardHeader>
-                        <CardTitle className="flex items-center gap-2"><Coffee aria-hidden="true"/> For Coffee Drinkers</CardTitle>
+                        <CardTitle className="flex items-center gap-2"><Coffee aria-hidden="true" /> For Coffee Drinkers</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>If you're looking to reduce caffeine, don't just shrink your serving size—change your bean. Coffees made with 100% Arabica beans generally have less caffeine than blends that include Robusta beans.</p>
@@ -389,7 +412,7 @@ export default function DrinksDatabasePage() {
                 </Card>
                 <Card className="mb-4">
                     <CardHeader>
-                        <CardTitle className="flex items-center gap-2"><Leaf aria-hidden="true"/> For Tea Lovers</CardTitle>
+                        <CardTitle className="flex items-center gap-2"><Leaf aria-hidden="true" /> For Tea Lovers</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Steep time matters. A black tea steeped for 5 minutes can have nearly double the caffeine of the same tea steeped for only 1 minute. For less caffeine, use a shorter steep time.</p>
@@ -397,7 +420,7 @@ export default function DrinksDatabasePage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle className="flex items-center gap-2"><Zap aria-hidden="true"/> For Energy Drink Users</CardTitle>
+                        <CardTitle className="flex items-center gap-2"><Zap aria-hidden="true" /> For Energy Drink Users</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Pay close attention to serving sizes on the label. Many large cans are listed as containing "2 servings," meaning the total caffeine in the can is double what's listed in the nutrition facts per serving. Our database lists the total caffeine per can.</p>
@@ -429,7 +452,7 @@ export default function DrinksDatabasePage() {
             </p>
             <ul>
                 <li><strong>Drip Coffee:</strong> Hot water passes over medium-coarse grounds for a few minutes. This is a moderately efficient extraction method.</li>
-                <li><strong>Espresso:</strong> Very hot, highly pressurized water is forced through very fine grounds for only 25-30 seconds. The high pressure and large surface area of the fine grind lead to a very rapid and efficient extraction, resulting in a highly concentrated liquid. A single shot has less total caffeine than a large drip coffee, but far more per ounce.</li>
+                <li><strong>Espresso:</strong> Very hot, highly pressurized water is forced through very fine grounds for only 25-30 seconds. The high pressure and the large surface area of the fine grind lead to a very rapid and efficient extraction, resulting in a highly concentrated liquid. A single shot has less total caffeine than a large drip coffee, but far more per ounce.</li>
                 <li><strong>Cold Brew:</strong> This method uses no heat, which normally speeds up chemical reactions. To compensate, it uses a very high ratio of coffee-to-water and a very long steep time (12-24 hours). This combination results in a highly concentrated brew that is often diluted but still typically contains more caffeine than drip coffee per serving.</li>
             </ul>
             <h3 className="text-2xl font-semibold">From Leaf to Cup: The World of Tea</h3>

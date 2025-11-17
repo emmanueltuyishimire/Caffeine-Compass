@@ -1,16 +1,107 @@
+import { MetadataRoute } from 'next'
+ 
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://calculation.site';
 
-import { Skeleton } from "@/components/ui/skeleton";
+  const staticPages = [
+    '/about',
+    '/contact',
+    '/privacy-policy',
+    '/terms-and-conditions',
+    '/disclaimer',
+  ];
 
-export default function Loading() {
-  return (
-    <div className="container mx-auto px-4 py-12 md:py-20">
-      <header className="text-center mb-12">
-        <Skeleton className="h-12 w-3/4 mx-auto mb-4" />
-        <Skeleton className="h-6 w-full max-w-3xl mx-auto" />
-      </header>
-      <div className="max-w-4xl mx-auto">
-        <Skeleton className="h-[500px] w-full" />
-      </div>
-    </div>
-  );
+  const calculatorRoutes = [
+    '/calculators/caffeine-intake',
+    '/calculators/caffeine-half-life',
+    '/calculators/caffeine-timing-optimizer',
+    '/calculators/caffeine-withdrawal-tracker',
+    '/calculators/caffeine-sensitivity-test',
+    '/calculators/caffeine-drink-comparison',
+    '/calculators/caffeine-drinks-database',
+    '/calculators/caffeine-overdose-risk',
+    '/calculators/pregnancy-caffeine-safe-limit',
+    '/calculators/caffeine-sleep-calculator',
+  ];
+
+  const articleRoutes = [
+      '/articles/caffeine-effect-on-rem-sleep',
+      '/articles/caffeine-half-life-sleep',
+      '/articles/how-long-before-bed-to-stop-caffeine',
+      '/articles/how-to-quit-caffeine',
+      '/articles/caffeine-makes-you-tired',
+      '/articles/caffeine-doesnt-affect-you',
+      '/articles/does-sprite-have-caffeine',
+      '/articles/does-matcha-have-caffeine',
+      '/articles/how-much-caffeine-in-red-bull',
+      '/articles/does-coke-zero-have-caffeine',
+      '/articles/how-much-caffeine-in-a-cup-of-coffee',
+      '/articles/how-long-does-caffeine-stay-in-your-system',
+      '/articles/how-much-caffeine-in-espresso',
+      '/articles/how-much-caffeine-in-celsius',
+      '/articles/how-much-caffeine-in-monster',
+  ];
+
+  const dataRoutes = [
+      '/data/sugar-in-drinks',
+  ];
+
+  const staticUrls = staticPages.map(route => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  const calculatorUrls = calculatorRoutes.map(route => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
+
+  const articleUrls = articleRoutes.map(route => ({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+  }));
+
+  const dataUrls = dataRoutes.map(route => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+  
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/calculators`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/articles`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/data`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    ...staticUrls,
+    ...calculatorUrls,
+    ...articleUrls,
+    ...dataUrls,
+  ]
 }

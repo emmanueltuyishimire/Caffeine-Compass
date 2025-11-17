@@ -158,6 +158,29 @@ const pageJsonLd = {
         }
       }
     ]
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://calculation.site/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators",
+        "item": "https://calculation.site/calculators"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Caffeine Drink Comparison",
+        "item": "https://calculation.site/calculators/caffeine-drink-comparison"
+      }
+    ]
   }
 };
 
@@ -167,7 +190,7 @@ export default function DrinkComparisonPage() {
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12 md:py-20">
         <header className="text-center mb-12" role="banner">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4" id="page-title">
             Caffeine Drink Comparison Tool
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -187,10 +210,10 @@ export default function DrinkComparisonPage() {
                     "How much caffeine is in this?" It's a question every coffee lover, tea enthusiast, and energy drink consumer has asked. The answer is often surprising and elusive. A grande coffee from Starbucks doesn't have the same kick as a medium from Dunkin'. A can of Red Bull is worlds apart from a can of Bang energy drink. This <strong>Caffeine Drink Comparison Tool</strong> is designed to eliminate that guesswork, providing a clear, visual, and interactive chart to compare beverage caffeine content.
                 </p>
                 <p>
-                    The problem this tool solves is the lack of simple, direct comparison. You can look up individual drink stats, but it’s hard to grasp the scale of difference. Is a cold brew really that much stronger than an espresso? How does <strong>caffeine in coffee vs. tea</strong> actually stack up? Most people dramatically underestimate the caffeine in their drinks, leading to accidental overconsumption, which can cause anxiety, jitteriness, and, most commonly, poor sleep. This tool places that information side-by-side, allowing you to build your own comparison chart from our extensive database of over 1,000 drinks. It transforms abstract numbers into a tangible understanding of what you're consuming.
+                    The problem this tool solves is the lack of simple, direct comparison. You can look up individual drink stats, but it’s hard to grasp the scale of difference. Is a cold brew really that much stronger than an espresso? How does <strong>caffeine in coffee vs. tea</strong> actually stack up? Most people dramatically underestimate the caffeine in their drinks, leading to accidental overconsumption, which can cause anxiety, jitteriness, and, most commonly, poor sleep. This tool places that information side-by-side, allowing you to build your own comparison chart from our extensive <Link href="/calculators/caffeine-drinks-database">database of over 1,000 drinks</Link>. It transforms abstract numbers into a tangible understanding of what you're consuming.
                 </p>
                 <p>
-                    Whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity, this comparison tool is your best friend. Accurate awareness is the cornerstone of mindful caffeine consumption, helping you to harness its benefits without falling prey to its downsides. It’s an essential first step before using our other calculators, like the <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>, as it gives you the foundational knowledge of your drink's potency. You might also want to explore our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> to understand how long that caffeine will affect you.
+                    Whether you're trying to moderate your intake, maximize your energy, or simply satisfy your curiosity, this comparison tool is your best friend. Accurate awareness is the cornerstone of mindful caffeine consumption, helping you to harness its benefits without falling prey to its downsides. It’s an essential first step before using our other calculators, like the <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>, as it gives you the foundational knowledge of your drink's potency. You may also want to explore our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> to understand how long that caffeine will affect you.
                 </p>
             </section>
 
@@ -229,7 +252,7 @@ export default function DrinkComparisonPage() {
                 </ol>
                 <Card className="my-8 bg-primary/5 border-primary/20">
                     <CardHeader>
-                        <CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary" />Data You Can Trust</CardTitle>
+                        <CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary" aria-hidden="true" />Data You Can Trust</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Our database is meticulously compiled from brand-provided information, independent lab tests, and academic studies. This tool centralizes that complex data, doing the hard work of research and verification so you can get a reliable comparison in seconds. For a deeper dive, explore the full <Link href="/calculators/caffeine-drinks-database">Caffeine in Drinks Database</Link>.</p>
@@ -318,7 +341,7 @@ export default function DrinkComparisonPage() {
                 <p>Let's see how different people can use this tool to answer common caffeine questions.</p>
                 
                 <Card className="mb-6">
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Coffee aria-hidden="true"/> The Confused Coffee Shop Customer</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-3"><Coffee aria-hidden="true" /> The Confused Coffee Shop Customer</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Question:</strong> "At Starbucks, what's the difference between a Cold Brew, an Americano, and a Latte?"</p>
                         <p><strong>How they use the tool:</strong> The user selects "Starbucks Cold Brew (Grande)", "Starbucks Caffe Americano (Grande)", and "Starbucks Caffe Latte (Grande)".</p>
@@ -327,7 +350,7 @@ export default function DrinkComparisonPage() {
                 </Card>
                 
                 <Card className="mb-6">
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Zap aria-hidden="true"/> The Energy Drink Enthusiast</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-3"><Zap aria-hidden="true" /> The Energy Drink Enthusiast</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Question:</strong> "Are all energy drinks created equal? I want to know if a Monster is much stronger than a Red Bull."</p>
                         <p><strong>How they use the tool:</strong> They select "Red Bull (250ml)" and "Monster Energy (473ml)". To take it a step further, they also add "Bang Energy (473ml)".</p>
@@ -336,7 +359,7 @@ export default function DrinkComparisonPage() {
                 </Card>
 
                 <Card>
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Leaf aria-hidden="true"/> The Health-Conscious Tea Drinker</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-3"><Leaf aria-hidden="true" /> The Health-Conscious Tea Drinker</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Question:</strong> "I want a warm drink in the afternoon. Which tea has the least caffeine?"</p>
                         <p><strong>How they use the tool:</strong> The user selects "Black Tea," "Green Tea," "White Tea," and "Herbal Tea."</p>
@@ -406,7 +429,7 @@ export default function DrinkComparisonPage() {
                 <h2 id="expert-insights-heading" className="text-3xl font-bold">Quick Hacks & Expert Insights</h2>
                 <Card className="mb-4">
                     <CardHeader>
-                        <CardTitle className="flex items-center gap-2"><Coffee aria-hidden="true"/> For Coffee Drinkers</CardTitle>
+                        <CardTitle className="flex items-center gap-2"><Coffee aria-hidden="true" /> For Coffee Drinkers</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>If you're looking to reduce caffeine, don't just shrink your serving size—change your bean. Coffees made with 100% Arabica beans generally have less caffeine than blends that include Robusta beans. This tool can help you compare specific brand offerings.</p>
@@ -414,7 +437,7 @@ export default function DrinkComparisonPage() {
                 </Card>
                 <Card className="mb-4">
                     <CardHeader>
-                        <CardTitle className="flex items-center gap-2"><Leaf aria-hidden="true"/> For Tea Lovers</CardTitle>
+                        <CardTitle className="flex items-center gap-2"><Leaf aria-hidden="true" /> For Tea Lovers</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Steep time matters. A black tea steeped for 5 minutes can have nearly double the caffeine of the same tea steeped for only 1 minute. For less caffeine, use a shorter steep time. Our listed values are for typical preparations.</p>
@@ -422,7 +445,7 @@ export default function DrinkComparisonPage() {
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle className="flex items-center gap-2"><Zap aria-hidden="true"/> For Energy Drink Users</CardTitle>
+                        <CardTitle className="flex items-center gap-2"><Zap aria-hidden="true" /> For Energy Drink Users</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p>Pay close attention to serving sizes on the label. Many large cans are listed as containing "2 servings," meaning the total caffeine in the can is double what's listed. Our database lists the total caffeine per container to avoid this confusion.</p>
@@ -443,7 +466,7 @@ export default function DrinkComparisonPage() {
             </p>
             <ul>
                 <li><strong>Arabica beans,</strong> which are grown at high altitudes where fewer pests reside, have a naturally lower caffeine content, typically ranging from 1% to 1.5% by weight. They are prized for their complex, aromatic, and less bitter flavor profile. Most specialty coffee is 100% Arabica.</li>
-                <li><strong>Robusta beans,</strong> grown in hotter climates and at lower altitudes with more insects, evolved to produce a much more potent chemical defense. Robusta beans can contain 2.5% to 4.5% caffeine by weight—more than double that of Arabica. They have a harsher, more bitter taste and are often used in espresso blends to produce a thick crema, or in instant coffee for a cheaper, more caffeinated product. A coffee's strength can often be predicted by its bean composition.</li>
+                <li><strong>Robusta beans,</strong> grown in hotter climates and at lower altitudes with more insects, evolved to produce a much more potent chemical defense. Robusta beans can contain 2.5% to 4.5% caffeine by weight—more than double that of Arabica. They have a harsher, more bitter taste and are often used in espresso blends to produce a thick crema, or in instant coffee for a cheaper, more caffeinated product.</li>
             </ul>
             <p>
                 This biological difference is the first and most important variable. A coffee blend that includes Robusta beans will almost always be more caffeinated than one that is 100% Arabica.
@@ -454,7 +477,7 @@ export default function DrinkComparisonPage() {
             </p>
             <ul>
                 <li><strong>Drip Coffee:</strong> Hot water passes over medium-coarse grounds for a few minutes. This is a moderately efficient extraction method.</li>
-                <li><strong>Espresso:</strong> Very hot, highly pressurized water is forced through very fine grounds for only 25-30 seconds. The high pressure and large surface area of the fine grind lead to a very rapid and efficient extraction, resulting in a highly concentrated liquid. A single shot has less total caffeine than a large drip coffee, but far more per ounce.</li>
+                <li><strong>Espresso:</strong> Very hot, highly pressurized water is forced through very fine grounds for only 25-30 seconds. The high pressure and the large surface area of the fine grind lead to a very rapid and efficient extraction, resulting in a highly concentrated liquid. A single shot has less total caffeine than a large drip coffee, but far more per ounce.</li>
                 <li><strong>Cold Brew:</strong> This method uses no heat, which normally speeds up chemical reactions. To compensate, it uses a very high ratio of coffee-to-water and a very long steep time (12-24 hours). This combination results in a highly concentrated brew that is often diluted but still typically contains more caffeine than drip coffee per serving.</li>
             </ul>
             <h3 className="text-2xl font-semibold">From Leaf to Cup: The World of Tea</h3>

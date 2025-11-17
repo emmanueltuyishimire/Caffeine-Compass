@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/calculators/caffeine-drinks-database',
     '/calculators/caffeine-overdose-risk',
     '/calculators/pregnancy-caffeine-safe-limit',
+    '/calculators/caffeine-sleep-calculator',
   ];
 
   const articleRoutes = [
