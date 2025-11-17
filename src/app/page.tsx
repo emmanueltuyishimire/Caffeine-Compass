@@ -1,5 +1,4 @@
 
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2 } from 'lucide-react';
 import Link from 'next/link';
@@ -123,7 +122,7 @@ export default function Home() {
                   fill
                   className="object-cover object-center z-0"
                   priority
-                  quality={80}
+                  quality={75}
                   sizes="100vw"
                 />
             )}
@@ -242,7 +241,7 @@ export default function Home() {
                     height={400}
                     className="rounded-lg shadow-lg"
                     data-ai-hint={whyUsImage.imageHint}
-                    quality={80}
+                    quality={75}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 )}
