@@ -655,4 +655,4 @@ export const sugars: Omit<SugarInfo, 'id'>[] = [
   { name: 'Zoa Energy Drink', size_fl_oz: 16, calories: 100, sugar_g: 23 },
   { name: 'Zola Coconut Water Espresso', size_fl_oz: 17.5, calories: 0, sugar_g: 28 },
   { name: 'Zombie Blood Energy Potion', size_fl_oz: 3.4, calories: 25, sugar_g: 7 }
-]
+];

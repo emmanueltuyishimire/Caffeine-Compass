@@ -5,7 +5,7 @@ import { sugars } from './sugars';
 
 const FL_OZ_TO_ML = 29.5735;
 
-const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
+const baseDrinks: Omit<Drink, 'id' | 'icon' | 'sugar' | 'calories'>[] = [
   // Coffee (Generic)
   { name: 'Brewed Coffee', category: 'Coffee', caffeine: 95, size: 240 },
   { name: 'Espresso', category: 'Coffee', caffeine: 64, size: 30 },
@@ -252,6 +252,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Chick-fil-A Iced Tea', category: 'Tea', caffeine: 62, size: 473 },
   { name: 'Choffy (roasted cacao)', category: 'Other', caffeine: 23, size: 177 },
   { name: 'Cintron Energy Drink', category: 'Energy Drink', caffeine: 85, size: 248 },
+  { name: 'Clif Shot Energy Gel', category: 'Other', caffeine: 100, size: 34 },
   { name: 'Club Mate (EU)', category: 'Energy Drink', caffeine: 100, size: 500 },
   { name: 'Coca Cola Plus', category: 'Soda', caffeine: 45, size: 470 },
   { name: 'Coca-Cola Caffeine Free', category: 'Soda', caffeine: 0, size: 355 },
@@ -263,7 +264,6 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Coca-Cola Vanilla', category: 'Soda', caffeine: 34, size: 355 },
   { name: 'Coca-Cola Vanilla Zero Sugar', category: 'Soda', caffeine: 34, size: 355 },
   { name: 'Coca-Cola With Coffee', category: 'Coffee', caffeine: 69, size: 355 },
-  { name: 'Coca-Cola Zero Sugar', category: 'Soda', caffeine: 34, size: 355 },
   { name: 'Cocaine Energy Drink', category: 'Energy Drink', caffeine: 280, size: 355 },
   { name: 'Coffee (Generic)', category: 'Coffee', caffeine: 163, size: 237 },
   { name: 'Coffee (Decaf, Instant)', category: 'Coffee', caffeine: 2, size: 237 },
@@ -287,11 +287,13 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Death Wish Coffee', category: 'Coffee', caffeine: 728, size: 355 },
   { name: 'Death Wish Latte', category: 'Coffee', caffeine: 300, size: 237 },
   { name: 'Demon Energy Drink', category: 'Energy Drink', caffeine: 160, size: 500 },
+  { name: 'Diet Barqs Root Beer', category: 'Soda', caffeine: 0, size: 355 },
+  { name: 'Diet Cheerwine', category: 'Soda', caffeine: 47, size: 355 },
+  { name: 'Diet Coke with Splenda', category: 'Soda', caffeine: 46, size: 355 },
   { name: 'Diet Wild Cherry Pepsi', category: 'Soda', caffeine: 38, size: 355 },
   { name: 'doc Soda', category: 'Soda', caffeine: 60, size: 355 },
   { name: 'Double Cola', category: 'Soda', caffeine: 36, size: 355 },
   { name: 'Dr Pepper 10', category: 'Soda', caffeine: 51, size: 355 },
-  { name: 'Dr Pepper Zero Sugar', category: 'Soda', caffeine: 41, size: 355 },
   { name: 'Dr Shasta Soda', category: 'Soda', caffeine: 29, size: 355 },
   { name: 'Driftaway Coffee', category: 'Coffee', caffeine: 160, size: 237 },
   { name: 'Dripdash Kyoto Coffee', category: 'Coffee', caffeine: 225, size: 177 },
@@ -300,7 +302,9 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Dunkin Sparkd Energy', category: 'Energy Drink', caffeine: 192, size: 946 },
   { name: 'Dunkin\' Donuts Dunkaccino', category: 'Coffee', caffeine: 83, size: 414 },
   { name: 'Dunkin\' Donuts Extra Charged Coffee', category: 'Coffee', caffeine: 252, size: 414 },
+  { name: 'Dunkin\' Donuts Iced Latte', category: 'Coffee', caffeine: 166, size: 710 },
   { name: 'Dunkin\' Donuts Iced Tea', category: 'Tea', caffeine: 63, size: 710 },
+  { name: 'Dunkin\' Donuts Latte', category: 'Coffee', caffeine: 166, size: 414 },
   { name: 'Dutch Bros Blue Rebel Energy Drink', category: 'Energy Drink', caffeine: 80, size: 248 },
   { name: 'Dutch Bros Coffee (Classic)', category: 'Coffee', caffeine: 187, size: 591 },
   { name: 'DynaPep', category: 'Energy Drink', caffeine: 100, size: 4 },
@@ -319,6 +323,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Euro Shopper Energy Drink (EU)', category: 'Energy Drink', caffeine: 80, size: 250 },
   { name: 'F3 Energy', category: 'Energy Drink', caffeine: 120, size: 355 },
   { name: 'Fakeer Energy Drink (EU)', category: 'Energy Drink', caffeine: 118, size: 370 },
+  { name: 'Fanta', category: 'Soda', caffeine: 0, size: 355 },
   { name: 'Fast Lane Black Tea', category: 'Tea', caffeine: 110, size: 237 },
   { name: 'Faxe Kondi', category: 'Soda', caffeine: 26, size: 330 },
   { name: 'Faygo Cola', category: 'Soda', caffeine: 43, size: 355 },
@@ -326,6 +331,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Folgers Coffee', category: 'Coffee', caffeine: 112, size: 237 },
   { name: 'Forto Organic Coffee Shot', category: 'Coffee', caffeine: 225, size: 59 },
   { name: 'Freeway Cola', category: 'Soda', caffeine: 32, size: 330 },
+  { name: 'Fresca', category: 'Soda', caffeine: 0, size: 355 },
   { name: 'Fritz Kola (EU)', category: 'Soda', caffeine: 83, size: 330 },
   { name: 'Full Throttle Energy Drink', category: 'Energy Drink', caffeine: 160, size: 473 },
   { name: 'Fuze Iced Tea', category: 'Tea', caffeine: 24, size: 591 },
@@ -349,6 +355,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Greek Coffee (Metrios)', category: 'Coffee', caffeine: 50, size: 59 },
   { name: 'Green Cola', category: 'Soda', caffeine: 37, size: 355 },
   { name: 'Gridlock Energy Drink', category: 'Energy Drink', caffeine: 140, size: 473 },
+  { name: 'Guayaki Canned Yerba Mate', category: 'Tea', caffeine: 150, size: 458 },
   { name: 'Guayaki Yerba Mate Bottled Tea', category: 'Tea', caffeine: 140, size: 473 },
   { name: 'Guayusa Tea', category: 'Tea', caffeine: 41, size: 237 },
   { name: 'GURU Energy Drink', category: 'Energy Drink', caffeine: 140, size: 355 },
@@ -367,6 +374,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Hot6 the King Energy', category: 'Energy Drink', caffeine: 100, size: 355 },
   { name: 'Hyde Xtreme', category: 'Energy Drink', caffeine: 400, size: 355 },
   { name: 'Hype Energy Drink (EU)', category: 'Energy Drink', caffeine: 80, size: 250 },
+  { name: 'IBC Root Beer', category: 'Soda', caffeine: 0, size: 355 },
   { name: 'Illy Issimo Cafe', category: 'Coffee', caffeine: 155, size: 201 },
   { name: 'Inca Kola', category: 'Soda', caffeine: 38, size: 355 },
   { name: 'Indulgio Cappuccino', category: 'Coffee', caffeine: 20, size: 237 },
@@ -392,8 +400,12 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Kin Spritz', category: 'Other', caffeine: 50, size: 237 },
   { name: 'Kirkland Energy Shot', category: 'Energy Drink', caffeine: 180, size: 59 },
   { name: 'KOE Kombucha', category: 'Tea', caffeine: 15, size: 355 },
+  { name: 'Kombucha Tea', category: 'Tea', caffeine: 24, size: 237 },
   { name: 'Kona Gold Energy Drink', category: 'Energy Drink', caffeine: 115, size: 355 },
+  { name: 'La Colombe Cold Brew', category: 'Coffee', caffeine: 180, size: 266 },
   { name: 'La Colombe Draft Latte', category: 'Coffee', caffeine: 120, size: 266 },
+  { name: 'La Croix Sparkling Water', category: 'Other', caffeine: 0, size: 355 },
+  { name: 'Latte', category: 'Coffee', caffeine: 154, size: 473 },
   { name: 'LevlUp Gaming Booster', category: 'Energy Drink', caffeine: 250, size: 500 },
   { name: 'Limitless Sparkling Water', category: 'Other', caffeine: 35, size: 355 },
   { name: 'Lipton Iced Tea', category: 'Tea', caffeine: 25, size: 591 },
@@ -429,6 +441,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Monster Hydro', category: 'Energy Drink', caffeine: 188, size: 751 },
   { name: 'Monster Import', category: 'Energy Drink', caffeine: 179, size: 550 },
   { name: 'Monster Killer Brew', category: 'Coffee', caffeine: 300, size: 444 },
+  { name: 'Monster Lo-Carb', category: 'Energy Drink', caffeine: 140, size: 473 },
   { name: 'Monster Mango Loco', category: 'Energy Drink', caffeine: 152, size: 473 },
   { name: 'Monster Mule', category: 'Energy Drink', caffeine: 160, size: 473 },
   { name: 'Monster Nitro', category: 'Energy Drink', caffeine: 160, size: 473 },
@@ -437,8 +450,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Monster Reserve', category: 'Energy Drink', caffeine: 160, size: 473 },
   { name: 'Monster Ripper Energy Juice (UK)', category: 'Energy Drink', caffeine: 160, size: 500 },
   { name: 'Monster The Doctor VR46 (UK)', category: 'Energy Drink', caffeine: 160, size: 500 },
-  { name: 'Monster Tour Water', category: 'Other', caffeine: 0, size: 473 },
-  { name: 'Monster Ultra', category: 'Energy Drink', caffeine: 150, size: 473 },
+  { name: 'Monster Tour Water', category: 'Energy Drink', caffeine: 0, size: 473 },
   { name: 'Monster Zero Sugar', category: 'Energy Drink', caffeine: 160, size: 473 },
   { name: 'Moose Juice Energy Drink', category: 'Energy Drink', caffeine: 200, size: 501 },
   { name: 'Morning Thunder Tea', category: 'Tea', caffeine: 45, size: 237 },
@@ -457,6 +469,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Mountain Dew Zero Sugar', category: 'Soda', caffeine: 68, size: 355 },
   { name: 'Moxie Soda', category: 'Soda', caffeine: 24, size: 355 },
   { name: 'Mucho Mango Energy Drink', category: 'Energy Drink', caffeine: 0, size: 237 },
+  { name: 'Mug Root Beer', category: 'Soda', caffeine: 0, size: 355 },
   { name: 'Muscle Milk Coffee House', category: 'Coffee', caffeine: 120, size: 325 },
   { name: 'Muscle Monster', category: 'Energy Drink', caffeine: 157, size: 444 },
   { name: 'Mushroom Coffee', category: 'Coffee', caffeine: 50, size: 237 },
@@ -483,6 +496,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Oikos Pro Fuel', category: 'Other', caffeine: 100, size: 296 },
   { name: 'OK Energy Drink', category: 'Energy Drink', caffeine: 80, size: 250 },
   { name: 'OLIPOP Vintage Cola', category: 'Soda', caffeine: 50, size: 355 },
+  { name: 'Orange Crush', category: 'Soda', caffeine: 0, size: 355 },
   { name: 'Oregon Chai Tea', category: 'Tea', caffeine: 45, size: 177 },
   { name: 'Pacific Chai', category: 'Tea', caffeine: 29, size: 177 },
   { name: 'Panera Bread Coffee', category: 'Coffee', caffeine: 189, size: 473 },
@@ -508,18 +522,21 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'PerformElite Pre-Workout', category: 'Energy Drink', caffeine: 225, size: 237 },
   { name: 'Perk Energy Beverage', category: 'Energy Drink', caffeine: 100, size: 237 },
   { name: 'Perrier Energize', category: 'Other', caffeine: 99, size: 250 },
+  { name: 'Perrier Sparkling Water', category: 'Other', caffeine: 0, size: 355 },
   { name: 'PG Tips Black Tea', category: 'Tea', caffeine: 50, size: 201 },
   { name: 'Phocus Sparkling Water', category: 'Other', caffeine: 75, size: 340 },
   { name: 'Phoenix Energy Shot', category: 'Energy Drink', caffeine: 280, size: 59 },
   { name: 'Pibb Xtra', category: 'Soda', caffeine: 40, size: 355 },
   { name: 'Poland Spring Sparkling Energy Water', category: 'Other', caffeine: 75, size: 340 },
   { name: 'Polar Frost Plus Energy', category: 'Other', caffeine: 67, size: 503 },
+  { name: 'Polar Seltzer Water', category: 'Other', caffeine: 0, size: 355 },
   { name: 'Poppi Soda Classic Cola', category: 'Soda', caffeine: 32, size: 355 },
   { name: 'Power Horse Energy Drink (EU)', category: 'Energy Drink', caffeine: 80, size: 250 },
   { name: 'Premier Protein Cafe Latte', category: 'Coffee', caffeine: 120, size: 340 },
   { name: 'Premium Cola (EU)', category: 'Soda', caffeine: 83, size: 330 },
   { name: 'Prime Energy Drink', category: 'Energy Drink', caffeine: 200, size: 355 },
   { name: 'Private Selection Canned Espresso', category: 'Coffee', caffeine: 145, size: 444 },
+  { name: 'Propel Zero Powder', category: 'Other', caffeine: 0, size: 473 },
   { name: 'Proper Wild Energy Shot', category: 'Energy Drink', caffeine: 180, size: 74 },
   { name: 'Protein2O + Energy', category: 'Energy Drink', caffeine: 125, size: 500 },
   { name: 'Pure Boost Energy Drink Mix', category: 'Energy Drink', caffeine: 100, size: 473 },
@@ -534,6 +551,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'RC (Royal Crown) Cola', category: 'Soda', caffeine: 43, size: 355 },
   { name: 'Red Bull Editions', category: 'Energy Drink', caffeine: 80, size: 250 },
   { name: 'Red Bull Simply Cola', category: 'Soda', caffeine: 32, size: 250 },
+  { name: 'Red Bull Sugarfree', category: 'Energy Drink', caffeine: 80, size: 250 },
   { name: 'Red Bull Zero', category: 'Energy Drink', caffeine: 80, size: 250 },
   { name: 'Red Devil Energy Drink', category: 'Energy Drink', caffeine: 160, size: 473 },
   { name: 'Red Eye Energy Drink', category: 'Energy Drink', caffeine: 106, size: 328 },
@@ -547,6 +565,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Redline Xtreme Shot', category: 'Energy Drink', caffeine: 300, size: 89 },
   { name: 'Reed\'s Ginger Energize Shot', category: 'Other', caffeine: 100, size: 59 },
   { name: 'Reign Storm', category: 'Energy Drink', caffeine: 200, size: 355 },
+  { name: 'Reign Total Body Fuel', category: 'Energy Drink', caffeine: 300, size: 473 },
   { name: 'Revv Coffee Pods', category: 'Coffee', caffeine: 127, size: 237 },
   { name: 'Riot Energy', category: 'Energy Drink', caffeine: 160, size: 473 },
   { name: 'Rip It Energy Drink', category: 'Energy Drink', caffeine: 160, size: 473 },
@@ -563,6 +582,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Rockstar Punched', category: 'Energy Drink', caffeine: 240, size: 473 },
   { name: 'Rockstar Pure Zero', category: 'Energy Drink', caffeine: 240, size: 473 },
   { name: 'Rockstar Recovery', category: 'Energy Drink', caffeine: 160, size: 473 },
+  { name: 'Rockstar Sugar Free', category: 'Energy Drink', caffeine: 160, size: 473 },
   { name: 'Rockstar Thermo', category: 'Energy Drink', caffeine: 300, size: 473 },
   { name: 'Rockstar Unplugged', category: 'Energy Drink', caffeine: 80, size: 237 },
   { name: 'Rockstar XDurance', category: 'Energy Drink', caffeine: 300, size: 473 },
@@ -576,6 +596,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Rush! Energy Drink', category: 'Energy Drink', caffeine: 80, size: 245 },
   { name: 'Ryse Fuel', category: 'Energy Drink', caffeine: 200, size: 473 },
   { name: 'Sambazon Amazon Energy Drink', category: 'Energy Drink', caffeine: 120, size: 355 },
+  { name: 'Sarsaparilla', category: 'Soda', caffeine: 0, size: 355 },
   { name: 'Scheckters Energy Drink', category: 'Energy Drink', caffeine: 80, size: 250 },
   { name: 'Score Energy Drink Gorilla', category: 'Energy Drink', caffeine: 150, size: 500 },
   { name: 'Screamin Energy Max Hit', category: 'Energy Drink', caffeine: 185, size: 18 },
@@ -619,9 +640,12 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Starbucks Doubleshot Energy', category: 'Energy Drink', caffeine: 135, size: 444 },
   { name: 'Starbucks Doubleshot Espresso', category: 'Coffee', caffeine: 120, size: 192 },
   { name: 'Starbucks Frappuccino (Bottled)', category: 'Coffee', caffeine: 110, size: 405 },
+  { name: 'Starbucks Iced Americano', category: 'Coffee', caffeine: 225, size: 473 },
   { name: 'Starbucks Iced Espresso Classics', category: 'Coffee', caffeine: 125, size: 355 },
+  { name: 'Starbucks Nitro Cold Brew Coffee', category: 'Coffee', caffeine: 280, size: 473 },
   { name: 'Starbucks Pink Drink', category: 'Other', caffeine: 45, size: 473 },
   { name: 'Starbucks Pumpkin Cream Cold Brew', category: 'Coffee', caffeine: 185, size: 473 },
+  { name: 'Starbucks Refreshers', category: 'Energy Drink', caffeine: 45, size: 473 },
   { name: 'Starbucks Refreshers Canned', category: 'Energy Drink', caffeine: 50, size: 355 },
   { name: 'Starbucks Triple Shot Energy', category: 'Coffee', caffeine: 225, size: 444 },
   { name: 'Starbucks Verismo Coffee Pods', category: 'Coffee', caffeine: 60, size: 237 },
@@ -645,14 +669,10 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Taster\'s Choice Instant Coffee', category: 'Coffee', caffeine: 49, size: 237 },
   { name: 'Taurus Energy Drink', category: 'Energy Drink', caffeine: 50, size: 250 },
   { name: 'Tazo Chai', category: 'Tea', caffeine: 47, size: 237 },
-  { name: 'Tea (Black)', category: 'Tea', caffeine: 42, size: 237 },
   { name: 'Tea (Decaf)', category: 'Tea', caffeine: 4, size: 237 },
-  { name: 'Tea (Green)', category: 'Tea', caffeine: 18, size: 237 },
-  { name: 'Tea (Iced)', category: 'Tea', caffeine: 47, size: 237 },
+  { name: 'Tea (Herbal)', category: 'Tea', caffeine: 0, size: 237 },
   { name: 'Tea (Instant)', category: 'Tea', caffeine: 40, size: 237 },
   { name: 'Tea (Jasmine)', category: 'Tea', caffeine: 25, size: 237 },
-  { name: 'Tea (Oolong)', category: 'Tea', caffeine: 37, size: 237 },
-  { name: 'Tea (White)', category: 'Tea', caffeine: 28, size: 237 },
   { name: 'Teas\' Tea Oolong', category: 'Tea', caffeine: 70, size: 500 },
   { name: 'Teavana Tea', category: 'Tea', caffeine: 41, size: 237 },
   { name: 'Tejava Iced Tea', category: 'Tea', caffeine: 50, size: 355 },
@@ -726,3 +746,30 @@ const baseDrinks: Omit<Drink, 'id' | 'icon'>[] = [
   { name: 'Zoa Energy Drink', category: 'Energy Drink', caffeine: 160, size: 473 },
   { name: 'Zola Coconut Water Espresso', category: 'Coffee', caffeine: 125, size: 518 },
   { name: 'Zombie Blood Energy Potion', category: 'Energy Drink', caffeine: 80, size: 101 },
+];
+
+const getIcon = (category: 'Coffee' | 'Tea' | 'Soda' | 'Energy Drink' | 'Other') => {
+  switch (category) {
+    case 'Coffee': return Coffee;
+    case 'Tea': return Leaf;
+    case 'Soda': return CupSoda;
+    case 'Energy Drink': return Zap;
+    default: return Beaker;
+  }
+};
+
+const sugarsByName = sugars.reduce((acc, sugar) => {
+  acc[sugar.name] = sugar;
+  return acc;
+}, {} as Record<string, Omit<SugarInfo, 'id'>>);
+
+export const drinks: Drink[] = baseDrinks.map((drink, index) => {
+    const sugarInfo = sugarsByName[drink.name];
+    return {
+        ...drink,
+        id: `d${index}`,
+        icon: getIcon(drink.category),
+        sugar: sugarInfo?.sugar_g,
+        calories: sugarInfo?.calories,
+    };
+});

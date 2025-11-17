@@ -18,7 +18,9 @@ export interface ConsumedDrink extends Drink {
 }
 
 export interface SugarInfo {
+    id: string;
     name: string;
     size_fl_oz: number;
     calories: number;
     sugar_g: number;
+}
