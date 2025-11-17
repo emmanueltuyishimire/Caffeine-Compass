@@ -92,7 +92,7 @@ export default function AboutPage() {
                     <div className="space-y-6">
                         <div className="flex items-start gap-4">
                             <div className="p-3 bg-primary/10 rounded-full">
-                                <Target className="h-6 w-6 text-primary" aria-label="Our Mission Icon" />
+                                <Target className="h-6 w-6 text-primary" aria-hidden="true" />
                             </div>
                             <div>
                                 <h2 id="our-mission-heading" className="text-2xl font-bold font-headline mb-2">Our Mission: Precision Wellness</h2>
@@ -103,7 +103,7 @@ export default function AboutPage() {
                         </div>
                         <div className="flex items-start gap-4">
                             <div className="p-3 bg-accent/10 rounded-full">
-                                <HeartPulse className="h-6 w-6 text-accent" aria-label="Our Philosophy Icon" />
+                                <HeartPulse className="h-6 w-6 text-accent" aria-hidden="true" />
                             </div>
                             <div>
                                 <h2 className="text-2xl font-bold font-headline mb-2">Our Philosophy: Mindful Consumption</h2>
@@ -139,7 +139,7 @@ export default function AboutPage() {
 
                 <section aria-labelledby="team-heading">
                     <div className="text-center mb-12">
-                        <Users className="h-10 w-10 mx-auto text-primary mb-4" aria-label="Team Icon" />
+                        <Users className="h-10 w-10 mx-auto text-primary mb-4" aria-hidden="true" />
                         <h2 id="team-heading" className="text-3xl font-bold font-headline">Meet the Minds Behind the Compass</h2>
                          <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
                             Caffeine Compass was built by a team obsessed with the intersection of science and daily life.
@@ -153,7 +153,7 @@ export default function AboutPage() {
                                 <div key={member.name} className="flex flex-col items-center text-center p-6 bg-card rounded-lg border">
                                     <Avatar className="w-24 h-24 mb-4 border-2 border-primary">
                                         {memberImage && (
-                                            <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} width={96} height={96} />
+                                            <AvatarImage src={memberImage.imageUrl} alt={`Headshot of ${member.name}, ${member.role}`} data-ai-hint={memberImage.imageHint} />
                                         )}
                                         <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
                                     </Avatar>

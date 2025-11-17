@@ -269,5 +269,3 @@ export default function SugarDatabase() {
     </Card>
   );
 }
-
-    
