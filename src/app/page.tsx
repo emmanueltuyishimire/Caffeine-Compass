@@ -76,6 +76,27 @@ const featuredCalculators = [
   },
 ];
 
+const featuredArticles = [
+    {
+        title: "How Much Caffeine in a Cup of Coffee?",
+        href: "/articles/how-much-caffeine-in-a-cup-of-coffee",
+        description: "The definitive guide to why caffeine levels vary so dramatically in coffee.",
+        icon: Coffee,
+    },
+    {
+        title: "How Long Does Caffeine Stay in Your System?",
+        href: "/articles/how-long-does-caffeine-stay-in-your-system",
+        description: "Understand the science of caffeine half-life and its impact on your body and sleep.",
+        icon: Clock,
+    },
+    {
+        title: "Why Does Caffeine Make Me Tired?",
+        href: "/articles/caffeine-makes-you-tired",
+        description: "Explore the four scientific reasons for the paradoxical caffeine crash and how to avoid it.",
+        icon: BrainCircuit,
+    }
+];
+
 
 export default function Home() {
   const whyUsImage = PlaceHolderImages.find(p => p.id === 'why-us-image');
@@ -218,6 +239,39 @@ export default function Home() {
                 )}
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="articles" className="py-12 md:py-20 bg-background" role="region" aria-labelledby="articles-heading">
+          <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 id="articles-heading" className="text-3xl md:text-4xl font-bold font-headline">Featured Articles & Guides</h2>
+                <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+                    Dive deeper into the science of caffeine with our in-depth guides, written to help you understand its impact on your body and mind.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {featuredArticles.map((article) => (
+                  <Link key={article.title} href={article.href} className="block group" aria-label={`Read article: ${article.title}`}>
+                    <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
+                      <CardHeader>
+                        <div className="flex items-center gap-4">
+                          <article.icon className="h-8 w-8 text-primary" aria-hidden="true"/>
+                          <CardTitle>{article.title}</CardTitle>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">{article.description}</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+              <div className="text-center mt-12">
+                  <Link href="/articles">
+                    <Button variant="outline">See All Articles</Button>
+                  </Link>
+              </div>
           </div>
         </section>
       </div>
