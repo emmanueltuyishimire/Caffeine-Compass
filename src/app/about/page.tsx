@@ -1,4 +1,5 @@
 
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Users, Target, HeartPulse } from 'lucide-react';
@@ -69,7 +70,7 @@ export default function AboutPage() {
             <JsonLd data={aboutPageJsonLd} />
             <div className="container mx-auto px-4 py-12 md:py-20">
                 <header className="text-center mb-12" role="banner">
-                    <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Master Your Energy. Don't Let It Master You.</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4" id="page-title">Master Your Energy. Don't Let It Master You.</h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                         Caffeine is the world's favorite drug, but most of us use it blindly. Caffeine Compass was born from a powerful idea: what if we could use science to harness its benefits without the costs?
                     </p>
@@ -85,7 +86,7 @@ export default function AboutPage() {
                                 className="object-cover rounded-lg shadow-lg"
                                 sizes="(max-width: 768px) 100vw, 50vw"
                                 data-ai-hint={missionImage.imageHint}
-                                quality={100}
+                                quality={80}
                             />
                         </div>
                     )}
