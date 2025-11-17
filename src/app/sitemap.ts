@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '/articles/caffeine-doesnt-affect-you',
       '/articles/does-sprite-have-caffeine',
       '/articles/does-matcha-have-caffeine',
+      '/articles/how-much-caffeine-in-red-bull',
   ];
 
   // Placeholder for proxied blog routes

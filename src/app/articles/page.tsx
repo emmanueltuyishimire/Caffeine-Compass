@@ -35,6 +35,12 @@ const articleLinks = [
     description: "A guide to its caffeine content and unique effects vs. coffee.",
     icon: Leaf,
   },
+   {
+    title: "How Much Caffeine Is in Red Bull?",
+    href: "/articles/how-much-caffeine-in-red-bull",
+    description: "A complete guide to Red Bull's caffeine content and how it compares to other drinks.",
+    icon: Zap,
+  },
   {
     title: "How Long Before Bed to Stop Caffeine",
     href: "/articles/how-long-before-bed-to-stop-caffeine",
@@ -146,7 +152,7 @@ export default function ArticlesPage() {
         
         <div>
             <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {articleLinks.map((article) => (
                     <Link key={article.title} href={article.href} className="block group">
                     <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
