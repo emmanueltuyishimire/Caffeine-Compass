@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '/articles/caffeine-half-life-sleep',
       '/articles/how-long-before-bed-to-stop-caffeine',
       '/articles/how-to-quit-caffeine',
+      '/articles/caffeine-makes-you-tired',
   ];
 
   // Placeholder for proxied blog routes

@@ -12,6 +12,12 @@ export const metadata: Metadata = {
 
 const articleLinks = [
   {
+    title: "Why Does Caffeine Make Me Tired?",
+    href: "/articles/caffeine-makes-you-tired",
+    description: "Learn the science behind the paradoxical caffeine crash.",
+    icon: BookText,
+  },
+  {
     title: "How Long Before Bed to Stop Caffeine",
     href: "/articles/how-long-before-bed-to-stop-caffeine",
     description: "Find your personal caffeine curfew for better sleep.",
