@@ -288,7 +288,7 @@ export default function SugarInDrinksPage() {
                      <AccordionItem value="faq-5">
                         <AccordionTrigger>Now that I know the sugar content, what's next?</AccordionTrigger>
                         <AccordionContent>
-                            Knowledge is power. Use this information to make healthier swaps. For example, switch from a high-sugar energy drink to a zero-sugar version to get the caffeine without the crash. Also, check the caffeine content in our <Link href="/calculators/caffeine-drinks-database">Caffeine Database</a> to get the full picture.
+                            Knowledge is power. Use this information to make healthier swaps. For example, switch from a high-sugar energy drink to a zero-sugar version to get the caffeine without the crash. Also, check the caffeine content in our <a href='/calculators/caffeine-drinks-database'>Caffeine Database</a> to get the full picture.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
