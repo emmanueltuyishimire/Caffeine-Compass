@@ -12,6 +12,12 @@ export const metadata: Metadata = {
 
 const articleLinks = [
   {
+    title: "Why Doesn't Caffeine Affect Me?",
+    href: "/articles/caffeine-doesnt-affect-you",
+    description: "Explore the science behind high tolerance and low sensitivity.",
+    icon: BookText,
+  },
+  {
     title: "Why Does Caffeine Make Me Tired?",
     href: "/articles/caffeine-makes-you-tired",
     description: "Learn the science behind the paradoxical caffeine crash.",

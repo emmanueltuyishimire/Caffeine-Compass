@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '/articles/how-long-before-bed-to-stop-caffeine',
       '/articles/how-to-quit-caffeine',
       '/articles/caffeine-makes-you-tired',
+      '/articles/caffeine-doesnt-affect-you',
   ];
 
   // Placeholder for proxied blog routes
