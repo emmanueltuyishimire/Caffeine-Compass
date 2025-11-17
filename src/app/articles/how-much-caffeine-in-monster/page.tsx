@@ -236,11 +236,95 @@ export default function HowMuchCaffeineInMonsterArticle() {
             </section>
             
             <Separator />
+            
+            <section id="monster-variations" aria-labelledby="monster-variations-heading">
+                <h2 id="monster-variations-heading" className="text-3xl font-bold">Caffeine in Different Monster Flavors &amp; Lines</h2>
+                <p>
+                    Monster has released dozens of variations over the years, with caffeine content ranging from zero to a whopping 300mg. The table below provides a detailed look at some of these different products. It is crucial to check the can, as formulations can vary by country and change over time.
+                </p>
+                <Table>
+                    <caption className="sr-only">Caffeine content of various Monster Energy drink products</caption>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead>Monster Product</TableHead>
+                            <TableHead>Serving Size</TableHead>
+                            <TableHead className="text-right">Caffeine (mg)</TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell className="font-medium">Monster Unleaded</TableCell>
+                            <TableCell>16 fl oz / 473 ml</TableCell>
+                            <TableCell className="text-right font-bold text-green-500">0 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Monster Export (UK)</TableCell>
+                            <TableCell>8.46 fl oz / 250 ml</TableCell>
+                            <TableCell className="text-right">76 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Monster X-presso Hammer (NZ/AUS)</TableCell>
+                            <TableCell>9.6 fl oz / 284 ml</TableCell>
+                            <TableCell className="text-right">90 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Monster Mutant Super Soda</TableCell>
+                            <TableCell>20 fl oz / 591 ml</TableCell>
+                            <TableCell className="text-right">115 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Monster Ultra Pink</TableCell>
+                            <TableCell>16 fl oz / 473 ml</TableCell>
+                            <TableCell className="text-right">140 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Monster Khaos</TableCell>
+                            <TableCell>16 fl oz / 473 ml</TableCell>
+                            <TableCell className="text-right">154 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Monster Rehab Green Tea</TableCell>
+                            <TableCell>15.5 fl oz / 458 ml</TableCell>
+                            <TableCell className="text-right">155 mg</TableCell>
+                        </TableRow>
+                        <TableRow className="bg-primary/5">
+                            <TableCell className="font-medium">Original Green / Cuba Lima / DUB / Heavy Metal / M3</TableCell>
+                            <TableCell>16 fl oz / 473 ml</TableCell>
+                            <TableCell className="text-right font-bold">160 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Caffe Monster Energy Coffee</TableCell>
+                            <TableCell>13.7 fl oz / 405 ml</TableCell>
+                            <TableCell className="text-right">175 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Ubermonster Energy Brew</TableCell>
+                            <TableCell>18.6 fl oz / 550 ml</TableCell>
+                            <TableCell className="text-right">187 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Monster Maxx</TableCell>
+                            <TableCell>12 fl oz / 355 ml</TableCell>
+                            <TableCell className="text-right text-destructive font-bold">200 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Monster Hammer X-presso</TableCell>
+                            <TableCell>6.75 fl oz / 200 ml</TableCell>
+                            <TableCell className="text-right text-destructive font-bold">221 mg</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="font-medium">Monster Hitman Sniper</TableCell>
+                            <TableCell>3 fl oz / 89 ml</TableCell>
+                            <TableCell className="text-right text-destructive font-bold">240 mg</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+            </section>
           
             <section id="comparison" aria-labelledby="comparison-heading">
                 <h2 id="comparison-heading" className="text-3xl font-bold">Monster vs. Coffee, Red Bull & Celsius: A Caffeine Showdown</h2>
                 <p>
-                    How does a 160mg Monster stack up against its competition? This context is crucial for anyone trying to manage their daily intake and avoid accidental overconsumption.
+                    To truly understand Monster's potency, it’s essential to see it in context. How does its 160mg base dose compare to other popular caffeinated beverages? This comparison highlights why Monster is considered a strong energy drink.
                 </p>
                 <Table>
                     <caption className="sr-only">Caffeine content comparison: Monster vs. other drinks</caption>
@@ -336,7 +420,7 @@ export default function HowMuchCaffeineInMonsterArticle() {
                     With its combination of high caffeine and high sugar, it is crucial to consume Monster responsibly and with an awareness of the potential health risks.
                 </p>
 
-                <h3 className="text-2xl font-semibold">Staying Within the 400mg Daily Limit</h3>
+                <h3 className="text-2xl font-semibold">Respecting the 400mg Daily Limit</h3>
                 <p>
                     The FDA's recommended daily caffeine limit for healthy adults is <strong>400 mg</strong>. One 16oz can of Monster (160mg) accounts for 40% of this limit. Drinking two cans (320mg) is still within the guideline, but it leaves very little room for any other caffeine sources. Consuming a Java Monster 300 (300mg) plus a large coffee could easily push you over 600mg, a level associated with significant side effects. It is vital to use our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> to track your total daily dose.
                 </p>
@@ -495,4 +579,3 @@ export default function HowMuchCaffeineInMonsterArticle() {
     </>
   );
 }
-
