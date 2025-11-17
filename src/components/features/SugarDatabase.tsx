@@ -20,14 +20,16 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/
 type Category = 'Coffee' | 'Tea' | 'Soda' | 'Energy Drink' | 'Other';
 type SortOption = 'sugar_desc' | 'sugar_asc' | 'name_asc' | 'name_desc' | 'calories_desc' | 'calories_asc';
 
+const categoryIcons = {
+  Coffee: Coffee,
+  Tea: Leaf,
+  Soda: CupSoda,
+  'Energy Drink': Zap,
+  'Other': PlusCircle,
+};
+
 const getIconForCategory = (category: Category) => {
-    switch (category) {
-        case 'Coffee': return Coffee;
-        case 'Tea': return Leaf;
-        case 'Soda': return CupSoda;
-        case 'Energy Drink': return Zap;
-        default: return PlusCircle;
-    }
+    return categoryIcons[category] || PlusCircle;
 };
 
 const getSugarLevel = (sugarGrams?: number) => {
@@ -216,7 +218,7 @@ export default function SugarDatabase() {
                     >
                         <div className="flex items-center gap-3 sm:gap-4">
                             <div className="text-muted-foreground" aria-hidden="true">
-                                <Icon />
+                                <Icon className="h-5 w-5" />
                             </div>
                             <div>
                                 <p className="font-semibold">{drink.name}</p>
