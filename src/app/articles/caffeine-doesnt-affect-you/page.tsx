@@ -110,7 +110,7 @@ const pageJsonLd = {
         "name": "How do I reset my caffeine tolerance?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "To reset your tolerance, you need to reduce your intake to allow your brain to downregulate its extra adenosine receptors. A gradual tapering plan is the most comfortable method. Our <a href='/calculators/caffeine-withdrawal-tracker'>Caffeine Withdrawal Tracker</a> is a tool specifically designed to help you create a tapering schedule and avoid severe withdrawal symptoms."
+          "text": "To reset your tolerance, you need to reduce your intake to allow your brain to downregulate its extra adenosine receptors. A gradual tapering plan is the most comfortable method. Our article on <a href='/articles/how-to-quit-caffeine'>how to quit caffeine</a> and our <a href='/calculators/caffeine-withdrawal-tracker'>Caffeine Withdrawal Tracker</a> tool can guide you."
         }
       },
       {
@@ -126,7 +126,7 @@ const pageJsonLd = {
         "name": "If caffeine doesn't affect me, does it still impact my sleep?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, this is a critical point. Even if you don't 'feel' the stimulating effects, caffeine is still a long-lasting drug in your system. It can disrupt your sleep architecture, particularly reducing deep and REM sleep, even in fast metabolizers. Use our <a href='/calculators/caffeine-sleep-calculator'>Caffeine Sleep Calculator</a> to see how much is left at bedtime."
+          "text": "Yes, this is a critical point. Even if you don't 'feel' the stimulating effects, caffeine is still a long-lasting drug in your system. It can disrupt your sleep architecture, particularly reducing deep and REM sleep. For more detail, read our article on <a href='/articles/caffeine-half-life-sleep'>caffeine's half-life and sleep</a>."
         }
       },
       {
@@ -187,7 +187,7 @@ export default function CaffeineDoesntAffectYouArticle() {
               It's a scenario that can feel both like a superpower and a curse. Your colleagues are getting a second wind from their afternoon lattes, your friends are buzzing after an energy drink, but you've just had your second large coffee of the day and feel... normal. Maybe even a little tired. You're left wondering, "Why doesn't caffeine affect me?" It can be a perplexing and isolating experience, making you question if your body is wired differently from everyone else's. You're not alone, and there are clear scientific reasons for this phenomenon.
             </p>
             <p>
-              This common pain point—the feeling of being "immune" to caffeine—drives many to search for answers. They might escalate their consumption, drinking more and more in a futile attempt to achieve the focus and alertness that others seem to get so effortlessly. This can lead to a cycle of high intake without the desired benefits, all while still exposing the body to caffeine's hidden effects on sleep and cardiovascular health. It's a frustrating situation where you get all the potential downsides of caffeine with none of the upsides.
+              This common pain point—the feeling of being "immune" to caffeine—drives many to search for answers. They might escalate their consumption, drinking more and more in a futile attempt to achieve the focus and alertness that others seem to get so effortlessly. This can lead to a cycle of high intake without the desired benefits, all while still exposing the body to caffeine's hidden effects on sleep and cardiovascular health. It's a frustrating situation where you get all the potential downsides of caffeine with none of the upsides. Sometimes, this can even lead to the paradoxical effect where <Link href="/articles/caffeine-makes-you-tired">caffeine makes you feel tired</Link>.
             </p>
             <p>
               This article will demystify the science behind being a caffeine "non-responder." We will explore the four primary reasons you might feel little to no effect from caffeine, from your genetic makeup to the habits you've built over time. Understanding which of these factors applies to you is the first step toward regaining control. It can help you decide whether to adjust your habits, reset your tolerance, or simply accept your unique physiology and seek other strategies for managing your energy. Our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> is an excellent starting point to diagnose your personal profile and begin this journey of discovery.
@@ -211,7 +211,7 @@ export default function CaffeineDoesntAffectYouArticle() {
                  <Card className="my-8 bg-primary/5 border-primary/20">
                   <CardHeader><CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary"/>How to Fix High Tolerance</CardTitle></CardHeader>
                   <CardContent>
-                    <p>The only way to reverse this adaptation is a "tolerance break." By reducing or eliminating caffeine for a period of 1 to 4 weeks, you allow your brain to downregulate (remove) the extra adenosine receptors. After a successful break, you will find that a much smaller dose of caffeine will once again be highly effective. The most comfortable way to do this is with a gradual taper, which you can plan using our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link>.</p>
+                    <p>The only way to reverse this adaptation is a "tolerance break." By reducing or eliminating caffeine for a period of 1 to 4 weeks, you allow your brain to downregulate (remove) the extra adenosine receptors. After a successful break, you will find that a much smaller dose of caffeine will once again be highly effective. The most comfortable way to do this is with a gradual taper, a method detailed in our guide on <Link href="/articles/how-to-quit-caffeine">how to quit caffeine</Link>, which you can plan using our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link>.</p>
                   </CardContent>
                 </Card>
 
@@ -246,7 +246,7 @@ export default function CaffeineDoesntAffectYouArticle() {
                  <Card className="my-8 bg-primary/5 border-primary/20">
                   <CardHeader><CardTitle className="flex items-center gap-2"><Lightbulb className="text-primary"/>Does Caffeine Still Affect My Sleep?</CardTitle></CardHeader>
                   <CardContent>
-                    <p><strong>Yes, absolutely.</strong> This is a critical point. Even if you don't "feel" awake or stimulated, the caffeine is still present in your system and interfering with your sleep architecture. It can suppress deep sleep and REM sleep, which is why you might feel fine after a 9 PM coffee but still wake up feeling unrefreshed. Use the <Link href="/calculators/caffeine-sleep-calculator">Caffeine Sleep Calculator</Link> to see how much is still active at bedtime.</p>
+                    <p><strong>Yes, absolutely.</strong> This is a critical point. Even if you don't "feel" awake or stimulated, the caffeine is still present in your system and interfering with your sleep architecture. It can suppress deep sleep and REM sleep, as explained in our article on <Link href="/articles/caffeine-effect-on-rem-sleep">caffeine's effect on REM sleep</Link>. Use the <Link href="/calculators/caffeine-sleep-calculator">Caffeine Sleep Calculator</Link> to see how much is still active at bedtime.</p>
                   </CardContent>
                 </Card>
 
@@ -361,7 +361,7 @@ export default function CaffeineDoesntAffectYouArticle() {
                         <CardTitle className="flex items-center gap-2"><Moon aria-hidden="true"/> Even if You Feel Nothing, Protect Your Sleep</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>This is the most critical insight. Even if you're a fast metabolizer who feels no buzz from a 6 PM espresso, the caffeine is still present and can fragment your sleep architecture. Always respect a caffeine curfew (e.g., 8-10 hours before bed) to protect the quality of your rest.</p>
+                        <p>This is the most critical insight. Even if you're a fast metabolizer who feels no buzz from a 6 PM espresso, the caffeine is still present and can fragment your sleep architecture. Always respect a caffeine curfew (e.g., 8-10 hours before bed) to protect the quality of your rest. You can read more in our article about <Link href="/articles/how-long-before-bed-to-stop-caffeine">when to stop drinking caffeine</Link>.</p>
                     </CardContent>
                 </Card>
             </section>
@@ -422,7 +422,7 @@ export default function CaffeineDoesntAffectYouArticle() {
                <AccordionItem value="faq-4">
                 <AccordionTrigger>How do I reset my caffeine tolerance?</AccordionTrigger>
                 <AccordionContent>
-                  To reset your tolerance, you need to reduce your intake to allow your brain to downregulate its extra adenosine receptors. A gradual tapering plan is the most comfortable method. Our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> is a tool specifically designed to help you create a tapering schedule and avoid severe withdrawal symptoms.
+                  To reset your tolerance, you need to reduce your intake to allow your brain to downregulate its extra adenosine receptors. A gradual tapering plan is the most comfortable method. Our guide on <Link href="/articles/how-to-quit-caffeine">how to quit caffeine</Link> and our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> tool can guide you.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-5">
@@ -434,7 +434,7 @@ export default function CaffeineDoesntAffectYouArticle() {
               <AccordionItem value="faq-6">
                 <AccordionTrigger>If caffeine doesn't affect me, does it still impact my sleep?</AccordionTrigger>
                 <AccordionContent>
-                   Yes, this is a critical point. Even if you don't 'feel' the stimulating effects, caffeine is still a long-lasting drug in your system. It can disrupt your sleep architecture, particularly reducing deep and REM sleep, even in fast metabolizers. Use our <Link href="/calculators/caffeine-sleep-calculator">Caffeine Sleep Calculator</Link> to see how much is left at bedtime.
+                   Yes, this is a critical point. Even if you don't 'feel' the stimulating effects, caffeine is still a long-lasting drug in your system. It can disrupt your sleep architecture, particularly reducing deep and REM sleep, even in fast metabolizers. Read our article on <Link href='/articles/caffeine-half-life-sleep'>caffeine's half-life and sleep</Link> to learn more.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-7">
@@ -500,5 +500,3 @@ export default function CaffeineDoesntAffectYouArticle() {
     </>
   );
 }
-
-    
