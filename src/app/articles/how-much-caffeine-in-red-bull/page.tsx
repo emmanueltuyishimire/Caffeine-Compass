@@ -151,7 +151,7 @@ export default function HowMuchCaffeineInRedBullArticle() {
             How Much Caffeine Is in Red Bull? A Complete Guide & Comparison
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            It "gives you wings," but how much of a kick does it actually pack? Here's the definitive, science-backed answer on Red Bull's caffeine content and how it compares to your other favorite drinks.
+            It "gives you wings," but how much of a kick does it actually pack? Here’s the definitive, science-backed answer on Red Bull's caffeine content and how it compares to your other favorite drinks.
           </p>
         </header>
         
@@ -461,3 +461,5 @@ export default function HowMuchCaffeineInRedBullArticle() {
     </>
   );
 }
+
+    
