@@ -43,12 +43,31 @@ const pageJsonLd = {
   },
   "description": "A comprehensive guide on how to quit caffeine by using a gradual tapering method to minimize or avoid withdrawal symptoms like headaches, fatigue, and irritability. Learn the science behind withdrawal and use our tools to create a personalized plan.",
   "articleBody": "This article provides a science-backed method for quitting caffeine. It explains why quitting 'cold turkey' leads to severe withdrawal symptoms by detailing the neurochemical process of adenosine receptor upregulation. The primary solution presented is a gradual tapering schedule, which allows the brain to adapt slowly. The article offers a step-by-step guide to creating a tapering plan, strategies for managing the process (like switching to lower-caffeine drinks), and explains the timeline and symptoms of withdrawal. It's designed to work in tandem with the Caffeine Withdrawal Tracker calculator.",
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculation.site/" },
-      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://calculation.site/articles" },
-      { "@type": "ListItem", "position": 3, "name": "How to Quit Caffeine", "item": "https://calculation.site/articles/how-to-quit-caffeine" }
+    "howTo": {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Quit Caffeine Using a Tapering Method",
+    "step": [
+        {
+            "@type": "HowToStep",
+            "name": "Calculate Starting Intake",
+            "text": "Use the Caffeine Withdrawal Tracker to log your typical daily drinks and establish your baseline caffeine consumption in milligrams."
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Choose a Tapering Schedule",
+            "text": "Select a tapering duration (e.g., 14 days) and reduction frequency (e.g., every 2 days). A longer, more gradual plan minimizes symptoms."
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Generate Your Plan",
+            "text": "The tool will create a day-by-day schedule with specific maximum caffeine targets for each day of your taper."
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Execute the Plan with Smart Swaps",
+            "text": "Meet your daily targets by replacing high-caffeine drinks with lower-caffeine alternatives, like tea or half-caff coffee, or by reducing serving sizes."
+        }
     ]
   },
   "faqPage": {
@@ -235,13 +254,14 @@ export default function HowToQuitCaffeineArticle() {
               </li>
                <li>
                 <strong>Step 4: Execute with Smart Swaps</strong>
-                <p>This is where the magic happens. To meet your daily targets, you'll need to make smart substitutions. Don't just drink "less coffee." Be specific.</p>
-                <ul>
-                    <li>Replace a high-caffeine coffee with a lower-caffeine one. (Use our <Link href="/calculators/caffeine-drinks-database">Drinks Database</Link> to check values).</li>
-                    <li>Brew a "half-caff" by mixing regular and decaf grounds.</li>
-                    <li>Swap one of your coffees for a black or green tea.</li>
-                    <li>Reduce your serving size from a grande to a tall.</li>
-                </ul>
+                <p>This is where the magic happens. To meet your daily targets, you'll need to make smart substitutions. Don't just drink "less coffee." Be specific.
+                    <ul>
+                        <li>Replace a high-caffeine coffee with a lower-caffeine one. (Use our <Link href="/calculators/caffeine-drinks-database">Drinks Database</Link> to check values).</li>
+                        <li>Brew a "half-caff" by mixing regular and decaf grounds.</li>
+                        <li>Swap one of your coffees for a black or green tea.</li>
+                        <li>Reduce your serving size from a grande to a tall.</li>
+                    </ul>
+                </p>
               </li>
             </ol>
           </section>
