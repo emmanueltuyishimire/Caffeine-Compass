@@ -6,8 +6,8 @@ import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-    title: 'Caffeine Calculators — Tools for Energy, Focus, and Health',
-    description: 'Explore our complete suite of science-backed caffeine calculators. Track intake, understand your metabolism, optimize timing, and more to take control of your caffeine consumption.',
+    title: 'Caffeine Calculators — Tools for Caffeine Energy, Focus & Health',
+    description: 'Explore our complete suite of science-backed caffeine calculators. Track your caffeine intake, understand your metabolism, optimize timing, and more to take control of your consumption.',
 };
 
 const pageJsonLd = {
@@ -38,7 +38,7 @@ const pageJsonLd = {
 
 const calculatorSections = [
   {
-    category: "Intake & Safety",
+    category: "Caffeine Intake & Safety",
     calculators: [
         {
             title: "Caffeine Intake Calculator",
@@ -55,7 +55,7 @@ const calculatorSections = [
     ]
   },
   {
-    category: "Energy & Sleep",
+    category: "Caffeine for Energy & Sleep",
     calculators: [
         {
             title: "Caffeine Half-Life Calculator",
@@ -78,7 +78,7 @@ const calculatorSections = [
     ]
   },
   {
-    category: "Health & Lifestyle",
+    category: "Caffeine, Health & Lifestyle",
     calculators: [
         {
             title: "Caffeine Sensitivity Test",
@@ -89,19 +89,19 @@ const calculatorSections = [
         {
             title: "Caffeine Withdrawal Tracker",
             href: "/calculators/caffeine-withdrawal-tracker",
-            description: "Helps users taper down safely.",
+            description: "Helps users taper down caffeine safely.",
             icon: TrendingDown,
         },
         {
             title: "Pregnancy Caffeine Safe Limit Calculator",
             href: "/calculators/pregnancy-caffeine-safe-limit",
-            description: "Track intake against the 200mg limit for pregnancy.",
+            description: "Track caffeine intake against the 200mg limit for pregnancy.",
             icon: Baby,
         },
     ]
   },
    {
-    category: "Knowledge & Tools",
+    category: "Caffeine Knowledge & Tools",
     calculators: [
         {
             title: "Caffeine in Drinks Database",
@@ -125,7 +125,7 @@ export default function CalculatorsPage() {
       <JsonLd data={pageJsonLd} />
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Our Calculators</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Caffeine Calculators</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             A complete suite of science-backed tools to help you understand and optimize your caffeine consumption for better health, focus, and sleep.
           </p>

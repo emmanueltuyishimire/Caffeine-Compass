@@ -10,7 +10,7 @@ import HalfLifeEstimator from '@/components/features/HalfLifeEstimator';
 
 export const metadata: Metadata = {
   title:
-    'Caffeine Half-Life Calculator — Find Out How Long Caffeine Stays in Your System',
+    'Caffeine Half-Life Calculator — How Long Caffeine Stays in Your System',
   description:
     'Use our free, science-based calculator to estimate caffeine’s half-life in your body. Learn how metabolism, genetics, and timing affect focus and sleep.',
 };
@@ -42,7 +42,7 @@ export default function HalfLifeCalculatorPage() {
       <div className="container mx-auto px-4 py-12">
         <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Caffeine Half-Life Calculator — How Long Does Caffeine Stay in Your System?
+            Caffeine Half-Life Calculator
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Visualize how caffeine decays in your body over time. Use this tool to optimize your intake for peak performance and protect your sleep quality.
@@ -81,7 +81,7 @@ export default function HalfLifeCalculatorPage() {
               </Card>
               <Card className="mb-4">
                   <CardHeader>
-                      <CardTitle className="flex items-center gap-2"><Moon aria-hidden="true"/> Your Last Coffee Should Be 10 Hours Before Bed</CardTitle>
+                      <CardTitle className="flex items-center gap-2"><Moon aria-hidden="true"/> Your Last Caffeine Dose Should Be 10 Hours Before Bed</CardTitle>
                   </CardHeader>
                   <CardContent>
                       <p>For most people, a good rule of thumb is to set your caffeine curfew for 10 hours before your target bedtime. This is based on two average half-lives (5 hours x 2), which is enough time to clear 75% of the caffeine from your system. Use the calculator to confirm this for your specific metabolism.</p>

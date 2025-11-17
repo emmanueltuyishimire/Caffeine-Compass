@@ -24,7 +24,7 @@ import { Lightbulb, Coffee, Leaf, CupSoda, Zap, BrainCircuit, TrendingDown, Brie
 
 export const metadata: Metadata = {
   title:
-    'Caffeine Drink Comparison Tool — Compare Caffeine in Coffee, Tea, Soda & Energy Drinks',
+    'Caffeine Drink Comparison Tool — Compare Caffeine in Your Drinks',
   description:
     'Use our interactive chart to visually compare the caffeine content (mg) of popular drinks. See how coffee, tea, soda, and energy drinks stack up against each other.',
 };
@@ -168,7 +168,7 @@ export default function DrinkComparisonPage() {
       <div className="container mx-auto px-4 py-12 md:py-20">
         <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Caffeine Drink Comparison Tool — Compare Caffeine in Coffee, Tea, Soda & Energy Drinks
+            Caffeine Drink Comparison Tool
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Ever wondered how your morning coffee compares to an energy drink? Use our interactive chart to visualize and compare the caffeine content of hundreds of popular beverages.
@@ -197,7 +197,7 @@ export default function DrinkComparisonPage() {
             <Separator />
 
             <section id="how-it-works" aria-labelledby="how-it-works-heading">
-                <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Tool Works: From Numbers to Knowledge</h2>
+                <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Caffeine Comparison Tool Works: From Numbers to Knowledge</h2>
                 <p>
                     This comparison tool is designed to be intuitive and powerful, transforming raw caffeine data into immediate, actionable insight. By visualizing the caffeine content of different drinks, it helps you understand the magnitude of your choices. Here’s the science and logic that power this simple yet effective tool.
                 </p>
@@ -547,7 +547,7 @@ export default function DrinkComparisonPage() {
                           <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Intake Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
-                          <p>Now that you know the potency, track your total daily consumption against safe limits.</p>
+                          <p>Now that you know the potency, track your total daily caffeine consumption against safe limits.</p>
                       </CardContent>
                   </Card>
                   <Card>

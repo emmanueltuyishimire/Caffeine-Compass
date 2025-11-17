@@ -24,9 +24,9 @@ import {
 
 export const metadata: Metadata = {
   title:
-    'Caffeine Overdose Risk Calculator — Estimate Safe & Toxic Levels',
+    'Caffeine Overdose Risk Calculator — Estimate Safe & Toxic Caffeine Levels',
   description:
-    'Use our free, science-based calculator to estimate caffeine overdose levels based on your body weight. Understand the risks and stay within safe caffeine limits.',
+    'Use our free, science-based calculator to estimate caffeine overdose levels based on your body weight. Understand the risks of high caffeine intake and stay within safe limits.',
 };
 
 const pageJsonLd = {
@@ -182,7 +182,7 @@ export default function CaffeineOverdoseRiskPage() {
                 </section>
                 
                 <section id="introduction" aria-labelledby="introduction-heading">
-                    <h2 id="introduction-heading" className="text-3xl font-bold">Understanding Your Limits: Why Caffeine Safety Matters</h2>
+                    <h2 id="introduction-heading" className="text-3xl font-bold">Understanding Your Caffeine Limits: Why Safety Matters</h2>
                     <p>
                         Caffeine is the world's most popular psychoactive drug, and for most people, it's a safe and effective tool for enhancing focus and alertness. However, in an age of highly concentrated energy drinks, powders, and pills, the risk of consuming a toxic amount of caffeine is higher than ever. It's easy to lose track of how much you're consuming, and the consequences of going too far can range from unpleasant to life-threatening. This <strong>Caffeine Overdose Risk Calculator</strong> is designed to translate abstract caffeine amounts into personalized, weight-based risk estimates, providing a crucial layer of safety and awareness.
                     </p>
@@ -197,7 +197,7 @@ export default function CaffeineOverdoseRiskPage() {
                 <Separator />
                 
                 <section id="how-it-works" aria-labelledby="how-it-works-heading">
-                    <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Calculator Works: The Science of Dose-Dependent Risk</h2>
+                    <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Calculator Works: The Science of Dose-Dependent Caffeine Risk</h2>
                     <p>This calculator operates on a fundamental principle of toxicology: "the dose makes the poison." The effect of any substance, including caffeine, is dependent on how much is consumed relative to your body mass. This is why medical and toxicological doses are almost always calculated in milligrams (mg) per kilogram (kg) of body weight. Our calculator automates this process to provide personalized risk estimates.</p>
                     
                     <h3 className="text-2xl font-semibold">Inputs Explained: The Basis of Your Personalized Estimate</h3>
@@ -288,7 +288,7 @@ export default function CaffeineOverdoseRiskPage() {
                 <Separator/>
 
                 <section id="worked-examples" aria-labelledby="worked-examples-heading">
-                    <h2 id="worked-examples-heading" className="text-3xl font-bold">Worked Examples: Understanding Real-World Risk</h2>
+                    <h2 id="worked-examples-heading" className="text-3xl font-bold">Worked Examples: Understanding Real-World Caffeine Risk</h2>
                     <p>Let's see how the calculator can highlight potential dangers for different individuals.</p>
                     
                     <Card className="mb-6">
@@ -408,15 +408,15 @@ export default function CaffeineOverdoseRiskPage() {
                     <div className="space-y-4">
                         <Card>
                           <CardHeader>
-                            <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Intake Calculator</Link></CardTitle>
+                            <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Caffeine Intake Calculator</Link></CardTitle>
                           </CardHeader>
                           <CardContent>
-                            <p>First, track your total daily consumption to see if you are approaching any risk thresholds.</p>
+                            <p>First, track your total daily caffeine consumption to see if you are approaching any risk thresholds.</p>
                           </CardContent>
                         </Card>
                          <Card>
                           <CardHeader>
-                            <CardTitle><Link href="/calculators/caffeine-drink-comparison" className="hover:underline">Drink Comparison Tool</Link></CardTitle>
+                            <CardTitle><Link href="/calculators/caffeine-drink-comparison" className="hover:underline">Caffeine Drink Comparison Tool</Link></CardTitle>
                           </CardHeader>
                           <CardContent>
                             <p>Visually compare high-caffeine energy drinks and coffees to be aware of their potency and risks.</p>

@@ -22,7 +22,7 @@ import {
 } from '@/components/ui/table';
 
 export const metadata: Metadata = {
-  title: 'Caffeine Intake Calculator — Accurate Caffeine Tracking Tool',
+  title: 'Caffeine Intake Calculator — Track Your Daily Caffeine',
   description: 'Use this free calculator to measure your caffeine intake and compare it to safe limits. Our science-backed tool helps you manage energy, sleep, and health.',
 };
 
@@ -177,7 +177,7 @@ export default function IntakeCalculatorPage() {
       <div className="container mx-auto px-4 py-12 md:py-20">
         <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Caffeine Intake Calculator — Track Your Daily Consumption
+            Caffeine Intake Calculator
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Log your drinks, measure your total daily caffeine load, and understand how it compares to safe limits for optimal health and performance.
@@ -203,7 +203,7 @@ export default function IntakeCalculatorPage() {
           <Separator />
           
             <section id="how-it-works" aria-labelledby="how-it-works-heading">
-                <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Calculator Works: From Guesswork to Precision</h2>
+                <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Caffeine Calculator Works: From Guesswork to Precision</h2>
                 <p>
                     This tool moves you beyond vague estimates ("I had a couple of coffees") to a precise, numerical understanding of your daily caffeine load. It combines a comprehensive database with simple user inputs to provide an accurate, real-time tally of your consumption. Here’s a breakdown of the science and logic powering the calculator.
                 </p>
@@ -282,7 +282,7 @@ export default function IntakeCalculatorPage() {
                         </TableRow>
                     </TableBody>
                 </Table>
-                 <p className="mt-4 text-sm">If you're interested in how different drinks stack up against each other, try our <Link href="/calculators/caffeine-drink-comparison">Drink Comparison Tool</Link>.</p>
+                 <p className="mt-4 text-sm">If you're interested in how different drinks stack up against each other, try our <Link href="/calculators/caffeine-drink-comparison">Caffeine Drink Comparison Tool</Link>.</p>
             </section>
 
           <Separator />

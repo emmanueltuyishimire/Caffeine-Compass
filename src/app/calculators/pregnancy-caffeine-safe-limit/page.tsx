@@ -22,7 +22,7 @@ import {
 } from '@/components/ui/table';
 
 export const metadata: Metadata = {
-  title: 'Pregnancy Caffeine Calculator — Track Your Daily Intake Safely',
+  title: 'Pregnancy Caffeine Calculator — Track Daily Caffeine Intake Safely',
   description: 'Track your daily caffeine intake against the recommended 200mg limit for pregnancy. Make informed choices for a healthy pregnancy with our free, science-based tool.',
 };
 
@@ -205,16 +205,16 @@ export default function PregnancySafeLimitPage() {
                 <Separator />
                 
                  <section id="how-it-works" aria-labelledby="how-it-works-heading">
-                    <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Calculator Works: The Science of Safe Limits</h2>
+                    <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Caffeine Calculator Works: The Science of Safe Limits</h2>
                     <p>This calculator is a specialized version of our main intake tracker, specifically calibrated to the 200mg daily guideline for pregnancy. It provides a simple, visual, and non-judgmental way to monitor your consumption and stay within a safe range.</p>
-                    <h3 className="text-2xl font-semibold">Inputs Explained: Totaling Your Daily Intake</h3>
+                    <h3 className="text-2xl font-semibold">Inputs Explained: Totaling Your Daily Caffeine Intake</h3>
                     <ul>
                         <li><strong>Drink & Food Selection:</strong> The core of the calculator is our comprehensive database. When you add a "Starbucks Short Coffee" or a "can of Diet Coke," you're inputting verified caffeine data. This precision is essential because generic estimates are often inaccurate.</li>
                         <li><strong>Custom Entries:</strong> The "Add Custom Item" feature is crucial for items like a specific brand of chocolate or a local bakery's tea. This ensures you can account for all sources of caffeine, not just the common ones.</li>
                         <li><strong>Quantity Tracking:</strong> By logging each item, you build a real-time picture of your cumulative intake. This helps you understand how multiple "small" sources can add up quickly.</li>
                     </ul>
 
-                    <h3 className="text-2xl font-semibold">The Scientific Background: Why is the Limit 200mg?</h3>
+                    <h3 className="text-2xl font-semibold">The Scientific Background: Why is the Caffeine Limit 200mg?</h3>
                     <p>The 200mg recommendation is based on extensive research into how the body processes caffeine during pregnancy. There are two key reasons for this lower limit:</p>
                     <ol>
                         <li><strong>Slower Maternal Metabolism:</strong> During pregnancy, hormonal changes significantly reduce the activity of the CYP1A2 enzyme in your liver, which is responsible for breaking down caffeine. The half-life of caffeine—the time it takes your body to eliminate 50% of it—can increase dramatically. While it's typically 3-5 hours in a non-pregnant adult, it can extend to <strong>10-15 hours</strong> in the third trimester. This means a morning coffee can still be active in your system late at night.</li>
@@ -264,7 +264,7 @@ export default function PregnancySafeLimitPage() {
                 <Separator />
                 
                 <section id="how-to-use" aria-labelledby="how-to-use-heading">
-                    <h2 id="how-to-use-heading" className="text-3xl font-bold">Step-by-Step Instructions: Tracking Your Intake Safely</h2>
+                    <h2 id="how-to-use-heading" className="text-3xl font-bold">Step-by-Step Instructions: Tracking Your Caffeine Intake Safely</h2>
                     <ol className="list-decimal pl-5 space-y-4">
                         <li>
                             <strong>Step 1: Log Your Drinks & Snacks</strong><br/>

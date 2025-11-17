@@ -9,7 +9,7 @@ import DrinksDatabase from '@/components/features/DrinksDatabase';
 
 export const metadata: Metadata = {
   title:
-    'Caffeine in Drinks Database — Search 1,000+ Beverages by Caffeine Content',
+    'Caffeine in Drinks Database — Search 1,000+ Beverages for Caffeine Content',
   description:
     'Use our free, searchable database to find the exact caffeine content (mg) of over 1,000 drinks. Answer "how much caffeine is in..." for any coffee, tea, soda, or energy drink.',
 };
@@ -69,14 +69,14 @@ export default function DrinksDatabasePage() {
           <Separator />
           
           <section id="related-tools" aria-labelledby="related-tools-heading">
-              <h2 id="related-tools-heading" className="text-3xl font-bold">Next Steps: Put Your Knowledge to Use</h2>
+              <h2 id="related-tools-heading" className="text-3xl font-bold">Next Steps: Put Your Caffeine Knowledge to Use</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <Card>
                       <CardHeader>
                           <CardTitle><Link href="/calculators/caffeine-intake" className="hover:underline">Intake Calculator</Link></CardTitle>
                       </CardHeader>
                       <CardContent>
-                          <p>Found your drink? Now add it to our Intake Calculator to track your total daily consumption.</p>
+                          <p>Found your drink? Now add it to our Intake Calculator to track your total daily caffeine consumption.</p>
                       </CardContent>
                   </Card>
                   <Card>

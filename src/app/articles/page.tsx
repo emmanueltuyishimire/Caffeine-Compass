@@ -6,15 +6,15 @@ import JsonLd from '@/components/JsonLd';
 import { BookText, Database, Zap, TrendingDown, CupSoda, Leaf, Coffee } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Learn About Caffeine — Articles, Guides & Tools',
-    description: 'Explore in-depth articles, guides, and tools to understand caffeine. From its effects on sleep to the caffeine content of your favorite drinks, master your consumption.',
+    title: 'Caffeine Articles — In-Depth Guides on Caffeine Science & Health',
+    description: 'Explore in-depth articles and guides to understand caffeine. From its effects on sleep to the caffeine content of your favorite drinks, master your consumption.',
 };
 
 const articleLinks = [
   {
     title: "How Much Caffeine Is in a Cup of Coffee?",
     href: "/articles/how-much-caffeine-in-a-cup-of-coffee",
-    description: "A complete guide to why caffeine levels vary so much in coffee.",
+    description: "The definitive guide to why caffeine levels vary so much in coffee.",
     icon: Coffee,
   },
   {
@@ -159,14 +159,14 @@ export default function ArticlesPage() {
       <JsonLd data={articlesPageJsonLd} />
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Learn & Explore</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Caffeine Articles & Guides</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             In-depth guides and tools to help you understand and master your relationship with caffeine.
           </p>
         </div>
 
          <div className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">Knowledge Tools</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">Knowledge Tools for Caffeine</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 {toolLinks.map((tool) => (
                     <Link key={tool.title} href={tool.href} className="block group">
@@ -187,7 +187,7 @@ export default function ArticlesPage() {
         </div>
         
         <div>
-            <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">Articles</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">All Caffeine Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {articleLinks.sort((a, b) => a.title.localeCompare(b.title)).map((article) => (
                     <Link key={article.title} href={article.href} className="block group">

@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Caffeine Compass | Caffeine Calculators, Data & Science',
+    title: 'Caffeine Compass | Your Ultimate Guide to Caffeine',
     description: 'The ultimate resource for caffeine calculators, data tools, and science-backed articles. Optimize your intake, improve your sleep, and master your energy.',
 };
 
@@ -39,13 +39,13 @@ const homePageJsonLd = {
 
 const featuredCalculators = [
   {
-    title: "Daily Intake Calculator",
+    title: "Caffeine Intake Calculator",
     href: "/calculators/caffeine-intake",
-    description: "Track your personal consumption against safe limits.",
+    description: "Track your personal caffeine consumption against safe limits.",
     icon: Coffee,
   },
   {
-    title: "Half-Life Calculator",
+    title: "Caffeine Half-Life Calculator",
     href: "/calculators/caffeine-half-life",
     description: "Visualize how long caffeine affects your system.",
     icon: BarChart2,
@@ -57,21 +57,21 @@ const featuredCalculators = [
     icon: BrainCircuit,
   },
   {
-    title: "Overdose Risk Calculator",
+    title: "Caffeine Overdose Risk Calculator",
     href: "/calculators/caffeine-overdose-risk",
-    description: "Estimate toxic levels based on your body weight.",
+    description: "Estimate toxic caffeine levels based on your body weight.",
     icon: Shield,
   },
   {
-    title: "Withdrawal Management",
+    title: "Caffeine Withdrawal Management",
     href: "/calculators/caffeine-withdrawal-tracker",
     description: "Create a tapering plan to quit caffeine safely.",
     icon: TrendingDown,
   },
    {
-    title: "Peak Timing Optimizer",
+    title: "Caffeine Timing Optimizer",
     href: "/calculators/caffeine-timing-optimizer",
-    description: "Find the perfect time to drink coffee for energy.",
+    description: "Find the perfect time to drink caffeine for energy.",
     icon: Clock,
   },
 ];
@@ -120,14 +120,14 @@ export default function Home() {
             )}
           <div className="relative z-10 p-4 max-w-4xl mx-auto rounded-xl bg-black/30 backdrop-blur-sm">
             <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
-              Understand Your Buzz. Master Your Energy.
+              Master Your Caffeine. Master Your Life.
             </h1>
             <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
-              The ultimate resource for caffeine calculators, data tools, and science-backed articles. Take control of your caffeine consumption for better focus, sleep, and health.
+              Your definitive, science-backed guide to caffeine. Use our expert tools and articles to optimize your intake for better focus, sleep, and health.
             </p>
             <div className="flex justify-center">
               <Link href="/calculators">
-                <Button size="lg" aria-label="Explore our suite of caffeine calculators">Explore Our Calculators</Button>
+                <Button size="lg" aria-label="Explore our suite of caffeine calculators">Explore Caffeine Calculators</Button>
               </Link>
             </div>
           </div>
@@ -136,9 +136,9 @@ export default function Home() {
         <section id="calculators" className="py-12 md:py-20 bg-background" role="region" aria-labelledby="calculators-heading">
           <div className="container mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 id="calculators-heading" className="text-3xl md:text-4xl font-bold font-headline">A Toolkit for Mindful Caffeination</h2>
+                <h2 id="calculators-heading" className="text-3xl md:text-4xl font-bold font-headline">A Toolkit for Mindful Caffeine Consumption</h2>
                 <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-                    From tracking your daily intake to understanding your genetic tolerance, our calculators provide the data you need to make smarter choices.
+                    From tracking your daily caffeine load to understanding your genetic tolerance, our calculators provide the data you need to make smarter choices.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -160,7 +160,7 @@ export default function Home() {
               </div>
               <div className="text-center mt-12">
                   <Link href="/calculators">
-                    <Button variant="outline">See All Calculators</Button>
+                    <Button variant="outline">See All Caffeine Calculators</Button>
                   </Link>
               </div>
           </div>
@@ -186,7 +186,7 @@ export default function Home() {
                           Science-Backed & Data-Driven
                         </h3>
                         <p className="text-muted-foreground">
-                          Our tools and articles are built on a foundation of scientific research and verifiable data to provide you with trustworthy information for your health.
+                          Our caffeine tools and articles are built on a foundation of scientific research and verifiable data to provide you with trustworthy health information.
                         </p>
                       </div>
                     </div>
@@ -202,7 +202,7 @@ export default function Home() {
                           Focused on Personal Wellness
                         </h3>
                         <p className="text-muted-foreground">
-                          We believe that understanding your personal reaction to caffeine is key. Our calculators are designed to help you discover what works for your unique body.
+                          We believe understanding your personal reaction to caffeine is key. Our calculators are designed to help you discover what works for your unique body.
                         </p>
                       </div>
                     </div>
@@ -245,7 +245,7 @@ export default function Home() {
         <section id="articles" className="py-12 md:py-20 bg-background" role="region" aria-labelledby="articles-heading">
           <div className="container mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 id="articles-heading" className="text-3xl md:text-4xl font-bold font-headline">Featured Articles & Guides</h2>
+                <h2 id="articles-heading" className="text-3xl md:text-4xl font-bold font-headline">Featured Caffeine Articles & Guides</h2>
                 <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
                     Dive deeper into the science of caffeine with our in-depth guides, written to help you understand its impact on your body and mind.
                 </p>
@@ -269,7 +269,7 @@ export default function Home() {
               </div>
               <div className="text-center mt-12">
                   <Link href="/articles">
-                    <Button variant="outline">See All Articles</Button>
+                    <Button variant="outline">See All Caffeine Articles</Button>
                   </Link>
               </div>
           </div>
