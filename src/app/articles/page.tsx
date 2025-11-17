@@ -30,6 +30,12 @@ const articleLinks = [
     icon: CupSoda,
   },
    {
+    title: "Does Coke Zero Have Caffeine?",
+    href: "/articles/does-coke-zero-have-caffeine",
+    description: "Get a clear answer on standard vs. caffeine-free versions.",
+    icon: CupSoda,
+  },
+   {
     title: "Does Matcha Have Caffeine?",
     href: "/articles/does-matcha-have-caffeine",
     description: "A guide to its caffeine content and unique effects vs. coffee.",
@@ -174,3 +180,5 @@ export default function ArticlesPage() {
     </>
   );
 }
+
+    

@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '/articles/does-sprite-have-caffeine',
       '/articles/does-matcha-have-caffeine',
       '/articles/how-much-caffeine-in-red-bull',
+      '/articles/does-coke-zero-have-caffeine',
   ];
 
   // Placeholder for proxied blog routes
@@ -107,3 +108,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...businessUrls,
   ]
 }
+
+    
