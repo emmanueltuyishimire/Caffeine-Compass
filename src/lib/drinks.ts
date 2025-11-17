@@ -1,3 +1,4 @@
+
 import type { Drink } from './types';
 import { Coffee, CupSoda, Leaf, Zap, Pill, Beaker } from 'lucide-react';
 
@@ -60,6 +61,23 @@ export const drinks: Drink[] = [
   { id: 'd49', name: 'Celsius (355ml)', category: 'Energy Drink', caffeine: 200, size: 355, icon: Zap },
   { id: 'd50', name: 'Reign Total Body Fuel (473ml)', category: 'Energy Drink', caffeine: 300, size: 473, icon: Zap },
   { id: 'd51', name: 'VPX Bang', category: 'Energy Drink', caffeine: 300, size: 473, icon: Zap },
+  { id: 'monster-1', name: 'Caffe Monster Energy Coffee', category: 'Coffee', caffeine: 175, size: 405, icon: Coffee },
+  { id: 'monster-2', name: 'Monster Cuba Lima', category: 'Energy Drink', caffeine: 160, size: 473, icon: Zap },
+  { id: 'monster-3', name: 'Monster DUB', category: 'Energy Drink', caffeine: 160, size: 473, icon: Zap },
+  { id: 'monster-4', name: 'Monster Export (UK)', category: 'Energy Drink', caffeine: 76, size: 250, icon: Zap },
+  { id: 'monster-5', name: 'Monster Hammer X-presso', category: 'Coffee', caffeine: 221, size: 200, icon: Coffee },
+  { id: 'monster-6', name: 'Monster Heavy Metal', category: 'Energy Drink', caffeine: 160, size: 473, icon: Zap },
+  { id: 'monster-7', name: 'Monster Hitman Sniper', category: 'Energy Drink', caffeine: 240, size: 89, icon: Zap },
+  { id: 'monster-8', name: 'Monster Khaos', category: 'Energy Drink', caffeine: 154, size: 473, icon: Zap },
+  { id: 'monster-9', name: 'Monster M3 Energy Drink', category: 'Energy Drink', caffeine: 160, size: 148, icon: Zap },
+  { id: 'monster-10', name: 'Monster Maxx', category: 'Energy Drink', caffeine: 200, size: 355, icon: Zap },
+  { id: 'monster-11', name: 'Monster Mixxd Energy Drink', category: 'Energy Drink', caffeine: 160, size: 473, icon: Zap },
+  { id: 'monster-12', name: 'Monster Mutant Super Soda', category: 'Soda', caffeine: 115, size: 591, icon: CupSoda },
+  { id: 'monster-13', name: 'Monster Rehab Green Tea', category: 'Tea', caffeine: 155, size: 458, icon: Leaf },
+  { id: 'monster-14', name: 'Monster Ultra Pink', category: 'Energy Drink', caffeine: 140, size: 473, icon: Zap },
+  { id: 'monster-15', name: 'Monster Unleaded', category: 'Energy Drink', caffeine: 0, size: 473, icon: Zap },
+  { id: 'monster-16', name: 'Monster X-presso Hammer (NZ/AUS)', category: 'Coffee', caffeine: 90, size: 284, icon: Coffee },
+  { id: 'monster-17', name: 'Ubermonster Energy Brew', category: 'Energy Drink', caffeine: 187, size: 550, icon: Zap },
 
   // Starbucks (Popular Sizes: Short 236ml, Tall 355ml, Grande 473ml, Venti 591ml)
   { id: 's1', name: 'Starbucks Brewed Coffee (Grande)', category: 'Coffee', caffeine: 310, size: 473, icon: Coffee },
