@@ -66,6 +66,12 @@ const articleLinks = [
     icon: Zap,
   },
   {
+    title: "How Much Caffeine Is in a Monster?",
+    href: "/articles/how-much-caffeine-in-monster",
+    description: "A guide to the caffeine in Monster Original, Zero Ultra, and Java Monster.",
+    icon: Zap,
+  },
+  {
     title: "How Long Before Bed to Stop Caffeine",
     href: "/articles/how-long-before-bed-to-stop-caffeine",
     description: "Find your personal caffeine curfew for better sleep.",
@@ -183,7 +189,7 @@ export default function ArticlesPage() {
         <div>
             <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {articleLinks.map((article) => (
+                {articleLinks.sort((a, b) => a.title.localeCompare(b.title)).map((article) => (
                     <Link key={article.title} href={article.href} className="block group">
                     <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
                         <CardHeader>
