@@ -14,22 +14,9 @@ export const mainNav = [
     icon: Compass
   },
   {
+    href: '/data',
     label: 'Data',
-    icon: Database,
-    links: [
-        {
-            href: '/calculators/caffeine-drinks-database',
-            label: 'Caffeine in Drinks',
-            description: 'Search our database of over 1,000 beverages to find their exact caffeine content.',
-            icon: Coffee
-        },
-        {
-            href: '/data/sugar-in-drinks',
-            label: 'Sugar in Drinks',
-            description: 'Explore the sugar and calorie content of hundreds of popular drinks.',
-            icon: Zap
-        }
-    ]
+    icon: Database
   },
   {
     href: '/articles',
