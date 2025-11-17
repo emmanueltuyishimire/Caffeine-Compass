@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '/articles/how-much-caffeine-in-a-cup-of-coffee',
       '/articles/how-long-does-caffeine-stay-in-your-system',
       '/articles/how-much-caffeine-in-espresso',
+      '/articles/how-much-caffeine-in-celsius',
   ];
 
   // Placeholder for proxied blog routes

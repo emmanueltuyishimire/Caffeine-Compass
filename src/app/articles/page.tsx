@@ -59,6 +59,12 @@ const articleLinks = [
     description: "A complete guide to Red Bull's caffeine content and how it compares to other drinks.",
     icon: Zap,
   },
+   {
+    title: "How Much Caffeine in Celsius?",
+    href: "/articles/how-much-caffeine-in-celsius",
+    description: "A guide to the high caffeine content in Celsius energy drinks.",
+    icon: Zap,
+  },
   {
     title: "How Long Before Bed to Stop Caffeine",
     href: "/articles/how-long-before-bed-to-stop-caffeine",
@@ -114,7 +120,7 @@ const articlesPageJsonLd = {
   "url": "https://calculation.site/articles",
   "mainEntity": {
     "@type": "ItemList",
-    "itemListElement": [...articleLinks, ...toolLinks].map((item, index) => ({
+    "itemListElement": [...toolLinks, ...articleLinks].map((item, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "name": item.title,
