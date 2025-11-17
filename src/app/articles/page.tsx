@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import { BookText, Database, Zap } from 'lucide-react';
+import { BookText, Database, Zap, TrendingDown } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Learn About Caffeine — Articles, Guides & Tools',
@@ -28,6 +28,12 @@ const articleLinks = [
     href: "/articles/caffeine-half-life-sleep",
     description: "Understand the science of how long caffeine affects you.",
     icon: BookText,
+  },
+  {
+    title: "How to Quit Caffeine Without Withdrawal",
+    href: "/articles/how-to-quit-caffeine",
+    description: "A step-by-step guide to tapering off caffeine.",
+    icon: TrendingDown,
   },
 ];
 
@@ -116,7 +122,7 @@ export default function ArticlesPage() {
         
         <div>
             <h2 className="text-2xl md:text-3xl font-bold font-headline mb-8 border-b pb-4">Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {articleLinks.map((article) => (
                     <Link key={article.title} href={article.href} className="block group">
                     <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">

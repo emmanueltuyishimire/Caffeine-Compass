@@ -27,7 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articleRoutes = [
       '/articles/caffeine-effect-on-rem-sleep',
       '/articles/caffeine-half-life-sleep',
-      '/articles/how-long-before-bed-to-stop-caffeine'
+      '/articles/how-long-before-bed-to-stop-caffeine',
+      '/articles/how-to-quit-caffeine',
   ];
 
   // Placeholder for proxied blog routes
