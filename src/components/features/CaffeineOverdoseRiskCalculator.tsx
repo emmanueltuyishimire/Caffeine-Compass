@@ -125,7 +125,7 @@ export default function CaffeineOverdoseRiskCalculator() {
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
             <CollapsibleTrigger asChild>
                 <Button variant="ghost" className="w-full flex items-center justify-center gap-2 text-sm text-muted-foreground" aria-controls="advanced-settings-content" aria-expanded={isOpen}>
-                    <ChevronsUpDown className="h-4 w-4" />
+                    <ChevronsUpDown className="h-4 w-4" aria-hidden="true" />
                     {isOpen ? 'Hide' : 'Show'} Advanced Settings
                 </Button>
             </CollapsibleTrigger>

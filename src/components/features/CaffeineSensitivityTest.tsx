@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Coffee, Zap, Moon } from 'lucide-react';
+import { Coffee, Zap, Moon } from 'lucide-react';
 
 const questions = [
   {

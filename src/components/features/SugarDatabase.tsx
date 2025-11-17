@@ -17,14 +17,6 @@ import { ChevronsUpDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 
-const categoryIcons = {
-  Coffee: <Coffee className="h-5 w-5" aria-hidden="true" />,
-  Tea: <Leaf className="h-5 w-5" aria-hidden="true" />,
-  Soda: <CupSoda className="h-5 w-5" aria-hidden="true" />,
-  'Energy Drink': <Zap className="h-5 w-5" aria-hidden="true" />,
-  'Other': <PlusCircle className="h-5 w-5" aria-hidden="true" />,
-};
-
 type Category = 'Coffee' | 'Tea' | 'Soda' | 'Energy Drink' | 'Other';
 type SortOption = 'sugar_desc' | 'sugar_asc' | 'name_asc' | 'name_desc' | 'calories_desc' | 'calories_asc';
 
@@ -213,7 +205,7 @@ export default function SugarDatabase() {
           <div className="p-1 sm:p-4" role="list">
             {filteredDrinks.length > 0 ? (
               filteredDrinks.map((drink) => {
-                const Icon = drink.icon || categoryIcons[drink.category as keyof typeof categoryIcons];
+                const Icon = categoryIcons[drink.category as keyof typeof categoryIcons];
                 const sugarLevel = getSugarLevel(drink.sugar);
                 const sugarPerOz = drink.sugar !== undefined && drink.size > 0 ? (drink.sugar / (drink.size / 29.5735)).toFixed(1) : 'N/A';
                 return (
