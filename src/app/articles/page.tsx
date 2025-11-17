@@ -18,6 +18,12 @@ const articleLinks = [
     icon: Coffee,
   },
   {
+    title: "How Much Caffeine in a Shot of Espresso?",
+    href: "/articles/how-much-caffeine-in-espresso",
+    description: "A guide to the caffeine in single vs. double shots and lattes.",
+    icon: Coffee,
+  },
+  {
     title: "What to Do When Caffeine Doesn’t Affect You",
     href: "/articles/caffeine-doesnt-affect-you",
     description: "A science-backed guide to understanding and overcoming caffeine tolerance.",
