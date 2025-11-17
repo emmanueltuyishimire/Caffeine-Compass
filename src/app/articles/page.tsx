@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import { BookText, Database, Zap, TrendingDown, CupSoda, Leaf } from 'lucide-react';
+import { BookText, Database, Zap, TrendingDown, CupSoda, Leaf, Coffee } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Learn About Caffeine — Articles, Guides & Tools',
@@ -11,6 +11,12 @@ export const metadata: Metadata = {
 };
 
 const articleLinks = [
+  {
+    title: "How Much Caffeine Is in a Cup of Coffee?",
+    href: "/articles/how-much-caffeine-in-a-cup-of-coffee",
+    description: "A complete guide to why caffeine levels vary so much in coffee.",
+    icon: Coffee,
+  },
   {
     title: "What to Do When Caffeine Doesn’t Affect You",
     href: "/articles/caffeine-doesnt-affect-you",
