@@ -59,6 +59,12 @@ const articleLinks = [
     description: "Find your personal caffeine curfew for better sleep.",
     icon: BookText,
   },
+    {
+    title: "How Long Does Caffeine Stay in Your System?",
+    href: "/articles/how-long-does-caffeine-stay-in-your-system",
+    description: "Understand the science of caffeine half-life and its impact on your body.",
+    icon: BookText,
+  },
   {
     title: "Caffeine's Effect on REM Sleep",
     href: "/articles/caffeine-effect-on-rem-sleep",
