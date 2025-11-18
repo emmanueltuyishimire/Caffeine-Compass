@@ -50,7 +50,7 @@ const homePageJsonLd = {
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "Is caffeine good or bad for you?",
+            "name": "Is caffeine good or bad?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Caffeine is neither inherently 'good' nor 'bad'—it's a powerful drug whose effect depends on dose, timing, and individual genetics. In moderate doses, it has proven benefits for focus and athletic performance. However, high doses or poor timing can lead to anxiety and disrupt sleep. Responsible use is key."
@@ -242,14 +242,6 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
-            "name": "What is the healthiest drink with caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Unsweetened green tea and black coffee are generally considered the healthiest sources. They provide the cognitive benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and most energy drinks."
-            }
-        },
-        {
-            "@type": "Question",
             "name": "Does caffeine increase heart rate?",
             "acceptedAnswer": {
                 "@type": "Answer",
@@ -258,26 +250,10 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
-            "name": "What organ removes caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The liver is the primary organ that removes caffeine from your body. It produces an enzyme called CYP1A2 that breaks down about 95% of the caffeine you consume. The efficiency of this enzyme is determined by your genetics, making you a fast or slow metabolizer."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is it healthier to have no caffeine?",
+            "name": "Is it healthier to avoid caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Not necessarily. While a caffeine-free life can lead to better sleep and less anxiety for some, moderate caffeine consumption (especially from coffee and tea) has been linked in large studies to certain health benefits. The healthiest approach depends on your individual goals and sensitivity."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What part of the brain is most affected by caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Caffeine's main action is on the central nervous system. It primarily affects the entire brain by blocking adenosine receptors, which are found all over the brain. This widespread action is why it has such global effects on alertness, focus, and wakefulness."
             }
         },
         {
@@ -301,7 +277,31 @@ const homePageJsonLd = {
             "name": "Can drinking water flush out caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. Drinking water is good for hydration but it does not speed up the rate at which your liver metabolizes caffeine. Once it's in your system, only time can remove it, based on your genetic metabolism speed. Use our <a href='/calculators/caffeine-half-life'>Half-Life Calculator</a> to see how long it lasts."
+                "text": "No. Your liver metabolizes caffeine at a genetically determined rate, and drinking water won't speed this up. While staying hydrated is good for your health, only time can clear caffeine from your system. Use our <a href='/calculators/caffeine-half-life'>Half-Life Calculator</a> to see how long that takes for you."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is it okay to drink caffeine every day?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, for most healthy adults, daily consumption under 400mg is considered safe. However, daily use does lead to physical dependence and potential withdrawal if you stop. It's about mindful consumption, not just absence."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the best time to drink caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The best time depends on your goal. To avoid sleep disruption, have your last dose at least 8-12 hours before bed. For peak productivity, have it 45-60 minutes before a task. Our <a href='/calculators/caffeine-timing-optimizer'>Caffeine Timing Optimizer</a> can find the perfect time for you."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does caffeine cause weight gain?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Caffeine itself is a mild metabolic booster and is not associated with weight gain. However, the high-sugar, high-calorie additions in many popular coffee and energy drinks are a major contributor to weight gain."
             }
         }
     ]
@@ -607,7 +607,7 @@ export default function Home() {
                 <div className="mt-8 max-w-4xl mx-auto">
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="q-good-bad">
-                            <AccordionTrigger>Is caffeine good or bad for you?</AccordionTrigger>
+                            <AccordionTrigger>Is caffeine good or bad?</AccordionTrigger>
                             <AccordionContent>Caffeine is neither inherently "good" nor "bad"—it's a powerful drug whose effect depends on dose, timing, and individual genetics. In moderate doses, it has proven benefits for focus and athletic performance. However, high doses or poor timing can lead to anxiety and disrupt sleep. Responsible use is key.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-high-caffeine-drinks">
@@ -702,25 +702,13 @@ export default function Home() {
                             <AccordionTrigger>Do any fruits have caffeine?</AccordionTrigger>
                             <AccordionContent>No, common fruits like apples, bananas, and oranges do not contain caffeine. The caffeine-producing plants, like coffee and guarana, produce berries, but these are not typically consumed as 'fruit' in a dietary sense.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-healthiest-drink">
-                            <AccordionTrigger>What is the healthiest drink with caffeine?</AccordionTrigger>
-                            <AccordionContent>Unsweetened green tea and black coffee are generally considered the healthiest sources. They provide the cognitive benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and most energy drinks.</AccordionContent>
-                        </AccordionItem>
                         <AccordionItem value="q-increase-heart-rate">
                             <AccordionTrigger>Does caffeine increase heart rate?</AccordionTrigger>
                             <AccordionContent>Yes, caffeine is a stimulant and can temporarily increase your heart rate (tachycardia). This is a normal physiological response. For most healthy adults, this is not dangerous in moderate doses, but high doses or sensitive individuals may experience uncomfortable palpitations.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-organ-removes">
-                            <AccordionTrigger>What organ removes caffeine?</AccordionTrigger>
-                            <AccordionContent>The liver is the primary organ that removes caffeine from your body. It produces an enzyme called CYP1A2 that breaks down about 95% of the caffeine you consume. The efficiency of this enzyme is determined by your genetics, making you a fast or slow metabolizer.</AccordionContent>
-                        </AccordionItem>
                         <AccordionItem value="q-healthier-no-caffeine">
-                            <AccordionTrigger>Is it healthier to have no caffeine?</AccordionTrigger>
-                            <AccordionContent>Not necessarily. While a caffeine-free life can lead to better sleep and less anxiety for some, moderate caffeine consumption (especially from coffee and tea) has been linked in large studies to certain health benefits. The healthiest approach depends on your individual goals and sensitivity.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-part-of-brain">
-                            <AccordionTrigger>What part of the brain is most affected by caffeine?</AccordionTrigger>
-                            <AccordionContent>Caffeine's main action is on the central nervous system. It primarily affects the entire brain by blocking adenosine receptors, which are found all over the brain. This widespread action is why it has such global effects on alertness, focus, and wakefulness.</AccordionContent>
+                             <AccordionTrigger>Is it healthier to avoid caffeine?</AccordionTrigger>
+                             <AccordionContent>Not necessarily. While a caffeine-free life can lead to better sleep and less anxiety for some, moderate caffeine consumption (especially from coffee and tea) has been linked in large studies to certain health benefits. The healthiest approach depends on your individual goals and sensitivity.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-two-signs-too-much">
                             <AccordionTrigger>What are two signs that you've had too much caffeine?</AccordionTrigger>
@@ -731,8 +719,8 @@ export default function Home() {
                             <AccordionContent>The '2 hour coffee rule' isn't a standard scientific guideline, but it likely refers to one of two concepts: 1) Waiting 1.5-2 hours after waking to have your first coffee to avoid interfering with your natural cortisol peak. 2) The idea that caffeine's main effects last for a few hours, although the substance itself stays in your system much longer.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-water-flush">
-                            <AccordionTrigger>Can drinking water flush out caffeine?</AccordionTrigger>
-                            <AccordionContent>No. Your liver metabolizes caffeine at a genetically determined rate, and drinking water won't speed this up. While staying hydrated is good for your health, only time can clear caffeine from your system. Use the <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> to see how long that takes for you.</AccordionContent>
+                             <AccordionTrigger>Can drinking water flush out caffeine?</AccordionTrigger>
+                             <AccordionContent>No. Your liver metabolizes caffeine at a genetically determined rate, and drinking water won't speed this up. While staying hydrated is good for your health, only time can clear caffeine from your system. Use our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> to see how long that takes for you.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-ok-every-day">
                              <AccordionTrigger>Is caffeine ok to drink every day?</AccordionTrigger>
