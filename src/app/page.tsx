@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2, Zap, Leaf, Heart, Dumbbell } from 'lucide-react';
+import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2, Zap, Leaf, Heart, Dumbbell, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/accordion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 export const metadata: Metadata = {
     title: 'Caffeine Compass — Caffeine Calculators, Articles & Science',
@@ -82,24 +83,23 @@ export default function Home() {
       <div className="flex flex-col">
         <JsonLd data={homePageJsonLd} />
         
-        <section className="relative bg-muted/30 py-20 md:py-28 text-center text-white" aria-labelledby="hero-heading">
-            {heroImage && (
+        <section className="relative bg-background py-20 md:py-28 text-center text-foreground" aria-labelledby="hero-heading">
+             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10"></div>
+              {heroImage && (
                 <Image
                     src={heroImage.imageUrl}
                     alt={heroImage.description}
                     fill
                     priority={true}
-                    className="object-cover object-center z-0"
-                    sizes="100vw"
+                    className="object-cover object-center z-0 opacity-10 dark:opacity-5"
                     data-ai-hint={heroImage.imageHint}
                 />
             )}
-            <div className="absolute inset-0 bg-black/60 z-10"></div>
             <div className="container relative mx-auto px-4 z-20">
-                <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-shadow-lg">
+                <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
                     Master Your Caffeine. Master Your Day.
                 </h1>
-                <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 text-shadow">
+                <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
                     Your definitive, science-backed guide to caffeine. Use our expert caffeine calculators, tools, and articles to optimize your intake for better focus, sleep, and health.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -107,7 +107,7 @@ export default function Home() {
                         <Button size="lg" aria-label="Explore our suite of caffeine calculators">View All Calculators</Button>
                     </Link>
                      <Link href="/articles">
-                        <Button size="lg" variant="outline" className='bg-transparent hover:bg-white/10' aria-label="Read our caffeine articles">Read The Guides</Button>
+                        <Button size="lg" variant="outline" aria-label="Read our caffeine articles">Read The Guides</Button>
                     </Link>
                 </div>
             </div>
@@ -256,6 +256,48 @@ export default function Home() {
                 </div>
             </section>
             
+            <section id="alcohol-warning" aria-labelledby="alcohol-warning-heading">
+                <div className="text-center">
+                    <h2 id="alcohol-warning-heading" className="text-3xl md:text-4xl font-bold font-headline">Caffeine and Alcohol: A Word of Caution</h2>
+                    <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">While this site focuses on the positive, optimized use of caffeine, it is crucial to address the risks of mixing caffeine with alcohol. We strongly advise against this practice.</p>
+                </div>
+                <div className="mt-8 max-w-4xl mx-auto p-4 border border-destructive bg-destructive/10 rounded-lg">
+                    <div className="flex items-start gap-4">
+                        <AlertTriangle className="h-8 w-8 text-destructive" />
+                        <div>
+                            <h3 className="font-bold text-destructive">Medical Warning</h3>
+                            <p className="text-sm text-destructive/90">Mixing caffeine, a stimulant, with alcohol, a depressant, is dangerous. Caffeine can mask the intoxicating effects of alcohol, leading you to feel less drunk than you actually are. This can result in overconsumption of alcohol, impaired judgment, and an increased risk of accidents or alcohol poisoning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="mt-8 max-w-4xl mx-auto">
+                    <p>The following table is provided for educational purposes only, to raise awareness of the caffeine content in common alcoholic beverages. A 2005 clinical trial showed psychoactive effects from caffeine doses as low as 9 mg. We do not endorse the consumption of these drinks.</p>
+                    <Table>
+                        <TableHeader>
+                            <TableRow>
+                                <TableHead>Drink</TableHead>
+                                <TableHead>Caffeine (mg/drink)</TableHead>
+                                <TableHead>ABV</TableHead>
+                            </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                            <TableRow><TableCell>Espresso martini</TableCell><TableCell>~217 mg</TableCell><TableCell>9.8%</TableCell></TableRow>
+                            <TableRow><TableCell>Caffè corretto</TableCell><TableCell>~212 mg</TableCell><TableCell>20%</TableCell></TableRow>
+                            <TableRow><TableCell>Carajillo</TableCell><TableCell>~212 mg</TableCell><TableCell>20%</TableCell></TableRow>
+                            <TableRow><TableCell>Buckfast Tonic Wine</TableCell><TableCell>~89 mg</TableCell><TableCell>14.8%</TableCell></TableRow>
+                            <TableRow><TableCell>Vodka Red Bull</TableCell><TableCell>~60-80 mg</TableCell><TableCell>7.4%</TableCell></TableRow>
+                            <TableRow><TableCell>Irish coffee</TableCell><TableCell>~80 mg</TableCell><TableCell>9.7%</TableCell></TableRow>
+                            <TableRow><TableCell>Gunfire</TableCell><TableCell>~41 mg</TableCell><TableCell>6%</TableCell></TableRow>
+                            <TableRow><TableCell>Rev</TableCell><TableCell>~38 mg</TableCell><TableCell>7%</TableCell></TableRow>
+                            <TableRow><TableCell>Jägerbomb</TableCell><TableCell>~29 mg</TableCell><TableCell>3.5%</TableCell></TableRow>
+                            <TableRow><TableCell>Kahlúa (1.5 oz)</TableCell><TableCell>~11 mg</TableCell><TableCell>20%</TableCell></TableRow>
+                            <TableRow><TableCell>Rum and Coke</TableCell><TableCell>~10 mg</TableCell><TableCell>11.8%</TableCell></TableRow>
+                        </TableBody>
+                    </Table>
+                    <p className="text-sm mt-2 text-muted-foreground">Source: Wikipedia & product labels. Caffeine content is approximate and can vary based on preparation.</p>
+                </div>
+            </section>
+
             <section id="myths" aria-labelledby="myths-heading">
                 <div className="text-center">
                     <h2 id="myths-heading" className="text-3xl md:text-4xl font-bold font-headline">Debunking Common Caffeine Myths</h2>
@@ -284,71 +326,59 @@ export default function Home() {
                 </div>
             </section>
 
-             <section id="faq" aria-labelledby="faq-heading">
+            <section id="faq" aria-labelledby="faq-heading">
                 <div className="text-center">
                     <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold font-headline">Frequently Asked Questions</h2>
                 </div>
                 <div className="mt-8 max-w-4xl mx-auto">
                     <Accordion type="single" collapsible className="w-full">
-                        <AccordionItem value="q-good-bad">
-                            <AccordionTrigger>Is caffeine good or bad for you?</AccordionTrigger>
-                            <AccordionContent>
-                                Caffeine is neither inherently good nor bad—it's a powerful drug that must be used responsibly. In moderate doses, it has proven benefits for focus and athletic performance. However, high doses or poorly timed consumption can lead to anxiety and poor sleep. The key is understanding your personal tolerance and daily limits. Our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> can help you stay within a healthy range.
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-high-caffeine">
-                            <AccordionTrigger>What drinks are high in caffeine?</AccordionTrigger>
-                            <AccordionContent>
-                                High-caffeine drinks include strong brewed coffees (like a Starbucks Venti at over 400mg), many energy drinks (with brands like Bang containing 300mg), and espresso-based drinks with multiple shots. You can use our <Link href="/calculators/caffeine-drink-comparison">Caffeine Drink Comparison Tool</Link> to see exactly how different beverages stack up.
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="q-side-effects">
-                            <AccordionTrigger>What are the side effects of too much caffeine?</AccordionTrigger>
-                            <AccordionContent>
-                                Consuming too much caffeine can lead to anxiety, restlessness, a racing heart (palpitations), digestive issues, and insomnia. If you frequently experience these symptoms, you may be exceeding your personal limit. Take our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> to better understand your tolerance.
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="q-how-long">
-                            <AccordionTrigger>How long does caffeine stay in your body?</AccordionTrigger>
-                            <AccordionContent>
-                                Caffeine has an average half-life of about 5 hours, meaning it takes 5 hours to clear half the dose from your system. This can vary from 2 to 10 hours based on your genetics. This long duration is why an afternoon coffee can disrupt sleep. Use our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> to visualize your personal decay curve.
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-kick-in">
-                            <AccordionTrigger>How long does caffeine take to kick in?</AccordionTrigger>
-                            <AccordionContent>
-                                Caffeine is absorbed quickly, with effects typically beginning within 15-30 minutes and reaching peak concentration in your bloodstream around 45-60 minutes after consumption. Our <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> uses this science to help you plan your intake for maximum focus.
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="q-what-organ">
+                        <AccordionItem value="q-what-organ">
                             <AccordionTrigger>Which organ is most affected by caffeine?</AccordionTrigger>
-                            <AccordionContent>
-                                The brain is the organ most affected by caffeine's primary psychoactive effects, as it blocks adenosine receptors to promote wakefulness. The liver is the primary organ responsible for metabolizing (breaking down) caffeine, which is why liver health and genetics play a large role in your sensitivity.
-                            </AccordionContent>
+                            <AccordionContent>The <strong>brain</strong> is the organ most affected by caffeine's primary psychoactive effects, as it blocks adenosine receptors to promote wakefulness. The <strong>liver</strong> is the primary organ responsible for metabolizing (breaking down) caffeine, which is why liver health and genetics play a large role in your sensitivity.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-stop-caffeine">
+                        <AccordionItem value="q-how-long">
+                            <AccordionTrigger>How long does caffeine stay in your body?</AccordionTrigger>
+                            <AccordionContent>Caffeine has an average half-life of about 5 hours, meaning it takes 5 hours to clear half the dose from your system. This can vary from 2 to 10 hours based on your genetics. This long duration is why an afternoon coffee can disrupt sleep. Use our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> to visualize your personal decay curve.</AccordionContent>
+                        </AccordionItem>
+                         <AccordionItem value="q-kick-in">
+                            <AccordionTrigger>How long does caffeine take to kick in?</AccordionTrigger>
+                            <AccordionContent>Caffeine is absorbed quickly, with effects typically beginning within 15-30 minutes and reaching peak concentration in your bloodstream around 45-60 minutes after consumption. Our <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> uses this science to help you plan your intake for maximum focus.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-side-effects">
+                            <AccordionTrigger>What are the side effects of too much caffeine?</AccordionTrigger>
+                            <AccordionContent>Consuming too much caffeine for your personal limit can lead to anxiety, restlessness, a racing heart (palpitations), digestive issues, and insomnia. Two classic signs you've had too much are feeling "jittery" and having a racing mind. Our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> can help you better understand your tolerance.</AccordionContent>
+                        </AccordionItem>
+                         <AccordionItem value="q-stop-caffeine">
                             <AccordionTrigger>What happens when you stop caffeine?</AccordionTrigger>
-                            <AccordionContent>
-                                If you are physically dependent on caffeine, stopping abruptly can lead to withdrawal symptoms like headaches, fatigue, and irritability. The most comfortable way to quit is by gradually reducing your intake. Our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> is designed to help you create a tapering plan to avoid these symptoms.
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-healthiest-source">
-                            <AccordionTrigger>What is the healthiest source of caffeine?</AccordionTrigger>
-                            <AccordionContent>
-                                Unsweetened tea (especially green tea) and black coffee are generally considered the healthiest sources. They provide caffeine along with beneficial antioxidants and compounds like L-theanine (in tea) without the massive sugar load of many sodas and energy drinks.
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="q-flush-out">
-                            <AccordionTrigger>Can drinking water flush out caffeine?</AccordionTrigger>
-                            <AccordionContent>
-                                No. While staying hydrated is important, drinking water will not speed up the rate at which your liver metabolizes and eliminates caffeine from your system. Only time can clear caffeine.
-                            </AccordionContent>
+                            <AccordionContent>If you are physically dependent on caffeine, stopping abruptly can lead to withdrawal symptoms like headaches, fatigue, and irritability. The most comfortable way to quit is by gradually reducing your intake. Our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> is designed to help you create a tapering plan to avoid these symptoms.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-is-it-ok-daily">
                             <AccordionTrigger>Is it okay to drink caffeine every day?</AccordionTrigger>
-                            <AccordionContent>
-                                Yes, for most healthy adults, daily moderate consumption (under 400mg) is considered safe. However, it can lead to physical dependence. If you find you need it to function or get headaches without it, you may want to consider a tolerance break.
-                            </AccordionContent>
+                            <AccordionContent>For most healthy adults, daily moderate consumption (under 400mg) is considered safe. However, it can lead to physical dependence. If you find you need it to function or get headaches without it, you may want to consider a tolerance break. It is not inherently "healthier" to avoid caffeine, as it has several documented benefits, but managing dependence is key.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-good-bad">
+                            <AccordionTrigger>Is caffeine good or bad for you?</AccordionTrigger>
+                            <AccordionContent>Caffeine is neither inherently "good" nor "bad"—it's a powerful drug whose effect depends on dose, timing, and individual genetics. In moderate doses, it has proven benefits for focus, alertness, and athletic performance. However, high doses or poor timing can lead to anxiety and disrupt sleep. The key is responsible use.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-benefits">
+                            <AccordionTrigger>What are the benefits of caffeine?</AccordionTrigger>
+                            <AccordionContent>The primary benefits of caffeine are increased alertness, improved concentration, reduced fatigue, and enhanced physical performance. Some long-term studies on coffee consumption have also suggested a correlation with reduced risk for certain diseases, though this is an area of ongoing research. Is it good for your brain? Yes, in the sense that it boosts cognitive functions like focus and reaction time. Is it good for your liver? Some studies suggest coffee consumption is associated with better liver health, but this is not a reason to start drinking it.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-healthiest-source">
+                            <AccordionTrigger>What is the healthiest way to consume caffeine?</AccordionTrigger>
+                            <AccordionContent>Unsweetened black coffee and green or black tea are generally considered the healthiest sources. They provide caffeine along with beneficial antioxidants and compounds (like L-theanine in tea) without the high sugar content found in sodas and energy drinks.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-high-caffeine">
+                            <AccordionTrigger>What foods and drinks have caffeine?</AccordionTrigger>
+                            <AccordionContent>The most common sources are coffee beans and tea leaves (which are rich in caffeine). It is also found in cacao beans (the source of chocolate), kola nuts (used in colas), and guarana berries. This means coffee, tea, chocolate, sodas, and energy drinks are the main dietary sources. Fruits do not naturally contain caffeine. Water does not have caffeine unless it is added, as in "caffeinated water" products.</AccordionContent>
+                        </AccordionItem>
+                         <AccordionItem value="q-who-should-avoid">
+                            <AccordionTrigger>Who should avoid caffeine?</AccordionTrigger>
+                            <AccordionContent>Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, certain medical conditions (like glaucoma), or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents should also avoid caffeine. Always consult a doctor if you have a health condition.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-flush-out">
+                            <AccordionTrigger>Can drinking water flush out caffeine?</AccordionTrigger>
+                            <AccordionContent>No. Your liver metabolizes caffeine at a genetically predetermined rate. While staying hydrated is good for you, drinking water will not speed up the process of removing caffeine from your body. Only time can do that.</AccordionContent>
                         </AccordionItem>
                     </Accordion>
                 </div>
@@ -370,5 +400,3 @@ export default function Home() {
       </div>
   );
 }
-
-    
