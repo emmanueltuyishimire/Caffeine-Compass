@@ -113,7 +113,7 @@ export default function Home() {
   return (
       <div className="flex flex-col">
         <JsonLd data={homePageJsonLd} />
-        <section className="relative text-center rounded-lg overflow-hidden min-h-[50vh] md:min-h-[500px] flex flex-col justify-center items-center text-primary-foreground bg-primary p-4"  aria-labelledby="hero-heading">
+        <section className="relative text-center rounded-lg overflow-hidden min-h-[50vh] md:min-h-[500px] flex flex-col justify-center items-center text-primary-foreground p-4" style={{ backgroundColor: 'hsl(25, 45%, 25%)' }} aria-labelledby="hero-heading">
             <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
               Master Your Caffeine. Master Your Life.
             </h1>
