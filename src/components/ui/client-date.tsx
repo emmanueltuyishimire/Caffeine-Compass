@@ -8,11 +8,11 @@ export default function ClientDate() {
   useEffect(() => {
     // This code runs only on the client, after hydration
     setDate(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));
-  }, []); // The empty dependency array ensures this runs only once on mount
+  }, []);
 
-  // Return null or a placeholder on the server and initial client render
+  // Return a placeholder on the server and initial client render
   if (!date) {
-    return null;
+    return <span className="h-6 w-32 rounded bg-muted animate-pulse" />;
   }
 
   // Render the formatted date only on the client after the effect has run
