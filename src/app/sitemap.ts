@@ -18,11 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/calculators/caffeine-timing-optimizer',
     '/calculators/caffeine-withdrawal-tracker',
     '/calculators/caffeine-sensitivity-test',
-    '/calculators/caffeine-drink-comparison',
     '/calculators/caffeine-drinks-database',
     '/calculators/caffeine-overdose-risk',
     '/calculators/pregnancy-caffeine-safe-limit',
     '/calculators/caffeine-sleep-calculator',
+    '/calculators/caffeine-drink-comparison',
   ];
 
   const articleRoutes = [
