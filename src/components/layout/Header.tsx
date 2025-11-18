@@ -52,7 +52,7 @@ const Header = () => {
                             </NavigationMenuContent>
                         </>
                     ) : (
-                        <Link href={item.href!} passHref legacyBehavior>
+                        <Link href={item.href!} legacyBehavior passHref>
                           <NavigationMenuLink
                             active={pathname === item.href}
                             className={cn(navigationMenuTriggerStyle(), {
