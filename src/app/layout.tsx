@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: '%s',
   },
   description:
-    'Your ultimate guide to caffeine. Use our science-backed calculators and read in-depth articles to understand, manage, and optimize your caffeine consumption for better health and performance.',
+    'Your ultimate guide to caffeine. Use our science-backed caffeine calculators and read in-depth articles to understand, manage, and optimize your caffeine consumption for better health and performance.',
   keywords: [
     'caffeine',
     'caffeine calculator',
@@ -78,5 +78,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-    
