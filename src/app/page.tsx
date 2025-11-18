@@ -26,6 +26,11 @@ const homePageJsonLd = {
   "name": "Caffeine Compass — Your Ultimate Guide to Caffeine",
   "description": "The ultimate resource for caffeine calculators, data tools, and science-backed articles to optimize your intake, improve sleep, and master your energy.",
   "url": "https://calculation.site/",
+  "about": {
+    "@type": "Thing",
+    "name": "Caffeine",
+    "description": "This page provides comprehensive information, calculators, and scientific articles about caffeine, its effects on the human body, health implications, and how to manage its consumption for optimal wellness and performance."
+  },
   "publisher": {
     "@type": "Organization",
     "name": "Caffeine Compass",
@@ -56,12 +61,20 @@ const homePageJsonLd = {
                 "text": "Caffeine is neither inherently 'good' nor 'bad'—it's a powerful drug whose effect depends on dose, timing, and individual genetics. In moderate doses, it has proven benefits for focus and athletic performance. However, high doses or poor timing can lead to anxiety and disrupt sleep. Responsible use is key."
             }
         },
-        {
+         {
             "@type": "Question",
-            "name": "What drinks are high in caffeine?",
+            "name": "Is it healthier to avoid caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "High-caffeine drinks include strong brewed coffee (especially from chains like Starbucks), cold brew, and many modern energy drinks like Bang or Reign, which can contain 300mg or more. Use our <a href='/calculators/caffeine-drink-comparison'>Drink Comparison Tool</a> to see how different drinks stack up."
+                "text": "Not necessarily. While a caffeine-free life can lead to better sleep and less anxiety for some, moderate caffeine consumption (especially from coffee and tea) has been linked in large studies to certain health benefits. The healthiest approach depends on your individual goals and sensitivity."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are the benefits of caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The primary benefits of caffeine are increased alertness, improved concentration, reduced fatigue, and enhanced physical performance. Some long-term studies on coffee consumption have also suggested a correlation with reduced risk for certain diseases, and caffeine is good for your brain in moderate doses."
             }
         },
         {
@@ -82,82 +95,18 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
-            "name": "Who should avoid caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents, whose brains and bodies are still developing, should also avoid caffeine."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What foods have caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The most common sources are coffee beans, tea leaves, and cacao beans. This means coffee, tea, and chocolate are the main dietary sources of caffeine. It is also found in kola nuts (used in colas) and guarana berries (used in energy drinks)."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Which food has the most caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Of natural foods, coffee beans have the most caffeine, especially high-caffeine varieties like Robusta. In processed foods, dark chocolate has a notable amount (about 24mg per ounce), but this is still far less than a cup of coffee."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What are the benefits of caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The primary benefits of caffeine are increased alertness, improved concentration, reduced fatigue, and enhanced physical performance. Some long-term studies on coffee consumption have also suggested a correlation with reduced risk for certain diseases."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Which alcohol has caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Some alcoholic drinks contain caffeine, often from coffee-based liqueurs like Kahlúa (used in Espresso Martinis and White Russians) or from being mixed with caffeinated beverages like cola (in a Rum and Coke) or energy drinks (in a Vodka Red Bull). Mixing alcohol and high-caffeine energy drinks is particularly dangerous and not recommended."
-            }
-        },
-        {
-            "@type": "Question",
             "name": "Which organ is most affected by caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "The <strong>brain</strong> is the organ most affected by caffeine's primary psychoactive effects. The <strong>liver</strong> is the organ that removes caffeine from the body by metabolizing it, which is why liver health and genetics are key to your sensitivity."
             }
         },
-         {
+        {
             "@type": "Question",
             "name": "How long does caffeine stay in your body?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Caffeine's effects can last for many hours. Its 'half-life' (the time it takes your body to eliminate 50% of the drug) is around 5 hours for the average person. This means it can take over 10 hours to clear most of the caffeine from your system. Our <a href='/calculators/caffeine-half-life'>Caffeine Half-Life Calculator</a> can give you a personalized estimate."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is caffeine bad for your heart?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "For most healthy adults, moderate caffeine intake (under 400mg per day) does not pose a risk to heart health. It can cause a temporary increase in heart rate and blood pressure. However, very high doses or consumption by individuals with pre-existing heart conditions can be dangerous."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How do I know if caffeine is affecting me?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Common signs of caffeine's effects include increased alertness, feeling more awake, or enhanced focus. Negative signs that you've had too much can include feeling 'jittery', anxious, a racing heart, or having trouble sleeping. Our <a href='/calculators/caffeine-sensitivity-test'>Caffeine Sensitivity Test</a> can help you identify your personal reaction."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How long does caffeine take to kick in?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Caffeine is absorbed quickly. You may start to feel its effects within 15-20 minutes, but it reaches its peak level in your bloodstream around 45-60 minutes after consumption. Our <a href='/calculators/caffeine-timing-optimizer'>Caffeine Timing Optimizer</a> uses this window to help you align its effects with your tasks."
             }
         },
         {
@@ -170,22 +119,6 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
-            "name": "What is the healthiest source of caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Unsweetened green tea and black coffee are generally considered the healthiest sources. They provide the cognitive benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and most energy drinks."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Which plant is rich in caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The coffee plant (especially the Robusta species) and the guarana plant are among the richest natural sources of caffeine. Tea leaves (Camellia sinensis) and cacao beans (used for chocolate) also contain significant amounts."
-            }
-        },
-        {
-            "@type": "Question",
             "name": "What happens when you stop caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
@@ -194,74 +127,34 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
-            "name": "Does caffeine make you urinate a lot?",
+            "name": "What drinks are high in caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Caffeine is a mild diuretic, which means it can increase urine production. However, for most regular users, this effect is minimal, and the fluid in the caffeinated beverage itself usually compensates for the loss. It is unlikely to cause dehydration in moderate doses."
+                "text": "High-caffeine drinks include strong brewed coffee (especially from chains like Starbucks), cold brew, and many modern energy drinks like Bang or Reign, which can contain 300mg or more. Use our <a href='/calculators/caffeine-drink-comparison'>Drink Comparison Tool</a> to see how different drinks stack up."
             }
         },
         {
             "@type": "Question",
-            "name": "Does caffeine affect blood pressure?",
+            "name": "What is the healthiest source of caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, caffeine can cause a short-term, temporary increase in blood pressure, even in people with normal blood pressure. This effect is due to its stimulant properties. The impact is generally modest and not considered harmful for healthy individuals."
+                "text": "Unsweetened green tea and black coffee are generally considered the healthiest sources. They provide the cognitive benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and most energy drinks."
             }
         },
         {
             "@type": "Question",
-            "name": "Do any fruits have caffeine?",
+            "name": "Who should avoid caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No, common fruits like apples, bananas, and oranges do not contain caffeine. The caffeine-producing plants, like coffee and guarana, produce berries, but these are not typically consumed as 'fruit' in a dietary sense."
+                "text": "Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents should also avoid caffeine."
             }
         },
         {
             "@type": "Question",
-            "name": "Does caffeine increase heart rate?",
+            "name": "Does caffeine increase heart rate and blood pressure?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, caffeine is a stimulant and can temporarily increase your heart rate (tachycardia). This is a normal physiological response. For most healthy adults, this is not dangerous in moderate doses, but high doses or sensitive individuals may experience uncomfortable palpitations."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is it healthier to avoid caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Not necessarily. While a caffeine-free life can lead to better sleep and less anxiety for some, moderate caffeine consumption (especially from coffee and tea) has been linked in large studies to certain health benefits. The healthiest approach depends on your individual goals and sensitivity."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What are two signs that you've had too much caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Two of the most common signs you've exceeded your personal limit are feeling 'jittery' or shaky, and experiencing a racing mind or heightened anxiety. These are classic symptoms of over-stimulation."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What is the 2 hour coffee rule?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The '2 hour coffee rule' isn't a standard scientific guideline, but it likely refers to one of two concepts: 1) Waiting 1.5-2 hours after waking to have your first coffee to avoid interfering with your natural cortisol peak. 2) The idea that caffeine's main effects last for a few hours, although the substance itself stays in your system much longer."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Can drinking water flush out caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. Your liver metabolizes caffeine at a genetically determined rate, and drinking water won't speed this up. While staying hydrated is good for your health, only time can clear caffeine from your system. Use our <a href='/calculators/caffeine-half-life'>Caffeine Half-Life Calculator</a> to see how long that takes for you."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is caffeine ok to drink every day?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, for most healthy adults, daily consumption under 400mg is considered safe. However, daily use does lead to physical dependence and potential withdrawal if you stop. It's about mindful consumption, not just absence."
+                "text": "Yes, caffeine is a stimulant and can temporarily increase your heart rate and blood pressure. This effect is generally modest and not considered harmful for healthy individuals in moderate doses, but can be a concern for those with pre-existing heart conditions."
             }
         },
         {
@@ -269,31 +162,15 @@ const homePageJsonLd = {
             "name": "What is the best time to drink caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The best time depends on your goal. To avoid sleep disruption, have your last dose at least 8-12 hours before bed. For peak productivity, have it 45-60 minutes before a task. Our <a href='/calculators/caffeine-timing-optimizer'>Caffeine Timing Optimizer</a> can find the perfect time for you."
+                "text": "The best time depends on your goal. For productivity, drink it 45-60 minutes before a task. To protect sleep, have your last dose 8-12 hours before bed. Our <a href='/calculators/caffeine-timing-optimizer'>Caffeine Timing Optimizer</a> can find the perfect time for you."
             }
         },
         {
             "@type": "Question",
-            "name": "Is caffeine good for your brain?",
+            "name": "Can drinking water flush out caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, in moderate doses, caffeine is a well-known cognitive enhancer. It improves alertness, focus, and reaction time by blocking fatigue signals in the brain. However, excessive intake can lead to anxiety and disrupt the focus it's meant to improve."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Does caffeine cause weight gain?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Caffeine itself is a mild metabolic booster and is not associated with weight gain. However, the high-sugar, high-calorie additions in many popular coffee and energy drinks are a major contributor to weight gain."
-            }
-        },
-         {
-            "@type": "Question",
-            "name": "Can caffeine affect you mentally?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, caffeine has significant mental effects. In positive doses, it can improve mood, focus, and alertness. In excessive doses for your tolerance, it can cause anxiety, restlessness, nervousness, and a racing mind."
+                "text": "No. Your liver metabolizes caffeine at a genetically determined rate. Drinking water is good for hydration but it will not speed up this process. Only time can clear caffeine from your system."
             }
         }
     ]
@@ -365,7 +242,7 @@ export default function Home() {
                 </div>
             </div>
         </section>
-
+        
         <section id="calculators" className="py-16 md:py-24 bg-background" role="region" aria-labelledby="calculators-heading">
           <div className="container mx-auto px-4">
               <div className="text-center mb-12">
@@ -491,6 +368,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            
              <section id="why-trust-us" aria-labelledby="why-trust-us-heading">
                 <div className="text-center">
                     <h2 id="why-trust-us-heading" className="text-3xl md:text-4xl font-bold font-headline">Your Trusted Source for Caffeine Science</h2>
@@ -500,20 +378,21 @@ export default function Home() {
                     <div className="text-center">
                         <BrainCircuit className="h-10 w-10 mx-auto text-primary mb-4" />
                         <h3 className="text-xl font-bold">Science-Backed</h3>
-                        <p className="text-muted-foreground">Our tools and articles are built on a foundation of established scientific research into caffeine's effects on the human body. We provide links to relevant studies, empowering you to verify the data and learn more from primary sources. Explore our <Link href="/articles">caffeine articles</Link>.</p>
+                        <p className="text-muted-foreground">Our tools and articles are built on a foundation of established scientific research. We provide links to relevant studies, empowering you to explore the data and learn more from primary sources. Explore our <Link href="/articles">caffeine articles</Link>.</p>
                     </div>
                     <div className="text-center">
                         <Heart className="h-10 w-10 mx-auto text-primary mb-4" />
-                        <h3 className="text-xl font-bold">Focus on Personal Wellness</h3>
-                        <p className="text-muted-foreground">We believe there's no one-size-fits-all answer to caffeine consumption. Our tools emphasize personalization, helping you understand your unique tolerance and how caffeine affects your sleep and well-being. Take our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> to start.</p>
+                        <h3 className="text-xl font-bold">Personal Wellness</h3>
+                        <p className="text-muted-foreground">There's no one-size-fits-all answer to caffeine. Our tools emphasize personalization, helping you understand your unique tolerance and how caffeine affects your sleep and well-being. Take our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> to start.</p>
                     </div>
                     <div className="text-center">
                         <TrendingDown className="h-10 w-10 mx-auto text-primary mb-4" />
                         <h3 className="text-xl font-bold">Empowerment Through Knowledge</h3>
-                        <p className="text-muted-foreground">Our goal is to give you the knowledge you need to make conscious, mindful decisions about your caffeine intake. Stop guessing and start optimizing your energy with tools like the <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>.</p>
+                        <p className="text-muted-foreground">Our goal is to give you the knowledge you need to make conscious, mindful decisions. Stop guessing and start optimizing your energy with tools like the <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>.</p>
                     </div>
                 </div>
             </section>
+
             <section id="myths" aria-labelledby="myths-heading">
                 <div className="text-center">
                     <h2 id="myths-heading" className="text-3xl md:text-4xl font-bold font-headline">Debunking Common Caffeine Myths</h2>
@@ -592,47 +471,31 @@ export default function Home() {
 
             <section id="faq" aria-labelledby="faq-heading">
                 <div className="text-center">
-                    <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold font-headline">Frequently Asked Questions</h2>
+                    <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold font-headline">Frequently Asked Questions About Caffeine</h2>
                 </div>
                 <div className="mt-8 max-w-4xl mx-auto">
                     <Accordion type="single" collapsible className="w-full">
-                        <AccordionItem value="q-good-bad">
+                        <AccordionItem value="q-good-or-bad">
                             <AccordionTrigger>Is caffeine good or bad?</AccordionTrigger>
                             <AccordionContent>Caffeine is neither inherently 'good' nor 'bad'—it's a powerful drug whose effect depends on dose, timing, and individual genetics. In moderate doses, it has proven benefits for focus and athletic performance. However, high doses or poor timing can lead to anxiety and disrupt sleep. Responsible use is key.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-high-caffeine-drinks">
-                            <AccordionTrigger>What drinks are high in caffeine?</AccordionTrigger>
-                            <AccordionContent>High-caffeine drinks include strong brewed coffee (especially from chains like Starbucks), cold brew, and many modern energy drinks like Bang or Reign, which can contain 300mg or more. Use our <Link href="/calculators/caffeine-drink-comparison">Drink Comparison Tool</Link> to see how different drinks stack up.</AccordionContent>
+                        <AccordionItem value="q-healthier-to-avoid">
+                             <AccordionTrigger>Is it healthier to avoid caffeine?</AccordionTrigger>
+                             <AccordionContent>Not necessarily. While a caffeine-free life can lead to better sleep and less anxiety for some, moderate caffeine consumption (especially from coffee and tea) has been linked in large studies to certain health benefits. The healthiest approach depends on your individual goals and sensitivity.</AccordionContent>
+                        </AccordionItem>
+                         <AccordionItem value="q-benefits">
+                            <AccordionTrigger>What are the benefits of caffeine?</AccordionTrigger>
+                            <AccordionContent>The primary benefits of caffeine are increased alertness, improved concentration, reduced fatigue, and enhanced physical performance. Some long-term studies on coffee consumption have also suggested a correlation with reduced risk for certain diseases, and caffeine is good for your brain in moderate doses.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-side-effects">
                             <AccordionTrigger>What are the side effects of too much caffeine?</AccordionTrigger>
                             <AccordionContent>Consuming too much caffeine for your personal tolerance can lead to anxiety, restlessness, a racing heart (palpitations), digestive issues, and insomnia. Two classic signs you've had too much are feeling 'jittery' and having a racing mind. Our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> can help you better understand your tolerance.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-what-caffeine-does">
+                        <AccordionItem value="q-what-does-it-do">
                             <AccordionTrigger>What does caffeine do to your body?</AccordionTrigger>
                             <AccordionContent>Caffeine blocks adenosine receptors in your brain, preventing you from feeling tired. It also increases adrenaline and boosts dopamine, which enhances focus, heart rate, and blood pressure. Your liver then metabolizes it over several hours.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-who-should-avoid">
-                            <AccordionTrigger>Who should avoid caffeine?</AccordionTrigger>
-                            <AccordionContent>Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents, whose brains and bodies are still developing, should also avoid caffeine.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-what-foods">
-                            <AccordionTrigger>What foods have caffeine?</AccordionTrigger>
-                            <AccordionContent>The most common sources are coffee beans, tea leaves, and cacao beans. This means coffee, tea, and chocolate are the main dietary sources of caffeine. It is also found in kola nuts (used in colas) and guarana berries (used in energy drinks).</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-food-most-caffeine">
-                             <AccordionTrigger>Which food has the most caffeine?</AccordionTrigger>
-                            <AccordionContent>Of natural foods, coffee beans have the most caffeine, especially high-caffeine varieties like Robusta. In processed foods, dark chocolate has a notable amount (about 24mg per ounce), but this is still far less than a cup of coffee.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-benefits">
-                            <AccordionTrigger>What are the benefits of caffeine?</AccordionTrigger>
-                            <AccordionContent>The primary benefits of caffeine are increased alertness, improved concentration, reduced fatigue, and enhanced physical performance. Some long-term studies on coffee consumption have also suggested a correlation with reduced risk for certain diseases.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-alcohol">
-                            <AccordionTrigger>Which alcohol has caffeine?</AccordionTrigger>
-                            <AccordionContent>Some alcoholic drinks contain caffeine, often from coffee-based liqueurs like Kahlúa (used in Espresso Martinis and White Russians) or from being mixed with caffeinated beverages like cola (in a Rum and Coke) or energy drinks (in a Vodka Red Bull). Mixing alcohol and high-caffeine energy drinks is particularly dangerous and not recommended.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-organ-affected">
+                         <AccordionItem value="q-organ-most-affected">
                             <AccordionTrigger>Which organ is most affected by caffeine?</AccordionTrigger>
                             <AccordionContent>The <strong>brain</strong> is the organ most affected by caffeine's primary psychoactive effects. The <strong>liver</strong> is the organ that removes caffeine from the body by metabolizing it, which is why liver health and genetics are key to your sensitivity.</AccordionContent>
                         </AccordionItem>
@@ -640,85 +503,37 @@ export default function Home() {
                              <AccordionTrigger>How long does caffeine stay in your body?</AccordionTrigger>
                             <AccordionContent>Caffeine's effects can last for many hours. Its 'half-life' (the time it takes your body to eliminate 50% of the drug) is around 5 hours for the average person. This means it can take over 10 hours to clear most of the caffeine from your system. Our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> can give you a personalized estimate.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-bad-for-heart">
-                            <AccordionTrigger>Is caffeine bad for your heart?</AccordionTrigger>
-                            <AccordionContent>For most healthy adults, moderate caffeine intake (under 400mg per day) does not pose a risk to heart health. It can cause a temporary increase in heart rate and blood pressure. However, very high doses or consumption by individuals with pre-existing heart conditions can be dangerous.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-how-know-affecting">
-                            <AccordionTrigger>How do I know if caffeine is affecting me?</AccordionTrigger>
-                            <AccordionContent>Common signs of caffeine's effects include increased alertness, feeling more awake, or enhanced focus. Negative signs that you've had too much can include feeling 'jittery', anxious, a racing heart, or having trouble sleeping. Our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> can help you identify your personal reaction.</AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="q-good-for-brain">
-                            <AccordionTrigger>Is caffeine good for your brain?</AccordionTrigger>
-                            <AccordionContent>Yes, in moderate doses, caffeine is a well-known cognitive enhancer. It improves alertness, focus, and reaction time by blocking fatigue signals in the brain. However, excessive intake can lead to anxiety and disrupt the focus it's meant to improve.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-how-long-kick-in">
-                            <AccordionTrigger>How long does caffeine take to kick in?</AccordionTrigger>
-                            <AccordionContent>Caffeine is absorbed quickly. You may start to feel its effects within 15-20 minutes, but it reaches its peak level in your bloodstream around 45-60 minutes after consumption. Our <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> uses this window to help you align its effects with your tasks.</AccordionContent>
-                        </AccordionItem>
                         <AccordionItem value="q-affect-sleep">
                             <AccordionTrigger>Does caffeine affect sleep?</AccordionTrigger>
                             <AccordionContent>Yes, profoundly. Caffeine is a powerful sleep disruptor. Even if you can fall asleep, caffeine consumed in the afternoon or evening can reduce the quality of your deep sleep and REM sleep, leaving you feeling unrefreshed. Our <Link href="/calculators/caffeine-sleep-calculator">Caffeine Sleep Calculator</Link> shows how much can be left in your system at bedtime.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-healthiest-source">
-                            <AccordionTrigger>What is the healthiest source of caffeine?</AccordionTrigger>
-                            <AccordionContent>Unsweetened green tea and black coffee are generally considered the healthiest sources. They provide the cognitive benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and most energy drinks.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-plant-rich">
-                             <AccordionTrigger>Which plant is rich in caffeine?</AccordionTrigger>
-                            <AccordionContent>The coffee plant (especially the Robusta species) and the guarana plant are among the richest natural sources of caffeine. Tea leaves (Camellia sinensis) and cacao beans (used for chocolate) also contain significant amounts.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-what-happens-stop">
+                         <AccordionItem value="q-what-happens-stop">
                             <AccordionTrigger>What happens when you stop caffeine?</AccordionTrigger>
                             <AccordionContent>When you stop caffeine abruptly, you can experience withdrawal symptoms like headaches, severe fatigue, irritability, and 'brain fog'. This is because your brain has adapted to caffeine's presence. To avoid this, it's best to reduce your intake gradually. Our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> can help you create a comfortable tapering plan.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-urinate">
-                            <AccordionTrigger>Does caffeine make you urinate a lot?</AccordionTrigger>
-                            <AccordionContent>Caffeine is a mild diuretic, which means it can increase urine production. However, for most regular users, this effect is minimal, and the fluid in the caffeinated beverage itself usually compensates for the loss. It is unlikely to cause dehydration in moderate doses.</AccordionContent>
+                        <AccordionItem value="q-drinks-high-caffeine">
+                            <AccordionTrigger>What drinks are high in caffeine?</AccordionTrigger>
+                            <AccordionContent>High-caffeine drinks include strong brewed coffee (especially from chains like Starbucks), cold brew, and many modern energy drinks like Bang or Reign, which can contain 300mg or more. Use our <Link href="/calculators/caffeine-drink-comparison">Drink Comparison Tool</Link> to see how different drinks stack up.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-blood-pressure">
-                            <AccordionTrigger>Does caffeine affect blood pressure?</AccordionTrigger>
-                            <AccordionContent>Yes, caffeine can cause a short-term, temporary increase in blood pressure, even in people with normal blood pressure. This effect is due to its stimulant properties. The impact is generally modest and not considered harmful for healthy individuals.</AccordionContent>
+                         <AccordionItem value="q-healthiest-source">
+                            <AccordionTrigger>What is the healthiest source of caffeine?</AccordionTrigger>
+                            <AccordionContent>Unsweetened green tea and black coffee are generally considered the healthiest sources. They provide the cognitive benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and most energy drinks.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-fruits-caffeine">
-                            <AccordionTrigger>Do any fruits have caffeine?</AccordionTrigger>
-                            <AccordionContent>No, common fruits like apples, bananas, and oranges do not contain caffeine. The caffeine-producing plants, like coffee and guarana, produce berries, but these are not typically consumed as 'fruit' in a dietary sense.</AccordionContent>
+                        <AccordionItem value="q-who-should-avoid">
+                            <AccordionTrigger>Who should avoid caffeine?</AccordionTrigger>
+                            <AccordionContent>Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents should also avoid caffeine.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-increase-heart-rate">
-                            <AccordionTrigger>Does caffeine increase heart rate?</AccordionTrigger>
-                            <AccordionContent>Yes, caffeine is a stimulant and can temporarily increase your heart rate (tachycardia). This is a normal physiological response. For most healthy adults, this is not dangerous in moderate doses, but high doses or sensitive individuals may experience uncomfortable palpitations.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-healthier-no-caffeine">
-                             <AccordionTrigger>Is it healthier to avoid caffeine?</AccordionTrigger>
-                             <AccordionContent>Not necessarily. While a caffeine-free life can lead to better sleep and less anxiety for some, moderate caffeine consumption (especially from coffee and tea) has been linked in large studies to certain health benefits. The healthiest approach depends on your individual goals and sensitivity.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-two-signs-too-much">
-                            <AccordionTrigger>What are two signs that you've had too much caffeine?</AccordionTrigger>
-                            <AccordionContent>Two of the most common signs you've exceeded your personal limit are feeling 'jittery' or shaky, and experiencing a racing mind or heightened anxiety. These are classic symptoms of over-stimulation.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-2-hour-rule">
-                            <AccordionTrigger>What is the 2 hour coffee rule?</AccordionTrigger>
-                            <AccordionContent>The '2 hour coffee rule' isn't a standard scientific guideline, but it likely refers to one of two concepts: 1) Waiting 1.5-2 hours after waking to have your first coffee to avoid interfering with your natural cortisol peak. 2) The idea that caffeine's main effects last for a few hours, although the substance itself stays in your system much longer.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-water-flush">
-                             <AccordionTrigger>Can drinking water flush out caffeine?</AccordionTrigger>
-                             <AccordionContent>No. Your liver metabolizes caffeine at a genetically determined rate, and drinking water won't speed this up. While staying hydrated is good for your health, only time can clear caffeine from your system. Use our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> to see how long that takes for you.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-ok-every-day">
-                             <AccordionTrigger>Is caffeine ok to drink every day?</AccordionTrigger>
-                             <AccordionContent>Yes, for most healthy adults, daily consumption under 400mg is considered safe. However, daily use does lead to physical dependence and potential withdrawal if you stop. It's about mindful consumption, not just absence.</AccordionContent>
+                        <AccordionItem value="q-heart-and-blood-pressure">
+                            <AccordionTrigger>Does caffeine increase heart rate and blood pressure?</AccordionTrigger>
+                            <AccordionContent>Yes, caffeine is a stimulant and can temporarily increase your heart rate and blood pressure. This effect is generally modest and not considered harmful for healthy individuals in moderate doses, but can be a concern for those with pre-existing heart conditions.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-best-time">
                              <AccordionTrigger>What is the best time to drink caffeine?</AccordionTrigger>
-                             <AccordionContent>The best time depends on your goal. To avoid sleep disruption, have your last dose at least 8-12 hours before bed. For peak productivity, have it 45-60 minutes before a task. Our <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> can find the perfect time for you.</AccordionContent>
+                             <AccordionContent>The best time depends on your goal. For productivity, drink it 45-60 minutes before a task. To protect sleep, have your last dose 8-12 hours before bed. Our <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> can find the perfect time for you.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-cause-weight-gain">
-                             <AccordionTrigger>Does caffeine cause weight gain?</AccordionTrigger>
-                             <AccordionContent>Caffeine itself is a mild metabolic booster and is not associated with weight gain. However, the high-sugar, high-calorie additions in many popular coffee and energy drinks are a major contributor to weight gain.</AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="q-affect-mentally">
-                            <AccordionTrigger>Can caffeine affect you mentally?</AccordionTrigger>
-                            <AccordionContent>Yes, caffeine has significant mental effects. In positive doses, it can improve mood, focus, and alertness. In excessive doses for your tolerance, it can cause anxiety, restlessness, nervousness, and a racing mind.</AccordionContent>
+                        <AccordionItem value="q-water-flush">
+                             <AccordionTrigger>Can drinking water flush out caffeine?</AccordionTrigger>
+                             <AccordionContent>No. Your liver metabolizes caffeine at a genetically determined rate. Drinking water is good for hydration but it will not speed up this process. Only time can clear caffeine from your system.</AccordionContent>
                         </AccordionItem>
                     </Accordion>
                 </div>
@@ -740,3 +555,5 @@ export default function Home() {
       </div>
   );
 }
+
+    
