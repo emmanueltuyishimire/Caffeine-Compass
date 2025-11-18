@@ -11,6 +11,8 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from '@/components/ui/accordion';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
     title: 'Caffeine Compass — Caffeine Calculators, Articles & Science',
@@ -74,25 +76,38 @@ const featuredCalculators = [
 
 
 export default function Home() {
+    const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
 
   return (
       <div className="flex flex-col">
         <JsonLd data={homePageJsonLd} />
         
-        <section className="bg-muted/30 py-20 md:py-28 text-center" aria-labelledby="hero-heading">
-            <div className="container mx-auto px-4">
-                <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
-                Master Your Caffeine. Master Your Day.
+        <section className="relative bg-muted/30 py-20 md:py-28 text-center text-white" aria-labelledby="hero-heading">
+            {heroImage && (
+                <Image
+                    src={heroImage.imageUrl}
+                    alt={heroImage.description}
+                    fill
+                    priority={true}
+                    className="object-cover object-center z-0"
+                    sizes="100vw"
+                    data-ai-hint={heroImage.imageHint}
+                />
+            )}
+            <div className="absolute inset-0 bg-black/60 z-10"></div>
+            <div className="container relative mx-auto px-4 z-20">
+                <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-shadow-lg">
+                    Master Your Caffeine. Master Your Day.
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-                Your definitive, science-backed guide to caffeine. Use our expert caffeine calculators, tools, and articles to optimize your intake for better focus, sleep, and health.
+                <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 text-shadow">
+                    Your definitive, science-backed guide to caffeine. Use our expert caffeine calculators, tools, and articles to optimize your intake for better focus, sleep, and health.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                     <Link href="/calculators">
                         <Button size="lg" aria-label="Explore our suite of caffeine calculators">View All Calculators</Button>
                     </Link>
                      <Link href="/articles">
-                        <Button size="lg" variant="outline" aria-label="Read our caffeine articles">Read The Guides</Button>
+                        <Button size="lg" variant="outline" className='bg-transparent hover:bg-white/10' aria-label="Read our caffeine articles">Read The Guides</Button>
                     </Link>
                 </div>
             </div>
@@ -268,29 +283,71 @@ export default function Home() {
                     </Accordion>
                 </div>
             </section>
-            
-            <section id="faq" aria-labelledby="faq-heading">
+
+             <section id="faq" aria-labelledby="faq-heading">
                 <div className="text-center">
                     <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold font-headline">Frequently Asked Questions</h2>
                 </div>
                 <div className="mt-8 max-w-4xl mx-auto">
-                    <Accordion type="single" collapsible>
-                        <AccordionItem value="item-1">
-                            <AccordionTrigger>What is a safe amount of caffeine per day?</AccordionTrigger>
+                    <Accordion type="single" collapsible className="w-full">
+                        <AccordionItem value="q-good-bad">
+                            <AccordionTrigger>Is caffeine good or bad for you?</AccordionTrigger>
                             <AccordionContent>
-                            For most healthy adults, the FDA recommends a limit of 400mg of caffeine per day. This is roughly equivalent to four 8-ounce cups of coffee. Use our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> to track your daily total and stay within this guideline.
+                                Caffeine is neither inherently good nor bad—it's a powerful drug that must be used responsibly. In moderate doses, it has proven benefits for focus and athletic performance. However, high doses or poorly timed consumption can lead to anxiety and poor sleep. The key is understanding your personal tolerance and daily limits. Our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> can help you stay within a healthy range.
                             </AccordionContent>
                         </AccordionItem>
-                         <AccordionItem value="item-2">
-                            <AccordionTrigger>When should I stop drinking caffeine to protect my sleep?</AccordionTrigger>
+                        <AccordionItem value="q-high-caffeine">
+                            <AccordionTrigger>What drinks are high in caffeine?</AccordionTrigger>
                             <AccordionContent>
-                             A good rule of thumb is to have your last caffeinated beverage 8-12 hours before bedtime. This allows your body to clear most of the stimulant. Use our <Link href="/calculators/caffeine-sleep-calculator">Caffeine Sleep Calculator</Link> for a personalized estimate based on your metabolism.
+                                High-caffeine drinks include strong brewed coffees (like a Starbucks Venti at over 400mg), many energy drinks (with brands like Bang containing 300mg), and espresso-based drinks with multiple shots. You can use our <Link href="/calculators/caffeine-drink-comparison">Caffeine Drink Comparison Tool</Link> to see exactly how different beverages stack up.
                             </AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="item-3">
-                            <AccordionTrigger>Why do I get a headache when I skip coffee?</AccordionTrigger>
+                         <AccordionItem value="q-side-effects">
+                            <AccordionTrigger>What are the side effects of too much caffeine?</AccordionTrigger>
                             <AccordionContent>
-                            This is the most common symptom of caffeine withdrawal. Your brain adapts to the daily presence of caffeine, and when it's removed, it can cause rebound effects like headaches and fatigue. The best way to quit is a gradual taper, which you can plan with our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link>.
+                                Consuming too much caffeine can lead to anxiety, restlessness, a racing heart (palpitations), digestive issues, and insomnia. If you frequently experience these symptoms, you may be exceeding your personal limit. Take our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> to better understand your tolerance.
+                            </AccordionContent>
+                        </AccordionItem>
+                         <AccordionItem value="q-how-long">
+                            <AccordionTrigger>How long does caffeine stay in your body?</AccordionTrigger>
+                            <AccordionContent>
+                                Caffeine has an average half-life of about 5 hours, meaning it takes 5 hours to clear half the dose from your system. This can vary from 2 to 10 hours based on your genetics. This long duration is why an afternoon coffee can disrupt sleep. Use our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> to visualize your personal decay curve.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-kick-in">
+                            <AccordionTrigger>How long does caffeine take to kick in?</AccordionTrigger>
+                            <AccordionContent>
+                                Caffeine is absorbed quickly, with effects typically beginning within 15-30 minutes and reaching peak concentration in your bloodstream around 45-60 minutes after consumption. Our <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> uses this science to help you plan your intake for maximum focus.
+                            </AccordionContent>
+                        </AccordionItem>
+                         <AccordionItem value="q-what-organ">
+                            <AccordionTrigger>What organ is most affected by caffeine?</AccordionTrigger>
+                            <AccordionContent>
+                                The brain is the organ most affected by caffeine's primary psychoactive effects, as it blocks adenosine receptors to promote wakefulness. The liver is the primary organ responsible for metabolizing (breaking down) caffeine, which is why liver health and genetics play a large role in your sensitivity.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-stop-caffeine">
+                            <AccordionTrigger>What happens when you stop caffeine?</AccordionTrigger>
+                            <AccordionContent>
+                                If you are physically dependent on caffeine, stopping abruptly can lead to withdrawal symptoms like headaches, fatigue, and irritability. The most comfortable way to quit is by gradually reducing your intake. Our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> is designed to help you create a tapering plan to avoid these symptoms.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-healthiest-source">
+                            <AccordionTrigger>What is the healthiest source of caffeine?</AccordionTrigger>
+                            <AccordionContent>
+                                Unsweetened tea (especially green tea) and black coffee are generally considered the healthiest sources. They provide caffeine along with beneficial antioxidants and compounds like L-theanine (in tea) without the massive sugar load of many sodas and energy drinks.
+                            </AccordionContent>
+                        </AccordionItem>
+                         <AccordionItem value="q-flush-out">
+                            <AccordionTrigger>Can drinking water flush out caffeine?</AccordionTrigger>
+                            <AccordionContent>
+                                No. While staying hydrated is important, drinking water will not speed up the rate at which your liver metabolizes and eliminates caffeine from your system. Only time can clear caffeine.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-is-it-ok-daily">
+                            <AccordionTrigger>Is it okay to drink caffeine every day?</AccordionTrigger>
+                            <AccordionContent>
+                                Yes, for most healthy adults, daily moderate consumption (under 400mg) is considered safe. However, it can lead to physical dependence. If you find you need it to function or get headaches without it, you may want to consider a tolerance break.
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
