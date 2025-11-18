@@ -17,14 +17,15 @@ const Header = () => {
     >
       <div className="container flex h-14 items-center">
          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image src="/logo.png" alt="Caffeine Compass Logo" width={28} height={28} />
+            <Image src="/logo.png" alt="Caffeine Compass Logo" width={28} height={28} style={{ width: 'auto', height: 'auto' }} />
             <span className="font-bold">Caffeine Compass</span>
         </Link>
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="flex items-center space-x-6 text-sm font-medium">
             {mainNav.map((link) => (
                 <Link
                     key={link.href}
-                    href={link.href!}
+                    href={link.href}
+                    target={link.href.startsWith('http') ? '_blank' : '_self'}
                     className={cn(
                         'transition-colors hover:text-primary',
                         pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
