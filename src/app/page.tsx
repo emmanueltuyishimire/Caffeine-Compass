@@ -131,7 +131,7 @@ export default function Home() {
               Master Your Caffeine. Master Your Life.
             </h1>
             <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-shadow-[1px_1px_3px_rgba(0,0,0,0.7)]">
-              Your definitive, science-backed guide to caffeine. Use our expert tools and articles to optimize your intake for better focus, sleep, and health.
+              Your definitive, science-backed guide to caffeine. Use our expert caffeine calculators, tools, and articles to optimize your intake for better focus, sleep, and health.
             </p>
             <div className="flex justify-center">
               <Link href="/calculators">
@@ -285,5 +285,3 @@ export default function Home() {
       </div>
   );
 }
-
-    
