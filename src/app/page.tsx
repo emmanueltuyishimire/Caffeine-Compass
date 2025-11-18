@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2, Zap, Leaf } from 'lucide-react';
+import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2, Zap, Leaf, Heart, Dumbbell } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
@@ -130,18 +130,16 @@ export default function Home() {
             <section id="how-caffeine-works" aria-labelledby="how-caffeine-works-heading">
                 <div className="text-center">
                     <h2 id="how-caffeine-works-heading" className="text-3xl md:text-4xl font-bold font-headline">Understand the Science, Master Your Energy</h2>
-                    <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">Caffeine isn't magic; it's chemistry. Understanding two key concepts—adenosine and half-life—is the secret to turning caffeine from a daily gamble into a precision tool.</p>
+                    <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">Caffeine isn't magic; it's chemistry. Understanding key concepts like adenosine, half-life, and your own metabolism is the secret to turning caffeine from a daily gamble into a precision tool.</p>
                 </div>
                 <div className="mt-12 grid md:grid-cols-2 gap-8 md:gap-12 items-start">
                     <div className="p-6 border rounded-lg">
                         <h3 className="text-2xl font-bold font-headline mb-3">Adenosine: Your Brain's Fatigue Signal</h3>
-                        <p>Throughout the day, your brain produces a chemical called <strong>adenosine</strong>. As it builds up, it plugs into receptors on your neurons, creating "sleep pressure"—that familiar feeling of tiredness. Caffeine works by impersonating adenosine and blocking these receptors, tricking your brain into feeling alert.</p>
-                        <p>However, adenosine continues to build in the background. When the caffeine wears off, all that accumulated adenosine floods your receptors at once, causing the dreaded <Link href="/articles/caffeine-makes-you-tired">"caffeine crash."</Link></p>
+                        <p>Throughout the day, your brain produces a chemical called <strong>adenosine</strong>. As it builds up, it plugs into receptors on your neurons, creating "sleep pressure"—that familiar feeling of tiredness. Caffeine works by impersonating adenosine and blocking these receptors, tricking your brain into feeling alert. However, adenosine continues to build in the background. When the caffeine wears off, all that accumulated adenosine floods your receptors at once, causing the dreaded <Link href="/articles/caffeine-makes-you-tired">"caffeine crash."</Link> Caffeine also indirectly boosts dopamine, which enhances focus and mood, but this effect is secondary to its primary role as an adenosine blocker.</p>
                     </div>
                     <div className="p-6 border rounded-lg">
                         <h3 className="text-2xl font-bold font-headline mb-3">Half-Life: The Invisible Clock</h3>
-                        <p>The <strong>half-life</strong> of caffeine is the time it takes your body to eliminate 50% of it. For most people, this is about 5 hours. This means a 200mg coffee at 2 PM leaves 100mg in your system at 7 PM, and a sleep-disrupting 50mg at midnight.</p>
-                        <p>Your genetics determine whether you are a <Link href="/calculators/caffeine-sensitivity-test">fast or slow metabolizer</Link>, which dramatically alters this clock. Knowing this is critical for protecting your sleep. Our <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link> lets you visualize this process.</p>
+                        <p>The <strong>half-life</strong> of caffeine is the time it takes your body to eliminate 50% of it. For most people, this is about 5 hours. This means a 200mg coffee at 2 PM leaves 100mg in your system at 7 PM, and a sleep-disrupting 50mg at midnight. This process is managed by your liver, specifically the <strong>CYP1A2 enzyme</strong>. Your genetics determine whether you have a "fast" or "slow" version of this enzyme, which dramatically alters your personal half-life. Our <Link href="/calculators/caffeine-sensitivity-test">Sensitivity Test</Link> can help you find out which you are, and our <Link href="/calculators/caffeine-half-life">Half-Life Calculator</Link> lets you visualize this process.</p>
                     </div>
                 </div>
             </section>
@@ -218,7 +216,60 @@ export default function Home() {
                 </div>
             </section>
             
-             <section id="faq" aria-labelledby="faq-heading">
+            <section id="health-effects" aria-labelledby="health-effects-heading">
+                <div className="text-center">
+                    <h2 id="health-effects-heading" className="text-3xl md:text-4xl font-bold font-headline">Caffeine and Your Health: A Balanced View</h2>
+                    <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">Caffeine is a complex drug with both benefits and risks. Responsible consumption is key to harnessing its power for good.</p>
+                </div>
+                <div className="mt-12 grid md:grid-cols-2 gap-8">
+                    <div className="p-6 border rounded-lg">
+                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><Dumbbell className="h-6 w-6 text-accent"/>Athletic Performance</h3>
+                        <p>Caffeine is a well-documented ergogenic aid. It can increase endurance, reduce perceived exertion, and improve power output. The key is timing and dosage. Using our <Link href="/calculators/caffeine-timing-optimizer">Timing Optimizer</Link> before a workout can help you peak at the right moment.</p>
+                    </div>
+                    <div className="p-6 border rounded-lg">
+                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><BrainCircuit className="h-6 w-6 text-accent"/>Cognitive Function</h3>
+                        <p>The primary reason people use caffeine: it enhances alertness, focus, and reaction time. Studies show it can improve performance on a range of cognitive tasks. However, more is not always better. Exceeding your personal limit can lead to anxiety and diminished returns.</p>
+                    </div>
+                    <div className="p-6 border rounded-lg">
+                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><Heart className="h-6 w-6 text-accent"/>Heart Health</h3>
+                        <p>For most healthy adults, moderate caffeine intake (under 400mg/day) is not associated with adverse cardiovascular effects. However, <Link href="/calculators/caffeine-sensitivity-test">slow metabolizers</Link> who consume high amounts may have a slightly increased risk of hypertension. High doses can also cause temporary palpitations.</p>
+                    </div>
+                    <div className="p-6 border rounded-lg">
+                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><TrendingDown className="h-6 w-6 text-accent"/>Dependence and Withdrawal</h3>
+                        <p>Daily caffeine use leads to physical dependence. When you stop, you can experience headaches, fatigue, and irritability. This is not a sign of weakness, but a predictable neurochemical response. Our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> is designed to help you avoid this with a comfortable tapering plan.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="myths" aria-labelledby="myths-heading">
+                <div className="text-center">
+                    <h2 id="myths-heading" className="text-3xl md:text-4xl font-bold font-headline">Debunking Common Caffeine Myths</h2>
+                </div>
+                <div className="mt-8 max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible>
+                        <AccordionItem value="myth-1">
+                            <AccordionTrigger>Myth: Espresso has more caffeine than drip coffee.</AccordionTrigger>
+                            <AccordionContent>
+                                <strong>Fact:</strong> Per ounce, yes. But a standard serving of drip coffee (8-12 oz) has more total caffeine than a single 1oz shot of espresso. A double-shot latte (~125mg) often has more caffeine than a small 8oz coffee (~95mg). <Link href="/articles/how-much-caffeine-in-espresso">Learn more here</Link>.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="myth-2">
+                            <AccordionTrigger>Myth: Dark roast coffee is stronger.</AccordionTrigger>
+                            <AccordionContent>
+                                <strong>Fact:</strong> The opposite is often true. The roasting process burns off a small amount of caffeine. If measured by scoops, lighter roasts are denser and thus have slightly more caffeine. The difference is minimal compared to bean type and brew method.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="myth-3">
+                            <AccordionTrigger>Myth: Caffeine is dehydrating.</AccordionTrigger>
+                            <AccordionContent>
+                                <strong>Fact:</strong> While caffeine is a mild diuretic, the fluid you consume with it (in coffee or tea) typically more than makes up for the fluid lost through urination. It does not lead to dehydration when consumed in moderate amounts.
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+                </div>
+            </section>
+            
+            <section id="faq" aria-labelledby="faq-heading">
                 <div className="text-center">
                     <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold font-headline">Frequently Asked Questions</h2>
                 </div>
