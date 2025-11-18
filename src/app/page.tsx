@@ -179,7 +179,7 @@ export default function Home() {
                     Science-Backed & Data-Driven
                   </h3>
                   <p className="text-muted-foreground">
-                    Our caffeine tools and articles are built on a foundation of scientific research and verifiable data to provide you with trustworthy information about caffeine.
+                    Our caffeine tools and <Link href="/articles">articles</Link> are built on a foundation of scientific research and verifiable data to provide you with trustworthy information about caffeine.
                   </p>
                 </div>
                 <div className="flex flex-col items-center text-center">
@@ -193,7 +193,7 @@ export default function Home() {
                     Focused on Personal Wellness
                   </h3>
                   <p className="text-muted-foreground">
-                    We believe understanding your personal reaction to caffeine is key. Our calculators help you discover what works for your unique body and health goals.
+                    We believe understanding your personal reaction to caffeine is key. Our calculators, like the <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link>, help you discover what works for your unique body.
                   </p>
                 </div>
                 <div className="flex flex-col items-center text-center">
@@ -207,7 +207,7 @@ export default function Home() {
                     Empowerment Through Knowledge
                   </h3>
                   <p className="text-muted-foreground">
-                    We give you the data to move beyond guessing. Understand your daily caffeine intake to make smarter decisions for your focus, sleep, and overall well-being.
+                    We give you the data to move beyond guessing. Understand your daily caffeine intake with our <Link href="/calculators/caffeine-intake">Intake Calculator</Link> to make smarter decisions for your focus and sleep.
                   </p>
                 </div>
             </div>
