@@ -23,7 +23,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Caffeine Intake Calculator — Track Your Daily Caffeine',
-  description: 'Use this free calculator to measure your caffeine intake and compare it to safe limits. Our science-backed tool helps you manage energy, sleep, and health.',
+  description: 'Use this free calculator to accurately measure your daily caffeine intake and compare it to safe limits. Our science-backed tool helps you manage energy, sleep, and health.',
 };
 
 const pageJsonLd = {
@@ -44,7 +44,7 @@ const pageJsonLd = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://calculation.site/calculators/intake"
+    "@id": "https://calculation.site/calculators/caffeine-intake"
   },
   "description": "Log your drinks to measure your total daily caffeine load and compare it to safe limits.",
   "articleBody": "Most people dramatically underestimate their daily caffeine intake. This overconsumption is often the hidden culprit behind anxiety, jitteriness, digestive issues, and, most commonly, poor sleep. This calculator removes the guesswork, giving you a personalized, data-driven look at your habits so you can optimize your intake for better health, focus, and sleep.",
