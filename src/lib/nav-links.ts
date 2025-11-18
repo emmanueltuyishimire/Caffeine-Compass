@@ -23,4 +23,9 @@ export const mainNav = [
     label: 'Articles',
     icon: BookOpen
   },
+  {
+    href: 'https://blog.calculation.site',
+    label: 'Blog',
+    icon: BookOpen
+  },
 ];
