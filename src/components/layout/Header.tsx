@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -17,7 +16,7 @@ const Header = () => {
     >
       <div className="container flex h-14 items-center">
          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image src="/logo.png" alt="Caffeine Compass Logo" width={28} height={28} style={{ width: 'auto', height: 'auto' }} />
+            <Image src="/logo.png" alt="Caffeine Compass Logo" width={28} height={28} />
             <span className="font-bold">Caffeine Compass</span>
         </Link>
         <nav className="flex items-center space-x-6 text-sm font-medium">
