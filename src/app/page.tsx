@@ -127,7 +127,7 @@ export default function Home() {
                 />
             )}
           <div className="relative z-10 p-4 max-w-4xl mx-auto rounded-xl bg-black/30 backdrop-blur-sm">
-            <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+            <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-outline">
               Master Your Caffeine. Master Your Life.
             </h1>
             <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-shadow-[1px_1px_3px_rgba(0,0,0,0.7)]">

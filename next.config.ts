@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
+  experimental: {
+    optimizeCss: true,
+  },
   devIndicators: {
     allowedDevOrigins: [
       'https://6000-firebase-studio-1762910981710.cluster-ikslh4rdsnbqsvu5nw3v4dqjj2.cloudworkstations.dev',
@@ -29,8 +32,19 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/:all*(ico|jpg|jpeg|png|svg|webp)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, must-revalidate',
+          },
+        ],
+      },
+    ]
+  },
 };
 
 export default nextConfig;
-
-    
