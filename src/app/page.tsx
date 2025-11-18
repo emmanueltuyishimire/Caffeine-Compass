@@ -122,7 +122,7 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
-            "name": "Which organ is affected by caffeine?",
+            "name": "Which organ is most affected by caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "The <strong>brain</strong> is the organ most affected by caffeine's primary psychoactive effects. The <strong>liver</strong> is the organ that removes caffeine from the body by metabolizing it, which is why liver health and genetics are key to your sensitivity."
@@ -149,7 +149,7 @@ const homePageJsonLd = {
             "name": "How do I know if caffeine is affecting me?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Common signs of caffeine's effects include increased alertness, feeling more awake, or enhanced focus. Negative signs that you've had too much can include feeling jittery, anxious, a racing heart, or having trouble sleeping. Our <a href='/calculators/caffeine-sensitivity-test'>Caffeine Sensitivity Test</a> can help you identify your personal reaction."
+                "text": "Common signs of caffeine's effects include increased alertness, feeling more awake, or enhanced focus. Negative signs that you've had too much can include feeling 'jittery', anxious, a racing heart, or having trouble sleeping. Our <a href='/calculators/caffeine-sensitivity-test'>Caffeine Sensitivity Test</a> can help you identify your personal reaction."
             }
         },
         {
@@ -258,7 +258,7 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
-            "name": "Is it okay to drink caffeine every day?",
+            "name": "Is caffeine ok to drink every day?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Yes, for most healthy adults, daily consumption under 400mg is considered safe. However, daily use does lead to physical dependence and potential withdrawal if you stop. It's about mindful consumption, not just absence."
@@ -288,7 +288,7 @@ const homePageJsonLd = {
                 "text": "Caffeine itself is a mild metabolic booster and is not associated with weight gain. However, the high-sugar, high-calorie additions in many popular coffee and energy drinks are a major contributor to weight gain."
             }
         },
-        {
+         {
             "@type": "Question",
             "name": "Can caffeine affect you mentally?",
             "acceptedAnswer": {
@@ -395,33 +395,9 @@ export default function Home() {
         </section>
         
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-16 px-4">
-            <section id="why-trust-us" aria-labelledby="why-trust-us-heading">
+            <section id="how-it-works" aria-labelledby="how-it-works-heading">
                 <div className="text-center">
-                    <h2 id="why-trust-us-heading" className="text-3xl md:text-4xl font-bold font-headline">Your Trusted Source for Caffeine Science</h2>
-                    <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">Caffeine is a drug. We treat it with the respect it deserves, providing you with evidence-based tools and information to help you build a healthier, more intentional relationship with it.</p>
-                </div>
-                <div className="mt-12 grid md:grid-cols-3 gap-8">
-                    <div className="text-center">
-                        <BrainCircuit className="h-10 w-10 mx-auto text-primary mb-4" />
-                        <h3 className="text-xl font-bold">Science-Backed</h3>
-                        <p className="text-muted-foreground">Our tools and articles are built on a foundation of established scientific research into caffeine's effects on the human body. We provide links to relevant studies, empowering you to verify the data and learn more from primary sources. Explore our <Link href="/articles">caffeine articles</Link>.</p>
-                    </div>
-                    <div className="text-center">
-                        <Heart className="h-10 w-10 mx-auto text-primary mb-4" />
-                        <h3 className="text-xl font-bold">Focus on Personal Wellness</h3>
-                        <p className="text-muted-foreground">We believe there's no one-size-fits-all answer to caffeine consumption. Our tools emphasize personalization, helping you understand your unique tolerance and how caffeine affects your sleep and well-being. Take our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> to start.</p>
-                    </div>
-                    <div className="text-center">
-                        <TrendingDown className="h-10 w-10 mx-auto text-primary mb-4" />
-                        <h3 className="text-xl font-bold">Empowerment Through Knowledge</h3>
-                        <p className="text-muted-foreground">Our goal is to give you the knowledge you need to make conscious, mindful decisions about your caffeine intake. Stop guessing and start optimizing your energy with tools like the <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>.</p>
-                    </div>
-                </div>
-            </section>
-
-             <section id="how-it-works" aria-labelledby="how-it-works-heading">
-                <div className="text-center">
-                    <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold font-headline">How It Works: Your 3-Step Journey to Caffeine Mastery</h2>
+                    <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold font-headline">Your 3-Step Journey to Caffeine Mastery</h2>
                     <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">We provide the tools to transform your relationship with caffeine in three simple, science-backed steps.</p>
                 </div>
                 <div className="mt-12 space-y-12">
@@ -515,6 +491,62 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+             <section id="why-trust-us" aria-labelledby="why-trust-us-heading">
+                <div className="text-center">
+                    <h2 id="why-trust-us-heading" className="text-3xl md:text-4xl font-bold font-headline">Your Trusted Source for Caffeine Science</h2>
+                    <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">Caffeine is a drug. We treat it with the respect it deserves, providing you with evidence-based tools and information to help you build a healthier, more intentional relationship with it.</p>
+                </div>
+                <div className="mt-12 grid md:grid-cols-3 gap-8">
+                    <div className="text-center">
+                        <BrainCircuit className="h-10 w-10 mx-auto text-primary mb-4" />
+                        <h3 className="text-xl font-bold">Science-Backed</h3>
+                        <p className="text-muted-foreground">Our tools and articles are built on a foundation of established scientific research into caffeine's effects on the human body. We provide links to relevant studies, empowering you to verify the data and learn more from primary sources. Explore our <Link href="/articles">caffeine articles</Link>.</p>
+                    </div>
+                    <div className="text-center">
+                        <Heart className="h-10 w-10 mx-auto text-primary mb-4" />
+                        <h3 className="text-xl font-bold">Focus on Personal Wellness</h3>
+                        <p className="text-muted-foreground">We believe there's no one-size-fits-all answer to caffeine consumption. Our tools emphasize personalization, helping you understand your unique tolerance and how caffeine affects your sleep and well-being. Take our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> to start.</p>
+                    </div>
+                    <div className="text-center">
+                        <TrendingDown className="h-10 w-10 mx-auto text-primary mb-4" />
+                        <h3 className="text-xl font-bold">Empowerment Through Knowledge</h3>
+                        <p className="text-muted-foreground">Our goal is to give you the knowledge you need to make conscious, mindful decisions about your caffeine intake. Stop guessing and start optimizing your energy with tools like the <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="myths" aria-labelledby="myths-heading">
+                <div className="text-center">
+                    <h2 id="myths-heading" className="text-3xl md:text-4xl font-bold font-headline">Debunking Common Caffeine Myths</h2>
+                </div>
+                <div className="mt-8 max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible>
+                        <AccordionItem value="myth-1">
+                            <AccordionTrigger>Myth: Espresso has more caffeine than drip coffee.</AccordionTrigger>
+                            <AccordionContent>
+                                <strong>Fact:</strong> Per ounce, yes. But a standard serving of drip coffee (8-12 oz) has more total caffeine than a single 1oz shot of espresso. A double-shot latte (~125mg) often has more caffeine than a small 8oz coffee (~95mg). <Link href="/articles/how-much-caffeine-in-espresso">Learn more here</Link>.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="myth-2">
+                            <AccordionTrigger>Myth: Dark roast coffee is stronger.</AccordionTrigger>
+                            <AccordionContent>
+                                <strong>Fact:</strong> The opposite is often true. The roasting process burns off a small amount of caffeine. If measured by scoops, lighter roasts are denser and thus have slightly more caffeine. The difference is minimal compared to bean type and brew method.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="myth-3">
+                            <AccordionTrigger>Myth: Caffeine is dehydrating.</AccordionTrigger>
+                            <AccordionContent>
+                                <strong>Fact:</strong> While caffeine is a mild diuretic, the fluid you consume with it (in coffee or tea) typically more than makes up for the fluid lost through urination. It does not lead to dehydration when consumed in moderate amounts.
+                            </AccordionContent>
+                        </AccordionItem>
+                         <AccordionItem value="myth-4">
+                            <AccordionTrigger>Myth: Drinking water can flush caffeine out of your system.</AccordionTrigger>
+                            <AccordionContent>
+                                <strong>Fact:</strong> No. Once caffeine is in your bloodstream, only your liver can break it down. Drinking water is good for hydration but it will not speed up the metabolic process. Only time can clear caffeine from your system.
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+                </div>
+            </section>
             
             <section id="alcohol-warning" aria-labelledby="alcohol-warning-heading">
                 <div className="text-center">
@@ -558,40 +590,6 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="myths" aria-labelledby="myths-heading">
-                <div className="text-center">
-                    <h2 id="myths-heading" className="text-3xl md:text-4xl font-bold font-headline">Debunking Common Caffeine Myths</h2>
-                </div>
-                <div className="mt-8 max-w-4xl mx-auto">
-                    <Accordion type="single" collapsible>
-                        <AccordionItem value="myth-1">
-                            <AccordionTrigger>Myth: Espresso has more caffeine than drip coffee.</AccordionTrigger>
-                            <AccordionContent>
-                                <strong>Fact:</strong> Per ounce, yes. But a standard serving of drip coffee (8-12 oz) has more total caffeine than a single 1oz shot of espresso. A double-shot latte (~125mg) often has more caffeine than a small 8oz coffee (~95mg). <Link href="/articles/how-much-caffeine-in-espresso">Learn more here</Link>.
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="myth-2">
-                            <AccordionTrigger>Myth: Dark roast coffee is stronger.</AccordionTrigger>
-                            <AccordionContent>
-                                <strong>Fact:</strong> The opposite is often true. The roasting process burns off a small amount of caffeine. If measured by scoops, lighter roasts are denser and thus have slightly more caffeine. The difference is minimal compared to bean type and brew method.
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="myth-3">
-                            <AccordionTrigger>Myth: Caffeine is dehydrating.</AccordionTrigger>
-                            <AccordionContent>
-                                <strong>Fact:</strong> While caffeine is a mild diuretic, the fluid you consume with it (in coffee or tea) typically more than makes up for the fluid lost through urination. It does not lead to dehydration when consumed in moderate amounts.
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="myth-4">
-                            <AccordionTrigger>Myth: Drinking water can flush caffeine out of your system.</AccordionTrigger>
-                            <AccordionContent>
-                                <strong>Fact:</strong> No. Once caffeine is in your bloodstream, only your liver can break it down. Drinking water is good for hydration but it will not speed up the metabolic process. Only time can clear caffeine from your system.
-                            </AccordionContent>
-                        </AccordionItem>
-                    </Accordion>
-                </div>
-            </section>
-
             <section id="faq" aria-labelledby="faq-heading">
                 <div className="text-center">
                     <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold font-headline">Frequently Asked Questions</h2>
@@ -600,7 +598,7 @@ export default function Home() {
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="q-good-bad">
                             <AccordionTrigger>Is caffeine good or bad?</AccordionTrigger>
-                            <AccordionContent>Caffeine is neither inherently "good" nor "bad"—it's a powerful drug whose effect depends on dose, timing, and individual genetics. In moderate doses, it has proven benefits for focus and athletic performance. However, high doses or poor timing can lead to anxiety and disrupt sleep. Responsible use is key.</AccordionContent>
+                            <AccordionContent>Caffeine is neither inherently 'good' nor 'bad'—it's a powerful drug whose effect depends on dose, timing, and individual genetics. In moderate doses, it has proven benefits for focus and athletic performance. However, high doses or poor timing can lead to anxiety and disrupt sleep. Responsible use is key.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-high-caffeine-drinks">
                             <AccordionTrigger>What drinks are high in caffeine?</AccordionTrigger>
@@ -742,4 +740,3 @@ export default function Home() {
       </div>
   );
 }
-
