@@ -85,7 +85,7 @@ const homePageJsonLd = {
             "name": "Who should avoid caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents should also avoid caffeine."
+                "text": "Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents, whose brains and bodies are still developing, should also avoid caffeine."
             }
         },
         {
@@ -122,10 +122,10 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
-            "name": "Which organ is most affected by caffeine?",
+            "name": "Which organ is affected by caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The <strong>brain</strong> is the organ most affected by caffeine's primary psychoactive effects. The <strong>liver</strong> is the organ responsible for metabolizing (breaking down) caffeine, which is why liver health and genetics are key to your sensitivity."
+                "text": "The <strong>brain</strong> is the organ most affected by caffeine's primary psychoactive effects. The <strong>liver</strong> is the organ that removes caffeine from the body by metabolizing it, which is why liver health and genetics are key to your sensitivity."
             }
         },
          {
@@ -138,10 +138,10 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
-            "name": "Can caffeine affect your heart?",
+            "name": "Is caffeine bad for your heart?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Caffeine is a stimulant that can temporarily increase your heart rate and blood pressure. In most healthy adults, this is not dangerous in moderate doses. However, individuals with pre-existing heart conditions or those who are highly sensitive may experience palpitations or other issues. High doses can be risky for anyone."
+                "text": "For most healthy adults, moderate caffeine intake (under 400mg per day) does not pose a risk to heart health. It can cause a temporary increase in heart rate and blood pressure. However, very high doses or consumption by individuals with pre-existing heart conditions can be dangerous."
             }
         },
         {
@@ -154,34 +154,10 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
-            "name": "Is caffeine bad for human health?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "For most adults, moderate caffeine consumption (under 400mg per day) is not considered bad for health and may even have some benefits. The risks of caffeine are related to high doses and poor timing, which can lead to anxiety and sleep disruption. It is not recommended for children or those with certain health conditions."
-            }
-        },
-        {
-            "@type": "Question",
             "name": "How long does caffeine take to kick in?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Caffeine is absorbed quickly. You may start to feel its effects within 15-20 minutes, but it reaches its peak level in your bloodstream around 45-60 minutes after consumption. Our <a href='/calculators/caffeine-timing-optimizer'>Caffeine Timing Optimizer</a> uses this window to help you align its effects with your tasks."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Which drink is high in caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Some of the drinks highest in caffeine are high-stimulant energy drinks (like Bang or Reign at 300mg), large coffees from chains (a Starbucks Venti can have over 400mg), and cold brew concentrates. Check our <a href='/calculators/caffeine-drinks-database'>Caffeine in Drinks Database</a> to find specific values."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Does water have caffeine?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No, regular water does not contain caffeine. However, there are products known as 'caffeinated water' that have caffeine added to them as a stimulant."
             }
         },
         {
@@ -277,7 +253,7 @@ const homePageJsonLd = {
             "name": "Can drinking water flush out caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. Your liver metabolizes caffeine at a genetically determined rate, and drinking water won't speed this up. While staying hydrated is good for your health, only time can clear caffeine from your system. Use our <a href='/calculators/caffeine-half-life'>Half-Life Calculator</a> to see how long that takes for you."
+                "text": "No. Your liver metabolizes caffeine at a genetically determined rate, and drinking water won't speed this up. While staying hydrated is good for your health, only time can clear caffeine from your system. Use our <a href='/calculators/caffeine-half-life'>Caffeine Half-Life Calculator</a> to see how long that takes for you."
             }
         },
         {
@@ -298,10 +274,26 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
+            "name": "Is caffeine good for your brain?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, in moderate doses, caffeine is a well-known cognitive enhancer. It improves alertness, focus, and reaction time by blocking fatigue signals in the brain. However, excessive intake can lead to anxiety and disrupt the focus it's meant to improve."
+            }
+        },
+        {
+            "@type": "Question",
             "name": "Does caffeine cause weight gain?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Caffeine itself is a mild metabolic booster and is not associated with weight gain. However, the high-sugar, high-calorie additions in many popular coffee and energy drinks are a major contributor to weight gain."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can caffeine affect you mentally?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, caffeine has significant mental effects. In positive doses, it can improve mood, focus, and alertness. In excessive doses for your tolerance, it can cause anxiety, restlessness, nervousness, and a racing mind."
             }
         }
     ]
@@ -624,7 +616,7 @@ export default function Home() {
                         </AccordionItem>
                         <AccordionItem value="q-who-should-avoid">
                             <AccordionTrigger>Who should avoid caffeine?</AccordionTrigger>
-                            <AccordionContent>Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents should also avoid caffeine.</AccordionContent>
+                            <AccordionContent>Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents, whose brains and bodies are still developing, should also avoid caffeine.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-what-foods">
                             <AccordionTrigger>What foods have caffeine?</AccordionTrigger>
@@ -644,35 +636,27 @@ export default function Home() {
                         </AccordionItem>
                         <AccordionItem value="q-organ-affected">
                             <AccordionTrigger>Which organ is most affected by caffeine?</AccordionTrigger>
-                            <AccordionContent>The <strong>brain</strong> is the organ most affected by caffeine's primary psychoactive effects. The <strong>liver</strong> is the organ responsible for metabolizing (breaking down) caffeine, which is why liver health and genetics are key to your sensitivity.</AccordionContent>
+                            <AccordionContent>The <strong>brain</strong> is the organ most affected by caffeine's primary psychoactive effects. The <strong>liver</strong> is the organ that removes caffeine from the body by metabolizing it, which is why liver health and genetics are key to your sensitivity.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-how-long-stay">
                              <AccordionTrigger>How long does caffeine stay in your body?</AccordionTrigger>
                             <AccordionContent>Caffeine's effects can last for many hours. Its 'half-life' (the time it takes your body to eliminate 50% of the drug) is around 5 hours for the average person. This means it can take over 10 hours to clear most of the caffeine from your system. Our <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> can give you a personalized estimate.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-affect-heart">
-                            <AccordionTrigger>Can caffeine affect your heart?</AccordionTrigger>
-                            <AccordionContent>Yes. Caffeine is a stimulant that can temporarily increase your heart rate and blood pressure. In most healthy adults, this is not dangerous in moderate doses. However, individuals with pre-existing heart conditions or those who are highly sensitive may experience palpitations or other issues. High doses can be risky for anyone.</AccordionContent>
+                        <AccordionItem value="q-bad-for-heart">
+                            <AccordionTrigger>Is caffeine bad for your heart?</AccordionTrigger>
+                            <AccordionContent>For most healthy adults, moderate caffeine intake (under 400mg per day) does not pose a risk to heart health. It can cause a temporary increase in heart rate and blood pressure. However, very high doses or consumption by individuals with pre-existing heart conditions can be dangerous.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-how-know-affecting">
                             <AccordionTrigger>How do I know if caffeine is affecting me?</AccordionTrigger>
-                            <AccordionContent>Common signs of caffeine's effects include increased alertness, feeling more awake, or enhanced focus. Negative signs that you've had too much can include feeling jittery, anxious, a racing heart, or having trouble sleeping. Our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> can help you identify your personal reaction.</AccordionContent>
+                            <AccordionContent>Common signs of caffeine's effects include increased alertness, feeling more awake, or enhanced focus. Negative signs that you've had too much can include feeling 'jittery', anxious, a racing heart, or having trouble sleeping. Our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> can help you identify your personal reaction.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-bad-for-health">
-                             <AccordionTrigger>Is caffeine bad for human health?</AccordionTrigger>
-                            <AccordionContent>For most adults, moderate caffeine consumption (under 400mg per day) is not considered bad for health and may even have some benefits. The risks of caffeine are related to high doses and poor timing, which can lead to anxiety and sleep disruption. It is not recommended for children or those with certain health conditions.</AccordionContent>
+                         <AccordionItem value="q-good-for-brain">
+                            <AccordionTrigger>Is caffeine good for your brain?</AccordionTrigger>
+                            <AccordionContent>Yes, in moderate doses, caffeine is a well-known cognitive enhancer. It improves alertness, focus, and reaction time by blocking fatigue signals in the brain. However, excessive intake can lead to anxiety and disrupt the focus it's meant to improve.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-how-long-kick-in">
                             <AccordionTrigger>How long does caffeine take to kick in?</AccordionTrigger>
                             <AccordionContent>Caffeine is absorbed quickly. You may start to feel its effects within 15-20 minutes, but it reaches its peak level in your bloodstream around 45-60 minutes after consumption. Our <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> uses this window to help you align its effects with your tasks.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-drink-high-caffeine">
-                            <AccordionTrigger>Which drink is high in caffeine?</AccordionTrigger>
-                            <AccordionContent>Some of the drinks highest in caffeine are high-stimulant energy drinks (like Bang or Reign at 300mg), large coffees from chains (a Starbucks Venti can have over 400mg), and cold brew concentrates. Check our <Link href="/calculators/caffeine-drinks-database">Caffeine in Drinks Database</Link> to find specific values.</AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="q-water-caffeine">
-                            <AccordionTrigger>Does water have caffeine?</AccordionTrigger>
-                            <AccordionContent>No, regular water does not contain caffeine. However, there are products known as 'caffeinated water' that have caffeine added to them as a stimulant.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-affect-sleep">
                             <AccordionTrigger>Does caffeine affect sleep?</AccordionTrigger>
@@ -734,6 +718,10 @@ export default function Home() {
                              <AccordionTrigger>Does caffeine cause weight gain?</AccordionTrigger>
                              <AccordionContent>Caffeine itself is a mild metabolic booster and is not associated with weight gain. However, the high-sugar, high-calorie additions in many popular coffee and energy drinks are a major contributor to weight gain.</AccordionContent>
                         </AccordionItem>
+                         <AccordionItem value="q-affect-mentally">
+                            <AccordionTrigger>Can caffeine affect you mentally?</AccordionTrigger>
+                            <AccordionContent>Yes, caffeine has significant mental effects. In positive doses, it can improve mood, focus, and alertness. In excessive doses for your tolerance, it can cause anxiety, restlessness, nervousness, and a racing mind.</AccordionContent>
+                        </AccordionItem>
                     </Accordion>
                 </div>
             </section>
@@ -755,4 +743,3 @@ export default function Home() {
   );
 }
 
-    
