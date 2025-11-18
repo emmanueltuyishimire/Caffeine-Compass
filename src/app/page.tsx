@@ -194,6 +194,14 @@ const homePageJsonLd = {
         },
         {
             "@type": "Question",
+            "name": "What is the healthiest source of caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Unsweetened green tea and black coffee are generally considered the healthiest sources. They provide the cognitive benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and most energy drinks."
+            }
+        },
+        {
+            "@type": "Question",
             "name": "Which plant is rich in caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
@@ -287,6 +295,14 @@ const homePageJsonLd = {
                 "@type": "Answer",
                 "text": "The '2 hour coffee rule' isn't a standard scientific guideline, but it likely refers to one of two concepts: 1) Waiting 1.5-2 hours after waking to have your first coffee to avoid interfering with your natural cortisol peak. 2) The idea that caffeine's main effects last for a few hours, although the substance itself stays in your system much longer."
             }
+        },
+        {
+            "@type": "Question",
+            "name": "Can drinking water flush out caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Drinking water is good for hydration but it does not speed up the rate at which your liver metabolizes caffeine. Once it's in your system, only time can remove it, based on your genetic metabolism speed. Use our <a href='/calculators/caffeine-half-life'>Half-Life Calculator</a> to see how long it lasts."
+            }
         }
     ]
   }
@@ -341,7 +357,7 @@ export default function Home() {
                 />
             )}
             <div className="container relative mx-auto px-4 z-20">
-                <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight text-outline">
+                <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
                     Master Your Caffeine. Master Your Day.
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
@@ -574,6 +590,12 @@ export default function Home() {
                                 <strong>Fact:</strong> While caffeine is a mild diuretic, the fluid you consume with it (in coffee or tea) typically more than makes up for the fluid lost through urination. It does not lead to dehydration when consumed in moderate amounts.
                             </AccordionContent>
                         </AccordionItem>
+                         <AccordionItem value="myth-4">
+                            <AccordionTrigger>Myth: Drinking water can flush caffeine out of your system.</AccordionTrigger>
+                            <AccordionContent>
+                                <strong>Fact:</strong> No. Once caffeine is in your bloodstream, only your liver can break it down. Drinking water is good for hydration but it will not speed up the metabolic process. Only time can clear caffeine from your system.
+                            </AccordionContent>
+                        </AccordionItem>
                     </Accordion>
                 </div>
             </section>
@@ -644,7 +666,7 @@ export default function Home() {
                             <AccordionTrigger>How long does caffeine take to kick in?</AccordionTrigger>
                             <AccordionContent>Caffeine is absorbed quickly. You may start to feel its effects within 15-20 minutes, but it reaches its peak level in your bloodstream around 45-60 minutes after consumption. Our <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> uses this window to help you align its effects with your tasks.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-high-caffeine-drink">
+                        <AccordionItem value="q-drink-high-caffeine">
                             <AccordionTrigger>Which drink is high in caffeine?</AccordionTrigger>
                             <AccordionContent>Some of the drinks highest in caffeine are high-stimulant energy drinks (like Bang or Reign at 300mg), large coffees from chains (a Starbucks Venti can have over 400mg), and cold brew concentrates. Check our <Link href="/calculators/caffeine-drinks-database">Caffeine in Drinks Database</Link> to find specific values.</AccordionContent>
                         </AccordionItem>
@@ -656,13 +678,9 @@ export default function Home() {
                             <AccordionTrigger>Does caffeine affect sleep?</AccordionTrigger>
                             <AccordionContent>Yes, profoundly. Caffeine is a powerful sleep disruptor. Even if you can fall asleep, caffeine consumed in the afternoon or evening can reduce the quality of your deep sleep and REM sleep, leaving you feeling unrefreshed. Our <Link href="/calculators/caffeine-sleep-calculator">Caffeine Sleep Calculator</Link> shows how much can be left in your system at bedtime.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-side-effects-too-much-2">
-                             <AccordionTrigger>What are the side effects of too much caffeine?</AccordionTrigger>
-                            <AccordionContent>Consuming too much caffeine for your personal tolerance can lead to anxiety, restlessness, a racing heart (palpitations), digestive issues, and insomnia. Two classic signs you've had too much are feeling 'jittery' and having a racing mind.</AccordionContent>
-                        </AccordionItem>
                         <AccordionItem value="q-healthiest-source">
                             <AccordionTrigger>What is the healthiest source of caffeine?</AccordionTrigger>
-                            <AccordionContent>Unsweetened tea (especially green tea) and black coffee are generally considered the healthiest sources. They provide the benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and many energy drinks.</AccordionContent>
+                            <AccordionContent>Unsweetened green tea and black coffee are generally considered the healthiest sources. They provide the cognitive benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and most energy drinks.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-plant-rich">
                              <AccordionTrigger>Which plant is rich in caffeine?</AccordionTrigger>
@@ -712,6 +730,22 @@ export default function Home() {
                             <AccordionTrigger>What is the 2 hour coffee rule?</AccordionTrigger>
                             <AccordionContent>The '2 hour coffee rule' isn't a standard scientific guideline, but it likely refers to one of two concepts: 1) Waiting 1.5-2 hours after waking to have your first coffee to avoid interfering with your natural cortisol peak. 2) The idea that caffeine's main effects last for a few hours, although the substance itself stays in your system much longer.</AccordionContent>
                         </AccordionItem>
+                        <AccordionItem value="q-water-flush">
+                            <AccordionTrigger>Can drinking water flush out caffeine?</AccordionTrigger>
+                            <AccordionContent>No. Your liver metabolizes caffeine at a genetically determined rate, and drinking water won't speed this up. While staying hydrated is good for your health, only time can clear caffeine from your system. Use the <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> to see how long that takes for you.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-ok-every-day">
+                             <AccordionTrigger>Is caffeine ok to drink every day?</AccordionTrigger>
+                             <AccordionContent>Yes, for most healthy adults, daily consumption under 400mg is considered safe. However, daily use does lead to physical dependence and potential withdrawal if you stop. It's about mindful consumption, not just absence.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-best-time">
+                             <AccordionTrigger>What is the best time to drink caffeine?</AccordionTrigger>
+                             <AccordionContent>The best time depends on your goal. To avoid sleep disruption, have your last dose at least 8-12 hours before bed. For peak productivity, have it 45-60 minutes before a task. Our <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> can find the perfect time for you.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-cause-weight-gain">
+                             <AccordionTrigger>Does caffeine cause weight gain?</AccordionTrigger>
+                             <AccordionContent>Caffeine itself is a mild metabolic booster and is not associated with weight gain. However, the high-sugar, high-calorie additions in many popular coffee and energy drinks are a major contributor to weight gain.</AccordionContent>
+                        </AccordionItem>
                     </Accordion>
                 </div>
             </section>
@@ -732,3 +766,5 @@ export default function Home() {
       </div>
   );
 }
+
+    
