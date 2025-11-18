@@ -321,7 +321,7 @@ export default function Home() {
                             </AccordionContent>
                         </AccordionItem>
                          <AccordionItem value="q-what-organ">
-                            <AccordionTrigger>What organ is most affected by caffeine?</AccordionTrigger>
+                            <AccordionTrigger>Which organ is most affected by caffeine?</AccordionTrigger>
                             <AccordionContent>
                                 The brain is the organ most affected by caffeine's primary psychoactive effects, as it blocks adenosine receptors to promote wakefulness. The liver is the primary organ responsible for metabolizing (breaking down) caffeine, which is why liver health and genetics play a large role in your sensitivity.
                             </AccordionContent>
@@ -370,3 +370,5 @@ export default function Home() {
       </div>
   );
 }
+
+    
