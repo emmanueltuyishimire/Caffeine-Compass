@@ -162,62 +162,54 @@ export default function Home() {
 
         <section id="why-choose-us" className="py-12 md:py-20 bg-muted/30" role="region" aria-labelledby="why-us-heading">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center">
-                <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold font-headline mb-8">
-                  Why Trust Caffeine Compass?
-                </h2>
-              </div>
-              <div className="space-y-8">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
-                      <BookOpen
-                        className="h-6 w-6 text-primary"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-1">
-                        Science-Backed & Data-Driven
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Our caffeine tools and articles are built on a foundation of scientific research and verifiable data to provide you with trustworthy health information.
-                      </p>
-                    </div>
+            <div className="text-center">
+              <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold font-headline mb-12">
+                Your Trusted Source for Caffeine Science
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="flex flex-col items-center text-center">
+                  <div className="p-3 bg-primary/10 rounded-full mb-4">
+                    <BookOpen
+                      className="h-8 w-8 text-primary"
+                      aria-hidden="true"
+                    />
                   </div>
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-accent/10 rounded-full flex-shrink-0">
-                      <HeartPulse
-                        className="h-6 w-6 text-accent"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-1">
-                        Focused on Personal Wellness
-                      </h3>
-                      <p className="text-muted-foreground">
-                        We believe understanding your personal reaction to caffeine is key. Our calculators are designed to help you discover what works for your unique body.
-                      </p>
-                    </div>
+                  <h3 className="text-xl font-bold mb-2">
+                    Science-Backed & Data-Driven
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Our caffeine tools and articles are built on a foundation of scientific research and verifiable data to provide you with trustworthy information about caffeine.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="p-3 bg-accent/10 rounded-full mb-4">
+                    <HeartPulse
+                      className="h-8 w-8 text-accent"
+                      aria-hidden="true"
+                    />
                   </div>
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
-                      <Shield
-                        className="h-6 w-6 text-primary"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-1">
-                        Empowerment Through Knowledge
-                      </h3>
-                      <p className="text-muted-foreground">
-                        We give you the data to move beyond guessing. Understand how caffeine works, and you can make smarter decisions for your focus, sleep, and overall well-being.
-                      </p>
-                    </div>
+                  <h3 className="text-xl font-bold mb-2">
+                    Focused on Personal Wellness
+                  </h3>
+                  <p className="text-muted-foreground">
+                    We believe understanding your personal reaction to caffeine is key. Our calculators help you discover what works for your unique body and health goals.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="p-3 bg-primary/10 rounded-full mb-4">
+                    <Shield
+                      className="h-8 w-8 text-primary"
+                      aria-hidden="true"
+                    />
                   </div>
-              </div>
+                  <h3 className="text-xl font-bold mb-2">
+                    Empowerment Through Knowledge
+                  </h3>
+                  <p className="text-muted-foreground">
+                    We give you the data to move beyond guessing. Understand your daily caffeine intake to make smarter decisions for your focus, sleep, and overall well-being.
+                  </p>
+                </div>
             </div>
           </div>
         </section>
@@ -257,5 +249,3 @@ export default function Home() {
       </div>
   );
 }
-
-    
