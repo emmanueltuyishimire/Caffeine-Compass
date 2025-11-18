@@ -69,7 +69,7 @@ const homePageJsonLd = {
             "name": "What are the side effects of too much caffeine?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Consuming too much caffeine for your personal limit can lead to anxiety, restlessness, a racing heart (palpitations), digestive issues, and insomnia. Two classic signs you've had too much are feeling 'jittery' and having a racing mind. Our <a href='/calculators/caffeine-sensitivity-test'>Caffeine Sensitivity Test</a> can help you better understand your tolerance."
+                "text": "Consuming too much caffeine for your personal tolerance can lead to anxiety, restlessness, a racing heart (palpitations), digestive issues, and insomnia. Two classic signs you've had too much are feeling 'jittery' and having a racing mind. Our <a href='/calculators/caffeine-sensitivity-test'>Caffeine Sensitivity Test</a> can help you better understand your tolerance."
             }
         },
         {
@@ -198,6 +198,94 @@ const homePageJsonLd = {
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "The coffee plant (especially the Robusta species) and the guarana plant are among the richest natural sources of caffeine. Tea leaves (Camellia sinensis) and cacao beans (used for chocolate) also contain significant amounts."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What happens when you stop caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "When you stop caffeine abruptly, you can experience withdrawal symptoms like headaches, severe fatigue, irritability, and 'brain fog'. This is because your brain has adapted to caffeine's presence. To avoid this, it's best to reduce your intake gradually. Our <a href='/calculators/caffeine-withdrawal-tracker'>Caffeine Withdrawal Tracker</a> can help you create a comfortable tapering plan."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does caffeine make you urinate a lot?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Caffeine is a mild diuretic, which means it can increase urine production. However, for most regular users, this effect is minimal, and the fluid in the caffeinated beverage itself usually compensates for the loss. It is unlikely to cause dehydration in moderate doses."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does caffeine affect blood pressure?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, caffeine can cause a short-term, temporary increase in blood pressure, even in people with normal blood pressure. This effect is due to its stimulant properties. The impact is generally modest and not considered harmful for healthy individuals."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do any fruits have caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, common fruits like apples, bananas, and oranges do not contain caffeine. The caffeine-producing plants, like coffee and guarana, produce berries, but these are not typically consumed as 'fruit' in a dietary sense."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the healthiest drink with caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Unsweetened green tea and black coffee are generally considered the healthiest sources. They provide the cognitive benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and most energy drinks."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does caffeine increase heart rate?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, caffeine is a stimulant and can temporarily increase your heart rate (tachycardia). This is a normal physiological response. For most healthy adults, this is not dangerous in moderate doses, but high doses or sensitive individuals may experience uncomfortable palpitations."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What organ removes caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The liver is the primary organ that removes caffeine from your body. It produces an enzyme called CYP1A2 that breaks down about 95% of the caffeine you consume. The efficiency of this enzyme is determined by your genetics, making you a fast or slow metabolizer."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is it healthier to have no caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not necessarily. While a caffeine-free life can lead to better sleep and less anxiety for some, moderate caffeine consumption (especially from coffee and tea) has been linked in large studies to certain health benefits. The healthiest approach depends on your individual goals and sensitivity."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What part of the brain is most affected by caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Caffeine's main action is on the central nervous system. It primarily affects the entire brain by blocking adenosine receptors, which are found all over the brain. This widespread action is why it has such global effects on alertness, focus, and wakefulness."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are two signs that you've had too much caffeine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Two of the most common signs you've exceeded your personal limit are feeling 'jittery' or shaky, and experiencing a racing mind or heightened anxiety. These are classic symptoms of over-stimulation."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the 2 hour coffee rule?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The '2 hour coffee rule' isn't a standard scientific guideline, but it likely refers to one of two concepts: 1) Waiting 1.5-2 hours after waking to have your first coffee to avoid interfering with your natural cortisol peak. 2) The idea that caffeine's main effects last for a few hours, although the substance itself stays in your system much longer."
             }
         }
     ]
@@ -500,13 +588,41 @@ export default function Home() {
                             <AccordionTrigger>Is caffeine good or bad for you?</AccordionTrigger>
                             <AccordionContent>Caffeine is neither inherently "good" nor "bad"—it's a powerful drug whose effect depends on dose, timing, and individual genetics. In moderate doses, it has proven benefits for focus and athletic performance. However, high doses or poor timing can lead to anxiety and disrupt sleep. Responsible use is key.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-high-caffeine">
+                        <AccordionItem value="q-high-caffeine-drinks">
                             <AccordionTrigger>What drinks are high in caffeine?</AccordionTrigger>
                             <AccordionContent>High-caffeine drinks include strong brewed coffee (especially from chains like Starbucks), cold brew, and many modern energy drinks like Bang or Reign, which can contain 300mg or more. Use our <Link href="/calculators/caffeine-drink-comparison">Drink Comparison Tool</Link> to see how different drinks stack up.</AccordionContent>
                         </AccordionItem>
-                         <AccordionItem value="q-what-foods">
+                        <AccordionItem value="q-side-effects">
+                            <AccordionTrigger>What are the side effects of too much caffeine?</AccordionTrigger>
+                            <AccordionContent>Consuming too much caffeine for your personal tolerance can lead to anxiety, restlessness, a racing heart (palpitations), digestive issues, and insomnia. Two classic signs you've had too much are feeling 'jittery' and having a racing mind. Our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> can help you better understand your tolerance.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-what-caffeine-does">
+                            <AccordionTrigger>What does caffeine do to your body?</AccordionTrigger>
+                            <AccordionContent>Caffeine blocks adenosine receptors in your brain, preventing you from feeling tired. It also increases adrenaline and boosts dopamine, which enhances focus, heart rate, and blood pressure. Your liver then metabolizes it over several hours.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-who-should-avoid">
+                            <AccordionTrigger>Who should avoid caffeine?</AccordionTrigger>
+                            <AccordionContent>Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents should also avoid caffeine.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-what-foods">
                             <AccordionTrigger>What foods have caffeine?</AccordionTrigger>
                             <AccordionContent>The most common sources are coffee beans, tea leaves, and cacao beans. This means coffee, tea, and chocolate are the main dietary sources of caffeine. It is also found in kola nuts (used in colas) and guarana berries (used in energy drinks).</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-food-most-caffeine">
+                             <AccordionTrigger>Which food has the most caffeine?</AccordionTrigger>
+                            <AccordionContent>Of natural foods, coffee beans have the most caffeine, especially high-caffeine varieties like Robusta. In processed foods, dark chocolate has a notable amount (about 24mg per ounce), but this is still far less than a cup of coffee.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-benefits">
+                            <AccordionTrigger>What are the benefits of caffeine?</AccordionTrigger>
+                            <AccordionContent>The primary benefits of caffeine are increased alertness, improved concentration, reduced fatigue, and enhanced physical performance. Some long-term studies on coffee consumption have also suggested a correlation with reduced risk for certain diseases.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-alcohol">
+                            <AccordionTrigger>Which alcohol has caffeine?</AccordionTrigger>
+                            <AccordionContent>Some alcoholic drinks contain caffeine, often from coffee-based liqueurs like Kahlúa (used in Espresso Martinis and White Russians) or from being mixed with caffeinated beverages like cola (in a Rum and Coke) or energy drinks (in a Vodka Red Bull). Mixing alcohol and high-caffeine energy drinks is particularly dangerous and not recommended.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-organ-affected">
+                            <AccordionTrigger>Which organ is most affected by caffeine?</AccordionTrigger>
+                            <AccordionContent>The <strong>brain</strong> is the organ most affected by caffeine's primary psychoactive effects. The <strong>liver</strong> is the organ responsible for metabolizing (breaking down) caffeine, which is why liver health and genetics are key to your sensitivity.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-how-long-stay">
                              <AccordionTrigger>How long does caffeine stay in your body?</AccordionTrigger>
@@ -520,25 +636,81 @@ export default function Home() {
                             <AccordionTrigger>How do I know if caffeine is affecting me?</AccordionTrigger>
                             <AccordionContent>Common signs of caffeine's effects include increased alertness, feeling more awake, or enhanced focus. Negative signs that you've had too much can include feeling jittery, anxious, a racing heart, or having trouble sleeping. Our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> can help you identify your personal reaction.</AccordionContent>
                         </AccordionItem>
+                        <AccordionItem value="q-bad-for-health">
+                             <AccordionTrigger>Is caffeine bad for human health?</AccordionTrigger>
+                            <AccordionContent>For most adults, moderate caffeine consumption (under 400mg per day) is not considered bad for health and may even have some benefits. The risks of caffeine are related to high doses and poor timing, which can lead to anxiety and sleep disruption. It is not recommended for children or those with certain health conditions.</AccordionContent>
+                        </AccordionItem>
                         <AccordionItem value="q-how-long-kick-in">
                             <AccordionTrigger>How long does caffeine take to kick in?</AccordionTrigger>
                             <AccordionContent>Caffeine is absorbed quickly. You may start to feel its effects within 15-20 minutes, but it reaches its peak level in your bloodstream around 45-60 minutes after consumption. Our <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> uses this window to help you align its effects with your tasks.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-high-caffeine-drink">
+                            <AccordionTrigger>Which drink is high in caffeine?</AccordionTrigger>
+                            <AccordionContent>Some of the drinks highest in caffeine are high-stimulant energy drinks (like Bang or Reign at 300mg), large coffees from chains (a Starbucks Venti can have over 400mg), and cold brew concentrates. Check our <Link href="/calculators/caffeine-drinks-database">Caffeine in Drinks Database</Link> to find specific values.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-water-caffeine">
+                            <AccordionTrigger>Does water have caffeine?</AccordionTrigger>
+                            <AccordionContent>No, regular water does not contain caffeine. However, there are products known as 'caffeinated water' that have caffeine added to them as a stimulant.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-affect-sleep">
                             <AccordionTrigger>Does caffeine affect sleep?</AccordionTrigger>
                             <AccordionContent>Yes, profoundly. Caffeine is a powerful sleep disruptor. Even if you can fall asleep, caffeine consumed in the afternoon or evening can reduce the quality of your deep sleep and REM sleep, leaving you feeling unrefreshed. Our <Link href="/calculators/caffeine-sleep-calculator">Caffeine Sleep Calculator</Link> shows how much can be left in your system at bedtime.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="q-side-effects-too-much">
-                            <AccordionTrigger>What are the side effects of too much caffeine?</AccordionTrigger>
+                        <AccordionItem value="q-side-effects-too-much-2">
+                             <AccordionTrigger>What are the side effects of too much caffeine?</AccordionTrigger>
                             <AccordionContent>Consuming too much caffeine for your personal tolerance can lead to anxiety, restlessness, a racing heart (palpitations), digestive issues, and insomnia. Two classic signs you've had too much are feeling 'jittery' and having a racing mind.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="q-healthiest-source">
                             <AccordionTrigger>What is the healthiest source of caffeine?</AccordionTrigger>
-                            <AccordionContent>Unsweetened tea (especially green tea) and black coffee are generally considered the healthiest sources. They provide the benefits of caffeine along with antioxidants and other beneficial compounds, without the added sugar found in sodas and many energy drinks.</AccordionContent>
+                            <AccordionContent>Unsweetened tea (especially green tea) and black coffee are generally considered the healthiest sources. They provide the benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and many energy drinks.</AccordionContent>
                         </AccordionItem>
-                         <AccordionItem value="q-who-should-avoid">
-                            <AccordionTrigger>Who is not allowed to drink caffeine?</AccordionTrigger>
-                            <AccordionContent>Certain groups should avoid or strictly limit caffeine. This includes people with underlying heart conditions, severe anxiety disorders, or those taking specific medications that interact with caffeine. Pregnant women are advised to limit their intake to under 200mg per day. Children and adolescents should also avoid caffeine.</AccordionContent>
+                        <AccordionItem value="q-plant-rich">
+                             <AccordionTrigger>Which plant is rich in caffeine?</AccordionTrigger>
+                            <AccordionContent>The coffee plant (especially the Robusta species) and the guarana plant are among the richest natural sources of caffeine. Tea leaves (Camellia sinensis) and cacao beans (used for chocolate) also contain significant amounts.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-what-happens-stop">
+                            <AccordionTrigger>What happens when you stop caffeine?</AccordionTrigger>
+                            <AccordionContent>When you stop caffeine abruptly, you can experience withdrawal symptoms like headaches, severe fatigue, irritability, and 'brain fog'. This is because your brain has adapted to caffeine's presence. To avoid this, it's best to reduce your intake gradually. Our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> can help you create a comfortable tapering plan.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-urinate">
+                            <AccordionTrigger>Does caffeine make you urinate a lot?</AccordionTrigger>
+                            <AccordionContent>Caffeine is a mild diuretic, which means it can increase urine production. However, for most regular users, this effect is minimal, and the fluid in the caffeinated beverage itself usually compensates for the loss. It is unlikely to cause dehydration in moderate doses.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-blood-pressure">
+                            <AccordionTrigger>Does caffeine affect blood pressure?</AccordionTrigger>
+                            <AccordionContent>Yes, caffeine can cause a short-term, temporary increase in blood pressure, even in people with normal blood pressure. This effect is due to its stimulant properties. The impact is generally modest and not considered harmful for healthy individuals.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-fruits-caffeine">
+                            <AccordionTrigger>Do any fruits have caffeine?</AccordionTrigger>
+                            <AccordionContent>No, common fruits like apples, bananas, and oranges do not contain caffeine. The caffeine-producing plants, like coffee and guarana, produce berries, but these are not typically consumed as 'fruit' in a dietary sense.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-healthiest-drink">
+                            <AccordionTrigger>What is the healthiest drink with caffeine?</AccordionTrigger>
+                            <AccordionContent>Unsweetened green tea and black coffee are generally considered the healthiest sources. They provide the cognitive benefits of caffeine along with antioxidants and other beneficial plant compounds, without the added sugar found in sodas and most energy drinks.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-increase-heart-rate">
+                            <AccordionTrigger>Does caffeine increase heart rate?</AccordionTrigger>
+                            <AccordionContent>Yes, caffeine is a stimulant and can temporarily increase your heart rate (tachycardia). This is a normal physiological response. For most healthy adults, this is not dangerous in moderate doses, but high doses or sensitive individuals may experience uncomfortable palpitations.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-organ-removes">
+                            <AccordionTrigger>What organ removes caffeine?</AccordionTrigger>
+                            <AccordionContent>The liver is the primary organ that removes caffeine from your body. It produces an enzyme called CYP1A2 that breaks down about 95% of the caffeine you consume. The efficiency of this enzyme is determined by your genetics, making you a fast or slow metabolizer.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-healthier-no-caffeine">
+                            <AccordionTrigger>Is it healthier to have no caffeine?</AccordionTrigger>
+                            <AccordionContent>Not necessarily. While a caffeine-free life can lead to better sleep and less anxiety for some, moderate caffeine consumption (especially from coffee and tea) has been linked in large studies to certain health benefits. The healthiest approach depends on your individual goals and sensitivity.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-part-of-brain">
+                            <AccordionTrigger>What part of the brain is most affected by caffeine?</AccordionTrigger>
+                            <AccordionContent>Caffeine's main action is on the central nervous system. It primarily affects the entire brain by blocking adenosine receptors, which are found all over the brain. This widespread action is why it has such global effects on alertness, focus, and wakefulness.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-two-signs-too-much">
+                            <AccordionTrigger>What are two signs that you've had too much caffeine?</AccordionTrigger>
+                            <AccordionContent>Two of the most common signs you've exceeded your personal limit are feeling 'jittery' or shaky, and experiencing a racing mind or heightened anxiety. These are classic symptoms of over-stimulation.</AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="q-2-hour-rule">
+                            <AccordionTrigger>What is the 2 hour coffee rule?</AccordionTrigger>
+                            <AccordionContent>The '2 hour coffee rule' isn't a standard scientific guideline, but it likely refers to one of two concepts: 1) Waiting 1.5-2 hours after waking to have your first coffee to avoid interfering with your natural cortisol peak. 2) The idea that caffeine's main effects last for a few hours, although the substance itself stays in your system much longer.</AccordionContent>
                         </AccordionItem>
                     </Accordion>
                 </div>
@@ -560,5 +732,3 @@ export default function Home() {
       </div>
   );
 }
-
-    
