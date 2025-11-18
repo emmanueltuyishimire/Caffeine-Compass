@@ -7,16 +7,6 @@ import { mainNav } from '@/lib/nav-links';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuLink,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import ListItem from './ListItem';
 
 const Header = () => {
     const pathname = usePathname();
@@ -26,48 +16,24 @@ const Header = () => {
       role="banner"
     >
       <div className="container flex h-14 items-center">
-         <Link href="/" className="mr-6 flex items-center space-x-2" aria-label="Caffeine Compass Homepage">
+         <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image src="/logo.png" alt="Caffeine Compass Logo" width={28} height={28} />
             <span className="font-bold">Caffeine Compass</span>
         </Link>
-        <NavigationMenu>
-            <NavigationMenuList>
-                {mainNav.map((item) => (
-                    <NavigationMenuItem key={item.label}>
-                    {item.links ? (
-                        <>
-                            <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                    {item.links.map((link) => (
-                                        <ListItem
-                                            key={link.label}
-                                            title={link.label}
-                                            href={link.href}
-                                        >
-                                            {link.description}
-                                        </ListItem>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
-                        </>
-                    ) : (
-                        <Link href={item.href!} legacyBehavior passHref>
-                          <NavigationMenuLink
-                            active={pathname === item.href}
-                            className={cn(navigationMenuTriggerStyle(), {
-                                'bg-accent/50 text-foreground': pathname === item.href,
-                                'text-muted-foreground': pathname !== item.href
-                            })}
-                          >
-                            {item.label}
-                          </NavigationMenuLink>
-                        </Link>
+        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            {mainNav.map((link) => (
+                <Link
+                    key={link.href}
+                    href={link.href!}
+                    className={cn(
+                        'transition-colors hover:text-primary',
+                        pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
                     )}
-                    </NavigationMenuItem>
-                ))}
-            </NavigationMenuList>
-        </NavigationMenu>
+                >
+                    {link.label}
+                </Link>
+            ))}
+        </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
           <ThemeToggle />
         </div>
