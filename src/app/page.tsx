@@ -465,7 +465,7 @@ export default function Home() {
                             <TableRow><TableCell>Rum and Coke</TableCell><TableCell>~10 mg</TableCell><TableCell>11.8%</TableCell></TableRow>
                         </TableBody>
                     </Table>
-                    <p className="text-sm mt-2 text-muted-foreground">Source: Wikipedia & product labels. Caffeine content is approximate and can vary based on preparation.</p>
+                    <p className="text-sm mt-2 text-muted-foreground">Source: Publicly available data and product labels. Caffeine content is approximate and can vary based on preparation.</p>
                 </div>
             </section>
 
@@ -555,5 +555,3 @@ export default function Home() {
       </div>
   );
 }
-
-    
