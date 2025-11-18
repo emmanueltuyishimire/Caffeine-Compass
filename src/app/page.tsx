@@ -1,4 +1,5 @@
 
+import './globals.css';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2, Zap, Leaf, Heart, Dumbbell, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
@@ -221,6 +222,7 @@ export default function Home() {
                     alt={heroImage.description}
                     fill
                     priority={true}
+                    fetchPriority="high"
                     className="object-cover object-center z-0 opacity-10 dark:opacity-5"
                     data-ai-hint={heroImage.imageHint}
                 />
@@ -442,7 +444,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="mt-8 max-w-4xl mx-auto">
-                    <p>The following table is provided for educational purposes only, to raise awareness of the caffeine content in common alcoholic beverages. A 2005 clinical trial showed psychoactive effects from caffeine doses as low as 9 mg. We do not endorse the consumption of these drinks.</p>
+                    <p>The following table is provided for educational purposes only, to raise awareness of the caffeine content in common alcoholic beverages. A 2005 clinical trial showed psychoactive effects from caffeine doses as low as 9 mg.</p>
                     <Table>
                         <TableHeader>
                             <TableRow>

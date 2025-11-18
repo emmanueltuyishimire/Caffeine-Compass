@@ -1,7 +1,6 @@
 
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
 import JsonLd from '@/components/JsonLd';
 import { Providers } from '@/app/providers';
 import Script from 'next/script';
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     'caffeine sensitivity',
   ],
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo.png',
   },
 };
 
@@ -56,9 +55,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-       <head>
-        <link rel="preconnect" href="https://images.unsplash.com" />
-      </head>
       <body className={`${inter.variable} font-body antialiased`} suppressHydrationWarning>
         <JsonLd data={websiteJsonLd} />
         <Providers>{children}</Providers>
@@ -78,5 +74,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-    
