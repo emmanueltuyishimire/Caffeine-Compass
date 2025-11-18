@@ -14,7 +14,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Caffeine Compass — Caffeine Calculators, Articles & Science',
-    description: 'The ultimate resource for caffeine calculators, data tools, and science-backed articles. Optimize your intake, improve your sleep, and master your energy.',
+    description: 'Your ultimate resource for caffeine calculators, data tools, and science-backed articles. Optimize your intake, improve your sleep, and master your energy.',
 };
 
 const homePageJsonLd = {
@@ -132,7 +132,7 @@ export default function Home() {
               <div className="text-center mb-12">
                 <h2 id="calculators-heading" className="text-3xl md:text-4xl font-bold font-headline">A Toolkit for Mindful Caffeine Consumption</h2>
                 <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-                    From tracking your daily caffeine load to understanding your genetic tolerance, our calculators provide the data you need to make smarter choices.
+                    From tracking your daily caffeine load to understanding your genetic tolerance, our caffeine calculators provide the data you need to make smarter choices.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -257,3 +257,5 @@ export default function Home() {
       </div>
   );
 }
+
+    
