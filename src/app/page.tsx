@@ -121,7 +121,7 @@ export default function Home() {
                   data-ai-hint={heroImage.imageHint}
                   fill
                   className="object-cover object-center z-0"
-                  priority
+                  priority={true}
                   quality={75}
                   sizes="100vw"
                 />
@@ -285,3 +285,5 @@ export default function Home() {
       </div>
   );
 }
+
+    
