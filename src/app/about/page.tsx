@@ -38,7 +38,7 @@ const aboutPageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://calculation.site/logo.svg"
+      "url": "https://calculation.site/logo.png"
     }
   },
   "breadcrumb": {
