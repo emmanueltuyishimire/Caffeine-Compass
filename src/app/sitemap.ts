@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '/articles/how-much-caffeine-in-celsius',
       '/articles/how-much-caffeine-in-monster',
       '/articles/red-bull-caffeine-content',
+      '/articles/red-bull-flavors',
   ];
 
   const dataRoutes = [

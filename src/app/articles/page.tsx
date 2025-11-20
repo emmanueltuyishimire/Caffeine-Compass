@@ -101,6 +101,18 @@ const articleLinks = [
     description: "A step-by-step guide to tapering off caffeine.",
     icon: TrendingDown,
   },
+   {
+    title: "Red Bull Caffeine Content: A Complete Scientific Guide",
+    href: "/articles/red-bull-caffeine-content",
+    description: "A definitive guide to Red Bull caffeine content, comparing it to coffee and other energy drinks, and explaining the science behind its effects.",
+    icon: Zap,
+  },
+  {
+    title: "Red Bull Flavors: A Complete Guide to Every Edition (2024)",
+    href: "/articles/red-bull-flavors",
+    description: "Explore all the Red Bull flavors, from the classic Original to the fruity Editions like Watermelon, Blueberry, and Juneberry. Discover seasonal and sugar-free options.",
+    icon: Zap,
+  },
 ];
 
 const toolLinks = [
