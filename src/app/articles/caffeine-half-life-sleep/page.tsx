@@ -291,7 +291,7 @@ export default function CaffeineHalfLifeSleepArticle() {
               <strong>The Pain Point:</strong> You feel perfectly fine during the day, but in the evening, you notice a subtle but persistent feeling of anxiety, restlessness, or physical jitters. You might attribute it to work stress, but it could be your caffeine habit.
             </p>
             <p>
-              <strong>The Half-Life Connection:</strong> This is especially common in "slow metabolizers." A coffee consumed at lunch can reach its peak disruptive potential in the evening. As your natural energy levels wane and cortisol drops, the stimulating effects of the still-present caffeine become more pronounced and less buffered. What felt like clean focus at 2 PM can manifest as raw, unfocused nervous energy at 8 PM. By not accounting for caffeine's long half-life, you are essentially exposing your evening brain to a stimulant it is no longer prepared to handle, leading to discomfort and anxiety instead of relaxation. Tracking your intake with our <Link href="/calculators/caffeine-intake">Intake Calculator</Link> can reveal just how much you're asking your body to process.
+              <strong>The Half-Life Connection:</strong> This is especially common in "slow metabolizers." A coffee consumed at lunch can reach its peak disruptive potential in the evening. As your natural energy levels wane and cortisol drops, the stimulating effects of the still-present caffeine become more pronounced and less buffered. What felt like clean focus at 2 PM can manifest as raw, unfocused nervous energy at 8 PM. By not accounting for caffeine's long half-life, you are essentially exposing your evening brain to a stimulant it is no longer prepared to handle, leading to discomfort and anxiety instead of relaxation. Tracking your intake with our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> can reveal just how much you're asking your body to process.
             </p>
           </section>
 
@@ -380,7 +380,7 @@ export default function CaffeineHalfLifeSleepArticle() {
             
             <Card className="mb-6">
               <CardHeader>
-                <CardTitle className="flex items-center gap-3"><GraduationCap aria-hidden="true"/> Case Study 1: The College Student</CardTitle>
+                <CardTitle className="flex items-center gap-2"><GraduationCap aria-hidden="true"/> Case Study 1: The College Student</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 <p><strong>Persona:</strong> Chloe, a 20-year-old student, is a self-proclaimed "night owl." She drinks a large cold brew (250mg) at 2 PM to power through afternoon classes and evening study sessions. She goes to bed at 1 AM but always feels groggy and struggles to retain what she studied.</p>
@@ -391,7 +391,7 @@ export default function CaffeineHalfLifeSleepArticle() {
 
             <Card className="mb-6">
               <CardHeader>
-                <CardTitle className="flex items-center gap-3"><Briefcase aria-hidden="true"/> Case Study 2: The "Slow Metabolizer" Professional</CardTitle>
+                <CardTitle className="flex items-center gap-2"><Briefcase aria-hidden="true"/> Case Study 2: The "Slow Metabolizer" Professional</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 <p><strong>Persona:</strong> David, a 45-year-old manager, knows he's sensitive to caffeine. He has one large cup of coffee (150mg) at 8 AM and nothing after. He still feels his sleep is not deep, and he often feels anxious in the evenings.</p>
@@ -402,7 +402,7 @@ export default function CaffeineHalfLifeSleepArticle() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-3"><Heart aria-hidden="true"/> Case Study 3: The "Fast Metabolizer" Athlete</CardTitle>
+                <CardTitle className="flex items-center gap-2"><Heart aria-hidden="true"/> Case Study 3: The "Fast Metabolizer" Athlete</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 <p><strong>Persona:</strong> Maya, a 30-year-old athlete, is a "fast metabolizer." She wants to use caffeine to boost her performance for a 6 PM workout but is worried about sleep. Her bedtime is 11 PM.</p>
@@ -449,7 +449,7 @@ export default function CaffeineHalfLifeSleepArticle() {
                 </TableBody>
             </Table>
           </section>
-
+          
           <Separator />
           
           <section id="faq" aria-labelledby="faq-heading">

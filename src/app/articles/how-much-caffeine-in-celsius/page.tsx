@@ -368,7 +368,7 @@ export default function HowMuchCaffeineInCelsiusArticle() {
                 <p>Let's explore how different people might use Celsius and the potential outcomes.</p>
                 
                 <Card className="mb-6">
-                    <CardHeader><CardTitle className="flex items-center gap-3"><GraduationCap aria-hidden="true"/> The Student's Risky Study Aid</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><GraduationCap aria-hidden="true"/> The Student's Risky Study Aid</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> A 21-year-old student, Ben, drinks a 16oz Celsius Essentials (270mg) at 7 PM to cram for a morning exam.</p>
                         <p><strong>The Dose:</strong> 270 mg of caffeine.</p>
@@ -377,7 +377,7 @@ export default function HowMuchCaffeineInCelsiusArticle() {
                 </Card>
 
                  <Card className="mb-6">
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Briefcase aria-hidden="true"/> The Professional's Morning Swap</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><Briefcase aria-hidden="true"/> The Professional's Morning Swap</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> A 35-year-old marketing manager, Laura, usually drinks two large coffees from a chain, totaling over 500mg of caffeine. She feels jittery and wants to cut back. She swaps her second coffee for a 12oz Celsius (200mg).</p>
                         <p><strong>The Dose:</strong> Her first coffee is 310mg. Her Celsius is 200mg. Her new total is 510mg.</p>
@@ -386,7 +386,7 @@ export default function HowMuchCaffeineInCelsiusArticle() {
                 </Card>
 
                 <Card>
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Heart aria-hidden="true"/> The Athlete's Smart Pre-Workout</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><Heart aria-hidden="true"/> The Athlete's Smart Pre-Workout</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> A 28-year-old CrossFitter, Mike, wants a strong boost for his 9 AM workout. He drinks a 12oz Celsius (200mg) at 8:15 AM.</p>
                         <p><strong>The Dose:</strong> 200mg of caffeine.</p>
@@ -493,4 +493,3 @@ export default function HowMuchCaffeineInCelsiusArticle() {
     </>
   );
 }
-

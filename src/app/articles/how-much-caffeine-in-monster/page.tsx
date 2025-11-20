@@ -454,7 +454,7 @@ export default function HowMuchCaffeineInMonsterArticle() {
                 <h2 id="worked-examples-heading" className="text-3xl font-bold">Worked Examples: Monster in Real Life</h2>
                 
                 <Card className="mb-6">
-                    <CardHeader><CardTitle className="flex items-center gap-3"><GraduationCap aria-hidden="true"/> The Student's All-Nighter</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><GraduationCap aria-hidden="true"/> The Student's All-Nighter</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> A 19-year-old student, Jake, drinks two original green Monsters (2 x 160mg = 320mg) starting at 10 PM to study for a final exam.</p>
                         <p><strong>The Dose:</strong> 320 mg of caffeine and a staggering 108g of sugar.</p>
@@ -463,7 +463,7 @@ export default function HowMuchCaffeineInMonsterArticle() {
                 </Card>
 
                  <Card className="mb-6">
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Briefcase aria-hidden="true"/> The Construction Worker</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><Briefcase aria-hidden="true"/> The Construction Worker</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> A 40-year-old construction worker, Dave, starts his day at 6 AM with a 16oz Monster Zero Ultra (160mg).</p>
                         <p><strong>The Dose:</strong> 160mg of caffeine, 0g sugar.</p>
@@ -472,7 +472,7 @@ export default function HowMuchCaffeineInMonsterArticle() {
                 </Card>
 
                 <Card>
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Heart aria-hidden="true" /> The Weekend Warrior</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><Heart aria-hidden="true" /> The Weekend Warrior</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> A 28-year-old gamer, Maria, drinks a Java Monster 300 (300mg) at 4 PM on a Saturday to fuel a gaming session with friends.</p>
                         <p><strong>The Dose:</strong> 300 mg of caffeine.</p>

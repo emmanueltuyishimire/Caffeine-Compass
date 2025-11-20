@@ -260,12 +260,9 @@ export default function HowLongBeforeBedToStopCaffeine() {
             <p>
               The consequences of ignoring your caffeine curfew are often subtle but profound. They manifest as common complaints that many people attribute to stress, aging, or a busy lifestyle, without ever suspecting their afternoon coffee habit is the root cause. Do any of these sound familiar?
             </p>
-            <h3 className="text-2xl font-semibold">1. "I Sleep for 8 Hours, So Why Am I Still Exhausted?"</h3>
+            <h3 className="text-2xl font-semibold">1. "I Slept for 8 Hours, So Why Am I Still Exhausted?"</h3>
             <p>
-              <strong>The Pain Point:</strong> You religiously get your eight hours in bed, but you wake up feeling groggy and unrefreshed. You have to drag yourself out of bed and feel like you need a coffee just to become a functional human being.
-            </p>
-            <p>
-              <strong>The Caffeine Connection:</strong> This is the classic symptom of poor sleep <em>quality</em>, not quantity. The lingering caffeine from your afternoon drink prevented you from getting enough deep sleep (SWS) and REM sleep. Your brain was held in the lighter stages of sleep for too much of the night. So, while you were unconscious, you missed out on the most restorative parts of the sleep cycle. You're waking up with a "sleep quality debt," and ironically, the coffee you drink to combat the grogginess is what caused it in the first place.
+              <strong>The Pain Point:</strong> This is the classic symptom of poor sleep <em>quality</em>, not quantity. The lingering caffeine from your afternoon drink prevented you from getting enough deep sleep (SWS) and REM sleep. Your brain was held in the lighter stages of sleep for too much of the night. So, while you were unconscious, you missed out on the most restorative parts of the sleep cycle. You're waking up with a "sleep quality debt," and ironically, the coffee you drink to combat the grogginess is what caused it in the first place.
             </p>
 
             <h3 className="text-2xl font-semibold">2. The "Tired But Wired" Paradox at Bedtime</h3>
@@ -305,7 +302,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
               The 10-hour rule is a great starting point, but we're not all "average." Your genetics play a huge role. Take our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> to get an estimate of your metabolism speed.
             </p>
             <ul>
-                <li><strong>Slow Metabolizer (High Sensitivity):</strong> You need a stricter curfew. Aim for <strong>12-14 hours</strong> before bed. Your last coffee might need to be before 10 AM.</li>
+                <li><strong>Slow Metabolizer (High Sensitivity):</strong> You need a stricter curfew. Aim for <strong>12-14 hours</strong> before bed. Your last coffee might need to be as early as 10 AM.</li>
                 <li><strong>Fast Metabolizer (Low Sensitivity):</strong> You have more wiggle room. An <strong>8-hour</strong> curfew may be sufficient for you.</li>
             </ul>
 
@@ -351,7 +348,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
               </li>
               <li>
                 <strong>Step 3: Work Backward and Set Your Curfew (1 Week Test)</strong>
-                <p>Your goal should be to have as little caffeine as possible (ideally less than 20mg) in your system at bedtime. Using the Half-Life Calculator, work backward. What time do you need to drink that 150mg coffee for it to be below 20mg by 11 PM? The calculator will show you. Set this as your new, non-negotiable caffeine curfew for one week. Pay close attention to how you feel when you wake up. Are you more refreshed? Is it easier to get out of bed? This experiment will give you the undeniable proof of how much caffeine timing matters.</p>
+                <p>Your goal should be to have as little caffeine as possible (ideally less than 20mg) in your system at bedtime. Using the Half-Life Calculator, work backward. What time do you need to drink that 150mg coffee for it to be below 20mg by 11 PM? The calculator will show you. Set this as your new, non-negotiable caffeine curfew for one week. Pay close attention to how you feel when you wake up. Are you more refreshed? Is it easier to get out of bed? Do you remember your dreams more vividly? This experiment will give you the undeniable proof of how much caffeine timing matters.</p>
               </li>
             </ol>
           </section>
@@ -364,7 +361,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
             
             <Card className="mb-6">
               <CardHeader>
-                <CardTitle className="flex items-center gap-3"><GraduationCap aria-hidden="true"/> Case Study 1: The Student</CardTitle>
+                <CardTitle className="flex items-center gap-2"><GraduationCap aria-hidden="true"/> Case Study 1: The Student</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 <p><strong>Persona:</strong> Alex, a 21-year-old student, drinks a 200mg cold brew at 4 PM to study. His bedtime is 12 AM. He feels he "sleeps okay" but struggles with memory retention.</p>
@@ -375,7 +372,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
 
             <Card className="mb-6">
               <CardHeader>
-                <CardTitle className="flex items-center gap-3"><Briefcase aria-hidden="true"/> Case Study 2: The "Slow Metabolizer" Professional</CardTitle>
+                <CardTitle className="flex items-center gap-2"><Briefcase aria-hidden="true"/> Case Study 2: The "Slow Metabolizer" Professional</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 <p><strong>Persona:</strong> Sarah, a 42-year-old manager, is a self-diagnosed "slow metabolizer." She has just one cup of coffee (100mg) at 10 AM, but still feels restless in the evenings. Her bedtime is 10 PM.</p>
@@ -386,7 +383,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-3"><Heart aria-hidden="true"/> Case Study 3: The "Fast Metabolizer" with Bad Habits</CardTitle>
+                <CardTitle className="flex items-center gap-2"><Heart aria-hidden="true"/> Case Study 3: The "Fast Metabolizer" with Bad Habits</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 <p><strong>Persona:</strong> Mark, a 30-year-old, is a "fast metabolizer" (4-hour half-life). He thinks he's immune and has an energy drink (160mg) at 6 PM before gaming. His bedtime is 11 PM.</p>
@@ -428,7 +425,7 @@ export default function HowLongBeforeBedToStopCaffeine() {
                     <TableRow>
                         <TableCell className="font-medium">Focusing Only on Falling Asleep</TableCell>
                         <TableCell>Thinking that if you can fall asleep, the caffeine didn't affect you. This ignores its impact on sleep <em>quality</em>.</TableCell>
-                        <TableCell>Pay attention to how you feel when you wake up. Feeling groggy after a full night's sleep is a key sign that lingering caffeine is disrupting your sleep architecture.</TableCell>
+                        <TableCell>Pay attention to how you feel when you wake up. If you're groggy after a full night's sleep, a key sign that lingering caffeine is disrupting your sleep architecture.</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>

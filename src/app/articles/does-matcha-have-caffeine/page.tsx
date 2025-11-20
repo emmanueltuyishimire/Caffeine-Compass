@@ -190,7 +190,7 @@ export default function DoesMatchaHaveCaffeineArticle() {
               This question stems from a common and understandable pain point. Many people are trying to escape the negative aspects of their coffee habit: the afternoon crash that leaves them feeling drained, the jitters and anxiety that come with a strong brew, and the poor sleep quality that results from consuming caffeine too late in the day. They see matcha, with its serene, Zen-like associations and laundry list of health benefits, and wonder if it offers a stimulant-free path to alertness. Is this vibrant green powder a magical, caffeine-free elixir?
             </p>
             <p>
-              The short answer is a definitive no, it is not caffeine-free. But the full answer is far more fascinating. Matcha's power lies not in an absence of caffeine, but in a unique and powerful synergy of compounds that deliver a completely different kind of energy. It occupies a special place in the caffeine landscape, somewhere between the gentle lift of green tea and the potent jolt of coffee. This article will serve as your definitive guide. We will provide a clear, science-backed answer on how much caffeine is in a typical serving, explore the biochemistry that makes the "matcha buzz" so unique, and compare it directly to coffee and other teas. By the end, you'll understand not just that matcha has caffeine, but how to use it as a precision tool for sustained energy and calm focus. To begin understanding your current habits, you can always track your intake with our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>.
+              The short answer is a definitive no, it is not caffeine-free. But the full answer is far more fascinating. Matcha's power lies not in an absence of caffeine, but in a unique and powerful synergy of compounds that deliver a completely different kind of energy. It occupies a special place in the caffeine landscape, somewhere between the gentle lift of green tea and the potent jolt of coffee. This article will serve as your definitive guide. We will provide a clear, science-backed answer on how much caffeine is in a typical serving, explore the biochemistry that makes the "matcha buzz" so unique, and compare it directly to coffee and other teas. By the end, you'll understand not just that matcha has caffeine, but how to use it as a precision tool for sustained energy and calm focus. To begin understanding your current habits, you can track your intake with our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>.
             </p>
           </section>
 
@@ -312,7 +312,7 @@ export default function DoesMatchaHaveCaffeineArticle() {
                  <p>Let's explore how different people might choose matcha over coffee to solve their specific caffeine-related problems.</p>
                 
                 <Card className="mb-6">
-                    <CardHeader><CardTitle className="flex items-center gap-3"><GraduationCap aria-hidden="true"/> The Anxious Student</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><GraduationCap aria-hidden="true"/> The Anxious Student</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> Sarah, a 21-year-old student, finds that coffee makes her feel jittery and anxious before exams, even though she needs to focus.</p>
                         <p><strong>Pain Point:</strong> The high, sharp peak of coffee's caffeine triggers her anxiety, making it hard to think clearly.</p>
@@ -321,7 +321,7 @@ export default function DoesMatchaHaveCaffeineArticle() {
                 </Card>
 
                  <Card className="mb-6">
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Briefcase aria-hidden="true"/> The Creative Professional</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><Briefcase aria-hidden="true"/> The Creative Professional</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> David, a 35-year-old graphic designer, needs to be creative and innovative, but finds coffee makes his mind race too fast to connect ideas.</p>
                         <p><strong>Pain Point:</strong> Coffee's intense stimulation leads to scattered thinking, hindering his creative process which requires "divergent thinking."</p>
@@ -330,7 +330,7 @@ export default function DoesMatchaHaveCaffeineArticle() {
                 </Card>
 
                 <Card>
-                    <CardHeader><CardTitle className="flex items-center gap-3"><User aria-hidden="true"/> The Afternoon Slumper</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><User aria-hidden="true"/> The Afternoon Slumper</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Persona:</strong> Emily, a 45-year-old office worker, struggles with a 3 PM energy slump. An afternoon coffee helps, but she often has trouble sleeping later.</p>
                         <p><strong>Pain Point:</strong> A standard coffee dose is too much for her in the afternoon, leaving too much caffeine in her system at bedtime. This is a common issue for <Link href="/calculators/caffeine-sensitivity-test">slow metabolizers</Link>.</p>
