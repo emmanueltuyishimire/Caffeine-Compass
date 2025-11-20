@@ -18,7 +18,7 @@ import {
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
-import { Zap, Coffee, Leaf, AlertTriangle, CheckCircle, BrainCircuit, Droplet, Heart, User, Briefcase, GraduationCap, Moon, ShieldCheck, Clock } from 'lucide-react';
+import { Zap, Coffee, Leaf, AlertTriangle, CheckCircle, BrainCircuit, Droplet, Heart, User, Briefcase, GraduationCap, Moon, ShieldCheck, Clock, CupSoda } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Red Bull Caffeine Content — How Much Caffeine in a Can?',
