@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     description: 'Learn about the mission behind Caffeine Compass and the team dedicated to helping you optimize your caffeine intake for better health, focus, and sleep using our tools.',
 };
 
+const logoImage = PlaceHolderImages.find(p => p.id === 'logo');
+
 const team = [
     {
         name: 'Dr. Evelyn Reed',
@@ -38,7 +40,7 @@ const aboutPageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://calculation.site/app.png"
+      "url": logoImage?.imageUrl || 'https://calculation.site/app.png',
     }
   },
   "breadcrumb": {

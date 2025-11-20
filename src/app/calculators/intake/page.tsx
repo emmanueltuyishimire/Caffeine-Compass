@@ -20,11 +20,14 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
   title: 'Caffeine Intake Calculator — Track Your Daily Caffeine',
   description: 'Use this free calculator to accurately measure your daily caffeine intake and compare it to safe limits. Our science-backed tool helps you manage energy, sleep, and health.',
 };
+
+const logoImage = PlaceHolderImages.find(p => p.id === 'logo');
 
 const pageJsonLd = {
   "@context": "https://schema.org",
@@ -39,7 +42,7 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://calculation.site/app.png"
+      "url": logoImage?.imageUrl || 'https://calculation.site/app.png'
     }
   },
   "mainEntityOfPage": {
