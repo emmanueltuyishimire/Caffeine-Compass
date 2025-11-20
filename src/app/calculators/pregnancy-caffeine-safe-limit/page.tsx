@@ -23,7 +23,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Pregnancy Caffeine Calculator — Track Your Daily Intake Safely',
-  description: 'Track your daily caffeine intake against the recommended 200mg limit for pregnancy. Make informed choices for a healthy pregnancy with our free, science-based tool.',
+  description: 'Track your daily caffeine intake against the recommended 200mg limit for pregnancy. Make informed choices for a healthy pregnancy with our free, science-backed tool.',
 };
 
 const pageJsonLd = {
@@ -39,7 +39,7 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://calculation.site/logo.png"
+      "url": "https://calculation.site/logo.svg"
     }
   },
   "mainEntityOfPage": {

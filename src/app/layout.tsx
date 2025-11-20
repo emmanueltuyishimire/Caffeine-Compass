@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import JsonLd from '@/components/JsonLd';
 import { Providers } from '@/app/providers';
 import Script from 'next/script';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
 
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     'caffeine sensitivity',
   ],
   icons: {
-    icon: '/logo.png',
+    icon: '/favicon.ico',
   },
 };
 
@@ -41,7 +42,7 @@ const websiteJsonLd = {
     name: 'Caffeine Compass',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://calculation.site/logo.png',
+      url: 'https://calculation.site/logo.svg',
     },
   },
 };
@@ -55,6 +56,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+       <head>
+        <link rel="preconnect" href="https://images.unsplash.com" />
+      </head>
       <body className={`${inter.variable} font-body antialiased`} suppressHydrationWarning>
         <JsonLd data={websiteJsonLd} />
         <Providers>{children}</Providers>
