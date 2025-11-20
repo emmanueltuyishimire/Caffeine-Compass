@@ -6,9 +6,12 @@ import { ThemeToggle } from '../theme-toggle';
 import { mainNav } from '@/lib/nav-links';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
+import MobileNav from './MobileNav';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header = () => {
     const pathname = usePathname();
+    const isMobile = useIsMobile();
 
   return (
     <header
@@ -32,23 +35,28 @@ const Header = () => {
             </svg>
             <span className="font-bold">Caffeine Compass</span>
         </Link>
-        <nav className="flex items-center space-x-6 text-sm font-medium">
-            {mainNav.map((link) => (
-                <Link
-                    key={link.href}
-                    href={link.href}
-                    target={link.href.startsWith('http') ? '_blank' : '_self'}
-                    className={cn(
-                        'transition-colors hover:text-primary',
-                        pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
-                    )}
-                >
-                    {link.label}
-                </Link>
-            ))}
-        </nav>
+        
+        {isMobile === false && (
+            <nav className="flex items-center space-x-6 text-sm font-medium">
+                {mainNav.map((link) => (
+                    <Link
+                        key={link.href}
+                        href={link.href}
+                        target={link.href.startsWith('http') ? '_blank' : '_self'}
+                        className={cn(
+                            'transition-colors hover:text-primary',
+                            pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
+                        )}
+                    >
+                        {link.label}
+                    </Link>
+                ))}
+            </nav>
+        )}
+
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <ThemeToggle />
+            {isMobile && <MobileNav />}
+            <ThemeToggle />
         </div>
       </div>
     </header>
