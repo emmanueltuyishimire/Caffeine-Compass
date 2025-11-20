@@ -29,6 +29,12 @@
       "description": "A professional and friendly headshot of a young male software developer with glasses, smiling in a modern, bright office environment.",
       "imageUrl": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwZGV2ZWxvcGVyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzMTMzODAyfDA&ixlib=rb-4.1.0&q=80&w=100",
       "imageHint": "developer portrait"
+    },
+    {
+      "id": "logo",
+      "description": "A simple, elegant logo for Caffeine Compass, featuring a stylized compass with a coffee bean at its center.",
+      "imageUrl": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBsb2dvfGVufDB8fHx8MTc2MjkyMDk1OXww&ixlib=rb-4.1.0&q=80&w=48",
+      "imageHint": "coffee logo"
     }
   ]
 }

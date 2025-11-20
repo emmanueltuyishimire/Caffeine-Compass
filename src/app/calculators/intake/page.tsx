@@ -20,6 +20,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const logoImage = PlaceHolderImages.find(p => p.id === 'logo');
 
 export const metadata: Metadata = {
   title: 'Caffeine Intake Calculator — Track Your Daily Caffeine',
@@ -39,7 +42,7 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://calculation.site/logo.png"
+      "url": logoImage?.imageUrl || "https://calculation.site/logo.png"
     }
   },
   "mainEntityOfPage": {
