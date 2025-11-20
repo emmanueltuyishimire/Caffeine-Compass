@@ -6,8 +6,10 @@ import { ThemeToggle } from '../theme-toggle';
 import { mainNav } from '@/lib/nav-links';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
-import MobileNav from './MobileNav';
 import { useIsMobile } from '@/hooks/use-mobile';
+import dynamic from 'next/dynamic';
+
+const MobileNav = dynamic(() => import('./MobileNav'));
 
 const Header = () => {
     const pathname = usePathname();
@@ -29,6 +31,7 @@ const Header = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
               className="h-6 w-6"
+              aria-hidden="true"
             >
               <circle cx="12" cy="12" r="10" />
               <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
