@@ -1,6 +1,5 @@
 
 import { Home, Compass, BookOpen, Database, BarChart2, Zap, Coffee } from 'lucide-react';
-import type { Drink } from './types';
 
 export const mainNav = [
   {

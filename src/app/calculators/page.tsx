@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2, Zap, Leaf, Heart, Dumbbell, AlertTriangle } from 'lucide-react';
+import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2 } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
@@ -87,7 +87,7 @@ const calculatorLinks = [
   {
     title: "Caffeine Intake Calculator",
     href: "/calculators/caffeine-intake",
-    description: "Track your total daily caffeine consumption against the 400mg safe limit.",
+    description: "Track your total daily consumption against the 400mg safe limit.",
     icon: Coffee,
   },
   {

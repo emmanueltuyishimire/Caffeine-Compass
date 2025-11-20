@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const dataRoutes = [
+      '/data',
       '/data/sugar-in-drinks',
   ];
 
@@ -92,12 +93,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/articles`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/data`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
