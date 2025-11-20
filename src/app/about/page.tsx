@@ -40,7 +40,7 @@ const aboutPageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": logoImage?.imageUrl || "https://calculation.site/app.png",
+      "url": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2ZmZWUlMjBmb2N1c3xlbnwwfHx8fDE3NjMyODU2ODd8MA&ixlib=rb-4.1.0&q=80&w=1920",
     }
   },
   "breadcrumb": {
@@ -88,6 +88,8 @@ export default function AboutPage() {
                                 sizes="(max-width: 768px) 100vw, 50vw"
                                 data-ai-hint={missionImage.imageHint}
                                 quality={80}
+                                width={500}
+                                height={500}
                             />
                         </div>
                     )}

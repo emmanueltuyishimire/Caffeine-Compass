@@ -24,12 +24,26 @@ export default function MobileNav() {
           aria-label="Toggle mobile navigation menu"
         >
           <Menu className="h-5 w-5" />
+          <span className="sr-only">Open navigation menu</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="left">
         <MobileLink href="/" className="flex items-center" onOpenChange={setOpen}>
-            <Image src="/app.png" alt="Caffeine Compass Logo" width={24} height={24} className="h-6 w-6 mr-2" />
-          <span className="font-bold">Caffeine Compass</span>
+           <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-6 w-6"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+            </svg>
+          <span className="font-bold ml-2">Caffeine Compass</span>
         </MobileLink>
         <div className="flex flex-col gap-3 pt-6">
           {mainNav.map((item) => (

@@ -26,7 +26,7 @@ export function Toaster() {
               )}
             </div>
             {action}
-            <ToastClose />
+            <ToastClose aria-label="Close" />
           </Toast>
         )
       })}

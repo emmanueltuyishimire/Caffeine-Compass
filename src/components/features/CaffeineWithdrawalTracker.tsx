@@ -33,6 +33,7 @@ import { Bar, BarChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 
 import { drinks } from '@/lib/drinks';
 import type { ConsumedDrink } from '@/lib/types';
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
+import { CommandDialog } from '@/components/ui/command';
 
 interface TaperStep {
   day: number;
@@ -177,40 +178,41 @@ export default function CaffeineWithdrawalTracker() {
                     </div>
                 )}
                 <Popover open={open} onOpenChange={setOpen}>
-                <PopoverTrigger asChild>
-                    <Button id="drink-search" variant="outline" role="combobox" aria-expanded={open} className="w-full sm:w-[300px] justify-between">
-                        Add a drink...
-                        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" aria-hidden="true" />
-                    </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-[300px] p-0">
-                    <Command>
-                    <CommandInput placeholder="Search drink..." />
-                    <CommandList>
-                        <CommandEmpty>No drink found.</CommandEmpty>
-                        <CommandGroup>
-                        {drinks.map((drink) => (
-                            <CommandItem
-                            key={drink.id}
-                            value={drink.name}
-                            onSelect={() => {
-                                addDrink(drink.id);
-                                setOpen(false);
-                            }}
-                            className="flex justify-between items-center"
-                            >
-                            <div className="flex items-center gap-2">
-                                <drink.icon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
-                                <span>{drink.name}</span>
-                            </div>
-                            <span className="text-xs text-muted-foreground">{drink.caffeine}mg</span>
-                            </CommandItem>
-                        ))}
-                        </CommandGroup>
-                    </CommandList>
-                    </Command>
-                </PopoverContent>
+                  <PopoverTrigger asChild>
+                      <Button id="drink-search" variant="outline" role="combobox" aria-expanded={open} className="w-full sm:w-[300px] justify-between">
+                          Add a drink...
+                          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" aria-hidden="true" />
+                      </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-[300px] p-0">
+                      <CommandDialog open={open} onOpenChange={setOpen} title="Add a drink" description="Search for a drink to add to your daily log.">
+                          <CommandInput placeholder="Search drink..." />
+                          <CommandList>
+                              <CommandEmpty>No drink found.</CommandEmpty>
+                              <CommandGroup>
+                                  {drinks.map((drink) => (
+                                      <CommandItem
+                                          key={drink.id}
+                                          value={drink.name}
+                                          onSelect={() => {
+                                              addDrink(drink.id);
+                                              setOpen(false);
+                                          }}
+                                          className="flex justify-between items-center"
+                                      >
+                                          <div className="flex items-center gap-2">
+                                              <drink.icon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+                                              <span>{drink.name}</span>
+                                          </div>
+                                          <span className="text-xs text-muted-foreground">{drink.caffeine}mg</span>
+                                      </CommandItem>
+                                  ))}
+                              </CommandGroup>
+                          </CommandList>
+                      </CommandDialog>
+                  </PopoverContent>
                 </Popover>
+
 
                 <div className="p-2 border rounded-md bg-muted/50 space-y-2 mt-4">
                     <h4 className="text-xs font-medium text-muted-foreground" id="custom-drink-heading">Add Custom Drink</h4>

@@ -11,8 +11,9 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t bg-background" role="contentinfo">
+    <footer className="border-t bg-background" role="contentinfo" aria-labelledby="footer-heading">
       <div className="container py-8">
+        <h2 id="footer-heading" className="sr-only">Footer</h2>
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Caffeine Compass. All rights reserved.

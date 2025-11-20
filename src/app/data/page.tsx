@@ -73,9 +73,10 @@ export default function DataLandingPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" role="list">
             {dataTools.map((tool) => (
-                <Link key={tool.title} href={tool.href} className="block group">
+                <div role="listitem" key={tool.title}>
+                  <Link href={tool.href} className="block group h-full" aria-label={`Go to ${tool.title}`}>
                     <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
                         <CardHeader>
                             <div className="flex items-center gap-4">
@@ -88,6 +89,7 @@ export default function DataLandingPage() {
                         </CardContent>
                     </Card>
                 </Link>
+                </div>
             ))}
         </div>
       </div>
