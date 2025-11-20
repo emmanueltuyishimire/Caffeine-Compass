@@ -9,6 +9,7 @@ import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/navigation';
 import { mainNav } from '@/lib/nav-links';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -27,19 +28,7 @@ export default function MobileNav() {
       </SheetTrigger>
       <SheetContent side="left">
         <MobileLink href="/" className="flex items-center" onOpenChange={setOpen}>
-            <svg
-              className="h-6 w-6 text-primary mr-2"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-              <path d="m15.5 8.5-7 7" />
-              <path d="m8.5 8.5 7 7" />
-            </svg>
+            <Image src="/app.png" alt="Caffeine Compass Logo" width={24} height={24} className="h-6 w-6 mr-2" />
           <span className="font-bold">Caffeine Compass</span>
         </MobileLink>
         <div className="flex flex-col gap-3 pt-6">
