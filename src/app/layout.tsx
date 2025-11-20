@@ -5,11 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import { Providers } from '@/app/providers';
 import Script from 'next/script';
 import './globals.css';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
-
-const logoImage = PlaceHolderImages.find(p => p.id === 'logo');
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://calculation.site'),
@@ -31,7 +28,7 @@ export const metadata: Metadata = {
     'caffeine sensitivity',
   ],
   icons: {
-    icon: logoImage?.imageUrl || '/favicon.ico',
+    icon: '/logo.png',
   },
 };
 
@@ -45,7 +42,7 @@ const websiteJsonLd = {
     name: 'Caffeine Compass',
     logo: {
       '@type': 'ImageObject',
-      url: logoImage?.imageUrl || 'https://calculation.site/logo.png',
+      url: 'https://calculation.site/logo.png',
     },
   },
 };

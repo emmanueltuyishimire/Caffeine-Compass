@@ -7,8 +7,6 @@ import JsonLd from '@/components/JsonLd';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const logoImage = PlaceHolderImages.find(p => p.id === 'logo');
-
 export const metadata: Metadata = {
     title: 'About Caffeine Compass — Our Mission and Science-Backed Approach',
     description: 'Learn about the mission behind Caffeine Compass and the team dedicated to helping you optimize your caffeine intake for better health, focus, and sleep using our tools.',
@@ -40,7 +38,7 @@ const aboutPageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": logoImage?.imageUrl || "https://calculation.site/logo.png"
+      "url": "https://calculation.site/logo.png"
     }
   },
   "breadcrumb": {
