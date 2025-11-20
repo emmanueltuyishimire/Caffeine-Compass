@@ -6,7 +6,6 @@ import { ThemeToggle } from '../theme-toggle';
 import { mainNav } from '@/lib/nav-links';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
-import { Compass } from 'lucide-react';
 
 const Header = () => {
     const pathname = usePathname();
@@ -18,7 +17,19 @@ const Header = () => {
     >
       <div className="container flex h-14 items-center">
          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Compass className="h-6 w-6 text-primary" />
+            <svg
+              className="h-6 w-6 text-primary"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+              <path d="m15.5 8.5-7 7" />
+              <path d="m8.5 8.5 7 7" />
+            </svg>
             <span className="font-bold">Caffeine Compass</span>
         </Link>
         <nav className="flex items-center space-x-6 text-sm font-medium">
