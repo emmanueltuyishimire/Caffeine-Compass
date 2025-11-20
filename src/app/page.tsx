@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     description: 'Your ultimate resource for caffeine calculators, data tools, and science-backed articles. Optimize your intake, improve your sleep, and master your energy.',
 };
 
+const logoImage = PlaceHolderImages.find(p => p.id === 'hero-image');
+
 const homePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -37,7 +39,7 @@ const homePageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
         "@type": "ImageObject",
-        "url": "https://calculation.site/app.png"
+        "url": logoImage?.imageUrl || 'https://calculation.site/app.png'
     }
   },
   "breadcrumb": {

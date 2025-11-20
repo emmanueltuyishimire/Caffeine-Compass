@@ -5,6 +5,7 @@ import JsonLd from '@/components/JsonLd';
 import { Providers } from '@/app/providers';
 import Script from 'next/script';
 import './globals.css';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
 
@@ -32,6 +33,8 @@ export const metadata: Metadata = {
   },
 };
 
+const logoImage = PlaceHolderImages.find(p => p.id === 'hero-image');
+
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -42,7 +45,7 @@ const websiteJsonLd = {
     name: 'Caffeine Compass',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://calculation.site/app.png',
+      url: logoImage?.imageUrl || 'https://calculation.site/app.png',
     },
   },
 };
@@ -59,7 +62,7 @@ export default function RootLayout({
        <head>
         <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
-      <body className={`${inter.variable} font-body antialiased`} suppressHydrationWarning>
+      <body className={`${inter.className} font-body antialiased`} suppressHydrationWarning>
         <JsonLd data={websiteJsonLd} />
         <Providers>{children}</Providers>
         <Script

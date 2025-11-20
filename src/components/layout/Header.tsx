@@ -8,7 +8,6 @@ import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import MobileNav from './MobileNav';
 import { useIsMobile } from '@/hooks/use-mobile';
-import Image from 'next/image';
 
 const Header = () => {
     const pathname = usePathname();
@@ -21,7 +20,19 @@ const Header = () => {
     >
       <div className="container flex h-14 items-center">
          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image src="/app.png" alt="Caffeine Compass Logo" width={24} height={24} className="h-6 w-6" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-6 w-6"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+            </svg>
             <span className="font-bold">Caffeine Compass</span>
         </Link>
         

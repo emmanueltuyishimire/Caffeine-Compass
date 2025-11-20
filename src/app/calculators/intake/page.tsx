@@ -20,11 +20,14 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
   title: 'Caffeine Intake Calculator — Track Your Daily Caffeine',
   description: 'Use this free calculator to accurately measure your daily caffeine intake and compare it to safe limits. Our science-backed tool helps you manage energy, sleep, and health.',
 };
+
+const logoImage = PlaceHolderImages.find(p => p.id === 'hero-image');
 
 const pageJsonLd = {
   "@context": "https://schema.org",
@@ -39,7 +42,7 @@ const pageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://calculation.site/app.png"
+      "url": logoImage?.imageUrl || "https://calculation.site/app.png"
     }
   },
   "mainEntityOfPage": {
@@ -188,7 +191,7 @@ export default function IntakeCalculatorPage() {
 
         <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-20 space-y-12">
             <section id="introduction" aria-labelledby="introduction-heading">
-                <h2 id="introduction-heading" className="text-3xl font-bold">Why Tracking Your Caffeine Is a Game-Changer</h2>
+                <h2 id="introduction-heading" className="text-3xl font-bold font-headline">Why Tracking Your Caffeine Is a Game-Changer</h2>
                 <p>
                     For millions, caffeine is the invisible engine of modern life. It kickstarts our mornings, powers through afternoon slumps, and fuels late-night study sessions. But how much is too much? And more importantly, how much are you <i>really</i> consuming? This Caffeine Intake Calculator is designed to answer that question with scientific precision. It’s more than just a counter; it’s a powerful tool to help you master your energy, sharpen your focus, and protect your sleep.
                 </p>
@@ -203,7 +206,7 @@ export default function IntakeCalculatorPage() {
           <Separator />
           
             <section id="how-it-works" aria-labelledby="how-it-works-heading">
-                <h2 id="how-it-works-heading" className="text-3xl font-bold">How This Caffeine Calculator Works: From Guesswork to Precision</h2>
+                <h2 id="how-it-works-heading" className="text-3xl font-bold font-headline">How This Caffeine Calculator Works: From Guesswork to Precision</h2>
                 <p>
                     This tool moves you beyond vague estimates ("I had a couple of coffees") to a precise, numerical understanding of your daily caffeine load. It combines a comprehensive database with simple user inputs to provide an accurate, real-time tally of your consumption. Here’s a breakdown of the science and logic powering the calculator.
                 </p>
@@ -244,7 +247,7 @@ export default function IntakeCalculatorPage() {
           <Separator/>
           
             <section id="features" aria-labelledby="features-heading">
-                <h2 id="features-heading" className="text-3xl font-bold">Key Features of This Tool</h2>
+                <h2 id="features-heading" className="text-3xl font-bold font-headline">Key Features of This Tool</h2>
                 <Table>
                     <caption className='sr-only'>Features of the Caffeine Intake Calculator</caption>
                     <TableHeader>
@@ -288,7 +291,7 @@ export default function IntakeCalculatorPage() {
           <Separator />
           
             <section id="how-to-use" aria-labelledby="how-to-use-heading">
-                <h2 id="how-to-use-heading" className="text-3xl font-bold">Step-by-Step Instructions for Tracking Your Intake</h2>
+                <h2 id="how-to-use-heading" className="text-3xl font-bold font-headline">Step-by-Step Instructions for Tracking Your Intake</h2>
                  <ol className="list-decimal pl-5 space-y-4">
                     <li>
                         <strong>Step 1: Search & Add Drinks</strong><br/>
@@ -316,7 +319,7 @@ export default function IntakeCalculatorPage() {
            <Separator />
           
             <section id="worked-examples" aria-labelledby="worked-examples-heading">
-                <h2 id="worked-examples-heading" className="text-3xl font-bold">Worked Examples: Uncovering Hidden Caffeine Habits</h2>
+                <h2 id="worked-examples-heading" className="text-3xl font-bold font-headline">Worked Examples: Uncovering Hidden Caffeine Habits</h2>
                 <p>Let's see how different individuals can use this calculator to gain powerful insights into their daily routines.</p>
                 <Card className="mb-6">
                     <CardHeader><CardTitle>The Student: Late-Night Study Trap</CardTitle></CardHeader>
@@ -355,7 +358,7 @@ export default function IntakeCalculatorPage() {
           <Separator />
 
             <section id="use-cases" aria-labelledby="use-cases-heading">
-                <h2 id="use-cases-heading" className="text-3xl font-bold">Real-Life Use Cases: How to Apply This Knowledge</h2>
+                <h2 id="use-cases-heading" className="text-3xl font-bold font-headline">Real-Life Use Cases: How to Apply This Knowledge</h2>
                 <p>Tracking your intake is the first step. Here’s how to turn that data into meaningful action and better well-being.</p>
                 
                 <h3 className="text-2xl font-semibold">1. Optimizing Your Energy Levels and Avoiding Crashes</h3>
@@ -374,7 +377,7 @@ export default function IntakeCalculatorPage() {
           <Separator />
           
             <section id="common-mistakes" aria-labelledby="common-mistakes-heading">
-                <h2 id="common-mistakes-heading" className="text-3xl font-bold">Common Mistakes in Tracking Caffeine & How to Avoid Them</h2>
+                <h2 id="common-mistakes-heading" className="text-3xl font-bold font-headline">Common Mistakes in Tracking Caffeine & How to Avoid Them</h2>
                 <Table>
                     <caption className="sr-only">Common mistakes when tracking caffeine intake</caption>
                     <TableHeader>
@@ -412,7 +415,7 @@ export default function IntakeCalculatorPage() {
           <Separator />
           
             <section id="expert-insights" aria-labelledby="expert-insights-heading">
-                <h2 id="expert-insights-heading" className="text-3xl font-bold">Quick Hacks & Expert Insights for Smart Caffeine Use</h2>
+                <h2 id="expert-insights-heading" className="text-3xl font-bold font-headline">Quick Hacks & Expert Insights for Smart Caffeine Use</h2>
                 <Card className="mb-4">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2"><Droplet aria-hidden="true"/> Hydrate Alongside Caffeine</CardTitle>
@@ -450,7 +453,7 @@ export default function IntakeCalculatorPage() {
            <Separator />
           
             <section id="deep-dive" aria-labelledby="deep-dive-heading">
-                <h2 id="deep-dive-heading" className="text-3xl font-bold">Deep Dive: The Neurochemical War for Your Brain's Energy</h2>
+                <h2 id="deep-dive-heading" className="text-3xl font-bold font-headline">Deep Dive: The Neurochemical War for Your Brain's Energy</h2>
                 <p>
                     To truly master your caffeine intake, it helps to understand what’s happening inside your brain on a molecular level. Caffeine isn’t "giving" you energy; it’s a master of disguise that tricks your brain into ignoring its own fatigue signals. This biochemical battle is waged over tiny docking stations on your neurons called adenosine receptors.
                 </p>
@@ -481,7 +484,7 @@ export default function IntakeCalculatorPage() {
           <Separator />
           
             <section id="faq" aria-labelledby="faq-heading">
-                <h2 id="faq-heading" className="text-3xl font-bold">Frequently Asked Questions</h2>
+                <h2 id="faq-heading" className="text-3xl font-bold font-headline">Frequently Asked Questions</h2>
                 <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="faq-1">
                         <AccordionTrigger>What is a safe amount of caffeine per day?</AccordionTrigger>
@@ -555,7 +558,7 @@ export default function IntakeCalculatorPage() {
           <Separator />
           
             <section id="related-tools" aria-labelledby="related-tools-heading">
-                <h2 id="related-tools-heading" className="text-3xl font-bold">Related Tools & Resources</h2>
+                <h2 id="related-tools-heading" className="text-3xl font-bold font-headline">Related Tools & Resources</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <Card>
                         <CardHeader>

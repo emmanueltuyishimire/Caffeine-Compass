@@ -27,6 +27,8 @@ const team = [
     },
 ];
 
+const logoImage = PlaceHolderImages.find(p => p.id === 'hero-image');
+
 const aboutPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -38,7 +40,7 @@ const aboutPageJsonLd = {
     "name": "Caffeine Compass",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://calculation.site/app.png",
+      "url": logoImage?.imageUrl || "https://calculation.site/app.png",
     }
   },
   "breadcrumb": {
