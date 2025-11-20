@@ -172,7 +172,7 @@ export default function HowToQuitCaffeineArticle() {
             </p>
             <h3 className="text-2xl font-semibold">The Adenosine Blockade and Brain Adaptation</h3>
             <p>
-              As we've discussed in other articles like our deep dive on <Link href="/articles/caffeine-half-life-sleep">caffeine half-life</Link>, caffeine's primary effect is as an <strong>adenosine receptor antagonist</strong>. Adenosine is a neurotransmitter that builds up throughout the day, creating "sleep pressure" and making you feel tired. Caffeine works by blocking these receptors, preventing adenosine from doing its job and thus making you feel alert.
+              As we've discussed in other articles like our deep dive on <Link href="/articles/how-long-does-caffeine-stay-in-your-system">how long caffeine stays in your system</Link>, caffeine's primary effect is as an <strong>adenosine receptor antagonist</strong>. Adenosine is a neurotransmitter that builds up throughout the day, creating "sleep pressure" and making you feel tired. Caffeine works by blocking these receptors, preventing adenosine from doing its job and thus making you feel alert.
             </p>
             <p>
               Your brain, however, is a master of adaptation. If you drink caffeine every day, your brain notices that its adenosine signals are constantly being blocked. To maintain balance (a state called homeostasis), it fights back by building more adenosine receptors. This process is called <strong>upregulation</strong>.

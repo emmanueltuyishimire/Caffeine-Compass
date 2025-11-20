@@ -294,7 +294,7 @@ export default function DoesCokeZeroHaveCaffeineArticle() {
 
                 <h3 className="text-2xl font-semibold">Choose Caffeine-Free Coke Zero When...</h3>
                 <ul>
-                    <li><strong>It's evening or close to your bedtime.</strong> This is the most important use case. Opting for the caffeine-free version in the evening allows you to enjoy a familiar treat without risking the disruption of your deep and REM sleep. Check your personal cutoff time with our <Link href="/calculators/how-long-before-bed-to-stop-caffeine">caffeine curfew guide</Link>.</li>
+                    <li><strong>It's evening or close to your bedtime.</strong> This is the most important use case. Opting for the caffeine-free version in the evening allows you to enjoy a familiar treat without risking the disruption of your deep and REM sleep. Check your personal cutoff time with our article on <Link href="/articles/how-long-before-bed-to-stop-caffeine">when to stop drinking caffeine</Link>.</li>
                     <li><strong>You are pregnant or breastfeeding.</strong> With a recommended limit of 200mg per day, choosing the caffeine-free version helps you save your caffeine allowance for other sources, like a morning coffee.</li>
                     <li><strong>You are sensitive to caffeine.</strong> If even small doses make you feel anxious or jittery, the caffeine-free version is the perfect way to enjoy the taste without the unwanted side effects. Take our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> to better understand your tolerance.</li>
                      <li><strong>You've already reached your daily limit.</strong> If you've had several coffees during the day, switching to Caffeine-Free Coke Zero allows you to have a soda without pushing your total intake into the red zone.</li>
@@ -385,5 +385,3 @@ export default function DoesCokeZeroHaveCaffeineArticle() {
     </>
   );
 }
-
-    
