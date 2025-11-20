@@ -474,7 +474,7 @@ export default function IntakeCalculatorPage() {
                     <li><strong>Slow Metabolizers:</strong> Have a less efficient enzyme. Caffeine lingers in their system for much longer, prolonging its effects and increasing the likelihood of negative side effects like anxiety, jitters, and sleep disruption. For them, a noon coffee can feel like a 5 PM coffee for a fast metabolizer.</li>
                 </ul>
                 <p>
-                    Studies show that caffeine’s average half-life ranges from 3 to 7 hours, depending on these genetic factors, as well as liver health and medication use. This is why knowing your total intake is so critical. A 400mg daily intake for a fast metabolizer is a very different physiological experience than a 400mg intake for a slow metabolizer. Understanding these dynamics empowers you to use caffeine as a precise performance-enhancing tool—not a blunt instrument that leaves you feeling like a victim of its side effects.
+                    Studies show that caffeine’s average half-life ranges from 3 to 7 hours, depending on these genetic factors, as well as liver health and medication use. This is why knowing your total intake is so critical. A 400mg daily intake for a fast metabolizer is a very different physiological experience than a 400mg intake for a slow metabolizer. Understanding these dynamics empowers you to use caffeine as a precise performance-enhancing tool—not a blunt instrument that leaves you a victim of its side effects.
                 </p>
             </section>
           

@@ -341,7 +341,7 @@ export default function DrinkComparisonPage() {
                 <p>Let's see how different people can use this tool to answer common caffeine questions.</p>
                 
                 <Card className="mb-6">
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Coffee aria-hidden="true" /> The Confused Coffee Shop Customer</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><Coffee aria-hidden="true" /> The Confused Coffee Shop Customer</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Question:</strong> "At Starbucks, what's the difference between a Cold Brew, an Americano, and a Latte?"</p>
                         <p><strong>How they use the tool:</strong> The user selects "Starbucks Cold Brew (Grande)", "Starbucks Caffe Americano (Grande)", and "Starbucks Caffe Latte (Grande)".</p>
@@ -350,7 +350,7 @@ export default function DrinkComparisonPage() {
                 </Card>
                 
                 <Card className="mb-6">
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Zap aria-hidden="true" /> The Energy Drink Enthusiast</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><Zap aria-hidden="true" /> The Energy Drink Enthusiast</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Question:</strong> "Are all energy drinks created equal? I want to know if a Monster is much stronger than a Red Bull."</p>
                         <p><strong>How they use the tool:</strong> They select "Red Bull (250ml)" and "Monster Energy (473ml)". To take it a step further, they also add "Bang Energy (473ml)".</p>
@@ -359,7 +359,7 @@ export default function DrinkComparisonPage() {
                 </Card>
 
                 <Card>
-                    <CardHeader><CardTitle className="flex items-center gap-3"><Leaf aria-hidden="true" /> The Health-Conscious Tea Drinker</CardTitle></CardHeader>
+                    <CardHeader><CardTitle className="flex items-center gap-2"><Leaf aria-hidden="true" /> The Health-Conscious Tea Drinker</CardTitle></CardHeader>
                     <CardContent>
                         <p><strong>Question:</strong> "I want a warm drink in the afternoon. Which tea has the least caffeine?"</p>
                         <p><strong>How they use the tool:</strong> The user selects "Black Tea," "Green Tea," "White Tea," and "Herbal Tea."</p>
