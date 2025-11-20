@@ -10,79 +10,6 @@ export const metadata: Metadata = {
     description: 'A comprehensive suite of free, science-based caffeine calculators to help you track intake, manage tolerance, improve sleep, and optimize your energy levels.',
 };
 
-const calculatorsPageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Caffeine Calculators",
-  "description": "A comprehensive suite of free, science-based caffeine calculators to help you track intake, manage tolerance, improve sleep, and optimize your energy levels.",
-  "url": "https://calculation.site/calculators",
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Caffeine Intake Calculator",
-        "url": "https://calculation.site/calculators/caffeine-intake"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Caffeine Half-Life Calculator",
-        "url": "https://calculation.site/calculators/caffeine-half-life"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Caffeine Sensitivity Test",
-        "url": "https://calculation.site/calculators/caffeine-sensitivity-test"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Caffeine Overdose Risk Calculator",
-        "url": "https://calculation.site/calculators/caffeine-overdose-risk"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "name": "Caffeine Withdrawal Tracker",
-        "url": "https://calculation.site/calculators/caffeine-withdrawal-tracker"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "name": "Caffeine Timing Optimizer",
-        "url": "https://calculation.site/calculators/caffeine-timing-optimizer"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "name": "Caffeine Drink Comparison",
-        "url": "https://calculation.site/calculators/caffeine-drink-comparison"
-      }
-    ]
-  },
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://calculation.site/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Calculators",
-        "item": "https://calculation.site/calculators"
-      }
-    ]
-  }
-};
-
-
 const calculatorLinks = [
   {
     title: "Caffeine Intake Calculator",
@@ -139,6 +66,41 @@ const calculatorLinks = [
     icon: Shield,
   },
 ];
+
+const calculatorsPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Caffeine Calculators",
+  "description": "A comprehensive suite of free, science-based caffeine calculators to help you track intake, manage tolerance, improve sleep, and optimize your energy levels.",
+  "url": "https://calculation.site/calculators",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": calculatorLinks.map((calc, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": calc.title,
+      "url": `https://calculation.site${calc.href}`
+    }))
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://calculation.site/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators",
+        "item": "https://calculation.site/calculators"
+      }
+    ]
+  }
+};
+
 
 export default function CalculatorsPage() {
   return (

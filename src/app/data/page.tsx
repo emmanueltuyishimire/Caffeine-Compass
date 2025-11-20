@@ -10,6 +10,21 @@ export const metadata: Metadata = {
     description: 'Explore our comprehensive databases for caffeine and sugar content in thousands of popular beverages. Make informed choices for your health and energy.',
 };
 
+const dataTools = [
+    {
+        title: "Caffeine in Drinks Database",
+        href: "/calculators/caffeine-drinks-database",
+        description: "Search our extensive database of over 1,000 beverages to find their exact caffeine content.",
+        icon: Coffee,
+    },
+    {
+        title: "Sugar in Drinks Database",
+        href: "/data/sugar-in-drinks",
+        description: "Explore the sugar and calorie content of hundreds of popular drinks to make healthier choices.",
+        icon: Zap,
+    },
+];
+
 const dataPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -32,23 +47,18 @@ const dataPageJsonLd = {
         "item": "https://calculation.site/data"
       }
     ]
+  },
+  "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": dataTools.map((tool, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": tool.title,
+          "url": `https://calculation.site${tool.href}`
+      }))
   }
 };
 
-const dataTools = [
-    {
-        title: "Caffeine in Drinks Database",
-        href: "/calculators/caffeine-drinks-database",
-        description: "Search our extensive database of over 1,000 beverages to find their exact caffeine content.",
-        icon: Coffee,
-    },
-    {
-        title: "Sugar in Drinks Database",
-        href: "/data/sugar-in-drinks",
-        description: "Explore the sugar and calorie content of hundreds of popular drinks to make healthier choices.",
-        icon: Zap,
-    },
-];
 
 export default function DataLandingPage() {
   return (

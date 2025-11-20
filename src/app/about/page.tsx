@@ -31,7 +31,7 @@ const logoImage = PlaceHolderImages.find(p => p.id === 'hero-image');
 
 const aboutPageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
+  "@type": "AboutPage",
   "name": "About Caffeine Compass — Our Mission and Science-Backed Approach",
   "description": "Learn about the mission behind Caffeine Compass and the team dedicated to helping you optimize your caffeine intake for better health, focus, and sleep using our tools.",
   "url": "https://calculation.site/about",
@@ -155,7 +155,7 @@ export default function AboutPage() {
                                 <div key={member.name} className="flex flex-col items-center text-center p-6 bg-card rounded-lg border">
                                     <Avatar className="w-24 h-24 mb-4 border-2 border-primary">
                                         {memberImage && (
-                                            <AvatarImage src={memberImage.imageUrl} alt={`Headshot of ${member.name}, ${member.role}`} data-ai-hint={memberImage.imageHint} />
+                                            <AvatarImage src={memberImage.imageUrl} alt={`Headshot of ${member.name}, ${member.role}`} data-ai-hint={memberImage.imageHint} width={100} height={100} />
                                         )}
                                         <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
                                     </Avatar>
