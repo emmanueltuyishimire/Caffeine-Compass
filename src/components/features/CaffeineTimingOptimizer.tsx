@@ -67,19 +67,21 @@ export default function CaffeineTimingOptimizer() {
             <div className="space-y-2">
                 <Label htmlFor="task-time" className='flex items-center gap-2'><Clock aria-hidden="true"/> When does your task start?</Label>
                 <Input
-                id="task-time"
-                type="time"
-                value={taskStartTime}
-                onChange={(e) => setTaskStartTime(e.target.value)}
+                  id="task-time"
+                  type="time"
+                  value={taskStartTime}
+                  onChange={(e) => setTaskStartTime(e.target.value)}
+                  aria-label="Task start time"
                 />
             </div>
             <div className="space-y-2">
                 <Label htmlFor="bedtime" className='flex items-center gap-2'><Bed aria-hidden="true"/> What time do you go to bed?</Label>
                 <Input
-                id="bedtime"
-                type="time"
-                value={bedtime}
-                onChange={(e) => setBedtime(e.target.value)}
+                  id="bedtime"
+                  type="time"
+                  value={bedtime}
+                  onChange={(e) => setBedtime(e.target.value)}
+                  aria-label="Your usual bedtime"
                 />
             </div>
         </div>

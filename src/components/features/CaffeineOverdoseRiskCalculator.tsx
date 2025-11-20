@@ -88,7 +88,7 @@ export default function CaffeineOverdoseRiskCalculator() {
           </div>
           <div className="flex items-center space-x-2 pt-4" role="radiogroup" aria-labelledby="unit-label">
             <span id="unit-label" className="sr-only">Weight unit</span>
-            <Label htmlFor="unit-switch" className={unit === 'kg' ? 'text-primary' : ''}>kg</Label>
+            <Label htmlFor="unit-switch" className={unit === 'kg' ? 'text-primary' : ''} aria-hidden="true">kg</Label>
             <Switch
               id="unit-switch"
               checked={unit === 'lbs'}
@@ -97,7 +97,7 @@ export default function CaffeineOverdoseRiskCalculator() {
               aria-checked={unit === 'lbs'}
               aria-label="Switch between kilograms and pounds"
             />
-            <Label htmlFor="unit-switch" className={unit === 'lbs' ? 'text-primary' : ''}>lbs</Label>
+            <Label htmlFor="unit-switch" className={unit === 'lbs' ? 'text-primary' : ''} aria-hidden="true">lbs</Label>
           </div>
         </div>
         
@@ -133,15 +133,15 @@ export default function CaffeineOverdoseRiskCalculator() {
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                         <Label htmlFor="noticeable-mg" className="text-xs">Noticeable Effects (mg/kg)</Label>
-                        <Input id="noticeable-mg" type="number" value={customLevels.noticeable} onChange={e => handleLevelChange('noticeable', e.target.value)} />
+                        <Input id="noticeable-mg" type="number" value={customLevels.noticeable} onChange={e => handleLevelChange('noticeable', e.target.value)} aria-label="Custom noticeable effects threshold in milligrams per kilogram"/>
                     </div>
                      <div>
                         <Label htmlFor="mild-mg" className="text-xs">Mild Toxicity (mg/kg)</Label>
-                        <Input id="mild-mg" type="number" value={customLevels.mild} onChange={e => handleLevelChange('mild', e.target.value)} />
+                        <Input id="mild-mg" type="number" value={customLevels.mild} onChange={e => handleLevelChange('mild', e.target.value)} aria-label="Custom mild toxicity threshold in milligrams per kilogram"/>
                     </div>
                      <div>
                         <Label htmlFor="severe-mg" className="text-xs">Severe Toxicity (mg/kg)</Label>
-                        <Input id="severe-mg" type="number" value={customLevels.severe} onChange={e => handleLevelChange('severe', e.target.value)} />
+                        <Input id="severe-mg" type="number" value={customLevels.severe} onChange={e => handleLevelChange('severe', e.target.value)} aria-label="Custom severe toxicity threshold in milligrams per kilogram"/>
                     </div>
                  </div>
             </CollapsibleContent>

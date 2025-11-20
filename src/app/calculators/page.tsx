@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2 } from 'lucide-react';
+import { Clock, Coffee, BrainCircuit, Shield, TrendingDown, BarChart2, Zap, Leaf, Heart, Dumbbell, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
@@ -145,28 +145,30 @@ export default function CalculatorsPage() {
     <>
       <JsonLd data={calculatorsPageJsonLd} />
       <div className="container mx-auto px-4 py-12 md:py-20">
-        <div className="text-center mb-12">
+        <header className="text-center mb-12" role="banner">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Caffeine Calculators</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             A complete toolkit of science-based calculators to help you manage your caffeine intake, improve your sleep, and optimize your energy.
           </p>
-        </div>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
             {calculatorLinks.sort((a, b) => a.title.localeCompare(b.title)).map((calc) => (
-                <Link key={calc.title} href={calc.href} className="block group">
-                    <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
-                        <CardHeader>
-                            <div className="flex items-center gap-4">
-                                <calc.icon className="h-8 w-8 text-primary" aria-hidden="true" />
-                                <CardTitle>{calc.title}</CardTitle>
-                            </div>
-                        </CardHeader>
-                        <CardContent>
-                            <p className="text-muted-foreground">{calc.description}</p>
-                        </CardContent>
-                    </Card>
-                </Link>
+                <div role="listitem" key={calc.title}>
+                  <Link href={calc.href} className="block group h-full">
+                      <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
+                          <CardHeader>
+                              <div className="flex items-center gap-4">
+                                  <calc.icon className="h-8 w-8 text-primary" aria-hidden="true" />
+                                  <CardTitle>{calc.title}</CardTitle>
+                              </div>
+                          </CardHeader>
+                          <CardContent>
+                              <p className="text-muted-foreground">{calc.description}</p>
+                          </CardContent>
+                      </Card>
+                  </Link>
+                </div>
             ))}
         </div>
       </div>

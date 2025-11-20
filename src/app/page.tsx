@@ -252,21 +252,23 @@ export default function Home() {
                     From tracking your daily caffeine load to understanding your genetic tolerance, our caffeine calculators provide the data you need to make smarter choices.
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list">
                 {featuredCalculators.map((calc) => (
-                  <Link key={calc.title} href={calc.href} className="block group" aria-label={`Go to ${calc.title}`}>
-                    <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
-                      <CardHeader>
-                        <div className="flex items-center gap-4">
-                          <calc.icon className="h-8 w-8 text-primary" aria-hidden="true"/>
-                          <CardTitle>{calc.title}</CardTitle>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">{calc.description}</p>
-                      </CardContent>
-                    </Card>
-                  </Link>
+                  <div key={calc.title} role="listitem">
+                    <Link href={calc.href} className="block group h-full" aria-label={`Go to ${calc.title}`}>
+                      <Card className="h-full group-hover:border-primary group-hover:bg-card/95 transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
+                        <CardHeader>
+                          <div className="flex items-center gap-4">
+                            <calc.icon className="h-8 w-8 text-primary" aria-hidden="true"/>
+                            <CardTitle>{calc.title}</CardTitle>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-muted-foreground">{calc.description}</p>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </div>
                 ))}
               </div>
           </div>
@@ -280,21 +282,21 @@ export default function Home() {
                 </div>
                 <div className="mt-12 space-y-12">
                     <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="text-4xl font-bold text-primary/30">01</div>
+                        <div className="text-4xl font-bold text-primary/30" aria-hidden="true">01</div>
                         <div className="flex-1">
                             <h3 className="text-2xl font-bold font-headline">Measure Your Intake</h3>
                             <p className="text-muted-foreground">You can't manage what you don't measure. The first step is to get an honest look at your daily consumption. Use our <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link> to log every coffee, tea, and energy drink. You might be surprised how quickly small doses add up and push you over the recommended 400mg daily limit.</p>
                         </div>
                     </div>
                      <div className="flex flex-col md:flex-row-reverse items-center gap-8 text-right md:text-left">
-                        <div className="text-4xl font-bold text-primary/30">02</div>
+                        <div className="text-4xl font-bold text-primary/30" aria-hidden="true">02</div>
                         <div className="flex-1">
                             <h3 className="text-2xl font-bold font-headline">Understand Your Biology</h3>
                             <p className="text-muted-foreground">Are you a fast or slow metabolizer? Your genetics are the single biggest factor in how your body handles caffeine. Take our 2-minute <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> to discover your personal profile. This crucial insight will inform every other decision you make.</p>
                         </div>
                     </div>
                      <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="text-4xl font-bold text-primary/30">03</div>
+                        <div className="text-4xl font-bold text-primary/30" aria-hidden="true">03</div>
                         <div className="flex-1">
                             <h3 className="text-2xl font-bold font-headline">Optimize Your Timing</h3>
                             <p className="text-muted-foreground">Timing is everything. Use the <Link href="/calculators/caffeine-half-life">Caffeine Half-Life Calculator</Link> and your sensitivity profile to establish a personal "caffeine curfew" that protects your sleep. For peak productivity, use the <Link href="/calculators/caffeine-timing-optimizer">Caffeine Timing Optimizer</Link> to align caffeine's peak effects with your most important tasks.</p>
@@ -312,7 +314,7 @@ export default function Home() {
                     <Card>
                         <CardHeader>
                             <div className="flex items-center gap-4">
-                                <Coffee className="h-8 w-8 text-primary"/>
+                                <Coffee className="h-8 w-8 text-primary" aria-hidden="true"/>
                                 <CardTitle>Coffee</CardTitle>
                             </div>
                         </CardHeader>
@@ -323,7 +325,7 @@ export default function Home() {
                     <Card>
                         <CardHeader>
                            <div className="flex items-center gap-4">
-                                <Leaf className="h-8 w-8 text-primary"/>
+                                <Leaf className="h-8 w-8 text-primary" aria-hidden="true"/>
                                 <CardTitle>Tea</CardTitle>
                             </div>
                         </CardHeader>
@@ -334,7 +336,7 @@ export default function Home() {
                      <Card>
                         <CardHeader>
                             <div className="flex items-center gap-4">
-                                <Zap className="h-8 w-8 text-primary"/>
+                                <Zap className="h-8 w-8 text-primary" aria-hidden="true"/>
                                 <CardTitle>Energy Drinks</CardTitle>
                             </div>
                         </CardHeader>
@@ -352,19 +354,19 @@ export default function Home() {
                 </div>
                 <div className="mt-12 grid md:grid-cols-2 gap-8">
                     <div className="p-6 border rounded-lg">
-                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><Dumbbell className="h-6 w-6 text-accent"/>Athletic Performance</h3>
+                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><Dumbbell className="h-6 w-6 text-accent" aria-hidden="true"/>Athletic Performance</h3>
                         <p>Caffeine is a well-documented ergogenic aid. It can increase endurance, reduce perceived exertion, and improve power output. The key is timing and dosage. Using our <Link href="/calculators/caffeine-timing-optimizer">Timing Optimizer</Link> before a workout can help you peak at the right moment.</p>
                     </div>
                     <div className="p-6 border rounded-lg">
-                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><BrainCircuit className="h-6 w-6 text-accent"/>Cognitive Function</h3>
+                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><BrainCircuit className="h-6 w-6 text-accent" aria-hidden="true"/>Cognitive Function</h3>
                         <p>The primary reason people use caffeine: it enhances alertness, focus, and reaction time. Studies show it can improve performance on a range of cognitive tasks. However, more is not always better. Exceeding your personal limit can lead to anxiety and diminished returns.</p>
                     </div>
                     <div className="p-6 border rounded-lg">
-                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><Heart className="h-6 w-6 text-accent"/>Heart Health</h3>
+                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><Heart className="h-6 w-6 text-accent" aria-hidden="true"/>Heart Health</h3>
                         <p>For most healthy adults, moderate caffeine intake (under 400mg/day) is not associated with adverse cardiovascular effects. However, <Link href="/calculators/caffeine-sensitivity-test">slow metabolizers</Link> who consume high amounts may have a slightly increased risk of hypertension. High doses can also cause temporary palpitations.</p>
                     </div>
                     <div className="p-6 border rounded-lg">
-                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><TrendingDown className="h-6 w-6 text-accent"/>Dependence and Withdrawal</h3>
+                        <h3 className="text-2xl font-bold font-headline mb-3 flex items-center gap-2"><TrendingDown className="h-6 w-6 text-accent" aria-hidden="true"/>Dependence and Withdrawal</h3>
                         <p>Daily caffeine use leads to physical dependence. When you stop, you can experience headaches, fatigue, and irritability. This is not a sign of weakness, but a predictable neurochemical response. Our <Link href="/calculators/caffeine-withdrawal-tracker">Caffeine Withdrawal Tracker</Link> is designed to help you avoid this with a comfortable tapering plan.</p>
                     </div>
                 </div>
@@ -377,17 +379,17 @@ export default function Home() {
                 </div>
                 <div className="mt-12 grid md:grid-cols-3 gap-8">
                     <div className="text-center">
-                        <BrainCircuit className="h-10 w-10 mx-auto text-primary mb-4" />
+                        <BrainCircuit className="h-10 w-10 mx-auto text-primary mb-4" aria-hidden="true" />
                         <h3 className="text-xl font-bold">Science-Backed</h3>
                         <p className="text-muted-foreground">Our tools and articles are built on a foundation of established scientific research. We provide links to relevant studies, empowering you to explore the data and learn more from primary sources. Explore our <Link href="/articles">caffeine articles</Link>.</p>
                     </div>
                     <div className="text-center">
-                        <Heart className="h-10 w-10 mx-auto text-primary mb-4" />
+                        <Heart className="h-10 w-10 mx-auto text-primary mb-4" aria-hidden="true" />
                         <h3 className="text-xl font-bold">Personal Wellness</h3>
                         <p className="text-muted-foreground">There's no one-size-fits-all answer to caffeine. Our tools emphasize personalization, helping you understand your unique tolerance and how caffeine affects your sleep and well-being. Take our <Link href="/calculators/caffeine-sensitivity-test">Caffeine Sensitivity Test</Link> to start.</p>
                     </div>
                     <div className="text-center">
-                        <TrendingDown className="h-10 w-10 mx-auto text-primary mb-4" />
+                        <TrendingDown className="h-10 w-10 mx-auto text-primary mb-4" aria-hidden="true" />
                         <h3 className="text-xl font-bold">Empowerment Through Knowledge</h3>
                         <p className="text-muted-foreground">Our goal is to give you the knowledge you need to make conscious, mindful decisions. Stop guessing and start optimizing your energy with tools like the <Link href="/calculators/caffeine-intake">Caffeine Intake Calculator</Link>.</p>
                     </div>
@@ -435,7 +437,7 @@ export default function Home() {
                 </div>
                 <div className="mt-8 max-w-4xl mx-auto p-4 border border-destructive bg-destructive/10 rounded-lg">
                     <div className="flex items-start gap-4">
-                        <AlertTriangle className="h-8 w-8 text-destructive" />
+                        <AlertTriangle className="h-8 w-8 text-destructive" aria-hidden="true" />
                         <div>
                             <h3 className="font-bold text-destructive">Medical Warning</h3>
                             <p className="text-sm text-destructive/90">Mixing caffeine, a stimulant, with alcohol, a depressant, is dangerous. Caffeine can mask the intoxicating effects of alcohol, leading you to feel less drunk than you actually are. This can result in overconsumption of alcohol, impaired judgment, and an increased risk of accidents or alcohol poisoning.</p>
@@ -475,7 +477,7 @@ export default function Home() {
                     <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold font-headline">Frequently Asked Questions About Caffeine</h2>
                 </div>
                 <div className="mt-8 max-w-4xl mx-auto">
-                    <Accordion type="single" collapsible className="w-full">
+                    <Accordion type="single" collapsible>
                         <AccordionItem value="q-good-or-bad">
                             <AccordionTrigger>Is caffeine good or bad?</AccordionTrigger>
                             <AccordionContent>Caffeine is neither inherently 'good' nor 'bad'—it's a powerful drug whose effect depends on dose, timing, and individual genetics. In moderate doses, it has proven benefits for focus and athletic performance. However, high doses or poor timing can lead to anxiety and disrupt sleep. Responsible use is key.</AccordionContent>
