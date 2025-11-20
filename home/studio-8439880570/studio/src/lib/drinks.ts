@@ -1,5 +1,5 @@
 
-import type { Drink, SugarInfo } from './types';
+import type { Drink } from './types';
 import { Coffee, CupSoda, Leaf, Zap, Pill, Beaker } from 'lucide-react';
 import { sugars } from './sugars';
 
@@ -198,7 +198,7 @@ const getIcon = (category: 'Coffee' | 'Tea' | 'Soda' | 'Energy Drink' | 'Other')
 const sugarsByName = sugars.reduce((acc, sugar) => {
   acc[sugar.name] = sugar;
   return acc;
-}, {} as Record<string, Omit<SugarInfo, 'id'>>);
+}, {} as Record<string, Omit<SugarInfo, 'id' | 'size_fl_oz' | 'calories' | 'sugar_g'> & {calories?: number; sugar_g?: number;}>);
 
 export const drinks: Drink[] = baseDrinks.map((drink, index) => {
     const sugarInfo = sugarsByName[drink.name];
