@@ -17,7 +17,7 @@ const Header = () => {
     >
       <div className="container flex h-14 items-center">
          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image src="/logo.png" alt="Caffeine Compass Logo" width={24} height={24} className="h-6 w-6" />
+            <Image src="/app.png" alt="Caffeine Compass Logo" width={24} height={24} className="h-6 w-6" />
             <span className="font-bold">Caffeine Compass</span>
         </Link>
         <nav className="flex items-center space-x-6 text-sm font-medium">

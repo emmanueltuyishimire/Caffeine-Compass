@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'caffeine sensitivity',
   ],
   icons: {
-    icon: '/logo.png',
+    icon: '/app.png',
   },
 };
 
@@ -42,7 +42,7 @@ const websiteJsonLd = {
     name: 'Caffeine Compass',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://calculation.site/logo.png',
+      url: 'https://calculation.site/app.png',
     },
   },
 };
