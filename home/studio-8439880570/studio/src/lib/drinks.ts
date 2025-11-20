@@ -62,7 +62,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon' | 'sugar' | 'calories'>[] = [
   { name: 'C4 Energy', category: 'Energy Drink', caffeine: 200, size: 473 },
   { name: 'Celsius', category: 'Energy Drink', caffeine: 200, size: 355 },
   { name: 'Club-Mate', category: 'Energy Drink', caffeine: 100, size: 500 },
-  { name: 'Coca-Cola Blāk', category: 'Coffee', caffeine: 46, size: 237 },
+  { name: 'Coca-Cola Blāk', category: 'Coffee', caffeine: 69, size: 237 },
   { name: 'Cocaine Energy Supplement', category: 'Energy Drink', caffeine: 280, size: 355 },
   { name: 'Crunk Energy Drink', category: 'Energy Drink', caffeine: 100, size: 237 },
   { name: 'Emerge Stimulation Drink', category: 'Energy Drink', caffeine: 75, size: 250 },
@@ -152,7 +152,7 @@ const baseDrinks: Omit<Drink, 'id' | 'icon' | 'sugar' | 'calories'>[] = [
   // Dunkin'
   { name: 'Dunkin\' Brewed Coffee (Medium)', category: 'Coffee', caffeine: 210, size: 414 },
   { name: 'Dunkin\' Decaf Coffee (Medium)', category: 'Coffee', caffeine: 10, size: 414 },
-  { name: 'Dunkin\' Americano (Medium)', category: 'Coffee', caffeine: 284, size: 414 },
+  { name: 'Dunkin\' Americano (Medium)', category: 'Coffee', caffeine: 237, size: 414 },
   { name: 'Dunkin\' Latte (Medium)', category: 'Coffee', caffeine: 166, size: 414 },
   { name: 'Dunkin\' Cappuccino (Medium)', category: 'Coffee', caffeine: 166, size: 414 },
   { name: 'Dunkin\' Espresso Shot', category: 'Coffee', caffeine: 98, size: 30 },
